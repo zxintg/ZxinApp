@@ -1,0 +1,6 @@
+include ':app', ':basemodel', ':sources', ':jianshennannv', ':meziyowu'
+
+/*
+project(':app').projectDir = new File("ZxinProject/app")
+project(':shopping').projectDir = new File("ZxinProject/shopping")
+project(':sources').projectDir = new File("ZxinProject/sources")*/
