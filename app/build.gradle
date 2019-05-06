@@ -4,8 +4,8 @@ apply plugin: 'com.bugtags.library.plugin'
 //apply plugin: 'com.neenbedankt.android-apt'
 android {
     useLibrary 'org.apache.http.legacy'
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion Integer.valueOf(COM_SDK_VER)
+    buildToolsVersion BUILD_TOOLS_VER
 
     //需要加入的两句话
     aaptOptions.cruncherEnabled = false
@@ -13,12 +13,12 @@ android {
 
     defaultConfig {
         applicationId "com.zxin"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode rootProject.ext.versionCode
-        versionName rootProject.ext.versionName
-        renderscriptTargetApi rootProject.ext.renderscriptTargetApi
-        renderscriptSupportModeEnabled  rootProject.ext.renderscriptSupportModeEnabled
+        minSdkVersion Integer.valueOf(MIN_SDK_VER)
+        targetSdkVersion Integer.valueOf(TAR_SDK_VER)
+        versionCode Integer.valueOf(VER_CODE)
+        versionName VER_NAME
+        renderscriptTargetApi Integer.valueOf(RDS_RAG_API)
+        renderscriptSupportModeEnabled  Boolean.valueOf(RDS_MOD_ENABLE)
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         ndk {
@@ -55,16 +55,16 @@ android {
     //签名 支付必须正式签名
     signingConfigs {
         release {
-            keyAlias 'zxin'
-            keyPassword '147258369'
-            storeFile file('C:/keystore/androidutil-key.jks')
-            storePassword '147258369'
+            keyAlias APK_keyAlias
+            keyPassword APK_keyPassword
+            storeFile file(APK_storeFile)
+            storePassword APK_storePassword
         }
         debug {
-            keyAlias 'zxin'
-            keyPassword '147258369'
-            storeFile file('C:/keystore/androidutil-key.jks')
-            storePassword '147258369'
+            keyAlias APK_keyAlias
+            keyPassword APK_keyPassword
+            storeFile file(APK_storeFile)
+            storePassword APK_storePassword
         }
     }
 
@@ -152,12 +152,6 @@ android {
         yingyongbao {}*/
         baidu {}
     }
-
-    //由于Android目前不是完全支持Java 8的语言特性，会导致编译出错。这里将项目的源和目标兼容性值保留为 Java 7。
-    compileOptions {
-        sourceCompatibility rootProject.ext.sourceCompatibility
-        targetCompatibility rootProject.ext.targetCompatibility
-    }
 }
 
 afterEvaluate {
@@ -167,11 +161,11 @@ afterEvaluate {
 
         if (variant.name.contains("debug")) {
             //自动上传符号表功能配置，如果需要根据 build varint 配置，请参考帮助中心->符号表->Android 符号表->配置自动上传符号表
-            bugtagsAppKey = 'e8c283891f44c4c44f3e3f12a32bc3be'//这里是你的 appKey
-            bugtagsAppSecret = '2aa4f1bb0bb59722d7f07f207eca00fe'//这里是你的 appSecret，管理员在设置页可以查看
+            bugtagsAppKey = BTS_AppKey//这里是你的 appKey
+            bugtagsAppSecret = BTS_AppSecret//这里是你的 appSecret，管理员在设置页可以查看
         } else if (variant.name.contains("release")) {
-            bugtagsAppKey = 'e8c283891f44c4c44f3e3f12a32bc3be'
-            bugtagsAppSecret = '2aa4f1bb0bb59722d7f07f207eca00fe'
+            bugtagsAppKey = BTS_AppKey
+            bugtagsAppSecret = BTS_AppSecret
         }
 
         variant.ext.bugtagsAppKey = bugtagsAppKey

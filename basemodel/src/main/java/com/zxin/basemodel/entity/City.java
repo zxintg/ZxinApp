@@ -1,108 +1,106 @@
 package com.zxin.basemodel.entity;
 
-import org.greenrobot.greendao.annotation.Entity;
-import org.greenrobot.greendao.annotation.Generated;
-import org.greenrobot.greendao.annotation.Id;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.PrimaryKey;
+import android.text.TextUtils;
 
 /**
  * Created by liukui on 2016/12/12 0012.
  */
-@Entity(
-        nameInDb = "t_sse_param_area",
-        createInDb = false
-)
-
+@Entity(tableName = "t_sse_param_area")//定义外键
 public class City {
-    @Id
-    public int area_id;
-    public int parent_id;
-    public String area_name;
-    public String short_name;
-    public String english_name;
-    public String area_level;
-    public String create_user;
-    public String create_time;
-    public String remark;
+    @PrimaryKey(autoGenerate = true) //定义主键
+    @ColumnInfo(name = "area_id")
+    private int areaId;
 
-    @Generated(hash = 247763738)
-    public City(int area_id, int parent_id, String area_name, String short_name, String english_name, String area_level, String create_user, String create_time, String remark) {
-        this.area_id = area_id;
-        this.parent_id = parent_id;
-        this.area_name = area_name;
-        this.short_name = short_name;
-        this.english_name = english_name;
-        this.area_level = area_level;
-        this.create_user = create_user;
-        this.create_time = create_time;
-        this.remark = remark;
+    @ColumnInfo(name = "parent_id")//定义数据表中的字段名
+    private int parentId;
+
+    @ColumnInfo(name = "area_name")//定义数据表中的字段名
+    private String areaName;
+
+    @ColumnInfo(name = "short_name")//定义数据表中的字段名
+    private String shortName;
+
+    @ColumnInfo(name = "english_name")//定义数据表中的字段名
+    private String englishName;
+
+    @ColumnInfo(name = "area_level")//定义数据表中的字段名
+    private String areaLevel;
+
+    @ColumnInfo(name = "create_user")//定义数据表中的字段名
+    private String createUser;
+
+    @ColumnInfo(name = "create_time")//定义数据表中的字段名
+    private String createTime;
+
+    @ColumnInfo(name = "remark")//定义数据表中的字段名
+    private String remark;
+
+
+    public int getAreaId() {
+        return areaId;
     }
 
-    @Generated(hash = 750791287)
-    public City() {
+    public void setAreaId(int areaId) {
+        this.areaId = areaId;
     }
 
-    public int getArea_id() {
-        return area_id;
+    public int getParentId() {
+        return parentId;
     }
 
-    public void setArea_id(int area_id) {
-        this.area_id = area_id;
+    public void setParentId(int parentId) {
+        this.parentId = parentId;
     }
 
-    public String getArea_name() {
-        return area_name;
+    public String getAreaName() {
+        return areaName;
     }
 
-    public void setArea_name(String area_name) {
-        this.area_name = area_name;
+    public void setAreaName(String areaName) {
+        this.areaName = areaName;
     }
 
-    public String getShort_name() {
-        return short_name;
+    public String getShortName() {
+        return shortName;
     }
 
-    public void setShort_name(String short_name) {
-        this.short_name = short_name;
+    public void setShortName(String shortName) {
+        this.shortName = shortName;
     }
 
-    public String getEnglish_name() {
-        return english_name;
+    public String getEnglishName() {
+        return englishName;
     }
 
-    public void setEnglish_name(String english_name) {
-        this.english_name = english_name;
+    public void setEnglishName(String englishName) {
+        this.englishName = englishName;
     }
 
-    public int getParent_id() {
-        return parent_id;
+    public String getAreaLevel() {
+        return areaLevel;
     }
 
-    public void setParent_id(int parent_id) {
-        this.parent_id = parent_id;
+    public void setAreaLevel(String areaLevel) {
+        this.areaLevel = areaLevel;
     }
 
-    public String getArea_level() {
-        return area_level;
+    public String getCreateUser() {
+        return createUser;
     }
 
-    public void setArea_level(String area_level) {
-        this.area_level = area_level;
+    public void setCreateUser(String createUser) {
+        this.createUser = createUser;
     }
 
-    public String getCreate_user() {
-        return create_user;
+    public String getCreateTime() {
+        return createTime;
     }
 
-    public void setCreate_user(String create_user) {
-        this.create_user = create_user;
-    }
-
-    public String getCreate_time() {
-        return create_time;
-    }
-
-    public void setCreate_time(String create_time) {
-        this.create_time = create_time;
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
     }
 
     public String getRemark() {
@@ -112,5 +110,37 @@ public class City {
     public void setRemark(String remark) {
         this.remark = remark;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        City that = (City) obj;
+        return areaId == that.areaId &&
+                parentId == that.parentId &&
+                TextUtils.equals(areaName, that.areaName) &&
+                TextUtils.equals(shortName, that.shortName) &&
+                TextUtils.equals(englishName, that.englishName) &&
+                TextUtils.equals(areaLevel, that.areaLevel) &&
+                TextUtils.equals(createUser, that.createUser) &&
+                TextUtils.equals(createTime, that.createTime) &&
+                TextUtils.equals(remark, that.remark);
+    }
+
+    @Override
+    public String toString() {
+        return "City{" +
+                "areaId=" + areaId +
+                ", parentId='" + parentId + '\'' +
+                ", areaName='" + areaName + '\'' +
+                ", shortName='" + shortName + '\'' +
+                ", englishName='" + englishName + '\'' +
+                ", areaLevel='" + areaLevel + '\'' +
+                ", createUser='" + createUser + '\'' +
+                ", createTime='" + createTime + '\'' +
+                ", remark=" + remark +
+                '}';
+    }
+
 
 }

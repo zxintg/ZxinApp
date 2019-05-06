@@ -4,11 +4,6 @@ import com.zxin.basemodel.app.GreenDaoManager;
 import com.zxin.basemodel.entity.City;
 import com.zxin.basemodel.gen.CityDao;
 import com.zxin.basemodel.gen.DaoSession;
-
-import org.greenrobot.greendao.query.Query;
-import org.greenrobot.greendao.query.QueryBuilder;
-import org.greenrobot.greendao.query.WhereCondition;
-
 import java.util.List;
 
 /**

@@ -26,35 +26,14 @@ allprojects {
         maven { url "https://jitpack.io" }
         maven { url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/"}
     }
+
+    //由于Android目前不是完全支持Java 8的语言特性，会导致编译出错。这里将项目的源和目标兼容性值保留为 Java 7。 全局配置
+    tasks.withType(JavaCompile) {
+        sourceCompatibility = JavaVersion.VERSION_1_7
+        targetCompatibility = JavaVersion.VERSION_1_7
+    }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
-}
-
-//定义全局属性
-ext{
-    room_version = "1.1.1"
-    greendaoSchemaVersion = 1
-    //项目的源和目标兼容性值保留为 Java 7
-    sourceCompatibility = JavaVersion.VERSION_1_7
-    targetCompatibility = JavaVersion.VERSION_1_7
-
-    compileSdkVersion = 28
-    buildToolsVersion = "28.0.3"
-    minSdkVersion = 23
-    targetSdkVersion = 28
-    versionCode = 1
-    versionName = "2.0.1"
-    supportVersion = "28.0.3"
-
-    renderscriptTargetApi = 19
-    renderscriptSupportModeEnabled = true
-
-    //library版本
-    jjdxm_minSdkVersion = 9
-    jjdxm_versionCode = 1
-    jjdxm_versionName = "1.0.0"
-    jjdxm_v4 = 'com.android.support:support-v4:23.3.0'
-    jjdxm_v7 = 'com.android.support:appcompat-v7:23.3.0'
 }

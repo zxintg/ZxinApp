@@ -1,14 +1,14 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion Integer.valueOf(COM_SDK_VER)
+    buildToolsVersion BUILD_TOOLS_VER
 
     defaultConfig {
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode rootProject.ext.versionCode
-        versionName rootProject.ext.versionName
+        minSdkVersion Integer.valueOf(MIN_SDK_VER)
+        targetSdkVersion Integer.valueOf(TAR_SDK_VER)
+        versionCode Integer.valueOf(VER_CODE)
+        versionName VER_NAME
 
         javaCompileOptions {
             annotationProcessorOptions {

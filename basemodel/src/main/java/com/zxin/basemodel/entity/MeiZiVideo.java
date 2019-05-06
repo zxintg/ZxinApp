@@ -1,54 +1,53 @@
 package com.zxin.basemodel.entity;
 
-import org.greenrobot.greendao.annotation.Entity;
-import org.greenrobot.greendao.annotation.Generated;
-import org.greenrobot.greendao.annotation.Id;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.PrimaryKey;
+import android.text.TextUtils;
 
 /**
  * Created by Administrator on 2018/5/11.
+ * <p>
+ * //指示数据表实体类
+ *
+ * @Entity(tableName = "tb_student",//定义表名
+ * indices = @Index(value = {"class_id", "number"}),//定义索引
+ * foreignKeys = {@ForeignKey(entity = ClassEntity.class,
+ * parentColumns = "id",
+ * childColumns = "class_id")})//定义外键
  */
-@Entity
+//指示数据表实体类
+@Entity(tableName = "tb_video")//定义外键
 public class MeiZiVideo {
-    @Id(autoincrement = true)
+    @PrimaryKey(autoGenerate = true) //定义主键
     private Long id;
     //缩略图
+    @ColumnInfo(name = "thumb_url")//定义数据表中的字段名
     private String thumbUrl;
     //播放地址
+    @ColumnInfo(name = "video_url")
     private String videoUrl;
     //昵称
-    private String nickname;
+    @ColumnInfo(name = "nick_name")
+    private String nickName;
     //用户名称
+    @ColumnInfo(name = "user_id")
     private String userId;
     //创建时间
+    @ColumnInfo(name = "create_time")
     private Long createTime;
     //最近播放时间
+    @ColumnInfo(name = "last_time")
     private Long lastTime;
     //话题
+    @ColumnInfo(name = "topic")
     private String topic;
     //Vid
+    @ColumnInfo(name = "vid")
     private int vid;
     //播放次数
+    @ColumnInfo(name = "play_num")
     private int playNum;
-
-    @Generated(hash = 1487297628)
-    public MeiZiVideo(Long id, String thumbUrl, String videoUrl, String nickname,
-            String userId, Long createTime, Long lastTime, String topic, int vid,
-            int playNum) {
-        this.id = id;
-        this.thumbUrl = thumbUrl;
-        this.videoUrl = videoUrl;
-        this.nickname = nickname;
-        this.userId = userId;
-        this.createTime = createTime;
-        this.lastTime = lastTime;
-        this.topic = topic;
-        this.vid = vid;
-        this.playNum = playNum;
-    }
-
-    @Generated(hash = 1039647290)
-    public MeiZiVideo() {
-    }
 
     public Long getId() {
         return id;
@@ -74,12 +73,12 @@ public class MeiZiVideo {
         this.videoUrl = videoUrl;
     }
 
-    public String getNickname() {
-        return nickname;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 
     public String getUserId() {
@@ -130,4 +129,36 @@ public class MeiZiVideo {
         this.playNum = playNum;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        MeiZiVideo that = (MeiZiVideo) obj;
+        return id == that.id &&
+                TextUtils.equals(thumbUrl, that.thumbUrl) &&
+                TextUtils.equals(videoUrl, that.videoUrl) &&
+                TextUtils.equals(nickName, that.nickName) &&
+                TextUtils.equals(userId, that.userId) &&
+                createTime == that.createTime &&
+                lastTime == that.lastTime &&
+                TextUtils.equals(topic, that.topic) &&
+                vid == that.vid &&
+                playNum == that.playNum;
+    }
+
+    @Override
+    public String toString() {
+        return "MeiZiVideo{" +
+                "id=" + id +
+                ", thumbUrl='" + thumbUrl + '\'' +
+                ", videoUrl='" + videoUrl + '\'' +
+                ", nickName='" + nickName + '\'' +
+                ", userId='" + userId + '\'' +
+                ", createTime='" + createTime + '\'' +
+                ", lastTime='" + lastTime + '\'' +
+                ", topic='" + topic + '\'' +
+                ", vid='" + vid + '\'' +
+                ", playNum=" + playNum +
+                '}';
+    }
 }

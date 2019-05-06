@@ -3,18 +3,12 @@ package com.zxin.basemodel.app;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Environment;
-
 import com.zxin.basemodel.R;
-import com.zxin.basemodel.gen.DaoMaster;
 import com.zxin.basemodel.gen.DaoSession;
+import com.zxin.basemodel.gen.DataBaseUtil;
 import com.zxin.root.util.FileUtil;
-import com.zxin.root.util.LogUtils;
 import com.zxin.root.util.ZipUtil;
 import com.zxin.basemodel.util.BaseStringUtils;
-
-import org.greenrobot.greendao.database.Database;
-import org.greenrobot.greendao.query.QueryBuilder;
-
 import java.io.File;
 import java.io.InputStream;
 
@@ -28,8 +22,6 @@ public class GreenDaoManager {
 
     //dbManager单例
     private static GreenDaoManager greenDaoManager;
-
-    private DaoMaster mDaoMaster;
     private DaoSession mDaoSession;
 
     private GreenDaoManager() {
@@ -49,8 +41,6 @@ public class GreenDaoManager {
                     String pageName = BaseStringUtils.pageNameParent;
                     dbPath = "/data" + Environment.getDataDirectory().getAbsolutePath() + "/" + pageName + "/databases/";
                     greenDaoManager = new GreenDaoManager();
-                    QueryBuilder.LOG_SQL = true;
-                    QueryBuilder.LOG_VALUES = true;
                 }
             }
         }
@@ -61,11 +51,7 @@ public class GreenDaoManager {
      * 初始化数据
      */
     private void initAplus() {
-        APlusOpenHelper aPlusOpenHelper = new APlusOpenHelper(BaseApplication.contextApp, BaseStringUtils.dbName, null);
-        //http://blog.csdn.net/qq_32583189/article/details/52128620
-        //aPlusOpenHelper.getEncryptedWritableDb(); 使用加密的db
-        mDaoMaster = new DaoMaster(aPlusOpenHelper.getWritableDatabase());
-        mDaoSession = mDaoMaster.newSession();
+
     }
 
     public DaoSession getmDaoSession() {
@@ -98,42 +84,5 @@ public class GreenDaoManager {
         }
     }
 
-    /**
-     * 数据库升级处理
-     */
-    class APlusOpenHelper extends DaoMaster.OpenHelper{
-
-        public APlusOpenHelper(Context context, String name, SQLiteDatabase.CursorFactory factory) {
-            super(context, name, factory);
-        }
-
-        //数据库升级处理
-        //http://blog.csdn.net/qq_32583189/article/details/52128620
-        @Override
-        public void onUpgrade(Database db, int oldVersion, int newVersion) {
-            if (oldVersion == newVersion) {
-                LogUtils.d("数据库是最新版本" + oldVersion + "，不需要升级");
-                return;
-            }
-            LogUtils.d("数据库从版本" + oldVersion + "升级到版本" + newVersion);
-            for (int i = oldVersion; i <= newVersion; i++) {
-                switch (i) {
-                    case 1:
-                        break;
-
-                    case 2:
-                        DaoMaster.createAllTables(db, true);
-                        break;
-
-                    case 3: //db版本升级(2—>3) 合肥市-经开区 添加
-                        db.execSQL("insert into city values (3751,1047,'经开区','J',null)");
-                        break;
-
-                    default:
-                        break;
-                }
-            }
-        }
-    }
 
 }

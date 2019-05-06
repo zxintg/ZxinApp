@@ -2,7 +2,6 @@ package com.zxin.basemodel.db;
 
 import android.content.Context;
 
-import com.zxin.basemodel.gen.DaoMaster;
 import com.zxin.basemodel.gen.DaoSession;
 
 /**

@@ -9,13 +9,11 @@ import org.greenrobot.greendao.identityscope.IdentityScopeType;
 import org.greenrobot.greendao.internal.DaoConfig;
 
 import com.zxin.basemodel.entity.City;
-import com.zxin.basemodel.entity.GuanJianZi;
 import com.zxin.basemodel.entity.HttpUrl;
 import com.zxin.basemodel.entity.MeiZiCollect;
 import com.zxin.basemodel.entity.MeiZiVideo;
 
 import com.zxin.basemodel.gen.CityDao;
-import com.zxin.basemodel.gen.GuanJianZiDao;
 import com.zxin.basemodel.gen.HttpUrlDao;
 import com.zxin.basemodel.gen.MeiZiCollectDao;
 import com.zxin.basemodel.gen.MeiZiVideoDao;
@@ -30,13 +28,11 @@ import com.zxin.basemodel.gen.MeiZiVideoDao;
 public class DaoSession extends AbstractDaoSession {
 
     private final DaoConfig cityDaoConfig;
-    private final DaoConfig guanJianZiDaoConfig;
     private final DaoConfig httpUrlDaoConfig;
     private final DaoConfig meiZiCollectDaoConfig;
     private final DaoConfig meiZiVideoDaoConfig;
 
     private final CityDao cityDao;
-    private final GuanJianZiDao guanJianZiDao;
     private final HttpUrlDao httpUrlDao;
     private final MeiZiCollectDao meiZiCollectDao;
     private final MeiZiVideoDao meiZiVideoDao;
@@ -48,9 +44,6 @@ public class DaoSession extends AbstractDaoSession {
         cityDaoConfig = daoConfigMap.get(CityDao.class).clone();
         cityDaoConfig.initIdentityScope(type);
 
-        guanJianZiDaoConfig = daoConfigMap.get(GuanJianZiDao.class).clone();
-        guanJianZiDaoConfig.initIdentityScope(type);
-
         httpUrlDaoConfig = daoConfigMap.get(HttpUrlDao.class).clone();
         httpUrlDaoConfig.initIdentityScope(type);
 
@@ -61,13 +54,11 @@ public class DaoSession extends AbstractDaoSession {
         meiZiVideoDaoConfig.initIdentityScope(type);
 
         cityDao = new CityDao(cityDaoConfig, this);
-        guanJianZiDao = new GuanJianZiDao(guanJianZiDaoConfig, this);
         httpUrlDao = new HttpUrlDao(httpUrlDaoConfig, this);
         meiZiCollectDao = new MeiZiCollectDao(meiZiCollectDaoConfig, this);
         meiZiVideoDao = new MeiZiVideoDao(meiZiVideoDaoConfig, this);
 
         registerDao(City.class, cityDao);
-        registerDao(GuanJianZi.class, guanJianZiDao);
         registerDao(HttpUrl.class, httpUrlDao);
         registerDao(MeiZiCollect.class, meiZiCollectDao);
         registerDao(MeiZiVideo.class, meiZiVideoDao);
@@ -75,7 +66,6 @@ public class DaoSession extends AbstractDaoSession {
     
     public void clear() {
         cityDaoConfig.clearIdentityScope();
-        guanJianZiDaoConfig.clearIdentityScope();
         httpUrlDaoConfig.clearIdentityScope();
         meiZiCollectDaoConfig.clearIdentityScope();
         meiZiVideoDaoConfig.clearIdentityScope();
@@ -83,10 +73,6 @@ public class DaoSession extends AbstractDaoSession {
 
     public CityDao getCityDao() {
         return cityDao;
-    }
-
-    public GuanJianZiDao getGuanJianZiDao() {
-        return guanJianZiDao;
     }
 
     public HttpUrlDao getHttpUrlDao() {

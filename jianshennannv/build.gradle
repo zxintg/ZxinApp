@@ -1,14 +1,14 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion Integer.valueOf(COM_SDK_VER)
+    buildToolsVersion BUILD_TOOLS_VER
 
     defaultConfig {
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode rootProject.ext.versionCode
-        versionName rootProject.ext.versionName
+        minSdkVersion Integer.valueOf(MIN_SDK_VER)
+        targetSdkVersion Integer.valueOf(TAR_SDK_VER)
+        versionCode Integer.valueOf(VER_CODE)
+        versionName VER_NAME
 
         //添加了javaCompileOptions
         javaCompileOptions {
@@ -34,12 +34,6 @@ android {
     lintOptions {
         checkReleaseBuilds false
         abortOnError false
-    }
-
-    //由于Android目前不是完全支持Java 8的语言特性，会导致编译出错。这里将项目的源和目标兼容性值保留为 Java 7。
-    compileOptions {
-        sourceCompatibility rootProject.ext.sourceCompatibility
-        targetCompatibility rootProject.ext.targetCompatibility
     }
 
     //android studio默认so文件加载目录为:src/main/jniLibs

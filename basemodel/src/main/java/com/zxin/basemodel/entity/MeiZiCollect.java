@@ -1,34 +1,27 @@
 package com.zxin.basemodel.entity;
 
-import org.greenrobot.greendao.annotation.Entity;
-import org.greenrobot.greendao.annotation.Generated;
-import org.greenrobot.greendao.annotation.Id;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.PrimaryKey;
+import android.text.TextUtils;
 
 /**
  * Created by Administrator on 2018/5/11.
  */
-@Entity
+//指示数据表实体类
+@Entity(tableName = "tb_collect")//定义外键
 public class MeiZiCollect {
-    @Id(autoincrement = true)
+    @PrimaryKey(autoGenerate = true) //定义主键
     private Long id;
+    //缩略图
+    @ColumnInfo(name = "cover")//定义数据表中的字段名
     private String cover;
+    @ColumnInfo(name = "url")//定义数据表中的字段名
     private String url;
+    @ColumnInfo(name = "name")//定义数据表中的字段名
     private String name;
+    @ColumnInfo(name = "create_time")//定义数据表中的字段名
     private Long createTime;
-
-    @Generated(hash = 185519983)
-    public MeiZiCollect(Long id, String cover, String url, String name,
-            Long createTime) {
-        this.id = id;
-        this.cover = cover;
-        this.url = url;
-        this.name = name;
-        this.createTime = createTime;
-    }
-
-    @Generated(hash = 1787207617)
-    public MeiZiCollect() {
-    }
 
     public Long getId() {
         return id;
@@ -38,20 +31,20 @@ public class MeiZiCollect {
         this.id = id;
     }
 
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
     public String getCover() {
         return cover;
     }
 
     public void setCover(String cover) {
         this.cover = cover;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public String getName() {
@@ -68,5 +61,28 @@ public class MeiZiCollect {
 
     public void setCreateTime(Long createTime) {
         this.createTime = createTime;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        MeiZiCollect that = (MeiZiCollect) obj;
+        return id == that.id &&
+                TextUtils.equals(cover, that.cover) &&
+                TextUtils.equals(url, that.url) &&
+                TextUtils.equals(name, that.name) &&
+                createTime == that.createTime;
+    }
+
+    @Override
+    public String toString() {
+        return "MeiZiCollect{" +
+                "id=" + id +
+                ", cover='" + cover + '\'' +
+                ", url='" + url + '\'' +
+                ", name='" + name + '\'' +
+                ", createTime=" + createTime +
+                '}';
     }
 }

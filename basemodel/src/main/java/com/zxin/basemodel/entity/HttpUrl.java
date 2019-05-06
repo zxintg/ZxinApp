@@ -1,45 +1,37 @@
 package com.zxin.basemodel.entity;
 
-import org.greenrobot.greendao.annotation.Entity;
-import org.greenrobot.greendao.annotation.Generated;
-import org.greenrobot.greendao.annotation.Id;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.PrimaryKey;
+import android.text.TextUtils;
 
 /**
  * Created by Administrator on 2018/5/11.
  */
 
-@Entity
+@Entity(tableName = "tb_httpurl")//定义外键
 public class HttpUrl {
-    @Id(autoincrement = true)
+    @PrimaryKey(autoGenerate = true) //定义主键
     private Long id;
+    @ColumnInfo(name = "create_timer")//定义数据表中的字段名
     private String createTimer;
+    @ColumnInfo(name = "name")//定义数据表中的字段名
     private String name;
+    @ColumnInfo(name = "lable")//定义数据表中的字段名
     private String lable;
+    @ColumnInfo(name = "url")//定义数据表中的字段名
     private String url;
+    @ColumnInfo(name = "last_time")//定义数据表中的字段名
     private String lastTime;
+    @ColumnInfo(name = "times")//定义数据表中的字段名
     private long times;
+    @ColumnInfo(name = "order_num")//定义数据表中的字段名
     private int orderNum;
+    @ColumnInfo(name = "is_effective")//定义数据表中的字段名
     private int isEffective;
+    @ColumnInfo(name = "modify_time")//定义数据表中的字段名
     private String modifyTime;
-    @Generated(hash = 1289403453)
-    public HttpUrl(Long id, String createTimer, String name, String lable,
-            String url, String lastTime, long times, int orderNum, int isEffective,
-            String modifyTime) {
-        this.id = id;
-        this.createTimer = createTimer;
-        this.name = name;
-        this.lable = lable;
-        this.url = url;
-        this.lastTime = lastTime;
-        this.times = times;
-        this.orderNum = orderNum;
-        this.isEffective = isEffective;
-        this.modifyTime = modifyTime;
-    }
 
-    @Generated(hash = 257886535)
-    public HttpUrl() {
-    }
     public Long getId() {
         return id;
     }
@@ -118,5 +110,38 @@ public class HttpUrl {
 
     public void setModifyTime(String modifyTime) {
         this.modifyTime = modifyTime;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        HttpUrl that = (HttpUrl) obj;
+        return id == that.id &&
+                TextUtils.equals(createTimer, that.createTimer) &&
+                TextUtils.equals(name, that.name) &&
+                TextUtils.equals(lable, that.lable) &&
+                TextUtils.equals(url, that.url) &&
+                TextUtils.equals(lastTime, that.lastTime) &&
+                times == that.times &&
+                orderNum == that.orderNum &&
+                isEffective == that.isEffective &&
+                TextUtils.equals(modifyTime, that.modifyTime);
+    }
+
+    @Override
+    public String toString() {
+        return "HttpUrl{" +
+                "id=" + id +
+                ", createTimer='" + createTimer + '\'' +
+                ", name='" + name + '\'' +
+                ", lable='" + lable + '\'' +
+                ", url='" + url + '\'' +
+                ", lastTime='" + lastTime + '\'' +
+                ", times='" + times + '\'' +
+                ", orderNum='" + orderNum + '\'' +
+                ", isEffective='" + isEffective + '\'' +
+                ", modifyTime=" + modifyTime +
+                '}';
     }
 }
