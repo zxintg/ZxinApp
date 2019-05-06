@@ -8,7 +8,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.0'
-        classpath 'org.greenrobot:greendao-gradle-plugin:3.1.0' // 添加插件 更好支持GreenDao
+        //classpath 'org.greenrobot:greendao-gradle-plugin:3.1.0' // 添加插件 更好支持GreenDao
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
         //**重要**
@@ -34,6 +34,7 @@ task clean(type: Delete) {
 
 //定义全局属性
 ext{
+    room_version = "1.1.1"
     greendaoSchemaVersion = 1
     //项目的源和目标兼容性值保留为 Java 7
     sourceCompatibility = JavaVersion.VERSION_1_7

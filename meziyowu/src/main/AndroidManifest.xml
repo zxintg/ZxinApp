@@ -101,14 +101,14 @@
         <activity
             android:name="com.zxin.meziyowu.activity.YoMeiLocalVideoActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="portrait"  />
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.zxin.meziyowu.activity.YoMeiCollectActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="portrait"  />
+            android:screenOrientation="portrait" />
+
         <meta-data
             android:name="android.support.VERSION"
-            android:value="25.4.0" />
+            android:value="26.1.0" />
     </application>
-
 </manifest>

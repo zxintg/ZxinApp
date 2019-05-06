@@ -4,9 +4,7 @@ import com.zxin.basemodel.app.BaseApplication;
 import com.zxin.basemodel.entity.GuanJianZi;
 import com.zxin.basemodel.gen.GuanJianZiDao;
 import com.zxin.root.bean.GuanJianZiBean;
-
 import org.greenrobot.greendao.query.Query;
-
 import java.util.ArrayList;
 import java.util.List;
 
