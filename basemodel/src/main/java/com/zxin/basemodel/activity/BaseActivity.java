@@ -74,6 +74,13 @@ public abstract class BaseActivity extends RxAppCompatActivity implements View.O
         for (BasePresenter presenter : mPresenterList) {
             presenter.detachView();
         }
+        clearAllDatas();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        saveAllDatas();
     }
 
     /**
@@ -90,6 +97,15 @@ public abstract class BaseActivity extends RxAppCompatActivity implements View.O
     public abstract int setLayout();
 
     public abstract void initBaseDatas(View view);
+
+    /*****
+     * 清空数据
+     */
+    public abstract void clearAllDatas();
+    /*****
+     * 保存数据
+     */
+    public abstract void saveAllDatas();
 
     //返回键返回事件
     @Override

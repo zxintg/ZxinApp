@@ -69,6 +69,15 @@ public abstract class BaseFragment extends RxFragment implements View.OnClickLis
 
     public abstract void initBaseDatas(View view);
 
+    /*****
+     * 清空数据
+     */
+    public abstract void clearAllDatas();
+    /*****
+     * 保存数据
+     */
+    public abstract void saveAllDatas();
+
     /**
      * 显示生命周期日志
      *
@@ -100,6 +109,7 @@ public abstract class BaseFragment extends RxFragment implements View.OnClickLis
             Log.e(getClassName(), "--onPause");
             Log.e(getClassName(), "--getActivity：" + getActivity() == null ? "null" : getActivity().toString());
         }
+        saveAllDatas();
     }
 
     @Override
@@ -112,6 +122,7 @@ public abstract class BaseFragment extends RxFragment implements View.OnClickLis
         for (BasePresenter presenter : mPresenterList) {
             presenter.detachView();
         }
+        clearAllDatas();
     }
 
     //EventBus的回调方法。
