@@ -22,6 +22,8 @@ public abstract class BaseApplication extends Application {
     //Application为整个应用保存全局的RefWatcher
     private RefWatcher refWatcher;
 
+    private DataBaseUtil dataBaseUtil = null;
+
     public static BaseApplication getInstance() {
         return mApplication;
     }
@@ -49,19 +51,12 @@ public abstract class BaseApplication extends Application {
             public void run() {
                 //设置线程优先级，不与主线程抢资源
                 Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
-                DataBaseUtil.getInstance(contextApp).initDaos();
+                dataBaseUtil = DataBaseUtil.getInstance(contextApp);
+                dataBaseUtil.initDaos();
+                //初始化DB(拷贝数据到数据库)
+                GreenDaoManager.getInstance();
             }
         }).start();
-    }
-
-    //获取应用包名
-    String MyPackageName;
-
-    public String getMyPackageName() {
-        if (MyPackageName == null) {
-            MyPackageName = getPackageName();
-        }
-        return MyPackageName;
     }
 
     /**
@@ -102,4 +97,10 @@ public abstract class BaseApplication extends Application {
         return contextApp;
     }
 
+    public DataBaseUtil getDataBaseUtil(){
+        if (dataBaseUtil==null){
+            dataBaseUtil = DataBaseUtil.getInstance(contextApp);
+        }
+        return dataBaseUtil;
+    }
 }

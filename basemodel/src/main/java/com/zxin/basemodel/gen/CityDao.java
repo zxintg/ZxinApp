@@ -5,7 +5,9 @@ import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 import android.arch.persistence.room.Update;
+
 import com.zxin.basemodel.entity.City;
+
 import java.util.List;
 
 /**
@@ -18,7 +20,24 @@ public interface CityDao {
     List<City> getAll();
 
     @Query("SELECT * FROM t_sse_param_area where area_id = :areaId LIMIT 1")
-    List<City> getCityById(int areaId);
+    City getCityById(String areaId);
+
+    @Query("SELECT * FROM t_sse_param_area where area_name = :areaName LIMIT 1")
+    City getCityByName(String areaName);
+
+    @Query("SELECT * FROM t_sse_param_area where parent_id = :parentId ORDER BY area_id ASC")
+    List<City> getCityByParentId(String parentId);
+
+    @Query("SELECT * FROM t_sse_param_area where parent_id in  (SELECT area_id FROM t_sse_param_area WHERE parent_id = 0) ORDER BY area_id ASC")
+    List<City> getCityByParent();
+
+    //根据上一级的PD和当前区域名字查询得到当前区域名字
+    @Query("SELECT * FROM t_sse_param_area where parent_id = :parentId and area_name = :areaName LIMIT 1")
+    City getCityByParentIdArea(String parentId, String areaName);
+
+    @Query("SELECT * FROM t_sse_param_area where area_name = :areaName and area_level = :areaLevel LIMIT 1")
+    City getCityByAreaLevel(String areaName,String areaLevel);
+
 
     @Query("SELECT * FROM t_sse_param_area LIMIT :current,:count ")
     List<City> getByLimit(int current, int count);

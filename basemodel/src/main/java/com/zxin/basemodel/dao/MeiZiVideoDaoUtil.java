@@ -7,11 +7,10 @@ import com.google.gson.reflect.TypeToken;
 import com.zxin.basemodel.app.BaseApplication;
 import com.zxin.basemodel.entity.MeiZiCollect;
 import com.zxin.basemodel.entity.MeiZiVideo;
+import com.zxin.basemodel.gen.DataBaseUtil;
 import com.zxin.basemodel.gen.MeiZiCollectDao;
 import com.zxin.basemodel.gen.MeiZiVideoDao;
 import com.zxin.root.util.ToastUtil;
-
-import org.greenrobot.greendao.query.Query;
 
 import java.util.Calendar;
 import java.util.List;
@@ -25,11 +24,13 @@ public class MeiZiVideoDaoUtil {
     private static volatile MeiZiVideoDaoUtil meiZiVideoDaoUtil = null;
     private static MeiZiVideoDao meiZiVideoDao;
     private static MeiZiCollectDao meiZiCollectDao;
-
     private Context mContext;
 
     private MeiZiVideoDaoUtil(Context mContext) {
         this.mContext = mContext;
+        DataBaseUtil dataBaseUtil = BaseApplication.getInstance().getDataBaseUtil();
+        meiZiVideoDao = dataBaseUtil.getDao(DataBaseUtil.Mode.VideoMode);
+        meiZiCollectDao = dataBaseUtil.getDao(DataBaseUtil.Mode.CollectMode);
     }
 
     public static MeiZiVideoDaoUtil getInstance(Context mContext) {
@@ -40,10 +41,6 @@ public class MeiZiVideoDaoUtil {
                 }
             }
         }
-        if (meiZiVideoDao == null)
-            meiZiVideoDao = BaseApplication.getInstance().getDaoSession().getMeiZiVideoDao();
-        if (meiZiCollectDao == null)
-            meiZiCollectDao = BaseApplication.getInstance().getDaoSession().getMeiZiCollectDao();
         return meiZiVideoDaoUtil;
     }
 
@@ -54,7 +51,7 @@ public class MeiZiVideoDaoUtil {
         MeiZiVideo meiZiVideo = new MeiZiVideo();
         meiZiVideo.setThumbUrl(thumbUrl);
         meiZiVideo.setVideoUrl(videoUrl);
-        meiZiVideo.setNickname(nickname);
+        meiZiVideo.setNickName(nickname);
         meiZiVideo.setUserId(userId);
         meiZiVideo.setTopic(topic);
         meiZiVideo.setVid(vid);
@@ -64,77 +61,64 @@ public class MeiZiVideoDaoUtil {
         meiZiVideo.setCreateTime(nowLong);
         meiZiVideo.setLastTime(nowLong);
         meiZiVideo.setPlayNum(0);
-
-        long rowId = meiZiVideoDao.insert(meiZiVideo);//添加一个
-        return rowId > 0;
+        meiZiVideoDao.insert(meiZiVideo);
+        return meiZiVideoDao.getVideoByUrl(videoUrl) != null;
     }
 
     public boolean addMeiZiVideoJsonArray(String json) {
         Gson gson = new Gson();
-        List<MeiZiVideo> collectList = gson.fromJson(json, new TypeToken<List<MeiZiVideo>>() {
+        MeiZiVideo[] collectList = gson.fromJson(json, new TypeToken<MeiZiVideo[]>() {
         }.getType());
-        if (collectList == null || collectList.isEmpty()) {
+        if (collectList == null || collectList.length == 0) {
             ToastUtil.getInstance(mContext).showShort("视频数据有问题，请检查！");
             return false;
         }
-        for (MeiZiVideo meiZiVideo : collectList) {
-            long rowId = meiZiVideoDao.insert(meiZiVideo);
-            if (rowId > 0)
-                continue;
-            else {
-                ToastUtil.getInstance(mContext).showShort("视频数据有问题，请检查！");
-                return false;
-            }
-        }
-        return true;
+        int lastNum = meiZiVideoDao.getCount();
+        meiZiVideoDao.insert(collectList);
+        int num = meiZiVideoDao.getCount();
+        return num - lastNum == collectList.length;
     }
 
     public boolean addMeiZiCollectJsonArray(String json) {
         Gson gson = new Gson();
-        List<MeiZiCollect> collectList = gson.fromJson(json, new TypeToken<List<MeiZiCollect>>() {
+        MeiZiCollect[] collectList = gson.fromJson(json, new TypeToken<MeiZiCollect[]>() {
         }.getType());
-        if (collectList == null || collectList.isEmpty()) {
+        if (collectList == null || collectList.length == 0) {
             ToastUtil.getInstance(mContext).showShort("收藏数据有问题，请检查！");
             return false;
         }
-        for (MeiZiCollect meiZiVideo : collectList) {
-            long rowId = meiZiCollectDao.insert(meiZiVideo);
-            if (rowId > 0)
-                continue;
-            else {
-                ToastUtil.getInstance(mContext).showShort("收藏数据有问题，请检查！");
-                return false;
-            }
-        }
-        return true;
+        int lastNum = meiZiCollectDao.getCount();
+        meiZiCollectDao.insert(collectList);
+        int num = meiZiCollectDao.getCount();
+        return num - lastNum == collectList.length;
     }
 
-    public MeiZiCollect addMeiZiCollect(int id, String cover, String url, String userName) {
+    public MeiZiCollect addMeiZiCollect(long id, String cover, String url, String userName) {
         MeiZiCollect meiZiVideo = new MeiZiCollect();
         meiZiVideo.setId(Long.parseLong(String.valueOf(id)));
         meiZiVideo.setCover(cover);
         meiZiVideo.setUrl(url);
         meiZiVideo.setName(userName);
         meiZiVideo.setCreateTime(Calendar.getInstance().getTime().getTime());
-        long rowId = meiZiCollectDao.insert(meiZiVideo);//添加一个
-        return rowId > 0 ? meiZiVideo : null;
+        meiZiCollectDao.insert(meiZiVideo);
+        return meiZiCollectDao.getCollectById(id);
     }
 
     /**
      * 根据主键删除
      */
     public void deleteMeiZiVideo(long id) {
-        meiZiVideoDao.deleteByKey(id);
+        meiZiVideoDao.deleteById(id);
     }
 
     public void deleteMeiZiCollect(long id) {
-        meiZiCollectDao.deleteByKey(id);
+        meiZiCollectDao.deleteById(id);
     }
 
     /**
      * 更改数据
      */
-    public void updateMeiZiVideo(long id, int playNum) {
+    public boolean updateMeiZiVideo(long id, int playNum) {
         MeiZiVideo meiZiVideo = new MeiZiVideo();
         meiZiVideo.setId(id);
         Calendar now = Calendar.getInstance();
@@ -142,25 +126,26 @@ public class MeiZiVideoDaoUtil {
         meiZiVideo.setLastTime(nowLong);
         meiZiVideo.setPlayNum(playNum);
         meiZiVideoDao.update(meiZiVideo);
+        return meiZiVideoDao.getVideoById(id) != null;
     }
 
     /**
      * 查找数据
      */
     public List<MeiZiVideo> getMeiZiVideoList(int pageNum, int pageSize) {
-        return meiZiVideoDao.queryBuilder().offset(pageNum * pageSize).limit(pageSize).orderAsc(MeiZiVideoDao.Properties.CreateTime).list();
+        return meiZiVideoDao.getByLimit((pageNum - 1) * pageSize, pageSize);
     }
 
     public String getMeiZiVideoList() {
-        return new Gson().toJson(meiZiVideoDao.queryBuilder().orderAsc(MeiZiVideoDao.Properties.CreateTime).list());
+        return new Gson().toJson(meiZiVideoDao.getAll());
     }
 
     public List<MeiZiCollect> getMeiZiCollectList(int pageNum, int pageSize) {
-        return meiZiCollectDao.queryBuilder().offset(pageNum * pageSize).limit(pageSize).orderDesc(MeiZiCollectDao.Properties.CreateTime).list();
+        return meiZiCollectDao.getByLimit((pageNum - 1) * pageSize, pageSize);
     }
 
     public String getMeiZiCollectList() {
-        return new Gson().toJson(meiZiCollectDao.queryBuilder().orderDesc(MeiZiCollectDao.Properties.CreateTime).list());
+        return new Gson().toJson(meiZiCollectDao.getAll());
     }
 
     /****
@@ -169,18 +154,15 @@ public class MeiZiVideoDaoUtil {
      * @return
      */
     public MeiZiVideo getMeiZiVideo(long vid) {
-        Query query = meiZiVideoDao.queryBuilder().where(MeiZiVideoDao.Properties.Vid.eq(vid)).build();
-        MeiZiVideo meizi = (MeiZiVideo) query.unique();
-        return meizi;
+        return meiZiVideoDao.getVideoByVid(vid);
     }
 
     public boolean hasMeiZiVideo(long vid) {
-        Query query = meiZiVideoDao.queryBuilder().where(MeiZiVideoDao.Properties.Vid.eq(vid)).build();
-        return query.unique() != null;
+        return getMeiZiVideo(vid) != null;
     }
 
     public MeiZiCollect getMeiZiCollect(String userName) {
-        return meiZiCollectDao.queryBuilder().where(MeiZiCollectDao.Properties.Name.eq(userName)).build().unique();
+        return meiZiCollectDao.getCollectByName(userName);
     }
 
     /*****

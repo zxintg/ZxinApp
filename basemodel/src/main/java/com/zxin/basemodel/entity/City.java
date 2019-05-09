@@ -10,12 +10,12 @@ import android.text.TextUtils;
  */
 @Entity(tableName = "t_sse_param_area")//定义外键
 public class City {
-    @PrimaryKey(autoGenerate = true) //定义主键
+    @PrimaryKey //定义主键
     @ColumnInfo(name = "area_id")
-    public int areaId;
+    public String areaId;
 
     @ColumnInfo(name = "parent_id")//定义数据表中的字段名
-    public int parentId;
+    public String parentId;
 
     @ColumnInfo(name = "area_name")//定义数据表中的字段名
     public String areaName;
@@ -39,19 +39,19 @@ public class City {
     public String remark;
 
 
-    public int getAreaId() {
+    public String getAreaId() {
         return areaId;
     }
 
-    public void setAreaId(int areaId) {
+    public void setAreaId(String areaId) {
         this.areaId = areaId;
     }
 
-    public int getParentId() {
+    public String getParentId() {
         return parentId;
     }
 
-    public void setParentId(int parentId) {
+    public void setParentId(String parentId) {
         this.parentId = parentId;
     }
 

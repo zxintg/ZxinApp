@@ -28,10 +28,11 @@ public abstract class DataBaseUtil extends RoomDatabase {
 
     private static volatile DataBaseUtil instance = null;
 
+    private ZxinDBDao zxinDBDao;
     private CityDao cityDao;
-    private HttpUrl httpUrlDao;
-    private MeiZiCollect collectDao;
-    private MeiZiVideo videoDao;
+    private HttpUrlDao httpUrlDao;
+    private MeiZiCollectDao collectDao;
+    private MeiZiVideoDao videoDao;
 
     public static DataBaseUtil getInstance(final Context mContext) {
         if (instance == null) {
@@ -50,7 +51,9 @@ public abstract class DataBaseUtil extends RoomDatabase {
                             LogUtils.d(TAG, "onOpen:" + db.getPath());
                         }
                     }).addMigrations(ONE_TO_TWO_MIG)
-                            .allowMainThreadQueries().build();
+                            //如果真要把操作放在ui线程中，就必须加个allowMainThreadQueries()方法，这样数据库的操作就可以在ui线程中使用了！
+                            .allowMainThreadQueries()
+                            .build();
                 }
             }
         }
@@ -61,10 +64,15 @@ public abstract class DataBaseUtil extends RoomDatabase {
      * 初始化数据库
      */
     public void initDaos() {
+        zxinDBDao = initZxinDBDao();
         cityDao = initCityDao();
         httpUrlDao = initHttpUrlDao();
         collectDao = initMeiZiCollectDao();
         videoDao = initMeiZiVideoDao();
+    }
+
+    public ZxinDBDao getZxinDBDao(){
+        return zxinDBDao;
     }
 
     /*****
@@ -93,17 +101,20 @@ public abstract class DataBaseUtil extends RoomDatabase {
         return null;
     }
 
+    //初始化ZxinDB Dao
+    public abstract ZxinDBDao initZxinDBDao();
+
     //初始化city Dao
     public abstract CityDao initCityDao();
 
     //初始化HttpUrl Dao
-    public abstract HttpUrl initHttpUrlDao();
+    public abstract HttpUrlDao initHttpUrlDao();
 
     //初始化MeiZiCollect Dao
-    public abstract MeiZiCollect initMeiZiCollectDao();
+    public abstract MeiZiCollectDao initMeiZiCollectDao();
 
     //初始化MeiZiVideo Dao
-    public abstract MeiZiVideo initMeiZiVideoDao();
+    public abstract MeiZiVideoDao initMeiZiVideoDao();
 
     //数据库升级用的
     private static Migration ONE_TO_TWO_MIG = new Migration(1, 2) {

@@ -2,7 +2,6 @@ package com.zxin.basemodel.app;
 
 import android.os.Environment;
 import com.zxin.basemodel.R;
-import com.zxin.basemodel.gen.DaoSession;
 import com.zxin.root.util.FileUtil;
 import com.zxin.root.util.ZipUtil;
 import com.zxin.basemodel.util.BaseStringUtils;
@@ -20,7 +19,6 @@ public class GreenDaoManager {
 
     //dbManager单例
     private static GreenDaoManager greenDaoManager;
-    private DaoSession mDaoSession;
 
     private GreenDaoManager() {
         //copy db
@@ -50,10 +48,6 @@ public class GreenDaoManager {
      */
     private void initAplus() {
 
-    }
-
-    public DaoSession getmDaoSession() {
-        return mDaoSession;
     }
 
     /**

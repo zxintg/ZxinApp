@@ -17,10 +17,16 @@ public interface MeiZiCollectDao{
     @Query("SELECT * FROM tb_collect ORDER BY create_time ASC")
     List<MeiZiCollect> getAll();
 
-    @Query("SELECT * FROM tb_collect where id = :collectId LIMIT 1")
-    List<MeiZiCollect> getCityById(int collectId);
+    @Query("SELECT * FROM tb_collect where name = :mName LIMIT 1")
+    MeiZiCollect getCollectByName(String mName);
 
-    @Query("SELECT * FROM tb_collect LIMIT :current,:count ")
+    @Query("SELECT * FROM tb_collect where id = :collectId LIMIT 1")
+    MeiZiCollect getCollectById(long collectId);
+
+    @Query("SELECT * FROM tb_collect where url = :mUrl LIMIT 1")
+    MeiZiCollect getCollectByUrl(String mUrl);
+
+    @Query("SELECT * FROM tb_collect order by create_time desc LIMIT :current,:count ")
     List<MeiZiCollect> getByLimit(int current, int count);
 
     @Query("SELECT COUNT(*) FROM tb_collect")
@@ -36,7 +42,7 @@ public interface MeiZiCollectDao{
     void deleteAll();
 
     @Query("DELETE FROM tb_collect where id = :collectId")
-    void deleteById(int collectId);
+    void deleteById(long collectId);
 
     @Update
     void update(MeiZiCollect entity);
