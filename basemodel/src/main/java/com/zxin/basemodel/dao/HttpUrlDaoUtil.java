@@ -55,16 +55,14 @@ public class HttpUrlDaoUtil {
         httpUrl.setModifyTime(createTimer);
         httpUrl.setOrderNum(getEffectiveNum());
         //插入数据库
-        httpUrlDao.insert(httpUrl);
-        return httpUrlDao.getHttpUrlByName(name) != null;
+        return httpUrlDao.insert(httpUrl) > 0;
     }
 
     /**
      * 根据主键删除
      */
     public boolean deleteHttpUrl(long id) {
-        httpUrlDao.deleteById(id);
-        return getHttpBean(id) == null;
+        return httpUrlDao.deleteById(id) > 0;
     }
 
     /**
@@ -79,8 +77,7 @@ public class HttpUrlDaoUtil {
         httpUrl.setLable(lable);
         httpUrl.setModifyTime(createTimer);
         httpUrl.setIsEffective(checked ? 1 : 0);
-        httpUrlDao.update(httpUrl);
-        return httpUrl.equals(getHttpBean(id));
+        return httpUrlDao.update(httpUrl)>0;
     }
 
     /*****
@@ -89,12 +86,7 @@ public class HttpUrlDaoUtil {
      */
     public boolean updateHttpUrlTimes(long id, long times) {
         String createTimer = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
-        HttpUrl httpUrl = getHttpBean(id);
-        httpUrl.setId(id);
-        httpUrl.setTimes(times);
-        httpUrl.setLastTime(createTimer);
-        httpUrlDao.update(httpUrl);
-        return httpUrl.equals(getHttpBean(id));
+        return httpUrlDao.update(id,times,createTimer) >0;
     }
 
     /**
@@ -107,7 +99,7 @@ public class HttpUrlDaoUtil {
     public BasePageBean getHttpUrlList(int pageNum, int pageSize) {
         BasePageBean pageBean = new BasePageBean();
         List<HttpUrlBean> httpUrlList = new ArrayList<>();
-        List<HttpUrl> list = httpUrlDao.getByLimit((pageNum - 1) * pageSize,pageSize);
+        List<HttpUrl> list = httpUrlDao.getByLimit((pageNum - 1) * pageSize, pageSize);
         int count = httpUrlDao.getAll().size();
         for (HttpUrl httpUrl : list) {
             HttpUrlBean bean = new HttpUrlBean();

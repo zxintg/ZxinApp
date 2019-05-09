@@ -33,18 +33,18 @@ public interface MeiZiCollectDao{
     int getCount();
 
     @Insert
-    void insert(MeiZiCollect... entities);
+    int insert(MeiZiCollect... entities);
 
     @Delete
-    void delete(MeiZiCollect entity);
+    int delete(MeiZiCollect entity);
 
     @Query("DELETE FROM tb_collect")
-    void deleteAll();
+    int deleteAll();
 
     @Query("DELETE FROM tb_collect where id = :collectId")
-    void deleteById(long collectId);
+    int deleteById(long collectId);
 
     @Update
-    void update(MeiZiCollect entity);
+    int update(MeiZiCollect entity);
     
 }

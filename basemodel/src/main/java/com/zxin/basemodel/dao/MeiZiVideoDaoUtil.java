@@ -61,8 +61,7 @@ public class MeiZiVideoDaoUtil {
         meiZiVideo.setCreateTime(nowLong);
         meiZiVideo.setLastTime(nowLong);
         meiZiVideo.setPlayNum(0);
-        meiZiVideoDao.insert(meiZiVideo);
-        return meiZiVideoDao.getVideoByUrl(videoUrl) != null;
+        return meiZiVideoDao.insert(meiZiVideo) > 0;
     }
 
     public boolean addMeiZiVideoJsonArray(String json) {
@@ -73,10 +72,7 @@ public class MeiZiVideoDaoUtil {
             ToastUtil.getInstance(mContext).showShort("视频数据有问题，请检查！");
             return false;
         }
-        int lastNum = meiZiVideoDao.getCount();
-        meiZiVideoDao.insert(collectList);
-        int num = meiZiVideoDao.getCount();
-        return num - lastNum == collectList.length;
+        return meiZiVideoDao.insert(collectList) > 0;
     }
 
     public boolean addMeiZiCollectJsonArray(String json) {
@@ -87,10 +83,7 @@ public class MeiZiVideoDaoUtil {
             ToastUtil.getInstance(mContext).showShort("收藏数据有问题，请检查！");
             return false;
         }
-        int lastNum = meiZiCollectDao.getCount();
-        meiZiCollectDao.insert(collectList);
-        int num = meiZiCollectDao.getCount();
-        return num - lastNum == collectList.length;
+        return meiZiCollectDao.insert(collectList) > 0;
     }
 
     public MeiZiCollect addMeiZiCollect(long id, String cover, String url, String userName) {
@@ -119,14 +112,8 @@ public class MeiZiVideoDaoUtil {
      * 更改数据
      */
     public boolean updateMeiZiVideo(long id, int playNum) {
-        MeiZiVideo meiZiVideo = new MeiZiVideo();
-        meiZiVideo.setId(id);
-        Calendar now = Calendar.getInstance();
-        long nowLong = now.getTime().getTime();
-        meiZiVideo.setLastTime(nowLong);
-        meiZiVideo.setPlayNum(playNum);
-        meiZiVideoDao.update(meiZiVideo);
-        return meiZiVideoDao.getVideoById(id) != null;
+        long nowLong = Calendar.getInstance().getTime().getTime();
+        return meiZiVideoDao.update(id,nowLong,playNum) > 0;
     }
 
     /**

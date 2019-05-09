@@ -37,7 +37,7 @@ public interface HttpUrlDao {
     int getCount();
 
     @Insert
-    void insert(HttpUrl... entities);
+    Long insert(HttpUrl... entities);
 
     @Delete
     void delete(HttpUrl entity);
@@ -45,9 +45,15 @@ public interface HttpUrlDao {
     @Query("DELETE FROM tb_httpurl")
     void deleteAll();
 
+    //返回int数据表示删除了多少条。非主键uid值。
     @Query("DELETE FROM tb_httpurl where id = :urlId")
-    void deleteById(long urlId);
+    int deleteById(long urlId);
 
+    //表示更新了多少条目
     @Update
-    void update(HttpUrl entity);
+    int update(HttpUrl entity);
+
+    @Query("UPDATE tb_httpurl SET times = :mTimes and last_time = :lastTime where id = :mId")
+    int update(long mId, long mTimes,String lastTime);
+
 }

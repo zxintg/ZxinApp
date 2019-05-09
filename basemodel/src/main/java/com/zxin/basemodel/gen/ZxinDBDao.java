@@ -27,21 +27,21 @@ public interface ZxinDBDao {
     int getCount();
 
     @Insert
-    void insert(ZxinDB zxinDB);
+    Long insert(ZxinDB zxinDB);
 
     @Delete
-    void delete(ZxinDB zxinDB);
+    int delete(ZxinDB zxinDB);
 
     @Query("DELETE FROM tb_sys_zxindb")
-    void deleteAll();
+    int deleteAll();
 
     @Query("DELETE FROM tb_sys_zxindb where id = :mId")
-    void deleteById(int mId);
+    int deleteById(int mId);
 
     @Update
-    void update(City entity);
+    int update(City entity);
 
 
     @Query("UPDATE tb_sys_zxindb SET modify_time = :modifyTime where id = :mId")
-    void updateById(int mId,String modifyTime);
+    int updateById(int mId,String modifyTime);
 }
