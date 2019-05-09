@@ -2,18 +2,13 @@ package com.zxin.jdxsxp.mvp.view;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
-
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.zxin.camera.model.PhotoPreviewBean;
@@ -39,16 +34,12 @@ import com.zxin.jdxsxp.view.BannerHolderView;
 import com.zxin.network.mvp.presenter.BasePresenter;
 import com.zxin.network.mvp.view.IBaseView;
 import com.zxin.root.adapter.simple.SimpleAdapter;
-import com.zxin.root.adapter.simple.TrdViewHolder;
+import com.zxin.root.adapter.simple.ZxinViewHolder;
 import com.zxin.root.bean.TitleBean;
 import com.zxin.root.util.ImageUtil;
 import com.zxin.root.util.SystemInfoUtil;
-import com.zxin.root.util.ToastUtil;
 import com.zxin.root.util.UiUtils;
-import com.zxin.root.view.CommonCrosswiseBar;
-import com.zxin.root.view.PagerSlidingTabStrip;
 import com.zxin.root.view.RefreshCommonView;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -72,7 +63,7 @@ public class MeiZiMainContract implements IBaseView {
 
     @Override
     public void initDatas() {
-        iMeiZiMainView.getHeadView().setPadding(iMeiZiMainView.getHeadView().getPaddingLeft(), iMeiZiMainView.getHeadView().getPaddingTop() + SystemInfoUtil.getStatusBarHeight(), iMeiZiMainView.getHeadView().getPaddingRight(), iMeiZiMainView.getHeadView().getPaddingBottom());
+        iMeiZiMainView.getHeadView().setPadding(iMeiZiMainView.getHeadView().getPaddingLeft(), iMeiZiMainView.getHeadView().getPaddingTop() + SystemInfoUtil.getInstance(mContext).getStatusBarHeight(), iMeiZiMainView.getHeadView().getPaddingRight(), iMeiZiMainView.getHeadView().getPaddingBottom());
 
         iMeiZiMainView.getConvenientBannerView().startTurning(5000L).setPageIndicator(new int[]{R.drawable.ic_page_indicator, R.drawable.ic_page_indicator_focused}).setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign.ALIGN_PARENT_RIGHT);
         iMeiZiMainView.getConvenientBannerView().setPages(new CBViewHolderCreator<BannerHolderView>() {
@@ -83,10 +74,10 @@ public class MeiZiMainContract implements IBaseView {
         }, adList);
         iMeiZiMainView.getConvenientBannerView().setOnItemClickListener(new AdvItemClickListener(mContext, adList));
 
-        iMeiZiMainView.getArcRecyclerView().setLayoutManager(UiUtils.getLayoutManager(UiUtils.LayoutManager.VERTICAL));
+        iMeiZiMainView.getArcRecyclerView().setLayoutManager(UiUtils.getInstance(mContext).getLayoutManager(UiUtils.LayoutManager.VERTICAL));
         arcAdapter = new SimpleAdapter<MeiZuHome.ValueBean.BlocksBean>(mContext, arcList, R.layout.item_home) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final MeiZuHome.ValueBean.BlocksBean localTheme) {
+            protected void onBindViewHolder(final ZxinViewHolder holder, final MeiZuHome.ValueBean.BlocksBean localTheme, int type) {
                 holder.setText(R.id.tv_home_name, localTheme.getName())
                         .setVisible(R.id.tv_home_more, localTheme.isMore());
                 holder.setOnClickListener(R.id.tv_home_more, new View.OnClickListener() {
@@ -96,12 +87,12 @@ public class MeiZiMainContract implements IBaseView {
                     }
                 });
                 RecyclerView recyclerView = holder.getView(R.id.rv_home);
-                recyclerView.setLayoutManager(UiUtils.getGridLayoutManager(3));
+                recyclerView.setLayoutManager(UiUtils.getInstance(mContext).getGridLayoutManager(3));
                 recyclerView.setNestedScrollingEnabled(false);
                 recyclerView.setAdapter(new SimpleAdapter<MeiZuHome.ValueBean.BlocksBean.DataBean>(mContext, localTheme.getData(), R.layout.item_common_pic) {
                     @Override
-                    protected void onBindViewHolder(TrdViewHolder holder, final MeiZuHome.ValueBean.BlocksBean.DataBean product) {
-                        ImageUtil.loadImageViewLoding(mContext, product.getSmall_pap_address(), holder.<ImageView>getView(R.id.iv_common_img), R.mipmap.default_iamge, R.mipmap.error);
+                    protected void onBindViewHolder(ZxinViewHolder holder, MeiZuHome.ValueBean.BlocksBean.DataBean product, int type) {
+                        ImageUtil.getInstance(mContext).loadImageViewLoding(product.getSmall_pap_address(), holder.<ImageView>getView(R.id.iv_common_img), R.mipmap.default_iamge, R.mipmap.error);
                         holder.setOnItemListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
@@ -117,8 +108,8 @@ public class MeiZiMainContract implements IBaseView {
 
         hotAdapter = new SimpleAdapter<MeiZuHot.ResBean.VerticalBean>(mContext, hotList, R.layout.item_common_pic) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final MeiZuHot.ResBean.VerticalBean localTheme) {
-                ImageUtil.loadImageViewLoding(mContext, localTheme.getThumb(), holder.<ImageView>getView(R.id.iv_common_img), R.mipmap.default_iamge, R.mipmap.error);
+            protected void onBindViewHolder(final ZxinViewHolder holder, final MeiZuHot.ResBean.VerticalBean localTheme,int type) {
+                ImageUtil.getInstance(mContext).loadImageViewLoding(localTheme.getThumb(), holder.<ImageView>getView(R.id.iv_common_img), R.mipmap.default_iamge, R.mipmap.error);
                 holder.setOnItemListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -283,10 +274,10 @@ public class MeiZiMainContract implements IBaseView {
     public void initSpecialDatas() {
         meinvAdapter = new SimpleAdapter<MeiZuHot.ResBean.AlbumBean>(mContext, albumList, R.layout.layout_androidmn) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final MeiZuHot.ResBean.AlbumBean localTheme) {
+            protected void onBindViewHolder(final ZxinViewHolder holder, final MeiZuHot.ResBean.AlbumBean localTheme, int type) {
                 holder.setText(R.id.tv_meinv_name, localTheme.getName())
                         .setText(R.id.tv_meinv_desc, localTheme.getDesc());
-                ImageUtil.loadImageViewLoding(mContext, localTheme.getCover(), holder.<ImageView>getView(R.id.iv_meinv_image), R.mipmap.default_iamge, R.mipmap.error);
+                ImageUtil.getInstance(mContext).loadImageViewLoding(localTheme.getCover(), holder.<ImageView>getView(R.id.iv_meinv_image), R.mipmap.default_iamge, R.mipmap.error);
                 holder.setOnItemListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -356,8 +347,8 @@ public class MeiZiMainContract implements IBaseView {
     public void initMeiZiDeatilDatas() {
         meinvAlbumAdapter = new SimpleAdapter<MeiZuMeiZiDetail.ResBean.WallpaperBean>(mContext, meinvalbumList, R.layout.item_image) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final MeiZuMeiZiDetail.ResBean.WallpaperBean localTheme) {
-                ImageUtil.loadImageViewLoding(mContext, localTheme.getThumb(), holder.<ImageView>getView(R.id.iv_item_meinv), R.mipmap.default_iamge, R.mipmap.error);
+            protected void onBindViewHolder(final ZxinViewHolder holder, final MeiZuMeiZiDetail.ResBean.WallpaperBean localTheme,int type) {
+                ImageUtil.getInstance(mContext).loadImageViewLoding(localTheme.getThumb(), holder.<ImageView>getView(R.id.iv_item_meinv), R.mipmap.default_iamge, R.mipmap.error);
                 holder.setOnItemListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -408,7 +399,7 @@ public class MeiZiMainContract implements IBaseView {
             iMeiZiDeatilView.getImageView().setVisibility(View.GONE);
         } else {
             iMeiZiDeatilView.getImageView().setVisibility(View.VISIBLE);
-            ImageUtil.loadImageViewLoding(mContext, detail.getAlbum().getLcover(), iMeiZiDeatilView.getImageView(), R.mipmap.default_iamge, R.mipmap.error);
+            ImageUtil.getInstance(mContext).loadImageViewLoding(detail.getAlbum().getLcover(), iMeiZiDeatilView.getImageView(), R.mipmap.default_iamge, R.mipmap.error);
         }
         if (meinvalbumList == null || meinvalbumList.isEmpty()) {
             meinvalbumList.clear();
@@ -435,15 +426,15 @@ public class MeiZiMainContract implements IBaseView {
     private List<ArticleListBean.DataBean> wZliat = new ArrayList<>();
 
     public void initAnalysisDatas() {
-        iAnalysisView.getRecyclerView().setLayoutManager(UiUtils.getLayoutManager(UiUtils.LayoutManager.VERTICAL));
+        iAnalysisView.getRecyclerView().setLayoutManager(UiUtils.getInstance(mContext).getLayoutManager(UiUtils.LayoutManager.VERTICAL));
         analysisAdapter = new SimpleAdapter<ArticleListBean.DataBean>(mContext, wZliat, R.layout.item_articsl) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final ArticleListBean.DataBean localTheme) {
+            protected void onBindViewHolder(final ZxinViewHolder holder, final ArticleListBean.DataBean localTheme,int type) {
                 holder.setText(R.id.tv_article_title, localTheme.getContent())
                         .setText(R.id.tv_article_time, localTheme.getCreateTime())
                         .setText(R.id.tv_article_name, StringUtils.textIsEmpty(localTheme.getNickname()) ? "游客" : localTheme.getNickname());
-                ImageUtil.loadCircleImageView(mContext, localTheme.getPicSrc(), holder.<ImageView>getView(R.id.iv_article_pic), R.mipmap.error);
-                ImageUtil.loadImageViewLoding(mContext, localTheme.getPicSrc(), holder.<ImageView>getView(R.id.iv_article_imgView), R.mipmap.default_iamge, R.mipmap.error);
+                ImageUtil.getInstance(mContext).loadCircleImageView(localTheme.getPicSrc(), holder.<ImageView>getView(R.id.iv_article_pic), R.mipmap.error);
+                ImageUtil.getInstance(mContext).loadImageViewLoding(localTheme.getPicSrc(), holder.<ImageView>getView(R.id.iv_article_imgView), R.mipmap.default_iamge, R.mipmap.error);
             }
         };
         iAnalysisView.getRecyclerView().setAdapter(analysisAdapter);
@@ -482,9 +473,9 @@ public class MeiZiMainContract implements IBaseView {
     public void initWallPaperItemDatas() {
         wallPaperItemAdapter = new SimpleAdapter<MeinvBaogaoBean>(mContext, wallPaperItemList, R.layout.layout_meinvbaog) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final MeinvBaogaoBean localTheme) {
+            protected void onBindViewHolder(final ZxinViewHolder holder, final MeinvBaogaoBean localTheme,int type) {
                 holder.setText(R.id.iv_bz_text, localTheme.getAlbum_pics());
-                ImageUtil.loadImageViewLoding(mContext, localTheme.getAlbum_thumb(), holder.<ImageView>getView(R.id.iv_bz_img), R.mipmap.default_iamge, R.mipmap.error);
+                ImageUtil.getInstance(mContext).loadImageViewLoding(localTheme.getAlbum_thumb(), holder.<ImageView>getView(R.id.iv_bz_img), R.mipmap.default_iamge, R.mipmap.error);
                 holder.setOnItemListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -550,16 +541,16 @@ public class MeiZiMainContract implements IBaseView {
     private List<MeiNvLocal> localList = new ArrayList<>();
 
     public void initFindDatas() {
-        iFindView.getHeadView().setPadding(iFindView.getHeadView().getPaddingLeft(), iFindView.getHeadView().getPaddingTop() + SystemInfoUtil.getStatusBarHeight(), iFindView.getHeadView().getPaddingRight(), iFindView.getHeadView().getPaddingBottom());
+        iFindView.getHeadView().setPadding(iFindView.getHeadView().getPaddingLeft(), iFindView.getHeadView().getPaddingTop() + SystemInfoUtil.getInstance(mContext).getStatusBarHeight(), iFindView.getHeadView().getPaddingRight(), iFindView.getHeadView().getPaddingBottom());
         iFindView.getRecyclerView().setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
         iFindView.getRecyclerView().setItemAnimator(new DefaultItemAnimator());
         iFindView.getRecyclerView().setHasFixedSize(true);
 
         localAdapter = new SimpleAdapter<MeiNvLocal>(mContext, localList, R.layout.layout_fx) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final MeiNvLocal localTheme) {
+            protected void onBindViewHolder(final ZxinViewHolder holder, final MeiNvLocal localTheme,int type) {
                 holder.setText(R.id.iv_fx_text, localTheme.title);
-                ImageUtil.loadImageViewLoding(mContext, localTheme.pictureUrl, holder.<ImageView>getView(R.id.iv_fx_img), R.mipmap.default_iamge, R.mipmap.error);
+                ImageUtil.getInstance(mContext).loadImageViewLoding(localTheme.pictureUrl, holder.<ImageView>getView(R.id.iv_fx_img), R.mipmap.default_iamge, R.mipmap.error);
                 holder.setOnItemListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -617,8 +608,8 @@ public class MeiZiMainContract implements IBaseView {
     public void initFindBaiDuDatas() {
         findBaiDuAdapter = new SimpleAdapter<SearchBaiduPic.DataBean>(mContext, findBaiDuList, R.layout.item_search_image) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final SearchBaiduPic.DataBean localTheme) {
-                ImageUtil.loadImageViewLoding(mContext, localTheme.getObjURL(), holder.<ImageView>getView(R.id.iv_search_meinv), R.mipmap.default_iamge, R.mipmap.error);
+            protected void onBindViewHolder(final ZxinViewHolder holder, final SearchBaiduPic.DataBean localTheme,int type) {
+                ImageUtil.getInstance(mContext).loadImageViewLoding(localTheme.getObjURL(), holder.<ImageView>getView(R.id.iv_search_meinv), R.mipmap.default_iamge, R.mipmap.error);
                 holder.setOnItemListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -701,8 +692,8 @@ public class MeiZiMainContract implements IBaseView {
     public void initFind360Datas() {
         find360Adapter = new SimpleAdapter<MZPicModle.ValueBean.DataBean>(mContext, find360List, R.layout.item_search_image) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final MZPicModle.ValueBean.DataBean localTheme) {
-                ImageUtil.loadImageViewLoding(mContext, localTheme.getSmall(), holder.<ImageView>getView(R.id.iv_search_meinv), R.mipmap.default_iamge, R.mipmap.error);
+            protected void onBindViewHolder(final ZxinViewHolder holder, final MZPicModle.ValueBean.DataBean localTheme,int type) {
+                ImageUtil.getInstance(mContext).loadImageViewLoding(localTheme.getSmall(), holder.<ImageView>getView(R.id.iv_search_meinv), R.mipmap.default_iamge, R.mipmap.error);
                 holder.setOnItemListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -785,8 +776,8 @@ public class MeiZiMainContract implements IBaseView {
     public void initFindSouGouDatas() {
         findSouGouAdapter = new SimpleAdapter<SearchSouGou.ItemsBean>(mContext, findSouGouList, R.layout.item_search_image) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final SearchSouGou.ItemsBean localTheme) {
-                ImageUtil.loadImageViewLoding(mContext, localTheme.getThumbUrl(), holder.<ImageView>getView(R.id.iv_search_meinv), R.mipmap.default_iamge, R.mipmap.error);
+            protected void onBindViewHolder(final ZxinViewHolder holder, final SearchSouGou.ItemsBean localTheme,int type) {
+                ImageUtil.getInstance(mContext).loadImageViewLoding(localTheme.getThumbUrl(), holder.<ImageView>getView(R.id.iv_search_meinv), R.mipmap.default_iamge, R.mipmap.error);
                 holder.setOnItemListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -866,10 +857,10 @@ public class MeiZiMainContract implements IBaseView {
     public void initMeinvPicDetailDatas() {
         picDetailAdapter = new SimpleAdapter<MinvBaoGaodetail.PicTotalBean>(mContext, picDetailList, R.layout.layout_meinvbaogdetail) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final MinvBaoGaodetail.PicTotalBean localTheme) {
+            protected void onBindViewHolder(final ZxinViewHolder holder, final MinvBaoGaodetail.PicTotalBean localTheme,int type) {
                 holder.setText(R.id.iv_album_text, localTheme.getPic_name())
                         .setVisible(R.id.iv_album_text, !StringUtils.textIsEmpty(localTheme.getPic_name()));
-                ImageUtil.loadImageViewLoding(mContext, localTheme.getPic_url(), holder.<ImageView>getView(R.id.iv_album_img), R.mipmap.default_iamge, R.mipmap.error);
+                ImageUtil.getInstance(mContext).loadImageViewLoding(localTheme.getPic_url(), holder.<ImageView>getView(R.id.iv_album_img), R.mipmap.default_iamge, R.mipmap.error);
                 holder.setOnItemListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

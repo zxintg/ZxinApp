@@ -52,6 +52,16 @@ public class WallPaperFragment extends BaseFragment implements BaseFragment.Lazy
     }
 
     @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
+    @Override
     public void onClick(View v) {
 
     }

@@ -12,31 +12,31 @@ import android.text.TextUtils;
 public class City {
     @PrimaryKey(autoGenerate = true) //定义主键
     @ColumnInfo(name = "area_id")
-    private int areaId;
+    public int areaId;
 
     @ColumnInfo(name = "parent_id")//定义数据表中的字段名
-    private int parentId;
+    public int parentId;
 
     @ColumnInfo(name = "area_name")//定义数据表中的字段名
-    private String areaName;
+    public String areaName;
 
     @ColumnInfo(name = "short_name")//定义数据表中的字段名
-    private String shortName;
+    public String shortName;
 
     @ColumnInfo(name = "english_name")//定义数据表中的字段名
-    private String englishName;
+    public String englishName;
 
     @ColumnInfo(name = "area_level")//定义数据表中的字段名
-    private String areaLevel;
+    public String areaLevel;
 
     @ColumnInfo(name = "create_user")//定义数据表中的字段名
-    private String createUser;
+    public String createUser;
 
     @ColumnInfo(name = "create_time")//定义数据表中的字段名
-    private String createTime;
+    public String createTime;
 
     @ColumnInfo(name = "remark")//定义数据表中的字段名
-    private String remark;
+    public String remark;
 
 
     public int getAreaId() {

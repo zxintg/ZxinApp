@@ -5,10 +5,10 @@ import android.view.View;
 import android.widget.EditText;
 import com.zxin.R;
 import com.zxin.base.BaseActivity;
+import com.zxin.root.util.IntegerUtil;
 import com.zxin.util.StringUtils;
 import com.zxin.root.bean.HttpUrlBean;
 import com.zxin.basemodel.dao.HttpUrlDaoUtil;
-import com.zxin.meziyowu.util.IntegerUtil;
 import com.zxin.root.util.ToastUtil;
 import com.zxin.root.view.switchbutton.SwitchButton;
 
@@ -53,6 +53,16 @@ public class EditHttpUrlActivity extends BaseActivity {
         return R.layout.activity_edithttpurl;
     }
 
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
     @OnClick({R.id.common_bar_leftBtn,R.id.common_bar_rightBtn,R.id.rl_editurl_isused})
     @Override
     public void onClick(View v) {
@@ -69,15 +79,15 @@ public class EditHttpUrlActivity extends BaseActivity {
             case R.id.common_bar_rightBtn:
                 //提交
                 if (StringUtils.textIsEmpty(mName.getText().toString())){
-                    ToastUtil.showShort("输入名称");
+                    ToastUtil.getInstance(mContext).showShort("输入名称");
                     return;
                 }
                 if (StringUtils.textIsEmpty(mLable.getText().toString())){
-                    ToastUtil.showShort("输入标签信息");
+                    ToastUtil.getInstance(mContext).showShort("输入标签信息");
                     return;
                 }
                 if (StringUtils.textIsEmpty(mContent.getText().toString())){
-                    ToastUtil.showShort("输入网址信息");
+                    ToastUtil.getInstance(mContext).showShort("输入网址信息");
                     return;
                 }
                 if (id!=-1){
@@ -86,7 +96,7 @@ public class EditHttpUrlActivity extends BaseActivity {
                     sendEvenBusMesg();
                     return;
                 }else if(HttpUrlDaoUtil.getInstance().addHttpUrl(mName.getText().toString(),mLable.getText().toString(),mContent.getText().toString())){
-                    ToastUtil.showShort("保存成功！！！！");
+                    ToastUtil.getInstance(mContext).showShort("保存成功！！！！");
                     sendEvenBusMesg();
                 }
                 break;

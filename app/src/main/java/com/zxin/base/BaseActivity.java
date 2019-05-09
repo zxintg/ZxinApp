@@ -13,17 +13,19 @@ import android.view.View;
 import com.bugtags.library.Bugtags;
 import com.zxin.camera.activity.AlbumActivity;
 import com.zxin.camera.activity.CameraActivity;
-import com.zxin.util.StringUtils;
 import com.zxin.root.util.IntegerUtil;
 import com.zxin.root.util.SystemInfoUtil;
 import com.zxin.root.view.dialog.ConfirmDialog;
+import com.zxin.util.StringUtils;
+
 import org.greenrobot.eventbus.EventBus;
+
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 /**
  * Activity 基类
- * Created by hy
+ * Created by kui.liu
  * 2017/10/24 18:48
  * Note :
  */
@@ -105,9 +107,9 @@ public abstract class BaseActivity extends com.zxin.basemodel.activity.BaseActiv
      * @param contentStr
      */
     public void showPremissionDialog(String contentStr) {
-        ConfirmDialog dialog =  ConfirmDialog.newInstance("提示","您已禁止了 "+ contentStr + "\n设置路径：设置 ->应用管理 ->" + SystemInfoUtil.getApplicationName() + " ->权限", "取消", "设置");
+        ConfirmDialog dialog =  ConfirmDialog.newInstance("提示","您已禁止了 "+ contentStr + "\n设置路径：设置 ->应用管理 ->" + SystemInfoUtil.getInstance(mContext).getApplicationName() + " ->权限", "取消", "设置");
         dialog.setMargin(60)
-                .setWidth(SystemInfoUtil.getScreenWidth()*2/3)
+                .setWidth(SystemInfoUtil.getInstance(mContext).getScreenWidth()*2/3)
                 .setOutCancel(false)
                 .show();
         dialog.setConfirmDialogListener(new ConfirmDialog.ConfirmDialogListener(){

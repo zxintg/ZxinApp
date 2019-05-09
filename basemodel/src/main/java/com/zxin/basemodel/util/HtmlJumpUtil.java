@@ -2,7 +2,6 @@ package com.zxin.basemodel.util;
 
 import android.app.Activity;
 import android.content.Intent;
-
 import com.zxin.basemodel.activity.CommWebActivity;
 import com.zxin.root.util.AppManager;
 import com.zxin.root.view.banner.BannerBean;

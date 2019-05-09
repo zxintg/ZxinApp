@@ -21,6 +21,16 @@ public class EditDropDownMenuActivity extends BaseActivity {
         return R.layout.activity_editdropmenu;
     }
 
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
     @OnClick({R.id.common_bar_leftBtn})
     @Override
     public void onClick(View v) {

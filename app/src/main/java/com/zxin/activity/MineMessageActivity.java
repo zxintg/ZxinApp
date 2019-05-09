@@ -2,6 +2,8 @@ package com.zxin.activity;
 
 import android.content.Intent;
 import android.view.View;
+
+import com.zxin.basemodel.view.SelectorPickerView;
 import com.zxin.camera.callback.IPhotoCall;
 import com.zxin.camera.utils.CameraAlbumUtils;
 import com.zxin.camera.utils.VanCropType;
@@ -16,7 +18,6 @@ import com.zxin.root.view.dialog.BaseNiceDialog;
 import com.zxin.root.view.dialog.NiceDialog;
 import com.zxin.root.view.dialog.NiceDialogViewHolder;
 import com.zxin.root.view.dialog.ViewConvertListener;
-import com.zxin.root.view.popup.SelectorPickerView;
 import butterknife.BindView;
 import butterknife.OnClick;
 
@@ -46,6 +47,16 @@ public class MineMessageActivity extends BaseActivity implements IPhotoCall {
         return R.layout.activity_minemessage;
     }
 
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
     private NiceDialog niceDialog;
     @OnClick({R.id.common_bar_leftBtn, R.id.ccb_userhead, R.id.ccb_usernicename,R.id.ccb_center_sex,R.id.ccb_center_opencity})
     @Override
@@ -59,7 +70,7 @@ public class MineMessageActivity extends BaseActivity implements IPhotoCall {
 
             case R.id.ccb_userhead:
                 //头像选择
-                CameraAlbumUtils.getInstance(mContext).setIPhotoCall(this).getPhoto().setTailorType(VanCropType.CROP_TYPE_CIRCLE).setParam(SystemInfoUtil.getScreenWidth()/2, SystemInfoUtil.getScreenWidth()/2);
+                CameraAlbumUtils.getInstance(mContext).setIPhotoCall(this).getPhoto().setTailorType(VanCropType.CROP_TYPE_CIRCLE).setParam(SystemInfoUtil.getInstance(mContext).getScreenWidth()/2, SystemInfoUtil.getInstance(mContext).getScreenWidth()/2);
                 break;
 
             case R.id.ccb_center_sex:
@@ -124,6 +135,6 @@ public class MineMessageActivity extends BaseActivity implements IPhotoCall {
 
     @Override
     public void onPhotoResult(String photoUrl) {
-        ImageUtil.setItemRoundImageViewOnlyDisplay(mHead.getRightImage(), photoUrl);
+        ImageUtil.getInstance(mContext).setItemRoundImageViewOnlyDisplay(SystemInfoUtil.getInstance(mContext).getPackageName(mContext),mHead.getRightImage(), photoUrl);
     }
 }

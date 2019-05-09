@@ -58,7 +58,7 @@ public class YoWuMainActivity extends BaseActivity implements RadioGroup.OnCheck
             radioButton.setLayoutParams(layoutParams);
             radioButton.setBackground(null);
             radioButton.setTag(title.index);
-            SelectorUtil.addSelectorFromDrawable(title.labImage,title.labImage2, 300,250,radioButton);
+            SelectorUtil.getInstance(mContext).addSelectorFromDrawable(title.labImage,title.labImage2, 300,250,radioButton);
             radioButton.setButtonDrawable(null);
             mRadioGroup.addView(radioButton);
             radioButton.setChecked(title.index == 0);
@@ -78,6 +78,16 @@ public class YoWuMainActivity extends BaseActivity implements RadioGroup.OnCheck
     @Override
     public int setLayout() {
         return R.layout.activity_yowumain;
+    }
+
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
     }
 
     @Override

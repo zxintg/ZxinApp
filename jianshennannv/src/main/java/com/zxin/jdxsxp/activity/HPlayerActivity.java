@@ -36,6 +36,16 @@ public class HPlayerActivity extends BaseActivity implements XiGuaMainContract.H
     }
 
     @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
+    @Override
     public void onClick(View v) {
 
     }
@@ -179,56 +189,5 @@ public class HPlayerActivity extends BaseActivity implements XiGuaMainContract.H
     public View getLayoutView() {
         return getCurrentView();
     }
-/*
-    @Override
-    protected void onPause() {
-        super.onPause();
-        if (player != null) {
-            player.onPause();
-        }
-        *//**demo的内容，恢复系统其它媒体的状态*//*
-        MediaUtils.muteAudioFocus(mContext, true);
-    }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if (player != null) {
-            player.onResume();
-        }
-        *//**demo的内容，暂停系统其它媒体的状态*//*
-        MediaUtils.muteAudioFocus(mContext, false);
-        *//**demo的内容，激活设备常亮状态*//*
-        if (wakeLock != null) {
-            wakeLock.acquire();
-        }
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (player != null) {
-            player.onDestroy();
-        }
-    }
-
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        if (player != null) {
-            player.onConfigurationChanged(newConfig);
-        }
-    }
-
-    @Override
-    public void onBackPressed() {
-        if (player != null && player.onBackPressed()) {
-            return;
-        }
-        super.onBackPressed();
-        *//**demo的内容，恢复设备亮度状态*//*
-        if (wakeLock != null) {
-            wakeLock.release();
-        }
-    }*/
 }

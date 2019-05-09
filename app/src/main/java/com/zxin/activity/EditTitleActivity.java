@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.zxin.R;
 import com.zxin.base.BaseActivity;
+import com.zxin.root.adapter.simple.ZxinViewHolder;
 import com.zxin.sort.SimpleTitleTip;
 import com.zxin.sort.Tip;
 import com.zxin.sort.adapter.AbsTipAdapter;
@@ -16,7 +17,6 @@ import com.zxin.sort.widget.DragDropGirdView;
 import com.zxin.sort.widget.TipItemView;
 import com.zxin.util.StringUtils;
 import com.zxin.root.adapter.simple.SimpleAdapter;
-import com.zxin.root.adapter.simple.TrdViewHolder;
 import com.zxin.root.bean.TitleBean;
 import com.zxin.basemodel.dao.HttpUrlDaoUtil;
 import com.zxin.root.util.IntegerUtil;
@@ -66,7 +66,7 @@ public class EditTitleActivity extends BaseActivity implements AbsTipAdapter.Dra
 
         adapter = new SimpleAdapter<TitleBean>(mContext, mOutherList, R.layout.view_add_item) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final TitleBean data) {
+            protected void onBindViewHolder(final ZxinViewHolder holder, final TitleBean data,int type) {
                 holder.setText(R.id.tagview_title, data.label)
                         .setOnItemListener(new View.OnClickListener() {
                             @Override
@@ -92,7 +92,7 @@ public class EditTitleActivity extends BaseActivity implements AbsTipAdapter.Dra
 
         unAdapter = new SimpleAdapter<TitleBean>(mContext, unUsedList, R.layout.view_add_item) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final TitleBean data) {
+            protected void onBindViewHolder(final ZxinViewHolder holder, final TitleBean data ,int type) {
                 holder.setText(R.id.tagview_title, data.label)
                         .setOnItemListener(new View.OnClickListener() {
                             @Override
@@ -112,7 +112,7 @@ public class EditTitleActivity extends BaseActivity implements AbsTipAdapter.Dra
                             backDialog = ConfirmDialog.newInstance("", "您确定要删除无效“"+data.label+"”吗？", "取消", "确定");
                         }
                         backDialog.setMargin(60)
-                                .setWidth(SystemInfoUtil.getScreenWidth()*2/3)
+                                .setWidth(SystemInfoUtil.getInstance(mContext).getScreenWidth()*2/3)
                                 .setOutCancel(false)
                                 .show();
                         backDialog.setConfirmDialogListener(new ConfirmDialog.ConfirmDialogListener(){
@@ -143,6 +143,16 @@ public class EditTitleActivity extends BaseActivity implements AbsTipAdapter.Dra
     @Override
     public int setLayout() {
         return R.layout.activity_edittitle;
+    }
+
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
     }
 
     @OnClick({R.id.common_bar_leftBtn, R.id.common_bar_rightBtn})

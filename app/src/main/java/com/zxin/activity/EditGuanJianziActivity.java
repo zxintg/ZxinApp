@@ -22,6 +22,16 @@ public class EditGuanJianziActivity extends BaseActivity {
         return R.layout.activity_editguanjianzi;
     }
 
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
     @OnClick({R.id.common_bar_leftBtn})
     @Override
     public void onClick(View v) {

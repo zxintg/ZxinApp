@@ -55,7 +55,7 @@ public class MenuManageActivity extends BaseActivity implements DragTipListener 
 
 	private void initMineMenu() {
 		//获取设置保存到本地的菜单
-		List<MenuEntity> indexDataList = SharedPreferencesManager.getMineMenuList();
+		List<MenuEntity> indexDataList = SharedPreferencesManager.getInstance(mContext).getMineMenuList();
 		if (indexDataList != null) {
 			indexSelect.clear();
 			indexSelect.addAll(indexDataList);
@@ -108,8 +108,18 @@ public class MenuManageActivity extends BaseActivity implements DragTipListener 
 		return R.layout.activity_menu_manage;
 	}
 
+	@Override
+	public void clearAllDatas() {
+
+	}
+
+	@Override
+	public void saveAllDatas() {
+
+	}
+
 	private void initAllMenu() {
-		List<MenuEntity> indexAll =  FileUtil.getInstance().getAllMenuList();
+		List<MenuEntity> indexAll =  FileUtil.getInstance(mContext).getAllMenuList();
 		menuList.clear();
 		try {
 			MenuEntity index = new MenuEntity();
@@ -280,7 +290,7 @@ public class MenuManageActivity extends BaseActivity implements DragTipListener 
 	@Override
 	public void addMenu(MenuEntity menuEntity) {
 		indexSelect.add(menuEntity);
-		SharedPreferencesManager.saveMineMenu(indexSelect);
+		SharedPreferencesManager.getInstance(mContext).saveMineMenu(indexSelect);
 		for (int i = 0; i < menuList.size(); i++) {
 			for (int k = 0; k < menuList.get(i).getChilds().size(); k++) {
 				if (menuList.get(i).getChilds().get(k).getTitle().equals(menuEntity.getTitle())) {

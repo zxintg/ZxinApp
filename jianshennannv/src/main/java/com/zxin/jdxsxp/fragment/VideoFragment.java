@@ -50,6 +50,16 @@ public class VideoFragment extends BaseFragment implements BaseFragment.LazyLoad
     }
 
     @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
+    @Override
     public void onClick(View v) {
 
     }

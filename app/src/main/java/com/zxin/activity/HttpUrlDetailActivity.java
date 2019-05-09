@@ -53,6 +53,16 @@ public class HttpUrlDetailActivity extends BaseActivity {
         return R.layout.activity_httpdetail;
     }
 
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
     @OnClick({R.id.common_bar_leftBtn, R.id.common_bar_rightBtn})
     @Override
     public void onClick(View v) {

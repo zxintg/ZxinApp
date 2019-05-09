@@ -12,25 +12,25 @@ import android.text.TextUtils;
 @Entity(tableName = "tb_httpurl")//定义外键
 public class HttpUrl {
     @PrimaryKey(autoGenerate = true) //定义主键
-    private Long id;
+    public Long id;
     @ColumnInfo(name = "create_timer")//定义数据表中的字段名
-    private String createTimer;
+    public String createTimer;
     @ColumnInfo(name = "name")//定义数据表中的字段名
-    private String name;
+    public String name;
     @ColumnInfo(name = "lable")//定义数据表中的字段名
-    private String lable;
+    public String lable;
     @ColumnInfo(name = "url")//定义数据表中的字段名
-    private String url;
+    public String url;
     @ColumnInfo(name = "last_time")//定义数据表中的字段名
-    private String lastTime;
+    public String lastTime;
     @ColumnInfo(name = "times")//定义数据表中的字段名
-    private long times;
+    public long times;
     @ColumnInfo(name = "order_num")//定义数据表中的字段名
-    private int orderNum;
+    public int orderNum;
     @ColumnInfo(name = "is_effective")//定义数据表中的字段名
-    private int isEffective;
+    public int isEffective;
     @ColumnInfo(name = "modify_time")//定义数据表中的字段名
-    private String modifyTime;
+    public String modifyTime;
 
     public Long getId() {
         return id;

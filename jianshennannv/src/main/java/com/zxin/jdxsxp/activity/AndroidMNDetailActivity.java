@@ -30,6 +30,16 @@ public class AndroidMNDetailActivity extends BaseActivity implements MeiZiMainCo
     }
 
     @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
+    @Override
     public void onClick(View v) {
         if (v.getId()==R.id.common_bar_leftBtn){
             onBackPressed();

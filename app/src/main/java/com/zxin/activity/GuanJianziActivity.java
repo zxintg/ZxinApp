@@ -5,7 +5,7 @@ import android.view.View;
 import com.zxin.R;
 import com.zxin.base.BaseActivity;
 import com.zxin.root.adapter.simple.SimpleAdapter;
-import com.zxin.root.adapter.simple.TrdViewHolder;
+import com.zxin.root.adapter.simple.ZxinViewHolder;
 import com.zxin.root.bean.GuanJianZiBean;
 import com.zxin.root.view.RefreshCommonView;
 
@@ -31,7 +31,7 @@ public class GuanJianziActivity extends BaseActivity implements RefreshCommonVie
         urlList.clear();
         adapter = new SimpleAdapter<GuanJianZiBean>(mContext, urlList, R.layout.item_guanjianzi_lable) {
             @Override
-            protected void onBindViewHolder(TrdViewHolder holder, final GuanJianZiBean data) {
+            protected void onBindViewHolder(ZxinViewHolder holder, final GuanJianZiBean data,int type) {
                 holder.setText(R.id.item_guanjianzi_lable, data.lable)
 
                         .setOnItemListener(new View.OnClickListener() {
@@ -51,6 +51,16 @@ public class GuanJianziActivity extends BaseActivity implements RefreshCommonVie
     @Override
     public int setLayout() {
         return R.layout.activity_guanjianzi;
+    }
+
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
     }
 
 

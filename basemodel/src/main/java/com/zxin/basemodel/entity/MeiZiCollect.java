@@ -12,16 +12,16 @@ import android.text.TextUtils;
 @Entity(tableName = "tb_collect")//定义外键
 public class MeiZiCollect {
     @PrimaryKey(autoGenerate = true) //定义主键
-    private Long id;
+    public Long id;
     //缩略图
     @ColumnInfo(name = "cover")//定义数据表中的字段名
-    private String cover;
+    public String cover;
     @ColumnInfo(name = "url")//定义数据表中的字段名
-    private String url;
+    public String url;
     @ColumnInfo(name = "name")//定义数据表中的字段名
-    private String name;
+    public String name;
     @ColumnInfo(name = "create_time")//定义数据表中的字段名
-    private Long createTime;
+    public Long createTime;
 
     public Long getId() {
         return id;

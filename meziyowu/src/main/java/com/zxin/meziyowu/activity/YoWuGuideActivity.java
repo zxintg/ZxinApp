@@ -72,6 +72,16 @@ public class YoWuGuideActivity extends BaseActivity {
     }
 
     @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
+    @Override
     public void onClick(View v) {
 
     }

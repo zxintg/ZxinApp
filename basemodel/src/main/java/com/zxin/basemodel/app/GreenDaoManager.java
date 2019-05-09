@@ -1,14 +1,12 @@
 package com.zxin.basemodel.app;
 
-import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Environment;
 import com.zxin.basemodel.R;
 import com.zxin.basemodel.gen.DaoSession;
-import com.zxin.basemodel.gen.DataBaseUtil;
 import com.zxin.root.util.FileUtil;
 import com.zxin.root.util.ZipUtil;
 import com.zxin.basemodel.util.BaseStringUtils;
+import com.zxin.root.util.logger.LogUtils;
 import java.io.File;
 import java.io.InputStream;
 
@@ -83,6 +81,4 @@ public class GreenDaoManager {
             LogUtils.d("数据库解压成功！");
         }
     }
-
-
 }

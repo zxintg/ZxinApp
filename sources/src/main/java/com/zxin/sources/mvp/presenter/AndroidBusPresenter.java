@@ -52,7 +52,7 @@ public class AndroidBusPresenter extends BasePresenter<AndroidBusContract, Sourc
     public void onFailure(int tage, String msg) {
         switch (tage){
             case IntegerUtil.WEB_API_AndroidBus:
-                ToastUtil.showShort(msg);
+                ToastUtil.getInstance(getModel().getContext()).showShort(msg);
                 break;
         }
     }

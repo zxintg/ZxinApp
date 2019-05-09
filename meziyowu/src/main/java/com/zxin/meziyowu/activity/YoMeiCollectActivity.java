@@ -6,15 +6,15 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.google.gson.Gson;
+import com.zxin.basemodel.dao.MeiZiVideoDaoUtil;
+import com.zxin.basemodel.entity.MeiZiCollect;
 import com.zxin.meziyowu.R;
 import com.zxin.meziyowu.base.BaseActivity;
 import com.zxin.meziyowu.bean.YoMeiBean;
-import com.zxin.meziyowu.util.IntegerUtil;
+import com.zxin.meziyowu.util.YoWuIntegerUtil;
 import com.zxin.meziyowu.util.StringUtils;
 import com.zxin.root.adapter.simple.SimpleAdapter;
-import com.zxin.root.adapter.simple.TrdViewHolder;
-import com.zxin.root.dao.MeiZiVideoDaoUtil;
-import com.zxin.root.entity.MeiZiCollect;
+import com.zxin.root.adapter.simple.ZxinViewHolder;
 import com.zxin.root.util.DateUtil;
 import com.zxin.root.util.ImageUtil;
 import com.zxin.root.view.RefreshCommonView;
@@ -39,17 +39,17 @@ public class YoMeiCollectActivity extends BaseActivity{
         setTitleViewOnclick(R.id.ccb_youmei_title,R.id.common_bar_leftBtn,R.id.common_bar_rightBtn);
         commonView = getViewById(R.id.rcv_mine_commonlayout);
         if (daoUtil==null){
-            daoUtil = MeiZiVideoDaoUtil.getInstance();
+            daoUtil = MeiZiVideoDaoUtil.getInstance(mContext);
         }
         if(dialog == null){
             dialog = new ProgressBarDialog(mContext);
         }
         meinvAdapter = new SimpleAdapter<MeiZiCollect>(mContext, albumList, R.layout.item_video_list) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final MeiZiCollect localTheme) {
+            protected void onBindViewHolder(final ZxinViewHolder holder, final MeiZiCollect localTheme,int type) {
                 holder.setText(R.id.tv_name,localTheme.getName())
                 .setText(R.id.tv_time, DateUtil.getInstance().timeStamp(localTheme.getCreateTime(),"yyyy-MM-dd HH:mm"));
-                ImageUtil.loadImageViewLoding(mContext, localTheme.getCover(), holder.<ImageView>getView(R.id.iv_cover), R.mipmap.default_iamge, R.mipmap.default_iamge);
+                ImageUtil.getInstance(mContext).loadImageViewLoding(localTheme.getCover(), holder.<ImageView>getView(R.id.iv_cover), R.mipmap.default_iamge, R.mipmap.default_iamge);
                 holder.setOnItemListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -91,7 +91,7 @@ public class YoMeiCollectActivity extends BaseActivity{
     @Override
     public boolean onEventMainThread(Bundle bundle) {
         switch (bundle.getInt(StringUtils.EVENT_ID)) {
-            case IntegerUtil.EVENT_ID_31001:
+            case YoWuIntegerUtil.EVENT_ID_31001:
                 isNotifyDatas = true;
                 break;
 
@@ -130,6 +130,16 @@ public class YoMeiCollectActivity extends BaseActivity{
     @Override
     public int setLayout() {
         return R.layout.activity_collectvideo;
+    }
+
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
     }
 
     @Override

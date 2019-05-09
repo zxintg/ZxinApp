@@ -49,7 +49,7 @@ public class VideoPlayerActivity extends BaseActivity {
                 .showThumbnail(new OnShowThumbnailListener() {
                     @Override
                     public void onShowThumbnail(ImageView ivThumbnail) {
-                        ImageUtil.loadImageViewLoding(mContext, playBean.getImageUrl(), ivThumbnail, R.mipmap.default_iamge);
+                        ImageUtil.getInstance(mContext).loadImageViewLoding(playBean.getImageUrl(), ivThumbnail, R.mipmap.default_iamge);
                     }
                 })
                 .setPlaySource(playBean.getResUrl())
@@ -66,6 +66,16 @@ public class VideoPlayerActivity extends BaseActivity {
     @Override
     public int setLayout() {
         return R.layout.simple_player_view_player;
+    }
+
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
     }
 
     @Override

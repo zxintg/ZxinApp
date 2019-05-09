@@ -2,17 +2,13 @@ package com.zxin.jdxsxp.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-
 import com.google.gson.Gson;
 import com.zxin.jdxsxp.bean.UserModel;
 import com.zxin.basemodel.app.BaseApplication;
 import com.zxin.basemodel.util.BaseStringUtils;
 import com.zxin.root.util.SharedPreferencesManager;
-import com.zxin.root.util.SystemInfoUtil;
-
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 

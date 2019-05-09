@@ -11,7 +11,7 @@ import com.zxin.network.mvp.view.IBaseView;
 import com.zxin.sources.R;
 import com.zxin.sources.mvp.presenter.AndroidBusPresenter;
 import com.zxin.root.adapter.simple.SimpleAdapter;
-import com.zxin.root.adapter.simple.TrdViewHolder;
+import com.zxin.root.adapter.simple.ZxinViewHolder;
 import com.zxin.root.bean.AndroidBusBean;
 import com.zxin.root.util.ImageUtil;
 import com.zxin.root.util.ToastUtil;
@@ -38,7 +38,7 @@ public class AndroidBusContract implements IBaseView,RefreshCommonView.RefreshLo
     public void initDatas() {
         adapter = new SimpleAdapter<AndroidBusBean>(mContext, codeKKList, R.layout.item_androidbus) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final AndroidBusBean data) {
+            protected void onBindViewHolder(final ZxinViewHolder holder, final AndroidBusBean data,int type) {
                 holder.setText(R.id.item_androidbus_title, data.title)
                         .setText(R.id.item_androidbus_content,data.desc)
                         .setText(R.id.item_androidbus_time,data.time)
@@ -49,8 +49,8 @@ public class AndroidBusContract implements IBaseView,RefreshCommonView.RefreshLo
                         HtmlJumpUtil.toWebForUrlActivity( data.title,data.linkUrl);
                     }
                 });
-                ImageUtil.loadImageViewLoding(mContext, data.imageUrl, holder.<ImageView>getView(R.id.item_androidbus_iamge), R.mipmap.default_iamge);
-                ImageUtil.loadCircleImageView(mContext, data.headImgUrl, holder.<ImageView>getView(R.id.item_androidbus_head), R.mipmap.default_iamge);
+                ImageUtil.getInstance(mContext).loadImageViewLoding(data.imageUrl, holder.<ImageView>getView(R.id.item_androidbus_iamge), R.mipmap.default_iamge);
+                ImageUtil.getInstance(mContext).loadCircleImageView(data.headImgUrl, holder.<ImageView>getView(R.id.item_androidbus_head), R.mipmap.default_iamge);
             }
         };
         iView.getRecyclerView().setRecyclerViewAdapter(adapter);

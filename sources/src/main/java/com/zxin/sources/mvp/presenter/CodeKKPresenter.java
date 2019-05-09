@@ -49,7 +49,7 @@ public class CodeKKPresenter extends BasePresenter<CodeKKContract, SourcesModel>
     public void onFailure(int tage, String msg) {
         switch (tage){
             case IntegerUtil.WEB_API_CodeKK:
-                ToastUtil.showShort(msg);
+                ToastUtil.getInstance(getModel().getContext()).showShort(msg);
                 break;
         }
     }

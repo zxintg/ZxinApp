@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.zxin.meziyowu.R;
 import com.zxin.meziyowu.base.BaseActivity;
-import com.zxin.meziyowu.util.IntegerUtil;
+import com.zxin.meziyowu.util.YoWuIntegerUtil;
 import com.zxin.meziyowu.util.StringUtils;
 import com.zxin.basemodel.dao.MeiZiVideoDaoUtil;
 import com.zxin.basemodel.entity.MeiZiCollect;
@@ -51,7 +51,7 @@ public class BackupsYoMeiActivity extends BaseActivity {
 
         tvBackups.setOnClickListener(this);
         if (daoUtil==null){
-            daoUtil = MeiZiVideoDaoUtil.getInstance();
+            daoUtil = MeiZiVideoDaoUtil.getInstance(mContext);
         }
         if(dialog == null){
             dialog = new ProgressBarDialog(mContext);
@@ -80,6 +80,16 @@ public class BackupsYoMeiActivity extends BaseActivity {
     }
 
     @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
+    @Override
     public void onClick(View v) {
         if (v.getId() == R.id.common_bar_leftBtn){
             onBackPressed();
@@ -100,7 +110,7 @@ public class BackupsYoMeiActivity extends BaseActivity {
                     boolean isVideoSuccess = daoUtil.addMeiZiVideoJsonArray(videoBackups);
                     if (isCollectSuccess||isVideoSuccess){
                         Bundle bundle = new Bundle();
-                        bundle.putInt(StringUtils.EVENT_ID, IntegerUtil.EVENT_ID_31001);
+                        bundle.putInt(StringUtils.EVENT_ID, YoWuIntegerUtil.EVENT_ID_31001);
                         EventBus.getDefault().post(bundle);
                         onBackPressed();
                         return;
@@ -114,13 +124,13 @@ public class BackupsYoMeiActivity extends BaseActivity {
             ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
             // 将文本内容放到系统剪贴板里。
             cm.setText(tvSource.getText());
-            ToastUtil.showShort("收藏资源复制成功，可以发给朋友们了!");
+            ToastUtil.getInstance(mContext).showShort("收藏资源复制成功，可以发给朋友们了!");
         }else if(v.getId() == R.id.tv_youmei_copybackups){
             //拷贝视频
             ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
             // 将文本内容放到系统剪贴板里。
             cm.setText(tvVideoSource.getText());
-            ToastUtil.showShort("视频资源复制成功，可以发给朋友们了!");
+            ToastUtil.getInstance(mContext).showShort("视频资源复制成功，可以发给朋友们了!");
         }
     }
 }

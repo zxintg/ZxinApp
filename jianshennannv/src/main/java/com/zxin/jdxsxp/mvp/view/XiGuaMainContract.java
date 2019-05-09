@@ -53,7 +53,7 @@ import com.zxin.jdxsxp.util.TitleBarUtil;
 import com.zxin.network.mvp.presenter.BasePresenter;
 import com.zxin.network.mvp.view.IBaseView;
 import com.zxin.root.adapter.simple.SimpleAdapter;
-import com.zxin.root.adapter.simple.TrdViewHolder;
+import com.zxin.root.adapter.simple.ZxinViewHolder;
 import com.zxin.root.adapter.ViewPageFragmentAdapter;
 import com.zxin.root.util.AppManager;
 import com.zxin.root.util.ImageUtil;
@@ -111,11 +111,11 @@ public class XiGuaMainContract implements IBaseView {
                 String phone = iUserLoginView.ed_phone().getText().toString().trim();
                 String pwd = iUserLoginView.ed_password().getText().toString().trim();
                 if (StringUtils.textIsEmpty(phone)) {
-                    ToastUtil.showShort("请填写账号！");
+                    ToastUtil.getInstance(mContext).showShort("请填写账号！");
                     return;
                 }
                 if (StringUtils.textIsEmpty(pwd)) {
-                    ToastUtil.showShort("请填写密码！");
+                    ToastUtil.getInstance(mContext).showShort("请填写密码！");
                     return;
                 }
                 presenter.userLogin(phone, pwd);
@@ -226,12 +226,12 @@ public class XiGuaMainContract implements IBaseView {
     public void initDatas() {
         meinvAdapter = new SimpleAdapter<AlbumModel>(mContext, albumList, R.layout.adapter_portrait_item) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final AlbumModel localTheme) {
+            protected void onBindViewHolder(final ZxinViewHolder holder, final AlbumModel localTheme, int type) {
                 holder.setText(R.id.iv_portrait_name, localTheme.getNick())
                         .setVisible(R.id.iv_portrait_v, localTheme.isHasCertification())
                         .setText(R.id.iv_portrait_look, StringUtils.getLookContent(localTheme.getBrowseCount()));
-                ImageUtil.loadImageViewLoding(mContext, localTheme.getUrl(), holder.<ImageView>getView(R.id.iv_portrait_photo), R.mipmap.default_iamge);
-                ImageUtil.loadCircleImageView(mContext, localTheme.getFace(), holder.<ImageView>getView(R.id.iv_portrait_head), R.mipmap.default_iamge);
+                ImageUtil.getInstance(mContext).loadImageViewLoding(localTheme.getUrl(), holder.<ImageView>getView(R.id.iv_portrait_photo), R.mipmap.default_iamge);
+                ImageUtil.getInstance(mContext).loadCircleImageView(localTheme.getFace(), holder.<ImageView>getView(R.id.iv_portrait_head), R.mipmap.default_iamge);
                 holder.setOnClickListener(R.id.iv_portrait_more, new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -351,12 +351,12 @@ public class XiGuaMainContract implements IBaseView {
         if (bean == null)
             return;
         OtherUserInfoTopModel userInfoModel = (OtherUserInfoTopModel) bean;
-        ImageUtil.loadRSBlurImage(mContext, userInfoModel.getFace(), iUserInfoView.iv_user_ivImage(),20);
-        ImageUtil.loadCircleImageView(mContext, userInfoModel.getFace(), iUserInfoView.image_user_info_head(), R.mipmap.default_iamge);
+        ImageUtil.getInstance(mContext).loadRSBlurImage(userInfoModel.getFace(), iUserInfoView.iv_user_ivImage(),20);
+        ImageUtil.getInstance(mContext).loadCircleImageView(userInfoModel.getFace(), iUserInfoView.image_user_info_head(), R.mipmap.default_iamge);
         iUserInfoView.getCommonCrosswiseBarView().setTitleText(userInfoModel.getNick());
         iUserInfoView.iv_user_v().setVisibility(userInfoModel.isHasCertification() ? View.VISIBLE : View.GONE);
         if (userInfoModel.isHasFocus()) {
-            ImageUtil.setCompoundDrawable(iUserInfoView.tv_atten(), 20, R.drawable.icon_attened, Gravity.LEFT, 0);
+            ImageUtil.getInstance(mContext).setCompoundDrawable(iUserInfoView.tv_atten(), 20, R.drawable.icon_attened, Gravity.LEFT, 0);
         }
         iUserInfoView.tv_atten().setText(userInfoModel.getFocus() + "人已关注");
         if (userInfoModel.getCity() != null) {
@@ -393,7 +393,7 @@ public class XiGuaMainContract implements IBaseView {
     public void initUserAttenDatas() {
         userAttenAdapter = new SimpleAdapter<OtherUserAlbumModel>(mContext, userAttenList, R.layout.adapter_atten_item) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final OtherUserAlbumModel localTheme) {
+            protected void onBindViewHolder(final ZxinViewHolder holder, final OtherUserAlbumModel localTheme, int type) {
                 holder.setText(R.id.text_user_nick, localTheme.getNick())
                         .setText(R.id.text_time, StringUtils.getDateTimer(localTheme.getUpdateTime()))
                         .setText(R.id.text_record, "已被" + localTheme.getBrowseCount() + "人浏览")
@@ -408,11 +408,11 @@ public class XiGuaMainContract implements IBaseView {
                     holder.setVisible(R.id.image_user_info, false);
                 } else {
                     holder.setVisible(R.id.image_user_info, true);
-                    ImageUtil.loadImageViewLoding(mContext, localTheme.getUrls().get(0), holder.<ImageView>getView(R.id.image_user_info_01), R.mipmap.default_iamge);
+                    ImageUtil.getInstance(mContext).loadImageViewLoding(localTheme.getUrls().get(0), holder.<ImageView>getView(R.id.image_user_info_01), R.mipmap.default_iamge);
                     holder.setVisible(R.id.image_user_isvideo_01, localTheme.getType() == 2);
                     if (localTheme.getUrls().size() > 1) {
                         holder.setInVisible(R.id.rl_user_info_02, true);
-                        ImageUtil.loadImageViewLoding(mContext, localTheme.getUrls().get(1), holder.<ImageView>getView(R.id.image_user_info_02), R.mipmap.default_iamge);
+                        ImageUtil.getInstance(mContext).loadImageViewLoding(localTheme.getUrls().get(1), holder.<ImageView>getView(R.id.image_user_info_02), R.mipmap.default_iamge);
                         holder.setInVisible(R.id.image_user_isvideo_02, localTheme.getType() == 2);
                     } else
                         holder.setInVisible(R.id.rl_user_info_02, false);
@@ -461,7 +461,7 @@ public class XiGuaMainContract implements IBaseView {
                         CameraAlbumUtils.getInstance(mContext).startAlbumPreviewActivity(previewBean);
                     }
                 });
-                ImageUtil.loadCircleImageView(mContext, localTheme.getFace(), holder.<ImageView>getView(R.id.image_user_head), R.mipmap.default_iamge);
+                ImageUtil.getInstance(mContext).loadCircleImageView(localTheme.getFace(), holder.<ImageView>getView(R.id.image_user_head), R.mipmap.default_iamge);
             }
         };
         iUserAttenView.getRefreshCommonView().setIsAutoLoad(false);
@@ -524,7 +524,7 @@ public class XiGuaMainContract implements IBaseView {
         iUserDynamicView.getCommonCrosswiseBar().setVisibility(toUserId == -1 ? View.VISIBLE : View.GONE);
         userDynamicAdapter = new SimpleAdapter<DynamicModel>(mContext, userDynamicList, R.layout.adapter_dynamic_list_item) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final DynamicModel localTheme) {
+            protected void onBindViewHolder(final ZxinViewHolder holder, final DynamicModel localTheme, int type) {
                 holder.setText(R.id.tv_dynamic_nickname, localTheme.getNick())
                         .setText(R.id.tv_dynamic_time, StringUtils.getDateTimer(localTheme.getUpdateTime()))
                         .setText(R.id.tv_dynamic_browsecount, "已被" + localTheme.getBrowseCount() + "人浏览")
@@ -543,13 +543,13 @@ public class XiGuaMainContract implements IBaseView {
                     return;
 
                 if (localTheme.getDynamicResources().size() < 3) {
-                    ImageUtil.loadImageViewLoding(mContext, localTheme.getDynamicResources().get(0).getThumbnailUrl(), holder.<ImageView>getView(R.id.image_dynamic_info_01), R.mipmap.default_iamge);
+                    ImageUtil.getInstance(mContext).loadImageViewLoding(localTheme.getDynamicResources().get(0).getThumbnailUrl(), holder.<ImageView>getView(R.id.image_dynamic_info_01), R.mipmap.default_iamge);
                     holder.setVisible(R.id.rl_dynamic_info_01, true);
                     holder.setVisible(R.id.image_dynamic_isvideo_01, localTheme.getType() == 2);
                     if (localTheme.getDynamicResources().size() > 1) {
                         holder.setInVisible(R.id.rl_dynamic_info_02, true);
                         holder.setVisible(R.id.image_dynamic_isvideo_02, localTheme.getType() == 2);
-                        ImageUtil.loadImageViewLoding(mContext, localTheme.getDynamicResources().get(1).getThumbnailUrl(), holder.<ImageView>getView(R.id.image_dynamic_info_02), R.mipmap.default_iamge);
+                        ImageUtil.getInstance(mContext).loadImageViewLoding(localTheme.getDynamicResources().get(1).getThumbnailUrl(), holder.<ImageView>getView(R.id.image_dynamic_info_02), R.mipmap.default_iamge);
                     } else
                         holder.setInVisible(R.id.rl_dynamic_info_02, false);
 
@@ -605,13 +605,13 @@ public class XiGuaMainContract implements IBaseView {
                     });
                 } else {
                     RecyclerView recyclerView = holder.getView(R.id.rv_dynamic_content);
-                    recyclerView.setLayoutManager(UiUtils.getGridLayoutManager(3));
+                    recyclerView.setLayoutManager(UiUtils.getInstance(mContext).getGridLayoutManager(3));
                     recyclerView.setNestedScrollingEnabled(false);
                     recyclerView.setAdapter(new SimpleAdapter<DynamicResources>(mContext, localTheme.getDynamicResources(), R.layout.item_common_pic) {
                         @Override
-                        protected void onBindViewHolder(TrdViewHolder holder, final DynamicResources product) {
+                        protected void onBindViewHolder(ZxinViewHolder holder, final DynamicResources product, int type) {
                             holder.setVisible(R.id.iv_common_isvideo_img, localTheme.getType() == 2);
-                            ImageUtil.loadImageViewLoding(mContext, product.getThumbnailUrl(), holder.<ImageView>getView(R.id.iv_common_img), R.mipmap.default_iamge, R.mipmap.error);
+                            ImageUtil.getInstance(mContext).loadImageViewLoding(product.getThumbnailUrl(), holder.<ImageView>getView(R.id.iv_common_img), R.mipmap.default_iamge, R.mipmap.error);
                             holder.setOnItemListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
@@ -640,7 +640,7 @@ public class XiGuaMainContract implements IBaseView {
                         }
                     });
                 }
-                ImageUtil.loadCircleImageView(mContext, localTheme.getFace(), holder.<ImageView>getView(R.id.iv_dynamic_face), R.mipmap.default_iamge);
+                ImageUtil.getInstance(mContext).loadCircleImageView(localTheme.getFace(), holder.<ImageView>getView(R.id.iv_dynamic_face), R.mipmap.default_iamge);
 
                 if (toUserId != -1)
                     return;
@@ -711,12 +711,12 @@ public class XiGuaMainContract implements IBaseView {
     public void initVideoItemDatas() {
         videoItemAdapter = new SimpleAdapter<AlbumModel>(mContext, videoItemList, R.layout.item_video) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final AlbumModel localTheme) {
+            protected void onBindViewHolder(final ZxinViewHolder holder, final AlbumModel localTheme, int type) {
                 holder.setText(R.id.tv_video_name, localTheme.getNick() + " (" + localTheme.getTitle() + ")")
                         .setText(R.id.tv_video_timer, "片长：" + localTheme.getSize())
                         .setText(R.id.tv_video_thumnum, localTheme.getBrowseCount() + "人查看")
                         .setText(R.id.tv_video_reward, localTheme.getIsVr() == 1 ? "已关注" : "关注");
-                ImageUtil.loadImageViewLoding(mContext, localTheme.getUrl(), holder.<ImageView>getView(R.id.iv_video_image), R.mipmap.default_iamge);
+                ImageUtil.getInstance(mContext).loadImageViewLoding(localTheme.getUrl(), holder.<ImageView>getView(R.id.iv_video_image), R.mipmap.default_iamge);
                 /*holder.setOnItemListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -832,7 +832,7 @@ public class XiGuaMainContract implements IBaseView {
     }
 
     public void initHPlayerDatas() {
-        PowerManager.WakeLock wakeLock = SystemInfoUtil.getPowerManager();
+        PowerManager.WakeLock wakeLock = SystemInfoUtil.getInstance(mContext).getPowerManager();
         wakeLock.acquire();
         player = new PlayerView(AppManager.getAppManager().currentActivity(), iHPlayerView.getLayoutView()) {
             @Override
@@ -854,7 +854,7 @@ public class XiGuaMainContract implements IBaseView {
                 .showThumbnail(new OnShowThumbnailListener() {
                     @Override
                     public void onShowThumbnail(ImageView ivThumbnail) {
-                        ImageUtil.loadImageViewLoding(mContext, albumModel.getUrl(), ivThumbnail, R.mipmap.default_iamge);
+                        ImageUtil.getInstance(mContext).loadImageViewLoding(albumModel.getUrl(), ivThumbnail, R.mipmap.default_iamge);
                     }
                 }).setChargeTie(true, 60);
     }
@@ -910,7 +910,7 @@ public class XiGuaMainContract implements IBaseView {
     private List<String> historyList = new ArrayList<>();
     //初始化
     public void initSearchMeiTuDatas() {
-        iSearchMeiTuView.ll_search_head().setPadding(iSearchMeiTuView.ll_search_head().getPaddingLeft(), iSearchMeiTuView.ll_search_head().getPaddingTop() + SystemInfoUtil.getStatusBarHeight(), iSearchMeiTuView.ll_search_head().getPaddingRight(), iSearchMeiTuView.ll_search_head().getPaddingBottom());
+        iSearchMeiTuView.ll_search_head().setPadding(iSearchMeiTuView.ll_search_head().getPaddingLeft(), iSearchMeiTuView.ll_search_head().getPaddingTop() + SystemInfoUtil.getInstance(mContext).getStatusBarHeight(), iSearchMeiTuView.ll_search_head().getPaddingRight(), iSearchMeiTuView.ll_search_head().getPaddingBottom());
         iSearchMeiTuView.getDrawerLayoutView().setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
         iSearchMeiTuView.tv_search_tags().setOnClickListener(new View.OnClickListener() {
             @Override
@@ -968,10 +968,10 @@ public class XiGuaMainContract implements IBaseView {
         iSearchMeiTuView.vp_search_content().setOffscreenPageLimit(titleList.size());
         iSearchMeiTuView.getPagerSlidingTabStrip().setViewPager(iSearchMeiTuView.vp_search_content());
 
-        iSearchMeiTuView.rv_search_history().setLayoutManager(UiUtils.getGridLayoutManager(3));
+        iSearchMeiTuView.rv_search_history().setLayoutManager(UiUtils.getInstance(mContext).getGridLayoutManager(3));
         historyAdapter = new SimpleAdapter<String>(mContext, historyList, R.layout.item_tag) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final String localTheme) {
+            protected void onBindViewHolder(final ZxinViewHolder holder, final String localTheme, int type) {
                 holder.setText(R.id.tv_tag_name, localTheme);
                 holder.setOnItemListener(new View.OnClickListener() {
                     @Override
@@ -988,10 +988,10 @@ public class XiGuaMainContract implements IBaseView {
         iSearchMeiTuView.rv_search_history().setNestedScrollingEnabled(false);
         iSearchMeiTuView.rv_search_history().setAdapter(historyAdapter);
 
-        iSearchMeiTuView.rv_search_hot().setLayoutManager(UiUtils.getGridLayoutManager(3));
+        iSearchMeiTuView.rv_search_hot().setLayoutManager(UiUtils.getInstance(mContext).getGridLayoutManager(3));
         hotAdapter = new SimpleAdapter<SearchTagModel>(mContext, dataList, R.layout.item_tag) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final SearchTagModel localTheme) {
+            protected void onBindViewHolder(final ZxinViewHolder holder, final SearchTagModel localTheme , int type) {
                 holder.setText(R.id.tv_tag_name, localTheme.getTitle());
                 holder.setOnItemListener(new View.OnClickListener() {
                     @Override
@@ -1051,13 +1051,13 @@ public class XiGuaMainContract implements IBaseView {
     public void initSearchItemDatas(){
         searchItemAdapter = new SimpleAdapter<UserAlbumModel>(mContext, searchItemList, R.layout.item_search) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final UserAlbumModel localTheme) {
+            protected void onBindViewHolder(final ZxinViewHolder holder, final UserAlbumModel localTheme, int type) {
                 holder.setText(R.id.tv_search_num, localTheme.getType() == 1?localTheme.getUrls().length + "张":localTheme.getSize())
                         .setText(R.id.tv_search_desc,localTheme.getDsc())
                         .setText(R.id.tv_search_time,StringUtils.getDateTimer(localTheme.getUpdateTime()))
                         .setText(R.id.tv_search_name, localTheme.getNick())
                         .setText(R.id.tv_search_play, "已播放"+localTheme.getBrowseCount()+"次");
-                ImageUtil.loadImageViewLoding(mContext, localTheme.getUrls()[0], holder.<ImageView>getView(R.id.iv_search_image), R.mipmap.default_iamge);
+                ImageUtil.getInstance(mContext).loadImageViewLoding(localTheme.getUrls()[0], holder.<ImageView>getView(R.id.iv_search_image), R.mipmap.default_iamge);
                 holder.setOnItemListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

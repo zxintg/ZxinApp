@@ -27,7 +27,7 @@ import rx.schedulers.Schedulers;
 public class MeiZiMainModel extends BaseModel {
 
     public void getMainMeiZiApi() {
-        getHttpService().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web1,ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web1,ZXinJdxsxpApi.class)
                 .getMainMeiZiApi()
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -49,7 +49,7 @@ public class MeiZiMainModel extends BaseModel {
     }
 
     public void getMainHotApi(int pageNum) {
-        getHttpService().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web2,ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web2,ZXinJdxsxpApi.class)
                 .getMainHotApi(20,pageNum*20)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -71,7 +71,7 @@ public class MeiZiMainModel extends BaseModel {
     }
 
     public void getMeiNvListApi(int pageNum) {
-        getHttpService().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web2,ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web2,ZXinJdxsxpApi.class)
                 .getMeiNvListApi(20,pageNum*20)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -93,7 +93,7 @@ public class MeiZiMainModel extends BaseModel {
     }
 
     public void getMeiNvDetailApi(String meiId,int pageNum) {
-        getHttpService().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web2,ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web2,ZXinJdxsxpApi.class)
                 .getMeiNvDetailApi(meiId,20,pageNum*20)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -115,7 +115,7 @@ public class MeiZiMainModel extends BaseModel {
     }
 
     public void getArticleListApi() {
-        getHttpService().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web3,ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web3,ZXinJdxsxpApi.class)
                 .getArticleListApi()
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -137,7 +137,7 @@ public class MeiZiMainModel extends BaseModel {
     }
 
     public void getWallPaperItemList(String type,int pageNum) {
-        getHttpService().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web4,ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web4,ZXinJdxsxpApi.class)
                 .getWallPaperItemList(type+pageNum)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -159,7 +159,7 @@ public class MeiZiMainModel extends BaseModel {
     }
 
     public void getFindBaiDuList(String keyword,int pageNum) {
-        getHttpService().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web5,ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web5,ZXinJdxsxpApi.class)
                 .getFindBaiDuList(keyword,pageNum*20)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -181,7 +181,7 @@ public class MeiZiMainModel extends BaseModel {
     }
 
     public void getFind360List(String keyword,int pageNum) {
-        getHttpService().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web6,ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web6,ZXinJdxsxpApi.class)
                 .getFind360List(keyword,pageNum*20)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -203,7 +203,7 @@ public class MeiZiMainModel extends BaseModel {
     }
 
     public void getFindSouGouList(String keyword,int pageNum) {
-        getHttpService().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web7,ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web7,ZXinJdxsxpApi.class)
                 .getFindSouGouList(keyword,pageNum*20)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -225,7 +225,7 @@ public class MeiZiMainModel extends BaseModel {
     }
 
     public void getPicDetailList(String albumAddress) {
-        getHttpService().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web4,ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web4,ZXinJdxsxpApi.class)
                 .getPicDetailList("v4/"+albumAddress)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())

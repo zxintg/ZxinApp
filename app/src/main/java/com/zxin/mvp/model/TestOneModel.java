@@ -15,7 +15,7 @@ import rx.schedulers.Schedulers;
 public class TestOneModel extends BaseModel {
 
    public void getMeiziJsonList(String type,int pageNum){
-       getHttpService().getZXinWebApi("http://route.showapi.com/")
+       getInstance().getZXinWebApi("http://route.showapi.com/")
                .getHuaBanMeizi("20", String.valueOf(pageNum) , "15314", type, "d424376f51f1467da1b8c75debebf148")
                .subscribeOn(Schedulers.io())
                .observeOn(Schedulers.io())
@@ -34,7 +34,7 @@ public class TestOneModel extends BaseModel {
    }
 
     public void getMeiziHtmlList(int pageNum) {
-        getHttpService().getZXinWebApi("http://www.dbmeinv.com/dbgroup/")
+        getInstance().getZXinWebApi("http://www.dbmeinv.com/dbgroup/")
                 .getDoubanMeizi(7, pageNum)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())

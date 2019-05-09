@@ -45,6 +45,16 @@ public class CodeKKItemFragment extends BaseFragment implements BaseFragment.Laz
     }
 
     @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
+    @Override
     public void onClick(View v) {
 
     }

@@ -36,6 +36,16 @@ public class YoWuMineFragment extends BaseFragment implements BaseFragment.LazyL
     }
 
     @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
+    @Override
     public void onClick(View v) {
 
     }

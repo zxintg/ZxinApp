@@ -1,10 +1,11 @@
 package com.zxin.jdxsxp.api;
 
 import android.provider.Settings;
+
+import com.zxin.basemodel.app.BaseApplication;
 import com.zxin.jdxsxp.bean.UserModel;
 import com.zxin.jdxsxp.util.MeiNvPicturePreferences;
 import com.zxin.jdxsxp.util.StringUtils;
-import com.zxin.root.app.BaseApplication;
 import com.zxin.root.util.SystemInfoUtil;
 import java.io.UnsupportedEncodingException;
 import java.util.Map;
@@ -90,12 +91,12 @@ public class RequestParameter {
     }
 
     private static String getDeviceIdentify() {
-        String device_id = MeiNvPicturePreferences.getDeviceId();
+        String device_id = MeiNvPicturePreferences.getInstance(BaseApplication.getInstance().getContext()).getDeviceId();
         if (!StringUtils.textIsEmpty(device_id)) {
             return device_id;
         }
         device_id = getUUid();
-        MeiNvPicturePreferences.setDeviceId(device_id);
+        MeiNvPicturePreferences.getInstance(BaseApplication.getInstance().getContext()).setDeviceId(device_id);
         return device_id;
 
     }
@@ -105,7 +106,7 @@ public class RequestParameter {
             if (!"9774d56d682e549c".equals(RequestParameter.T_id)) {
                 return UUID.nameUUIDFromBytes(RequestParameter.T_id.getBytes("utf8")).toString();
             } else {
-                UUID uuid = UUID.nameUUIDFromBytes(SystemInfoUtil.getPhoneNum().getBytes("utf8"));
+                UUID uuid = UUID.nameUUIDFromBytes(SystemInfoUtil.getInstance(BaseApplication.getInstance().getContext()).getPhoneNum().getBytes("utf8"));
                 if (uuid == UUID.randomUUID()) {
                     return uuid.toString();
                 }

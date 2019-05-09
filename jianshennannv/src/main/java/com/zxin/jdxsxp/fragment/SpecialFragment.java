@@ -44,6 +44,16 @@ public class SpecialFragment extends BaseFragment implements BaseFragment.LazyLo
     }
 
     @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
+    @Override
     public void onClick(View v) {
 
     }

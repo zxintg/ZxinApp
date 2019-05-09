@@ -33,6 +33,16 @@ public class SettingActivity extends BaseActivity {
         return R.layout.activity_setting;
     }
 
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
     @OnClick({R.id.common_bar_leftBtn,R.id.tv_setting_exit})
     @Override
     public void onClick(View v) {
@@ -48,7 +58,7 @@ public class SettingActivity extends BaseActivity {
                     backDialog = ConfirmDialog.newInstance("", "您确定要退出吗？", "取消", "确定");
                 }
                 backDialog.setMargin(60)
-                        .setWidth(SystemInfoUtil.getScreenWidth()*2/3)
+                        .setWidth(SystemInfoUtil.getInstance(mContext).getScreenWidth()*2/3)
                         .setOutCancel(false)
                         .show();
                 backDialog.setConfirmDialogListener(new ConfirmDialog.ConfirmDialogListener(){

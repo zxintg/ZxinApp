@@ -209,7 +209,7 @@ public class XiGuaMainPresenter extends BasePresenter<XiGuaMainContract, XiGuaMe
     public void onFailure(int tage, String msg) {
         switch (tage){
             case MeiZiIntegerUtil.WEB_API_HOME_TAG_ALBUM:
-                ToastUtil.showShort(msg);
+                ToastUtil.getInstance(getModel().getContext()).showShort(msg);
                 break;
         }
     }

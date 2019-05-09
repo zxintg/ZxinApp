@@ -3,25 +3,18 @@ package com.zxin.sources.mvp.view;
 import android.content.Context;
 import android.view.View;
 import android.widget.ImageView;
-
-import com.zxin.basemodel.util.HtmlJumpUtil;
-import com.zxin.network.bean.CodeKKResultBean;
 import com.zxin.network.bean.YunShangResultBean;
 import com.zxin.network.mvp.presenter.BasePresenter;
 import com.zxin.network.mvp.view.IBaseView;
 import com.zxin.sources.R;
-import com.zxin.sources.mvp.presenter.CodeKKPresenter;
 import com.zxin.sources.mvp.presenter.YunShangPresenter;
 import com.zxin.root.adapter.simple.SimpleAdapter;
-import com.zxin.root.adapter.simple.TrdViewHolder;
-import com.zxin.root.bean.CodeKKBean;
-import com.zxin.root.bean.TitleBean;
+import com.zxin.root.adapter.simple.ZxinViewHolder;
 import com.zxin.root.bean.YunShangBean;
 import com.zxin.root.util.ImageUtil;
 import com.zxin.root.util.ToastUtil;
 import com.zxin.root.view.CommonCrosswiseBar;
 import com.zxin.root.view.RefreshCommonView;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,7 +36,7 @@ public class YunShangContract implements IBaseView,RefreshCommonView.RefreshLoad
     public void initDatas() {
         adapter = new SimpleAdapter<YunShangBean>(mContext, codeKKList, R.layout.item_yunshangji) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final YunShangBean data) {
+            protected void onBindViewHolder(final ZxinViewHolder holder, final YunShangBean data,int type) {
                 holder.setText(R.id.item_yunshangji_title, data.name)
                         .setText(R.id.item_yunshangji_content,data.content)
                         .<CommonCrosswiseBar>getView(R.id.item_yunshangji_time).setRightText(data.time);
@@ -53,10 +46,10 @@ public class YunShangContract implements IBaseView,RefreshCommonView.RefreshLoad
                 holder.setOnItemListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        ToastUtil.showShort(data.linkUrl);
+                        ToastUtil.getInstance(mContext).showShort(data.linkUrl);
                     }
                 });
-                ImageUtil.loadImageViewLoding(mContext, data.imageUrl, holder.<ImageView>getView(R.id.item_yunshangji_iamge), R.mipmap.default_iamge, R.mipmap.default_iamge);
+                ImageUtil.getInstance(mContext).loadImageViewLoding(data.imageUrl, holder.<ImageView>getView(R.id.item_yunshangji_iamge), R.mipmap.default_iamge, R.mipmap.default_iamge);
             }
         };
         iView.getRecyclerView().setRecyclerViewAdapter(adapter);

@@ -130,6 +130,16 @@ public class GuideActivity extends BaseActivity {
         return R.layout.activity_guide;
     }
 
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
     /**
      * 打开新的界面
      */
@@ -138,7 +148,7 @@ public class GuideActivity extends BaseActivity {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_guide_start_experience:
-                SharedPreferencesManager.setIsFirstEnter(false);
+                SharedPreferencesManager.getInstance(mContext).setIsFirstEnter(false);
                 startActivity(new Intent(this,MainActivity.class));
                 onBackPressed();
                 break;

@@ -20,34 +20,34 @@ import android.text.TextUtils;
 @Entity(tableName = "tb_video")//定义外键
 public class MeiZiVideo {
     @PrimaryKey(autoGenerate = true) //定义主键
-    private Long id;
+    public Long id;
     //缩略图
     @ColumnInfo(name = "thumb_url")//定义数据表中的字段名
-    private String thumbUrl;
+    public String thumbUrl;
     //播放地址
     @ColumnInfo(name = "video_url")
-    private String videoUrl;
+    public String videoUrl;
     //昵称
     @ColumnInfo(name = "nick_name")
-    private String nickName;
+    public String nickName;
     //用户名称
     @ColumnInfo(name = "user_id")
-    private String userId;
+    public String userId;
     //创建时间
     @ColumnInfo(name = "create_time")
-    private Long createTime;
+    public Long createTime;
     //最近播放时间
     @ColumnInfo(name = "last_time")
-    private Long lastTime;
+    public Long lastTime;
     //话题
     @ColumnInfo(name = "topic")
-    private String topic;
+    public String topic;
     //Vid
     @ColumnInfo(name = "vid")
-    private int vid;
+    public int vid;
     //播放次数
     @ColumnInfo(name = "play_num")
-    private int playNum;
+    public int playNum;
 
     public Long getId() {
         return id;

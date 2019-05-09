@@ -20,45 +20,63 @@ public class RxTimerUtil {
     private static Disposable mDelayDisposable;
     private static final long TIME_OUT = 7000;
 
+    private static volatile RxTimerUtil util = null;
+
+    private RxTimerUtil() {
+
+    }
+
+    public static RxTimerUtil getInstance() {
+        if (util == null) {
+            synchronized (RxTimerUtil.class) {
+                if (util == null) {
+                    util = new RxTimerUtil();
+                }
+            }
+        }
+        return util;
+    }
+
+
     /*****
      * 轮询 执行
      * @param timmer 轮询时间
      */
-    public static void schedulePollingTimer(int timmer) {
+    public void schedulePollingTimer(int timmer) {
         Observable.interval(timmer, TimeUnit.SECONDS, Schedulers.io()).
                 subscribeOn(Schedulers.io())
                 .subscribe(new Observer<Long>() {
-            @Override
-            public void onSubscribe(Disposable disposable) {
-                LogUtils.i(TAG, "polling task : schedule");
-                mPollingDisposable = disposable;
-            }
+                    @Override
+                    public void onSubscribe(Disposable disposable) {
+                        LogUtils.i(TAG, "polling task : schedule");
+                        mPollingDisposable = disposable;
+                    }
 
-            @Override
-            public void onNext(Long aLong) {
-                LogUtils.i(TAG, "polling task : onNext");
+                    @Override
+                    public void onNext(Long aLong) {
+                        LogUtils.i(TAG, "polling task : onNext");
 
-            }
+                    }
 
-            @Override
-            public void onError(Throwable throwable) {
-                LogUtils.printStackTrace(TAG, throwable);
-                cancelPollingTimer();
-            }
+                    @Override
+                    public void onError(Throwable throwable) {
+                        LogUtils.printStackTrace(TAG, throwable);
+                        cancelPollingTimer();
+                    }
 
-            @Override
-            public void onComplete() {
-                LogUtils.i(TAG, "polling task: complete");
-                cancelPollingTimer();
-            }
-        });
+                    @Override
+                    public void onComplete() {
+                        LogUtils.i(TAG, "polling task: complete");
+                        cancelPollingTimer();
+                    }
+                });
     }
 
     /*****
      * 单次执行 延迟
      * @param delay 延迟时间
      */
-    public static void scheduleDelayTimer(int delay) {
+    public void scheduleDelayTimer(int delay) {
         Observable.timer(delay, TimeUnit.MILLISECONDS, Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<Long>() {
@@ -87,18 +105,17 @@ public class RxTimerUtil {
                 });
     }
 
-    public static void cancelPollingTimer() {
+    public void cancelPollingTimer() {
         if (mPollingDisposable != null && !mPollingDisposable.isDisposed()) {
             mPollingDisposable.dispose();
             LogUtils.i(TAG, "polling : cancelPollingTimer");
         }
     }
 
-    public static void cancelDelayTimer() {
+    public void cancelDelayTimer() {
         if (mDelayDisposable != null && !mDelayDisposable.isDisposed()) {
             mDelayDisposable.dispose();
             LogUtils.i(TAG, "delay : cancelDelayTimer");
         }
     }
-
 }

@@ -5,9 +5,9 @@ import android.view.View;
 
 import com.zxin.R;
 import com.zxin.base.BaseFragment;
+import com.zxin.root.adapter.simple.ZxinViewHolder;
 import com.zxin.util.StringUtils;
 import com.zxin.root.adapter.simple.SimpleAdapter;
-import com.zxin.root.adapter.simple.TrdViewHolder;
 import com.zxin.root.bean.BasePageBean;
 import com.zxin.root.bean.HttpUrlBean;
 import com.zxin.root.bean.TitleBean;
@@ -45,7 +45,7 @@ public class MainItemFragment extends BaseFragment implements BaseFragment.LazyL
 
         adapter = new SimpleAdapter<HttpUrlBean>(mContext, httpUrlList, R.layout.item_urlview) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final HttpUrlBean data) {
+            protected void onBindViewHolder(final ZxinViewHolder holder, final HttpUrlBean data,int type) {
                 holder.setText(R.id.item_url_title, data.name);
             }
         };
@@ -58,6 +58,16 @@ public class MainItemFragment extends BaseFragment implements BaseFragment.LazyL
     @Override
     public int setLayout() {
         return R.layout.common_refresh_notitle;
+    }
+
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
     }
 
     @Override

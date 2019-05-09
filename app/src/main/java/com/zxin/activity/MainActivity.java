@@ -183,6 +183,16 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         return R.layout.activity_main;
     }
 
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {

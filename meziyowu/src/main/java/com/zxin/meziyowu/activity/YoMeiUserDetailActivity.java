@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.zxin.basemodel.dao.MeiZiVideoDaoUtil;
 import com.zxin.camera.model.PhotoPreviewBean;
 import com.zxin.camera.utils.CameraAlbumUtils;
 import com.zxin.meziyowu.R;
@@ -16,15 +18,13 @@ import com.zxin.meziyowu.bean.YoMeiBean;
 import com.zxin.meziyowu.bean.YoMeiDeatilBean;
 import com.zxin.meziyowu.mvp.presenter.YoMeiMainPresenter;
 import com.zxin.meziyowu.mvp.view.YoMeiMainContract;
-import com.zxin.meziyowu.util.IntegerUtil;
+import com.zxin.meziyowu.util.YoWuIntegerUtil;
 import com.zxin.meziyowu.util.StringUtils;
 import com.zxin.network.mvp.inject.InjectPresenter;
 import com.zxin.root.bean.DynamicResources;
 import com.zxin.root.bean.VideoPlayBean;
-import com.zxin.root.dao.MeiZiVideoDaoUtil;
 import com.zxin.basemodel.entity.MeiZiCollect;
 import com.zxin.basemodel.entity.MeiZiVideo;
-import com.zxin.root.util.AppManager;
 import com.zxin.root.util.ContentUtil;
 import com.zxin.root.util.SystemInfoUtil;
 import com.zxin.root.util.ToastUtil;
@@ -55,7 +55,7 @@ public class YoMeiUserDetailActivity extends BaseActivity implements YoMeiMainCo
         presenter.initYoMeiUserDetailDatas(this,yoMeiBean.getId());
         presenter.getYoMeiVideoDetail(yoMeiBean.getId());
         if (daoUtil==null){
-            daoUtil = MeiZiVideoDaoUtil.getInstance();
+            daoUtil = MeiZiVideoDaoUtil.getInstance(mContext);
         }
         if(dialog == null){
             dialog = new ProgressBarDialog(mContext);
@@ -65,6 +65,16 @@ public class YoMeiUserDetailActivity extends BaseActivity implements YoMeiMainCo
     @Override
     public int setLayout() {
         return R.layout.activity_youmei_details;
+    }
+
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
     }
 
     @Override
@@ -105,13 +115,13 @@ public class YoMeiUserDetailActivity extends BaseActivity implements YoMeiMainCo
                         }
                         MeiZiCollect meiZiCollect = daoUtil.addMeiZiCollect(yoMeiBean.getId(), yoMeiBean.getCover(), yoMeiBean.getUrl(),userName);
                         if (meiZiCollect!=null){
-                            ToastUtil.showShort("收藏成功");
+                            ToastUtil.getInstance(mContext).showShort("收藏成功");
                             getCommonCrosswiseBarView().setRightText("取消收藏");
                             collect = meiZiCollect;
                             sendNotifyDatas();
                             return;
                         }
-                        ToastUtil.showShort("收藏失败");
+                        ToastUtil.getInstance(mContext).showShort("收藏失败");
                     }
                 },1000);
             }
@@ -121,7 +131,7 @@ public class YoMeiUserDetailActivity extends BaseActivity implements YoMeiMainCo
 
     private void sendNotifyDatas(){
         Bundle bundle = new Bundle();
-        bundle.putInt(StringUtils.EVENT_ID, IntegerUtil.EVENT_ID_31001);
+        bundle.putInt(StringUtils.EVENT_ID, YoWuIntegerUtil.EVENT_ID_31001);
         EventBus.getDefault().post(bundle);
     }
 
@@ -210,7 +220,7 @@ public class YoMeiUserDetailActivity extends BaseActivity implements YoMeiMainCo
                         DynamicResources res = new DynamicResources();
                         if (hasVideo){
                             MeiZiVideo video = daoUtil.getMeiZiVideo(yoMeiDeatil.id);
-                            res.setDesc("本地视频 - " + video.getNickname());
+                            res.setDesc("本地视频 - " + video.getNickName());
                             res.setThumbnailUrl(video.getThumbUrl());
                             res.setUrl(video.getVideoUrl());
                         }else{
@@ -241,7 +251,7 @@ public class YoMeiUserDetailActivity extends BaseActivity implements YoMeiMainCo
             backDialog = ConfirmDialog.newInstance("", "您确定要替换封面么？", "取消", "确定");
         }
         backDialog.setMargin(60)
-                .setWidth(SystemInfoUtil.getScreenWidth()*2/3)
+                .setWidth(SystemInfoUtil.getInstance(mContext).getScreenWidth()*2/3)
                 .setOutCancel(false)
                 .show();
         backDialog.setConfirmDialogListener(new ConfirmDialog.ConfirmDialogListener(){

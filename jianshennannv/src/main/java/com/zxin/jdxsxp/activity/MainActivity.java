@@ -58,7 +58,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
             radioButton.setLayoutParams(layoutParams);
             radioButton.setBackground(null);
             radioButton.setTag(title.index);
-            SelectorUtil.addSelectorFromDrawable(title.labImage,title.labImage2, 150,150,radioButton);
+            SelectorUtil.getInstance(mContext).addSelectorFromDrawable(title.labImage,title.labImage2, 150,150,radioButton);
             radioButton.setButtonDrawable(null);
             mRadioGroup.addView(radioButton);
             radioButton.setChecked(title.index == 0);
@@ -78,6 +78,16 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     @Override
     public int setLayout() {
         return R.layout.activity_jdxsxpmain;
+    }
+
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
     }
 
 

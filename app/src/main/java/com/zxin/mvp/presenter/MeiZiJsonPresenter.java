@@ -53,7 +53,7 @@ public class MeiZiJsonPresenter extends BasePresenter<TestJsonContract, TestOneM
     public void onFailure(int tage, String msg) {
         switch (tage){
             case IntegerUtil.WEB_API_TestMeiZiJson:
-                ToastUtil.showShort(msg);
+                ToastUtil.getInstance(getModel().getContext()).showShort(msg);
                 break;
         }
     }

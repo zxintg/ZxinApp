@@ -52,6 +52,16 @@ public class CommWebActivity extends BaseActivity {
     }
 
     @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
+    @Override
     protected void onDestroy() {
         super.onDestroy();
         if (x5WebView != null) {

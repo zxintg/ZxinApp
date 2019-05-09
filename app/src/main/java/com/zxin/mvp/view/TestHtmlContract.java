@@ -9,7 +9,7 @@ import com.zxin.network.bean.DoubanMeizi;
 import com.zxin.network.mvp.presenter.BasePresenter;
 import com.zxin.network.mvp.view.IBaseView;
 import com.zxin.root.adapter.simple.SimpleAdapter;
-import com.zxin.root.adapter.simple.TrdViewHolder;
+import com.zxin.root.adapter.simple.ZxinViewHolder;
 import com.zxin.root.util.ImageUtil;
 import com.zxin.root.view.RefreshCommonView;
 import java.util.ArrayList;
@@ -34,9 +34,9 @@ public class TestHtmlContract implements IBaseView,RefreshCommonView.RefreshLoad
         meiziTuList.clear();
         adapter = new SimpleAdapter<DoubanMeizi>(context, meiziTuList, R.layout.item_test) {
             @Override
-            protected void onBindViewHolder(TrdViewHolder holder, final DoubanMeizi data) {
+            protected void onBindViewHolder(ZxinViewHolder holder, final DoubanMeizi data ,int type) {
                 holder.setText(R.id.tv_item_title,data.getTitle());
-                ImageUtil.loadImageViewLoding(mContext, data.getUrl(), holder.<ImageView>getView(R.id.im_item_photo), R.mipmap.default_iamge, R.mipmap.default_iamge);
+                ImageUtil.getInstance(mContext).loadImageViewLoding(data.getUrl(), holder.<ImageView>getView(R.id.im_item_photo), R.mipmap.default_iamge, R.mipmap.default_iamge);
             }
         };
         iView.getRecyclerView().setRecyclerViewAdapter(adapter);

@@ -13,7 +13,7 @@ import com.trello.rxlifecycle.components.support.RxFragment;
 import com.zxin.basemodel.app.BaseApplication;
 import com.zxin.network.mvp.inject.InjectPresenter;
 import com.zxin.network.mvp.presenter.BasePresenter;
-import com.zxin.root.util.LogUtils;
+import com.zxin.root.util.logger.LogUtils;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;

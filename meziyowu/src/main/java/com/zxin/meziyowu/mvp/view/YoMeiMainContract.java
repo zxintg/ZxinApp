@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.StateListDrawable;
 import android.support.design.widget.AppBarLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -12,10 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import com.zxin.meziyowu.R;
 import com.zxin.meziyowu.activity.YoMeiUserDetailActivity;
 import com.zxin.meziyowu.bean.MainBarBean;
@@ -30,15 +26,14 @@ import com.zxin.meziyowu.util.TitleBarUtil;
 import com.zxin.network.mvp.presenter.BasePresenter;
 import com.zxin.network.mvp.view.IBaseView;
 import com.zxin.root.adapter.simple.SimpleAdapter;
-import com.zxin.root.adapter.simple.TrdViewHolder;
 import com.zxin.root.adapter.ViewPageFragmentAdapter;
 import com.zxin.basemodel.dao.MeiZiVideoDaoUtil;
+import com.zxin.root.adapter.simple.ZxinViewHolder;
 import com.zxin.root.util.ImageUtil;
 import com.zxin.root.util.UiUtils;
 import com.zxin.root.view.CommonCrosswiseBar;
 import com.zxin.root.view.PagerSlidingTabStrip;
 import com.zxin.root.view.RefreshCommonView;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -148,8 +143,8 @@ public class YoMeiMainContract implements IBaseView {
     public void initDatas() {
         meinvAdapter = new SimpleAdapter<YoMeiBean>(mContext, albumList, R.layout.item_small_video_list) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final YoMeiBean localTheme) {
-                ImageUtil.loadImageViewLoding(mContext, localTheme.getCover(), holder.<ImageView>getView(R.id.iv_cover), R.mipmap.default_iamge, R.mipmap.default_iamge);
+            protected void onBindViewHolder(final ZxinViewHolder holder, final YoMeiBean localTheme,int type) {
+                ImageUtil.getInstance(mContext).loadImageViewLoding(localTheme.getCover(), holder.<ImageView>getView(R.id.iv_cover), R.mipmap.default_iamge, R.mipmap.default_iamge);
                 holder.setOnItemListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -252,10 +247,10 @@ public class YoMeiMainContract implements IBaseView {
                 setCCBTitleAlpha(lastAlpha);
             }
         });
-        iYoMeiInfoView.rv_youmei_tags().setLayoutManager(UiUtils.getLayoutManager(UiUtils.LayoutManager.HORIZONTAL));
+        iYoMeiInfoView.rv_youmei_tags().setLayoutManager(UiUtils.getInstance(mContext).getLayoutManager(UiUtils.LayoutManager.HORIZONTAL));
         meinvTagsAdapter = new SimpleAdapter<YoMeiDeatilBean.YoMeiTag>(mContext, tagList, R.layout.item_texttag) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final YoMeiDeatilBean.YoMeiTag localTheme) {
+            protected void onBindViewHolder(final ZxinViewHolder holder, final YoMeiDeatilBean.YoMeiTag localTheme,int type) {
                 GradientDrawable gradientDrawable1 = new GradientDrawable();
                 // 形状-圆角矩形
                 gradientDrawable1.setShape(GradientDrawable.RECTANGLE);
@@ -281,8 +276,8 @@ public class YoMeiMainContract implements IBaseView {
 
         meinvDeatilAdapter = new SimpleAdapter<YoMeiBean>(mContext, meinvDeatilList, R.layout.item_small_video_list) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final YoMeiBean localTheme) {
-                ImageUtil.loadImageViewLoding(mContext, localTheme.getCover(), holder.<ImageView>getView(R.id.iv_cover), R.mipmap.default_iamge, R.mipmap.default_iamge);
+            protected void onBindViewHolder(final ZxinViewHolder holder, final YoMeiBean localTheme,int type) {
+                ImageUtil.getInstance(mContext).loadImageViewLoding(localTheme.getCover(), holder.<ImageView>getView(R.id.iv_cover), R.mipmap.default_iamge, R.mipmap.default_iamge);
                 holder.setOnItemListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -339,7 +334,7 @@ public class YoMeiMainContract implements IBaseView {
         if (bean == null)
             return;
         if (daoUtil==null){
-            daoUtil = MeiZiVideoDaoUtil.getInstance();
+            daoUtil = MeiZiVideoDaoUtil.getInstance(mContext);
         }
         YoMeiDeatilBean yoMeiDeatil = (YoMeiDeatilBean)bean;
         videoId = yoMeiDeatil.vid;
@@ -366,8 +361,8 @@ public class YoMeiMainContract implements IBaseView {
         iYoMeiInfoView.tv_youmei_userdesc().setText(yoMeiDeatil.topic);
         if (yoMeiDeatil.avatar==null)
             return;
-        ImageUtil.loadRSBlurImage(mContext, yoMeiDeatil.avatar.url, iYoMeiInfoView.iv_youmei_headbg(),20);
-        ImageUtil.loadCircleImageView(mContext,yoMeiDeatil.avatar.url, iYoMeiInfoView.iv_youmei_head(), R.mipmap.default_iamge);
+        ImageUtil.getInstance(mContext).loadRSBlurImage(yoMeiDeatil.avatar.url, iYoMeiInfoView.iv_youmei_headbg(),20);
+        ImageUtil.getInstance(mContext).loadCircleImageView(yoMeiDeatil.avatar.url, iYoMeiInfoView.iv_youmei_head(), R.mipmap.default_iamge);
 
         if (yoMeiDeatil.tags==null||yoMeiDeatil.tags.isEmpty())
             return;
@@ -418,7 +413,7 @@ public class YoMeiMainContract implements IBaseView {
     public void initMiniVideoItemDatas() {
         videoItemAdapter = new SimpleAdapter<YouMeiVideoBean>(mContext, videoItemList, R.layout.item_yomeivideo) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final YouMeiVideoBean localTheme) {
+            protected void onBindViewHolder(final ZxinViewHolder holder, final YouMeiVideoBean localTheme,int type) {
                 /*holder.setText(R.id.tv_video_name, localTheme.getNick() + " (" + localTheme.getTitle() + ")")
                         .setText(R.id.tv_video_timer, "片长：" + localTheme.getSize())
                         .setText(R.id.tv_video_thumnum, localTheme.getBrowseCount() + "人查看")

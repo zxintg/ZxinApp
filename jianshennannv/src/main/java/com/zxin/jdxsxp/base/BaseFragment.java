@@ -6,8 +6,6 @@ import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.view.Gravity;
 import android.view.View;
-
-import com.zxin.jdxsxp.R;
 import com.zxin.jdxsxp.util.StringUtils;
 import com.zxin.root.util.IntegerUtil;
 import com.zxin.root.util.SystemInfoUtil;
@@ -62,10 +60,10 @@ public abstract class BaseFragment extends com.zxin.basemodel.fragment.BaseFragm
      * @param contentStr
      */
     public void showPremissionDialog(String contentStr) {
-        ConfirmDialog dialog =  ConfirmDialog.newInstance("提示","您已禁止了 "+ contentStr + "<br/>设置路径：设置 ->应用管理 ->" + SystemInfoUtil.getApplicationName() + " ->权限", "取消", "设置");
+        ConfirmDialog dialog =  ConfirmDialog.newInstance("提示","您已禁止了 "+ contentStr + "<br/>设置路径：设置 ->应用管理 ->" + SystemInfoUtil.getInstance(mContext).getApplicationName() + " ->权限", "取消", "设置");
         dialog.setMessageGravity(Gravity.LEFT);
         dialog.setMargin(60)
-                .setWidth(SystemInfoUtil.getScreenWidth()*2/3)
+                .setWidth(SystemInfoUtil.getInstance(mContext).getScreenWidth()*2/3)
                 .setOutCancel(false)
                 .show();
         dialog.setConfirmDialogListener(new ConfirmDialog.ConfirmDialogListener(){

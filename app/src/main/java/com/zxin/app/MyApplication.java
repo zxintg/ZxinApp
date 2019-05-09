@@ -1,10 +1,6 @@
 package com.zxin.app;
 
-import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.Intent;
-import com.alibaba.baichuan.android.trade.AlibcTradeSDK;
-import com.alibaba.baichuan.android.trade.callback.AlibcTradeInitCallback;
 import com.baidu.mapapi.CoordType;
 import com.baidu.mapapi.SDKInitializer;
 import com.bugtags.library.Bugtags;
@@ -12,17 +8,12 @@ import com.bugtags.library.BugtagsOptions;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.tencent.smtt.sdk.QbSdk;
 import com.zxin.basemodel.app.BaseApplication;
-import com.zxin.network.util.NetworkUtil;
+import com.zxin.basemodel.app.GreenDaoManager;
 import com.zxin.router.Configuration;
 import com.zxin.router.Router;
 import com.zxin.root.BuildConfig;
-import com.zxin.root.app.GreenDaoManager;
 import com.zxin.root.exception.CrashHandler;
-import com.zxin.root.util.LogUtils;
-import com.zxin.root.util.ToastUtil;
 import com.zxin.network.PoolThread;
-import com.zxin.service.InitializeService;
-import com.zxin.root.app.BaseApplication;
 
 /**
  * Created by hy on 2017/9/22.
@@ -60,15 +51,6 @@ public class MyApplication extends BaseApplication {
                 GreenDaoManager.getInstance();
                 //在这里初始化
                 Fresco.initialize(mContext);
-                //阿里百川
-                AlibcTradeSDK.asyncInit(application, new AlibcTradeInitCallback() {
-                    public void onFailure(int paramAnonymousInt, String paramAnonymousString) {
-                        LogUtils.d("阿里百川 实初始化失败 -code:" + paramAnonymousInt + "|msg:" + paramAnonymousString);
-                    }
-                    public void onSuccess() {
-                        LogUtils.d("阿里百川====》初始化成功");
-                    }
-                });
             }
         }).start();
         //customizable init option

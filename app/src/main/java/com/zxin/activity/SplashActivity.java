@@ -43,6 +43,16 @@ public class SplashActivity extends BaseActivity {
     }
 
     @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
+    @Override
     public void onClick(View v) {
 
     }
@@ -86,7 +96,7 @@ public class SplashActivity extends BaseActivity {
 
     private void goActivity(){
         //是否第一次安装
-        if(SharedPreferencesManager.getIsFirstEnter())
+        if(SharedPreferencesManager.getInstance(mContext).getIsFirstEnter())
             startActivity(new Intent(SplashActivity.this, GuideActivity.class) );
         else
             startActivity(new Intent(mContext,MainActivity.class));

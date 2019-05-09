@@ -66,6 +66,16 @@ public class UserInfoActivity extends BaseActivity implements XiGuaMainContract.
     }
 
     @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
+    @Override
     public void onClick(View v) {
         if (v.getId()==R.id.common_bar_leftBtn){
             onBackPressed();

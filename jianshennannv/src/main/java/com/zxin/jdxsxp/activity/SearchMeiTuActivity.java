@@ -36,6 +36,16 @@ public class SearchMeiTuActivity extends BaseActivity implements XiGuaMainContra
     }
 
     @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
+    @Override
     public void onClick(View v) {
         if (v.getId()==R.id.tv_search_back){
             onBackPressed();

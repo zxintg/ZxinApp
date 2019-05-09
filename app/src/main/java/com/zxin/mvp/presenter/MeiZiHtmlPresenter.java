@@ -51,7 +51,7 @@ public class MeiZiHtmlPresenter extends BasePresenter<TestHtmlContract, TestOneM
     public void onFailure(int tage, String msg) {
         switch (tage){
             case IntegerUtil.WEB_API_TestMeiZiHtml:
-                ToastUtil.showShort(msg);
+                ToastUtil.getInstance(getModel().getContext()).showShort(msg);
                 break;
         }
     }

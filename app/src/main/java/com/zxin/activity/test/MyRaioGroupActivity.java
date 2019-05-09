@@ -28,6 +28,16 @@ public class MyRaioGroupActivity extends BaseActivity implements MyRadioGroupVie
         return R.layout.activity_myraiogroup;
     }
 
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
     @OnClick({R.id.common_bar_leftBtn})
     @Override
     public void onClick(View v) {
@@ -41,6 +51,6 @@ public class MyRaioGroupActivity extends BaseActivity implements MyRadioGroupVie
 
     @Override
     public void onCheckedChanged(View v, boolean isChecked, String mesg) {
-        ToastUtil.showShort("点击了："+mesg);
+        ToastUtil.getInstance(mContext).showShort("点击了："+mesg);
     }
 }

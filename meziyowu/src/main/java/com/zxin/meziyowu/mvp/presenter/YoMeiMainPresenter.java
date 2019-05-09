@@ -99,11 +99,11 @@ public class YoMeiMainPresenter extends BasePresenter<YoMeiMainContract, YoMeiMa
     public void onFailure(int tage, String msg) {
         switch (tage) {
             case YoWuIntegerUtil.WEB_API_YoMeiTagApi:
-                ToastUtil.showShort(msg);
+                ToastUtil.getInstance(getModel().getContext()).showShort(msg);
                 break;
 
             default:
-                ToastUtil.showShort(msg);
+                ToastUtil.getInstance(getModel().getContext()).showShort(msg);
                 break;
         }
     }

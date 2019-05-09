@@ -57,4 +57,14 @@ public class SearchActivity extends BaseActivity {
             onBackPressed();
         }
     }
+
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
 }

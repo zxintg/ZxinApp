@@ -36,7 +36,7 @@ public class XiGuaMeiTuModel extends BaseModel {
     public void getHomeTagList() {
         Map<String, String> parameter = RequestParameter.commonReq();
         parameter.put("type","1");
-        getHttpService().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
                 .getHomeTagList(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -66,7 +66,7 @@ public class XiGuaMeiTuModel extends BaseModel {
             parameter.put("userId", String.valueOf(MeiNvPicturePreferences.getUserInfos().getUserId()));
         }
         parameter.put("page",String.valueOf(pageNum));
-        getHttpService().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
                 .getHomeList(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -91,7 +91,7 @@ public class XiGuaMeiTuModel extends BaseModel {
         Map<String, String> parameter = RequestParameter.commonReq();
         parameter.put("userId",String.valueOf(MeiNvPicturePreferences.getUserId()));
         parameter.put("toUserId",String.valueOf(toUserId));
-        getHttpService().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
                 .getUserInfo(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -118,7 +118,7 @@ public class XiGuaMeiTuModel extends BaseModel {
         parameter.put("toUserId",String.valueOf(toUserId));
         parameter.put("page",String.valueOf(pageNum));
         parameter.put("size","10");
-        getHttpService().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
                 .getUserAttenList(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -146,7 +146,7 @@ public class XiGuaMeiTuModel extends BaseModel {
             parameter.put("toUserId",String.valueOf(toUserId));
         parameter.put("page",String.valueOf(pageNum));
         parameter.put("pageSize","10");
-        ZXinJdxsxpApi api = getHttpService().getZXinJdxsxpApi(StringUtils.getUrl(), ZXinJdxsxpApi.class);
+        ZXinJdxsxpApi api = getInstance().getZXinJdxsxpApi(StringUtils.getUrl(), ZXinJdxsxpApi.class);
         Observable<ViewResult<List<DynamicModel>>> obser = toUserId!=-1 ? api.getUserDynamicList(JSON.toJSONString(parameter)):api.getDynamicList(JSON.toJSONString(parameter));
         obser.subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -171,7 +171,7 @@ public class XiGuaMeiTuModel extends BaseModel {
         Map<String, String> parameter = RequestParameter.commonReq();
         parameter.put("phone",phone);
         parameter.put("passwd",passwd);
-        getHttpService().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
                 .userLogin(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -201,7 +201,7 @@ public class XiGuaMeiTuModel extends BaseModel {
             parameter.put("userId", String.valueOf(MeiNvPicturePreferences.getUserInfos().getUserId()));
         }
         parameter.put("size",String.valueOf(20));
-        getHttpService().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
                 .getVideoItemList(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -230,7 +230,7 @@ public class XiGuaMeiTuModel extends BaseModel {
             parameter.put("userId", String.valueOf(user.getUserId()));
             parameter.put("token", user.getToken());
         }
-        getHttpService().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
                 .getBrowseVideo(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -257,7 +257,7 @@ public class XiGuaMeiTuModel extends BaseModel {
         parameter.put("toUserId",String.valueOf(toUserId));
         parameter.put("page",String.valueOf(pageNum));
         parameter.put("size",String.valueOf(10));
-        getHttpService().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
                 .getAlbumUserList(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -283,7 +283,7 @@ public class XiGuaMeiTuModel extends BaseModel {
         parameter.put("albumId",String.valueOf(albumId));
         parameter.put("page",String.valueOf(pageNum));
         parameter.put("size",String.valueOf(10));
-        getHttpService().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
                 .getCommentsList(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -311,7 +311,7 @@ public class XiGuaMeiTuModel extends BaseModel {
             parameter.put("userId", String.valueOf(user.getUserId()));
         }
         parameter.put("albumId",String.valueOf(albumId));
-        getHttpService().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
                 .getAlbumDetail(user.getToken(),parameter.get("userId"),JSON.toJSONString(parameter),parameter.get("version"),parameter.get("packId"),parameter.get("channel"),parameter.get("os"))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -341,7 +341,7 @@ public class XiGuaMeiTuModel extends BaseModel {
         }
         parameter.put("albumId",String.valueOf(albumId));
         parameter.put("type",String.valueOf(isThumb?2:1));
-        getHttpService().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
                 .updateAlbumThumb(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -372,7 +372,7 @@ public class XiGuaMeiTuModel extends BaseModel {
         parameter.put("fuid",String.valueOf(MeiNvPicturePreferences.getUserInfos().getUserId()));
         parameter.put("tuid",String.valueOf(tuid));
         parameter.put("type",String.valueOf(tag?2:1));
-        getHttpService().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
                 .updateUserAtten(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -403,7 +403,7 @@ public class XiGuaMeiTuModel extends BaseModel {
         parameter.put("userId",String.valueOf(MeiNvPicturePreferences.getUserInfos().getUserId()));
         parameter.put("albumId",String.valueOf(albumId));
         parameter.put("type",String.valueOf(tag?2:1));
-        getHttpService().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
                 .updateUserCllect(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -425,7 +425,7 @@ public class XiGuaMeiTuModel extends BaseModel {
     }
 
     public void getHotTagsList() {
-        getHttpService().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
                 .getHotTagsList(JSON.toJSONString(RequestParameter.commonReq()))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -456,7 +456,7 @@ public class XiGuaMeiTuModel extends BaseModel {
         parameter.put("defaultKeyWord","邻家");
         parameter.put("page",String.valueOf(pageNum));
         parameter.put("pageSize",String.valueOf(20));
-        getHttpService().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
+        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
                 .getSearchItemList(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())

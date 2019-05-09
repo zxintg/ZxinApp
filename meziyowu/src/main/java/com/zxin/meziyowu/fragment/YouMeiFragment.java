@@ -47,6 +47,16 @@ public class YouMeiFragment extends BaseFragment implements BaseFragment.LazyLoa
     }
 
     @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
+    @Override
     public void onClick(View v) {
         if (v.getId()==R.id.common_bar_leftBtn){
             startActivity(new Intent(mContext,YoMeiCollectActivity.class));

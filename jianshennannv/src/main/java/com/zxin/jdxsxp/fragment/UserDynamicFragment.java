@@ -42,6 +42,16 @@ public class UserDynamicFragment extends BaseFragment implements BaseFragment.La
     }
 
     @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
+    @Override
     public void onClick(View v) {
 
     }

@@ -9,7 +9,7 @@ import com.zxin.jdxsxp.bean.MeiZuHome;
 import com.zxin.root.util.ImageUtil;
 
 /**
- * Created by Administrator on 2018/6/26.
+ * Created by kui.liu on 2018/6/26.
  */
 
 public class BannerHolderView implements Holder<MeiZuHome.ValueBean.BlocksBean.DataBean> {
@@ -25,6 +25,6 @@ public class BannerHolderView implements Holder<MeiZuHome.ValueBean.BlocksBean.D
 
     @Override
     public void UpdateUI(Context context, int position, MeiZuHome.ValueBean.BlocksBean.DataBean data) {
-        ImageUtil.loadImageViewLoding(context, data.getImg_url(),imageView, R.mipmap.empty, R.mipmap.error);
+        ImageUtil.getInstance(context).loadImageViewLoding(data.getImg_url(),imageView, R.mipmap.empty, R.mipmap.error);
     }
 }

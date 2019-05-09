@@ -15,7 +15,7 @@ import rx.schedulers.Schedulers;
 public class SourcesModel extends BaseModel {
 
     public void getCodeKKList(String mesg,int pageNum) {
-        getHttpService().getZXinWebApi("http://p.codekk.com/")
+        getInstance().getZXinWebApi("http://p.codekk.com/")
                 .getCodeKKList(mesg,pageNum)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -38,7 +38,7 @@ public class SourcesModel extends BaseModel {
      * @param pageNum
      */
     public void getYunShangList(int pageNum) {
-        getHttpService().getZXinWebApi("http://www.ynshangji.com/")
+        getInstance().getZXinWebApi("http://www.ynshangji.com/")
                 .getYunShangList(pageNum)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -61,7 +61,7 @@ public class SourcesModel extends BaseModel {
      * @param pageNum
      */
     public void getAndroidBusList(int pageNum) {
-        getHttpService().getZXinWebApi("http://www.apkbus.com/")
+        getInstance().getZXinWebApi("http://www.apkbus.com/")
                 .getAndroidBusList(pageNum)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())

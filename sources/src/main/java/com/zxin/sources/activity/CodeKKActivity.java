@@ -62,6 +62,16 @@ public class CodeKKActivity extends BaseActivity {
     }
 
     @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
+    @Override
     public void onClick(View v) {
         int id = v.getId();
         if (id == R.id.common_bar_leftBtn) {

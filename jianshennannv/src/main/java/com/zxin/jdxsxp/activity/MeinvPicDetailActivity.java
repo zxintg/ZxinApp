@@ -9,7 +9,8 @@ import com.zxin.network.mvp.inject.InjectPresenter;
 import com.zxin.root.view.RefreshCommonView;
 
 /**
- * Created by Administrator on 2018/8/29.
+ * Created by kui.liu on
+ * 2018/8/29.
  */
 
 public class MeinvPicDetailActivity extends BaseActivity implements MeiZiMainContract.MeinvPicDetailView {
@@ -38,5 +39,15 @@ public class MeinvPicDetailActivity extends BaseActivity implements MeiZiMainCon
     @Override
     public RefreshCommonView getRefreshCommonView() {
         return getViewById(R.id.rcv_mine_commonlayout);
+    }
+
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
     }
 }

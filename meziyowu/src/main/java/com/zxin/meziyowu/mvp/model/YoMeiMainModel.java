@@ -20,7 +20,7 @@ import rx.schedulers.Schedulers;
 public class YoMeiMainModel extends BaseModel {
 
     public void getYoMeiTagList() {
-        getHttpService().getZXinMeiZiYoWuApi(YoWuUriUtils.Url_Web1,ZXinYoWuApi.class)
+        getInstance().getZXinMeiZiYoWuApi(YoWuUriUtils.Url_Web1,ZXinYoWuApi.class)
                 .getHomeTagList("")
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -42,7 +42,7 @@ public class YoMeiMainModel extends BaseModel {
     }
 
     public void getYoMeiListByTag(int typeId,int pageNum) {
-        getHttpService().getZXinMeiZiYoWuApi(YoWuUriUtils.Url_Web1,ZXinYoWuApi.class)
+        getInstance().getZXinMeiZiYoWuApi(YoWuUriUtils.Url_Web1,ZXinYoWuApi.class)
                 .getYoMeiListByTag("0",typeId,pageNum)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -64,7 +64,7 @@ public class YoMeiMainModel extends BaseModel {
     }
 
     public void getYoMeiVideoDetail(String userId,String userKey,String macid,int videoId) {
-        getHttpService().getZXinMeiZiYoWuApi(YoWuUriUtils.Url_Web1,ZXinYoWuApi.class)
+        getInstance().getZXinMeiZiYoWuApi(YoWuUriUtils.Url_Web1,ZXinYoWuApi.class)
                 .getYoMeiVideoDetail(userId,userKey,macid,videoId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -88,7 +88,7 @@ public class YoMeiMainModel extends BaseModel {
     }
 
     public void getYoMeiDetail(String userId,String userKey,int video) {
-        getHttpService().getZXinMeiZiYoWuApi(YoWuUriUtils.Url_Web1,ZXinYoWuApi.class)
+        getInstance().getZXinMeiZiYoWuApi(YoWuUriUtils.Url_Web1,ZXinYoWuApi.class)
                 .getYoMeiDetail(userId,userKey,video)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -110,7 +110,7 @@ public class YoMeiMainModel extends BaseModel {
     }
 
     public void getYoMeiDetailList(int video,int pageNum) {
-        getHttpService().getZXinMeiZiYoWuApi(YoWuUriUtils.Url_Web1,ZXinYoWuApi.class)
+        getInstance().getZXinMeiZiYoWuApi(YoWuUriUtils.Url_Web1,ZXinYoWuApi.class)
                 .getYoMeiDetailList(video,pageNum)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())

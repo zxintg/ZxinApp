@@ -3,7 +3,8 @@ package com.zxin.meziyowu.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.zxin.root.app.BaseApplication;
+import com.zxin.basemodel.app.BaseApplication;
+import com.zxin.root.util.AppManager;
 import com.zxin.root.util.BaseStringUtils;
 import com.zxin.root.util.SharedPreferencesManager;
 import com.zxin.root.util.SystemInfoUtil;
@@ -17,24 +18,6 @@ public class YoWuSharedPreferences extends SharedPreferencesManager {
 
     static {
         sp = BaseApplication.getInstance().getContext().getSharedPreferences(BaseStringUtils.YoWu_Datas, Context.MODE_PRIVATE);
-    }
-
-    /*****
-     * 保存是否第一次使用
-     * @param isEnter
-     */
-    public static void setIsFirstEnter(boolean isEnter) {
-        SharedPreferences.Editor editor = sp.edit();
-        editor.putBoolean("isEnter", isEnter);
-        editor.commit();
-    }
-
-    /****
-     * 获取是否第一次装APP
-     * @return
-     */
-    public static boolean getIsFirstEnter() {
-        return sp.getBoolean("isEnter", true);
     }
 
     public static boolean comment_photo_guide() {
@@ -124,7 +107,7 @@ public class YoWuSharedPreferences extends SharedPreferencesManager {
     public static boolean MemberChannelFirstFlag() {
         StringBuilder builder = new StringBuilder();
         builder.append("MemberChannelFirstFlag");
-        builder.append(SystemInfoUtil.getVersionCode());
+        builder.append(SystemInfoUtil.getInstance(AppManager.getAppManager().getApplication()).getAppVersionCode());
         return sp.getBoolean(builder.toString(), true);
     }
 
@@ -484,7 +467,7 @@ public class YoWuSharedPreferences extends SharedPreferencesManager {
     public static void MemberChannelFirstFlag(boolean param) {
         StringBuilder builder = new StringBuilder();
         builder.append("MemberChannelFirstFlag");
-        builder.append(SystemInfoUtil.getVersionCode());
+        builder.append(SystemInfoUtil.getInstance(AppManager.getAppManager().getApplication()).getAppVersionCode());
         SharedPreferences.Editor editor = sp.edit();
         editor.putBoolean(builder.toString(), param);
         editor.commit();

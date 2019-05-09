@@ -26,6 +26,16 @@ public class TestActivity extends BaseActivity {
         return R.layout.activity_demo;
     }
 
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
     @OnClick({R.id.common_bar_leftBtn,R.id.ccb_test_pullzoom,R.id.ccb_test_webapijson,R.id.ccb_test_webapihtml,R.id.ccb_test_router_sources,R.id.ccb_test_router_uri,R.id.ccb_test_router_toweb,
             R.id.ccb_test_calendar,R.id.ccb_test_sortview,R.id.ccb_test_myraiogroup,R.id.ccb_test_blog,R.id.ccb_test_executor})
     @Override

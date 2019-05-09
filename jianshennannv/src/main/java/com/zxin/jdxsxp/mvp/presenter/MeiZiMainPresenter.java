@@ -10,6 +10,7 @@ import com.zxin.jdxsxp.util.MeiZiIntegerUtil;
 import com.zxin.jdxsxp.util.TitleBarUtil;
 import com.zxin.network.MvpCallback;
 import com.zxin.network.mvp.presenter.BasePresenter;
+import com.zxin.root.util.AppManager;
 import com.zxin.root.util.ToastUtil;
 
 /**
@@ -202,7 +203,7 @@ public class MeiZiMainPresenter extends BasePresenter<MeiZiMainContract, MeiZiMa
     public void onFailure(int tage, String msg) {
         switch (tage){
             case MeiZiIntegerUtil.WEB_API_MainMeiZiApi:
-                ToastUtil.showShort(msg);
+                ToastUtil.getInstance(getModel().getContext()).showShort(msg);
                 break;
         }
     }

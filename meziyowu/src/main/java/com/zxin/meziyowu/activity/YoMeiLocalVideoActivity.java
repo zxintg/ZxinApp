@@ -4,19 +4,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.zxin.basemodel.entity.MeiZiVideo;
 import com.zxin.camera.model.PhotoPreviewBean;
 import com.zxin.camera.utils.CameraAlbumUtils;
-import com.google.gson.Gson;
 import com.zxin.meziyowu.R;
 import com.zxin.meziyowu.base.BaseActivity;
-import com.zxin.meziyowu.util.IntegerUtil;
+import com.zxin.meziyowu.util.YoWuIntegerUtil;
 import com.zxin.meziyowu.util.StringUtils;
 import com.zxin.root.adapter.simple.SimpleAdapter;
-import com.zxin.root.adapter.simple.TrdViewHolder;
+import com.zxin.root.adapter.simple.ZxinViewHolder;
 import com.zxin.root.bean.DynamicResources;
 import com.zxin.root.bean.VideoPlayBean;
 import com.zxin.basemodel.dao.MeiZiVideoDaoUtil;
-import com.zxin.basemodel.dao.MeiZiVideo;
 import com.zxin.root.util.ContentUtil;
 import com.zxin.root.util.ImageUtil;
 import com.zxin.root.util.SystemInfoUtil;
@@ -46,15 +46,15 @@ public class YoMeiLocalVideoActivity extends BaseActivity{
         setTitleViewOnclick(R.id.ccb_youmei_title,R.id.common_bar_leftBtn,R.id.common_bar_rightBtn);
         commonView = getViewById(R.id.rcv_mine_commonlayout);
         if (daoUtil==null){
-            daoUtil = MeiZiVideoDaoUtil.getInstance();
+            daoUtil = MeiZiVideoDaoUtil.getInstance(mContext);
         }
         if(dialog == null){
             dialog = new ProgressBarDialog(mContext);
         }
         meinvAdapter = new SimpleAdapter<MeiZiVideo>(mContext, albumList, R.layout.item_small_video_list) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final MeiZiVideo localTheme) {
-                ImageUtil.loadImageViewLoding(mContext, localTheme.getThumbUrl(), holder.<ImageView>getView(R.id.iv_cover), R.mipmap.default_iamge, R.mipmap.default_iamge);
+            protected void onBindViewHolder(final ZxinViewHolder holder, final MeiZiVideo localTheme,int type) {
+                ImageUtil.getInstance(mContext).loadImageViewLoding(localTheme.getThumbUrl(), holder.<ImageView>getView(R.id.iv_cover), R.mipmap.default_iamge, R.mipmap.default_iamge);
                 holder.setOnItemListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -69,7 +69,7 @@ public class YoMeiLocalVideoActivity extends BaseActivity{
                                     case 0:
                                         //视频
                                         DynamicResources res = new DynamicResources();
-                                        res.setDesc("本地视频 - " + localTheme.getNickname());
+                                        res.setDesc("本地视频 - " + localTheme.getNickName());
                                         res.setThumbnailUrl(localTheme.getThumbUrl());
                                         res.setUrl(localTheme.getVideoUrl());
                                         VideoPlayBean album = new VideoPlayBean(res);
@@ -92,10 +92,10 @@ public class YoMeiLocalVideoActivity extends BaseActivity{
                     public boolean onLongClick(View v) {
                         //退出
                         if(backDialog==null) {
-                            backDialog = ConfirmDialog.newInstance("", "您确定要删除“"+localTheme.getNickname()+"”吗？", "删除", "取消");
+                            backDialog = ConfirmDialog.newInstance("", "您确定要删除“"+localTheme.getNickName()+"”吗？", "删除", "取消");
                         }
                         backDialog.setMargin(60)
-                                .setWidth(SystemInfoUtil.getScreenWidth()*2/3)
+                                .setWidth(SystemInfoUtil.getInstance(mContext).getScreenWidth()*2/3)
                                 .setOutCancel(false)
                                 .show();
                         backDialog.setConfirmDialogListener(new ConfirmDialog.ConfirmDialogListener(){
@@ -178,6 +178,16 @@ public class YoMeiLocalVideoActivity extends BaseActivity{
     }
 
     @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
+    @Override
     public void onClick(View v) {
         if (v.getId()==R.id.common_bar_leftBtn){
             if (niceDialog!=null && niceDialog.isVisible()){
@@ -222,7 +232,7 @@ public class YoMeiLocalVideoActivity extends BaseActivity{
     @Override
     public boolean onEventMainThread(Bundle bundle) {
         switch (bundle.getInt(StringUtils.EVENT_ID)) {
-            case IntegerUtil.EVENT_ID_31001:
+            case YoWuIntegerUtil.EVENT_ID_31001:
                 commonView.notifyData();
                 break;
         }

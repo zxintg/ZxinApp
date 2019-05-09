@@ -11,10 +11,10 @@ import com.zxin.R;
 import com.zxin.ncalendar.NCalendar;
 import com.zxin.ncalendar.listener.OnCalendarChangedListener;
 import com.zxin.base.BaseActivity;
+import com.zxin.root.adapter.simple.ZxinViewHolder;
+import com.zxin.root.util.logger.LogUtils;
 import com.zxin.util.ColorUtil;
 import com.zxin.root.adapter.simple.SimpleAdapter;
-import com.zxin.root.adapter.simple.TrdViewHolder;
-import com.zxin.root.util.LogUtils;
 import com.zxin.root.util.UiUtils;
 import org.joda.time.LocalDate;
 import java.util.ArrayList;
@@ -50,10 +50,10 @@ public class NCalendarActivity extends BaseActivity implements OnCalendarChanged
             WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
             localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
         }
-        recyclerView.setLayoutManager(UiUtils.getLayoutManager(UiUtils.LayoutManager.VERTICAL));
+        recyclerView.setLayoutManager(UiUtils.getInstance(mContext).getLayoutManager(UiUtils.LayoutManager.VERTICAL));
         adapter = new SimpleAdapter<String>(mContext, dataList, android.R.layout.simple_list_item_1) {
             @Override
-            protected void onBindViewHolder(TrdViewHolder holder, String data) {
+            protected void onBindViewHolder(ZxinViewHolder holder, String data,int type) {
                 TextView textView = holder.getView(android.R.id.text1);
                 textView.setLayoutParams(new RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 300));
                 textView.setText(data);
@@ -92,6 +92,16 @@ public class NCalendarActivity extends BaseActivity implements OnCalendarChanged
     @Override
     public int setLayout() {
         return R.layout.activity_ncalendar;
+    }
+
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
     }
 
 

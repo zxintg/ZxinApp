@@ -31,6 +31,16 @@ public class TestJsonActivity extends BaseActivity implements TestJsonContract.T
         return R.layout.activity_testjson;
     }
 
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
     @OnClick({R.id.common_bar_leftBtn})
     @Override
     public void onClick(View v) {

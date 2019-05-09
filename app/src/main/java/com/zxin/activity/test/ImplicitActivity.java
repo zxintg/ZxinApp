@@ -35,6 +35,16 @@ public class ImplicitActivity extends BaseActivity {
         return R.layout.activity_scheme;
     }
 
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
     @OnClick({R.id.common_bar_leftBtn})
     @Override
     public void onClick(View v) {

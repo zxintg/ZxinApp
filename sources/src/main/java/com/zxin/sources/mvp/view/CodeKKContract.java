@@ -9,7 +9,7 @@ import com.zxin.network.mvp.view.IBaseView;
 import com.zxin.sources.R;
 import com.zxin.sources.mvp.presenter.CodeKKPresenter;
 import com.zxin.root.adapter.simple.SimpleAdapter;
-import com.zxin.root.adapter.simple.TrdViewHolder;
+import com.zxin.root.adapter.simple.ZxinViewHolder;
 import com.zxin.root.bean.CodeKKBean;
 import com.zxin.root.bean.TitleBean;
 import com.zxin.root.view.CommonCrosswiseBar;
@@ -36,7 +36,7 @@ public class CodeKKContract implements IBaseView,RefreshCommonView.RefreshLoadMo
     public void initDatas() {
         adapter = new SimpleAdapter<CodeKKBean>(mContext, codeKKList, R.layout.item_codekk) {
             @Override
-            protected void onBindViewHolder(final TrdViewHolder holder, final CodeKKBean data) {
+            protected void onBindViewHolder(final ZxinViewHolder holder, final CodeKKBean data,int type) {
                 holder.setText(R.id.item_codekk_title, data.projectName)
                         .setText(R.id.item_codekk_content,data.desc)
                         .setText(R.id.item_codekk_projecturl,data.projectUrl)

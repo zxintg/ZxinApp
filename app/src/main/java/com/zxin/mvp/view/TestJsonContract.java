@@ -8,10 +8,10 @@ import com.zxin.mvp.presenter.MeiZiJsonPresenter;
 import com.zxin.network.bean.HuaBanMeiziInfo;
 import com.zxin.network.mvp.presenter.BasePresenter;
 import com.zxin.network.mvp.view.IBaseView;
-import com.zxin.simple.adapter.simple.SimpleAdapter;
-import com.zxin.simple.adapter.simple.TrdViewHolder;
-import com.zxin.simple.util.ImageUtil;
-import com.zxin.simple.view.RefreshCommonView;
+import com.zxin.root.adapter.simple.SimpleAdapter;
+import com.zxin.root.adapter.simple.ZxinViewHolder;
+import com.zxin.root.util.ImageUtil;
+import com.zxin.root.view.RefreshCommonView;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,9 +34,9 @@ public class TestJsonContract implements IBaseView,RefreshCommonView.RefreshLoad
         meiziTuList.clear();
         adapter = new SimpleAdapter<HuaBanMeiziInfo>(context, meiziTuList, R.layout.item_test) {
             @Override
-            protected void onBindViewHolder(TrdViewHolder holder, final HuaBanMeiziInfo data) {
+            protected void onBindViewHolder(ZxinViewHolder holder, final HuaBanMeiziInfo data ,int type) {
                 holder.setText(R.id.tv_item_title,data.getTitle());
-                ImageUtil.loadImageViewLoding(mContext, data.getThumb(), holder.<ImageView>getView(R.id.im_item_photo), R.mipmap.default_iamge, R.mipmap.default_iamge);
+                ImageUtil.getInstance(mContext).loadImageViewLoding(data.getThumb(), holder.<ImageView>getView(R.id.im_item_photo), R.mipmap.default_iamge, R.mipmap.default_iamge);
             }
         };
         iView.getRecyclerView().setRecyclerViewAdapter(adapter);

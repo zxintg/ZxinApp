@@ -52,7 +52,7 @@ public class YunShangPresenter extends BasePresenter<YunShangContract, SourcesMo
     public void onFailure(int tage, String msg) {
         switch (tage){
             case IntegerUtil.WEB_API_YunShang:
-                ToastUtil.showShort(msg);
+                ToastUtil.getInstance(getModel().getContext()).showShort(msg);
                 break;
         }
     }

@@ -3,12 +3,11 @@ package com.zxin.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
 import com.zxin.R;
 import com.zxin.base.BaseActivity;
+import com.zxin.root.adapter.simple.ZxinViewHolder;
 import com.zxin.util.StringUtils;
 import com.zxin.root.adapter.simple.SimpleAdapter;
-import com.zxin.root.adapter.simple.TrdViewHolder;
 import com.zxin.root.bean.BasePageBean;
 import com.zxin.root.bean.HttpUrlBean;
 import com.zxin.basemodel.dao.HttpUrlDaoUtil;
@@ -16,7 +15,6 @@ import com.zxin.root.util.IntegerUtil;
 import com.zxin.root.view.RefreshCommonView;
 import java.util.ArrayList;
 import java.util.List;
-
 import butterknife.BindView;
 import butterknife.OnClick;
 
@@ -35,7 +33,7 @@ public class AddressListActivity extends BaseActivity implements RefreshCommonVi
         urlList.clear();
         adapter = new SimpleAdapter<HttpUrlBean>(mContext, urlList, R.layout.item_address_httpurl) {
             @Override
-            protected void onBindViewHolder(TrdViewHolder holder, final HttpUrlBean data) {
+            protected void onBindViewHolder(ZxinViewHolder holder, final HttpUrlBean data,int type) {
                 holder.setText(R.id.item_address_num,"第"+String.valueOf(urlList.indexOf(data)+1)+"条")
                         .setText(R.id.item_address_name,"地址名称："+data.name)
                         .setText(R.id.item_address_url, "网络路径："+data.url)
@@ -59,6 +57,16 @@ public class AddressListActivity extends BaseActivity implements RefreshCommonVi
     @Override
     public int setLayout() {
         return R.layout.activity_addresslist;
+    }
+
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
     }
 
     @OnClick({R.id.common_bar_leftBtn,R.id.common_bar_rightBtn})

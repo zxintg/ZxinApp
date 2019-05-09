@@ -38,6 +38,16 @@ public class TestExecutorActivity extends BaseActivity implements View.OnClickLi
         return R.layout.activity_testexecutor;
     }
 
+    @Override
+    public void clearAllDatas() {
+
+    }
+
+    @Override
+    public void saveAllDatas() {
+
+    }
+
     @OnClick({R.id.common_bar_leftBtn,R.id.ccb_setting_tv0,R.id.ccb_setting_tv1,R.id.ccb_setting_tv2,R.id.ccb_setting_tv3})
     @Override
     public void onClick(View v) {
