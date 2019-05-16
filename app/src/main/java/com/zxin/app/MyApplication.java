@@ -47,8 +47,6 @@ public class MyApplication extends BaseApplication {
                 Thread.setDefaultUncaughtExceptionHandler(crashHandler);
                 //腾讯X5
                 QbSdk.initX5Environment(contextApp, null);
-                //初始化DB(拷贝数据到数据库)
-                GreenDaoManager.getInstance();
                 //在这里初始化
                 Fresco.initialize(mContext);
             }
