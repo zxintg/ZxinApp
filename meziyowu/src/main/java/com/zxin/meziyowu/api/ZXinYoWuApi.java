@@ -4,6 +4,7 @@ import com.zxin.meziyowu.bean.YoMeiBean;
 import com.zxin.meziyowu.bean.YoMeiDeatilBean;
 import com.zxin.meziyowu.bean.YoMeiTagModel;
 import com.zxin.meziyowu.bean.YoWuResult;
+import com.zxin.network.api.ZXinBaseApi;
 import java.util.List;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -12,7 +13,7 @@ import retrofit2.http.POST;
 import retrofit2.http.Path;
 import rx.Observable;
 
-public interface ZXinYoWuApi {
+public interface ZXinYoWuApi extends ZXinBaseApi {
 
     @GET("v4/list_5/album_data/{type}")
     Observable<List<YoMeiBean>> getWallPaperItemList(

@@ -9,6 +9,15 @@ import android.support.multidex.MultiDex;
 import com.squareup.leakcanary.LeakCanary;
 import com.squareup.leakcanary.RefWatcher;
 import com.zxin.basemodel.gen.DataBaseUtil;
+import com.zxin.basemodel.interceptor.CacheInterceptor;
+import com.zxin.basemodel.interceptor.CustomParamsInterceptor;
+import com.zxin.basemodel.interceptor.HttpCacheInterceptor;
+import com.zxin.basemodel.interceptor.HttpHeaderInterceptor;
+import com.zxin.basemodel.factory.ResponseConverterFactory;
+import com.zxin.network.http.RetrofitHelper;
+
+import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 /**
  * Created by hy on 2017/9/22.
@@ -23,6 +32,10 @@ public abstract class BaseApplication extends Application {
     private RefWatcher refWatcher;
 
     private DataBaseUtil dataBaseUtil = null;
+
+    private RetrofitHelper.Builder builder = null;
+
+    private int timeOut = 20;
 
     public static BaseApplication getInstance() {
         return mApplication;
@@ -45,7 +58,6 @@ public abstract class BaseApplication extends Application {
         // 初始化mSettings
         getDefaultSharedPreference();
 
-
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -55,6 +67,17 @@ public abstract class BaseApplication extends Application {
                 dataBaseUtil.initDaos();
                 //初始化DB(拷贝数据到数据库)
                 GreenDaoManager.getInstance();
+                builder = new RetrofitHelper.Builder(contextApp)
+                        .addTimeOut(timeOut)
+                .addInterceptors(new CacheInterceptor(contextApp)
+                        ,new CustomParamsInterceptor(contextApp)
+                        ,new HttpCacheInterceptor(contextApp)
+                        ,new HttpHeaderInterceptor(contextApp))
+                .addFactorys(ScalarsConverterFactory.create()
+                        ,ResponseConverterFactory.create()
+                        , GsonConverterFactory.create())
+                ;
+
             }
         }).start();
     }

@@ -3,6 +3,7 @@ package com.zxin.jdxsxp.api;
 import com.zxin.jdxsxp.bean.AlbumModel;
 import com.zxin.jdxsxp.bean.ArticleListBean;
 import com.zxin.jdxsxp.bean.CommentToalModel;
+import com.zxin.network.api.ZXinBaseApi;
 import com.zxin.root.bean.DynamicModel;
 import com.zxin.jdxsxp.bean.HomeTagModel;
 import com.zxin.jdxsxp.bean.MZPicModle;
@@ -20,9 +21,7 @@ import com.zxin.jdxsxp.bean.SearchTagModel;
 import com.zxin.jdxsxp.bean.UserAlbumModel;
 import com.zxin.jdxsxp.bean.UserModel;
 import com.zxin.jdxsxp.bean.ViewResult;
-
 import java.util.List;
-
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -32,7 +31,7 @@ import retrofit2.http.Query;
 import retrofit2.http.Url;
 import rx.Observable;
 
-public interface ZXinJdxsxpApi {
+public interface ZXinJdxsxpApi extends ZXinBaseApi {
 
     /**
      * 根据类型查询对应的妹子图

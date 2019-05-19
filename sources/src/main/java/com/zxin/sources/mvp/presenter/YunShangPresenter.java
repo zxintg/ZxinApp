@@ -1,18 +1,15 @@
 package com.zxin.sources.mvp.presenter;
 
 import android.view.View;
-
 import com.zxin.network.MvpCallback;
 import com.zxin.network.mvp.presenter.BasePresenter;
-import com.zxin.network.util.HtmlOperatorUtil;
 import com.zxin.sources.mvp.model.SourcesModel;
-import com.zxin.sources.mvp.view.CodeKKContract;
 import com.zxin.sources.mvp.view.YunShangContract;
 import com.zxin.root.util.IntegerUtil;
 import com.zxin.root.util.ToastUtil;
+import com.zxin.sources.util.HtmlOperatorUtil;
 
 import java.io.IOException;
-
 import okhttp3.ResponseBody;
 
 /**
@@ -70,6 +67,41 @@ public class YunShangPresenter extends BasePresenter<YunShangContract, SourcesMo
 
     @Override
     public void OnClick(View v) {
+
+    }
+
+    @Override
+    public void onDestroy() {
+
+    }
+
+    @Override
+    public void onPause() {
+
+    }
+
+    @Override
+    public void onStart() {
+
+    }
+
+    @Override
+    public void onResume() {
+
+    }
+
+    @Override
+    public void onStop() {
+
+    }
+
+    @Override
+    public void onRestart() {
+
+    }
+
+    @Override
+    public void restartNetWork() {
 
     }
 }

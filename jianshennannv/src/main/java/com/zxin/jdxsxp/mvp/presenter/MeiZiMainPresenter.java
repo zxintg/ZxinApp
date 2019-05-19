@@ -224,4 +224,39 @@ public class MeiZiMainPresenter extends BasePresenter<MeiZiMainContract, MeiZiMa
         getView().OnClick(v);
     }
 
+    @Override
+    public void onDestroy() {
+
+    }
+
+    @Override
+    public void onPause() {
+
+    }
+
+    @Override
+    public void onStart() {
+
+    }
+
+    @Override
+    public void onResume() {
+
+    }
+
+    @Override
+    public void onStop() {
+
+    }
+
+    @Override
+    public void onRestart() {
+
+    }
+
+    @Override
+    public void restartNetWork() {
+
+    }
+
 }

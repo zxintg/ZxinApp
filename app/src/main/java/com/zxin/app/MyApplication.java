@@ -8,7 +8,6 @@ import com.bugtags.library.BugtagsOptions;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.tencent.smtt.sdk.QbSdk;
 import com.zxin.basemodel.app.BaseApplication;
-import com.zxin.basemodel.app.GreenDaoManager;
 import com.zxin.router.Configuration;
 import com.zxin.router.Router;
 import com.zxin.root.BuildConfig;
