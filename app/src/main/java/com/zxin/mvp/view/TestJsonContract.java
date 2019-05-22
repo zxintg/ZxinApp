@@ -5,13 +5,14 @@ import android.view.View;
 import android.widget.ImageView;
 import com.zxin.R;
 import com.zxin.mvp.presenter.MeiZiJsonPresenter;
-import com.zxin.network.bean.HuaBanMeiziInfo;
 import com.zxin.network.mvp.presenter.BasePresenter;
 import com.zxin.network.mvp.view.IBaseView;
 import com.zxin.root.adapter.simple.SimpleAdapter;
 import com.zxin.root.adapter.simple.ZxinViewHolder;
 import com.zxin.root.util.ImageUtil;
 import com.zxin.root.view.RefreshCommonView;
+import com.zxin.sources.bean.HuaBanMeiziInfo;
+
 import java.util.ArrayList;
 import java.util.List;
 

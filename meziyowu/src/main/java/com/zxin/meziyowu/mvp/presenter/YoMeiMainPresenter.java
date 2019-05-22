@@ -19,7 +19,7 @@ public class YoMeiMainPresenter extends BasePresenter<YoMeiMainContract, YoMeiMa
     public void initDatas(YoMeiMainContract.YoMeiMainView listener, Object... parameter) {
         getView().setP(this);
         getView().setYoMeiMainView(listener);
-        getModel().setListener(this);
+        getModel().setListener(this,this);
     }
 
     public void initYoMeiItemDatas(YoMeiMainContract.YoMeiItemView listener, Object... parameter) {
@@ -27,14 +27,14 @@ public class YoMeiMainPresenter extends BasePresenter<YoMeiMainContract, YoMeiMa
         getView().setParameter(parameter);
         getView().setYoMeiItemView(listener);
         getView().initDatas();
-        getModel().setListener(this);
+        getModel().setListener(this,this);
     }
 
     public void initYoMeiUserDetailDatas(YoMeiMainContract.YoMeiInfoView listener, Object... parameter) {
         getView().setP(this);
         getView().setYoMeiInfoView(listener);
         getView().initYoMeiInfoDatas();
-        getModel().setListener(this);
+        getModel().setListener(this,this);
     }
 
     public void initMiniVideoItemDatas(YoMeiMainContract.MiniVideoItemView listener, Object... parameter) {
@@ -42,31 +42,31 @@ public class YoMeiMainPresenter extends BasePresenter<YoMeiMainContract, YoMeiMa
         getView().setParameter(parameter);
         getView().setMiniVideoItemView(listener);
         getView().initMiniVideoItemDatas();
-        getModel().setListener(this);
+        getModel().setListener(this,this);
     }
 
     public void getYoMeiTagList() {
-        getModel().setTag(YoWuIntegerUtil.WEB_API_YoMeiTagApi);
+        getModel().addTag(this,YoWuIntegerUtil.WEB_API_YoMeiTagApi);
         getModel().getYoMeiTagList();
     }
 
     public void getYoMeiListByTag(int typeId, int pageNum) {
-        getModel().setTag(YoWuIntegerUtil.WEB_API_YoMeiTagListApi);
+        getModel().addTag(this,YoWuIntegerUtil.WEB_API_YoMeiTagListApi);
         getModel().getYoMeiListByTag(typeId, pageNum);
     }
 
     public void getYoMeiVideoDetail(int videoId) {
-        getModel().setTag(YoWuIntegerUtil.WEB_API_YoMeiVideoDetail);
+        getModel().addTag(this,YoWuIntegerUtil.WEB_API_YoMeiVideoDetail);
         getModel().getYoMeiVideoDetail("497166","51388723df0619cd1e9476ec99f48d3b","ffffffff-d211-d0ee-ffff-ffffbb89ef0c",videoId);
     }
 
     public void getYoMeiDetail(int videoId) {
-        getModel().setTag(YoWuIntegerUtil.WEB_API_YoMeiDetail);
+        getModel().addTag(this,YoWuIntegerUtil.WEB_API_YoMeiDetail);
         getModel().getYoMeiDetail("497166","51388723df0619cd1e9476ec99f48d3b",videoId);
     }
 
     public void getYoMeiDetailList(int videoId, int pageNum) {
-        getModel().setTag(YoWuIntegerUtil.WEB_API_YoMeiDetailList);
+        getModel().addTag(this,YoWuIntegerUtil.WEB_API_YoMeiDetailList);
         getModel().getYoMeiDetailList(videoId, pageNum);
     }
 

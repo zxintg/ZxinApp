@@ -25,8 +25,8 @@ public class AndroidBusPresenter extends BasePresenter<AndroidBusContract, Sourc
     }
 
     public void getAndroidBusList(int pageNum) {
-        getModel().setListener(this);
-        getModel().setTag(IntegerUtil.WEB_API_AndroidBus);
+        getModel().setListener(this,this);
+        getModel().addTag(this,IntegerUtil.WEB_API_AndroidBus);
         getModel().getAndroidBusList(pageNum);
     }
 

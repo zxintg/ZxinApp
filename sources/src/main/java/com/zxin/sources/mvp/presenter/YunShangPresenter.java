@@ -26,8 +26,8 @@ public class YunShangPresenter extends BasePresenter<YunShangContract, SourcesMo
     }
 
     public void getYunShangList(int pageNum) {
-        getModel().setListener(this);
-        getModel().setTag(IntegerUtil.WEB_API_YunShang);
+        getModel().setListener(this,this);
+        getModel().addTag(this,IntegerUtil.WEB_API_YunShang);
         getModel().getYunShangList(pageNum);
     }
 

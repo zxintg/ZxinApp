@@ -20,13 +20,13 @@ public class XiGuaMainPresenter extends BasePresenter<XiGuaMainContract, XiGuaMe
         getView().setP(this);
         getView().setUserLoginView(listener);
         getView().initUserLoginDatas();
-        getModel().setListener(this);
+        getModel().setListener(this,this);
     }
 
     public void initDatas(XiGuaMainContract.XiGuaMainView listener,Object... parameter) {
         getView().setP(this);
         getView().setXiGuaMainView(listener);
-        getModel().setListener(this);
+        getModel().setListener(this,this);
     }
 
     public void initXiGuaItemDatas(XiGuaMainContract.XiGuaMainItemView listener,Object... parameter) {
@@ -34,14 +34,14 @@ public class XiGuaMainPresenter extends BasePresenter<XiGuaMainContract, XiGuaMe
         getView().setParameter(parameter);
         getView().setXiGuaMainItemView(listener);
         getView().initDatas();
-        getModel().setListener(this);
+        getModel().setListener(this,this);
     }
 
     public void initUserInfoDatas(XiGuaMainContract.UserInfoView listener,Object... parameter) {
         getView().setP(this);
         getView().setUserInfoView(listener);
         getView().initUserInfoDatas();
-        getModel().setListener(this);
+        getModel().setListener(this,this);
     }
 
     public void initUserAttenDatas(XiGuaMainContract.UserAttenView listener,Object... parameter) {
@@ -49,7 +49,7 @@ public class XiGuaMainPresenter extends BasePresenter<XiGuaMainContract, XiGuaMe
         getView().setUserAttenParameter(parameter);
         getView().setUserAttenView(listener);
         getView().initUserAttenDatas();
-        getModel().setListener(this);
+        getModel().setListener(this,this);
     }
 
     public void initUserDynamicDatas(XiGuaMainContract.UserDynamicView listener,Object... parameter) {
@@ -57,7 +57,7 @@ public class XiGuaMainPresenter extends BasePresenter<XiGuaMainContract, XiGuaMe
         getView().setUserDynamicParameter(parameter);
         getView().setUserDynamicView(listener);
         getView().initUserDynamicDatas();
-        getModel().setListener(this);
+        getModel().setListener(this,this);
     }
 
     public void initVideoItemDatas(XiGuaMainContract.VideoItemView listener,Object... parameter) {
@@ -65,7 +65,7 @@ public class XiGuaMainPresenter extends BasePresenter<XiGuaMainContract, XiGuaMe
         getView().setVideoItemParameter(parameter);
         getView().setVideoItemView(listener);
         getView().initVideoItemDatas();
-        getModel().setListener(this);
+        getModel().setListener(this,this);
     }
 
     public void initHPlayerDatas(XiGuaMainContract.HPlayerView listener,Object... parameter) {
@@ -73,14 +73,14 @@ public class XiGuaMainPresenter extends BasePresenter<XiGuaMainContract, XiGuaMe
         getView().setHPlayerParameter(parameter);
         getView().setHPlayerView(listener);
         getView().initHPlayerDatas();
-        getModel().setListener(this);
+        getModel().setListener(this,this);
     }
 
     public void initSearchMeiTuDatas(XiGuaMainContract.SearchMeiTuView listener,Object... parameter) {
         getView().setP(this);
         getView().setSearchMeiTuView(listener);
         getView().initSearchMeiTuDatas();
-        getModel().setListener(this);
+        getModel().setListener(this,this);
     }
 
     public void initSearchItemDatas(XiGuaMainContract.SearchItemView listener,Object... parameter) {
@@ -88,7 +88,7 @@ public class XiGuaMainPresenter extends BasePresenter<XiGuaMainContract, XiGuaMe
         getView().setSearchItemParameter(parameter);
         getView().setSearchItemView(listener);
         getView().initSearchItemDatas();
-        getModel().setListener(this);
+        getModel().setListener(this,this);
     }
 
     public void searchItemDatasNotify(String keyWord) {
@@ -96,67 +96,67 @@ public class XiGuaMainPresenter extends BasePresenter<XiGuaMainContract, XiGuaMe
     }
 
     public void getHomeTagList() {
-        getModel().setTag(MeiZiIntegerUtil.WEB_API_HOME_TAG_ALBUM);
+        getModel().addTag(this,MeiZiIntegerUtil.WEB_API_HOME_TAG_ALBUM);
         getModel().getHomeTagList();
     }
 
     public void userLogin(String phone,String passwd) {
-        getModel().setTag(MeiZiIntegerUtil.WEB_API_UserLogin);
+        getModel().addTag(this,MeiZiIntegerUtil.WEB_API_UserLogin);
         getModel().userLogin(phone, Md5Util.md5Password(passwd));
     }
 
     public void getHomeList(int tagId,int pageNum) {
-        getModel().setTag(MeiZiIntegerUtil.WEB_API_HOME_ALBUM);
+        getModel().addTag(this,MeiZiIntegerUtil.WEB_API_HOME_ALBUM);
         getModel().getHomeList(tagId,pageNum);
     }
 
     public void getUserInfo(int userId) {
-        getModel().setTag(MeiZiIntegerUtil.WEB_API_UserInfo);
+        getModel().addTag(this,MeiZiIntegerUtil.WEB_API_UserInfo);
         getModel().getUserInfo(userId);
     }
 
     public void getUserAttenList(int toUserId,int pageNum) {
-        getModel().setTag(MeiZiIntegerUtil.WEB_API_UserAttenList);
+        getModel().addTag(this,MeiZiIntegerUtil.WEB_API_UserAttenList);
         getModel().getUserAttenList(toUserId,pageNum);
     }
 
     public void getUserDynamicList(int toUserId,int pageNum) {
-        getModel().setTag(MeiZiIntegerUtil.WEB_API_UserDynamicList);
+        getModel().addTag(this,MeiZiIntegerUtil.WEB_API_UserDynamicList);
         getModel().getUserDynamicList(toUserId,pageNum);
     }
 
     public void getVideoItemList(int tagId,int pageNum) {
-        getModel().setTag(MeiZiIntegerUtil.WEB_API_VideoItemList);
+        getModel().addTag(this,MeiZiIntegerUtil.WEB_API_VideoItemList);
         getModel().getVideoItemList(tagId,pageNum);
     }
 
     public void getBrowseVideo(int albumId) {
-        getModel().setTag(MeiZiIntegerUtil.WEB_API_BrowseVideo);
+        getModel().addTag(this,MeiZiIntegerUtil.WEB_API_BrowseVideo);
         getModel().getBrowseVideo(albumId);
     }
 
     public void getAlbumUserList(int albumId) {
-        getModel().setTag(MeiZiIntegerUtil.WEB_API_AlbumUserList);
+        getModel().addTag(this,MeiZiIntegerUtil.WEB_API_AlbumUserList);
         getModel().getAlbumUserList(albumId,1);
     }
 
     public void getCommentsList(int albumId,int pageNum) {
-        getModel().setTag(MeiZiIntegerUtil.WEB_API_CommentsList);
+        getModel().addTag(this,MeiZiIntegerUtil.WEB_API_CommentsList);
         getModel().getCommentsList(albumId,pageNum);
     }
 
     public void getAlbumDetail(int albumId) {
-        getModel().setTag(MeiZiIntegerUtil.WEB_API_AlbumDetail);
+        getModel().addTag(this,MeiZiIntegerUtil.WEB_API_AlbumDetail);
         getModel().getAlbumDetail(albumId);
     }
 
     public void getHotTagsList() {
-        getModel().setTag(MeiZiIntegerUtil.WEB_API_HistoryTagsList);
+        getModel().addTag(this,MeiZiIntegerUtil.WEB_API_HistoryTagsList);
         getModel().getHotTagsList();
     }
 
     public void getSearchItemList(int searchTag,String keyWord,int pageNum) {
-        getModel().setTag(MeiZiIntegerUtil.WEB_API_SearchItemList);
+        getModel().addTag(this,MeiZiIntegerUtil.WEB_API_SearchItemList);
         getModel().getSearchItemList(searchTag,keyWord,pageNum);
     }
 

@@ -15,7 +15,6 @@ import com.zxin.network.mvp.inject.InjectPresenter;
 import com.zxin.network.mvp.presenter.BasePresenter;
 import com.zxin.root.util.AppManager;
 import com.zxin.root.util.SystemBarTintManager;
-
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 import java.lang.reflect.Field;

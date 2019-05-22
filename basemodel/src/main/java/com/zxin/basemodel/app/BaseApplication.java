@@ -33,7 +33,7 @@ public abstract class BaseApplication extends Application {
 
     private DataBaseUtil dataBaseUtil = null;
 
-    private RetrofitHelper.Builder builder = null;
+    private RetrofitHelper retrofitHelper = null;
 
     private int timeOut = 20;
 
@@ -58,17 +58,31 @@ public abstract class BaseApplication extends Application {
         // 初始化mSettings
         getDefaultSharedPreference();
 
+        initRetrofitHelper();
+
         new Thread(new Runnable() {
             @Override
             public void run() {
                 //设置线程优先级，不与主线程抢资源
                 Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
-                dataBaseUtil = DataBaseUtil.getInstance(contextApp);
-                dataBaseUtil.initDaos();
+                initDaos();
                 //初始化DB(拷贝数据到数据库)
                 GreenDaoManager.getInstance();
-                builder = new RetrofitHelper.Builder(contextApp)
-                        .addTimeOut(timeOut)
+            }
+        }).start();
+    }
+
+    private void initDaos() {
+        dataBaseUtil = new DataBaseUtil.Build(contextApp).build();
+        dataBaseUtil.create();
+    }
+
+    /****
+     * 初始化网络信息
+     */
+    private synchronized void initRetrofitHelper() {
+        retrofitHelper = new RetrofitHelper.Builder(contextApp)
+                .addTimeOut(timeOut)
                 .addInterceptors(new CacheInterceptor(contextApp)
                         ,new CustomParamsInterceptor(contextApp)
                         ,new HttpCacheInterceptor(contextApp)
@@ -76,10 +90,7 @@ public abstract class BaseApplication extends Application {
                 .addFactorys(ScalarsConverterFactory.create()
                         ,ResponseConverterFactory.create()
                         , GsonConverterFactory.create())
-                ;
-
-            }
-        }).start();
+                .build();
     }
 
     /**
@@ -122,8 +133,15 @@ public abstract class BaseApplication extends Application {
 
     public DataBaseUtil getDataBaseUtil(){
         if (dataBaseUtil==null){
-            dataBaseUtil = DataBaseUtil.getInstance(contextApp);
+            initDaos();
         }
         return dataBaseUtil;
+    }
+
+    public RetrofitHelper getRetrofitHelper(){
+        if(retrofitHelper==null){
+            initRetrofitHelper();
+        }
+        return retrofitHelper;
     }
 }

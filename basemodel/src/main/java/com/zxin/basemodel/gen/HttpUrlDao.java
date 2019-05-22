@@ -1,5 +1,6 @@
 package com.zxin.basemodel.gen;
 
+import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
@@ -14,6 +15,7 @@ import java.util.List;
 /**
  * DAO for table "HTTP_URL".
  */
+@Dao
 public interface HttpUrlDao {
     @Query("SELECT * FROM tb_httpurl ORDER BY create_timer desc")
     List<HttpUrl> getAll();
@@ -37,7 +39,7 @@ public interface HttpUrlDao {
     int getCount();
 
     @Insert
-    Long insert(HttpUrl... entities);
+    long insert(HttpUrl... entities);
 
     @Delete
     void delete(HttpUrl entity);

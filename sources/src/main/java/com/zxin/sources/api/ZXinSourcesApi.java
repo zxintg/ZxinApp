@@ -1,4 +1,4 @@
-package com.zxin.basemodel.api;
+package com.zxin.sources.api;
 
 import retrofit2.http.GET;
 import com.zxin.basemodel.bean.BannerEntity;
@@ -13,7 +13,7 @@ import retrofit2.http.Path;
 import retrofit2.http.Query;
 import rx.Observable;
 
-public interface ZXinWebApi extends ZXinBaseApi {
+public interface ZXinSourcesApi extends ZXinBaseApi {
 
   /**
    * 根据类型查询对应的妹子图

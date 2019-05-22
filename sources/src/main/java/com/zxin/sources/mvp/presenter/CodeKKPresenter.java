@@ -27,8 +27,8 @@ public class CodeKKPresenter extends BasePresenter<CodeKKContract, SourcesModel>
     }
 
     public void getTestMeiZi(String tag,int pageNum) {
-        getModel().setListener(this);
-        getModel().setTag(IntegerUtil.WEB_API_CodeKK);
+        getModel().setListener(this,this);
+        getModel().addTag(this,IntegerUtil.WEB_API_CodeKK);
         getModel().getCodeKKList(tag,pageNum);
     }
 

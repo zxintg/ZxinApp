@@ -26,44 +26,21 @@ public abstract class DataBaseUtil extends RoomDatabase {
 
     private static final LogUtils.Tag TAG = new LogUtils.Tag("DataBaseUtil");
 
-    private static volatile DataBaseUtil instance = null;
-
     private ZxinDBDao zxinDBDao;
     private CityDao cityDao;
     private HttpUrlDao httpUrlDao;
     private MeiZiCollectDao collectDao;
     private MeiZiVideoDao videoDao;
+    private Context mContext;
 
-    public static DataBaseUtil getInstance(final Context mContext) {
-        if (instance == null) {
-            synchronized (DataBaseUtil.class) {
-                if (instance == null) {
-                    instance = Room.databaseBuilder(mContext, DataBaseUtil.class, BuildUtils.getInstance(mContext).getDbName()).addCallback(new RoomDatabase.Callback() {
-                        @Override
-                        public void onCreate(@NonNull SupportSQLiteDatabase db) {
-                            super.onCreate(db);
-                            LogUtils.d(TAG, "onCreate:" + db.getPath());
-                        }
-
-                        @Override
-                        public void onOpen(@NonNull SupportSQLiteDatabase db) {
-                            super.onOpen(db);
-                            LogUtils.d(TAG, "onOpen:" + db.getPath());
-                        }
-                    }).addMigrations(ONE_TO_TWO_MIG)
-                            //如果真要把操作放在ui线程中，就必须加个allowMainThreadQueries()方法，这样数据库的操作就可以在ui线程中使用了！
-                            .allowMainThreadQueries()
-                            .build();
-                }
-            }
-        }
-        return instance;
+    private void init (Context mContext) {
+        this.mContext = mContext;
     }
 
     /*****
      * 初始化数据库
      */
-    public void initDaos() {
+    public void create() {
         zxinDBDao = initZxinDBDao();
         cityDao = initCityDao();
         httpUrlDao = initHttpUrlDao();
@@ -123,4 +100,34 @@ public abstract class DataBaseUtil extends RoomDatabase {
             //Do nothing.
         }
     };
+
+    public static class Build{
+        private Context mContext;
+
+        public Build(Context mContext){
+            this.mContext = mContext;
+        }
+
+        public DataBaseUtil build(){
+            DataBaseUtil util = Room.databaseBuilder(mContext, DataBaseUtil.class, BuildUtils.getInstance(mContext).getDbName()).addCallback(new RoomDatabase.Callback() {
+                @Override
+                public void onCreate(@NonNull SupportSQLiteDatabase db) {
+                    super.onCreate(db);
+                    LogUtils.d(TAG, "onCreate:" + db.getPath());
+                }
+
+                @Override
+                public void onOpen(@NonNull SupportSQLiteDatabase db) {
+                    super.onOpen(db);
+                    LogUtils.d(TAG, "onOpen:" + db.getPath());
+                }
+            }).addMigrations(ONE_TO_TWO_MIG)
+                    //如果真要把操作放在ui线程中，就必须加个allowMainThreadQueries()方法，这样数据库的操作就可以在ui线程中使用了！
+                    .allowMainThreadQueries()
+                    .build();
+            util.init(mContext);
+            return util;
+        }
+
+    }
 }

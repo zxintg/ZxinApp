@@ -23,14 +23,14 @@ public class MeiZiMainPresenter extends BasePresenter<MeiZiMainContract, MeiZiMa
         getView().setP(this);
         getView().setBeikeSearchView(listener);
         getView().initDatas();
-        getModel().setListener(this);
+        getModel().setListener(this,this);
     }
 
     public void initSpecialDatas(MeiZiMainContract.SpecialView listener,Object... parameter) {
         getView().setP(this);
         getView().setSpecialView(listener);
         getView().initSpecialDatas();
-        getModel().setListener(this);
+        getModel().setListener(this,this);
     }
 
     public void initMNDetailDatas(MeiZiMainContract.MeiZiDeatilView listener,Object... parameter) {
@@ -38,14 +38,14 @@ public class MeiZiMainPresenter extends BasePresenter<MeiZiMainContract, MeiZiMa
         getView().setMeiZiDeatilView(listener);
         getView().setMNDetailParameter(parameter);
         getView().initMeiZiDeatilDatas();
-        getModel().setListener(this);
+        getModel().setListener(this,this);
     }
 
     public void initAnalysisDatas(MeiZiMainContract.AnalysisView listener,Object... parameter) {
         getView().setP(this);
         getView().setAnalysisView(listener);
         getView().initAnalysisDatas();
-        getModel().setListener(this);
+        getModel().setListener(this,this);
     }
 
     public void initWallPaperItemDatas(MeiZiMainContract.WallPaperItemView listener,Object... parameter) {
@@ -53,14 +53,14 @@ public class MeiZiMainPresenter extends BasePresenter<MeiZiMainContract, MeiZiMa
         getView().setWallPaperItemView(listener);
         getView().setWallPaperItemParameter(parameter);
         getView().initWallPaperItemDatas();
-        getModel().setListener(this);
+        getModel().setListener(this,this);
     }
 
     public void initFindDatas(MeiZiMainContract.FindView listener,Object... parameter) {
         getView().setP(this);
         getView().setFindView(listener);
         getView().initFindDatas();
-        getModel().setListener(this);
+        getModel().setListener(this,this);
     }
 
     public void initFindBaiDuDatas(MeiZiMainContract.FindBaiDuView listener,Object... parameter) {
@@ -68,7 +68,7 @@ public class MeiZiMainPresenter extends BasePresenter<MeiZiMainContract, MeiZiMa
         getView().setFindBaiDuView(listener);
         getView().setFindBaiDuParameter(parameter);
         getView().initFindBaiDuDatas();
-        getModel().setListener(this);
+        getModel().setListener(this,this);
     }
 
     public void initFindSouGouDatas(MeiZiMainContract.FindSouGouView listener,Object... parameter) {
@@ -76,7 +76,7 @@ public class MeiZiMainPresenter extends BasePresenter<MeiZiMainContract, MeiZiMa
         getView().setFindSouGouView(listener);
         getView().setFindSouGouParameter(parameter);
         getView().initFindSouGouDatas();
-        getModel().setListener(this);
+        getModel().setListener(this,this);
     }
 
     public void initFind360Datas(MeiZiMainContract.Find360View listener,Object... parameter) {
@@ -84,7 +84,7 @@ public class MeiZiMainPresenter extends BasePresenter<MeiZiMainContract, MeiZiMa
         getView().setFind360View(listener);
         getView().setFind360Parameter(parameter);
         getView().initFind360Datas();
-        getModel().setListener(this);
+        getModel().setListener(this,this);
     }
 
     public void initMeinvPicDetailDatas(MeiZiMainContract.MeinvPicDetailView listener,Object... parameter) {
@@ -92,51 +92,51 @@ public class MeiZiMainPresenter extends BasePresenter<MeiZiMainContract, MeiZiMa
         getView().setMeinvPicDetailView(listener);
         getView().setMeinvPicDetailParameter(parameter);
         getView().initMeinvPicDetailDatas();
-        getModel().setListener(this);
+        getModel().setListener(this,this);
     }
 
     public void getMainMeiZiApi() {
-        getModel().setTag(MeiZiIntegerUtil.WEB_API_MainMeiZiApi);
+        getModel().addTag(this,MeiZiIntegerUtil.WEB_API_MainMeiZiApi);
         getModel().getMainMeiZiApi();
     }
 
     public void getMainHotApi(int pageNum) {
-        getModel().setTag(MeiZiIntegerUtil.WEB_API_MainHotApi);
+        getModel().addTag(this,MeiZiIntegerUtil.WEB_API_MainHotApi);
         getModel().getMainHotApi(pageNum);
     }
 
     public void getMeiNvListApi(int pageNum) {
-        getModel().setTag(MeiZiIntegerUtil.WEB_API_MeiNvListApi);
+        getModel().addTag(this,MeiZiIntegerUtil.WEB_API_MeiNvListApi);
         getModel().getMeiNvListApi(pageNum);
     }
 
     public void getMeiNvDetailApi(String meiId,int pageNum) {
-        getModel().setTag(MeiZiIntegerUtil.WEB_API_MeiNvDetailApi);
+        getModel().addTag(this,MeiZiIntegerUtil.WEB_API_MeiNvDetailApi);
         getModel().getMeiNvDetailApi(meiId,pageNum);
     }
 
     public void getArticleListApi() {
-        getModel().setTag(MeiZiIntegerUtil.WEB_API_ArticleListApi);
+        getModel().addTag(this,MeiZiIntegerUtil.WEB_API_ArticleListApi);
         getModel().getArticleListApi();
     }
 
     public void getWallPaperItemList(String type,int pageNum) {
-        getModel().setTag(MeiZiIntegerUtil.WEB_API_WallPaperItemApi);
+        getModel().addTag(this,MeiZiIntegerUtil.WEB_API_WallPaperItemApi);
         getModel().getWallPaperItemList(type,pageNum);
     }
 
     public void getFindBaiDuList(String keyword,int pageNum) {
-        getModel().setTag(MeiZiIntegerUtil.WEB_API_FindBaiDuListApi);
+        getModel().addTag(this,MeiZiIntegerUtil.WEB_API_FindBaiDuListApi);
         getModel().getFindBaiDuList(keyword,pageNum);
     }
 
     public void getFind360List(String keyword,int pageNum) {
-        getModel().setTag(MeiZiIntegerUtil.WEB_API_Find360ListApi);
+        getModel().addTag(this,MeiZiIntegerUtil.WEB_API_Find360ListApi);
         getModel().getFind360List(keyword,pageNum);
     }
 
     public void getFindSouGouList(String keyword,int pageNum) {
-        getModel().setTag(MeiZiIntegerUtil.WEB_API_FindSouGouListApi);
+        getModel().addTag(this,MeiZiIntegerUtil.WEB_API_FindSouGouListApi);
         getModel().getFindSouGouList(keyword,pageNum);
     }
 
@@ -150,7 +150,7 @@ public class MeiZiMainPresenter extends BasePresenter<MeiZiMainContract, MeiZiMa
     }
 
     public void getPicDetailList(String albumAddress) {
-        getModel().setTag(MeiZiIntegerUtil.WEB_API_PicDetailList);
+        getModel().addTag(this,MeiZiIntegerUtil.WEB_API_PicDetailList);
         getModel().getPicDetailList(albumAddress);
     }
 

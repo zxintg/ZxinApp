@@ -1,13 +1,15 @@
 package com.zxin.meziyowu.mvp.model;
 
+import com.zxin.basemodel.app.BaseApplication;
+import com.zxin.basemodel.network.AbsAPICallback;
 import com.zxin.meziyowu.api.YoWuUriUtils;
 import com.zxin.meziyowu.api.ZXinYoWuApi;
 import com.zxin.meziyowu.bean.YoMeiBean;
 import com.zxin.meziyowu.bean.YoMeiDeatilBean;
 import com.zxin.meziyowu.bean.YoMeiTagModel;
 import com.zxin.meziyowu.bean.YoWuResult;
-import com.zxin.network.AbsAPICallback;
 import com.zxin.network.exception.ResultException;
+import com.zxin.network.http.RetrofitHelper;
 import com.zxin.network.mvp.model.BaseModel;
 import java.util.List;
 import rx.android.schedulers.AndroidSchedulers;
@@ -20,115 +22,119 @@ import rx.schedulers.Schedulers;
 public class YoMeiMainModel extends BaseModel {
 
     public void getYoMeiTagList() {
-        getInstance().getZXinMeiZiYoWuApi(YoWuUriUtils.Url_Web1,ZXinYoWuApi.class)
-                .getHomeTagList("")
+        ZXinYoWuApi api = getZxinWebApi().getZxinAPI(YoWuUriUtils.Url_Web1);
+        api.getHomeTagList("")
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<YoWuResult<List<YoMeiTagModel>>>(getContext(), true) {
+                .subscribe(new AbsAPICallback<YoWuResult<List<YoMeiTagModel>>>(getContext(),getTag(), true) {
                     @Override
-                    protected void onDone(YoWuResult<List<YoMeiTagModel>> strData) {
+                    protected void onDone(int tag , YoWuResult<List<YoMeiTagModel>> strData) {
                         if (strData.isResult())
-                            getListener().onSuccess(getTag(),strData.getData());
+                            getListener(tag).onSuccess(tag,strData.getData());
                         else
-                            getListener().onFailure(getTag(),"错误信息");
+                            getListener(tag).onFailure(tag,"错误信息");
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag ,ResultException ex) {
+                        getListener(tag).onFailure(tag,ex.getMessage());
                     }
                 });
     }
 
     public void getYoMeiListByTag(int typeId,int pageNum) {
-        getInstance().getZXinMeiZiYoWuApi(YoWuUriUtils.Url_Web1,ZXinYoWuApi.class)
-                .getYoMeiListByTag("0",typeId,pageNum)
+        ZXinYoWuApi api = getZxinWebApi().getZxinAPI(YoWuUriUtils.Url_Web1);
+        api.getYoMeiListByTag("0",typeId,pageNum)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<YoWuResult<List<YoMeiBean>>>(getContext(), true) {
+                .subscribe(new AbsAPICallback<YoWuResult<List<YoMeiBean>>>(getContext(),getTag(), true) {
                     @Override
-                    protected void onDone(YoWuResult<List<YoMeiBean>> strData) {
+                    protected void onDone(int tag ,YoWuResult<List<YoMeiBean>> strData) {
                         if (strData.isResult())
-                            getListener().onSuccess(getTag(),strData);
+                            getListener(tag).onSuccess(tag,strData);
                         else
-                            getListener().onFailure(getTag(),"错误信息");
+                            getListener(tag).onFailure(tag,"错误信息");
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag ,ResultException ex) {
+                        getListener(tag).onFailure(tag,ex.getMessage());
                     }
                 });
     }
 
     public void getYoMeiVideoDetail(String userId,String userKey,String macid,int videoId) {
-        getInstance().getZXinMeiZiYoWuApi(YoWuUriUtils.Url_Web1,ZXinYoWuApi.class)
-                .getYoMeiVideoDetail(userId,userKey,macid,videoId)
+        ZXinYoWuApi api = getZxinWebApi().getZxinAPI(YoWuUriUtils.Url_Web1);
+        api.getYoMeiVideoDetail(userId,userKey,macid,videoId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<YoWuResult<YoMeiDeatilBean>>(getContext(), true) {
+                .subscribe(new AbsAPICallback<YoWuResult<YoMeiDeatilBean>>(getContext(),getTag(), true) {
                     @Override
-                    protected void onDone(YoWuResult<YoMeiDeatilBean> strData) {
+                    protected void onDone(int tag ,YoWuResult<YoMeiDeatilBean> strData) {
                         if (strData.isResult())
-                            getListener().onSuccess(getTag(),strData.getData());
+                            getListener(tag).onSuccess(tag,strData.getData());
                         else if (strData.getErrorCode()==501)
-                            getListener().onSuccess(getTag(),strData.getData());
+                            getListener(tag).onSuccess(tag,strData.getData());
                         else
-                            getListener().onFailure(getTag(),"错误信息");
+                            getListener(tag).onFailure(tag,"错误信息");
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag ,ResultException ex) {
+                        getListener(tag).onFailure(tag,ex.getMessage());
                     }
                 });
     }
 
     public void getYoMeiDetail(String userId,String userKey,int video) {
-        getInstance().getZXinMeiZiYoWuApi(YoWuUriUtils.Url_Web1,ZXinYoWuApi.class)
-                .getYoMeiDetail(userId,userKey,video)
+        ZXinYoWuApi api = getZxinWebApi().getZxinAPI(YoWuUriUtils.Url_Web1);
+        api.getYoMeiDetail(userId,userKey,video)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<YoWuResult<YoMeiDeatilBean>>(getContext(), true) {
+                .subscribe(new AbsAPICallback<YoWuResult<YoMeiDeatilBean>>(getContext(),getTag(), true) {
                     @Override
-                    protected void onDone(YoWuResult<YoMeiDeatilBean> strData) {
+                    protected void onDone(int tag ,YoWuResult<YoMeiDeatilBean> strData) {
                         if (strData.isResult())
-                            getListener().onSuccess(getTag(),strData.getData());
+                            getListener(tag).onSuccess(tag,strData.getData());
                         else
-                            getListener().onFailure(getTag(),"错误信息");
+                            getListener(tag).onFailure(tag,"错误信息");
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag ,ResultException ex) {
+                        getListener(tag).onFailure(tag,ex.getMessage());
                     }
                 });
     }
 
     public void getYoMeiDetailList(int video,int pageNum) {
-        getInstance().getZXinMeiZiYoWuApi(YoWuUriUtils.Url_Web1,ZXinYoWuApi.class)
-                .getYoMeiDetailList(video,pageNum)
+        ZXinYoWuApi api = getZxinWebApi().getZxinAPI(YoWuUriUtils.Url_Web1);
+        api.getYoMeiDetailList(video,pageNum)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<YoWuResult<List<YoMeiBean>>>(getContext(), true) {
+                .subscribe(new AbsAPICallback<YoWuResult<List<YoMeiBean>>>(getContext(),getTag(), true) {
                     @Override
-                    protected void onDone(YoWuResult<List<YoMeiBean>> strData) {
+                    protected void onDone(int tag ,YoWuResult<List<YoMeiBean>> strData) {
                         if (strData.isResult())
-                            getListener().onSuccess(getTag(),strData);
+                            getListener(tag).onSuccess(tag,strData);
                         else
-                            getListener().onFailure(getTag(),"错误信息");
+                            getListener(tag).onFailure(tag,"错误信息");
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag ,ResultException ex) {
+                        getListener(tag).onFailure(tag,ex.getMessage());
                     }
                 });
     }
 
+    @Override
+    public RetrofitHelper initHelper() {
+        return BaseApplication.getInstance().getRetrofitHelper();
+    }
 }

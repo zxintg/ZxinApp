@@ -1,5 +1,7 @@
 package com.zxin.jdxsxp.mvp.model;
 
+import com.zxin.basemodel.app.BaseApplication;
+import com.zxin.basemodel.network.AbsAPICallback;
 import com.zxin.jdxsxp.api.JdxsxpUriUtils;
 import com.zxin.jdxsxp.api.ZXinJdxsxpApi;
 import com.zxin.jdxsxp.bean.ArticleListBean;
@@ -11,8 +13,8 @@ import com.zxin.jdxsxp.bean.MeinvBaogaoBean;
 import com.zxin.jdxsxp.bean.MinvBaoGaodetail;
 import com.zxin.jdxsxp.bean.SearchBaiduPic;
 import com.zxin.jdxsxp.bean.SearchSouGou;
-import com.zxin.network.AbsAPICallback;
 import com.zxin.network.exception.ResultException;
+import com.zxin.network.http.RetrofitHelper;
 import com.zxin.network.mvp.model.BaseModel;
 
 import java.util.List;
@@ -27,223 +29,227 @@ import rx.schedulers.Schedulers;
 public class MeiZiMainModel extends BaseModel {
 
     public void getMainMeiZiApi() {
-        getInstance().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web1,ZXinJdxsxpApi.class)
-                .getMainMeiZiApi()
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(JdxsxpUriUtils.Url_Web1);
+        api.getMainMeiZiApi()
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<MeiZuHome>(getContext(), true) {
+                .subscribe(new AbsAPICallback<MeiZuHome>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(MeiZuHome strData) {
-                        if (strData.getCode()==200)
-                            getListener().onSuccess(getTag(),strData.getValue());
+                    protected void onDone(int tag, MeiZuHome strData) {
+                        if (strData.getCode() == 200)
+                            getListener(tag).onSuccess(tag, strData.getValue());
                         else
-                            getListener().onFailure(getTag(),strData.getMessage());
+                            getListener(tag).onFailure(tag, strData.getMessage());
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(tag, ex.getMessage());
                     }
                 });
     }
 
     public void getMainHotApi(int pageNum) {
-        getInstance().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web2,ZXinJdxsxpApi.class)
-                .getMainHotApi(20,pageNum*20)
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(JdxsxpUriUtils.Url_Web2);
+        api.getMainHotApi(20, pageNum * 20)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<MeiZuHot>(getContext(), true) {
+                .subscribe(new AbsAPICallback<MeiZuHot>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(MeiZuHot strData) {
-                        if (strData.getCode()==0)
-                            getListener().onSuccess(getTag(),strData.getRes());
+                    protected void onDone(int tag, MeiZuHot strData) {
+                        if (strData.getCode() == 0)
+                            getListener(tag).onSuccess(tag, strData.getRes());
                         else
-                            getListener().onFailure(getTag(),strData.getMsg());
+                            getListener(tag).onFailure(tag, strData.getMsg());
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(tag, ex.getMessage());
                     }
                 });
     }
 
     public void getMeiNvListApi(int pageNum) {
-        getInstance().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web2,ZXinJdxsxpApi.class)
-                .getMeiNvListApi(20,pageNum*20)
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(JdxsxpUriUtils.Url_Web2);
+        api.getMeiNvListApi(20, pageNum * 20)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<MeiZuHot>(getContext(), true) {
+                .subscribe(new AbsAPICallback<MeiZuHot>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(MeiZuHot strData) {
-                        if (strData.getCode()==0)
-                            getListener().onSuccess(getTag(),strData.getRes());
+                    protected void onDone(int tag, MeiZuHot strData) {
+                        if (strData.getCode() == 0)
+                            getListener(tag).onSuccess(tag, strData.getRes());
                         else
-                            getListener().onFailure(getTag(),strData.getMsg());
+                            getListener(tag).onFailure(tag, strData.getMsg());
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(tag, ex.getMessage());
                     }
                 });
     }
 
-    public void getMeiNvDetailApi(String meiId,int pageNum) {
-        getInstance().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web2,ZXinJdxsxpApi.class)
-                .getMeiNvDetailApi(meiId,20,pageNum*20)
+    public void getMeiNvDetailApi(String meiId, int pageNum) {
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(JdxsxpUriUtils.Url_Web2);
+        api.getMeiNvDetailApi(meiId, 20, pageNum * 20)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<MeiZuMeiZiDetail>(getContext(), true) {
+                .subscribe(new AbsAPICallback<MeiZuMeiZiDetail>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(MeiZuMeiZiDetail strData) {
-                        if (strData.getCode()==0)
-                            getListener().onSuccess(getTag(),strData.getRes());
+                    protected void onDone(int tag, MeiZuMeiZiDetail strData) {
+                        if (strData.getCode() == 0)
+                            getListener(tag).onSuccess(tag, strData.getRes());
                         else
-                            getListener().onFailure(getTag(),strData.getMsg());
+                            getListener(tag).onFailure(tag, strData.getMsg());
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(tag, ex.getMessage());
                     }
                 });
     }
 
     public void getArticleListApi() {
-        getInstance().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web3,ZXinJdxsxpApi.class)
-                .getArticleListApi()
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(JdxsxpUriUtils.Url_Web3);
+        api.getArticleListApi()
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<ArticleListBean>(getContext(), true) {
+                .subscribe(new AbsAPICallback<ArticleListBean>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(ArticleListBean strData) {
-                        if (strData.getSuccess()==1)
-                            getListener().onSuccess(getTag(),strData.getData());
+                    protected void onDone(int tag, ArticleListBean strData) {
+                        if (strData.getSuccess() == 1)
+                            getListener(tag).onSuccess(tag, strData.getData());
                         else
-                            getListener().onFailure(getTag(),"异常");
+                            getListener(tag).onFailure(tag, "异常");
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(tag, ex.getMessage());
                     }
                 });
     }
 
-    public void getWallPaperItemList(String type,int pageNum) {
-        getInstance().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web4,ZXinJdxsxpApi.class)
-                .getWallPaperItemList(type+pageNum)
+    public void getWallPaperItemList(String type, int pageNum) {
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(JdxsxpUriUtils.Url_Web4);
+        api.getWallPaperItemList(type + pageNum)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<List<MeinvBaogaoBean>>(getContext(), true) {
+                .subscribe(new AbsAPICallback<List<MeinvBaogaoBean>>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(List<MeinvBaogaoBean> strData) {
-                        if (strData!=null)
-                            getListener().onSuccess(getTag(),strData);
+                    protected void onDone(int tag, List<MeinvBaogaoBean> strData) {
+                        if (strData != null)
+                            getListener(tag).onSuccess(tag, strData);
                         else
-                            getListener().onFailure(getTag(),"异常");
+                            getListener(tag).onFailure(tag, "异常");
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(tag, ex.getMessage());
                     }
                 });
     }
 
-    public void getFindBaiDuList(String keyword,int pageNum) {
-        getInstance().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web5,ZXinJdxsxpApi.class)
-                .getFindBaiDuList(keyword,pageNum*20)
+    public void getFindBaiDuList(String keyword, int pageNum) {
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(JdxsxpUriUtils.Url_Web5);
+        api.getFindBaiDuList(keyword, pageNum * 20)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<SearchBaiduPic>(getContext(), true) {
+                .subscribe(new AbsAPICallback<SearchBaiduPic>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(SearchBaiduPic strData) {
-                        if (strData!=null)
-                            getListener().onSuccess(getTag(),strData.getData());
+                    protected void onDone(int tag, SearchBaiduPic strData) {
+                        if (strData != null)
+                            getListener(tag).onSuccess(tag, strData.getData());
                         else
-                            getListener().onFailure(getTag(),"异常");
+                            getListener(tag).onFailure(tag, "异常");
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(tag, ex.getMessage());
                     }
                 });
     }
 
-    public void getFind360List(String keyword,int pageNum) {
-        getInstance().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web6,ZXinJdxsxpApi.class)
-                .getFind360List(keyword,pageNum*20)
+    public void getFind360List(String keyword, int pageNum) {
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(JdxsxpUriUtils.Url_Web6);
+        api.getFind360List(keyword, pageNum * 20)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<MZPicModle>(getContext(), true) {
+                .subscribe(new AbsAPICallback<MZPicModle>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(MZPicModle strData) {
-                        if (strData!=null)
-                            getListener().onSuccess(getTag(),strData.getValue());
+                    protected void onDone(int tag, MZPicModle strData) {
+                        if (strData != null)
+                            getListener(tag).onSuccess(tag, strData.getValue());
                         else
-                            getListener().onFailure(getTag(),"异常");
+                            getListener(tag).onFailure(tag, "异常");
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(tag, ex.getMessage());
                     }
                 });
     }
 
-    public void getFindSouGouList(String keyword,int pageNum) {
-        getInstance().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web7,ZXinJdxsxpApi.class)
-                .getFindSouGouList(keyword,pageNum*20)
+    public void getFindSouGouList(String keyword, int pageNum) {
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(JdxsxpUriUtils.Url_Web7);
+        api.getFindSouGouList(keyword, pageNum * 20)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<SearchSouGou>(getContext(), true) {
+                .subscribe(new AbsAPICallback<SearchSouGou>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(SearchSouGou strData) {
-                        if (strData!=null)
-                            getListener().onSuccess(getTag(),strData);
+                    protected void onDone(int tag, SearchSouGou strData) {
+                        if (strData != null)
+                            getListener(tag).onSuccess(tag, strData);
                         else
-                            getListener().onFailure(getTag(),"异常");
+                            getListener(tag).onFailure(tag, "异常");
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(tag, ex.getMessage());
                     }
                 });
     }
 
     public void getPicDetailList(String albumAddress) {
-        getInstance().getZXinJdxsxpApi(JdxsxpUriUtils.Url_Web4,ZXinJdxsxpApi.class)
-                .getPicDetailList("v4/"+albumAddress)
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(JdxsxpUriUtils.Url_Web4);
+        api.getPicDetailList("v4/" + albumAddress)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<MinvBaoGaodetail>(getContext(), true) {
+                .subscribe(new AbsAPICallback<MinvBaoGaodetail>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(MinvBaoGaodetail strData) {
-                        if (strData!=null)
-                            getListener().onSuccess(getTag(),strData);
+                    protected void onDone(int tag, MinvBaoGaodetail strData) {
+                        if (strData != null)
+                            getListener(tag).onSuccess(tag, strData);
                         else
-                            getListener().onFailure(getTag(),"异常");
+                            getListener(tag).onFailure(tag, "异常");
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(tag, ex.getMessage());
                     }
                 });
     }
 
+    @Override
+    public RetrofitHelper initHelper() {
+        return BaseApplication.getInstance().getRetrofitHelper();
+    }
 }

@@ -6,9 +6,9 @@ import com.zxin.mvp.model.TestOneModel;
 import com.zxin.mvp.view.TestHtmlContract;
 import com.zxin.network.MvpCallback;
 import com.zxin.network.mvp.presenter.BasePresenter;
-import com.zxin.network.util.HtmlOperatorUtil;
 import com.zxin.root.util.IntegerUtil;
 import com.zxin.root.util.ToastUtil;
+import com.zxin.sources.util.HtmlOperatorUtil;
 
 import java.io.IOException;
 
@@ -28,8 +28,8 @@ public class MeiZiHtmlPresenter extends BasePresenter<TestHtmlContract, TestOneM
     }
 
     public void getTestMeiZi(int pageNum) {
-        getModel().setListener(this);
-        getModel().setTag(IntegerUtil.WEB_API_TestMeiZiHtml);
+        getModel().setListener(this,this);
+        getModel().addTag(this,IntegerUtil.WEB_API_TestMeiZiHtml);
         getModel().getMeiziHtmlList(pageNum);
     }
 

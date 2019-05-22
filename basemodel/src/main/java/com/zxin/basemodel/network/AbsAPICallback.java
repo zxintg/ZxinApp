@@ -17,7 +17,7 @@ import retrofit2.adapter.rxjava.HttpException;
 import rx.Subscriber;
 
 /**
- * Created by hy on 2017/10/19.
+ * Created by zxin on 2017/10/19.
  */
 public abstract class AbsAPICallback<T> extends Subscriber<T> {
     protected Context mContext;

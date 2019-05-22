@@ -1,15 +1,14 @@
 package com.zxin.mvp.presenter;
 
 import android.view.View;
-
 import com.zxin.mvp.view.TestJsonContract;
 import com.zxin.mvp.model.TestOneModel;
 import com.zxin.network.MvpCallback;
-import com.zxin.network.bean.HuaBanMeiziInfo;
 import com.zxin.network.mvp.presenter.BasePresenter;
-import com.zxin.network.util.HtmlOperatorUtil;
 import com.zxin.root.util.IntegerUtil;
 import com.zxin.root.util.ToastUtil;
+import com.zxin.sources.bean.HuaBanMeiziInfo;
+import com.zxin.sources.util.HtmlOperatorUtil;
 import java.io.IOException;
 import java.util.List;
 import okhttp3.ResponseBody;
@@ -28,8 +27,8 @@ public class MeiZiJsonPresenter extends BasePresenter<TestJsonContract, TestOneM
     }
 
     public void getTestMeiZi(int pageNum) {
-        getModel().setListener(this);
-        getModel().setTag(IntegerUtil.WEB_API_TestMeiZiJson);
+        getModel().setListener(this,this);
+        getModel().addTag(this,IntegerUtil.WEB_API_TestMeiZiJson);
         getModel().getMeiziJsonList(type,pageNum);
     }
 
@@ -38,7 +37,7 @@ public class MeiZiJsonPresenter extends BasePresenter<TestJsonContract, TestOneM
         switch (tage){
             case IntegerUtil.WEB_API_TestMeiZiJson:
                 ResponseBody newDatas = (ResponseBody) data;
-                List<HuaBanMeiziInfo>  list= null;
+                List<HuaBanMeiziInfo> list= null;
                 try {
                     list = HtmlOperatorUtil.getInstance().createFromJson(newDatas.string()).infos;
                 } catch (IOException e) {

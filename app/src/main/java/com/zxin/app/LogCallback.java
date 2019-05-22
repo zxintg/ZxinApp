@@ -3,6 +3,7 @@ package com.zxin.app;
 import android.util.Log;
 
 import com.zxin.network.callback.ThreadCallback;
+import com.zxin.root.util.logger.LogUtils;
 
 
 /**
@@ -15,20 +16,20 @@ import com.zxin.network.callback.ThreadCallback;
  */
 public class LogCallback implements ThreadCallback {
 
-    private final String TAG = "LogCallback";
+    private final LogUtils.Tag TAG = new LogUtils.Tag("LogCallback");
 
     @Override
     public void onError(String name, Throwable t) {
-        Log.e(TAG, "LogCallback"+"------onError"+"-----"+name+"----"+Thread.currentThread()+"----"+t.getMessage());
+        LogUtils.e(TAG, "LogCallback"+"------onError"+"-----"+name+"----"+Thread.currentThread()+"----"+t.getMessage());
     }
 
     @Override
     public void onCompleted(String name) {
-        Log.e(TAG, "LogCallback"+"------onCompleted"+"-----"+name+"----"+Thread.currentThread());
+        LogUtils.d(TAG, "LogCallback"+"------onCompleted"+"-----"+name+"----"+Thread.currentThread());
     }
 
     @Override
     public void onStart(String name) {
-        Log.e(TAG, "LogCallback"+"------onStart"+"-----"+name+"----"+Thread.currentThread());
+        LogUtils.d(TAG, "LogCallback"+"------onStart"+"-----"+name+"----"+Thread.currentThread());
     }
 }

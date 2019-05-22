@@ -1,10 +1,13 @@
 package com.zxin.jdxsxp.mvp.model;
 
 import com.alibaba.fastjson.JSON;
+import com.zxin.basemodel.app.BaseApplication;
+import com.zxin.basemodel.network.AbsAPICallback;
 import com.zxin.jdxsxp.api.RequestParameter;
 import com.zxin.jdxsxp.api.ZXinJdxsxpApi;
 import com.zxin.jdxsxp.bean.AlbumModel;
 import com.zxin.jdxsxp.bean.CommentToalModel;
+import com.zxin.network.http.RetrofitHelper;
 import com.zxin.root.bean.DynamicModel;
 import com.zxin.jdxsxp.bean.HomeTagModel;
 import com.zxin.jdxsxp.bean.OtherUserAlbumModel;
@@ -16,7 +19,6 @@ import com.zxin.jdxsxp.bean.UserModel;
 import com.zxin.jdxsxp.bean.ViewResult;
 import com.zxin.jdxsxp.util.MeiNvPicturePreferences;
 import com.zxin.jdxsxp.util.StringUtils;
-import com.zxin.network.AbsAPICallback;
 import com.zxin.network.exception.ResultException;
 import com.zxin.network.mvp.model.BaseModel;
 
@@ -35,271 +37,271 @@ public class XiGuaMeiTuModel extends BaseModel {
 
     public void getHomeTagList() {
         Map<String, String> parameter = RequestParameter.commonReq();
-        parameter.put("type","1");
-        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
-                .getHomeTagList(JSON.toJSONString(parameter))
+        parameter.put("type", "1");
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(StringUtils.getUrl());
+        api.getHomeTagList(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<ViewResult<List<HomeTagModel>>>(getContext(), true) {
+                .subscribe(new AbsAPICallback<ViewResult<List<HomeTagModel>>>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(ViewResult<List<HomeTagModel>> strData) {
+                    protected void onDone(int tag, ViewResult<List<HomeTagModel>> strData) {
                         if (strData.isOk())
-                            getListener().onSuccess(getTag(),strData.getData());
+                            getListener(tag).onSuccess(getTag(), strData.getData());
                         else
-                            getListener().onFailure(getTag(),strData.getTips());
+                            getListener(tag).onFailure(getTag(), strData.getTips());
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(getTag(), ex.getMessage());
                     }
                 });
     }
 
-    public void getHomeList(int tagId,int pageNum) {
+    public void getHomeList(int tagId, int pageNum) {
         Map<String, String> parameter = RequestParameter.commonReq();
-        parameter.put("type","1");
-        parameter.put("tagId",String.valueOf(tagId));
-        parameter.put("size","20");
-        if (MeiNvPicturePreferences.getUserInfos()!=null){
+        parameter.put("type", "1");
+        parameter.put("tagId", String.valueOf(tagId));
+        parameter.put("size", "20");
+        if (MeiNvPicturePreferences.getUserInfos() != null) {
             parameter.put("userId", String.valueOf(MeiNvPicturePreferences.getUserInfos().getUserId()));
         }
-        parameter.put("page",String.valueOf(pageNum));
-        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
-                .getHomeList(JSON.toJSONString(parameter))
+        parameter.put("page", String.valueOf(pageNum));
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(StringUtils.getUrl());
+        api.getHomeList(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<ViewResult<List<AlbumModel>>>(getContext(), true) {
+                .subscribe(new AbsAPICallback<ViewResult<List<AlbumModel>>>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(ViewResult<List<AlbumModel>> strData) {
+                    protected void onDone(int tag, ViewResult<List<AlbumModel>> strData) {
                         if (strData.isOk())
-                            getListener().onSuccess(getTag(),strData.getData());
+                            getListener(tag).onSuccess(getTag(), strData.getData());
                         else
-                            getListener().onFailure(getTag(),strData.getTips());
+                            getListener(tag).onFailure(getTag(), strData.getTips());
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(getTag(), ex.getMessage());
                     }
                 });
     }
 
     public void getUserInfo(int toUserId) {
         Map<String, String> parameter = RequestParameter.commonReq();
-        parameter.put("userId",String.valueOf(MeiNvPicturePreferences.getUserId()));
-        parameter.put("toUserId",String.valueOf(toUserId));
-        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
-                .getUserInfo(JSON.toJSONString(parameter))
+        parameter.put("userId", String.valueOf(MeiNvPicturePreferences.getUserId()));
+        parameter.put("toUserId", String.valueOf(toUserId));
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(StringUtils.getUrl());
+        api.getUserInfo(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<ViewResult<OtherUserInfoTopModel>>(getContext(), true) {
+                .subscribe(new AbsAPICallback<ViewResult<OtherUserInfoTopModel>>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(ViewResult<OtherUserInfoTopModel> strData) {
+                    protected void onDone(int tag, ViewResult<OtherUserInfoTopModel> strData) {
                         if (strData.isOk())
-                            getListener().onSuccess(getTag(),strData.getData());
+                            getListener(tag).onSuccess(getTag(), strData.getData());
                         else
-                            getListener().onFailure(getTag(),strData.getTips());
+                            getListener(tag).onFailure(getTag(), strData.getTips());
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(getTag(), ex.getMessage());
                     }
                 });
     }
 
-    public void getUserAttenList(int toUserId,int pageNum) {
+    public void getUserAttenList(int toUserId, int pageNum) {
         Map<String, String> parameter = RequestParameter.commonReq();
-        parameter.put("fromUserId",String.valueOf(MeiNvPicturePreferences.getUserId()));
-        parameter.put("toUserId",String.valueOf(toUserId));
-        parameter.put("page",String.valueOf(pageNum));
-        parameter.put("size","10");
-        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
-                .getUserAttenList(JSON.toJSONString(parameter))
+        parameter.put("fromUserId", String.valueOf(MeiNvPicturePreferences.getUserId()));
+        parameter.put("toUserId", String.valueOf(toUserId));
+        parameter.put("page", String.valueOf(pageNum));
+        parameter.put("size", "10");
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(StringUtils.getUrl());
+        api.getUserAttenList(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<ViewResult<List<OtherUserAlbumModel>>>(getContext(), true) {
+                .subscribe(new AbsAPICallback<ViewResult<List<OtherUserAlbumModel>>>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(ViewResult<List<OtherUserAlbumModel>> strData) {
+                    protected void onDone(int tag, ViewResult<List<OtherUserAlbumModel>> strData) {
                         if (strData.isOk())
-                            getListener().onSuccess(getTag(),strData.getData());
+                            getListener(tag).onSuccess(getTag(), strData.getData());
                         else
-                            getListener().onFailure(getTag(),strData.getTips());
+                            getListener(tag).onFailure(getTag(), strData.getTips());
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(getTag(), ex.getMessage());
                     }
                 });
     }
 
-    public void getUserDynamicList(int toUserId,int pageNum) {
+    public void getUserDynamicList(int toUserId, int pageNum) {
         Map<String, String> parameter = RequestParameter.commonReq();
-        parameter.put("userId",String.valueOf(MeiNvPicturePreferences.getUserId()));
-        if (toUserId!=-1)
-            parameter.put("toUserId",String.valueOf(toUserId));
-        parameter.put("page",String.valueOf(pageNum));
-        parameter.put("pageSize","10");
-        ZXinJdxsxpApi api = getInstance().getZXinJdxsxpApi(StringUtils.getUrl(), ZXinJdxsxpApi.class);
-        Observable<ViewResult<List<DynamicModel>>> obser = toUserId!=-1 ? api.getUserDynamicList(JSON.toJSONString(parameter)):api.getDynamicList(JSON.toJSONString(parameter));
+        parameter.put("userId", String.valueOf(MeiNvPicturePreferences.getUserId()));
+        if (toUserId != -1)
+            parameter.put("toUserId", String.valueOf(toUserId));
+        parameter.put("page", String.valueOf(pageNum));
+        parameter.put("pageSize", "10");
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(StringUtils.getUrl());
+        Observable<ViewResult<List<DynamicModel>>> obser = toUserId != -1 ? api.getUserDynamicList(JSON.toJSONString(parameter)) : api.getDynamicList(JSON.toJSONString(parameter));
         obser.subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<ViewResult<List<DynamicModel>>>(getContext(), true) {
+                .subscribe(new AbsAPICallback<ViewResult<List<DynamicModel>>>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(ViewResult<List<DynamicModel>> strData) {
+                    protected void onDone(int tag, ViewResult<List<DynamicModel>> strData) {
                         if (strData.isOk())
-                            getListener().onSuccess(getTag(), strData.getData());
+                            getListener(tag).onSuccess(getTag(), strData.getData());
                         else
-                            getListener().onFailure(getTag(), strData.getTips());
+                            getListener(tag).onFailure(getTag(), strData.getTips());
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(), ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(getTag(), ex.getMessage());
                     }
                 });
     }
 
-    public void userLogin(String phone,String passwd) {
+    public void userLogin(String phone, String passwd) {
         Map<String, String> parameter = RequestParameter.commonReq();
-        parameter.put("phone",phone);
-        parameter.put("passwd",passwd);
-        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
-                .userLogin(JSON.toJSONString(parameter))
+        parameter.put("phone", phone);
+        parameter.put("passwd", passwd);
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(StringUtils.getUrl());
+        api.userLogin(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<ViewResult<UserModel>>(getContext(), true) {
+                .subscribe(new AbsAPICallback<ViewResult<UserModel>>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(ViewResult<UserModel> strData) {
+                    protected void onDone(int tag, ViewResult<UserModel> strData) {
                         if (strData.isOk())
-                            getListener().onSuccess(getTag(),strData.getData());
+                            getListener(tag).onSuccess(getTag(), strData.getData());
                         else
-                            getListener().onFailure(getTag(),strData.getTips());
+                            getListener(tag).onFailure(getTag(), strData.getTips());
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(getTag(), ex.getMessage());
                     }
                 });
     }
 
-    public void getVideoItemList(int tagId,int pageNum) {
+    public void getVideoItemList(int tagId, int pageNum) {
         Map<String, String> parameter = RequestParameter.commonReq();
-        parameter.put("tagId",String.valueOf(tagId));
-        parameter.put("type","2");
-        parameter.put("page",String.valueOf(pageNum));
-        if (MeiNvPicturePreferences.getUserInfos()!=null){
+        parameter.put("tagId", String.valueOf(tagId));
+        parameter.put("type", "2");
+        parameter.put("page", String.valueOf(pageNum));
+        if (MeiNvPicturePreferences.getUserInfos() != null) {
             parameter.put("userId", String.valueOf(MeiNvPicturePreferences.getUserInfos().getUserId()));
         }
-        parameter.put("size",String.valueOf(20));
-        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
-                .getVideoItemList(JSON.toJSONString(parameter))
+        parameter.put("size", String.valueOf(20));
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(StringUtils.getUrl());
+        api.getVideoItemList(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<ViewResult<List<AlbumModel>>>(getContext(), true) {
+                .subscribe(new AbsAPICallback<ViewResult<List<AlbumModel>>>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(ViewResult<List<AlbumModel>> strData) {
+                    protected void onDone(int tag, ViewResult<List<AlbumModel>> strData) {
                         if (strData.isOk())
-                            getListener().onSuccess(getTag(),strData.getData());
+                            getListener(tag).onSuccess(getTag(), strData.getData());
                         else
-                            getListener().onFailure(getTag(),strData.getTips());
+                            getListener(tag).onFailure(getTag(), strData.getTips());
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(getTag(), ex.getMessage());
                     }
                 });
     }
 
     public void getBrowseVideo(int albumId) {
         Map<String, String> parameter = RequestParameter.commonReq();
-        parameter.put("albumId",String.valueOf(albumId));
-        if (MeiNvPicturePreferences.getUserInfos()!=null){
+        parameter.put("albumId", String.valueOf(albumId));
+        if (MeiNvPicturePreferences.getUserInfos() != null) {
             UserModel user = MeiNvPicturePreferences.getUserInfos();
             parameter.put("userId", String.valueOf(user.getUserId()));
             parameter.put("token", user.getToken());
         }
-        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
-                .getBrowseVideo(JSON.toJSONString(parameter))
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(StringUtils.getUrl());
+        api.getBrowseVideo(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<ViewResult<UserAlbumModel>>(getContext(), true) {
+                .subscribe(new AbsAPICallback<ViewResult<UserAlbumModel>>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(ViewResult<UserAlbumModel> strData) {
+                    protected void onDone(int tag, ViewResult<UserAlbumModel> strData) {
                         if (strData.isOk())
-                            getListener().onSuccess(getTag(),strData.getData());
+                            getListener(tag).onSuccess(getTag(), strData.getData());
                         else
-                            getListener().onFailure(getTag(),strData.getTips());
+                            getListener(tag).onFailure(getTag(), strData.getTips());
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(getTag(), ex.getMessage());
                     }
                 });
     }
 
-    public void getAlbumUserList(int toUserId,int pageNum) {
+    public void getAlbumUserList(int toUserId, int pageNum) {
         Map<String, String> parameter = RequestParameter.commonReq();
-        parameter.put("fromUserId",String.valueOf(MeiNvPicturePreferences.getUserId()));
-        parameter.put("toUserId",String.valueOf(toUserId));
-        parameter.put("page",String.valueOf(pageNum));
-        parameter.put("size",String.valueOf(10));
-        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
-                .getAlbumUserList(JSON.toJSONString(parameter))
+        parameter.put("fromUserId", String.valueOf(MeiNvPicturePreferences.getUserId()));
+        parameter.put("toUserId", String.valueOf(toUserId));
+        parameter.put("page", String.valueOf(pageNum));
+        parameter.put("size", String.valueOf(10));
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(StringUtils.getUrl());
+        api.getAlbumUserList(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<ViewResult<List<UserAlbumModel>>>(getContext(), true) {
+                .subscribe(new AbsAPICallback<ViewResult<List<UserAlbumModel>>>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(ViewResult<List<UserAlbumModel>> strData) {
+                    protected void onDone(int tag, ViewResult<List<UserAlbumModel>> strData) {
                         if (strData.isOk())
-                            getListener().onSuccess(getTag(),strData.getData());
+                            getListener(tag).onSuccess(getTag(), strData.getData());
                         else
-                            getListener().onFailure(getTag(),strData.getTips());
+                            getListener(tag).onFailure(getTag(), strData.getTips());
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(getTag(), ex.getMessage());
                     }
                 });
     }
 
-    public void getCommentsList(int albumId,int pageNum) {
+    public void getCommentsList(int albumId, int pageNum) {
         Map<String, String> parameter = RequestParameter.commonReq();
-        parameter.put("albumId",String.valueOf(albumId));
-        parameter.put("page",String.valueOf(pageNum));
-        parameter.put("size",String.valueOf(10));
-        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
-                .getCommentsList(JSON.toJSONString(parameter))
+        parameter.put("albumId", String.valueOf(albumId));
+        parameter.put("page", String.valueOf(pageNum));
+        parameter.put("size", String.valueOf(10));
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(StringUtils.getUrl());
+        api.getCommentsList(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<ViewResult<CommentToalModel>>(getContext(), true) {
+                .subscribe(new AbsAPICallback<ViewResult<CommentToalModel>>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(ViewResult<CommentToalModel> strData) {
+                    protected void onDone(int tag, ViewResult<CommentToalModel> strData) {
                         if (strData.isOk())
-                            getListener().onSuccess(getTag(),strData.getData());
+                            getListener(tag).onSuccess(getTag(), strData.getData());
                         else
-                            getListener().onFailure(getTag(),strData.getTips());
+                            getListener(tag).onFailure(getTag(), strData.getTips());
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(getTag(), ex.getMessage());
                     }
                 });
     }
@@ -307,57 +309,57 @@ public class XiGuaMeiTuModel extends BaseModel {
     public void getAlbumDetail(int albumId) {
         Map<String, String> parameter = RequestParameter.commonReq();
         UserModel user = MeiNvPicturePreferences.getUserInfos();
-        if (user!=null){
+        if (user != null) {
             parameter.put("userId", String.valueOf(user.getUserId()));
         }
-        parameter.put("albumId",String.valueOf(albumId));
-        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
-                .getAlbumDetail(user.getToken(),parameter.get("userId"),JSON.toJSONString(parameter),parameter.get("version"),parameter.get("packId"),parameter.get("channel"),parameter.get("os"))
+        parameter.put("albumId", String.valueOf(albumId));
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(StringUtils.getUrl());
+        api.getAlbumDetail(user.getToken(), parameter.get("userId"), JSON.toJSONString(parameter), parameter.get("version"), parameter.get("packId"), parameter.get("channel"), parameter.get("os"))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<ViewResult<UserAlbumModel>>(getContext(), true) {
+                .subscribe(new AbsAPICallback<ViewResult<UserAlbumModel>>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(ViewResult<UserAlbumModel> strData) {
+                    protected void onDone(int tag, ViewResult<UserAlbumModel> strData) {
                         if (strData.isOk())
-                            getListener().onSuccess(getTag(),strData.getData());
+                            getListener(tag).onSuccess(getTag(), strData.getData());
                         else
-                            getListener().onFailure(getTag(),strData.getTips());
+                            getListener(tag).onFailure(getTag(), strData.getTips());
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(getTag(), ex.getMessage());
                     }
                 });
     }
 
-    public void updateAlbumThumb(int albumId,boolean isThumb ,int pageNum) {
+    public void updateAlbumThumb(int albumId, boolean isThumb, int pageNum) {
         Map<String, String> parameter = RequestParameter.commonReq();
-        if (MeiNvPicturePreferences.getUserInfos()!=null){
+        if (MeiNvPicturePreferences.getUserInfos() != null) {
             UserModel user = MeiNvPicturePreferences.getUserInfos();
             parameter.put("userId", String.valueOf(user.getUserId()));
             parameter.put("token", user.getToken());
         }
-        parameter.put("albumId",String.valueOf(albumId));
-        parameter.put("type",String.valueOf(isThumb?2:1));
-        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
-                .updateAlbumThumb(JSON.toJSONString(parameter))
+        parameter.put("albumId", String.valueOf(albumId));
+        parameter.put("type", String.valueOf(isThumb ? 2 : 1));
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(StringUtils.getUrl());
+        api.updateAlbumThumb(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<ViewResult>(getContext(), true) {
+                .subscribe(new AbsAPICallback<ViewResult>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(ViewResult strData) {
+                    protected void onDone(int tag, ViewResult strData) {
                         if (strData.isOk())
-                            getListener().onSuccess(getTag(),true);
+                            getListener(tag).onSuccess(getTag(), true);
                         else
-                            getListener().onFailure(getTag(),strData.getTips());
+                            getListener(tag).onFailure(getTag(), strData.getTips());
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(getTag(), ex.getMessage());
                     }
                 });
     }
@@ -367,28 +369,28 @@ public class XiGuaMeiTuModel extends BaseModel {
      * @param tuid
      * @param tag
      */
-    public void updateUserAtten(int tuid,boolean tag) {
+    public void updateUserAtten(int tuid, boolean tag) {
         Map<String, String> parameter = RequestParameter.commonReq();
-        parameter.put("fuid",String.valueOf(MeiNvPicturePreferences.getUserInfos().getUserId()));
-        parameter.put("tuid",String.valueOf(tuid));
-        parameter.put("type",String.valueOf(tag?2:1));
-        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
-                .updateUserAtten(JSON.toJSONString(parameter))
+        parameter.put("fuid", String.valueOf(MeiNvPicturePreferences.getUserInfos().getUserId()));
+        parameter.put("tuid", String.valueOf(tuid));
+        parameter.put("type", String.valueOf(tag ? 2 : 1));
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(StringUtils.getUrl());
+        api.updateUserAtten(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<ViewResult>(getContext(), true) {
+                .subscribe(new AbsAPICallback<ViewResult>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(ViewResult strData) {
+                    protected void onDone(int tag, ViewResult strData) {
                         if (strData.isOk())
-                            getListener().onSuccess(getTag(),true);
+                            getListener(tag).onSuccess(getTag(), true);
                         else
-                            getListener().onFailure(getTag(),strData.getTips());
+                            getListener(tag).onFailure(getTag(), strData.getTips());
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(getTag(), ex.getMessage());
                     }
                 });
     }
@@ -398,83 +400,87 @@ public class XiGuaMeiTuModel extends BaseModel {
      * @param albumId
      * @param tag
      */
-    public void updateUserCllect(int albumId,boolean tag) {
+    public void updateUserCllect(int albumId, boolean tag) {
         Map<String, String> parameter = RequestParameter.commonReq();
-        parameter.put("userId",String.valueOf(MeiNvPicturePreferences.getUserInfos().getUserId()));
-        parameter.put("albumId",String.valueOf(albumId));
-        parameter.put("type",String.valueOf(tag?2:1));
-        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
-                .updateUserCllect(JSON.toJSONString(parameter))
+        parameter.put("userId", String.valueOf(MeiNvPicturePreferences.getUserInfos().getUserId()));
+        parameter.put("albumId", String.valueOf(albumId));
+        parameter.put("type", String.valueOf(tag ? 2 : 1));
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(StringUtils.getUrl());
+        api.updateUserCllect(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<ViewResult>(getContext(), true) {
+                .subscribe(new AbsAPICallback<ViewResult>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(ViewResult strData) {
+                    protected void onDone(int tag, ViewResult strData) {
                         if (strData.isOk())
-                            getListener().onSuccess(getTag(),true);
+                            getListener(tag).onSuccess(getTag(), true);
                         else
-                            getListener().onFailure(getTag(),strData.getTips());
+                            getListener(tag).onFailure(getTag(), strData.getTips());
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(getTag(), ex.getMessage());
                     }
                 });
     }
 
     public void getHotTagsList() {
-        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
-                .getHotTagsList(JSON.toJSONString(RequestParameter.commonReq()))
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(StringUtils.getUrl());
+        api.getHotTagsList(JSON.toJSONString(RequestParameter.commonReq()))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<ViewResult<List<SearchTagModel>>>(getContext(), true) {
+                .subscribe(new AbsAPICallback<ViewResult<List<SearchTagModel>>>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(ViewResult<List<SearchTagModel>> strData) {
+                    protected void onDone(int tag, ViewResult<List<SearchTagModel>> strData) {
                         if (strData.isOk())
-                            getListener().onSuccess(getTag(),strData.getData());
+                            getListener(tag).onSuccess(getTag(), strData.getData());
                         else
-                            getListener().onFailure(getTag(),strData.getTips());
+                            getListener(tag).onFailure(getTag(), strData.getTips());
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(getTag(), ex.getMessage());
                     }
                 });
     }
 
-    public void getSearchItemList(int searchTag,String keyWord,int pageNum) {
+    public void getSearchItemList(int searchTag, String keyWord, int pageNum) {
         Map<String, String> parameter = RequestParameter.commonReq();
-        if (searchTag!=0) {
-            parameter.put("type",String.valueOf(searchTag));
+        if (searchTag != 0) {
+            parameter.put("type", String.valueOf(searchTag));
         }
-        parameter.put("userId",String.valueOf(MeiNvPicturePreferences.getUserInfos().getUserId()));
-        parameter.put("keyWord",keyWord);
-        parameter.put("defaultKeyWord","邻家");
-        parameter.put("page",String.valueOf(pageNum));
-        parameter.put("pageSize",String.valueOf(20));
-        getInstance().getZXinJdxsxpApi(StringUtils.getUrl(),ZXinJdxsxpApi.class)
-                .getSearchItemList(JSON.toJSONString(parameter))
+        parameter.put("userId", String.valueOf(MeiNvPicturePreferences.getUserInfos().getUserId()));
+        parameter.put("keyWord", keyWord);
+        parameter.put("defaultKeyWord", "邻家");
+        parameter.put("page", String.valueOf(pageNum));
+        parameter.put("pageSize", String.valueOf(20));
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(StringUtils.getUrl());
+        api.getSearchItemList(JSON.toJSONString(parameter))
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new AbsAPICallback<ViewResult<SearchListModel>>(getContext(), true) {
+                .subscribe(new AbsAPICallback<ViewResult<SearchListModel>>(getContext(), getTag(), true) {
                     @Override
-                    protected void onDone(ViewResult<SearchListModel> strData) {
+                    protected void onDone(int tag, ViewResult<SearchListModel> strData) {
                         if (strData.isOk())
-                            getListener().onSuccess(getTag(),strData.getData());
+                            getListener(tag).onSuccess(getTag(), strData.getData());
                         else
-                            getListener().onFailure(getTag(),strData.getTips());
+                            getListener(tag).onFailure(getTag(), strData.getTips());
                     }
 
                     @Override
-                    public void onResultError(ResultException ex) {
-                        getListener().onFailure(getTag(),ex.getMessage());
+                    public void onResultError(int tag, ResultException ex) {
+                        getListener(tag).onFailure(getTag(), ex.getMessage());
                     }
                 });
     }
 
+    @Override
+    public RetrofitHelper initHelper() {
+        return BaseApplication.getInstance().getRetrofitHelper();
+    }
 }

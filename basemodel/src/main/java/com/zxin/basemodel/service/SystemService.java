@@ -1,4 +1,4 @@
-package com.zxin.service;
+package com.zxin.basemodel.service;
 
 import android.content.Context;
 import android.os.Parcelable;
@@ -656,7 +656,7 @@ public class SystemService {
     /****
      * 创建类
      */
-    public class Build {
+    public static class Build {
 
         private Context mContext;
 

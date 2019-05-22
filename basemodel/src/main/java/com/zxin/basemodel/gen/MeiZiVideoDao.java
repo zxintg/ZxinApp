@@ -1,5 +1,6 @@
 package com.zxin.basemodel.gen;
 
+import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
@@ -14,6 +15,7 @@ import java.util.List;
 /**
  * DAO for table "MEI_ZI_VIDEO".
  */
+@Dao
 public interface MeiZiVideoDao {
 
     @Query("SELECT * FROM tb_video ORDER BY create_time ASC")
@@ -35,7 +37,7 @@ public interface MeiZiVideoDao {
     int getCount();
 
     @Insert
-    int insert(MeiZiVideo... entities);
+    long insert(MeiZiVideo... entities);
 
     @Delete
     void delete(MeiZiVideo entity);

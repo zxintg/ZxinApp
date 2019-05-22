@@ -14,10 +14,8 @@ import com.zxin.basemodel.app.BaseApplication;
 import com.zxin.network.mvp.inject.InjectPresenter;
 import com.zxin.network.mvp.presenter.BasePresenter;
 import com.zxin.root.util.logger.LogUtils;
-
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
-
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;

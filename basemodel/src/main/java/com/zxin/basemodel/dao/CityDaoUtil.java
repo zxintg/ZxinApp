@@ -5,6 +5,7 @@ import com.zxin.basemodel.entity.City;
 import com.zxin.basemodel.gen.CityDao;
 import com.zxin.basemodel.gen.DataBaseUtil;
 import com.zxin.root.util.logger.LogUtils;
+
 import java.util.List;
 
 /**
@@ -14,9 +15,12 @@ import java.util.List;
 public class CityDaoUtil {
     private static final LogUtils.Tag TAG = new LogUtils.Tag("CityDaoUtil");
     private static volatile CityDaoUtil daoUtil = null;
-    private  CityDao cityDao = null;
+    private CityDao cityDao = null;
 
     private CityDaoUtil() {
+        if (cityDao != null) {
+            return;
+        }
         DataBaseUtil dataBaseUtil = BaseApplication.getInstance().getDataBaseUtil();
         cityDao = dataBaseUtil.getDao(DataBaseUtil.Mode.CityMode);
     }
@@ -50,7 +54,7 @@ public class CityDaoUtil {
      * 根据上一级的PD和当前区域名字查询得到当前区域名字
      */
     public City getCityByIdAndName(int id, String name) {
-        return cityDao.getCityByParentIdArea(addZeroId(id),name);
+        return cityDao.getCityByParentIdArea(addZeroId(id), name);
     }
 
     /**
@@ -64,7 +68,7 @@ public class CityDaoUtil {
      * 查询【name】的城市
      */
     public City getCityByName(String name, String areaLevel) {
-        return cityDao.getCityByAreaLevel(name,areaLevel);
+        return cityDao.getCityByAreaLevel(name, areaLevel);
     }
 
     /**
