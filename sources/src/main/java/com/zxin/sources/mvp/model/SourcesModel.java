@@ -6,7 +6,7 @@ import com.zxin.network.exception.ResultException;
 import com.zxin.network.http.RetrofitHelper;
 import com.zxin.network.mvp.model.BaseModel;
 import com.zxin.sources.api.ZXinSourcesApi;
-
+import com.zxin.basemodel.util.BuildUtils;
 import okhttp3.ResponseBody;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -18,7 +18,7 @@ import rx.schedulers.Schedulers;
 public class SourcesModel extends BaseModel {
 
     public void getCodeKKList(String mesg,int pageNum) {
-        ZXinSourcesApi api = getZxinWebApi().getZxinAPI("http://p.codekk.com/");
+        ZXinSourcesApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(BuildUtils.APIURL.Codekk));
         api.getCodeKKList(mesg,pageNum)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -41,7 +41,7 @@ public class SourcesModel extends BaseModel {
      * @param pageNum
      */
     public void getYunShangList(int pageNum) {
-        ZXinSourcesApi api = getZxinWebApi().getZxinAPI("http://www.ynshangji.com/");
+        ZXinSourcesApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(BuildUtils.APIURL.YuShangJi));
         api.getYunShangList(pageNum)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -64,7 +64,7 @@ public class SourcesModel extends BaseModel {
      * @param pageNum
      */
     public void getAndroidBusList(int pageNum) {
-        ZXinSourcesApi api = getZxinWebApi().getZxinAPI("http://www.apkbus.com/");
+        ZXinSourcesApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(BuildUtils.APIURL.ApkBus));
         api.getAndroidBusList(pageNum)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())

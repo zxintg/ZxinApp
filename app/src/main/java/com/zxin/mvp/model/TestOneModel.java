@@ -6,6 +6,7 @@ import com.zxin.network.exception.ResultException;
 import com.zxin.network.http.RetrofitHelper;
 import com.zxin.network.mvp.model.BaseModel;
 import com.zxin.sources.api.ZXinSourcesApi;
+import com.zxin.basemodel.util.BuildUtils;
 import okhttp3.ResponseBody;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -17,7 +18,7 @@ import rx.schedulers.Schedulers;
 public class TestOneModel extends BaseModel {
 
     public void getMeiziJsonList(String type, int pageNum) {
-        ZXinSourcesApi sourcesApi = getZxinWebApi().getZxinAPI("http://route.showapi.com/");
+        ZXinSourcesApi sourcesApi = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(BuildUtils.APIURL.Show));
         sourcesApi.getHuaBanMeizi("20", String.valueOf(pageNum), "15314", type, "d424376f51f1467da1b8c75debebf148")
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -36,7 +37,7 @@ public class TestOneModel extends BaseModel {
     }
 
     public void getMeiziHtmlList(int pageNum) {
-        ZXinSourcesApi sourcesApi = getZxinWebApi().getZxinAPI("http://www.dbmeinv.com/dbgroup/");
+        ZXinSourcesApi sourcesApi = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(BuildUtils.APIURL.DBmeinv));
         sourcesApi.getDoubanMeizi(7, pageNum)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())

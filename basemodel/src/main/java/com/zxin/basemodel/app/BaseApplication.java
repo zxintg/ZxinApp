@@ -14,6 +14,7 @@ import com.zxin.basemodel.interceptor.CustomParamsInterceptor;
 import com.zxin.basemodel.interceptor.HttpCacheInterceptor;
 import com.zxin.basemodel.interceptor.HttpHeaderInterceptor;
 import com.zxin.basemodel.factory.ResponseConverterFactory;
+import com.zxin.network.api.ZXinBaseApi;
 import com.zxin.network.http.RetrofitHelper;
 
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -59,6 +60,7 @@ public abstract class BaseApplication extends Application {
         getDefaultSharedPreference();
 
         initRetrofitHelper();
+        createRetrofitHelper();
 
         new Thread(new Runnable() {
             @Override
@@ -91,6 +93,11 @@ public abstract class BaseApplication extends Application {
                         ,ResponseConverterFactory.create()
                         , GsonConverterFactory.create())
                 .build();
+    }
+
+    private void createRetrofitHelper(){
+        retrofitHelper.create();
+        //retrofitHelper.addZxinAPIs(new String[]{});
     }
 
     /**
@@ -144,4 +151,5 @@ public abstract class BaseApplication extends Application {
         }
         return retrofitHelper;
     }
+
 }
