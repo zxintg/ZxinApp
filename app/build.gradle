@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 //应用 Bugtags 插件
 apply plugin: 'com.bugtags.library.plugin'
 //apply plugin: 'com.neenbedankt.android-apt'
+
 android {
     useLibrary 'org.apache.http.legacy'
     compileSdkVersion Integer.valueOf(COM_SDK_VER)
@@ -17,8 +18,8 @@ android {
         targetSdkVersion Integer.valueOf(TAR_SDK_VER)
         versionCode Integer.valueOf(VER_CODE)
         versionName VER_NAME
-        renderscriptTargetApi Integer.valueOf(RDS_RAG_API)
-        renderscriptSupportModeEnabled  Boolean.valueOf(RDS_MOD_ENABLE)
+        //renderscriptTargetApi RDS_RAG_API
+        //renderscriptSupportModeEnabled  RDS_MOD_ENABLE
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         ndk {
@@ -127,6 +128,7 @@ android {
             shrinkResources false
             signingConfig signingConfigs.debug
         }
+
     }
     //android studio默认so文件加载目录为:src/main/jniLibs
     //如在module的build.gradle按照如下方式,自定义了so文件加载目录请确保对应目录下只有armeabi目录
@@ -143,15 +145,6 @@ android {
     }*/
 
     /* 多渠道打包*/
-    productFlavors {
-        /*_360 {}
-        xiaomi {}
-        meizu {}
-        huawei {}
-        wandoujia {}
-        yingyongbao {}*/
-        baidu {}
-    }
 }
 
 afterEvaluate {

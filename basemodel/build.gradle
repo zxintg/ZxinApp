@@ -19,6 +19,43 @@ android {
             }
         }
 
+        //设置生成BuildConfig 文件 类型 key gradle.properties对于值
+        buildConfigField 'String','apiURL_showapi',apiURL_showapi
+        buildConfigField 'String','apiURL_dbmeinv',apiURL_dbmeinv
+        buildConfigField 'String','apiURL_xiumei99',apiURL_xiumei99
+        buildConfigField 'String','apiURL_codekk',apiURL_codekk
+        buildConfigField 'String','apiURL_ynshangji',apiURL_ynshangji
+        buildConfigField 'String','apiURL_apkbus',apiURL_apkbus
+        buildConfigField 'String','apiURL_meizu',apiURL_meizu
+        buildConfigField 'String','apiURL_picasso',apiURL_picasso
+        buildConfigField 'String','apiURL_rubaoo',apiURL_rubaoo
+        buildConfigField 'String','apiURL_beautyreport',apiURL_beautyreport
+        buildConfigField 'String','apiURL_baidu',apiURL_baidu
+        buildConfigField 'String','apiURL_sogou',apiURL_sogou
+
+
+        buildConfigField 'String','APK_keyAlias',APK_keyAlias
+        buildConfigField 'String','APK_keyPassword',APK_keyPassword
+        buildConfigField 'String','APK_storeFile',APK_storeFile
+        buildConfigField 'String','APK_storePassword',APK_storePassword
+
+        buildConfigField 'String','DB_VER',DB_VER
+        buildConfigField 'String','DB_Name',DB_Name
+        buildConfigField 'String','ROOM_VER',ROOM_VER
+
+        buildConfigField 'String','BTS_AppKey',BTS_AppKey
+        buildConfigField 'String','BTS_AppSecret',BTS_AppSecret
+
+        buildConfigField 'Integer','COM_SDK_VER',COM_SDK_VER
+        buildConfigField 'long','BUILD_TOOLS_VER',BUILD_TOOLS_VER
+        buildConfigField 'Integer','MIN_SDK_VER',MIN_SDK_VER
+        buildConfigField 'Integer','TAR_SDK_VER',TAR_SDK_VER
+        buildConfigField 'Integer','VER_CODE',VER_CODE
+        buildConfigField 'String','VER_NAME',VER_NAME
+        buildConfigField 'String','SUP_VER',SUP_VER
+        buildConfigField 'Integer','RDS_RAG_API',RDS_RAG_API
+        buildConfigField 'boolean','RDS_MOD_ENABLE',RDS_MOD_ENABLE
+
     }
 
     buildTypes {

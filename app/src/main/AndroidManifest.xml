@@ -29,14 +29,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service
+        <!--<service
             android:name="com.baidu.location.f"
             android:enabled="true"
-            android:process=":remote" />
+            android:process=":remote" />-->
         <!-- 百度地图API -->
-        <meta-data
+        <!--<meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="VOfm0hW58xv3Gy1f9EjdThwZNf9nzPfu" />
+            android:value="VOfm0hW58xv3Gy1f9EjdThwZNf9nzPfu" />-->
         <!--阿里百川-->
        <meta-data
             android:name="com.alibaba.app.appkey"

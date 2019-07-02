@@ -1,6 +1,7 @@
 package com.zxin.basemodel.util;
 
 import android.content.Context;
+
 import com.zxin.basemodel.BuildConfig;
 
 /*****
@@ -11,7 +12,7 @@ public class BuildUtils {
     private static volatile BuildUtils buildUtils = null;
     private Context mContext;
 
-    public static enum APIURL {
+    public enum APIURL {
         Show,
         DBmeinv,
         XiuMei99,
