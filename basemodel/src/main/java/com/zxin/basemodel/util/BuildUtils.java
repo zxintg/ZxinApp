@@ -15,21 +15,6 @@ public class BuildUtils {
     private static volatile BuildUtils buildUtils = null;
     private Context mContext;
 
-    public enum APIURL {
-        Show,
-        DBmeinv,
-        XiuMei99,
-        Codekk,
-        YuShangJi,
-        ApkBus,
-        MeiZu,
-        Picasso,
-        RuBaoo,
-        Beauty,
-        BaiDu,
-        SoGou
-    }
-
     private BuildUtils(Context mContext) {
         this.mContext = mContext;
     }
