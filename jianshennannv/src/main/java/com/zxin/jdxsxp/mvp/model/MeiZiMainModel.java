@@ -1,5 +1,6 @@
 package com.zxin.jdxsxp.mvp.model;
 
+import com.zxin.basemodel.annot.ApiUrlMode;
 import com.zxin.basemodel.app.BaseApplication;
 import com.zxin.basemodel.network.AbsAPICallback;
 import com.zxin.basemodel.util.BuildUtils;
@@ -29,7 +30,7 @@ import rx.schedulers.Schedulers;
 public class MeiZiMainModel extends BaseModel {
 
     public void getMainMeiZiApi() {
-        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(BuildUtils.APIURL.MeiZu));
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(ApiUrlMode.APIURL_MODE_MeiZu));
         api.getMainMeiZiApi()
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -51,7 +52,7 @@ public class MeiZiMainModel extends BaseModel {
     }
 
     public void getMainHotApi(int pageNum) {
-        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(BuildUtils.APIURL.Picasso));
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(ApiUrlMode.APIURL_MODE_Picasso));
         api.getMainHotApi(20, pageNum * 20)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -73,7 +74,7 @@ public class MeiZiMainModel extends BaseModel {
     }
 
     public void getMeiNvListApi(int pageNum) {
-        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(BuildUtils.APIURL.Picasso));
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(ApiUrlMode.APIURL_MODE_Picasso));
         api.getMeiNvListApi(20, pageNum * 20)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -95,7 +96,7 @@ public class MeiZiMainModel extends BaseModel {
     }
 
     public void getMeiNvDetailApi(String meiId, int pageNum) {
-        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(BuildUtils.APIURL.Picasso));
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(ApiUrlMode.APIURL_MODE_Picasso));
         api.getMeiNvDetailApi(meiId, 20, pageNum * 20)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -117,7 +118,7 @@ public class MeiZiMainModel extends BaseModel {
     }
 
     public void getArticleListApi() {
-        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(BuildUtils.APIURL.RuBaoo));
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(ApiUrlMode.APIURL_MODE_RuBaoo));
         api.getArticleListApi()
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -139,7 +140,7 @@ public class MeiZiMainModel extends BaseModel {
     }
 
     public void getWallPaperItemList(String type, int pageNum) {
-        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(BuildUtils.APIURL.Beauty));
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(ApiUrlMode.APIURL_MODE_Beauty));
         api.getWallPaperItemList(type + pageNum)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -161,7 +162,7 @@ public class MeiZiMainModel extends BaseModel {
     }
 
     public void getFindBaiDuList(String keyword, int pageNum) {
-        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(BuildUtils.APIURL.BaiDu));
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(ApiUrlMode.APIURL_MODE_BaiDu));
         api.getFindBaiDuList(keyword, pageNum * 20)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -183,7 +184,7 @@ public class MeiZiMainModel extends BaseModel {
     }
 
     public void getFind360List(String keyword, int pageNum) {
-        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(BuildUtils.APIURL.MeiZu));
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(ApiUrlMode.APIURL_MODE_MeiZu));
         api.getFind360List(keyword, pageNum * 20)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -205,7 +206,7 @@ public class MeiZiMainModel extends BaseModel {
     }
 
     public void getFindSouGouList(String keyword, int pageNum) {
-        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(BuildUtils.APIURL.SoGou));
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(ApiUrlMode.APIURL_MODE_SoGou));
         api.getFindSouGouList(keyword, pageNum * 20)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -227,7 +228,7 @@ public class MeiZiMainModel extends BaseModel {
     }
 
     public void getPicDetailList(String albumAddress) {
-        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(BuildUtils.APIURL.Beauty));
+        ZXinJdxsxpApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(ApiUrlMode.APIURL_MODE_Beauty));
         api.getPicDetailList("v4/" + albumAddress)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())

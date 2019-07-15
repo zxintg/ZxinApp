@@ -3,6 +3,9 @@ package com.zxin.basemodel.util;
 import android.content.Context;
 
 import com.zxin.basemodel.BuildConfig;
+import com.zxin.basemodel.annot.ApiUrlMode;
+
+import static com.zxin.basemodel.annot.ApiUrlMode.APIURL_MODE_Show;
 
 /*****
  * 获取gradle 配置信息
@@ -62,54 +65,54 @@ public class BuildUtils {
      * 网路API
      * @return
      */
-    public String getURLAPI(APIURL api) {
+    public String getURLAPI(@ApiUrlMode int api) {
         String url = "";
         switch (api) {
-            case Show:
+            case ApiUrlMode.APIURL_MODE_Show:
                 url = BuildConfig.apiURL_showapi;
                 break;
 
-            case DBmeinv:
+            case ApiUrlMode.APIURL_MODE_DBmeinv:
                 url = BuildConfig.apiURL_dbmeinv;
                 break;
 
-            case XiuMei99:
+            case ApiUrlMode.APIURL_MODE_XiuMei99:
                 url = BuildConfig.apiURL_xiumei99;
                 break;
 
-            case Codekk:
+            case ApiUrlMode.APIURL_MODE_Codekk:
                 url = BuildConfig.apiURL_codekk;
                 break;
 
-            case YuShangJi:
+            case ApiUrlMode.APIURL_MODE_YuShangJi:
                 url = BuildConfig.apiURL_ynshangji;
                 break;
 
-            case ApkBus:
+            case ApiUrlMode.APIURL_MODE_ApkBus:
                 url = BuildConfig.apiURL_apkbus;
                 break;
 
-            case MeiZu:
+            case ApiUrlMode.APIURL_MODE_MeiZu:
                 url = BuildConfig.apiURL_meizu;
                 break;
 
-            case Picasso:
+            case ApiUrlMode.APIURL_MODE_Picasso:
                 url = BuildConfig.apiURL_picasso;
                 break;
 
-            case RuBaoo:
+            case ApiUrlMode.APIURL_MODE_RuBaoo:
                 url = BuildConfig.apiURL_rubaoo;
                 break;
 
-            case Beauty:
+            case ApiUrlMode.APIURL_MODE_Beauty:
                 url = BuildConfig.apiURL_beautyreport;
                 break;
 
-            case BaiDu:
+            case ApiUrlMode.APIURL_MODE_BaiDu:
                 url = BuildConfig.apiURL_baidu;
                 break;
 
-            case SoGou:
+            case ApiUrlMode.APIURL_MODE_SoGou:
                 url = BuildConfig.apiURL_sogou;
                 break;
         }

@@ -1,5 +1,6 @@
 package com.zxin.meziyowu.mvp.model;
 
+import com.zxin.basemodel.annot.ApiUrlMode;
 import com.zxin.basemodel.app.BaseApplication;
 import com.zxin.basemodel.network.AbsAPICallback;
 import com.zxin.meziyowu.api.ZXinYoWuApi;
@@ -22,7 +23,7 @@ import rx.schedulers.Schedulers;
 public class YoMeiMainModel extends BaseModel {
 
     public void getYoMeiTagList() {
-        ZXinYoWuApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(BuildUtils.APIURL.XiuMei99));
+        ZXinYoWuApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(ApiUrlMode.APIURL_MODE_XiuMei99));
         api.getHomeTagList("")
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -44,7 +45,7 @@ public class YoMeiMainModel extends BaseModel {
     }
 
     public void getYoMeiListByTag(int typeId,int pageNum) {
-        ZXinYoWuApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(BuildUtils.APIURL.XiuMei99));
+        ZXinYoWuApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(ApiUrlMode.APIURL_MODE_XiuMei99));
         api.getYoMeiListByTag("0",typeId,pageNum)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -66,7 +67,7 @@ public class YoMeiMainModel extends BaseModel {
     }
 
     public void getYoMeiVideoDetail(String userId,String userKey,String macid,int videoId) {
-        ZXinYoWuApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(BuildUtils.APIURL.XiuMei99));
+        ZXinYoWuApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(ApiUrlMode.APIURL_MODE_XiuMei99));
         api.getYoMeiVideoDetail(userId,userKey,macid,videoId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -90,7 +91,7 @@ public class YoMeiMainModel extends BaseModel {
     }
 
     public void getYoMeiDetail(String userId,String userKey,int video) {
-        ZXinYoWuApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(BuildUtils.APIURL.XiuMei99));
+        ZXinYoWuApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(ApiUrlMode.APIURL_MODE_XiuMei99));
         api.getYoMeiDetail(userId,userKey,video)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -112,7 +113,7 @@ public class YoMeiMainModel extends BaseModel {
     }
 
     public void getYoMeiDetailList(int video,int pageNum) {
-        ZXinYoWuApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(BuildUtils.APIURL.XiuMei99));
+        ZXinYoWuApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(ApiUrlMode.APIURL_MODE_XiuMei99));
         api.getYoMeiDetailList(video,pageNum)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
