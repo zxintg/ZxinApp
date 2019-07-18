@@ -1,29 +1,26 @@
 package com.zxin.activity.test;
 
 import android.view.View;
+
 import com.zxin.R;
 import com.zxin.base.BaseActivity;
-import com.zxin.root.util.ToastUtil;
-import com.zxin.root.view.group.MyRadioGroupView;
+import com.zxin.root.view.RefreshCommonView;
+
 import butterknife.BindView;
 import butterknife.OnClick;
 
-/**
- * Created by Administrator on 2019/1/29.
- */
-
-public class MyRaioGroupActivity extends BaseActivity implements MyRadioGroupView.OnCheckedChangeListener {
-    @BindView(R.id.mrg_myradiogroup)
-    MyRadioGroupView group;
+public class StudySourceActivity extends BaseActivity {
+    @BindView(R.id.rcv_source_commonlayout)
+    RefreshCommonView mRefreshCommonView;
 
     @Override
     public void initData() {
-        group.setOnCheckedChangeListener(this);
+
     }
 
     @Override
     public int setLayout() {
-        return R.layout.activity_myraiogroup;
+        return R.layout.activity_test_source;
     }
 
     @Override
@@ -45,10 +42,5 @@ public class MyRaioGroupActivity extends BaseActivity implements MyRadioGroupVie
                 onBackPressed();
                 break;
         }
-    }
-
-    @Override
-    public void onCheckedChanged(View v, boolean isChecked, String mesg) {
-        ToastUtil.getInstance(mContext).showShort("点击了："+mesg);
     }
 }

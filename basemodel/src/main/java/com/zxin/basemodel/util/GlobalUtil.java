@@ -1,12 +1,22 @@
 package com.zxin.basemodel.util;
 
+import android.app.AlarmManager;
 import android.app.Dialog;
+import android.content.Context;
+import android.text.SpannableStringBuilder;
+import android.text.Spanned;
+import android.text.style.ClickableSpan;
+import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import com.zxin.root.util.UiUtils;
+import com.zxin.root.util.logger.LogUtils;
+import com.google.gson.Gson;
+import java.io.File;
 import java.math.BigDecimal;
+import java.util.Date;
 
 public class GlobalUtil extends com.zxin.root.util.GlobalUtil{
-
+    private static final LogUtils.Tag TAG = new LogUtils.Tag("GlobalUtil");
     private static final int DEF_DIV_SCALE = 110;
 
     public static void dialogTitleLineColor(Dialog dialog, int color) {
@@ -76,5 +86,148 @@ public class GlobalUtil extends com.zxin.root.util.GlobalUtil{
         BigDecimal b = new BigDecimal(Double.toString(v));
         BigDecimal one = new BigDecimal("1");
         return b.divide(one, scale, BigDecimal.ROUND_HALF_DOWN).doubleValue();
+    }
+
+
+    /**
+     * 递归删除目录下的所有文件及子目录下所有文件
+     *
+     * @param dir 将要删除的文件目录
+     * @return boolean Returns "true" if all deletions were successful.
+     * If a deletion fails, the method stops attempting to
+     * delete and returns "false".
+     */
+    public static boolean deleteDir(File dir) {
+        if (dir.isDirectory()) {
+            String[] children = dir.list();
+            for (int i = 0; i < children.length; i++) {
+                boolean success = deleteDir(new File(dir, children[i]));
+                if (!success) {
+                    return false;
+                }
+            }
+        }
+        // 目录此时为空，可以删除
+        return dir.delete();
+    }
+
+    /**
+     * 设置textView显示局部字体颜色改变
+     *
+     * @param builder 源数据
+     * @param color   字体颜色
+     * @param start   文字开始下标
+     * @param len     修改文字长度
+     * @return 修改后的数据源
+     */
+    public static SpannableStringBuilder setTextPartColor(SpannableStringBuilder builder
+            , int color
+            , int start
+            , int len) {
+        ForegroundColorSpan csp = new ForegroundColorSpan(color);
+        builder.setSpan(csp, start, start + len, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+        return builder;
+    }
+
+    /*****
+     * 设置textView显示局部字体点击事件
+     * @param builder 源数据
+     * @param listener 回调函数
+     * @param start 文字开始下标
+     * @param len 修改文字长度
+     * @return 修改后的数据源
+     */
+    public static SpannableStringBuilder setTextPartClick(final SpannableStringBuilder builder
+            , final View.OnClickListener listener
+            , int start
+            , int len) {
+
+        //设置局部可点击事件
+        builder.setSpan(new ClickableSpan() {
+            @Override
+            public void onClick(View view) {
+                //局部点击的响应事件
+                if (listener == null) {
+                    return;
+                }
+                listener.onClick(view);
+            }
+        }, start, start + len, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+        return builder;
+    }
+
+    /****
+     * 获取当前地图整数等级
+     * @param mapLevel
+     * @return
+     */
+    public static int getMapIntLevel(float mapLevel) {
+        int level = Math.round(mapLevel);//四舍五入获取整数缩放等级  与ScaleView 中对应
+        if (level <= mapLevel) {//排除掉相同的。舍去的
+            return -1;
+        }
+        return level;
+    }
+
+    /****
+     * 判断是否在当前时间是之前
+     * @param time
+     * @return
+     */
+    public static boolean isValidTime(long time) {
+        if (time <= 0) {
+            return false;
+        }
+        long current = new Date().getTime();
+        if (time <= current) {
+            return true;
+        }
+        return false;
+    }
+
+    /****
+     * 判断是否在当前时间是之后
+     * @param time
+     * @return
+     */
+    public static boolean isValidEndTime(long time) {
+        if (time > 0) {
+            return false;
+        }
+        long current = new Date().getTime();
+        if (current <= time) {
+            return true;
+        }
+        return false;
+    }
+
+    /****
+     * 获取闹钟实例
+     * @param context
+     * @return
+     *
+     * RTC_WAKEUP :表示闹钟在睡眠状态下唤醒系统并执行提示功能，绝对时间。
+     * RTC : 睡眠状态下不可用，绝对时间。
+     * ELAPSED_REALTIME_WAKEUP : 睡眠状态下可用，相对时间。
+     * ELAPSED_REALTIME : 睡眠状态下不可用，相对时间。
+     *
+     */
+    public static AlarmManager getAlarmManager(Context context) {
+        return (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+    }
+
+    /****
+     * json 解析
+     * @return
+     */
+    public static <T> T jsonToBean(Class<T> clazz, String jsonStr) {
+        if (jsonStr == null
+                || jsonStr.trim().equals("")
+                || jsonStr.trim().equals("null")) {
+            LogUtils.d(TAG, "upDateCarLog jsonStr is null");
+            return null;
+        }
+        LogUtils.d(TAG, "jsonToBean jsonStr is : " + jsonStr);
+        return new Gson().fromJson(jsonStr, clazz);
     }
 }

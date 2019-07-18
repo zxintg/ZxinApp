@@ -98,6 +98,9 @@
         <activity
             android:name=".activity.test.TestExecutorActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.test.StudySourceActivity"
+            android:screenOrientation="portrait" />
 
         <activity
             android:name=".activity.test.ImplicitActivity"
@@ -128,6 +131,18 @@
                 android:resource="@xml/provider_paths" />
         </provider>
         <service android:name="com.zxin.service.InitializeService"/>
+
+        <receiver android:name="com.zxin.service.AlarmClockReceiver">
+            <intent-filter>
+                <action android:name="com.zxin.service.intent_alarm_clock" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.zxin.service.TimerChangedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
