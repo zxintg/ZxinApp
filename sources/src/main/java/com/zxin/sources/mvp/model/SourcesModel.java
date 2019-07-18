@@ -1,12 +1,13 @@
 package com.zxin.sources.mvp.model;
 
+import com.zxin.basemodel.annot.ApiUrlMode;
 import com.zxin.basemodel.app.BaseApplication;
 import com.zxin.basemodel.network.AbsAPICallback;
 import com.zxin.network.exception.ResultException;
 import com.zxin.network.http.RetrofitHelper;
 import com.zxin.network.mvp.model.BaseModel;
 import com.zxin.sources.api.ZXinSourcesApi;
-
+import com.zxin.basemodel.util.BuildUtils;
 import okhttp3.ResponseBody;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -18,7 +19,7 @@ import rx.schedulers.Schedulers;
 public class SourcesModel extends BaseModel {
 
     public void getCodeKKList(String mesg,int pageNum) {
-        ZXinSourcesApi api = getZxinWebApi().getZxinAPI("http://p.codekk.com/");
+        ZXinSourcesApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(ApiUrlMode.APIURL_MODE_Codekk));
         api.getCodeKKList(mesg,pageNum)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -41,7 +42,7 @@ public class SourcesModel extends BaseModel {
      * @param pageNum
      */
     public void getYunShangList(int pageNum) {
-        ZXinSourcesApi api = getZxinWebApi().getZxinAPI("http://www.ynshangji.com/");
+        ZXinSourcesApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(ApiUrlMode.APIURL_MODE_YuShangJi));
         api.getYunShangList(pageNum)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -64,7 +65,7 @@ public class SourcesModel extends BaseModel {
      * @param pageNum
      */
     public void getAndroidBusList(int pageNum) {
-        ZXinSourcesApi api = getZxinWebApi().getZxinAPI("http://www.apkbus.com/");
+        ZXinSourcesApi api = getZxinWebApi().getZxinAPI(BuildUtils.getInstance(getContext()).getURLAPI(ApiUrlMode.APIURL_MODE_ApkBus));
         api.getAndroidBusList(pageNum)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())

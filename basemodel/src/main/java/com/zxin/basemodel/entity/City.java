@@ -3,6 +3,7 @@ package com.zxin.basemodel.entity;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
 import android.text.TextUtils;
 
 /**
@@ -12,6 +13,7 @@ import android.text.TextUtils;
 public class City {
     @PrimaryKey //定义主键
     @ColumnInfo(name = "area_id")
+    @NonNull
     public String areaId;
 
     @ColumnInfo(name = "parent_id")//定义数据表中的字段名

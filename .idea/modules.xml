@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ZxinApp.iml" filepath="$PROJECT_DIR$/ZxinApp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ZxinApp.iml" filepath="$PROJECT_DIR$/ZxinApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/basemodel/basemodel.iml" filepath="$PROJECT_DIR$/basemodel/basemodel.iml" />
       <module fileurl="file://$PROJECT_DIR$/jianshennannv/jianshennannv.iml" filepath="$PROJECT_DIR$/jianshennannv/jianshennannv.iml" />

@@ -10,7 +10,6 @@ import android.text.TextUtils;
  */
 @Entity(tableName = "tb_sys_zxindb")//定义外键
 public class ZxinDB {
-
     @PrimaryKey(autoGenerate = true) //定义主键,自增
     @ColumnInfo(name = "id")
     public int id;
