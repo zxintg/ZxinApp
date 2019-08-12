@@ -230,4 +230,44 @@ public class GlobalUtil extends com.zxin.root.util.GlobalUtil{
         LogUtils.d(TAG, "jsonToBean jsonStr is : " + jsonStr);
         return new Gson().fromJson(jsonStr, clazz);
     }
+    
+    /****
+     * 根据ID获取Dimen
+     * @param resId 资源id
+     * @return
+     */
+    public static int getDimensionById(int resId) {
+        return getResources().getDimensionPixelSize(resId);
+    }
+
+    /****
+     * 根据name获取Dimen
+     * @param resName
+     * @return
+     */
+    public static int getDimensionByName(String resName) {
+        int resId = getResources().getIdentifier(resName,"dimen",NioRootApp.getApp().getPackageName());
+        return getDimensionById(resId);
+    }
+
+    /****
+     * 获取布局
+     * @param id
+     * @param <V>
+     * @return
+     */
+    public static <V extends View> V getViewById(int id) {
+        return (V) LayoutInflater.from(NioRootApp.getApp().getApplicationContext()).inflate(id, null);
+    }
+
+    /*****
+     * 厘米转换px
+     * 72dpi 1厘米
+     * @param cm 单位 厘米
+     * @return
+     */
+    public static float cm2px(float cm){
+        float scale = GlobalUtil.getResources().getDisplayMetrics().density;
+        return cm * 72 * scale + 0.5f;
+    }
 }
