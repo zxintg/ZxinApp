@@ -17,6 +17,14 @@ import java.util.Date;
 
 public class GlobalUtil extends com.zxin.root.util.GlobalUtil{
     private static final LogUtils.Tag TAG = new LogUtils.Tag("GlobalUtil");
+    
+    private static final String TYPE_DRAWABLE = "drawable";
+    private static final String TYPE_LAYOUT = "layout";
+    private static final String TYPE_STRING = "string";
+    private static final String TYPE_DIMEN = "dimen";
+    private static final String TYPE_ANIM = "anim";
+    private static final String TYPE_ID = "id";
+    
     private static final int DEF_DIV_SCALE = 110;
 
     public static void dialogTitleLineColor(Dialog dialog, int color) {
@@ -246,7 +254,7 @@ public class GlobalUtil extends com.zxin.root.util.GlobalUtil{
      * @return
      */
     public static int getDimensionByName(String resName) {
-        int resId = getResources().getIdentifier(resName,"dimen",NioRootApp.getApp().getPackageName());
+        int resId = getDimenId(resName);
         return getDimensionById(resId);
     }
 
@@ -269,5 +277,33 @@ public class GlobalUtil extends com.zxin.root.util.GlobalUtil{
     public static float cm2px(float cm){
         float scale = GlobalUtil.getResources().getDisplayMetrics().density;
         return cm * 72 * scale + 0.5f;
+    }
+    
+    public static int getIdentifierId(Context context, String name) {
+        return getResourceId(context, name, TYPE_ID);
+    }
+
+    public static int getDrawableId(Context context, String name) {
+        return getResourceId(context, name, TYPE_DRAWABLE);
+    }
+
+    public static int getStringId(Context context, String name) {
+        return getResourceId(context, name, TYPE_STRING);
+    }
+
+    public static int getLayoutId(Context context, String name) {
+        return getResourceId(context, name, TYPE_LAYOUT);
+    }
+
+    public static int getDimenId(Context context, String name) {
+        return getResourceId(context, name, TYPE_DIMEN);
+    }
+
+    public static int getAnimId(Context context, String name) {
+        return getResourceId(context, name, TYPE_ANIM);
+    }
+
+    public static int getResourceId(Context context, String name, String defType) {
+        return getResources().getIdentifier(name,defType,context.getPackageName());
     }
 }
