@@ -3,11 +3,15 @@ package com.zxin.basemodel.util;
 import android.app.AlarmManager;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.res.Resources;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.ClickableSpan;
 import android.text.style.ForegroundColorSpan;
+import android.view.LayoutInflater;
 import android.view.View;
+
+import com.zxin.basemodel.app.BaseApplication;
 import com.zxin.root.util.UiUtils;
 import com.zxin.root.util.logger.LogUtils;
 import com.google.gson.Gson;
@@ -265,7 +269,7 @@ public class GlobalUtil extends com.zxin.root.util.GlobalUtil{
      * @return
      */
     public static <V extends View> V getViewById(int id) {
-        return (V) LayoutInflater.from(NioRootApp.getApp().getApplicationContext()).inflate(id, null);
+        return (V) LayoutInflater.from(BaseApplication.getInstance().getApplicationContext()).inflate(id, null);
     }
 
     /*****
@@ -279,31 +283,35 @@ public class GlobalUtil extends com.zxin.root.util.GlobalUtil{
         return cm * 72 * scale + 0.5f;
     }
     
-    public static int getIdentifierId(Context context, String name) {
-        return getResourceId(context, name, TYPE_ID);
+    public static int getIdentifierId(String name) {
+        return getResourceId(name, TYPE_ID);
     }
 
-    public static int getDrawableId(Context context, String name) {
-        return getResourceId(context, name, TYPE_DRAWABLE);
+    public static int getDrawableId(String name) {
+        return getResourceId(name, TYPE_DRAWABLE);
     }
 
     public static int getStringId(Context context, String name) {
-        return getResourceId(context, name, TYPE_STRING);
+        return getResourceId(name, TYPE_STRING);
     }
 
-    public static int getLayoutId(Context context, String name) {
-        return getResourceId(context, name, TYPE_LAYOUT);
+    public static int getLayoutId(String name) {
+        return getResourceId(name, TYPE_LAYOUT);
     }
 
-    public static int getDimenId(Context context, String name) {
-        return getResourceId(context, name, TYPE_DIMEN);
+    public static int getDimenId(String name) {
+        return getResourceId(name, TYPE_DIMEN);
     }
 
-    public static int getAnimId(Context context, String name) {
-        return getResourceId(context, name, TYPE_ANIM);
+    public static int getAnimId(String name) {
+        return getResourceId(name, TYPE_ANIM);
     }
 
-    public static int getResourceId(Context context, String name, String defType) {
-        return getResources().getIdentifier(name,defType,context.getPackageName());
+    public static int getResourceId(String name, String defType) {
+        return getResources().getIdentifier(name,defType,BaseApplication.getInstance().getApplicationContext().getPackageName());
+    }
+
+    public static Resources getResources() {
+        return BaseApplication.getInstance().getApplicationContext().getResources();
     }
 }
