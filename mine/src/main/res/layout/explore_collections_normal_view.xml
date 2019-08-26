@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:layout_gravity="center_vertical" android:background="#ff2fb3ff" android:layout_width="@dimen/detail_card_title_tag_width_v5" android:layout_height="@dimen/detail_card_title_tag_height_v5" />
+        <TextView android:textSize="@dimen/explore_normal_view_pool_title_text_size" android:textColor="@color/collection_create_text_color" android:id="@id/collection_pool_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/explore_normal_view_pool_title_margin_left" android:layout_marginTop="@dimen/explore_normal_view_pool_title_margin_top_and_bottom" android:layout_marginBottom="@dimen/explore_normal_view_pool_title_margin_top_and_bottom" android:text="配饭视频" />
+    </LinearLayout>
+    <com.youku.phone.collection.widget.SnapScrollRecyclerView android:id="@id/normal_recycler_view" android:paddingLeft="10.0dip" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/explore_normal_view_recycler_view_margin_bottom" />
+</LinearLayout>

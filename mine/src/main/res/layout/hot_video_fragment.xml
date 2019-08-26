@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.widget.CompatSwipeRefreshLayout android:id="@id/hot_list_refresh_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ListView android:id="@id/listview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@drawable/row_table_listview_item_selector" android:divider="@color/row_table_color_line" android:dividerHeight="1.0px" />
+    </com.youku.widget.CompatSwipeRefreshLayout>
+    <TextView android:gravity="center" android:id="@id/tvhot_respones_err" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/respones_error" />
+</RelativeLayout>

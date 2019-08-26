@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.phone.home.view.HomeCardTitleView android:id="@id/home_card_title_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.youku.interaction.views.WebViewWrapper android:id="@id/home_card_item_web_view" android:layout_width="fill_parent" android:layout_height="@dimen/home_card_h5_item_height" />
+    <ViewStub android:id="@id/home_video_land_item_tailer" android:layout="@layout/home_card_item_tail_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

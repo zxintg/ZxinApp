@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView android:id="@id/scrollview" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioGroup android:gravity="fill_horizontal" android:orientation="horizontal" android:id="@id/calendar_group" android:background="@drawable/actionbar_scrollview_bg" android:visibility="gone" android:layout_width="@dimen/calendar_tab_width" android:layout_height="@dimen/calendar_tab_height" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <RadioButton android:id="@id/Janurary" android:text="@string/Janurary" style="@style/calendar_tab_bar" />
+        <RadioButton android:id="@id/February" android:text="@string/February" style="@style/calendar_tab_bar" />
+        <RadioButton android:id="@id/March" android:text="@string/March" style="@style/calendar_tab_bar" />
+        <RadioButton android:id="@id/April" android:text="@string/April" style="@style/calendar_tab_bar" />
+        <RadioButton android:id="@id/May" android:text="@string/May" style="@style/calendar_tab_bar" />
+        <RadioButton android:id="@id/June" android:text="@string/June" style="@style/calendar_tab_bar" />
+        <RadioButton android:id="@id/July" android:text="@string/July" style="@style/calendar_tab_bar" />
+        <RadioButton android:id="@id/August" android:text="@string/August" style="@style/calendar_tab_bar" />
+        <RadioButton android:id="@id/September" android:text="@string/September" style="@style/calendar_tab_bar" />
+        <RadioButton android:id="@id/October" android:text="@string/October" style="@style/calendar_tab_bar" />
+        <RadioButton android:id="@id/November" android:text="@string/November" style="@style/calendar_tab_bar" />
+        <RadioButton android:id="@id/December" android:text="@string/December" style="@style/calendar_tab_bar" />
+    </RadioGroup>
+</HorizontalScrollView>

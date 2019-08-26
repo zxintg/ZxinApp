@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:background="@drawable/home_ic_history_line" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:id="@id/history_container" android:background="@drawable/home_bg_history" android:clickable="true" android:layout_width="fill_parent" android:layout_height="180.0dip">
+        <FrameLayout android:id="@id/img_layout" android:layout_width="167.0dip" android:layout_height="94.0dip" android:layout_margin="9.0dip">
+            <ImageView android:layout_gravity="center" android:layout_width="@dimen/icon_not_loaded_width" android:layout_height="@dimen/icon_not_loaded_width" android:src="@drawable/channel_not_loaded_icon_play" />
+            <ImageView android:id="@id/img" android:background="@drawable/home_bg_history_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        </FrameLayout>
+        <TextView android:textAppearance="@style/HomeHistoryTitleFont" android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="9.0dip" android:maxLines="2" android:layout_toRightOf="@id/img_layout" />
+        <TextView android:textAppearance="@style/HomeHistorySubTitleFont" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9.0dip" android:layout_marginTop="5.0dip" android:layout_toRightOf="@id/img_layout" android:layout_below="@id/title" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/operateContainer" android:background="@drawable/home_bg_history_button" android:layout_width="fill_parent" android:layout_height="70.0dip" android:layout_alignParentBottom="true">
+            <Button android:gravity="center" android:id="@id/btn_history" android:background="@color/transparent" android:paddingTop="12.0dip" android:layout_width="120.0dip" android:layout_height="fill_parent" android:text="@string/my_history" android:drawableTop="@drawable/home_btn_history" android:drawablePadding="6.0dip" style="@style/HomeHistoryBtnFont" />
+            <Button android:gravity="center" android:id="@id/btn_play" android:background="@drawable/home_bg_history_play" android:paddingTop="12.0dip" android:layout_width="120.0dip" android:layout_height="fill_parent" android:text="@string/play_continue" android:drawableTop="@drawable/home_btn_play" android:drawablePadding="6.0dip" android:layout_weight="1.0" style="@style/HomeHistoryBtnFont" />
+            <Button android:gravity="center" android:id="@id/btn_next_series" android:background="@drawable/home_bg_history_play" android:paddingTop="12.0dip" android:visibility="gone" android:layout_width="120.0dip" android:layout_height="fill_parent" android:text="@string/play_next" android:drawableTop="@drawable/home_btn_next_series" android:drawablePadding="6.0dip" android:layout_weight="1.0" style="@style/HomeHistoryBtnFont" />
+        </LinearLayout>
+        <TextView android:textAppearance="@style/HomeHistorySubTitleFont" android:gravity="center" android:id="@id/history_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:layout_marginBottom="14.0dip" android:layout_above="@id/operateContainer" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</LinearLayout>

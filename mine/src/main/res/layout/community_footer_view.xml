@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="1.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/topic_loading_data_lin" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/community_load_height">
+        <ProgressBar android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@android:style/Widget.ProgressBar.Small" />
+        <TextView android:textSize="@dimen/text_size_3" android:textColor="@color/commuinty_no_data_color" android:id="@id/toast" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/community_padding_10" android:text="@string/load_more" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/topic_no_more_data_lin" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/community_load_height">
+        <TextView android:textSize="@dimen/text_size_3" android:textColor="@color/commuinty_no_data_color" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/no_more_video" />
+    </LinearLayout>
+    <View android:id="@id/line_band" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/community_padding_8" />
+    <View android:id="@id/footer_blank_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

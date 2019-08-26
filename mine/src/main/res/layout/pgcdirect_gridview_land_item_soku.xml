@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/persondirect_more_btn_selector" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.soku.searchsdk.view.ChannelCellImageLayout android:id="@id/pgcdirect_land_item_img_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/pgcdirect_item_default_img_layout" android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center" android:layout_width="@dimen/icon_default_width" android:layout_height="@dimen/icon_default_width" android:src="@drawable/channel_not_loaded_icon_play" />
+            <FrameLayout android:id="@id/layout_holder" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:id="@id/pgcdirect_land_item_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+            </FrameLayout>
+            <FrameLayout android:layout_gravity="bottom|center|right" android:background="@drawable/waist_seal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="bottom|center|right" android:id="@id/pgcdirect_land_item_stripe_middle" android:paddingRight="@dimen/persondirect_item_txt_marginleft" android:layout_width="wrap_content" android:layout_height="@dimen/grid_item_stripe_middle_height" android:singleLine="true" android:shadowColor="#90000000" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" style="@style/homepage_item_middle_stripe" />
+                <TextView android:textSize="@dimen/soku_directnoopen_item_num_size_v5" android:ellipsize="end" android:gravity="center" android:layout_gravity="bottom|center|left" android:id="@id/pgcdirect_live_item_type" android:background="@drawable/left_corner" android:paddingLeft="@dimen/searchresult_item_txt_padding" android:paddingRight="@dimen/searchresult_item_txt_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/home_video_land_item_operation_corner_mark_height" android:layout_marginLeft="6.0dip" android:layout_marginRight="@dimen/soku_result_right_corner_mark_margin_right" android:layout_marginBottom="6.0dip" android:singleLine="true" />
+            </FrameLayout>
+        </FrameLayout>
+        <RelativeLayout android:id="@id/triangle_wrapper" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.soku.searchsdk.widget.TriangleView android:id="@id/triangle_view" android:visibility="gone" android:layout_width="@dimen/triangle_view_height" android:layout_height="@dimen/triangle_view_height" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+            <com.soku.searchsdk.widget.RobbinTextView android:gravity="center" android:id="@id/triangle_text_s" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/triangle_text" />
+        </RelativeLayout>
+    </com.soku.searchsdk.view.ChannelCellImageLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/searchresult_ugc_item_txt_height">
+        <TextView android:ellipsize="end" android:id="@id/pgcdirect_item_txt" android:paddingLeft="@dimen/soku_searchresult_item_txt_padding" android:paddingTop="@dimen/searchresult_item_txt_padding_top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" style="@style/soku_searchresult_item_txt" />
+        <RelativeLayout android:paddingLeft="@dimen/soku_searchresult_item_txt_padding" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/pgcdirect_item_pv_icon" android:layout_width="@dimen/soku_result_pv_icon_height" android:layout_height="@dimen/soku_result_pv_icon_height" android:layout_marginRight="@dimen/soku_result_pv_icon_margin_right" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:ellipsize="end" android:id="@id/pgcdirect_item_pv_txt" android:paddingLeft="@dimen/soku_result_pv_txt_padding_left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/soku_result_pv_txt_margin_left" android:singleLine="true" android:layout_toRightOf="@id/pgcdirect_item_pv_icon" android:layout_centerVertical="true" style="@style/homepage_item_title_second" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

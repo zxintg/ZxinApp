@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/vip_container_card" android:background="@color/black" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/vip_freeflow_top_back_imageview" android:layout_width="wrap_content" android:layout_height="@dimen/plugin_fullscreen_top_view_height" android:layout_alignParentLeft="true">
+        <ImageView android:id="@id/player_back_btn_left" android:duplicateParentState="true" android:layout_width="@dimen/player_back_btn_left_width" android:layout_height="fill_parent" android:src="@drawable/player_back_btn_left" />
+        <ImageView android:id="@id/player_back_btn_logo" android:layout_width="@dimen/player_back_btn_logo_width" android:layout_height="fill_parent" android:src="@drawable/player_back_btn_logo" />
+        <View android:layout_gravity="center" android:id="@id/player_back_btn_line" android:background="#33ffffff" android:layout_width="1.0px" android:layout_height="@dimen/player_back_btn_line_height" />
+    </LinearLayout>
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <TextView android:textSize="@dimen/freeflowvip_center_textview_textsize" android:gravity="center" android:id="@id/vip_freeflow_text_str" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vip_freeflow_text_str" android:lineSpacingExtra="@dimen/freeflowvip_center_tip_text_linespaceextra" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/freeflowvip_center_linearylayout_margintop" android:layout_below="@id/vip_freeflow_text_str">
+            <TextView android:textSize="@dimen/freeflowvip_center_textview_textsize" android:textColor="@color/freeflow_continue_color" android:id="@id/vip_freeflow_continue_play_textview" android:background="@drawable/detail_vip_freeflow_card_textview_bg" android:padding="@dimen/freeflowvip_center_textview_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/freeflowvip_center_textview_marginleft_right" android:text="@string/vip_freeflow_continue_play" />
+            <TextView android:textSize="@dimen/freeflowvip_center_textview_textsize" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/vip_freeflow_buy_now_textview" android:background="@drawable/detail_vip_freeflow_card_textview_buy_bg" android:padding="@dimen/freeflowvip_center_textview_padding" android:layout_width="@dimen/freeflowvip_center_textview_buy_now_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/freeflowvip_center_textview_marginleft_right" android:text="@string/vip_freeflow_buy_now" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

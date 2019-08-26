@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.gamecenter.widgets.channel.ChannelCellImageLayout android:id="@id/channel_land_item_img_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/channel_land_item_line_showtop">
+            <ImageView android:layout_gravity="center" android:layout_width="@dimen/icon_default_width" android:layout_height="@dimen/icon_default_width" android:src="@drawable/channel_not_loaded_icon_play" />
+            <ImageView android:id="@id/channel_land_item_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+            <RelativeLayout android:layout_gravity="bottom" android:id="@id/image_delete_bg" android:background="@drawable/game_channel_video_mask" android:layout_width="fill_parent" android:layout_height="@dimen/game_channel_card_image_title_height">
+                <View android:background="#33ffffff" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="@dimen/game_channel_card_image_title_margin" android:layout_marginRight="@dimen/game_channel_card_image_title_margin" android:layout_alignParentTop="true" />
+                <TextView android:textSize="@dimen/game_channel_card_image_title_text_size" android:textColor="#ffffffff" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/channel_card_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/game_channel_card_image_title_margin" android:layout_marginRight="@dimen/game_channel_card_image_title_margin" android:singleLine="true" />
+            </RelativeLayout>
+        </FrameLayout>
+    </com.youku.gamecenter.widgets.channel.ChannelCellImageLayout>
+    <com.youku.gamecenter.widgets.channel.ChannelCellTitleLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/channel_land_item_title_layout" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/game_detail" android:layout_width="fill_parent" android:layout_height="@dimen/game_channel_card_game_container_height">
+            <ImageView android:id="@id/game_icon" android:layout_width="@dimen/game_channel_card_game_icon_width" android:layout_height="@dimen/game_channel_card_game_icon_width" android:layout_marginLeft="@dimen/game_channel_card_game_container_margin" android:layout_marginTop="@dimen/game_channel_card_game_icon_margin_top" android:layout_marginRight="@dimen/game_channel_card_game_container_margin" />
+            <TextView android:textSize="@dimen/game_channel_card_game_name_text_size" android:textColor="#ff434e53" android:ellipsize="end" android:id="@id/game_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/game_channel_card_game_text_margin_top" android:singleLine="true" android:layout_toLeftOf="@id/game_install" android:layout_toRightOf="@id/game_icon" />
+            <RatingBar android:id="@id/game_ratingbar" android:layout_width="wrap_content" android:layout_height="@dimen/game_channel_rating_height" android:layout_marginTop="@dimen/game_channel_rating_margin_top" android:numStars="5" android:rating="3.5" android:stepSize="0.5" android:isIndicator="true" android:layout_toRightOf="@id/game_icon" android:layout_below="@id/game_name" style="@style/game_channel_ratingbar" />
+            <TextView android:textSize="@dimen/game_channel_card_game_button_text_size" android:textColor="#ff02a2fe" android:gravity="center" android:id="@id/game_install" android:background="@drawable/game_channel_install_btn_bg" android:layout_width="@dimen/game_channel_card_game_button_width" android:layout_height="@dimen/game_channel_card_game_button_height" android:layout_marginTop="@dimen/game_channel_card_game_content_margin_top" android:layout_marginRight="@dimen/game_channel_card_game_container_margin" android:text="@string/str_install" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </com.youku.gamecenter.widgets.channel.ChannelCellTitleLayout>
+    <ImageView android:layout_gravity="bottom" android:id="@id/channel_land_item_line" android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="2.0px" />
+</LinearLayout>

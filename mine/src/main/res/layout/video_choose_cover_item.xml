@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youku.usercenter.widget.ChannelCellImageLayout android:orientation="vertical" android:background="@drawable/upload_myvideo_item_btn_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_padding_half" android:layout_marginTop="@dimen/activity_padding_normal" android:layout_marginRight="@dimen/activity_padding_half"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/upload_video_item_cover_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <ImageView android:id="@id/upload_video_item_check" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/activity_padding_normal" android:src="@drawable/upload_ic_chosen" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</com.youku.usercenter.widget.ChannelCellImageLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/hd_actionbar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/hd_subscribe_tab_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/add_button" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:src="@drawable/hd_ic_add_selector" android:layout_centerVertical="true" />
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerInParent="true">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/update_subscribe_tab" android:background="@drawable/hd_subscribe_tab_radio" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="20.0dip">
+            <TextView android:textSize="@dimen/hd_nologinview_text_size" android:textColor="@drawable/hd_subscribe_tab_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/time_order_subscribe" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:id="@id/follow_subscribe_tab" android:background="@drawable/hd_subscribe_tab_radio" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="20.0dip">
+            <TextView android:textSize="@dimen/hd_nologinview_text_size" android:textColor="@drawable/hd_subscribe_tab_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/follow_subscribe" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/person_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:src="@drawable/hd_ic_person_selector" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

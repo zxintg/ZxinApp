@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/actionbar" />
+    <HorizontalScrollView android:id="@id/LiveScrollView" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="false">
+        <LinearLayout android:orientation="horizontal" android:id="@id/LivelinearLayout" android:background="#ffffffff" android:visibility="gone" android:layout_width="@dimen/liveListActivity_categorywholewidth" android:layout_height="@dimen/liveListActivity_categoryheight">
+            <TextView android:textSize="@dimen/liveListActivity_textsize" android:textColor="@color/colorR4DG9CBEC" android:gravity="center" android:id="@id/text_all" android:visibility="gone" android:layout_width="@dimen/liveListActivity_categorywidth" android:layout_height="fill_parent" android:text="全部" android:layout_weight="1.0" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <ImageView android:id="@id/imgslider" android:background="@color/color4D9CEC" android:visibility="gone" android:layout_width="@dimen/liveListActivity_imgsliderwidth" android:layout_height="2.0dip" android:scaleType="matrix" />
+    <android.support.v4.view.ViewPager android:id="@id/viewpager" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/linearlayout_offline" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="2.0" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center" android:id="@id/disconnectimage" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/offline" />
+            <TextView android:textSize="20.0sp" android:layout_gravity="center_horizontal" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="网络链接失败！" />
+            <TextView android:textSize="20.0sp" android:textColor="@color/colorClickRetry" android:layout_gravity="center_horizontal" android:id="@id/disconnectretry_textview" android:padding="10.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="点击重试" />
+        </LinearLayout>
+        <View android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="2.0" />
+    </LinearLayout>
+</LinearLayout>

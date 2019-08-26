@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/vr_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/occupy_view" android:visibility="invisible" android:layout_width="1.0dip" android:layout_height="1.0dip" android:layout_centerInParent="true" />
+    <ImageView android:id="@id/left_guide" android:layout_width="@dimen/left_guide_width" android:layout_height="@dimen/left_guide_height" android:layout_marginRight="@dimen/left_guide_marginRight" android:src="@drawable/vr_press" android:layout_toLeftOf="@id/occupy_view" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/right_guide" android:layout_width="@dimen/left_guide_width" android:layout_height="@dimen/left_guide_height" android:layout_marginLeft="@dimen/left_guide_marginLeft" android:src="@drawable/vr_wave" android:layout_toRightOf="@id/occupy_view" android:layout_centerVertical="true" />
+</RelativeLayout>

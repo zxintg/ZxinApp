@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/channel_custom_title_line" android:paddingTop="@dimen/channel_custom_title_padding_topbottom" android:paddingBottom="@dimen/channel_custom_title_padding_topbottom" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentLeft="true">
+        <View android:background="#ffc7c7c7" android:layout_width="1.0px" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <RelativeLayout android:gravity="center|left" android:id="@id/left_webview_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/channel_custom_title_txt_marginleft" android:layout_weight="1.0">
+        <com.youku.miniplayer.AlwaysMarqueeTextView android:ellipsize="marquee" android:gravity="center|left" android:id="@id/webview_custom_title_txt" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLines="1" android:minLines="1" android:scrollHorizontally="true" android:singleLine="true" android:marqueeRepeatLimit="1" style="@style/channel_custom_title_txt" />
+    </RelativeLayout>
+</LinearLayout>

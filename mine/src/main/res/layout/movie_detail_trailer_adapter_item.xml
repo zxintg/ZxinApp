@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/default_img" android:layout_width="@dimen/icon_default_width" android:layout_height="@dimen/icon_default_width" android:src="@drawable/channel_not_loaded_icon_play" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    <com.youku.widget.YoukuImageView android:id="@id/video_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <RelativeLayout android:id="@id/movie_detail_trailer_rl" android:layout_width="fill_parent" android:layout_height="@dimen/myouku_video_yf_text_height" android:layout_alignBottom="@id/video_img">
+        <TextView android:textSize="@dimen/myouku_video_yf_text_size" android:ellipsize="end" android:gravity="center|right" android:id="@id/movie_trailer_duration" android:background="@drawable/waist_seal" android:paddingLeft="@dimen/waist_seal_line_marginLeft" android:paddingRight="@dimen/waist_seal_line_marginLeft" android:layout_width="wrap_content" android:layout_height="@dimen/myouku_video_yf_text_height" android:singleLine="true" android:layout_alignParentRight="true" style="@style/waist_seal_title_style" />
+        <TextView android:textSize="@dimen/myouku_video_yf_text_size" android:ellipsize="end" android:gravity="center|left" android:id="@id/movie_title" android:background="@drawable/waist_seal" android:paddingLeft="@dimen/waist_seal_line_marginLeft" android:layout_width="fill_parent" android:layout_height="@dimen/myouku_video_yf_text_height" android:singleLine="true" android:layout_toLeftOf="@id/movie_trailer_duration" style="@style/waist_seal_title_style" />
+    </RelativeLayout>
+    <View android:background="#33ffffff" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="@dimen/waist_seal_line_marginLeft" android:layout_marginRight="@dimen/waist_seal_line_marginLeft" android:layout_above="@id/movie_detail_trailer_rl" />
+</RelativeLayout>

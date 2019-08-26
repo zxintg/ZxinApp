@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/colorNestBookViewButtonBookBackgroundColor" />
+    <corners android:topLeftRadius="@dimen/nest_bookview_bookbutton_corner_normal" android:topRightRadius="@dimen/nest_bookview_bookbutton_corner_normal" android:bottomLeftRadius="@dimen/nest_bookview_bookbutton_corner_normal" android:bottomRightRadius="@dimen/nest_bookview_bookbutton_corner_normal" />
+</shape>

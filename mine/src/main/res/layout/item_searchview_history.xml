@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="5.0">
+        <LinearLayout android:orientation="horizontal" android:id="@id/history_clickable" android:background="@drawable/selector_bg_search_click" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/search_widget_edit_padding_left" android:src="@drawable/moren_shijian" />
+            <TextView android:textSize="@dimen/search_item_suggestion_keyword_textsize" android:textColor="#ff666666" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/history_keyword" android:paddingLeft="@dimen/search_widget_edit_padding_left" android:paddingRight="@dimen/search_widget_edit_padding_left" android:layout_width="wrap_content" android:layout_height="@dimen/search_widget_container_height" android:singleLine="true" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/soku_directnoopen_item_num_size_v5" android:textColor="#ffb5b7b9" android:ellipsize="end" android:gravity="center|right" android:layout_gravity="center|right" android:id="@id/history_close" android:background="@drawable/selector_bg_search_click" android:paddingRight="@dimen/search_widget_edit_padding_left" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" android:drawableRight="@drawable/searchhistory_bofang" android:drawablePadding="5.0dip" android:layout_weight="2.0" />
+    </LinearLayout>
+    <View android:background="#fff0f0f0" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</LinearLayout>

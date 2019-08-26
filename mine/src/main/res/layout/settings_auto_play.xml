@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/auto1" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:paddingRight="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+        <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="进入详情页自动播放" android:layout_centerVertical="true" />
+        <CheckBox android:id="@id/autoplay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/settings_CheckBox" />
+    </RelativeLayout>
+    <View android:background="#ffc9c9c9" android:layout_width="fill_parent" android:layout_height="2.0px" />
+</LinearLayout>

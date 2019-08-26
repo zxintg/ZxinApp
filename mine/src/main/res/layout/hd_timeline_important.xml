@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/video_container" layout="@layout/hd_fragment_timeline_item" />
+    <RelativeLayout android:id="@id/half_open_panel" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginLeft="60.0dip" android:layout_below="@id/video_container" android:layout_centerVertical="true">
+        <View style="@style/hd_gridview_gap_line" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <com.youku.hd.subscribe.ui.widget.RoundPhoto android:id="@id/hide_photo1" android:layout_width="@dimen/hd_subscribe_item_photo_size_3" android:layout_height="@dimen/hd_subscribe_item_photo_size_3" android:layout_marginRight="@dimen/hd_timeline_gapline_top" android:layout_alignParentLeft="true" />
+            <com.youku.hd.subscribe.ui.widget.RoundPhoto android:id="@id/hide_photo2" android:layout_width="@dimen/hd_subscribe_item_photo_size_3" android:layout_height="@dimen/hd_subscribe_item_photo_size_3" android:layout_marginRight="@dimen/hd_timeline_gapline_top" android:layout_toRightOf="@id/hide_photo1" />
+            <com.youku.hd.subscribe.ui.widget.RoundPhoto android:id="@id/hide_photo3" android:layout_width="@dimen/hd_subscribe_item_photo_size_3" android:layout_height="@dimen/hd_subscribe_item_photo_size_3" android:layout_marginRight="@dimen/hd_timeline_gapline_top" android:layout_toRightOf="@id/hide_photo2" />
+            <com.youku.hd.subscribe.ui.widget.RoundPhoto android:id="@id/hide_photo4" android:layout_width="@dimen/hd_subscribe_item_photo_size_3" android:layout_height="@dimen/hd_subscribe_item_photo_size_3" android:layout_marginRight="@dimen/hd_timeline_gapline_top" android:layout_toRightOf="@id/hide_photo3" />
+            <com.youku.hd.subscribe.ui.widget.RoundPhoto android:id="@id/hide_photo5" android:layout_width="@dimen/hd_subscribe_item_photo_size_3" android:layout_height="@dimen/hd_subscribe_item_photo_size_3" android:layout_marginRight="@dimen/hd_timeline_gapline_top" android:layout_toRightOf="@id/hide_photo4" />
+            <TextView android:textSize="@dimen/hd_timeline_title" android:textColor="@color/hd_unique_broadcast_item_desc" android:id="@id/hide_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3个星标频道有更新" android:drawableRight="@drawable/hd_down_arrow" android:drawablePadding="@dimen/hd_timeline_gapline_top" android:layout_toRightOf="@id/hide_photo5" android:layout_centerInParent="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

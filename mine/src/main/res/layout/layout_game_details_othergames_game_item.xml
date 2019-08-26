@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/other_game_icon" android:layout_width="@dimen/game_detail_game_icon_size" android:layout_height="@dimen/game_detail_game_icon_size" android:src="@drawable/game_list_item_default" android:layout_alignParentLeft="true" />
+    <TextView android:textSize="@dimen/game_desc_text_size" android:id="@id/other_game_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/game_detail_game_icon_margin_right" android:layout_marginTop="@dimen/game_detail_game_title_margin_top" android:layout_marginRight="@dimen/game_detail_game_title_margin_top" android:singleLine="true" android:layout_toRightOf="@id/other_game_icon" />
+    <Button android:textSize="@dimen/list_item_title_text_size" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/other_game_action" android:background="#ff4ec7ff" android:layout_width="@dimen/game_detail_game_btn_width" android:layout_height="@dimen/game_detail_game_btn_height" android:layout_marginLeft="@dimen/game_detail_game_icon_margin_right" android:layout_marginTop="@dimen/game_detail_game_title_margin_bottom" android:text="@string/str_download" android:layout_toRightOf="@id/other_game_icon" android:layout_alignBottom="@id/other_game_icon" />
+</RelativeLayout>

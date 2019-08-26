@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/tab_tab_header_title_ll" android:paddingLeft="@dimen/home_card_one_item_title_margin" android:paddingRight="@dimen/home_card_one_item_title_margin" android:layout_width="fill_parent" android:layout_height="@dimen/home_card_one_item_title_layout_height">
+        <LinearLayout android:gravity="center|left" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.8">
+            <TextView android:textSize="@dimen/home_video_land_item_operation_corner_mark_text_size" android:gravity="center" android:id="@id/tab_tab_header_title_operation_corner" android:layout_width="wrap_content" android:layout_height="@dimen/home_video_land_item_operation_corner_mark_height" android:layout_marginRight="@dimen/home_card_title_corner_mark_right_margin" android:minWidth="@dimen/home_video_land_item_operation_corner_mark_width" />
+            <TextView android:ellipsize="end" android:id="@id/tab_tab_header_item_title_first" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" style="@style/home_card_one_item_title" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center|right" android:id="@id/tab_tab_header_item_more_layout" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.2">
+            <ImageView android:id="@id/home_card_one_item_more_img" android:layout_width="@dimen/home_card_title_more_img_width" android:layout_height="@dimen/home_card_title_more_img_height" android:src="@drawable/home_card_title_more" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

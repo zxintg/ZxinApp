@@ -66,7 +66,7 @@ public class MyApplication extends BaseApplication {
                 // 调试模式，开启后会打印log
                 .setDebuggable(BuildConfig.DEBUG)
                 // 模块名(即project.name)，每个使用Router的module都要在这里注册
-                .registerModules("jianshennannv","sources", "meziyowu", "app")
+                .registerModules("jianshennannv","sources", "meziyowu", "app","mine")
                 .build());
         //百度地图 在使用SDK各组件之前初始化context信息，传入ApplicationContext
         SDKInitializer.initialize(application);

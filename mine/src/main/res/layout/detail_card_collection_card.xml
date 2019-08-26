@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/collection_card_title_container" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/collection_card_dock_bar_container" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <RelativeLayout android:id="@id/collection_card_dock_bar" android:background="@color/white" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/collection_card_head_height" android:layout_marginLeft="@dimen/detail_card_video_detail_title_marginleft">
+            <ImageView android:layout_gravity="center" android:id="@id/more" android:background="@null" android:layout_width="@dimen/detail_card_series_full_more_width_v5" android:layout_height="@dimen/detail_card_series_full_more_height_v5" android:src="@drawable/fanhui" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/detail_card_video_detail_title_size" android:textColor="#ff444444" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/collection_card_dock_bar_collection_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_video_detail_title_marginleft" android:layout_marginRight="@dimen/collection_card_collection_title_margin_right_full_screen" android:minHeight="50.0dip" android:text="播单：" android:singleLine="true" android:layout_toRightOf="@id/more" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:id="@id/collection_card_dock_bar_line1" android:background="#ffeaeaea" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/collection_card_dock_bar_container" />
+    <RelativeLayout android:id="@id/retrive_fail_container" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/collection_card_dock_bar_line1">
+        <android.support.v7.widget.RecyclerView android:id="@id/coll_video_list" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>

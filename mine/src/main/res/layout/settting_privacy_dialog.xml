@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/dialogLayout" android:background="@drawable/dialog_setting_public_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/dialog_top_selector" android:padding="@dimen/padding_left_right_15" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/text_size_18" android:textColor="@color/main_text_color" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_video_folder_privacy" android:lineSpacingExtra="@dimen/padding_left_right_2" />
+    </LinearLayout>
+    <View android:background="@color/dialog_divide_line_color_s" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <Button android:textSize="@dimen/text_size_18" android:textColor="@color/diaog_btn_text_color" android:gravity="center" android:id="@id/setting_privacy_btn" android:background="@drawable/dialog_center_selector" android:padding="@dimen/padding_left_right_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/setting_privacy" />
+    <View android:background="@color/dialog_divide_line_color_s" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <Button android:textSize="@dimen/text_size_18" android:textColor="@color/diaog_btn_text_color" android:gravity="center" android:id="@id/setting_unprivacy_btn" android:background="@drawable/dialog_center_selector" android:padding="@dimen/padding_left_right_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/setting_unpublic" />
+    <View android:background="@color/dialog_divide_line_color_s" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <Button android:textSize="@dimen/text_size_18" android:textColor="@color/diaog_btn_text_color" android:gravity="center" android:id="@id/cancel_public_btn" android:background="@drawable/dialog_bottom_selector" android:padding="@dimen/padding_left_right_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cancel" />
+</LinearLayout>

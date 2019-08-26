@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/channel_item_wrapper" android:background="@drawable/line_bg" android:layout_width="fill_parent" android:layout_height="@dimen/more_pop_item_height" android:weightSum="2.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/channel_item_inner" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <FrameLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/more_pop_item_marginTop" android:layout_weight="2.0">
+                <ImageView android:layout_gravity="center_horizontal" android:id="@id/channel_btn_icon" android:background="@color/transparent" android:layout_width="@dimen/more_item_iv_width" android:layout_height="@dimen/more_item_iv_height" android:scaleType="centerCrop" />
+                <ImageView android:layout_gravity="center_horizontal" android:id="@id/more_item_default" android:background="@color/transparent" android:layout_width="@dimen/more_item_iv_width" android:layout_height="@dimen/more_item_iv_height" android:src="@drawable/channel_btn_not_loaded" android:scaleType="fitXY" />
+            </FrameLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/more_pop_item_tv_marginTop" android:layout_weight="3.0">
+                <TextView android:textSize="@dimen/more_channel_popup_item_title_textsize" android:textColor="#ffffffff" android:id="@id/channel_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="电视剧" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

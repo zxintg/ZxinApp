@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/tv_pay_success" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/detail_pay_success" style="@style/pay_success" />
+    <TextView android:id="@id/tv_pay_watch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/detail_pay_watch" style="@style/pay_valid" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_button_container" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_pay_result_btn_margin_top">
+        <Button android:id="@id/btn_pay_watch_no" android:background="#cc616161" android:layout_width="@dimen/detail_pay_watch_yes_width" android:layout_height="@dimen/detail_pay_watch_yes_height" android:text="@string/comment_add_alert_cancel" style="@style/pay_price_discount" />
+        <Button android:id="@id/btn_pay_watch_yes" android:background="#cc007fc0" android:layout_width="@dimen/detail_pay_watch_yes_width" android:layout_height="@dimen/detail_pay_watch_yes_height" android:layout_marginLeft="@dimen/detail_pay_watch_yes_margin_left" android:text="@string/comment_add_alert_yes" style="@style/pay_price_discount" />
+    </LinearLayout>
+</LinearLayout>

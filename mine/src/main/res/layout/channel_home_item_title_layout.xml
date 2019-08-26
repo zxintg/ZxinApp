@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/channel_item_top_divider" android:layout_width="fill_parent" android:layout_height="@dimen/channel_list_recycler_view_item_space" />
+    <FrameLayout android:id="@id/channel_item_box_title_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/sub_channel_home_item_top_title_height" android:layout_marginLeft="1.0px" android:layout_marginRight="1.0px">
+            <View android:layout_gravity="center_vertical" android:id="@id/channel_item_box_title_left_icon" android:background="#ff2fb3ff" android:layout_width="@dimen/home_card_item_box_title_shape_weight" android:layout_height="@dimen/home_card_item_box_title_shape_height" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/channel_item_box_title_icon" android:visibility="gone" android:layout_width="@dimen/home_card_item_box_title_txt_height" android:layout_height="@dimen/home_card_item_box_title_txt_height" android:layout_marginLeft="@dimen/home_card_item_box_title_layout_paddingleft" android:scaleType="centerCrop" android:adjustViewBounds="true" android:maxHeight="@dimen/home_card_item_box_title_txt_height" />
+            <TextView android:layout_gravity="center_vertical" android:id="@id/channel_item_box_title" android:paddingTop="@dimen/channel_item_box_title_paddingtopbottom" android:paddingBottom="@dimen/channel_item_box_title_paddingtopbottom" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/sub_channel_home_item_top_title_left_margin" android:singleLine="true" android:drawableRight="@drawable/box_title_right" android:drawablePadding="@dimen/channel_item_box_title_drawablepadding" style="@style/drawer_group_title" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

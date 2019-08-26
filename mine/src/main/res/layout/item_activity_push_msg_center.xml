@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/view_item_activity_push_msg_center_top" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/item_push_mag_center_padding" />
+    <TextView android:textSize="@dimen/item_push_mag_center_date_textsize" android:textColor="#ff515151" android:gravity="center_vertical" android:id="@id/tv_item_activity_push_msg_center_time" android:background="#fff8f8f8" android:paddingLeft="@dimen/item_push_mag_center_date_padding_left" android:layout_width="fill_parent" android:layout_height="@dimen/item_push_mag_center_date_height" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/iv_item_activity_push_msg_center_content" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/item_push_mag_center_content_height">
+        <ImageView android:id="@id/iv_item_activity_push_msg_center_sign" android:layout_width="@dimen/item_push_mag_center_sign_width" android:layout_height="@dimen/item_push_mag_center_sign_width" android:layout_marginLeft="@dimen/item_push_mag_center_sign_margin" android:layout_marginTop="@dimen/item_push_mag_center_sign_margin" android:layout_marginRight="@dimen/item_push_mag_center_sign_margin_right" android:layout_marginBottom="@dimen/item_push_mag_center_sign_margin" android:scaleType="centerCrop" />
+        <View android:background="#ffededed" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_marginTop="@dimen/item_push_mag_center_sign_margin" android:layout_marginBottom="@dimen/item_push_mag_center_sign_margin" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/item_push_mag_center_text_padding_left" android:layout_marginRight="@dimen/item_push_mag_center_text_padding_right" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/item_push_mag_center_text_textsize" android:textColor="#ff666666" android:id="@id/tv_item_activity_push_msg_center_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="这个是标题啊标题" android:singleLine="true" />
+            <TextView android:textSize="@dimen/item_push_mag_center_text_textsize" android:textColor="#ff666666" android:id="@id/tv_item_activity_push_msg_center_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="这个是描述" android:singleLine="true" />
+        </LinearLayout>
+        <ImageView android:id="@id/iv_item_activity_push_msg_center_image" android:layout_width="@dimen/item_push_mag_center_image_width" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    </LinearLayout>
+    <View android:background="#ffededed" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <View android:id="@id/view_item_activity_push_msg_center_bottom" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/item_push_mag_center_padding" />
+</LinearLayout>

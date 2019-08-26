@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_video_detail_title_height">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/vip_detail_title_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:background="#ff3fc2fd" android:layout_width="2.0dip" android:layout_height="fill_parent" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/detail_card_video_detail_title_marginleft_v5" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/detail_card_title_size" android:textColor="#ff444444" android:id="@id/vip_detail_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vip_details_lable_title" android:drawableRight="@drawable/vip_arrow_to" android:drawablePadding="@dimen/channel_header_triangle_margin_left" />
+                <TextView android:textSize="@dimen/detail_card_subtitle_size" android:textColor="#ffb9b9b9" android:id="@id/vip_detail_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/vip_tips_message" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center|right" android:paddingRight="@dimen/detail_subscribe_subbtn_right_margin_v5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="2.0">
+            <Button android:textSize="@dimen/vip_video_detail_card_subscribe_text_size" android:textColor="#ffffffff" android:id="@id/vip_detail_btn_subscribe" android:background="@drawable/vip_detail_subscribe_bg" android:layout_width="@dimen/detail_subscribe_subbtn_width_v5" android:layout_height="@dimen/detail_subscribe_subbtn_height_v5" android:layout_marginTop="@dimen/vip_video_detail_card_subscrite_margin" android:layout_marginBottom="@dimen/vip_video_detail_card_subscrite_margin" android:text="@string/vip_details_lable_getvip" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:orientation="horizontal" android:background="#ffffffff" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vip_tips_message_noad" android:drawableLeft="@drawable/vip_ic_noads" android:drawablePadding="@dimen/vip_video_detail_card_tips_padding" style="@style/vip_item_lable_tips" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vip_tips_message_hd" android:drawableLeft="@drawable/vip_ic_vipmovie" android:drawablePadding="@dimen/vip_video_detail_card_tips_padding" style="@style/vip_item_lable_tips" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/vip_tips_lable_more" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vip_tips_message_more" android:drawableLeft="@drawable/vip_ic_more" android:drawablePadding="@dimen/vip_video_detail_card_tips_padding" style="@style/vip_item_lable_tips" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentTop="true" />
+    <RelativeLayout android:background="@color/app_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.youku.vipcenter.widget.FullGridView android:id="@id/vip_detail_grid" android:paddingLeft="-1.0px" android:paddingRight="-1.0px" android:visibility="invisible" android:scrollbars="none" android:fadingEdge="none" android:clipToPadding="false" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="#00000000" android:cacheColorHint="@null" android:horizontalSpacing="@dimen/vip_video_detail_card_item_space" android:numColumns="@integer/vip_video_detail_card_number" android:divider="@android:color/transparent" android:dividerHeight="0.0dip" android:headerDividersEnabled="false" />
+        <RelativeLayout android:id="@id/vip_details_loading" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_loading_height">
+            <ProgressBar android:layout_width="@dimen/vip_video_detail_card_loading_width" android:layout_height="@dimen/vip_video_detail_card_loading_width" android:indeterminateDrawable="@drawable/vip_series_loading_progressbar" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <include android:id="@id/vip_detail_layout_no_result" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_loading_height" android:layout_centerInParent="true" layout="@layout/vip_detail_card_no_result" />
+    </RelativeLayout>
+    <View android:background="#fff2f2f2" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:gravity="center" android:id="@id/vip_detail_expandable" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/vip_detail_card_vertical_more_height">
+        <TextView android:textSize="@dimen/vip_video_detail_card_normal_size" android:textColor="@color/vip_details_expandle_color" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/vip_details_grid_lable_expandle" android:drawableRight="@drawable/vip_detail_card_small_more_icon" android:drawablePadding="@dimen/vip_video_detail_card_tips_padding" style="@style/vip_item_lable_tips" />
+    </LinearLayout>
+</LinearLayout>

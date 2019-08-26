@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 import android.os.Process;
 import android.preference.PreferenceManager;
 import android.support.multidex.MultiDex;
+import android.support.multidex.MultiDexApplication;
+
 import com.squareup.leakcanary.LeakCanary;
 import com.squareup.leakcanary.RefWatcher;
 import com.zxin.basemodel.gen.DataBaseUtil;
@@ -24,7 +26,7 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
  * Created by hy on 2017/9/22.
  */
 
-public abstract class BaseApplication extends Application {
+public abstract class BaseApplication extends MultiDexApplication { //解决64K限制问题
     private static BaseApplication mApplication;
     public static Context contextApp;
     //保存一些状态数据的SharedPreferences

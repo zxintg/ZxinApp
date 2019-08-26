@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/game_card_root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/game_background_grey" android:layout_width="fill_parent" android:layout_height="@dimen/game_card_margin" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_present_selected_content" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/layout_game_home_card_top" />
+        <include android:id="@id/include_present_selected_layout_1" layout="@layout/include_present_selected_page_present_card_layout" />
+        <View android:id="@id/split_line" android:layout_width="fill_parent" android:layout_height="@dimen/game_home_item_margin_30dp" />
+        <include android:id="@id/include_present_selected_layout_2" layout="@layout/include_present_selected_page_present_card_layout" />
+        <View android:layout_width="fill_parent" android:layout_height="@dimen/game_home_item_margin_56dp" />
+    </LinearLayout>
+</LinearLayout>

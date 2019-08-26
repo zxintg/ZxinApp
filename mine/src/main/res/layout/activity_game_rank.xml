@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/gamecenter_group" android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_layout_tags" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.youku.gamecenter.widgets.GameTagView android:id="@id/game_tag_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <include android:id="@id/layout_H5_prizes" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_game_activities_center_myprizes_card" />
+    </LinearLayout>
+    <ListView android:id="@id/scrollcontainer" android:background="#ffe2e2e2" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollingCache="false" android:cacheColorHint="#00000000" android:layout_below="@id/ll_layout_tags" />
+    <com.youku.gamecenter.widgets.NoResultView android:id="@id/id_no_result_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/ll_layout_tags" />
+</RelativeLayout>

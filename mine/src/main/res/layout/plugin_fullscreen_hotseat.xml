@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youku.detail.view.FullscreenHotseat android:id="@id/plugin_fullscreen_hotseat" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center|right" android:id="@id/plugin_fullscreen_hotseat_inner" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="right" android:orientation="vertical" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/interact_title_image_layout_margin" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <include android:id="@id/plugin_fullscreen_hotseat_btn_screenshot" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/plugin_fullscreen_hotseat_item" />
+            <include android:id="@id/plugin_fullscreen_hotseat_btn_video_record" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/interact_title_image_layout_margin_top" layout="@layout/plugin_fullscreen_hotseat_item" />
+            <include android:id="@id/plugin_fullscreen_hotseat_btn_gif" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/interact_title_image_layout_margin_top" layout="@layout/plugin_fullscreen_hotseat_item" />
+        </LinearLayout>
+    </RelativeLayout>
+</com.youku.detail.view.FullscreenHotseat>

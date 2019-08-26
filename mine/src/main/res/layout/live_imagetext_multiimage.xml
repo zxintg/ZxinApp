@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/live_imagetext_multiimage_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/live_imagetext_multiimage_layout_group" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.5">
+            <ImageView android:id="@id/LiveImageText_image_one" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/default_background" android:adjustViewBounds="true" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.5">
+            <ImageView android:id="@id/LiveImageText_image_two" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/default_background" android:adjustViewBounds="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/live_imagetext_multiimage_layout_group2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.5">
+            <ImageView android:id="@id/LiveImageText_image_three" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/default_background" android:adjustViewBounds="true" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.5">
+            <ImageView android:id="@id/LiveImageText_image_four" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/default_background" android:adjustViewBounds="true" android:layout_weight="0.5" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

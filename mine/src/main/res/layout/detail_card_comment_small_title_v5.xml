@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/rrr" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/detail_small_card_title_height_v5">
+        <RelativeLayout android:id="@id/layout_title" android:layout_width="fill_parent" android:layout_height="@dimen/detail_small_card_title_height_v5">
+            <TextView android:layout_gravity="center_vertical" android:background="#ff2fb3ff" android:layout_width="@dimen/detail_card_title_tag_width_v5" android:layout_height="@dimen/detail_card_title_tag_height_v5" android:layout_centerVertical="true" />
+            <RelativeLayout android:layout_gravity="center_vertical" android:id="@id/layout_common_title" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textSize="@dimen/detail_card_title_v5" android:textColor="#ff444444" android:gravity="center_vertical" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/detail_card_series_more_right_v5" android:text="评论" android:layout_alignParentLeft="true" />
+                <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/detail_card_item_title_size_v5" android:layout_alignParentRight="true">
+                    <TextView android:textSize="@dimen/detail_card_subtitle_size" android:textColor="#ffb5b7b9" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/detail_card_comment_header_text_size_v5" android:text="全部热评" android:singleLine="true" />
+                    <ImageView android:id="@id/more" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/zhankaijiantou" android:layout_centerVertical="true" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</LinearLayout>

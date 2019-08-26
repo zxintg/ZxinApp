@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/about4" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:paddingRight="@dimen/settings_card_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+        <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="允许在线播放" android:layout_centerVertical="true" />
+        <CheckBox android:id="@id/playonwlan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/settings_CheckBox" />
+    </RelativeLayout>
+    <View android:background="@color/mycenter_setting_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <RelativeLayout android:orientation="horizontal" android:id="@id/about5" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:paddingRight="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+        <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="允许下载视频" android:layout_centerVertical="true" />
+        <CheckBox android:id="@id/cachewlan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/settings_CheckBox" />
+    </RelativeLayout>
+    <View android:background="#ffc9c9c9" android:layout_width="fill_parent" android:layout_height="2.0px" />
+</LinearLayout>

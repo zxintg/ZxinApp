@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout_captionbar" android:background="#ffc7c7c7" android:layout_width="fill_parent" android:layout_height="@dimen/listlistactivity_actionbarHeight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/title_page_line" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/listlistactivity_actionbarLinearHeight" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/imageButton_back" android:background="@drawable/button_back_selector" android:layout_width="50.0dip" android:layout_height="fill_parent" android:src="@drawable/icon_back_2x" android:scaleType="centerInside" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="@dimen/actionbar_calendar_textView_Celendar_textsize" android:textColor="#ff000000" android:gravity="center_vertical" android:id="@id/actionbar_calendar_textView_Celendar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="日程" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="@dimen/actionbar_calendar_textView_Year_textsize" android:textColor="#ff000000" android:id="@id/actionbar_calendar_textView_Year" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2016" android:layout_toLeftOf="@id/actionbar_calendar_textView_Celendar" android:layout_centerVertical="true" />
+        <Spinner android:gravity="center" android:entries="@array/spingarr" android:id="@id/spinner_calendar" android:visibility="gone" android:layout_width="@dimen/livecalendar_spinnerWidth" android:layout_height="wrap_content" android:singleLine="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:spinnerMode="dropdown" />
+    </RelativeLayout>
+</RelativeLayout>

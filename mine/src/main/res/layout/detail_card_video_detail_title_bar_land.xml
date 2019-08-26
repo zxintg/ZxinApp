@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout_title" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/more" android:background="@null" android:layout_width="@dimen/detail_card_more_image_width_land" android:layout_height="@dimen/detail_card_title_height_land" android:src="@drawable/detail_card_more" android:layout_alignParentRight="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/video_detail_title_land" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_video_detail_title_marginleft_land" android:layout_marginTop="@dimen/detail_card_video_detail_title_marginTop" android:layout_marginBottom="@dimen/detail_card_video_detail_title_marginTop" android:layout_toLeftOf="@id/more" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/detail_card_video_detail_title_size_land" android:textColor="#ff444444" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/video_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="危情三日" android:maxLines="2" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/detail_card_video_detail_title_size_land" android:textColor="#ffff6c00" android:id="@id/video_score" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:minWidth="60.0dip" android:text="6.7" android:singleLine="true" android:layout_weight="2.0" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/detail_card_subtitle_size_land" android:textColor="#ffb9b9b9" android:gravity="center_vertical" android:id="@id/playTimes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_subtitle_marginTop_land" />
+    </LinearLayout>
+</RelativeLayout>

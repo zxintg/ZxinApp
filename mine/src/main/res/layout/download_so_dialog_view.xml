@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/layout_score_dialog" android:background="@color/white" android:layout_width="@dimen/layout_account_bind_dialog_width" android:layout_height="@dimen/layout_score_dialog_height">
+        <RelativeLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/layout_score_dialog_bottom">
+            <ImageView android:id="@id/layout_score_dialog_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/score_dialog_bg" android:scaleType="centerInside" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <TextView android:id="@id/layout_so_dialog_title_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/layout_score_dialog_title_txt_marginleft" style="@style/layout_score_dialog_title_txt" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/layout_so_dialog_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/layout_vip_dialog_bottom_height" android:layout_alignParentBottom="true">
+            <LinearLayout android:gravity="center" android:id="@id/layout_so_dialog_yes" android:background="@drawable/btn_vip_dialog_ok" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:id="@id/so_dialog_txt_yes" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/vip_dialog_txt_rebuy" />
+            </LinearLayout>
+            <View android:background="@drawable/soku_layout_bottom_cover" android:layout_width="fill_parent" android:layout_height="5.0px" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

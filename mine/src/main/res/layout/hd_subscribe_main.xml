@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/subscribe_main" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <fragment android:name="com.youku.hd.subscribe.ui.HdSubscribeFragment" android:id="@id/hd_subscribe_root" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:paddingLeft="@dimen/hd_look_unique_margin_top" android:paddingRight="@dimen/hd_look_unique_margin_top" android:layout_width="wrap_content" android:layout_height="@dimen/hd_subscribe_tab_height" android:onClick="onBack">
+        <ImageView android:id="@id/hd_channel_sub_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/hd_left_arrow" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

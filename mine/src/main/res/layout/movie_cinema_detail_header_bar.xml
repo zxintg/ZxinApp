@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/waist_seal_movie" android:layout_width="fill_parent" android:layout_height="@dimen/movie_detail_top_view_height">
+        <LinearLayout android:id="@id/goback" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center" android:background="@null" android:layout_width="@dimen/cinema_detail_header_bar_arrow_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/item_spacing" android:src="@drawable/movie_arrow_return" android:scaleType="fitStart" />
+            <TextView android:textSize="@dimen/movie_detail_top_view_text_size" android:textColor="#e5ffffff" android:ellipsize="marquee" android:layout_gravity="center" android:id="@id/cinemaName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/cinema_detail_header_bar_title_marginleft" android:text="美嘉欢乐影城" android:singleLine="true" android:layout_centerVertical="true" android:marqueeRepeatLimit="marquee_forever" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

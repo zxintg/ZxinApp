@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/pc_fragment_margin_top_height_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/error_view_place_holder" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/error_view_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pc_default_error_image" />
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/empty_view_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pc_home_page_feed_empty" />
+    <TextView android:textSize="@dimen/pc_default_homepage_show_textsize" android:textColor="@color/pc_default_homepage_show_textone_color" android:id="@id/error_view_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/pc_default_homepage_show_textone_margin_top" android:text="@string/app_name" />
+</LinearLayout>

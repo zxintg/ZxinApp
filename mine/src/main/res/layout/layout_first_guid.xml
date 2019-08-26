@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/empty_view" android:background="#90000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/first_guide_corner_view" android:background="@drawable/subscribe_first_guid_corner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_below="@id/first_guide_corner_view" android:layout_centerHorizontal="true">
+        <ImageView android:background="@drawable/subscribe_first_guid_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/hd_noshowview_text_size" android:textColor="@color/hd_look_unique_btn_text" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/finish_btn" android:background="@drawable/empty_view_btn_selector" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="原来是这样" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/upload_item_header_title_size" android:ellipsize="end" android:gravity="bottom" android:id="@id/upload_myvideo_item_header_title" android:background="@drawable/upload_item_header_title_line" android:paddingLeft="@dimen/gridview_item_tv_marginleft" android:paddingTop="@dimen/upload_item_header_title_padding_top" android:paddingBottom="@dimen/upload_item_header_title_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="日期标题" android:singleLine="true" android:drawableLeft="@drawable/upload_item_header_dot" android:drawablePadding="@dimen/upload_item_header_title_dot_space" style="@style/homepage_item_title_first" />
+</LinearLayout>

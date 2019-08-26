@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/footer" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="35.0dip">
+            <TextView android:textSize="14.0sp" android:textColor="#ff444444" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="本地视频" android:layout_centerVertical="true" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/fill_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="15.0dip">
+            <ProgressBar android:id="@id/mem_used" android:layout_width="fill_parent" android:layout_height="fill_parent" android:max="1000" android:progressDrawable="@drawable/download_process" style="?android:attr/progressBarStyleHorizontal" />
+            <TextView android:textColor="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="占用空间  200.00M      |     可用空间  8.00G" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/footer">
+        <GridView android:id="@id/gridview" android:background="@color/app_background" android:padding="@dimen/gridview_pading_horizontal" android:fadingEdge="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="#00000000" android:horizontalSpacing="@dimen/gridview_spacing" android:verticalSpacing="@dimen/gridview_spacing" android:numColumns="2" />
+        <TextView android:textSize="@dimen/text_size_j" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_local_tips" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</RelativeLayout>

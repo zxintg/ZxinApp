@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/colorFF6600" />
+    <corners android:topLeftRadius="@dimen/detail_permission_button_corner" android:topRightRadius="@dimen/detail_permission_button_corner" android:bottomLeftRadius="@dimen/detail_permission_button_corner" android:bottomRightRadius="@dimen/detail_permission_button_corner" />
+</shape>

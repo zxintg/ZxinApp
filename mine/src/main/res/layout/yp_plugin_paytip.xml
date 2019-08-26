@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="right" android:orientation="horizontal" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="bottom|center|right" android:orientation="horizontal" android:id="@id/vip_paytip_layout" android:background="@drawable/paytip_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/paytip_vip_text_right_margin" android:layout_marginBottom="@dimen/paytip_small_margin_bottom">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/paytip_vip" android:background="@drawable/player_youkumember_full" android:layout_width="@dimen/paytip_vip_width_small" android:layout_height="@dimen/paytip_vip_width_small" android:layout_marginLeft="@dimen/paytip_vip_close_margin_left" android:layout_marginTop="@dimen/paytip_vip_close_margin_top" android:layout_marginBottom="@dimen/paytip_vip_close_margin_top" />
+        <TextView android:textSize="@dimen/paytip_full_textsize" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center|right" android:id="@id/vip_paytip_bt" android:layout_width="wrap_content" android:layout_height="@dimen/paytip_close_height" android:layout_marginLeft="@dimen/paytip_vip_close_margin" android:layout_marginRight="@dimen/paytip_vip_text_right_margin" android:text="" android:singleLine="true" android:maxLength="20" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout_search" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/title_page_line" android:paddingTop="@dimen/game_actionbar_title_padding_topbottom" android:paddingBottom="@dimen/game_actionbar_title_padding_topbottom" android:layout_width="wrap_content" android:layout_height="@dimen/game_actionbar_custom_title_line_height" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+        <View android:background="#ffc7c7c7" android:layout_width="1.0px" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/layout_focus" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    <EditText android:textSize="@dimen/keywords_size_line4" android:textColor="#ff3e3e3e" android:id="@id/et_search_game" android:background="@drawable/et_searchword_selector" android:paddingLeft="@dimen/gamecenter_search_edit_paddingleft" android:paddingBottom="10.0dip" android:layout_width="@dimen/search_edit_width" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:hint="@string/search_game_hint" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:imeOptions="actionSearch" android:textCursorDrawable="@drawable/color_cursor" />
+</RelativeLayout>

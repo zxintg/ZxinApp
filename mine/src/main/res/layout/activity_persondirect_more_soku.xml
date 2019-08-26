@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.soku.searchsdk.view.SokuTabPageIndicator android:id="@id/persondirect_more_tabindicator" android:background="@color/channel_tab_item_bg" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="@dimen/channel_main_tabindicator_height" />
+    <com.soku.searchsdk.view.ChannelExtendedViewPager android:id="@id/persondirect_more_viewpager" android:background="@color/app_background" android:persistentDrawingCache="animation" android:layout_width="fill_parent" android:layout_height="fill_parent" android:flipInterval="30" />
+</LinearLayout>

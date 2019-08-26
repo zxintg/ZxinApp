@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/game_channel_banner_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="#fff0f0f0" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_width="@dimen/game_channel_banner_default_icon_size" android:layout_height="@dimen/game_channel_banner_default_icon_size" android:src="@drawable/game_default_icon" android:layout_centerInParent="true" android:contentDescription="@string/str_icon" />
+    </RelativeLayout>
+    <ImageView android:id="@id/game_channel_banner" android:layout_width="fill_parent" android:layout_height="@dimen/game_channel_banner_height" android:scaleType="fitXY" />
+</FrameLayout>

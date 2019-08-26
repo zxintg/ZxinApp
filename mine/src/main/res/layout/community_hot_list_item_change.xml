@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/text_color_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:onClick="onTopicItemClick"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/line_band" android:background="@color/tab_select_color" android:layout_width="fill_parent" android:layout_height="@dimen/community_padding_8" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="@dimen/community_padding_5" android:paddingBottom="@dimen/community_padding_5" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/community_padding_10" android:layout_marginTop="@dimen/community_padding_5" android:layout_marginRight="@dimen/community_padding_10" android:layout_marginBottom="@dimen/community_padding_5">
+            <RelativeLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/text_size_6" android:textColor="@color/community_main_text_color" android:id="@id/comm_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_centerVertical="true" />
+                <ImageView android:id="@id/flag_image" android:layout_width="wrap_content" android:layout_height="@dimen/topic_list_hotflag_height" android:layout_marginLeft="@dimen/activity_padding_half" android:scaleType="fitStart" android:layout_toRightOf="@id/comm_title" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <TextView android:textSize="@dimen/text_size_3" android:textColor="@color/community_des_color" android:ellipsize="end" android:id="@id/comm_des" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/community_padding_5" android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/video_image_show_lin" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/community_padding_10">
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.youku.usercenter.widget.YoukuImageView android:id="@id/community_image_hot_f" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/img_nocover" android:scaleType="fitXY" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/text_size_5" android:textColor="@color/text_color_white" android:layout_gravity="bottom" android:id="@id/f_video_name" android:background="@drawable/waist_seal" android:paddingLeft="@dimen/community_padding_10" android:paddingTop="@dimen/community_padding_5" android:paddingRight="@dimen/community_padding_10" android:paddingBottom="@dimen/community_padding_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/frame_image_lin" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="1.0dip" android:layout_weight="1.0">
+            <com.youku.usercenter.widget.YoukuImageView android:id="@id/community_image_hot_s" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/img_nocover" android:scaleType="fitXY" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/text_size_5" android:textColor="@color/text_color_white" android:layout_gravity="bottom" android:id="@id/s_video_name" android:background="@drawable/waist_seal" android:paddingLeft="@dimen/community_padding_10" android:paddingTop="@dimen/community_padding_5" android:paddingRight="@dimen/community_padding_10" android:paddingBottom="@dimen/community_padding_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

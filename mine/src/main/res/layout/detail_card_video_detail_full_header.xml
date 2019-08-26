@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/video_detail" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_video_detail_title_marginleft" android:layout_marginRight="@dimen/detail_card_video_detail_title_marginleft">
+        <RelativeLayout android:id="@id/show_video_name_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_video_detail_content_text_marginTop">
+            <RelativeLayout android:gravity="center" android:id="@id/report_layout" android:background="@drawable/detail_card_video_full_header_orgbutton" android:layout_width="wrap_content" android:layout_height="@dimen/detail_card_video_detail_report_layout_height" android:layout_marginRight="@dimen/detail_card_video_detail_report_layout_marginleft" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                <ImageView android:id="@id/icon" android:layout_width="@dimen/detail_card_video_detail_report_layout_icon_size" android:layout_height="@dimen/detail_card_video_detail_report_layout_icon_size" android:src="@drawable/detail_card_video_full_header_icon" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/detail_card_video_detail_report_size" android:textColor="#ff2fb3ff" android:gravity="center" android:id="@id/tv_report" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_video_detail_report_font_marginleft" android:layout_toRightOf="@id/icon" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <LinearLayout android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/detail_card_video_detail_name_marginright" android:layout_toLeftOf="@id/report_layout" android:layout_centerVertical="true">
+                <TextView android:textSize="@dimen/detail_card_content_text_size_v5" android:textColor="#ff666666" android:ellipsize="end" android:id="@id/show_video_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="名称: " />
+                <TextView android:textSize="@dimen/detail_card_content_text_size_v5" android:textColor="#ff777777" android:gravity="center_vertical" android:id="@id/show_video_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxWidth="@dimen/detail_card_video_detail_leixing_title_maxWidth" />
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_video_detail_show_view_marginTop">
+            <LinearLayout android:layout_gravity="bottom" android:id="@id/show_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/detail_card_content_text_size_v5" android:textColor="#ff666666" android:ellipsize="end" android:id="@id/show_view_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="上映: " />
+                <TextView android:textSize="@dimen/detail_card_content_text_size_v5" android:textColor="#ff777777" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/show_view_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxWidth="@dimen/detail_card_video_detail_leixing_title_maxWidth" android:text="2001-1-2" />
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="bottom" android:id="@id/grade_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/detail_card_content_text_size_v5" android:textColor="#ff666666" android:ellipsize="end" android:id="@id/grade_view_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="评分: " />
+                <TextView android:textColor="#ffe93c0f" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/grade_view_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxWidth="@dimen/detail_card_video_detail_leixing_title_maxWidth" android:text="9.8" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@id/m" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_video_detail_content_text_marginTop">
+            <LinearLayout android:id="@id/view1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/detail_card_content_text_size_v5" android:textColor="#ff666666" android:ellipsize="end" android:id="@id/view1_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="类型: " />
+                <TextView android:textSize="@dimen/detail_card_content_text_size_v5" android:textColor="#ff777777" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/view1_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxWidth="@dimen/detail_card_video_detail_leixing_title_maxWidth" android:text="剧情" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/view2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/detail_card_content_text_size_v5" android:textColor="#ff666666" android:ellipsize="end" android:id="@id/view2_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="地区: " />
+                <TextView android:textSize="@dimen/detail_card_content_text_size_v5" android:textColor="#ff777777" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/view2_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxWidth="@dimen/detail_card_video_detail_leixing_title_maxWidth" android:text="中国" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@id/view4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_video_detail_content_text_marginTop">
+            <TextView android:textSize="@dimen/detail_card_content_text_size_v5" android:textColor="#ff666666" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/view4_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="导演: " android:singleLine="true" />
+            <TextView android:textSize="@dimen/detail_card_content_text_size_v5" android:textColor="#ff777777" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/view4_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="导演名称" android:singleLine="true" android:lineSpacingMultiplier="1.2" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/view3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_video_detail_content_text_marginTop">
+            <TextView android:textSize="@dimen/detail_card_content_text_size_v5" android:textColor="#ff666666" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/view3_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="主演: " android:singleLine="true" />
+            <TextView android:textSize="@dimen/detail_card_content_text_size_v5" android:textColor="#ff777777" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/view3_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="演员名称" android:maxLines="2" android:lineSpacingMultiplier="1.2" />
+        </LinearLayout>
+        <View android:id="@id/line1" android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="@dimen/detail_card_video_detail_content_text_marginTop" />
+        <TextView android:textSize="@dimen/detail_card_content_text_size_v5" android:textColor="#ff777777" android:gravity="center_vertical" android:id="@id/desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_video_detail_content_text_marginTop" android:text="简介" android:lineSpacingMultiplier="1.2" />
+        <View android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="@dimen/detail_card_video_detail_content_text_marginTop" />
+    </LinearLayout>
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/detail_card_video_detail_button_bar" />
+    <LinearLayout android:orientation="vertical" android:id="@id/series_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_video_detail_title_marginleft" android:layout_marginRight="@dimen/detail_card_video_detail_title_marginleft">
+        <View android:id="@id/line2" android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <TextView android:textSize="@dimen/detail_card_video_detail_plot_title_size" android:textColor="#ff444444" android:gravity="center_vertical" android:id="@id/title2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_video_detail_content_text_marginTop" android:text="剧情" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/detail_card_content_text_size_v5" android:textColor="#ff777777" android:ellipsize="end" android:id="@id/zanwu" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_video_detail_desc_margintop" android:layout_marginBottom="@dimen/detail_card_video_detail_desc_marginbottom" android:text="暂无" android:lineSpacingMultiplier="1.2" />
+            <include android:id="@id/layout_no_result" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" layout="@layout/detail_card_no_result" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/loadingview3" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_loading_height">
+                <ProgressBar android:layout_width="@dimen/detail_card_loading_width" android:layout_height="@dimen/detail_card_loading_width" android:indeterminateDrawable="@drawable/series_loading_progressbar" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

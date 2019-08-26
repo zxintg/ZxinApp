@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/message_center_layout_nologin" android:paddingTop="@dimen/message_center_empty_text_margin_bottom" android:paddingBottom="@dimen/message_center_empty_text_margin_top" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/message_center_nologin_imge" android:layout_width="@dimen/message_center_empty_image_width" android:layout_height="@dimen/message_center_empty_image_height" android:src="@drawable/msg_xiaoku" />
+    <TextView android:textSize="@dimen/message_center_empty_text_textsize" android:textColor="#ff0096dd" android:id="@id/message_center_nologin_text" android:padding="@dimen/message_center_empty_text_margin_top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/push_msg_tips_login" android:layout_below="@id/empty" />
+</LinearLayout>

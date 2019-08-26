@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/movieseries_title" android:layout_width="fill_parent" android:layout_height="@dimen/soku_home_card_item_box_title_layout_height" android:layout_marginTop="@dimen/searchdirect_header_gridview_verticalspacing" layout="@layout/programbigworddirect_title_soku" />
+    <View android:background="#ffececec" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <com.soku.searchsdk.view.SyncHorizontalScrollView android:id="@id/movieseries_horizontal" android:background="#ffdddddd" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/movieseries_horizontalscroll_ll" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.soku.searchsdk.view.SyncHorizontalScrollView>
+    <include android:id="@id/movieseries_info" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/item_searchdirect_info_view" />
+</LinearLayout>

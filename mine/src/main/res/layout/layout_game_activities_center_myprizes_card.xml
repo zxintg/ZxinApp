@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/game_activities_page_my_prizes_text_size" android:textColor="@drawable/game_detail_card_title_left" android:gravity="center" android:id="@id/prize_view_txt" android:layout_width="fill_parent" android:layout_height="@dimen/see_prize_card_height" android:text="@string/game_activities_center_my_prizes_top_tips_no_login" android:layout_centerInParent="true" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="@dimen/game_activities_page_my_prizes_more_icon" android:layout_marginRight="@dimen/game_activities_page_my_prizes_more_icon_right_margin" android:src="@drawable/activities_page_myprizes_more" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

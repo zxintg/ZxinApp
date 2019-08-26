@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/game_exist_dialog_local_multiple_padding_left" android:paddingTop="@dimen/game_exist_dialog_local_multiple_padding_top" android:paddingRight="@dimen/game_exist_dialog_local_multiple_padding_left" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/game_exist_dialog_local_single_txt_size" android:textColor="@color/game_exist_dialog_local_txt_color" android:id="@id/txt_exist_dialog_multiple_title_app_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textSize="@dimen/game_exist_dialog_local_single_txt_size" android:textColor="@color/game_exist_dialog_local_txt_color" android:id="@id/txt_exist_dialog_multiple_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/widget_exist_dialog_content_multiple_title" android:singleLine="true" android:layout_toRightOf="@id/txt_exist_dialog_multiple_title_app_name" />
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/game_exist_dialog_local_multiple_icon_margin_top" android:layout_below="@id/txt_exist_dialog_multiple_title">
+            <ImageView android:id="@id/img_exist_dialog_multiple_1" android:layout_width="@dimen/game_exist_dialog_local_multiple_icon_size" android:layout_height="@dimen/game_exist_dialog_local_multiple_icon_size" android:layout_marginRight="@dimen/game_exist_dialog_local_multiple_padding_left" />
+            <ImageView android:id="@id/img_exist_dialog_multiple_2" android:layout_width="@dimen/game_exist_dialog_local_multiple_icon_size" android:layout_height="@dimen/game_exist_dialog_local_multiple_icon_size" android:layout_marginRight="@dimen/game_exist_dialog_local_multiple_padding_left" />
+            <ImageView android:id="@id/img_exist_dialog_multiple_3" android:layout_width="@dimen/game_exist_dialog_local_multiple_icon_size" android:layout_height="@dimen/game_exist_dialog_local_multiple_icon_size" android:layout_marginRight="@dimen/game_exist_dialog_local_multiple_padding_left" />
+            <ImageView android:id="@id/img_exist_dialog_multiple_4" android:layout_width="@dimen/game_exist_dialog_local_multiple_icon_size" android:layout_height="@dimen/game_exist_dialog_local_multiple_icon_size" android:layout_marginRight="@dimen/game_exist_dialog_local_multiple_padding_left" />
+            <ImageView android:id="@id/img_exist_dialog_multiple_5" android:layout_width="@dimen/game_exist_dialog_local_multiple_icon_size" android:layout_height="@dimen/game_exist_dialog_local_multiple_icon_size" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="bottom" android:id="@id/playTalkView" android:background="@drawable/lf_ic_play_talk" android:layout_width="@dimen/lf_live_bottom_bar_cell_width" android:layout_height="@dimen/lf_live_bottom_bar_cell_width" android:layout_marginLeft="10.0dip" />
+    <ImageView android:layout_gravity="bottom" android:id="@id/playClearView" android:background="@drawable/lf_ic_float_layer_clear" android:layout_width="@dimen/lf_live_bottom_bar_cell_width" android:layout_height="@dimen/lf_live_bottom_bar_cell_width" android:layout_marginLeft="10.0dip" />
+    <ImageView android:layout_gravity="bottom" android:id="@id/playShareView" android:background="@drawable/lf_ic_play_share" android:layout_width="@dimen/lf_live_bottom_bar_cell_width" android:layout_height="@dimen/lf_live_bottom_bar_cell_width" android:layout_marginLeft="10.0dip" />
+    <FrameLayout android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="@dimen/lf_live_bottom_bar_cell_width">
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="right" android:id="@id/playDownloadView" android:background="@drawable/lf_bg_open_laifeng" android:paddingLeft="5.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="10.0dip">
+            <ImageView android:layout_width="26.0dip" android:layout_height="fill_parent" android:src="@drawable/lf_ic_logo_download" />
+            <TextView android:textSize="@dimen/lf_text_size_dp_medium" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="@dimen/lf_live_bottom_bar_cell_width" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="打开来疯" />
+            <ImageView android:layout_width="8.0dip" android:layout_height="fill_parent" android:src="@drawable/lf_ic_arrow_open_laifeng" />
+        </LinearLayout>
+    </FrameLayout>
+</merge>

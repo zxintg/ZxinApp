@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/lf_color_80000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/progressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="false" android:layout_centerInParent="true" />
+    <TextView android:textSize="@dimen/lf_textsize_dp_micro" android:textColor="@color/lf_color_ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="视频连接中..." android:layout_below="@id/progressBar" android:layout_centerHorizontal="true" />
+</RelativeLayout>

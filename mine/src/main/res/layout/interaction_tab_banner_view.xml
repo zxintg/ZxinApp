@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/home_card_banner_img_ll" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/home_card_banner_phone_img" android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="@dimen/home_banner_height" />
+    <include layout="@layout/interaction_tab_card_item_ad_mask" />
+</FrameLayout>

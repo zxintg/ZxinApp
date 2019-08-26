@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/app_background" android:paddingLeft="@dimen/fragment_packet_flow_padding" android:paddingTop="@dimen/fragment_packet_flow_padding" android:paddingRight="@dimen/fragment_packet_flow_padding" android:paddingBottom="@dimen/fragment_packet_flow_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/china_unicome_img" android:layout_width="fill_parent" android:layout_height="@dimen/fragment_packet_flow_imageview_height" android:src="@drawable/free_flow_top_bg" android:scaleType="fitXY" android:layout_alignParentTop="true" />
+            <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/fragment_packet_flow_item_height" android:layout_marginLeft="@dimen/fragment_packet_flow_item_padding" android:layout_marginRight="@dimen/fragment_packet_flow_item_padding">
+                    <LinearLayout android:gravity="center|left" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/china_unicom_title_info" style="@style/homepage_item_title_first" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fragment_packet_flow_item_sub_margin_top" android:text="@string/china_unicom_title_info_service" style="@style/homepage_item_title_second" />
+                    </LinearLayout>
+                    <ImageView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/china_unicome_order" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/free_flow_item_in" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <View android:background="#ffefefef" android:layout_width="fill_parent" android:layout_height="@dimen/fragment_packet_flow_item_line" />
+                <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/fragment_packet_flow_item_height" android:layout_marginLeft="@dimen/fragment_packet_flow_item_padding" android:layout_marginRight="@dimen/fragment_packet_flow_item_padding">
+                    <LinearLayout android:gravity="center|left" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/china_moblie_title_info" style="@style/homepage_item_title_first" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fragment_packet_flow_item_sub_margin_top" android:text="@string/china_moblie_title_info_service" style="@style/homepage_item_title_second" />
+                    </LinearLayout>
+                    <ImageView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/china_mobile_order" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/free_flow_item_in" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <View android:background="#ffefefef" android:layout_width="fill_parent" android:layout_height="@dimen/fragment_packet_flow_item_line" />
+                <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/fragment_packet_flow_item_height" android:layout_marginLeft="@dimen/fragment_packet_flow_item_padding" android:layout_marginRight="@dimen/fragment_packet_flow_item_padding">
+                    <LinearLayout android:gravity="center|left" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/china_telecom_title_info" style="@style/homepage_item_title_first" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fragment_packet_flow_item_sub_margin_top" android:text="@string/china_telecom_title_info_service" style="@style/homepage_item_title_second" />
+                    </LinearLayout>
+                    <ImageView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/china_telecom_order" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/free_flow_item_in" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <WebView android:id="@id/sns_webview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/progress" />
+    <ProgressBar android:id="@id/progress" android:layout_width="fill_parent" android:layout_height="5.0dip" android:max="100" android:layout_alignParentTop="true" style="?android:attr/progressBarStyleHorizontal" />
+</RelativeLayout>

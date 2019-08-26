@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffe2e2e2" android:paddingBottom="@dimen/detail_card_marginbottom_land" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_related_video_title_bar_height_land" android:layout_marginLeft="@dimen/detail_card_related_video_marginLeft_land" android:layout_marginTop="@dimen/detail_card_related_video_marginTop_land">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/layout_title" android:paddingLeft="@dimen/detail_card_video_detail_title_marginleft_land" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+            <TextView android:textSize="@dimen/detail_card_title_size_land" android:textColor="#ff444444" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="相关推荐" />
+            <TextView android:textSize="@dimen/detail_card_subtitle_size_land" android:textColor="#ffb9b9b9" android:gravity="center_vertical" android:id="@id/subtitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_subtitle_marginTop_land" android:maxWidth="1000.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/channel_home_header_scroll_layout" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_related_video_body_height_land">
+        <LinearLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_related_video_body_height_land" android:layout_marginLeft="@dimen/detail_card_related_video_marginLeft_land" />
+        <com.youku.widget.YoukuRecyclerView android:id="@id/recyclerView" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/detail_card_related_video_marginLeft_land" android:layout_marginBottom="@dimen/detail_card_related_video_scrollView_paddingBottom_land" />
+        <ProgressBar android:id="@id/loading" android:visibility="gone" android:layout_width="@dimen/detail_card_loading_width_land" android:layout_height="@dimen/detail_card_loading_width_land" android:indeterminateDrawable="@drawable/series_loading_progressbar" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <include android:id="@id/layout_no_result" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" layout="@layout/detail_card_no_result" />
+    </RelativeLayout>
+    <View android:background="#ffc9c9c9" android:layout_width="fill_parent" android:layout_height="2.0px" android:layout_marginLeft="@dimen/detail_card_related_video_marginRight_land" />
+</LinearLayout>

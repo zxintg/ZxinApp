@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/game_photos_container_margin_top"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:game="http://schemas.android.com/apk/res-auto">
+    <com.youku.gamecenter.widgets.GameDetailsCardTopTitleView android:id="@id/game_tags_title" android:layout_width="fill_parent" android:layout_height="@dimen/gamehome_home_card_item_box_title_layout_height" game:title_text="@string/game_details_tag" />
+    <com.youku.gamecenter.widgets.ScrollabledGridView android:id="@id/gridview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_gameinfo_padding" android:layout_marginTop="@dimen/game_detail_card_content_left_margin" android:layout_marginRight="@dimen/detail_gameinfo_padding" android:layout_marginBottom="@dimen/game_detail_card_content_left_margin" android:horizontalSpacing="@dimen/game_detail_card_content_left_margin" android:verticalSpacing="@dimen/game_detail_card_content_left_margin" android:numColumns="4" android:layout_below="@id/game_tags_title" />
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/cache" android:background="@drawable/other_person_gridview_item_selector" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/usercenter_menu_height" android:layout_weight="1.0">
+            <ImageView android:background="@drawable/myyouku_download" android:layout_width="@dimen/usercenter_img_width" android:layout_height="@dimen/usercenter_img_height" />
+            <TextView android:textSize="@dimen/usercenter_buttons_txt_size" android:textColor="#ff727272" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/usercenter_buttons_txt_margintop" android:text="@string/download" style="@style/homepage_title_txt" />
+        </LinearLayout>
+        <View android:background="#ffebebeb" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/history" android:background="@drawable/other_person_gridview_item_selector" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/usercenter_menu_height" android:layout_weight="1.0">
+            <ImageView android:background="@drawable/myyouku_history" android:layout_width="@dimen/usercenter_img_width" android:layout_height="@dimen/usercenter_img_height" />
+            <TextView android:textSize="@dimen/usercenter_buttons_txt_size" android:textColor="#ff727272" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/usercenter_buttons_txt_margintop" android:text="@string/record" style="@style/homepage_title_txt" />
+        </LinearLayout>
+        <View android:background="#ffebebeb" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/upload" android:background="@drawable/other_person_gridview_item_selector" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/usercenter_menu_height" android:layout_weight="1.0">
+            <ImageView android:background="@drawable/myyouku_upload" android:layout_width="@dimen/usercenter_img_width" android:layout_height="@dimen/usercenter_img_height" />
+            <TextView android:textSize="@dimen/usercenter_buttons_txt_size" android:textColor="#ff727272" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/usercenter_buttons_txt_margintop" android:text="@string/upload" style="@style/homepage_title_txt" />
+        </LinearLayout>
+        <View android:background="#ffebebeb" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <RelativeLayout android:id="@id/information" android:background="@drawable/other_person_gridview_item_selector" android:layout_width="fill_parent" android:layout_height="@dimen/usercenter_menu_height" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/msgicon" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+                <ImageView android:background="@drawable/myyouku_information" android:layout_width="@dimen/usercenter_img_width" android:layout_height="@dimen/usercenter_img_height" />
+                <TextView android:textSize="@dimen/usercenter_buttons_txt_size" android:textColor="#ff727272" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/usercenter_buttons_txt_margintop" android:text="@string/information" style="@style/homepage_title_txt" />
+            </LinearLayout>
+            <ImageView android:id="@id/red_point" android:layout_width="@dimen/usercenter_buttons_pushmsg_red_point_height" android:layout_height="@dimen/usercenter_buttons_pushmsg_red_point_height" android:layout_marginLeft="@dimen/usercenter_buttons_pushmsg_red_point_marginLeft" android:layout_marginTop="@dimen/usercenter_buttons_pushmsg_red_point_marginTop" android:src="@drawable/icon_red_point" android:scaleType="fitXY" android:layout_toRightOf="@id/msgicon" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:background="#ffebebeb" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/favorite" android:background="@drawable/other_person_gridview_item_selector" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/usercenter_menu_height" android:layout_weight="1.0">
+            <ImageView android:background="@drawable/myyouku_mark" android:layout_width="@dimen/usercenter_img_width" android:layout_height="@dimen/usercenter_img_height" />
+            <TextView android:textSize="@dimen/usercenter_buttons_txt_size" android:textColor="#ff727272" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/usercenter_buttons_txt_margintop" android:text="@string/favorite" style="@style/homepage_title_txt" />
+        </LinearLayout>
+        <View android:background="#ffebebeb" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/subscribe" android:background="@drawable/other_person_gridview_item_selector" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/usercenter_menu_height" android:layout_weight="1.0">
+            <ImageView android:background="@drawable/myyouku_rss" android:layout_width="@dimen/usercenter_img_width" android:layout_height="@dimen/usercenter_img_height" />
+            <TextView android:textSize="@dimen/usercenter_buttons_txt_size" android:textColor="#ff727272" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/usercenter_buttons_txt_margintop" android:text="@string/subscribe" style="@style/homepage_title_txt" />
+        </LinearLayout>
+        <View android:background="#ffebebeb" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/pay" android:background="@drawable/other_person_gridview_item_selector" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/usercenter_menu_height" android:layout_weight="1.0">
+            <ImageView android:background="@drawable/myyouku_pay" android:layout_width="@dimen/usercenter_img_width" android:layout_height="@dimen/usercenter_img_height" />
+            <TextView android:textSize="@dimen/usercenter_buttons_txt_size" android:textColor="#ff727272" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/usercenter_buttons_txt_margintop" android:text="会员" style="@style/homepage_title_txt" />
+        </LinearLayout>
+        <View android:background="#ffebebeb" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/settings" android:background="@drawable/other_person_gridview_item_selector" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/usercenter_menu_height" android:layout_weight="1.0">
+            <ImageView android:background="@drawable/myyouku_settings" android:layout_width="@dimen/usercenter_img_width" android:layout_height="@dimen/usercenter_img_height" />
+            <TextView android:textSize="@dimen/usercenter_buttons_txt_size" android:textColor="#ff727272" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/usercenter_buttons_txt_margintop" android:text="@string/settings" style="@style/homepage_title_txt" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="#ffc9c9c9" android:layout_width="fill_parent" android:layout_height="2.0px" />
+</LinearLayout>

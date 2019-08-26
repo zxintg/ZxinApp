@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/district_popup_item_txt" android:layout_width="fill_parent" android:layout_height="@dimen/district_popup_view_by_distance_layout_height" style="@style/district_popup_item_txt" />
+</LinearLayout>

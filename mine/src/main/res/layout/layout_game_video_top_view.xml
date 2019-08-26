@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="left" android:background="@drawable/plugin_small_top_view_bg" android:layout_width="fill_parent" android:layout_height="@dimen/game_video_top_view_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:id="@id/game_video_back_btn_layout" android:layout_width="wrap_content" android:layout_height="@dimen/game_video_back_layout_height">
+        <ImageView android:id="@id/game_video_back_btn_left" android:duplicateParentState="true" android:layout_width="@dimen/game_video_back_btn_left_width" android:layout_height="fill_parent" android:layout_marginRight="@dimen/game_video_back_layout_padding_right" android:src="@drawable/game_video_back_btn_left" android:scaleType="centerCrop" />
+        <com.youku.gamecenter.widgets.AlwaysMarqueeTextView android:textSize="@dimen/game_video_land_top_video_title_textsize" android:textColor="#ffffffff" android:id="@id/game_video_title" android:paddingTop="@dimen/game_video_top_video_title_margin_top" android:layout_width="@dimen/game_video_top_video_title_width" android:layout_height="fill_parent" style="@style/top_view_title" />
+    </LinearLayout>
+</LinearLayout>

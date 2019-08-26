@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="6.0">
+            <TextView android:ellipsize="end" android:id="@id/bottom_show_txt" android:background="@drawable/bottom_show_txt_bg_selector" android:paddingLeft="@dimen/bottom_show_txt_paddingleft" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" style="@style/bottom_show_txt" />
+            <ImageView android:id="@id/bottom_episode_new_img" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/series_item_new_img" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:id="@id/bottom_show_more_btn" android:background="@drawable/episode_right_more_btn_bg_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <View android:background="#ffdedede" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_alignParentLeft="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</merge>

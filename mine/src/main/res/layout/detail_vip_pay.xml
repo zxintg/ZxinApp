@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/black" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/back_logo" android:layout_width="@dimen/player_back_btn_left_width" android:layout_height="@dimen/plugin_fullscreen_top_view_height" android:src="@drawable/player_back_btn_left" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/plugin_vip_pay_title_size" android:textColor="#ffb8b8b8" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <View android:background="#3bffffff" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="@dimen/plugin_vip_pay_margin_top" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/plugin_vip_pay_text_size" android:textColor="#ffbb9c69" android:layout_gravity="center_horizontal" android:id="@id/desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/plugin_vip_pay_margin_top" />
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/plugin_vip_pay_margin_layout">
+            <TextView android:textSize="@dimen/plugin_vip_pay_text_size" android:textColor="#ffbb9c69" android:gravity="center" android:id="@id/left_btn" android:background="@drawable/plugin_vip_rightbtn_bg" android:layout_width="@dimen/plugin_vip_pay_btn_width" android:layout_height="@dimen/plugin_vip_pay_btn_height" />
+            <Space android:id="@id/space" android:layout_width="@dimen/plugin_vip_pay_margin_layout" android:layout_height="fill_parent" />
+            <TextView android:textSize="@dimen/plugin_vip_pay_text_size" android:textColor="#ffffffff" android:gravity="center" android:id="@id/right_btn" android:background="@drawable/plugin_vip_leftbtn_bg" android:paddingLeft="@dimen/plugin_vip_pay_text_padding" android:layout_width="@dimen/plugin_vip_pay_btn_width" android:layout_height="@dimen/plugin_vip_pay_btn_height" android:drawableLeft="@drawable/plugin_vipbtn_left" android:drawablePadding="-13.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/loginView" android:background="#1effffff" android:layout_width="fill_parent" android:layout_height="@dimen/plugin_vip_pay_login_height" android:layout_alignParentBottom="true">
+        <TextView android:textSize="@dimen/plugin_vip_pay_text_size" android:textColor="#ff999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="已是会员请" />
+        <TextView android:textSize="@dimen/plugin_vip_pay_text_size" android:textColor="#ffbb9b6a" android:paddingLeft="@dimen/plugin_vip_pay_login_margin" android:paddingRight="@dimen/plugin_vip_pay_login_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="登录" />
+        <TextView android:textSize="@dimen/plugin_vip_pay_text_size" android:textColor="#ff999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="观看完整版>" />
+    </LinearLayout>
+</RelativeLayout>

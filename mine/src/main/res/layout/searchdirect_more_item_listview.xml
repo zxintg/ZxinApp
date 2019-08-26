@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/searchdirect_more_item_listview" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@null" android:drawSelectorOnTop="false" android:cacheColorHint="#00000000" android:divider="#27ffffff" android:dividerHeight="1.0px" android:headerDividersEnabled="false" android:footerDividersEnabled="false" />
+</merge>

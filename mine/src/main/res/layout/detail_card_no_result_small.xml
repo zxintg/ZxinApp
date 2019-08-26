@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_no_result" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/search_icon_no_results_small" android:scaleType="fitCenter" />
+    <TextView android:layout_gravity="center" android:id="@id/tv_no_result" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="暂未获取到内容，点击可刷新。" style="@style/detail_comment_submit" />
+</LinearLayout>

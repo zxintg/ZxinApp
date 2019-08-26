@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textColor="@color/hd_color_subscribe_selector" android:gravity="center" android:id="@id/hd_subscribe_button" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="订阅更多热剧" android:drawableRight="@drawable/hd_ic_right_selector" android:drawablePadding="4.0dip" />
+</LinearLayout>

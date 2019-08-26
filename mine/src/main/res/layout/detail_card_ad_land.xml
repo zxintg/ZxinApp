@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:paddingLeft="@dimen/detail_card_marginLeft_land" android:paddingRight="@dimen/detail_card_marginRight_land" android:paddingBottom="@dimen/detail_card_marginbottom_land" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:background="#fff7f7f7" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/img" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_ad_height_land" android:scaleType="fitXY" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:id="@id/list_item" android:background="#ffe2e2e2" android:paddingBottom="@dimen/game_card_margin" android:layout_width="fill_parent" android:layout_height="@dimen/gamelist_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/game_listview_item_selector" android:layout_width="fill_parent" android:layout_height="@dimen/gamelist_item_height">
+        <ImageView android:id="@id/list_item_icon" android:layout_width="@dimen/list_item_icon_size" android:layout_height="@dimen/list_item_icon_size" android:layout_marginLeft="@dimen/card_margin_22dp" android:src="@drawable/game_list_item_default" android:scaleType="fitXY" android:layout_centerVertical="true" android:contentDescription="@string/str_icon" />
+        <ImageView android:id="@id/list_item_recommendtype" android:visibility="gone" android:layout_width="@dimen/present_privilege_size" android:layout_height="@dimen/present_privilege_size" android:layout_marginLeft="@dimen/present_privilege_margin_left" android:layout_marginTop="@dimen/present_privilege_margin_top" android:scaleType="fitXY" />
+        <RelativeLayout android:id="@id/present_details_card_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/listview_item_container_margin_left" android:layout_toLeftOf="@id/list_present_button" android:layout_toRightOf="@id/list_item_icon" android:layout_alignTop="@id/list_item_icon">
+            <RelativeLayout android:id="@id/list_present_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/present_total_button_margin_left" android:layout_alignParentLeft="true">
+                <TextView android:textSize="@dimen/list_item_title_text_size" android:textColor="#ff333333" android:ellipsize="end" android:id="@id/list_presetn_title" android:layout_width="fill_parent" android:layout_height="@dimen/list_item_title_height" android:singleLine="true" android:layout_alignParentLeft="true" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/present_progress_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/list_presetn_title" android:layout_alignParentLeft="true">
+                    <com.youku.gamecenter.widgets.ProgressView android:id="@id/rootview" android:background="#ffd6d6d6" android:layout_width="0.0dip" android:layout_height="@dimen/progress_layout_rootview_height" android:layout_marginRight="@dimen/game_name_margin_left" android:layout_weight="1.0">
+                        <View android:id="@id/progress" android:layout_width="0.0dip" android:layout_height="@dimen/listview_gamelist_item_progress_height" />
+                    </com.youku.gamecenter.widgets.ProgressView>
+                    <TextView android:textSize="@dimen/present_remainder_text_size" android:textColor="#ff00a2ff" android:id="@id/list_present_remainder" android:layout_width="@dimen/present_remainder_text_width" android:layout_height="wrap_content" android:text="@string/game_present_remainder" />
+                </LinearLayout>
+                <TextView android:textSize="@dimen/list_item_des_text_size" android:textColor="#ff999999" android:ellipsize="end" android:id="@id/list_present_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/present_progress_container" android:layout_alignParentLeft="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <Button android:textSize="@dimen/list_item_title_text_size" android:textColor="#ffffffff" android:gravity="center" android:id="@id/list_present_button" android:background="@drawable/game_action_bg_blue_selector" android:layout_width="@dimen/game_card_action_width" android:layout_height="@dimen/game_card_action_height" android:layout_marginRight="@dimen/detail_gameinfo_padding" android:text="@string/game_present_button_get" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

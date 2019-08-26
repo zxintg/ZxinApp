@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/chat_item_head_super_image" android:visibility="gone" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginRight="3.0dip" />
+    <RelativeLayout android:gravity="center|left" android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="2.0dip">
+        <ImageView android:layout_gravity="left" android:id="@id/chat_item_head_anchor_lv" android:layout_width="19.0dip" android:layout_height="19.0dip" android:layout_marginRight="2.0dip" android:scaleType="fitCenter" />
+        <TextView android:textSize="@dimen/lf_text_size_dp_medium" android:textColor="@color/lf_color_828282" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/chat_item_head_anchor_name" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxEms="10" android:singleLine="true" android:layout_below="@id/chat_item_head_anchor_lv" />
+    </RelativeLayout>
+</LinearLayout>

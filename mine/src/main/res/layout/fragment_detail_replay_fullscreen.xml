@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_replay"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:id="@+id/rl_fragment_detail_replay_back_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/plugin_fullscreen_top_view_height"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/ibtn_fragment_detail_replay_back"
+            android:layout_width="@dimen/player_back_btn_width"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/player_back_btn" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_fragment_detail_replay_videos"
+        android:layout_width="@dimen/replay_full_replay_videos_width"
+        android:layout_height="@dimen/replay_full_replay_videos_height"
+        android:layout_below="@+id/rl_fragment_detail_replay_back_container"
+        android:layout_marginLeft="@dimen/replay_full_replay_videos_margin_left"
+        android:layout_marginRight="@dimen/replay_full_replay_videos_margin_right"
+        android:background="@drawable/layer_bg_item_frame_shell_all" />
+
+    <LinearLayout
+        android:id="@+id/ll_fragment_detail_replay_pagectrl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/replay_full_replay_videos_page_ctrl_height"
+        android:layout_below="@+id/vp_fragment_detail_replay_videos"
+        android:layout_alignLeft="@+id/vp_fragment_detail_replay_videos"
+        android:layout_alignRight="@+id/vp_fragment_detail_replay_videos"
+        android:gravity="center"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:id="@+id/ll_fragment_detail_replay_interact"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignTop="@+id/vp_fragment_detail_replay_videos"
+        android:layout_alignBottom="@+id/vp_fragment_detail_replay_videos"
+        android:layout_marginRight="@dimen/replay_full_replay_interact_margin_right"
+        android:layout_toRightOf="@+id/vp_fragment_detail_replay_videos"
+        android:background="@drawable/layer_bg_interact_frame_shell"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/tv_fragment_detail_replay_cur_title_container"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/replay_full_replay_cur_title_height"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_fragment_detail_replay_cur_title"
+                style="@style/ReplayText.Item.Title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:paddingLeft="@dimen/replay_replay_current_title_paddleft" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_fragment_detail_replay_interact_image"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/replay_small_divide_width"
+            android:layout_marginRight="@dimen/replay_small_divide_width"
+            android:background="@drawable/bg_detail_replay_vedio_default" />
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:stretchColumns="2"
+            android:weightSum="2.0">
+
+            <TableRow
+                android:layout_weight="1.0"
+                android:weightSum="2.0">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/layer_bg_interact_frame_left_top"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/ibtn_fragment_detail_replay_up"
+                        style="@style/ReplayInteractBtn"
+                        android:src="@drawable/selector_detail_replay_up" />
+
+                    <TextView
+                        style="@style/ReplayText.Interact"
+                        android:text="顶" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/layer_bg_interact_frame_right_top"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/ibtn_fragment_detail_replay_share"
+                        style="@style/ReplayInteractBtn"
+                        android:src="@drawable/selector_detail_replay_share" />
+
+                    <TextView
+                        style="@style/ReplayText.Interact"
+                        android:text="分享" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_weight="1.0"
+                android:weightSum="2.0">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/layer_bg_interact_frame_left_bottom"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/ibtn_fragment_detail_replay_collect"
+                        style="@style/ReplayInteractBtn"
+                        android:src="@drawable/selector_detail_replay_collect" />
+
+                    <TextView
+                        style="@style/ReplayText.Interact"
+                        android:text="收藏" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/layer_bg_interact_frame_right_bottom"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/ibtn_fragment_detail_replay_replay"
+                        style="@style/ReplayInteractBtn"
+                        android:src="@drawable/selector_detail_replay_replay" />
+
+                    <TextView
+                        style="@style/ReplayText.Interact"
+                        android:text="重播" />
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignLeft="@+id/vp_fragment_detail_replay_videos"
+        android:layout_alignTop="@+id/vp_fragment_detail_replay_videos"
+        android:layout_alignRight="@+id/vp_fragment_detail_replay_videos"
+        android:layout_alignBottom="@+id/vp_fragment_detail_replay_videos"
+        android:gravity="center">
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/series_loading_progressbar"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/loading_faile_replay"
+            style="@style/plugin_loading_error_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加载失败"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

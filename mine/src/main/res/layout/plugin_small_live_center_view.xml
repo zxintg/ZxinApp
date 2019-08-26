@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/plugin_live_center_txt_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:id="@id/plugin_loading_logo" android:layout_width="@dimen/plugin_loading_logo_width" android:layout_height="@dimen/plugin_loading_logo_height" android:src="@drawable/plugin_loading_logo" />
+        <TextView android:ellipsize="end" android:id="@id/plugin_live_center_txt" android:layout_width="wrap_content" android:layout_height="@dimen/plugin_loading_title_txt_height" android:text="@string/plugin_live_center_txt_start" android:singleLine="true" style="@style/plugin_loading_error_txt" />
+        <TextView android:id="@id/plugin_live_center_login" android:background="@drawable/live_center_login_bg" android:layout_width="@dimen/plugin_live_center_login_width" android:layout_height="@dimen/plugin_live_center_login_height" android:layout_marginTop="@dimen/plugin_live_center_login_margintop" android:text="@string/plugin_live_center_login" style="@style/plugin_live_center_login" />
+    </LinearLayout>
+    <ImageView android:id="@id/plugin_live_center_img" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+</RelativeLayout>

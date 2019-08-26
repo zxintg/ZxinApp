@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:id="@id/corner_layout" android:layout_width="wrap_content" android:layout_height="@dimen/corner_img_width"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/corner_background" android:paddingLeft="@dimen/corner_img_left_margin" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/corner_img_left_margin">
+        <LinearLayout android:gravity="center|left" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/corner_text_left_margin" android:layout_marginRight="@dimen/corner_text_left_margin">
+            <LinearLayout android:gravity="left" android:orientation="horizontal" android:id="@id/corner_content_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/corner_text_bottom_margin">
+                <TextView android:textSize="@dimen/corner_text_size" android:textColor="@color/corner_txt_color" android:gravity="left" android:id="@id/corner_program" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="c" android:singleLine="true" />
+                <TextView android:textSize="@dimen/corner_text_size" android:textColor="@color/corner_txt_color" android:gravity="left" android:id="@id/corner_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="d" android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/corner_date_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/corner_text_bottom_margin">
+                <TextView android:textSize="@dimen/corner_text_size" android:textColor="@color/corner_txt_color" android:gravity="left" android:id="@id/corner_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="a" android:singleLine="true" />
+                <TextView android:textSize="@dimen/corner_text_size" android:textColor="@color/corner_txt_color" android:gravity="left" android:id="@id/corner_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="b" android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/corner_line_layout" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/feimu_subscribe_img_margin">
+            <View android:background="#4cffffff" android:layout_width="1.0px" android:layout_height="@dimen/corner_line_height" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/subscribe_layout" android:paddingLeft="@dimen/feimu_subscribe_layout_left" android:paddingRight="@dimen/feimu_subscribe_layout_left" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/subscribe_img" android:layout_width="@dimen/feimu_subscribe_img_width" android:layout_height="@dimen/feimu_subscribe_img_width" android:layout_marginRight="@dimen/feimu_subscribe_img_margin" android:src="@drawable/feimu_plus" android:scaleType="fitXY" />
+            <TextView android:textSize="@dimen/corner_text_size" android:textColor="@color/corner_subscribe_default_color" android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/subscribe_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/feimu_subscribe" android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/corner_img" android:layout_width="@dimen/corner_img_width" android:layout_height="@dimen/corner_img_width" android:scaleType="fitXY" />
+</RelativeLayout>

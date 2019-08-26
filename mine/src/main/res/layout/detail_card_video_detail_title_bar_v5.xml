@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout_title" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_title_height_v5"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rrr" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/layout_detail_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_video_detail_title_marginleft" android:layout_marginTop="@dimen/detail_card_video_detail_title_marginTop" android:layout_marginBottom="@dimen/detail_card_video_detail_title_marginTop" android:layout_toRightOf="@id/back_view" android:layout_centerVertical="true">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center" android:id="@id/more" android:background="@null" android:layout_width="@dimen/detail_card_series_full_more_width_v5" android:layout_height="@dimen/detail_card_series_full_more_height_v5" android:src="@drawable/fanhui" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/detail_card_video_detail_title_size" android:textColor="#ff444444" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/video_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_video_detail_title_marginleft" android:text="简介" android:singleLine="true" android:layout_weight="2.0" />
+                <TextView android:textSize="@dimen/detail_card_video_detail_title_size" android:textColor="#ffff6c00" android:id="@id/video_score" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:minWidth="@dimen/detail_card_video_detail_title_video_score_minWidth" android:text="6.8" android:singleLine="true" android:layout_weight="1.0" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/detail_card_subtitle_size" android:textColor="#ffb9b9b9" android:id="@id/playTimes" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_subtitle_marginTop" android:text="播放 : 236,782,938" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

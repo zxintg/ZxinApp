@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:id="@id/bottom_movie_txt" android:background="@drawable/bottom_show_txt_bg_normal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/searchdirect_bottom_play" style="@style/bottom_movie_txt" />
+    </LinearLayout>
+</merge>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/my_activities_prize_item" android:background="#ffffffff" android:paddingLeft="@dimen/game_detail_card_content_left_margin" android:paddingTop="@dimen/my_activities_prize_record_item_top_bottom_margin" android:paddingBottom="@dimen/my_activities_prize_record_item_top_bottom_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:gravity="center" android:id="@id/prize_record_icon" android:layout_width="@dimen/my_activities_prize_record_item_icon_width_height" android:layout_height="@dimen/my_activities_prize_record_item_icon_width_height" />
+        <TextView android:textSize="@dimen/game_category_text_size" android:textColor="#ff666666" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/prize_record_text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/game_detail_card_content_left_margin" android:singleLine="true" />
+    </LinearLayout>
+    <View android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</LinearLayout>

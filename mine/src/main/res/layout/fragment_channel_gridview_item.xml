@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="@dimen/gridview_item_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:layout_width="@dimen/icon_not_loaded_width" android:layout_height="@dimen/icon_not_loaded_height" android:src="@drawable/channel_not_loaded_icon_play" />
+        <com.youku.widget.YoukuImageView android:id="@id/channel_item_gv" android:padding="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+        <TextView android:gravity="center_vertical" android:layout_gravity="bottom" android:id="@id/stripe_middle_tv" android:background="#7a000000" android:paddingLeft="@dimen/homepage_item_text_margin_left" android:layout_width="fill_parent" android:layout_height="@dimen/grid_item_stripe_middle_height" android:layout_marginLeft="1.0dip" android:layout_marginRight="1.0dip" style="@style/homepage_item_middle_stripe" />
+        <RelativeLayout android:id="@id/triangle_wrapper" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+            <com.youku.widget.TriangleView android:id="@id/triangle_view" android:layout_width="@dimen/triangle_view_height" android:layout_height="@dimen/triangle_view_height" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+            <com.youku.widget.RobbinTextView android:id="@id/triangle_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/triangle_text" />
+        </RelativeLayout>
+    </FrameLayout>
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="@dimen/gridview_item_tv_height">
+        <TextView android:ellipsize="end" android:id="@id/channel_item_tv" android:paddingLeft="@dimen/homepage_item_text_margin_left" android:paddingRight="@dimen/homepage_item_text_margin_left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="影片名称" android:maxEms="10" android:singleLine="true" style="@style/homepage_item_title_first" />
+        <TextView android:ellipsize="end" android:id="@id/channel_item_stripe_bottom" android:paddingLeft="@dimen/homepage_item_text_margin_left" android:paddingRight="@dimen/homepage_item_text_margin_left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/gridview_item_title_marginTop" android:text="影片名称" android:maxEms="10" android:singleLine="true" android:layout_below="@id/channel_item_tv" style="@style/homepage_item_title_second" />
+    </RelativeLayout>
+    <ImageView android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="@dimen/shadow_height" />
+</LinearLayout>

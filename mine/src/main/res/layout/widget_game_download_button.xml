@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/game_download_button_parent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/game_download_progress" android:background="@color/downloading_background" android:layout_width="0.0dip" android:layout_height="fill_parent" />
+    <TextView android:textSize="@dimen/game_card_action_textsize" android:textColor="#ffffffff" android:gravity="center" android:id="@id/game_download_btn_title" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/game_download" android:layout_centerInParent="true" android:layout_centerVertical="true" />
+</RelativeLayout>

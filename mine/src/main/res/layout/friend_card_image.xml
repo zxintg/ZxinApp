@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/chat_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/white" android:layout_gravity="center_horizontal" android:id="@id/friend_image_card_timetext" android:background="@drawable/bg_corners" android:paddingLeft="5.0dip" android:paddingTop="3.0dip" android:paddingRight="5.0dip" android:paddingBottom="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+    <RelativeLayout android:id="@id/msgFriend_image" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="55.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/friend_image_card_timetext">
+        <RelativeLayout android:id="@id/relativeLayoutFriend_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true">
+            <ImageView android:id="@id/chatlist_image_image_other" android:background="@color/hd_user_head_bg" android:focusable="false" android:layout_width="45.0dip" android:layout_height="45.0dip" android:src="@drawable/avatar_default" />
+            <RelativeLayout android:background="@drawable/hd_round_pic_chat" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignLeft="@id/chatlist_image_image_other" android:layout_alignTop="@id/chatlist_image_image_other" android:layout_alignRight="@id/chatlist_image_image_other" android:layout_alignBottom="@id/chatlist_image_image_other" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/chatlist_image_card_other" android:background="@drawable/friend_bubble" android:paddingLeft="17.0dip" android:paddingTop="7.0dip" android:paddingRight="7.0dip" android:paddingBottom="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/relativeLayoutFriend_image" android:layout_alignTop="@id/relativeLayoutFriend_image">
+            <ImageView android:id="@id/friend_image_card_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bg_detail_replay_vedio_default" android:scaleType="centerCrop" android:maxHeight="150.0dip" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

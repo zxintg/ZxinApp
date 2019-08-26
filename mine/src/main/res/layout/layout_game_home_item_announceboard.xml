@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/card_top_line" android:background="#ffe8e8e8" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/notice_sound_icon" android:layout_width="@dimen/game_home_announce_sound_icon_width" android:layout_height="@dimen/game_home_announce_sound_icon_height" android:layout_marginLeft="@dimen/game_home_announce_sound_icon_margin_20dp" android:layout_marginRight="@dimen/game_home_announce_sound_icon_margin_20dp" android:src="@drawable/game_home_notice_sound_icon" />
+        <TextView android:textSize="@dimen/game_viewpager_tab_text_size_32" android:textColor="#ff2fb3ff" android:gravity="center_vertical" android:layout_gravity="left" android:layout_width="wrap_content" android:layout_height="@dimen/game_home_announce_board_height" android:layout_marginRight="@dimen/game_home_announce_title_margin_right" android:text="@string/game_home_announce_board_title" />
+        <com.youku.gamecenter.widgets.AutoScrollListView android:layout_gravity="center_vertical" android:id="@id/scrollcontainer" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/game_home_announce_scrollcontainer_margin_right" android:scrollingCache="false" android:cacheColorHint="#00000000" android:divider="@null" />
+    </LinearLayout>
+</LinearLayout>

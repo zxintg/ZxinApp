@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:padding="@dimen/card_margin_32dp" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/mygame_card_icon" android:layout_width="@dimen/game_home_list_icon_size" android:layout_height="@dimen/game_home_list_icon_size" android:src="@drawable/game_list_item_default" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/card_margin_40dp" android:layout_toLeftOf="@id/game_card_action" android:layout_toRightOf="@id/mygame_card_icon" android:layout_centerVertical="true">
+        <TextView android:textSize="@dimen/mygame_card_title_size" android:textColor="@color/game_detail_page_game_name_color_333333" android:ellipsize="end" android:gravity="top" android:id="@id/mygame_card_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textSize="@dimen/card_desc_textsize" android:textColor="#ff999999" android:ellipsize="end" android:id="@id/mygame_card_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/recomgame_middle_mt" android:singleLine="true" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/game_card_action_textsize" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/game_card_action" android:background="#ffffd971" android:layout_width="@dimen/game_card_action_width" android:layout_height="@dimen/game_card_action_height" android:layout_marginLeft="@dimen/card_margin_32dp" android:text="@string/str_install" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

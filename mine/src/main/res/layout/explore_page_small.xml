@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/layout_title" android:layout_width="fill_parent" android:layout_height="@dimen/detail_small_card_title_height_v5">
+        <View android:background="#ff2fb3ff" android:layout_width="@dimen/detail_card_title_tag_width_v5" android:layout_height="@dimen/detail_card_title_tag_height_v5" android:layout_centerVertical="true" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/layout_related_part_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+            <TextView android:textSize="@dimen/detail_card_title_v5" android:textColor="#ff444444" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_series_more_right_v5" android:text="播单推荐" />
+        </LinearLayout>
+        <ImageView android:id="@id/more" android:background="@null" android:paddingLeft="@dimen/detail_card_series_more_right_v5" android:paddingRight="@dimen/detail_card_series_more_right_v5" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/zhankaijiantou" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <View android:background="#fff2f2f2" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <com.youku.phone.collection.widget.SteadyListView android:id="@id/explore_page_small_list" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="#00000000" android:cacheColorHint="#00000000" android:divider="#fff2f2f2" android:dividerHeight="1.0px" />
+</LinearLayout>

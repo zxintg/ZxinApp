@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youku.gamecenter.widgets.GameCardView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="#ffdfdfdf" android:padding="1.0px" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="@dimen/game_details_video_width" android:layout_height="@dimen/game_details_video_height">
+            <ImageView android:id="@id/video_default_img" android:layout_width="@dimen/gamecenter_icon_default_width" android:layout_height="@dimen/gamecenter_icon_default_width" android:src="@drawable/gamecenter_channel_not_loaded_icon_play" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/video_img_new" android:layout_width="@dimen/game_details_video_width" android:layout_height="@dimen/game_details_video_height" android:scaleType="centerCrop" />
+            <ImageView android:id="@id/watermark_img" android:visibility="gone" android:layout_width="@dimen/gamecenter_icon_default_width" android:layout_height="@dimen/gamecenter_icon_default_width" android:src="@drawable/game_play_btn" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="@dimen/game_details_video_width" android:layout_height="@dimen/game_details_video_bottom_height" android:layout_alignBottom="@id/video_img_new">
+                <TextView android:textSize="@dimen/gamecenter_myouku_video_yf_text_size" android:ellipsize="end" android:gravity="center|right" android:id="@id/video_type" android:background="#8000a0ec" android:paddingRight="@dimen/gamecenter_homepage_item_text_margin_left" android:visibility="gone" android:layout_width="@dimen/game_details_viedo_item_tv_width" android:layout_height="fill_parent" android:maxLines="1" android:minLines="1" android:scrollHorizontally="true" android:singleLine="true" style="@style/gamecenter_homepage_item_middle_stripe" />
+                <TextView android:textSize="@dimen/gamecenter_myouku_video_yf_text_size" android:ellipsize="end" android:gravity="center|right" android:id="@id/duration_new" android:background="#80000000" android:paddingRight="@dimen/gamecenter_homepage_item_text_margin_left" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLines="1" android:minLines="1" android:scrollHorizontally="true" android:singleLine="true" style="@style/gamecenter_homepage_item_middle_stripe" />
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/game_details_video_item_tv_title_size" android:ellipsize="end" android:id="@id/title_new" android:background="#fff7f7f7" android:paddingLeft="@dimen/gamecenter_homepage_item_text_margin_left" android:paddingTop="@dimen/game_details_video_item_tv_title_marginTop" android:paddingRight="@dimen/gamecenter_homepage_item_text_margin_left" android:layout_width="@dimen/game_details_video_width" android:layout_height="@dimen/game_details_video_title_height" android:maxLines="2" />
+    </LinearLayout>
+</com.youku.gamecenter.widgets.GameCardView>

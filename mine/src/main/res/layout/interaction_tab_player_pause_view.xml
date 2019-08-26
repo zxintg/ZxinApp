@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/interaction_tab_small_pause_relative_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/interaction_tab_small_pause_img" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <View android:background="#4c000000" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/interaction_tab_small_pause_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/home_personal_movie_card_play" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</merge>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#ffb9b9b9" />
+            <corners android:radius="@dimen/usercenter_btn_logout_corner" />
+        </shape>
+    </item>
+</layer-list>

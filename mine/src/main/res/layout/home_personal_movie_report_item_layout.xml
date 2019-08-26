@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/item_layout" android:layout_width="fill_parent" android:layout_height="@dimen/home_personal_movie_100px"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox android:textSize="@dimen/home_personal_movie_font_32px" android:textColor="#ff333333" android:layout_gravity="center|left" android:id="@id/checkbox" android:paddingLeft="@dimen/home_personal_movie_24px" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/home_personal_movie_24px" android:checked="false" android:button="@drawable/home_personal_movie_report_selector" android:text="反动" />
+</LinearLayout>

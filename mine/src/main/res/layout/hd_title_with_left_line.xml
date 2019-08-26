@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/hd_unique_title_left_img" android:layout_width="@dimen/hd_unique_left_img_width" android:layout_height="@dimen/hd_unique_left_img_height" />
+    <TextView android:textSize="@dimen/hd_unique_broadcast_title_size" android:textColor="@color/hd_nologin_text" android:id="@id/title" android:paddingLeft="@dimen/hd_subscribe_photo_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hd_host_broadcast" />
+</LinearLayout>

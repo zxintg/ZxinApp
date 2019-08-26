@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/detail_card_marginLeft_land" android:paddingRight="@dimen/detail_card_marginRight_land" android:paddingBottom="@dimen/detail_card_marginbottom_land" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/blackcover" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_video_detail_title_height_land">
+        <RelativeLayout android:layout_gravity="center_vertical" android:id="@id/user" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_centerVertical="true">
+            <ImageView android:id="@id/icon" android:background="@drawable/avatar_default" android:layout_width="@dimen/detail_card_subscribe_icon_width_land" android:layout_height="@dimen/detail_card_subscribe_icon_width_land" android:layout_marginLeft="@dimen/detail_card_subscribe_icon_marginLeft_land" android:layout_centerVertical="true" />
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_subscribe_title__marginLeft_land" android:layout_toRightOf="@id/icon" android:layout_centerVertical="true">
+                <TextView android:textSize="@dimen/detail_card_title_size_land" android:textColor="#ff444444" android:ellipsize="end" android:id="@id/card_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="优酷院线" android:singleLine="true" />
+                <TextView android:textSize="@dimen/detail_card_subtitle_size_land" android:textColor="#ffb9b9b9" android:ellipsize="end" android:id="@id/total" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_subtitle_marginTop_land" android:maxWidth="1000.0dip" android:text="订阅数 : 236,782,938" android:singleLine="true" />
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/subscribe" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="2.0">
+            <View android:background="#ffe5e5e5" android:layout_width="1.0px" android:layout_height="@dimen/detail_card_subscribe_state_icon_width_land" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/state" android:layout_width="@dimen/detail_card_subscribe_state_icon_width_land" android:layout_height="@dimen/detail_card_subscribe_state_icon_width_land" android:layout_marginRight="@dimen/detail_card_subscribe_state_icon_marginRight_land" android:src="@drawable/detail_card_rss" />
+                <TextView android:textSize="@dimen/detail_card_subscribe_dingyue_text_size_land" android:textColor="#ff888888" android:id="@id/state_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="订阅" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="#ffc9c9c9" android:layout_width="fill_parent" android:layout_height="2.0px" />
+</LinearLayout>

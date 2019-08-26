@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/app_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/scrollView1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:padding="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/settings_card_title" android:gravity="center_vertical" android:background="#fff4f4f4" android:paddingLeft="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/settings_card_title_height" android:text="网络" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/net1" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_icon_03" />
+                    <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="非WIFI环境使用" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/net2" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <View android:background="@color/mycenter_setting_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_icon_06" />
+                        <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="特惠流量包，优酷会员专享" />
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:background="#ffc9c9c9" android:layout_width="fill_parent" android:layout_height="2.0px" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/item_spacing">
+                <TextView android:textAppearance="@style/settings_card_title" android:gravity="center_vertical" android:background="#fff4f4f4" android:paddingLeft="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/settings_card_title_height" android:text="播放和下载" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/play1" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_icon_08" />
+                    <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="清晰度和语言" />
+                </LinearLayout>
+                <View android:background="@color/mycenter_setting_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/play2" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_icon_10" />
+                    <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="自动播放控制" />
+                </LinearLayout>
+                <View android:background="@color/mycenter_setting_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/play3" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_icon_12" />
+                    <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="播放手势控制" />
+                </LinearLayout>
+                <View android:background="@color/mycenter_setting_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/play5" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_icon_13" />
+                    <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="下载完成通知" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/play4" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <View android:background="@color/mycenter_setting_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_icon_14" />
+                        <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="下载路径选择" />
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:background="#ffc9c9c9" android:layout_width="fill_parent" android:layout_height="2.0px" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/item_spacing">
+                <TextView android:textAppearance="@style/settings_card_title" android:gravity="center_vertical" android:background="#fff4f4f4" android:paddingLeft="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/settings_card_title_height" android:text="消息" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/msg1" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_icon_16" />
+                    <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="应用消息推送" />
+                </LinearLayout>
+                <View android:background="@color/mycenter_setting_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/msg2" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_icon_18" />
+                    <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="播放信息提示" />
+                </LinearLayout>
+                <View android:background="#ffc9c9c9" android:layout_width="fill_parent" android:layout_height="2.0px" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/item_spacing">
+                <TextView android:textAppearance="@style/settings_card_title" android:gravity="center_vertical" android:background="#fff4f4f4" android:paddingLeft="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/settings_card_title_height" android:text="账号" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/account1" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_icon_20" />
+                    <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="账号管理" />
+                </LinearLayout>
+                <View android:background="#ffc9c9c9" android:layout_width="fill_parent" android:layout_height="2.0px" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/item_spacing">
+                <TextView android:textAppearance="@style/settings_card_title" android:gravity="center_vertical" android:background="#fff4f4f4" android:paddingLeft="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/settings_card_title_height" android:text="关于优酷" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/about1" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_icon_26" />
+                    <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="问题反馈" />
+                </LinearLayout>
+                <View android:background="@color/mycenter_setting_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                <RelativeLayout android:orientation="horizontal" android:id="@id/about2" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+                    <ImageView android:id="@id/phone_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_icon_28" android:layout_centerVertical="true" />
+                    <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="客服电话" android:layout_toRightOf="@id/phone_icon" android:layout_centerVertical="true" />
+                    <TextView android:textAppearance="@style/settings_item_subtitle" android:id="@id/phone_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/settings_card_padding" android:text="\ 4008100580" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <View android:background="@color/mycenter_setting_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/about3" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_icon_30" />
+                    <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="为我评分" />
+                </LinearLayout>
+                <View android:background="@color/mycenter_setting_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                <RelativeLayout android:orientation="horizontal" android:id="@id/about4" android:background="@drawable/other_person_gridview_item_selector" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+                    <ImageView android:id="@id/version_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_card_padding" android:src="@drawable/settings_icon_32" android:layout_centerVertical="true" />
+                    <ImageView android:id="@id/red_point" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_card_red_point_marginLeft" android:layout_centerVertical="true" />
+                    <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="版本更新" android:layout_toRightOf="@id/version_icon" android:layout_centerVertical="true" />
+                    <TextView android:textAppearance="@style/settings_item_subtitle" android:id="@id/version_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/settings_card_padding" android:text="当前版本4.7" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <View android:background="@color/mycenter_setting_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/about5" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_icon_34" />
+                    <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="清除应用缓存" />
+                </LinearLayout>
+                <View android:background="#ffc9c9c9" android:layout_width="fill_parent" android:layout_height="2.0px" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/exit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/item_spacing">
+                <TextView android:textAppearance="@style/settings_card_title" android:textColor="#ffffffff" android:gravity="center" android:background="#ffef3e16" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height" android:text="退出登录" />
+                <View android:background="#ffc9c9c9" android:layout_width="fill_parent" android:layout_height="2.0px" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView android:id="@id/scrollView2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/secondPage" android:padding="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/fragmentPage" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

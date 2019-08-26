@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.gamecenter.widgets.SearchHotGamesCardView android:orientation="vertical" android:id="@id/hot_games" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/game_card_margin" android:layout_marginTop="@dimen/game_card_margin">
+        <LinearLayout android:orientation="vertical" android:id="@id/recommend_games_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_recommend_games" android:layout_width="fill_parent" android:layout_height="@dimen/recommend_game_line0_height">
+                <TextView android:textSize="@dimen/recommend_game_size" android:textColor="#ff333333" android:id="@id/tv_recommend_game" android:paddingLeft="@dimen/recommend_game_left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hot_game_recommend" android:layout_weight="1.0" />
+                <ImageButton android:layout_gravity="center" android:id="@id/more_02" android:background="@null" android:layout_width="@dimen/palygallery_more_width" android:layout_height="@dimen/gamecenter_palygallery_more_height" android:src="@drawable/detail_card_more" android:scaleType="fitStart" />
+            </LinearLayout>
+            <View android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/hot_games_line1_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/recommend_games_container">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/hot_games_line1" android:layout_width="fill_parent" android:layout_height="@dimen/hot_games_line_height" android:weightSum="1.0">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/hot_games_01" android:background="@drawable/game_search_item_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.5">
+                    <ImageView android:id="@id/hot_games_icons_01" android:layout_width="@dimen/hot_games_icon_size" android:layout_height="@dimen/hot_games_icon_size" android:layout_marginLeft="@dimen/hot_games_icon_left" android:src="@drawable/game_list_item_default" android:scaleType="fitXY" android:contentDescription="@string/str_icon" />
+                    <TextView android:textSize="@dimen/hot_words_size" android:textColor="#ff666666" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/hot_games_words_01" android:paddingLeft="@dimen/hot_games_icon_word_padding" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="" android:maxLines="1" android:maxEms="6" android:singleLine="true" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/hot_games_02" android:background="@drawable/game_search_item_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.5">
+                    <ImageView android:id="@id/hot_games_icons_02" android:layout_width="@dimen/hot_games_icon_size" android:layout_height="@dimen/hot_games_icon_size" android:layout_marginLeft="@dimen/hot_games_icon_left" android:src="@drawable/game_list_item_default" android:scaleType="fitXY" android:contentDescription="@string/str_icon" />
+                    <TextView android:textSize="@dimen/hot_words_size" android:textColor="#ff666666" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/hot_games_words_02" android:paddingLeft="@dimen/hot_games_icon_word_padding" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="" android:maxLines="1" android:maxEms="6" android:singleLine="true" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/hot_games_line2_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/hot_games_line1_container">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/hot_games_line2" android:layout_width="fill_parent" android:layout_height="@dimen/hot_games_line_height" android:weightSum="1.0">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/hot_games_03" android:background="@drawable/game_search_item_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.5">
+                    <ImageView android:id="@id/hot_games_icons_03" android:layout_width="@dimen/hot_games_icon_size" android:layout_height="@dimen/hot_games_icon_size" android:layout_marginLeft="@dimen/hot_games_icon_left" android:src="@drawable/game_list_item_default" android:scaleType="fitXY" android:contentDescription="@string/str_icon" />
+                    <TextView android:textSize="@dimen/hot_words_size" android:textColor="#ff666666" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/hot_games_words_03" android:paddingLeft="@dimen/hot_games_icon_word_padding" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="" android:maxLines="1" android:maxEms="6" android:singleLine="true" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/hot_games_04" android:background="@drawable/game_search_item_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.5">
+                    <ImageView android:id="@id/hot_games_icons_04" android:layout_width="@dimen/hot_games_icon_size" android:layout_height="@dimen/hot_games_icon_size" android:layout_marginLeft="@dimen/hot_games_icon_left" android:src="@drawable/game_list_item_default" android:scaleType="fitXY" android:contentDescription="@string/str_icon" />
+                    <TextView android:textSize="@dimen/hot_words_size" android:textColor="#ff666666" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/hot_games_words_04" android:paddingLeft="@dimen/hot_games_icon_word_padding" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="" android:maxLines="1" android:maxEms="6" android:singleLine="true" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/hot_games_line3_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/hot_games_line2_container">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/hot_games_line3" android:layout_width="fill_parent" android:layout_height="@dimen/hot_games_line_height" android:weightSum="1.0">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/hot_games_05" android:background="@drawable/game_search_item_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.5">
+                    <ImageView android:id="@id/hot_games_icons_05" android:layout_width="@dimen/hot_games_icon_size" android:layout_height="@dimen/hot_games_icon_size" android:layout_marginLeft="@dimen/hot_games_icon_left" android:src="@drawable/game_list_item_default" android:scaleType="fitXY" android:contentDescription="@string/str_icon" />
+                    <TextView android:textSize="@dimen/hot_words_size" android:textColor="#ff666666" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/hot_games_words_05" android:paddingLeft="@dimen/hot_games_icon_word_padding" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="" android:maxLines="1" android:maxEms="6" android:singleLine="true" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/hot_games_06" android:background="@drawable/game_search_item_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.5">
+                    <ImageView android:id="@id/hot_games_icons_06" android:layout_width="@dimen/hot_games_icon_size" android:layout_height="@dimen/hot_games_icon_size" android:layout_marginLeft="@dimen/hot_games_icon_left" android:src="@drawable/game_list_item_default" android:scaleType="fitXY" android:contentDescription="@string/str_icon" />
+                    <TextView android:textSize="@dimen/hot_words_size" android:textColor="#ff666666" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/hot_games_words_06" android:paddingLeft="@dimen/hot_games_icon_word_padding" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="" android:maxLines="1" android:maxEms="6" android:singleLine="true" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/hot_games_line4_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/hot_games_line3_container">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/hot_games_line4" android:layout_width="fill_parent" android:layout_height="@dimen/hot_games_line_height" android:weightSum="1.0">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/hot_games_07" android:background="@drawable/game_search_item_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.5">
+                    <ImageView android:id="@id/hot_games_icons_07" android:layout_width="@dimen/hot_games_icon_size" android:layout_height="@dimen/hot_games_icon_size" android:layout_marginLeft="@dimen/hot_games_icon_left" android:src="@drawable/game_list_item_default" android:scaleType="fitXY" android:contentDescription="@string/str_icon" />
+                    <TextView android:textSize="@dimen/hot_words_size" android:textColor="#ff666666" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/hot_games_words_07" android:paddingLeft="@dimen/hot_games_icon_word_padding" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="" android:maxLines="1" android:maxEms="6" android:singleLine="true" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/hot_games_08" android:background="@drawable/game_search_item_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.5">
+                    <ImageView android:id="@id/hot_games_icons_08" android:layout_width="@dimen/hot_games_icon_size" android:layout_height="@dimen/hot_games_icon_size" android:layout_marginLeft="@dimen/hot_games_icon_left" android:src="@drawable/game_list_item_default" android:scaleType="fitXY" android:contentDescription="@string/str_icon" />
+                    <TextView android:textSize="@dimen/hot_words_size" android:textColor="#ff666666" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/hot_games_words_08" android:paddingLeft="@dimen/hot_games_icon_word_padding" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="" android:maxLines="1" android:maxEms="6" android:singleLine="true" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        </LinearLayout>
+    </com.youku.gamecenter.widgets.SearchHotGamesCardView>
+</RelativeLayout>

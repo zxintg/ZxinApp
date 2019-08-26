@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/layout_title" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/community_rel" android:background="@drawable/dialog_square_selector" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_item_height" android:onClick="onJumpCommClick">
+        <ImageView android:id="@id/community_img_mark" android:paddingLeft="@dimen/padding_left_right_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/community_icon" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/text_size_14" android:gravity="center_vertical" android:id="@id/community_title" android:padding="@dimen/padding_left_right_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/arraw_right_img" android:layout_toRightOf="@id/community_img_mark" android:layout_centerVertical="true" style="@style/ucenter_list_item_first" />
+        <ImageView android:id="@id/arraw_right_img" android:paddingRight="@dimen/padding_left_right_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow_right_black" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <View android:background="#ffebebeb" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/title_rel" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_item_height">
+        <TextView android:background="@color/usercenter_item_mark_color" android:layout_width="@dimen/usercenter_banner_mark_width" android:layout_height="@dimen/usercenter_banner_mark_height" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/text_size_16" android:gravity="center_vertical" android:id="@id/header_name" android:paddingLeft="@dimen/padding_left_right_10" android:paddingTop="@dimen/padding_left_right_10" android:paddingBottom="@dimen/padding_left_right_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/card_tips_count" android:layout_centerVertical="true" style="@style/ucenter_list_item_first" />
+        <View android:background="#ffebebeb" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

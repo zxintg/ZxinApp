@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/hd_fragment_subscribe_main" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/hd_fragment_sub_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/subscribe_title" layout="@layout/hd_subscribe_title" />
+        <View android:id="@id/gap_line" android:background="@color/hd_title_border" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignBottom="@id/subscribe_title" />
+        <android.support.v4.view.ViewPager android:id="@id/viewpager" android:persistentDrawingCache="animation" android:layout_width="fill_parent" android:layout_height="fill_parent" android:flipInterval="30" android:layout_below="@id/gap_line" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/fragment_subscribe_guide" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

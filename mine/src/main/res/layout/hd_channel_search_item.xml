@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/hd_search_item_bg_color" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/layout_main_header" android:background="@color/hd_channel_sub_header_bg_color" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@id/layout_item_header" android:background="@color/hd_channel_sub_header_bg_color" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/hd_channel_sub_item_header_h">
+            <TextView android:textSize="@dimen/hd_channel_sub_item_header_font_size" android:textColor="@color/hd_channel_sub_header_font_color" android:layout_gravity="center_vertical" android:id="@id/txt_item_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hd_channel_sub_item_header_left" android:text="@string/hd_channel_search_item_header_text" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/relativeLayout_userItem" android:paddingLeft="@dimen/hd_indicator_right_padding" android:paddingTop="@dimen/hd_indicator_right_padding" android:paddingBottom="@dimen/hd_indicator_right_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/search_item_margin_right" android:layout_below="@id/layout_main_header">
+        <RelativeLayout android:id="@id/searchItem_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/relativeLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/hd_indicator_right_padding">
+                <ImageView android:id="@id/channel_photo" android:background="@color/hd_user_head_bg" android:focusable="false" android:layout_width="@dimen/hd_subscribe_item_photo_size" android:layout_height="@dimen/hd_subscribe_item_photo_size" android:src="@drawable/avatar_default" />
+                <RelativeLayout android:background="@drawable/hd_round_pic_mask" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignLeft="@id/channel_photo" android:layout_alignTop="@id/channel_photo" android:layout_alignRight="@id/channel_photo" android:layout_alignBottom="@id/channel_photo" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/layout_dot_menu_button" android:layout_toRightOf="@id/relativeLayout" android:layout_centerVertical="true">
+                <TextView android:textSize="@dimen/hd_subscribe_tab_bar_size" android:textColor="@color/hd_nologin_text" android:id="@id/channel_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="用户昵称" android:singleLine="true" android:includeFontPadding="false" />
+                <TextView android:textSize="@dimen/hd_look_unique_btn_text_size" android:textColor="@color/hd_subscribe_item_desc_color" android:id="@id/channel_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hd_subscribe_item_txt_gap" android:text="用户描述" android:singleLine="true" android:includeFontPadding="false" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <View android:layout_below="@id/relativeLayout1" style="@style/hd_gridview_gap_line" />
+</RelativeLayout>

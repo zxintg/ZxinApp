@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/playControlRootLayout" android:background="@drawable/play_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/playControlSeekBar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <ProgressBar android:id="@id/play_progress" android:layout_width="fill_parent" android:layout_height="2.0dip" android:progressDrawable="@drawable/mini_seekbar_progress" android:layout_alignParentBottom="true" style="?android:attr/progressBarStyleHorizontal" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/loading_process_dialog_progressBar" android:background="#ee000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/playlist_no_video" android:background="@android:color/black" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:id="@id/no_video_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="46.0dip" android:scaleType="centerInside" android:text="抱歉，您的播放列表为空，到客户端去添加吧" android:layout_centerHorizontal="true" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="96.0dip" android:layout_centerHorizontal="true">
+            <LinearLayout android:orientation="vertical" android:id="@id/know_it" android:clickable="true" android:layout_width="50.0dip" android:layout_height="wrap_content">
+                <ImageView android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="3.0dip" />
+                <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="知道了" />
+                <ImageView android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="3.0dip" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/immediately_go" android:clickable="true" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginLeft="100.0dip" android:layout_toRightOf="@id/know_it">
+                <ImageView android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="3.0dip" />
+                <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="立即去" />
+                <ImageView android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="3.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/timeout_error" android:background="#ee000000" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="46.0dip" android:scaleType="centerInside" android:text="@string/Player_error_timeout" android:layout_centerHorizontal="true" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="96.0dip" android:layout_centerHorizontal="true">
+            <LinearLayout android:orientation="vertical" android:id="@id/btn_retry" android:clickable="true" android:layout_width="60.0dip" android:layout_height="wrap_content">
+                <ImageView android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="3.0dip" />
+                <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/player_bt_retry" />
+                <ImageView android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="3.0dip" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/btn_exit" android:clickable="true" android:layout_width="60.0dip" android:layout_height="wrap_content" android:layout_marginLeft="100.0dip" android:layout_toRightOf="@id/know_it">
+                <ImageView android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="3.0dip" />
+                <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="最小化" />
+                <ImageView android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="3.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/playControlRoot" android:background="#60000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
+        <TextView android:id="@id/playControl" android:background="@drawable/btn_mini_play" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerInside" android:layout_centerInParent="true" />
+        <LinearLayout android:orientation="vertical" android:id="@id/playControlSelectTv" android:clickable="true" android:layout_width="60.0dip" android:layout_height="wrap_content" android:layout_marginRight="22.0dip" android:layout_toLeftOf="@id/playControl" android:layout_centerInParent="true">
+            <ImageView android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="3.0dip" />
+            <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="播放列表" />
+            <ImageView android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="3.0dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/playControlIconClose" android:clickable="true" android:layout_width="60.0dip" android:layout_height="wrap_content" android:layout_marginLeft="22.0dip" android:layout_toRightOf="@id/playControl" android:layout_centerInParent="true">
+            <ImageView android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="3.0dip" />
+            <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="最小化" />
+            <ImageView android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="3.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/mini_title" android:background="@drawable/play_mini_title_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageButton android:id="@id/playControlIconTv" android:background="@drawable/btn_mini_logo" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_centerVertical="true" />
+        <com.youku.miniplayer.AlwaysMarqueeTextView android:textSize="14.0sp" android:textColor="#ffffffff" android:ellipsize="marquee" android:id="@id/txtTitle" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="120.0dip" android:layout_height="wrap_content" android:scaleType="centerInside" android:scrollHorizontally="true" android:singleLine="true" android:layout_centerHorizontal="true" android:marqueeRepeatLimit="marquee_forever" />
+        <ImageButton android:id="@id/playControlFullScreen" android:background="@android:color/transparent" android:clickable="true" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginRight="-33.0dip" android:src="@drawable/btn_mini_full_screen" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

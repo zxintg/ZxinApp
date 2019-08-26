@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/app_agreement_popwindow_root_layout" android:background="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:id="@id/app_agreement_title_textview" android:layout_width="fill_parent" android:layout_height="@dimen/app_agreement_popwindow_top_title_height" android:text="@string/app_aggreement_disclaimer_text" android:layout_centerHorizontal="true" android:lineSpacingExtra="3.0dip" style="@style/app_agreement_title_textview" />
+    <ScrollView android:gravity="center" android:id="@id/app_agreement_content_scrollview" android:layout_width="fill_parent" android:layout_height="@dimen/app_agreement_content_scrollview_height" android:layout_below="@id/app_agreement_title_textview">
+        <TextView android:id="@id/app_agreement_content_textview" android:paddingLeft="@dimen/app_agreement_popwindow_center_textview_paddingleft" android:paddingRight="@dimen/app_agreement_popwindow_center_textview_paddingright" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/app_aggreement_disclaimer_content" android:singleLine="false" android:layout_below="@id/app_agreement_title_textview" android:lineSpacingExtra="@dimen/app_agreement_popwindow_center_textview_line_space_extra" style="@style/app_agreement_content_textview" />
+    </ScrollView>
+    <RelativeLayout android:gravity="bottom" android:orientation="vertical" android:id="@id/app_agreement_done_bottom_relayout" android:layout_width="fill_parent" android:layout_height="@dimen/layout_vip_dialog_bottom_height" android:layout_below="@id/app_agreement_content_scrollview">
+        <TextView android:layout_gravity="center" android:id="@id/app_agreement_done_textview" android:background="@drawable/btn_vip_dialog_ok" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/app_aggreement_done_text" style="@style/vip_dialog_txt_go" />
+        <View android:id="@id/app_agreement_cutting_line_view" android:background="@drawable/soku_layout_bottom_cover" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+</LinearLayout>

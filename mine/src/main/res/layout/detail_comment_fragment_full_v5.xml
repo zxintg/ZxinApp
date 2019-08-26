@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/detail_comment_full_title" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/detail_small_card_title_height_v5">
+        <RelativeLayout android:id="@id/layout_common_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/detail_card_comment_header_image_margin_left_v5">
+            <ImageView android:id="@id/more" android:background="@drawable/fanhui" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/detail_card_title_v5" android:textColor="#ff444444" android:id="@id/title" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_video_detail_title_marginleft" android:text="评论" android:layout_toRightOf="@id/more" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/titleLayout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerInParent="true">
+            <RelativeLayout android:orientation="vertical" android:id="@id/layoutHot" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <TextView android:textSize="@dimen/detail_card_title_v5" android:textColor="@color/comment_tab_textview_selector" android:id="@id/tvHot" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hot_comment_name" android:singleLine="true" android:layout_centerVertical="true" />
+                <View android:id="@id/left_indicator_img" android:background="@color/topics_highlight_color" android:layout_width="wrap_content" android:layout_height="2.0dip" android:layout_alignLeft="@id/tvHot" android:layout_alignRight="@id/tvHot" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:orientation="vertical" android:id="@id/layoutNew" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toRightOf="@id/layoutHot">
+                <TextView android:textSize="@dimen/detail_card_title_v5" android:textColor="@color/comment_tab_textview_selector" android:id="@id/tvNew" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_comment_name" android:singleLine="true" android:layout_centerVertical="true" />
+                <View android:id="@id/right_indicator_img" android:background="@color/topics_highlight_color" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="2.0dip" android:layout_alignLeft="@id/tvNew" android:layout_alignRight="@id/tvNew" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/detail_card_subtitle_size" android:textColor="#ffb5b7b9" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/detail_card_comment_header_image_margin_left_v5" android:text="1372条评论" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <View android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/detail_comment_header_v5" />
+    <RelativeLayout android:background="@color/detail_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/fl_comment" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.handmark.pulltorefresh.library.PullToRefreshListView android:id="@id/plv_video_comment" android:background="@color/white" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:divider="#ffebebeb" android:dividerHeight="1.0px" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/loadingview" android:background="@color/detail_background_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/series_loading_progressbar" />
+        </LinearLayout>
+        <ProgressBar android:id="@id/next_loading" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/series_loading_progressbar" android:layout_centerInParent="true" />
+        <include android:id="@id/detail_comment_no_result" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/detail_comment_no_result_v5" />
+    </RelativeLayout>
+</LinearLayout>

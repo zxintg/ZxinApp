@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/searchresult_item_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="1.0px">
+        <TextView android:id="@id/txt_searchmain_recommend_tag" android:layout_width="fill_parent" android:layout_height="@dimen/txt_searchmain_recommend_tag_height" android:layout_marginLeft="@dimen/searchmain_history_marginleftright" android:layout_marginRight="@dimen/searchmain_history_marginleftright" android:text="@string/searchmain_recommend" style="@style/txt_searchmain_recommend_tag" />
+        <LinearLayout android:orientation="vertical" android:id="@id/layout_searchmain_recommend_area" android:paddingBottom="@dimen/layout_searchmain_recommend_area_paddingbottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/layout_searchmain_recommend_area_marginleftright" android:layout_marginRight="@dimen/layout_searchmain_recommend_area_marginleftright">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layout_searchmain_recommend_area_first" android:layout_width="fill_parent" android:layout_height="@dimen/layout_searchmain_recommend_area_first_height">
+                <TextView android:id="@id/txt_searchmain_recommend_one" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="最美的时光" style="@style/txt_searchmain_recommend_first" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/layout_searchmain_recommend_area_second" android:layout_width="fill_parent" android:layout_height="@dimen/layout_searchmain_recommend_area_second_height">
+                <TextView android:id="@id/txt_searchmain_recommend_two" android:paddingRight="@dimen/txt_searchmain_recommend_second_paddingright" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="太空授课" android:layout_weight="0.45" style="@style/txt_searchmain_recommend_second" />
+                <TextView android:id="@id/txt_searchmain_recommend_three" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="生化危机婚礼" android:layout_weight="0.55" style="@style/txt_searchmain_recommend_second" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/layout_searchmain_recommend_area_third" android:layout_width="fill_parent" android:layout_height="@dimen/layout_searchmain_recommend_area_third_height">
+                <TextView android:id="@id/txt_searchmain_recommend_four" android:paddingRight="@dimen/txt_searchmain_recommend_third_paddingright" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="老婆撞死老公" android:layout_weight="0.4" style="@style/txt_searchmain_recommend_third" />
+                <TextView android:id="@id/txt_searchmain_recommend_five" android:paddingRight="@dimen/txt_searchmain_recommend_third_paddingright" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="太空授课" android:layout_weight="0.35" style="@style/txt_searchmain_recommend_third" />
+                <TextView android:id="@id/txt_searchmain_recommend_six" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="小时代" android:layout_weight="0.25" style="@style/txt_searchmain_recommend_third" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/layout_searchmain_recommend_area_fourth" android:layout_width="fill_parent" android:layout_height="@dimen/layout_searchmain_recommend_area_fourth_height">
+                <TextView android:id="@id/txt_searchmain_recommend_seven" android:paddingRight="@dimen/txt_searchmain_recommend_fourth_paddingright" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="村中或在" android:layout_weight="0.25" style="@style/txt_searchmain_recommend_fourth" />
+                <TextView android:id="@id/txt_searchmain_recommend_eight" android:paddingRight="@dimen/txt_searchmain_recommend_fourth_paddingright" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="NBA总决赛" android:layout_weight="0.35" style="@style/txt_searchmain_recommend_fourth" />
+                <TextView android:id="@id/txt_searchmain_recommend_nine" android:paddingRight="@dimen/txt_searchmain_recommend_fourth_paddingright" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="女人公敌" android:layout_weight="0.25" style="@style/txt_searchmain_recommend_fourth" />
+                <TextView android:id="@id/txt_searchmain_recommend_ten" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="厨戏痞" android:layout_weight="0.15" style="@style/txt_searchmain_recommend_fourth" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

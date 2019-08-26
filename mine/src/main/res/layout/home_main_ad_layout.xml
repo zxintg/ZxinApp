@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/home_fragment_ad_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/home_fragment_ad_webview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:id="@id/home_fragment_ad_image" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+    <ImageButton android:layout_gravity="center|right|top" android:id="@id/home_fragment_ad_close" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/home_ad_padding" android:src="@drawable/home_ad_close" />
+    <include layout="@layout/home_card_item_ad_mask" />
+</FrameLayout>

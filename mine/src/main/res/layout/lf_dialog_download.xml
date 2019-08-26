@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="290.0dip" android:layout_height="fill_parent" android:layout_marginLeft="20.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="20.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/layout_dialog" android:background="@color/lf_color_transparent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:id="@id/lf_dialog_space" android:background="@color/lf_color_transparent" android:layout_width="fill_parent" android:layout_height="42.0dip" />
+            <LinearLayout android:orientation="vertical" android:background="@drawable/lf_common_dialog_background" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="14.0dip" android:textColor="@color/lf_color_2d2d2d" android:id="@id/lf_dialog_prompt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="54.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="20.0dip" android:lineSpacingExtra="3.0dip" />
+                <Button android:textSize="14.0dip" android:textColor="@color/lf_color_333333" android:id="@id/lf_dialog_install_button" android:background="@drawable/lf_background_dialog_download_install_button" android:layout_width="fill_parent" android:layout_height="30.0dip" android:text="立即打开" />
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:layout_width="290.0dip" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="120.0dip" android:layout_height="84.0dip" android:layout_centerInParent="true">
+                <ImageView android:layout_width="17.0dip" android:layout_height="17.0dip" android:layout_marginTop="45.0dip" android:src="@drawable/lf_ic_show_star_1" />
+                <ImageView android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="62.0dip" android:src="@drawable/lf_ic_show_star_2" />
+                <ImageView android:id="@id/lf_dialog_avatar" android:background="@drawable/lf_bg_dialog_avatar" android:padding="3.0dip" android:layout_width="84.0dip" android:layout_height="84.0dip" android:layout_centerInParent="true" />
+                <ImageView android:id="@id/dialog_left_star_3" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginLeft="102.0dip" android:layout_marginTop="45.0dip" android:src="@drawable/lf_ic_show_star_3" />
+                <ImageView android:layout_width="11.0dip" android:layout_height="11.0dip" android:layout_marginLeft="102.0dip" android:layout_marginTop="62.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/lf_ic_show_star_4" />
+            </RelativeLayout>
+            <ImageView android:id="@id/lf_dialog_close" android:background="@drawable/lf_bg_dialog_close" android:padding="6.0dip" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginTop="48.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/lf_ic_dialog_close" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <FrameLayout android:layout_gravity="center_vertical" android:id="@id/layout_progress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="22.0dip">
+        <ProgressBar android:id="@id/lf_dialog_download_progress_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="32.0dip" android:max="100" android:progress="0" android:progressDrawable="@drawable/lf_background_dialog_download_progress_bar" style="@style/android:Widget.Holo.ProgressBar.Horizontal" />
+        <TextView android:textSize="10.0dip" android:textColor="@color/lf_color_ffffff" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="32.0dip" android:text="@string/lf_download_lafeng_apk_downloading" />
+        <ImageView android:layout_gravity="center|right" android:id="@id/lf_dialog_close2" android:background="@drawable/lf_bg_dialog_close2" android:padding="6.0dip" android:layout_width="22.0dip" android:layout_height="22.0dip" android:src="@drawable/lf_ic_dialog_close" />
+    </FrameLayout>
+</FrameLayout>

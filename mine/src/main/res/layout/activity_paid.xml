@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView android:orientation="vertical" android:id="@id/sv_activity_paid_scroll" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/vg_activity_paid" android:paddingLeft="@dimen/activity_paid_gloable_padding_h" android:paddingRight="@dimen/activity_paid_gloable_padding_h" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:id="@id/vg_activity_paid_h5_area" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="@dimen/paid_bought_video_height" android:layout_marginTop="@dimen/activity_paid_gloable_padding_v">
+                <WebView android:id="@id/wv_activity_paid_web" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <LinearLayout android:gravity="center" android:id="@id/view_activity_paid_web_empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <include layout="@layout/card_search_last_empty" />
+                </LinearLayout>
+                <ProgressBar android:layout_gravity="center" android:id="@id/view_activity_paid_h5_loading" android:visibility="gone" android:layout_width="@dimen/buffering_progressbar_width" android:layout_height="@dimen/buffering_progressbar_width" android:indeterminateDrawable="@drawable/series_loading_progressbar" />
+            </FrameLayout>
+            <com.youku.phone.vip.view.PayCardView android:id="@id/pcv_activity_paid_paycard" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="@dimen/paid_bought_video_height" android:layout_marginTop="@dimen/activity_paid_gloable_padding_v" />
+            <LinearLayout android:orientation="vertical" android:id="@id/vg_activity_paid_vipvideos_area" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_paid_gloable_padding_v" android:minHeight="@dimen/paid_bought_video_height">
+                <TextView android:textSize="@dimen/detail_card_title_size" android:textColor="#ff333333" android:gravity="center_vertical" android:id="@id/gv_activity_paid_vip_videos_header" android:paddingLeft="@dimen/activity_paid_header_padding_h" android:layout_width="fill_parent" android:layout_height="@dimen/activity_paid_header_height" android:text="会员免费" />
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <com.youku.widget.SteadyGridView android:gravity="center" android:id="@id/gv_activity_paid_vip_videos" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="#00000000" android:cacheColorHint="#00000000" android:horizontalSpacing="0.0dip" android:verticalSpacing="0.0dip" android:numColumns="2" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/view_activity_paid_vip_videos_empty" android:background="#ffffffff" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <View android:background="@color/pay_card_line_color" android:layout_width="fill_parent" android:layout_height="2.0px" />
+                        <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                            <include layout="@layout/card_search_last_empty" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <ProgressBar android:layout_gravity="center" android:id="@id/view_activity_paid_vip_videos_loading" android:visibility="gone" android:layout_width="@dimen/buffering_progressbar_width" android:layout_height="@dimen/buffering_progressbar_width" android:indeterminateDrawable="@drawable/series_loading_progressbar" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/vg_activity_paid_bought_area" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/paid_bought_video_height" android:layout_marginTop="@dimen/activity_paid_gloable_padding_v">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_title_height" android:layout_marginLeft="@dimen/myyouku_card_title_marginleft">
+                    <TextView android:textSize="@dimen/detail_card_title_size" android:textColor="#ff333333" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="已购影片" />
+                    <TextView android:textSize="@dimen/detail_card_subtitle_size" android:textColor="#ffb9b9b9" android:id="@id/tv_activity_paid_bought_count" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_subtitle_marginTop" android:text="共0部已购影片" />
+                </LinearLayout>
+                <View android:background="@color/pay_card_line_color" android:layout_width="fill_parent" android:layout_height="2.0px" />
+                <android.support.v7.widget.RecyclerView android:id="@id/rv_activity_paid_bought_videos" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/vg_activity_paid_mytickets_area" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_paid_gloable_padding_v">
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="@dimen/activity_paid_header_height">
+                    <TextView android:textSize="@dimen/detail_card_title_size" android:textColor="#ff333333" android:gravity="center_vertical" android:paddingLeft="@dimen/activity_paid_header_padding_h" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="我的观影券" android:layout_weight="1.0" />
+                    <RelativeLayout android:id="@id/pay_card_top_more_layout" android:layout_width="@dimen/pay_card_top_more_width" android:layout_height="fill_parent">
+                        <TextView android:id="@id/vg_activity_paid_mytickets_rule" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="使用说明" android:drawableRight="@drawable/pay_card_top_more_right" android:layout_centerInParent="true" style="@style/pay_card_top_more" />
+                        <View android:id="@id/pay_card_top_more_line" android:background="@color/pay_card_line_color" android:layout_width="1.0px" android:layout_height="@dimen/pay_card_top_more_line_height" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <com.youku.widget.SteadyGridView android:gravity="center" android:id="@id/gv_activity_paid_mytickets" android:paddingBottom="@dimen/paid_ticket_padding_v" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="#00000000" android:cacheColorHint="#00000000" android:horizontalSpacing="@dimen/paid_ticket_padding_h" android:verticalSpacing="@dimen/paid_ticket_padding_v" android:numColumns="2" />
+            </LinearLayout>
+            <View android:layout_width="fill_parent" android:layout_height="@dimen/activity_paid_gloable_padding_v" />
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+    <include android:id="@id/view_activity_paid_empty_container" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/detail_layout_no_results_land" />
+</FrameLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="@dimen/channel_brand_card_item_icon_height_width" android:layout_height="wrap_content" android:layout_marginRight="1.0px"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="#fffafafa" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/channel_header_brand_image_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/channel_header_brand_image" android:background="#ffdbdbdb" android:layout_width="@dimen/channel_brand_card_item_icon_height_width" android:layout_height="@dimen/channel_brand_card_item_icon_height_width" android:scaleType="fitXY" />
+            <ImageView android:layout_gravity="center" android:id="@id/channel_header_brand_not_load_image" android:layout_width="@dimen/channel_brand_card_item_not_load_icon_height_width" android:layout_height="@dimen/channel_brand_card_item_not_load_icon_height_width" android:src="@drawable/channel_brand_not_load_icon" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="@dimen/channel_brand_card_item_icon_height_width" android:layout_height="@dimen/channel_brand_card_item_title_height" android:layout_below="@id/channel_header_brand_image_layout" android:layout_alignLeft="@id/channel_header_brand_image_layout" android:layout_alignRight="@id/channel_header_brand_image_layout">
+            <TextView android:textSize="@dimen/channel_brand_card_item_title_text_size" android:textColor="#ff333333" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/channel_header_brand_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/channel_brand_card_item_title_margin_left" android:layout_marginTop="@dimen/channel_brand_card_item_title_margin_top" android:singleLine="true" />
+        </FrameLayout>
+    </RelativeLayout>
+    <View android:layout_gravity="bottom|center|right" android:background="#ffeaeaea" android:layout_width="1.0px" android:layout_height="@dimen/channel_brand_card_item_title_height" />
+</FrameLayout>

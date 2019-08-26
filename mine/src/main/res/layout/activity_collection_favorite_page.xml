@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/favorite_container" android:background="@color/detail_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/layout_favorite_page_title" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/activity_collection_favorite_page_title" />
+    <android.support.v4.view.ViewPager android:id="@id/viewpager_favorite_page_layout" android:background="@android:color/transparent" android:persistentDrawingCache="animation" android:layout_width="fill_parent" android:layout_height="fill_parent" android:flipInterval="30" android:layout_below="@id/layout_favorite_page_title" />
+</RelativeLayout>

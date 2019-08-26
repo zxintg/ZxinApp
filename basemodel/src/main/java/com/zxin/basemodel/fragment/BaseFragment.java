@@ -24,6 +24,7 @@ import java.util.List;
  * 基础
  */
 public abstract class BaseFragment extends RxFragment implements View.OnClickListener{
+    private static final LogUtils.Tag TAG = new LogUtils.Tag("BaseFragment");
     protected FragmentTransaction transaction = null;
     protected Context mContext;
     //一个View 里面肯定有多个Presenter情况，怎么处理，Dagger处理
@@ -126,7 +127,7 @@ public abstract class BaseFragment extends RxFragment implements View.OnClickLis
     //EventBus的回调方法。
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(Bundle bundle) {
-        LogUtils.d("");
+        LogUtils.d(TAG,"onEventMainThread");
     }
 
     //Fragment的View加载完毕的标记

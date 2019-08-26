@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/app_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="2.0" android:layout_weight="1.0">
+        <RelativeLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <TextView android:gravity="center|top" android:layout_gravity="center|top" android:id="@id/user_saosao_imageview" android:background="@drawable/login_by_sign_code" android:layout_width="@dimen/login_bottom_saosao_imageview_height_width" android:layout_height="@dimen/login_bottom_saosao_imageview_height_width" android:scaleType="fitCenter" />
+                <TextView android:textSize="@dimen/login_user_sns_text_size" android:textStyle="bold" android:textColor="#ff333333" android:gravity="center" android:layout_gravity="center" android:id="@id/user_saosao_login" android:background="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/login_user_sns_saosao_text_margin_top" android:text="@string/saosao_login" android:layout_below="@id/user_saosao_imageview" />
+            </LinearLayout>
+            <View android:layout_gravity="bottom" android:id="@id/homepage_bottom_stack_item_line" android:background="@color/channel_bottom_line_color" android:layout_width="fill_parent" android:layout_height="2.0px" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/login_user_sns_block_margin_top_left" android:weightSum="2.0" android:layout_weight="1.0">
+            <LinearLayout android:orientation="horizontal" android:background="@color/white" android:paddingLeft="@dimen/login_user_sns_text_layout_padding_right_left" android:paddingRight="@dimen/login_user_sns_text_layout_padding_right_left" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:layout_gravity="center|left" android:layout_width="@dimen/login_bottom_sns_icon_height_width" android:layout_height="@dimen/login_bottom_sns_icon_height_width" android:src="@drawable/login_by_sign_sina" android:scaleType="fitCenter" />
+                <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:weightSum="10.0" android:layout_weight="1.0">
+                    <RelativeLayout android:gravity="center" android:layout_gravity="center|left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="2.0">
+                        <TextView android:gravity="center" android:layout_gravity="center" android:background="@drawable/tab_indicator_divider" android:layout_width="wrap_content" android:layout_height="@dimen/login_bottom_sns_icon_center_line_height_width" android:layout_centerInParent="true" />
+                    </RelativeLayout>
+                    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="7.0">
+                        <TextView android:textSize="@dimen/login_user_sns_text_size" android:textStyle="bold" android:textColor="#ff333333" android:gravity="left" android:layout_gravity="left" android:id="@id/user_login_sina_weibo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tips_sns_sina_weibo" />
+                        <TextView android:textSize="@dimen/login_user_sns_below_text_size" android:textColor="#ff888888" android:gravity="left" android:layout_gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tips_account_login" />
+                    </LinearLayout>
+                    <ImageView android:layout_gravity="center|right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/login_arrow_sign" android:scaleType="fitCenter" android:layout_weight="1.0" />
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView android:background="@color/channel_bottom_line_color" android:layout_width="fill_parent" android:layout_height="2.0px" />
+            <LinearLayout android:orientation="horizontal" android:background="@color/white" android:paddingLeft="@dimen/login_user_sns_text_layout_padding_right_left" android:paddingRight="@dimen/login_user_sns_text_layout_padding_right_left" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/login_user_sns_block_margin_top_left" android:layout_weight="1.0">
+                <ImageView android:layout_gravity="center|left" android:layout_width="@dimen/login_bottom_sns_icon_height_width" android:layout_height="@dimen/login_bottom_sns_icon_height_width" android:src="@drawable/login_by_sign_qq" android:scaleType="fitCenter" />
+                <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:weightSum="10.0" android:layout_weight="1.0">
+                    <RelativeLayout android:gravity="center" android:layout_gravity="center|left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="2.0">
+                        <TextView android:gravity="center" android:layout_gravity="center" android:background="@drawable/tab_indicator_divider" android:layout_width="wrap_content" android:layout_height="@dimen/login_bottom_sns_icon_center_line_height_width" android:layout_centerInParent="true" />
+                    </RelativeLayout>
+                    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="7.0">
+                        <TextView android:textSize="@dimen/login_user_sns_text_size" android:textStyle="bold" android:textColor="#ff333333" android:gravity="left" android:layout_gravity="left" android:id="@id/user_login_qq_account" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tips_sns_qq_account" />
+                        <TextView android:textSize="@dimen/login_user_sns_below_text_size" android:textColor="#ff888888" android:gravity="left" android:layout_gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tips_account_login" />
+                    </LinearLayout>
+                    <ImageView android:layout_gravity="center|right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/login_arrow_sign" android:scaleType="fitCenter" android:layout_weight="1.0" />
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView android:background="@color/channel_bottom_line_color" android:layout_width="fill_parent" android:layout_height="2.0px" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

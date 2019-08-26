@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="@dimen/game_detail_recom_guide_tag_text_size" android:textColor="@color/game_detail_recom_guid_tag_text_color" android:gravity="center" android:id="@id/id_txv_game_detail_recomm_guid_tag" android:background="@drawable/gamehome_detail_recom_guid_tag_bg" android:paddingTop="@dimen/game_detail_recom_guide_tag_text_padding_top_bottom" android:paddingBottom="@dimen/game_detail_recom_guide_tag_text_padding_top_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

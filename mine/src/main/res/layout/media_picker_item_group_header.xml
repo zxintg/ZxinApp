@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/homepage_item_title_first" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/media_picker_item_header_text_date" android:paddingLeft="@dimen/activity_padding_normal" android:layout_width="fill_parent" android:layout_height="@dimen/abc_action_bar_default_height" android:text="日期标题" android:singleLine="true" android:drawableLeft="@drawable/upload_item_header_dot" android:drawablePadding="@dimen/upload_item_header_title_dot_space" style="@style/homepage_item_title_second" />
+</LinearLayout>

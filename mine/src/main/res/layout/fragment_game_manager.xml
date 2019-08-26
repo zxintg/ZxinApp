@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffe2e2e2" android:paddingTop="@dimen/game_card_margin" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/no_result_textsize" android:gravity="center" android:id="@id/empty_textview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/gamelist_item_padding" android:text="@string/game_manager_list_empty" />
+    <ListView android:id="@id/list_gamemanger" android:background="#ffe2e2e2" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:footerDividersEnabled="false" />
+</RelativeLayout>

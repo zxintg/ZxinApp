@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/plugin_series_fragment_top_layout" android:layout_width="fill_parent" android:layout_height="@dimen/plugin_series_fragment_top_layout_height">
+        <ImageView android:id="@id/series_top_back_btn" android:layout_width="@dimen/series_top_back_btn_width" android:layout_height="@dimen/series_top_back_btn_height" android:src="@drawable/series_top_back_btn" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/series_top_back_btn" android:layout_centerVertical="true">
+            <TextView android:ellipsize="end" android:id="@id/series_top_title_first" android:layout_width="fill_parent" android:layout_height="@dimen/series_top_title_first_height" android:layout_marginLeft="@dimen/series_top_title_first_marginleft" android:singleLine="true" style="@style/series_top_title_first" />
+            <TextView android:ellipsize="end" android:id="@id/series_top_title_second" android:layout_width="fill_parent" android:layout_height="@dimen/series_top_title_second_height" android:layout_marginLeft="@dimen/series_top_title_first_marginleft" android:singleLine="true" style="@style/series_top_title_second" />
+        </LinearLayout>
+        <View android:background="#ff535353" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

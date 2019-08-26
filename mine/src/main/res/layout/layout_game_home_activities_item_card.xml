@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/game_activities_card_root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="@dimen/game_card_margin" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="#ffffffff" android:paddingRight="@dimen/card_margin_32dp" android:layout_width="fill_parent" android:layout_height="@dimen/game_h5_card_title_layout_height">
+        <View android:background="#ff2fb3ff" android:layout_width="@dimen/gamehome_home_card_item_box_title_shape_weight" android:layout_height="@dimen/gamehome_home_card_item_box_title_shape_height" />
+        <TextView android:textSize="@dimen/game_h5_card_icon_txt_size" android:textColor="#ffffffff" android:gravity="center" android:id="@id/game_activities_card_icon" android:layout_width="@dimen/game_h5_card_icon_width" android:layout_height="@dimen/game_h5_card_icon_height" android:layout_marginLeft="@dimen/card_margin_32dp" />
+        <TextView android:textSize="@dimen/game_h5_card_icon_txt_size" android:textColor="@drawable/gamehome_box_title_left" android:gravity="center_vertical" android:id="@id/game_activities_card_title_txt" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/game_h5_card_title_margin_left" android:singleLine="true" />
+    </LinearLayout>
+    <ImageView android:id="@id/game_activities_card_poster" android:background="#ffaaaaaa" android:layout_width="fill_parent" android:layout_height="@dimen/card_poster_height" android:src="@drawable/game_default_icon" android:scaleType="center" />
+</LinearLayout>

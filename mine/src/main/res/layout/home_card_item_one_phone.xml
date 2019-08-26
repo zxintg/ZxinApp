@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/home_card_item_one_gallery_layout" />
+    <View android:background="@color/text_color_white" android:layout_width="fill_parent" android:layout_height="@dimen/home_card_item_space" />
+    <android.support.v7.widget.RecyclerView android:id="@id/home_card_channel_entry" android:paddingLeft="@dimen/home_card_channel_entry_padding" android:paddingRight="@dimen/home_card_channel_entry_padding" android:paddingBottom="@dimen/home_card_channel_entry_padding_top" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:background="#ffebebeb" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <com.youku.widget.UserMessageView android:id="@id/home_user_msg_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

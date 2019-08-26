@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/game_card_layout_item" android:paddingLeft="@dimen/card_margin_32dp" android:paddingRight="@dimen/card_margin_32dp" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/include_present_item_1" layout="@layout/include_game_present_selected_card_item" />
+    <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    <include android:id="@id/include_present_item_2" layout="@layout/include_game_present_selected_card_item" />
+    <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    <include android:id="@id/include_present_item_3" layout="@layout/include_game_present_selected_card_item" />
+    <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    <include android:id="@id/include_present_item_4" layout="@layout/include_game_present_selected_card_item" />
+</LinearLayout>

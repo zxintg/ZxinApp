@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youku.widget.AdaptiveLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" youku:type="4"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:youku="http://youku.com/youku">
+    <com.youku.widget.YoukuHomePageStackView android:id="@id/homepage_stackview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:loopViews="true" android:layerType="hardware" />
+</com.youku.widget.AdaptiveLinearLayout>

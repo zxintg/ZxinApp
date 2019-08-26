@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/channel_main_tabindicator_height">
+        <RelativeLayout android:id="@id/layout_showlist_tab" android:background="@drawable/tab_indicator_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+                <TextView android:textColor="@drawable/btn_homepage_title_textcolor" android:id="@id/text_showlist_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/favorite_showlist_tab_text" style="@style/homepage_title_txt" />
+            </LinearLayout>
+        </RelativeLayout>
+        <ImageView android:background="@drawable/tab_indicator_divider_line" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <RelativeLayout android:id="@id/layout_videolist_tab" android:background="@drawable/tab_indicator_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+                <TextView android:textColor="@drawable/btn_homepage_title_textcolor" android:id="@id/text_videolist_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/favorite_videolist_tab_text" style="@style/homepage_title_txt" />
+            </LinearLayout>
+        </RelativeLayout>
+        <ImageView android:background="@drawable/tab_indicator_divider" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="@dimen/channeltab_dividerpadding" android:layout_marginBottom="@dimen/channeltab_dividerpadding" />
+        <RelativeLayout android:id="@id/layout_ablumlist_tab" android:background="@drawable/tab_indicator_selector" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+                <TextView android:textColor="@drawable/btn_homepage_title_textcolor" android:id="@id/text_ablumlist_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/favorite_album_tab_text" android:shadowDy="10.0" android:shadowRadius="2.0" style="@style/homepage_title_txt" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:background="#ff878787" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</LinearLayout>

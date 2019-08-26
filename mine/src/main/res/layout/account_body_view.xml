@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/account_bind_txt_tips" android:background="#fff4f4f4" android:paddingLeft="@dimen/account_bind_txt_tips_marginleft" android:layout_width="fill_parent" android:layout_height="@dimen/account_bind_txt_tips_height" android:text="账号绑定" style="@style/account_bind_txt_tips" />
+    <android.support.v7.widget.RecyclerView android:id="@id/account_bind_recyclerview" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/layout_account_bind_dialog_width" />
+</LinearLayout>

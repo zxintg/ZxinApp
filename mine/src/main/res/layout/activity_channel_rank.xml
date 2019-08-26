@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/subtitle" layout="@layout/activity_subtitle" />
+    <fragment android:id="@id/channelrankfragment" android:background="@color/app_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" class="com.youku.ui.fragment.ChannelRankFragment" />
+</LinearLayout>

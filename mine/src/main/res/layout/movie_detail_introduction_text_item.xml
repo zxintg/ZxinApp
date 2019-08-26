@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:expandableTextView="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/title" android:paddingTop="@dimen/movie_detail_introduction_text_line_spacing" android:paddingBottom="@dimen/movie_detail_introduction_text_line_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="剧情介绍：" android:singleLine="true" android:lineSpacingExtra="0.0dip" style="@style/movie_detail_introduction_title" />
+    <com.youku.widget.ExpandableTextView android:orientation="vertical" android:id="@id/expand_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" expandableTextView:maxCollapsedLines="3">
+        <TextView android:id="@id/expandable_text" android:paddingTop="@dimen/movie_detail_introduction_text_line_spacing" android:paddingBottom="@dimen/movie_detail_introduction_text_line_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/movie_detail_introduction_txt" />
+        <ImageButton android:layout_gravity="bottom|center|right" android:id="@id/expand_collapse" android:background="@android:color/transparent" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="@dimen/movie_detail_introduction_text_line_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.youku.widget.ExpandableTextView>
+</LinearLayout>

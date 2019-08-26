@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/add_video_dialog_title_textsize" android:textColor="@color/coll_card_add_dialog_title_bg" android:gravity="center_vertical" android:background="@color/coll_card_add_dialog_title_color" android:paddingLeft="11.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/add_video_dialog_title_height" android:text="添加到" />
+    <View android:background="@color/collection_popupmenu_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <android.support.v7.widget.RecyclerView android:id="@id/collection_list" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="@dimen/collection_add_video_list_height" />
+</LinearLayout>

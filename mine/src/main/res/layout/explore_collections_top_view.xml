@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/explore_top_view_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.view.ViewPager android:id="@id/top_view_view_pager" android:fadingEdgeLength="0.0dip" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="@dimen/explore_top_view_height" android:requiresFadingEdge="none" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/explore_collection_switch" android:background="#00ffffff" android:paddingBottom="@dimen/explore_top_view_switch_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/explore_top_view_switch_margin" android:layout_marginRight="@dimen/explore_top_view_switch_margin" android:layout_alignParentBottom="true" />
+</RelativeLayout>

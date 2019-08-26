@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/home_card_item_extend_word_three_layout" android:background="@color/home_extend_bg_color" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/home_card_item_extend_word1_txt" android:background="@drawable/home_extend_word_topleft_bg" android:layout_width="0.0dip" android:layout_height="@dimen/home_card_item_extend_word_txt_height" android:layout_weight="1.0" style="@style/home_card_item_extend_word_txt" />
+    <TextView android:id="@id/home_card_item_extend_word2_txt" android:background="@drawable/home_extend_word_topleft_bg" android:layout_width="0.0dip" android:layout_height="@dimen/home_card_item_extend_word_txt_height" android:layout_weight="1.0" style="@style/home_card_item_extend_word_txt" />
+    <TextView android:id="@id/home_card_item_extend_word3_txt" android:background="@drawable/home_extend_word_topright_bg" android:layout_width="0.0dip" android:layout_height="@dimen/home_card_item_extend_word_txt_height" android:layout_weight="1.0" style="@style/home_card_item_extend_word_txt" />
+</LinearLayout>

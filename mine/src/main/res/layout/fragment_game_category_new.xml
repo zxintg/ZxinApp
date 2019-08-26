@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/game_category" android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/categories_container" android:background="#ffe2e2e2" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/categories" android:background="#00000000" android:paddingTop="@dimen/game_card_margin" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </ScrollView>
+    <include android:id="@id/no_result_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/game_no_result" />
+</RelativeLayout>

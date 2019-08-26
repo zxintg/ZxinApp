@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="@dimen/gamecenter_cards_item_spacing" />
+    <RelativeLayout android:id="@id/layout_title_container" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="#ff2fb3ff" android:layout_width="@dimen/gamecenter_cards_title_sign_width" android:layout_height="@dimen/gamecenter_cards_title_sign_height" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:gravity="center_vertical" android:id="@id/card_name" android:layout_width="fill_parent" android:layout_height="@dimen/gamecenter_cards_title_height" android:layout_marginLeft="@dimen/gamecenter_cards_title_margin_left" android:text="@string/game_card_title_name" style="@style/usercenter_gamecenter_card_title" />
+        <ImageButton android:layout_gravity="center" android:id="@id/more" android:background="@null" android:layout_width="@dimen/gamecenter_cards_more_width" android:layout_height="@dimen/gamecenter_cards_title_height" android:src="@drawable/zhankaijiantou" android:scaleType="center" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

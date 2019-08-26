@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/soku_item_suggestion_huati_clickable" android:background="@drawable/selector_bg_search_click" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/search_item_suggestion_keyword_textsize" android:textColor="#ff2fb3ff" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/soku_tv_item_suggestion_huati_keyword" android:paddingLeft="@dimen/search_widget_edit_padding_left" android:paddingRight="@dimen/search_widget_edit_padding_left" android:layout_width="wrap_content" android:layout_height="@dimen/search_widget_container_height" android:singleLine="true" android:drawableLeft="@drawable/huati" android:drawablePadding="@dimen/soku_item_marginbottom" android:layout_weight="1.0" />
+        <View android:background="#fff0f0f0" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youku.gamecenter.widgets.ElasticTextArea android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/game_desc_text_size" android:textColor="#ff999999" android:id="@id/game_desc" android:paddingLeft="@dimen/game_detail_card_content_left_margin" android:paddingRight="@dimen/detail_gameinfo_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/detail_gameinfo_desc_margin_bottom" android:lines="3" android:lineSpacingMultiplier="1.2" />
+    <LinearLayout android:gravity="center" android:id="@id/buttonOper" android:tag="close" android:background="@drawable/gamecenter_detail_more_background" android:layout_width="fill_parent" android:layout_height="@dimen/gamecenter_detail_desc_more_height" android:layout_below="@id/game_desc" android:layout_centerHorizontal="true">
+        <ImageView android:id="@id/game_desc_more" android:background="@drawable/elastic_textarea_image_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View android:id="@id/gamecenter_elastic_textarea_more_line" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/detail_gameinfo_bottom_more_height" android:layout_below="@id/buttonOper" android:layout_alignParentBottom="true" />
+</com.youku.gamecenter.widgets.ElasticTextArea>

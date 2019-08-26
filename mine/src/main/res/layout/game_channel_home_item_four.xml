@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center_vertical" android:id="@id/channel_item_box_title_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/channel_item_box_title" android:paddingTop="@dimen/channel_item_box_title_paddingtopbottom" android:paddingBottom="@dimen/channel_item_box_title_paddingtopbottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/box_title_left" android:drawableRight="@drawable/box_title_right" android:drawablePadding="@dimen/channel_item_box_title_drawablepadding" style="@style/drawer_group_title" />
+        <include android:id="@id/game_entrances" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" layout="@layout/layout_channel_game_entrances" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:baselineAligned="false" android:layout_weight="1.0">
+            <include android:id="@id/channel_item_four_first" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="@dimen/channel_land_gridview_spacing" android:layout_weight="1.0" layout="@layout/game_channel_home_land_item" />
+            <include android:id="@id/channel_item_four_second" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/game_channel_home_land_item" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/channel_land_gridview_spacing" android:baselineAligned="false" android:layout_weight="1.0">
+            <include android:id="@id/channel_item_four_third" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="@dimen/channel_land_gridview_spacing" android:layout_weight="1.0" layout="@layout/game_channel_home_land_item" />
+            <include android:id="@id/channel_item_four_fourth" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/game_channel_home_land_item" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

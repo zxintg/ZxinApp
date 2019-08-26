@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/text_color_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.community.view.VerticalSwipeRefreshLayout android:orientation="vertical" android:id="@id/community_hot_refresh" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.RecyclerView android:id="@id/community_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.youku.community.view.VerticalSwipeRefreshLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/search_layout_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:id="@id/no_topic_tips_layout" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/topic_height_96dp">
+            <TextView android:textSize="@dimen/topic_text_size_14" android:textColor="#ff999999" android:gravity="center" android:layout_gravity="center" android:id="@id/no_topic_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" />
+        </LinearLayout>
+        <ListView android:id="@id/search_results_rectclerview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="#ffe2e2e2" android:dividerHeight="1.0px" />
+        <View android:background="#50000000" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+    <include android:id="@id/page_load_fail_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/page_load_fail_layout" />
+</RelativeLayout>

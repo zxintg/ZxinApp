@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/persondirect_more_btn_selector" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.phone.search.view.PortImageLayout android:id="@id/persondirect_port_item_img_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/persondirect_item_default_img_layout" android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center" android:layout_width="@dimen/icon_default_width" android:layout_height="@dimen/icon_default_width" android:src="@drawable/channel_not_loaded_icon_play" />
+            <ImageView android:id="@id/persondirect_port_item_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+            <RelativeLayout android:layout_gravity="bottom" android:id="@id/persondirect_port_item_stripe_middle_layout" android:background="@drawable/waist_seal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@id/persondirect_port_item_stripe_middle" android:paddingLeft="@dimen/persondirect_item_txt_marginleft" android:layout_width="fill_parent" android:layout_height="@dimen/grid_item_stripe_middle_height" android:singleLine="true" android:shadowColor="#90000000" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" style="@style/homepage_item_middle_stripe" />
+                <include android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentTop="true" layout="@layout/waist_seal_line" />
+            </RelativeLayout>
+        </FrameLayout>
+        <RelativeLayout android:id="@id/triangle_wrapper" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.youku.widget.TriangleView android:id="@id/triangle_view" android:layout_width="@dimen/triangle_view_height" android:layout_height="@dimen/triangle_view_height" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+            <com.youku.widget.RobbinTextView android:id="@id/triangle_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/triangle_text" />
+        </RelativeLayout>
+    </com.youku.phone.search.view.PortImageLayout>
+    <com.youku.phone.search.view.PortTitleLayout android:gravity="center" android:orientation="vertical" android:id="@id/persondirect_port_item_title_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:ellipsize="end" android:id="@id/persondirect_port_item_title_first" android:paddingLeft="@dimen/persondirect_item_txt_marginleft" android:paddingRight="@dimen/persondirect_item_txt_marginleft" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="@style/homepage_item_title_first" />
+        <TextView android:ellipsize="end" android:id="@id/persondirect_port_item_title_second" android:paddingLeft="@dimen/persondirect_item_txt_marginleft" android:paddingRight="@dimen/persondirect_item_txt_marginleft" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/gridview_item_tv_second_margintop" android:singleLine="true" style="@style/homepage_item_title_second" />
+    </com.youku.phone.search.view.PortTitleLayout>
+</LinearLayout>

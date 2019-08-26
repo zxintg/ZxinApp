@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:youku="http://youku.com/youku">
+    <FrameLayout android:id="@id/item_homepage_layout_group" android:layout_width="fill_parent" android:layout_height="@dimen/home_group_title_height">
+        <TextView android:gravity="center_vertical" android:id="@id/item_homePage_group" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="2.0dip" android:maxLines="1" android:drawableLeft="@drawable/box_title_left" android:drawableRight="@drawable/box_title_right" android:drawablePadding="@dimen/channel_item_box_title_drawablepadding" style="@style/drawer_group_title" />
+    </FrameLayout>
+    <com.youku.widget.AdaptiveLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/item_homepage_layout_group" youku:type="4">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.youku.widget.ActionView android:id="@id/item_homePage_1234" android:layout_width="fill_parent" android:layout_height="fill_parent" youku:type="9" />
+            <ImageView android:id="@id/item_homepage_layout_play_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/homepage_item8_margin_bottom" android:src="@drawable/play_icon_big" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </com.youku.widget.AdaptiveLinearLayout>
+</RelativeLayout>

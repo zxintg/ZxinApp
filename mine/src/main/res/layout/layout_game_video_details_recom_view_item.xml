@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_horizontal" android:background="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center_horizontal" android:id="@id/icon_container" android:layout_width="@dimen/game_details_recom_view_item_icon_container_size" android:layout_height="@dimen/game_details_recom_view_item_icon_container_size" android:layout_marginTop="@dimen/game_details_recom_view_item_icon_container_margin_top" android:layout_marginBottom="@dimen/game_details_icon_container_margin" android:layout_centerHorizontal="true">
+        <ImageView android:id="@id/icon" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" android:contentDescription="@string/str_image" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/container" android:layout_width="@dimen/game_details_recom_view_item_width" android:layout_height="wrap_content" android:layout_below="@id/icon_container">
+        <TextView android:textSize="@dimen/game_details_recom_view_item_title_size" android:textColor="@color/game_detail_page_game_name_color_333333" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/title" android:layout_width="@dimen/game_details_recom_view_item_child_width" android:layout_height="wrap_content" android:singleLine="true" />
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/layout_game_clound_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/game_details_could_container_margin_top" android:layout_marginBottom="@dimen/game_details_could_container_margin_bottom">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@id/layout_game_play_view_cloud" android:layout_width="@dimen/game_details_cloud_width" android:layout_height="@dimen/game_details_cloud_height" android:layout_marginRight="4.0dip" android:src="@drawable/recommend_install_cloud_icon" android:layout_centerVertical="true" />
+                <ImageView android:id="@id/layout_game_play_view_box" android:visibility="gone" android:layout_width="@dimen/game_details_cloud_width" android:layout_height="@dimen/game_details_cloud_height" android:layout_marginRight="@dimen/video_detail_page_button_icon_margin_left" android:src="@drawable/recommend_install_box_icon" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <TextView android:textSize="@dimen/game_details_button_text_size" android:textColor="@color/game_detail_page_btn_color_blue" android:gravity="center|left" android:id="@id/layout_game_play_view_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_install" />
+            <TextView android:textSize="@dimen/game_details_button_text_size" android:textColor="#ffafafaf" android:gravity="center" android:layout_gravity="center" android:id="@id/layout_game_play_view_button_ing" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_downloading" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

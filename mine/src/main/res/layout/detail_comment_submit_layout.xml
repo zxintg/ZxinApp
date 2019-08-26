@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_input_item"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:background="#ffffffff"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/group_edit_container"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip">
+
+            <com.youku.commentsdk.widget.FaceEditText
+                android:id="@+id/et_comment_input"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10.0dip"
+                android:background="@color/white"
+                android:gravity="center|left|top"
+                android:hint="此时此刻的感想..."
+                android:imeOptions="actionSend|flagNoFullscreen"
+                android:inputType="textMultiLine"
+                android:lineSpacingMultiplier="1.1"
+                android:minHeight="100.0dip"
+                android:minLines="5"
+                android:paddingLeft="@dimen/detail_card_comment_header_image_margin_left_v5"
+                android:paddingRight="@dimen/detail_card_comment_header_image_margin_left_v5"
+                android:scrollbars="none"
+                android:singleLine="false"
+                android:textColor="#ff333333"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/detail_card_comment_text_size_v5_min_height" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/topics_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2.0dip"
+                android:background="@color/action_sheet_divide_line" />
+
+            <ListView
+                android:id="@+id/topics_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0"
+                android:background="@color/white"
+                android:cacheColorHint="#00000000"
+                android:divider="#ffebebeb"
+                android:dividerHeight="1.0px"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/tool_bar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="8.0dip"
+                android:layout_marginBottom="10.0dip"
+                android:background="@color/white"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip">
+
+                <TextView
+                    android:id="@+id/text_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="10.0dip"
+                    android:layout_toLeftOf="@+id/btn_push_comment"
+                    android:text="300"
+                    android:textColor="#ffb5b5b5"
+                    android:textSize="@dimen/detail_card_comment_header_text_size_v5" />
+
+                <ImageButton
+                    android:id="@+id/btn_well_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginBottom="10.0dip"
+                    android:layout_toRightOf="@+id/btn_switch_emoji"
+                    android:background="@drawable/well_number" />
+
+                <ImageButton
+                    android:id="@+id/btn_at"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginBottom="10.0dip"
+                    android:layout_toRightOf="@+id/btn_well_number"
+                    android:background="@drawable/comment_at" />
+
+                <ImageButton
+                    android:id="@+id/btn_switch_emoji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="10.0dip"
+                    android:background="@drawable/face_switch_select" />
+
+                <TextView
+                    android:id="@+id/btn_push_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:background="@drawable/send_comment_disable"
+                    android:gravity="center"
+                    android:text="@string/send"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/emoji_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/emoji_layout_height"
+        android:background="@color/comment_emoji_layout_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/faceViewPager"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0" />
+
+        <RelativeLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/emoji_tab_height"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/face_default"
+                android:layout_width="@dimen/smiley_column_width"
+                android:layout_height="fill_parent"
+                android:background="@drawable/face_tab_textview_selector"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/emoji_tab_default_size"
+                    android:layout_height="@dimen/emoji_tab_default_size"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/emoji_tab_default" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/face_permission"
+                android:layout_width="@dimen/smiley_column_width"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@+id/face_default"
+                android:background="@drawable/face_tab_textview_selector"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/emoji_tab_default_size"
+                    android:layout_height="@dimen/emoji_tab_default_size"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/f_static_014" />
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="@dimen/upload_item_width" android:layout_height="@dimen/upload_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="#ffffffff" android:padding="1.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="2.0dip">
+        <RelativeLayout android:background="@color/mycenter_upload_video_default_image_bg" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/noupload_img" android:layout_width="@dimen/icon_not_loaded_width" android:layout_height="@dimen/icon_not_loaded_width" android:src="@drawable/channel_not_loaded_icon_play" android:scaleType="fitXY" android:layout_centerInParent="true" />
+            <com.youku.usercenter.widget.YoukuImageView android:id="@id/add_upload_img" android:layout_width="wrap_content" android:layout_height="@dimen/upload_item_img_height" android:scaleType="fitXY" />
+            <com.youku.usercenter.widget.YoukuImageView android:id="@id/upload_img" android:layout_width="wrap_content" android:layout_height="@dimen/upload_item_img_height" android:src="@drawable/transparent_bg" android:scaleType="centerCrop" />
+            <RelativeLayout android:id="@id/blackcover" android:background="#66000000" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/Font5_white_80" android:id="@id/text_upload_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10%" android:layout_centerInParent="true" />
+                <TextView android:textAppearance="@style/Font1_white" android:id="@id/text_upload_size" android:paddingBottom="@dimen/myyouku_upload_video_dialog_title_left_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10M/500M" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+                <com.youku.usercenter.widget.YoukuImageView android:id="@id/upload_item_img_stat" android:layout_width="wrap_content" android:layout_height="@dimen/upload_item_img_height" android:src="@drawable/editor_btn_delete" android:scaleType="center" android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="@dimen/gridview_item_tv_height">
+            <com.youku.upload.widget.TextViewEllipseEndFixed android:textAppearance="@style/Font4_gray_333333" android:ellipsize="end" android:id="@id/upload_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/myyouku_item_line_margin_left" android:layout_marginRight="@dimen/myyouku_item_line_margin_left" android:text="影片名称" android:maxLines="2" android:minLines="2" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/used_layout" android:layout_width="fill_parent" android:layout_height="@dimen/use_layout_height" android:layout_alignParentBottom="true">
+        <ProgressBar android:id="@id/mem_used" android:layout_width="fill_parent" android:layout_height="fill_parent" android:progressDrawable="@drawable/use_process" style="?android:attr/progressBarStyleHorizontal" />
+        <TextView android:textSize="@dimen/use_layout_text_size" android:textColor="@color/text_color_white" android:gravity="center_vertical" android:id="@id/tv_used" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/downloading_layout_title_margin_left" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/download_main_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/used_layout" android:layout_below="@id/top_edit_layout">
+        <RelativeLayout android:id="@id/downloading_layout" android:background="@color/text_color_white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/downloading_layout_height">
+            <RelativeLayout android:id="@id/downloading_title_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentLeft="true">
+                <TextView android:textSize="@dimen/downloading_title_text_size" android:textColor="@color/downloading_title_color" android:id="@id/tv_download" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/downloading_layout_title_margin_left" android:text="@string/download_ing_title" android:layout_centerVertical="true" />
+                <TextView android:id="@id/tv_cutoff_rule" android:background="@color/downloading_name" android:layout_width="@dimen/downloading_cutoff_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/downloading_title_cutoff_margin_left" android:layout_toRightOf="@id/tv_download" android:layout_alignTop="@id/tv_download" android:layout_alignBottom="@id/tv_download" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/arraw_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+                <ImageView android:id="@id/image_arraw" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/downloading_layout_arraw_margin_right" android:src="@drawable/fill_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/downloading_num_text_size" android:textColor="@color/text_color_white" android:gravity="center" android:id="@id/tv_download_num" android:background="@color/downloading_speed" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="@dimen/downloading_num_size" android:layout_marginRight="@dimen/downloading_name_margin" android:minWidth="@dimen/downloading_num_size" android:layout_toLeftOf="@id/image_arraw" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="left" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/downloading_speed_margin_right" android:layout_toRightOf="@id/downloading_title_layout">
+                <TextView android:textSize="@dimen/downloading_name_text_size" android:textColor="@color/downloading_speed" android:gravity="left" android:id="@id/tv_download_speed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/downloading_name_margin" android:singleLine="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/downloading_name_text_size" android:textColor="@color/downloading_name" android:ellipsize="end" android:id="@id/tv_download_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/downloading_name_margin" android:singleLine="true" android:layout_toLeftOf="@id/tv_download_speed" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/local_layout" android:background="@color/text_color_white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/downloading_layout_height" android:layout_alignParentBottom="true">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/downloading_layout_height">
+                <TextView android:textSize="@dimen/downloading_name_text_size" android:textColor="@color/downloading_title_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/downloading_layout_title_margin_left" android:text="@string/download_local_title" android:layout_centerVertical="true" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/downloading_layout_arraw_margin_right" android:src="@drawable/fill_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <RelativeLayout android:background="@color/downloaded_layout_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/local_layout" android:layout_below="@id/downloading_layout">
+            <RelativeLayout android:id="@id/empty_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:id="@id/iamge_empty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/downloaded_empty_margin_top" android:src="@drawable/download_empyt" android:layout_centerHorizontal="true" />
+                <TextView android:textSize="@dimen/downloaded_empty_text1_size" android:textColor="@color/downloading_title_color" android:id="@id/tv_empty1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/downloaded_empty_text1_margin_image" android:text="@string/download_ed_empty" android:layout_below="@id/iamge_empty" android:layout_centerHorizontal="true" />
+                <TextView android:textSize="@dimen/downloading_item_title_text_size" android:textColor="@color/download_empty_text_color" android:id="@id/tv_empty2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/downloaded_empty_text2_margin_text1" android:text="@string/download_ed_empty_tips" android:layout_below="@id/tv_empty1" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/download_layout" android:background="@color/text_color_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/downloaded_layout_margin">
+                <RelativeLayout android:id="@id/downloaded_title_layout" android:background="@color/downloading_layout_bg" android:layout_width="fill_parent" android:layout_height="@dimen/downloaded_title_layout_height">
+                    <TextView android:textSize="@dimen/downloaded_title_text_size" android:textColor="@color/downloading_title_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/downloading_name_margin" android:text="@string/download_ed_title" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <GridView android:id="@id/gridview_download" android:background="@color/text_color_white" android:fadingEdge="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="#00000000" android:numColumns="1" android:divider="#ffe5e5e5" android:dividerHeight="1.0px" android:overScrollMode="never" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

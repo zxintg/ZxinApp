@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/nest_marginview" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:layout_width="fill_parent" android:layout_height="13.0dip" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:id="@id/book_topview" android:layout_width="fill_parent" android:layout_height="@dimen/nest_bookview_topview_fontheight" android:scaleType="center">
+                <View android:layout_width="10.0dip" android:layout_height="1.0dip" />
+                <View android:background="@color/colorR8CG8CB8C" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_weight="1.0" />
+                <View android:layout_width="5.0dip" android:layout_height="1.0dip" />
+                <TextView android:textSize="@dimen/nest_bookview_topview_fontsize" android:textColor="@color/colorR8CG8CB8C" android:gravity="center" android:layout_width="wrap_content" android:layout_height="@dimen/nest_bookview_topview_fontheight" android:text="距直播开始还剩" />
+                <View android:layout_width="5.0dip" android:layout_height="1.0dip" />
+                <View android:background="@color/colorR8CG8CB8C" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_weight="1.0" />
+                <View android:layout_width="10.0dip" android:layout_height="1.0dip" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/book_dateview" android:layout_width="fill_parent" android:layout_height="60.0dip" android:scaleType="center">
+                <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="10.0dip">
+                    <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/nest_bookview_dateview_tipfontsize" android:textColor="@color/colorR8CG8CB8C" android:gravity="left" android:layout_width="45.0dip" android:layout_height="@dimen/nest_bookview_dateview_tipfontheight" android:text="DAYS" />
+                    <View android:layout_width="45.0dip" android:layout_height="wrap_content" />
+                    <TextView android:textSize="@dimen/nest_bookview_dateview_tipfontsize" android:textColor="@color/colorR8CG8CB8C" android:gravity="left" android:layout_width="45.0dip" android:layout_height="@dimen/nest_bookview_dateview_tipfontheight" android:text="HRS" />
+                    <View android:layout_width="45.0dip" android:layout_height="wrap_content" />
+                    <TextView android:textSize="@dimen/nest_bookview_dateview_tipfontsize" android:textColor="@color/colorR8CG8CB8C" android:gravity="left" android:layout_width="45.0dip" android:layout_height="@dimen/nest_bookview_dateview_tipfontheight" android:text="MINS" />
+                    <View android:layout_width="45.0dip" android:layout_height="wrap_content" />
+                    <TextView android:textSize="@dimen/nest_bookview_dateview_tipfontsize" android:textColor="@color/colorR8CG8CB8C" android:gravity="left" android:layout_width="45.0dip" android:layout_height="@dimen/nest_bookview_dateview_tipfontheight" android:text="SECS" />
+                    <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="40.0dip">
+                    <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/nest_bookview_dateview_mainfontsize_normal" android:textStyle="bold" android:textColor="@android:color/black" android:gravity="center" android:id="@id/nest_bookview_date_day" android:layout_width="45.0dip" android:layout_height="@dimen/nest_bookview_dateview_mainfontheight_normal" android:text="" />
+                    <TextView android:textSize="@dimen/nest_bookview_dateview_mainfontsize_normal" android:textColor="@color/colorR8CG8CB8C" android:gravity="center" android:layout_width="45.0dip" android:layout_height="@dimen/nest_bookview_dateview_mainfontheight_normal" android:text=":" />
+                    <TextView android:textSize="@dimen/nest_bookview_dateview_mainfontsize_normal" android:textStyle="bold" android:textColor="@android:color/black" android:gravity="center" android:id="@id/nest_bookview_date_hour" android:layout_width="45.0dip" android:layout_height="@dimen/nest_bookview_dateview_mainfontheight_normal" android:text="" />
+                    <TextView android:textSize="@dimen/nest_bookview_dateview_mainfontsize_normal" android:textColor="@color/colorR8CG8CB8C" android:gravity="center" android:layout_width="45.0dip" android:layout_height="@dimen/nest_bookview_dateview_mainfontheight_normal" android:text=":" />
+                    <TextView android:textSize="@dimen/nest_bookview_dateview_mainfontsize_normal" android:textStyle="bold" android:textColor="@android:color/black" android:gravity="center" android:id="@id/nest_bookview_date_min" android:layout_width="45.0dip" android:layout_height="@dimen/nest_bookview_dateview_mainfontheight_normal" android:text="" />
+                    <TextView android:textSize="@dimen/nest_bookview_dateview_mainfontsize_normal" android:textColor="@color/colorR8CG8CB8C" android:gravity="center" android:layout_width="45.0dip" android:layout_height="@dimen/nest_bookview_dateview_mainfontheight_normal" android:text=":" />
+                    <TextView android:textSize="@dimen/nest_bookview_dateview_mainfontsize_normal" android:textStyle="bold" android:textColor="@android:color/black" android:gravity="center" android:id="@id/nest_bookview_date_sec" android:layout_width="45.0dip" android:layout_height="@dimen/nest_bookview_dateview_mainfontheight_normal" android:text="" />
+                    <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@id/book_buttonview" android:layout_width="fill_parent" android:layout_height="@dimen/nest_bookview_bookbutton_height_normal" android:scaleType="center">
+                <LinearLayout android:gravity="center" android:id="@id/book_buttonview_book" android:background="@drawable/shape_play_book_button" android:visibility="visible" android:clickable="true" android:layout_width="@dimen/nest_bookview_bookbutton_width_normal" android:layout_height="@dimen/nest_bookview_bookbutton_height_normal">
+                    <ImageView android:layout_width="@dimen/nest_bookview_bookbutton_logoheight_normal" android:layout_height="@dimen/nest_bookview_bookbutton_logoheight_normal" android:src="@drawable/book_white_2x" />
+                    <View android:layout_width="@dimen/nest_bookview_bookbutton_gap_normal" android:layout_height="wrap_content" />
+                    <TextView android:textSize="@dimen/nest_bookview_bookbutton_fontsize_normal" android:textColor="@color/colorWhite" android:gravity="center" android:layout_width="wrap_content" android:layout_height="@dimen/nest_bookview_bookbutton_fontheight_normal" android:text="@string/nest_bookview_bookbutton_booking" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:id="@id/book_buttonview_dated" android:background="@drawable/shape_play_book_button" android:visibility="gone" android:clickable="true" android:layout_width="@dimen/nest_bookview_bookbutton_width_normal" android:layout_height="@dimen/nest_bookview_bookbutton_height_normal">
+                    <ImageView android:layout_width="@dimen/nest_bookview_bookbutton_logoheight_normal" android:layout_height="@dimen/nest_bookview_bookbutton_logoheight_normal" android:src="@drawable/icon_white_dated2x" />
+                    <View android:layout_width="@dimen/nest_bookview_bookbutton_gap_normal" android:layout_height="wrap_content" />
+                    <TextView android:textSize="@dimen/nest_bookview_bookbutton_fontsize_normal" android:textColor="@color/colorWhite" android:gravity="center" android:layout_width="wrap_content" android:layout_height="@dimen/nest_bookview_bookbutton_fontheight_normal" android:text="@string/nest_bookview_bookbutton_book" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@id/book_bottomview" android:layout_width="fill_parent" android:layout_height="@dimen/nest_bookview_bottomview_fontheight" android:scaleType="center">
+                <TextView android:textSize="@dimen/nest_bookview_bottomview_fontsize" android:textColor="@android:color/black" android:gravity="center" android:id="@id/nest_bookview_datedpeople" android:layout_width="wrap_content" android:layout_height="@dimen/nest_bookview_bottomview_fontheight" android:text="2367人想看" />
+            </LinearLayout>
+            <View android:layout_width="fill_parent" android:layout_height="16.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

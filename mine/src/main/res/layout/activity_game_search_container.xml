@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/gamecenter_group_container" android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/search_hotgame_scrollView" android:background="@android:color/transparent" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" android:scrollbarFadeDuration="500">
+        <LinearLayout android:orientation="vertical" android:id="@id/gamecenter_group_linear" android:paddingRight="@dimen/game_card_margin" android:paddingBottom="@dimen/game_card_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </ScrollView>
+    <com.youku.gamecenter.widgets.NoResultView android:id="@id/id_no_result_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

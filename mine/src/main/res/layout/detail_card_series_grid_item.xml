@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="#fff2f2f2" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/fl_item" android:background="@null" android:paddingRight="1.0px" android:paddingBottom="1.0px" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_series_vertical_bottom_height_v5">
+        <TextView android:textSize="@dimen/detail_card_series_text_size" android:textColor="#ff333333" android:gravity="center" android:id="@id/num" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/isnew" android:background="@null" android:layout_width="@dimen/detail_card_series_image_height" android:layout_height="@dimen/detail_card_series_image_height" android:src="@drawable/series_item_new_img" android:scaleType="fitStart" />
+        <com.youku.phone.detail.widget.DetailSeriesGridItem android:id="@id/his_grid_item" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" youku:percent="0.0" xmlns:youku="http://schemas.android.com/apk/res-auto" />
+        <ImageView android:id="@id/series_item_trailer_img" android:layout_width="@dimen/series_item_trailer_img_width_v5" android:layout_height="@dimen/series_item_trailer_img_width_v5" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+</LinearLayout>

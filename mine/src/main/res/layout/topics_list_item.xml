@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/topics_list_item" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.community.view.VideoCellImageLayout android:id="@id/video_land_item_img_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/topic_land_item_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        <FrameLayout android:id="@id/topic_land_item_icon_layout" android:background="@drawable/topic_waterfall_image_mask" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <View android:layout_gravity="bottom" android:background="@drawable/waist_seal" android:layout_width="fill_parent" android:layout_height="@dimen/topic_video_item_stripe_text_mask_height" />
+        </FrameLayout>
+        <ImageView android:id="@id/bofan_icon" android:background="@drawable/channel_not_loaded_icon_play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerCrop" android:layout_centerInParent="true" />
+    </com.youku.community.view.VideoCellImageLayout>
+    <RelativeLayout android:id="@id/video_bottom_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/topic_margin_8dp" android:layout_marginRight="@dimen/topic_margin_8dp" android:layout_below="@id/video_land_item_img_layout" android:layout_alignParentBottom="true">
+        <RelativeLayout android:id="@id/video_bottom_up_layout" android:layout_width="fill_parent" android:layout_height="@dimen/community_vedio_cell_bottom_height" android:layout_alignParentTop="true">
+            <com.youku.community.view.CircleImageView android:id="@id/user_avatar" android:layout_width="@dimen/topic_gridview_item_user_avatar_height" android:layout_height="@dimen/topic_gridview_item_user_avatar_height" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/topic_text_size_14" android:textColor="#ff999999" android:gravity="left" android:id="@id/poster_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_padding_half" android:layout_marginRight="@dimen/activity_padding_half" android:text="" android:singleLine="true" android:layout_toLeftOf="@id/upload_time" android:layout_toRightOf="@id/user_avatar" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/topic_play_time_text_size" android:textColor="#ffb5b5b5" android:id="@id/upload_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/topic_vedio_item_margin_left" android:text="" android:singleLine="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/video_bottom_down_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/video_bottom_up_layout" android:layout_alignParentBottom="true">
+            <TextView android:textSize="@dimen/topic_text_size_14" android:textColor="@color/black" android:ellipsize="end" android:id="@id/vedio_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:maxLines="2" android:minLines="1" android:layout_alignParentTop="true" />
+            <LinearLayout android:gravity="left" android:orientation="horizontal" android:id="@id/video_bottom_info_layout" android:layout_width="fill_parent" android:layout_height="@dimen/community_vedio_cell_bottom_height" android:layout_below="@id/vedio_title" android:layout_alignParentBottom="true">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/bottom_left_icon" android:background="@drawable/topic_topic_bofangliang" android:layout_width="@dimen/topic_gridview_item_play_icon_height" android:layout_height="@dimen/topic_gridview_item_play_icon_height" />
+                <TextView android:textSize="@dimen/topic_play_time_text_size" android:textColor="#ffb5b5b5" android:layout_gravity="center_vertical" android:id="@id/bottom_left_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_padding_half" android:text="" android:singleLine="true" />
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/bottom_right_icon" android:background="@drawable/topic_topic_bofangliang" android:layout_width="@dimen/topic_gridview_item_play_icon_height" android:layout_height="@dimen/topic_gridview_item_play_icon_height" android:layout_marginLeft="@dimen/activity_padding_normal" />
+                <TextView android:textSize="@dimen/topic_play_time_text_size" android:textColor="#ffb5b5b5" android:layout_gravity="center_vertical" android:id="@id/bottom_right_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_padding_half" android:text="" android:singleLine="true" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

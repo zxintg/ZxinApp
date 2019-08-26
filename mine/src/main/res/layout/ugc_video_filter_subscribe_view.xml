@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/txt_searchresult_filter_ob_textsize" android:textColor="@drawable/ugc_video_filter_subscribe_text_color" android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@id/ugc_video_filter_item_title" android:background="@drawable/ugc_video_subscribe" android:paddingLeft="@dimen/soku_result_search_view_text_size" android:paddingRight="@dimen/soku_result_search_view_text_size" android:layout_width="wrap_content" android:layout_height="@dimen/soku_result_filter_item_text_height" android:maxEms="7" android:singleLine="true" />
+</FrameLayout>

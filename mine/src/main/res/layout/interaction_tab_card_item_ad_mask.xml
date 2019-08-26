@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="bottom|center|left" android:id="@id/home_card_item_ad_mask" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_banner_sign_margin" android:layout_marginBottom="@dimen/detail_banner_sign_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="bottom|center|left" android:layout_width="@dimen/detail_banner_sign_width" android:layout_height="@dimen/detail_banner_sign_height" android:src="@drawable/details_banner_sign" />
+    <TextView android:textSize="@dimen/detail_banner_sign_text" android:textColor="#ffffffff" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/advertisement" />
+</FrameLayout>

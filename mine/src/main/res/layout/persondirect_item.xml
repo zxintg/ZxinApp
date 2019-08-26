@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/persondirect_item_layout_top" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/persondirect_item_layout_top" />
+    <View android:background="@color/persondirect_item_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/persondirect_item_tabindicator_height">
+        <com.youku.phone.channel.view.TabPageIndicator android:id="@id/persondirect_item_tabindicator" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/page_cover_left" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/white_cover_left" android:scaleType="fitXY" android:layout_alignParentLeft="true" />
+        <ImageView android:id="@id/page_cover_right" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/white_cover_right" android:scaleType="fitXY" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <View android:background="@color/persondirect_item_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <com.youku.phone.search.view.PersonDirectItemGridviewLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.youku.phone.search.view.ExtendedViewPager android:id="@id/persondirect_item_viewpager" android:persistentDrawingCache="animation" android:layout_width="fill_parent" android:layout_height="fill_parent" android:flipInterval="30" />
+    </com.youku.phone.search.view.PersonDirectItemGridviewLayout>
+    <View android:background="@color/persondirect_item_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <TextView android:id="@id/persondirect_item_more_txt" android:background="@drawable/persondirect_more_btn_selector" android:layout_width="fill_parent" android:layout_height="@dimen/persondirect_item_more_txt_height" android:text="@string/persondirect_item_more" style="@style/persondirect_item_more_txt" />
+    <View android:layout_gravity="bottom" android:id="@id/item_bottom_line" android:background="@color/channel_bottom_line_color" android:layout_width="fill_parent" android:layout_height="2.0px" />
+</LinearLayout>

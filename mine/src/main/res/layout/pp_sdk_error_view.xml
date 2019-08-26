@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/pp_view_error_icon" android:background="@drawable/pp_icon_exclamatory" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="12.0sp" android:textColor="#ffc3c3c3" android:id="@id/pp_tv_error_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/pp_text_loading_apk_data_error" android:layout_below="@id/pp_view_error_icon" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="12.0sp" android:textColor="#ff22c485" android:id="@id/pp_tv_reload_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/pp_text_loading_apk_data_reload" android:layout_below="@id/pp_tv_error_msg" android:layout_centerHorizontal="true" />
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/search_widget_container_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@android:id/candidatesArea" android:layout_width="@dimen/search_widget_edit_padding_left" android:layout_height="fill_parent" android:layout_alignRight="@id/bt_widget_search_icon" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_widget_search_frame" android:background="#fff7f7f7" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignLeft="@android:id/candidatesArea">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_widget_search_area" android:background="@null" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <view android:textSize="@dimen/search_widget_text_size" android:ellipsize="end" android:layout_gravity="bottom" android:id="@id/et_widget_search_text" android:background="@null" android:paddingLeft="@dimen/search_widget_edit_padding_left" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" android:inputType="text" android:imeOptions="actionSearch" class="com.youku.widget.YoukuSearchView$SearchEditText" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_widget_search_clear_area" android:background="@null" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/bt_widget_search_clear" android:focusable="true" android:layout_width="@dimen/search_widget_container_height" android:layout_height="@dimen/search_widget_container_height" android:src="@drawable/ic_widget_search_clear" />
+            <View android:layout_gravity="center_vertical" android:background="#ffe3e3e3" android:layout_width="1.0px" android:layout_height="@dimen/search_widget_diver_height" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_widget_search_submit_area" android:background="@null" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/bt_widget_search_go" android:focusable="true" android:visibility="gone" android:layout_width="@dimen/search_widget_container_height" android:layout_height="@dimen/search_widget_container_height" android:src="@drawable/ic_widget_search_go" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/bt_widget_search_voice" android:focusable="true" android:visibility="gone" android:layout_width="@dimen/search_widget_container_height" android:layout_height="@dimen/search_widget_container_height" android:src="@drawable/ic_widget_search_voice" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/bt_widget_search_icon" android:focusable="true" android:layout_width="@dimen/search_widget_icon_width" android:layout_height="@dimen/search_widget_container_height" android:src="@drawable/selector_widget_search_icon" android:scaleType="centerCrop" />
+    <View android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="2.0px" />
+    <View android:background="#97979797" android:layout_width="fill_parent" android:layout_height="2.0px" android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/channel_main_tabindicator_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/subTitle" android:id="@id/sub_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/favor" android:layout_centerInParent="true" />
+    <TextView android:textAppearance="@style/subTitleSubText" android:gravity="center" android:id="@id/edit" android:paddingLeft="5.0dip" android:paddingRight="@dimen/gridview_pading_horizontal" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/edite" android:drawableLeft="@drawable/editor_btn_edit_selector" android:drawablePadding="4.0dip" android:layout_alignParentRight="true" android:onClick="editFavorite" />
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/bottom_episode_btn_textsize" android:textColor="@color/soku_episode_btn_text_selector" android:gravity="center" android:layout_gravity="center" android:id="@id/bottom_episode_textview" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/searchdirect_item_layout_bottom_height" />
+    <ImageView android:id="@id/bottom_episode_imageview" android:visibility="gone" android:layout_width="@dimen/soku_result_series_item_trailer_img_width" android:layout_height="@dimen/soku_result_series_item_trailer_img_width" android:src="@drawable/xin" />
+    <View android:layout_gravity="right" android:id="@id/bottom_episode_line" android:background="#fff1f1f1" android:layout_width="1.0px" android:layout_height="fill_parent" />
+</FrameLayout>

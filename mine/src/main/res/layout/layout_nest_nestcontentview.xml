@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@color/colorWhite" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/nest_contentview_root" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="0.0dip">
+        <com.youku.livesdk.nest.NestLinearLayout android:orientation="vertical" android:id="@id/nest_contentview_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="17.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="17.0dip" android:layout_marginBottom="15.0dip">
+            <TextView android:textSize="18.0dip" android:textColor="@color/colorBlack" android:id="@id/nest_contentview_title" android:layout_width="wrap_content" android:layout_height="27.0dip" android:text="title" />
+            <View android:layout_width="fill_parent" android:layout_height="8.0dip" />
+            <FrameLayout android:id="@id/nest_contentview_desc" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/colorBlack" android:id="@id/nest_contentview_detail" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="detail" />
+                <FrameLayout android:id="@id/nest_contentview_buttons" android:background="@color/colorWhite" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center_vertical" android:id="@id/nest_contentview_button_expand" android:background="@color/colorWhite" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textColor="@color/colorR4DG9CBEC" android:layout_gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nest_contentview_button_expand" />
+                        <ImageView android:layout_width="15.0dip" android:layout_height="15.0dip" android:src="@drawable/more_content_2x" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:id="@id/nest_contentview_button_shrink" android:background="@color/colorWhite" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textColor="@color/colorR4DG9CBEC" android:layout_gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nest_contentview_button_shrink" />
+                        <ImageView android:layout_width="15.0dip" android:layout_height="15.0dip" android:src="@drawable/less_content_2x" />
+                    </LinearLayout>
+                </FrameLayout>
+            </FrameLayout>
+        </com.youku.livesdk.nest.NestLinearLayout>
+        <View android:background="@color/colorREDGEDBED" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <FrameLayout android:id="@id/nest_contentview_share" android:layout_width="fill_parent" android:layout_height="51.0dip">
+            <LinearLayout android:layout_gravity="center|right" android:id="@id/nest_contentview_share_logo" android:paddingLeft="17.0dip" android:paddingTop="16.0dip" android:paddingRight="17.0dip" android:paddingBottom="17.0dip" android:layout_width="wrap_content" android:layout_height="51.0dip">
+                <ImageView android:background="@drawable/button_back_selector" android:layout_width="22.0dip" android:layout_height="18.0dip" android:src="@drawable/icon_zhuanf_2x" android:scaleType="centerInside" />
+            </LinearLayout>
+            <TextView android:textSize="14.0dip" android:textColor="@color/colorBlack" android:gravity="center" android:layout_gravity="center|left" android:id="@id/nest_contentview_date" android:layout_width="wrap_content" android:layout_height="21.0dip" android:layout_marginLeft="17.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="17.0dip" android:layout_marginBottom="15.0dip" android:text="date" />
+        </FrameLayout>
+        <com.youku.livesdk.nest.ratio.SplitView android:background="@color/colorNestSplitViewBackgroundColor" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

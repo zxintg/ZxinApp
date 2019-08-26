@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/channel_main_tabindicator_height">
+        <ImageButton android:id="@id/login_button" android:background="@color/transparent" android:layout_width="@dimen/subtitle_height" android:layout_height="@dimen/subtitle_height" android:src="@drawable/btn_log_selector" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:onClick="clickLogSwitchBtn" />
+        <TextView android:id="@id/sub_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/play_history" android:layout_centerInParent="true" style="@style/channel_title_txt" />
+        <TextView android:gravity="center" android:id="@id/edit" android:paddingLeft="5.0dip" android:paddingRight="@dimen/gridview_pading_horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/edite" android:drawableLeft="@drawable/editor_btn_edit_selector" android:drawablePadding="4.0dip" android:layout_alignParentRight="true" style="@style/toolbar_btn_txt" />
+        <TextView android:gravity="center" android:id="@id/complete" android:paddingLeft="5.0dip" android:paddingRight="@dimen/gridview_pading_horizontal" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/complete" android:drawableLeft="@drawable/editor_btn_complete_selector" android:drawablePadding="4.0dip" android:layout_alignParentRight="true" style="@style/toolbar_btn_txt" />
+        <ImageView android:background="@drawable/tab_shadow" android:layout_width="fill_parent" android:layout_height="4.0px" />
+    </RelativeLayout>
+    <com.handmark.pulltorefresh.library.PullToRefreshGridView android:id="@id/history_gridview" android:background="@color/app_background" android:padding="@dimen/gridview_pading_horizontal" android:fadingEdge="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="#00000000" android:horizontalSpacing="@dimen/gridview_spacing" android:verticalSpacing="@dimen/gridview_spacing" android:numColumns="2" />
+</LinearLayout>

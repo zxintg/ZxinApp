@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/padding_left_right_10" android:paddingTop="@dimen/padding_left_right_5" android:paddingBottom="@dimen/padding_7" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.youku.usercenter.widget.YoukuImageView android:id="@id/video_image" android:layout_width="@dimen/album_detail_video_img_w" android:layout_height="@dimen/album_detail_video_img_h" android:scaleType="fitXY" />
+        <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:background="@drawable/waist_seal" android:padding="@dimen/padding_3" android:layout_width="@dimen/album_detail_video_img_w" android:layout_height="@dimen/album_upload_waist_seal" />
+        <ImageView android:layout_gravity="bottom|center|left" android:id="@id/folder_private_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/padding_3" android:src="@drawable/upload_ic_private" />
+        <TextView android:textSize="@dimen/text_size_10" android:textColor="@color/white" android:layout_gravity="bottom|center|right" android:id="@id/video_long_time" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/padding_3" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/padding_left_right_10" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/text_size_14" android:textColor="@color/main_text_color" android:ellipsize="end" android:id="@id/folder_name" android:focusable="false" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="2" android:lineSpacingExtra="@dimen/padding_left_right_2" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/video_status_lin" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/text_size_10" android:textColor="@color/album_detail_c" android:gravity="center_vertical" android:id="@id/video_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/video_text_des" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@id/upload_play_number_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/upload_play_number" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/text_size_10" android:textColor="@color/album_detail_c" android:id="@id/play_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_left_right_5" android:singleLine="true" android:layout_toRightOf="@id/upload_play_number_id" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_left_right_10">
+                <ImageView android:id="@id/upload_ic_uptime_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/upload_ic_uptime" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/text_size_10" android:textColor="@color/album_detail_c" android:id="@id/create_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_left_right_5" android:singleLine="true" android:layout_toRightOf="@id/upload_ic_uptime_id" android:layout_centerInParent="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/more_option" android:paddingLeft="@dimen/padding_left_right_5" android:paddingRight="@dimen/padding_left_right_5" android:paddingBottom="@dimen/padding_left_right_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_item_more_selector" android:onClick="onAlbumMoreClick" />
+</LinearLayout>

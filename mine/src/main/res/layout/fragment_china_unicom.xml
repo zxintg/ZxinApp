@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/app_background" android:paddingLeft="@dimen/fragment_packet_flow_padding" android:paddingTop="@dimen/fragment_packet_flow_padding" android:paddingRight="@dimen/fragment_packet_flow_padding" android:paddingBottom="@dimen/fragment_packet_flow_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:paddingLeft="@dimen/fragment_chinaunicom_top_layout_padding" android:paddingTop="@dimen/fragment_chinaunicom_top_layout_padding" android:paddingRight="@dimen/fragment_chinaunicom_top_layout_padding" android:paddingBottom="@dimen/fragment_chinaunicom_top_layout_padding" android:layout_width="fill_parent" android:layout_height="@dimen/fragment_chinaunicom_top_layout_height">
+            <LinearLayout android:orientation="vertical" android:id="@id/china_unicom_linearlayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                <TextView android:textSize="@dimen/fragment_chinaunicom_top_order_pay_textsize" android:textColor="#ff666666" android:id="@id/china_mobile_order_pay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/china_unicom_order_title_info" />
+                <TextView android:textSize="@dimen/fragment_chinaunicom_top_order_message_textsize" android:textColor="#ff9d9d9d" android:id="@id/china_mobile_order_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/china_unicom_order_title_info_service" />
+            </LinearLayout>
+        </RelativeLayout>
+        <View android:background="#ffe8e8e8" android:layout_width="fill_parent" android:layout_height="@dimen/fragment_packet_flow_item_line" />
+        <LinearLayout android:orientation="vertical" android:background="#fff8f8f8" android:paddingLeft="@dimen/fragment_chinaunicom_top_layout_padding" android:paddingTop="@dimen/fragment_chinaunicom_top_layout_padding" android:paddingRight="@dimen/fragment_chinaunicom_top_layout_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:gravity="center_vertical" android:id="@id/china_unicome_point_first" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fragment_chinaunicom_top_service_info_point_margintTop" android:layout_marginRight="@dimen/fragment_chinaunicom_top_service_info_point_margintRight" android:src="@drawable/china_unicom_point" />
+                <TextView android:textSize="@dimen/fragment_chinaunicom_top_service_info_textsize" android:textColor="#ff666666" android:id="@id/china_unicome_text_first" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/china_unicom_service_info_first" android:lineSpacingExtra="@dimen/fragment_chinaunicom_top_service_info_line_multi" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fragment_chinaunicom_top_service_info_point_margintTop" android:layout_marginRight="@dimen/fragment_chinaunicom_top_service_info_point_margintRight" android:src="@drawable/china_unicom_point" />
+                <TextView android:textSize="@dimen/fragment_chinaunicom_top_service_info_textsize" android:textColor="#ff666666" android:gravity="center|left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/china_unicom_service_info_second" android:lineSpacingExtra="@dimen/fragment_chinaunicom_top_service_info_line_multi" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fragment_chinaunicom_top_service_info_point_margintTop" android:layout_marginRight="@dimen/fragment_chinaunicom_top_service_info_point_margintRight" android:src="@drawable/china_unicom_point" />
+                <TextView android:textSize="@dimen/fragment_chinaunicom_top_service_info_textsize" android:textColor="#ff666666" android:gravity="center|left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/china_unicom_service_info_third" android:lineSpacingExtra="@dimen/fragment_chinaunicom_top_service_info_line_multi" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fragment_chinaunicom_top_service_info_point_margintTop" android:layout_marginRight="@dimen/fragment_chinaunicom_top_service_info_point_margintRight" android:src="@drawable/china_unicom_point" />
+                <TextView android:textSize="@dimen/fragment_chinaunicom_top_service_info_textsize" android:textColor="#ff666666" android:gravity="center|left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/china_unicom_service_info_fourth" android:lineSpacingExtra="@dimen/fragment_chinaunicom_top_service_info_line_multi" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fragment_chinaunicom_top_service_info_point_margintTop" android:layout_marginRight="@dimen/fragment_chinaunicom_top_service_info_point_margintRight" android:src="@drawable/china_unicom_point" />
+                <TextView android:textSize="@dimen/fragment_chinaunicom_top_service_info_textsize" android:textColor="#ff666666" android:gravity="center|left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/china_unicom_service_info_fifth" android:lineSpacingExtra="@dimen/fragment_chinaunicom_top_service_info_line_multi" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fragment_chinaunicom_top_service_info_point_margintTop" android:layout_marginRight="@dimen/fragment_chinaunicom_top_service_info_point_margintRight" android:src="@drawable/china_unicom_point" />
+                <TextView android:textSize="@dimen/fragment_chinaunicom_top_service_info_textsize" android:textColor="#ff666666" android:gravity="center|left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/china_unicom_service_info_sixth" android:lineSpacingExtra="@dimen/fragment_chinaunicom_top_service_info_line_multi" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fragment_chinaunicom_top_service_info_point_margintTop" android:layout_marginRight="@dimen/fragment_chinaunicom_top_service_info_point_margintRight" android:src="@drawable/china_unicom_point" />
+                <TextView android:textSize="@dimen/fragment_chinaunicom_top_service_info_textsize" android:textColor="#ff666666" android:gravity="center|left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/china_unicom_service_info_seventh" android:lineSpacingExtra="@dimen/fragment_chinaunicom_top_service_info_line_multi" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/fragment_chinaunicom_top_layout_height">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/fragment_chinaunicom_top_order_textsize" android:textColor="#ff00a1f4" android:layout_gravity="center" android:id="@id/china_unicome_info_order" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/fragment_chinaunicom_top_ordertext_marginright" android:text="订购" />
+                <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/china_telecom_order" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/free_flow_item_in" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </LinearLayout>
+            <View android:layout_gravity="center" android:background="#ffe8e8e8" android:layout_width="200.0dip" android:layout_height="@dimen/fragment_packet_flow_item_line" />
+            <TextView android:textSize="12.0dip" android:gravity="center" android:layout_gravity="center" android:id="@id/china_unicome_sms_order" android:layout_width="wrap_content" android:layout_height="0.0dip" android:text="已订购用户，点击短信认证" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

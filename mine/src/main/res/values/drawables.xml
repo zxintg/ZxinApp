@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="BackBar">#ffcccccc</item>
+    <item type="drawable" name="cinema_detail_imgbg">#ff3d3d3d</item>
+    <item type="drawable" name="cinema_detail_tab_bottom_color_focused">#ff22b8ff</item>
+    <item type="drawable" name="cinema_detail_tab_bottom_color_normal">#ffffffff</item>
+    <item type="drawable" name="clr_normal">#ffffffff</item>
+    <item type="drawable" name="clr_pressed">#ffc7c7c7</item>
+    <item type="drawable" name="crop_content_btn_bg">#e52fb3ff</item>
+    <item type="drawable" name="game_action_bg_blue">#ff4ec6ff</item>
+    <item type="drawable" name="game_action_bg_blue_black">#ff36bbe8</item>
+    <item type="drawable" name="game_action_bg_gray">#ffe7e7e7</item>
+    <item type="drawable" name="game_action_bg_yellow">#ffffd971</item>
+    <item type="drawable" name="game_category_gridview_item_normal">#ffffffff</item>
+    <item type="drawable" name="game_category_gridview_item_pressed">#ffe5e5e5</item>
+    <item type="drawable" name="game_gallery_button_bg_blue">#ef22b8ff</item>
+    <item type="drawable" name="game_gallery_button_bg_grey">#66000000</item>
+    <item type="drawable" name="game_gallery_button_bg_yellow">#efffd971</item>
+    <item type="drawable" name="game_listview_item_normal">#ffffffff</item>
+    <item type="drawable" name="game_listview_item_pressed">#ffececec</item>
+    <item type="drawable" name="game_recom_gallery_item_ing">#33115f37</item>
+    <item type="drawable" name="game_recom_gallery_item_install_bg_color">#990f8902</item>
+    <item type="drawable" name="game_recom_gallery_item_open_bg_color">#cc0072ca</item>
+    <item type="drawable" name="game_search_item_normal">#ffffffff</item>
+    <item type="drawable" name="game_search_item_pressed">#ffe5e5e5</item>
+    <item type="drawable" name="game_tag_gridview_item_normal">#00000000</item>
+    <item type="drawable" name="notification_template_icon_bg">#3333b5e5</item>
+    <item type="drawable" name="tab_indicator_normal">#ffffffff</item>
+    <item type="drawable" name="tab_indicator_pressed_color">#fff0f0f0</item>
+    <item type="drawable" name="transparent_bg">#00000000</item>
+</resources>

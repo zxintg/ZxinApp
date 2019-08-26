@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom" android:orientation="vertical" android:background="#ffe6e6e6" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/home_card_item_text_size" android:textColor="#ff666666" android:gravity="center_horizontal" android:layout_gravity="center" android:id="@id/hint_text" android:padding="@dimen/personalized_header_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/personalized_loading" />
+    <ImageView android:layout_gravity="center" android:id="@id/progress_circle" android:padding="@dimen/personalized_header_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/header_refresh_loading" />
+</LinearLayout>

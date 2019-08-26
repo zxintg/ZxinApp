@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/buttons" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_vertical_bottom_height">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_horizontal" android:id="@id/praise_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageView android:id="@id/praise" android:background="@drawable/detail_interaction_bar_praise_vf" android:layout_width="@dimen/detail_card_video_detail_button_bar_icon_width_v5" android:layout_height="@dimen/detail_card_video_detail_button_bar_icon_width_v5" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageView android:id="@id/share_card" android:background="@drawable/detail_interaction_bar_share_selector_vf" android:layout_width="@dimen/detail_card_video_detail_button_bar_icon_width_v5" android:layout_height="@dimen/detail_card_video_detail_button_bar_icon_width_v5" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageView android:id="@id/download" android:background="@drawable/detail_card_download" android:layout_width="@dimen/detail_card_video_detail_button_bar_icon_width_v5" android:layout_height="@dimen/detail_card_video_detail_button_bar_icon_width_v5" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageView android:id="@id/favorite_icon" android:background="@drawable/add_normal" android:layout_width="@dimen/detail_card_video_detail_button_bar_icon_width_v5" android:layout_height="@dimen/detail_card_video_detail_button_bar_icon_width_v5" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

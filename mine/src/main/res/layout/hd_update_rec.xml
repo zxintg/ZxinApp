@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/video_container" android:background="@color/hd_white" android:paddingLeft="8.0dip" android:paddingTop="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="120.0dip" android:layout_height="76.0dip">
+            <ImageView android:layout_width="120.0dip" android:layout_height="76.0dip" android:src="@drawable/channel_not_loaded_icon_play" android:scaleType="centerInside" />
+            <ImageView android:id="@id/left_img" android:layout_width="120.0dip" android:layout_height="76.0dip" android:scaleType="centerCrop" />
+        </FrameLayout>
+        <RelativeLayout android:orientation="horizontal" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="13.0sp" android:textColor="#ff333333" android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:lineSpacingExtra="3.0dip" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:layout_alignParentBottom="true">
+                <com.youku.hd.subscribe.ui.widget.RoundPhoto android:id="@id/avatar" android:layout_width="15.0dip" android:layout_height="15.0dip" />
+                <TextView android:textSize="12.0sp" android:textColor="#ffb5b5b5" android:ellipsize="end" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:lines="1" android:drawablePadding="3.0dip" />
+                <TextView android:textSize="12.0sp" android:textColor="#ffb5b5b5" android:ellipsize="end" android:id="@id/number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:lines="1" android:drawableLeft="@mipmap/hd_bofangliang" android:drawablePadding="3.0dip" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

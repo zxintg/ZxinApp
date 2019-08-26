@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/dialogLayout" android:background="@color/text_color_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="@dimen/padding_left_right_5" android:layout_width="fill_parent" android:layout_height="@dimen/upload_topic_edit_height">
+            <EditText android:textSize="@dimen/text_size_14" android:textColor="@color/main_text_color" android:id="@id/upload_topic_text_search" android:background="@drawable/empty" android:padding="@dimen/padding_left_right_8" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/upload_choose_topic_hint_search" android:singleLine="true" android:layout_weight="1.0" android:textCursorDrawable="@null" />
+            <ProgressBar android:id="@id/search_loading_progressbar" android:padding="@dimen/padding_left_right_8" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@android:style/Widget.ProgressBar.Small" />
+            <ImageView android:id="@id/upload_topic_text_clear" android:background="@drawable/upload_ic_input_clear" android:padding="@dimen/padding_left_right_8" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View android:id="@id/topic_line" android:background="#ffdcdcdc" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <android.support.v7.widget.RecyclerView android:id="@id/upload_choose_topic_recycler" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <LinearLayout android:orientation="vertical" android:id="@id/search_topic_lin" android:background="@color/text_color_white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ListView android:id="@id/search_topic_recycler" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="#00000000" android:divider="@null" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/search_nothing" android:background="@color/text_color_white" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/upload_topic_nothing_height">
+                    <TextView android:textSize="@dimen/text_size_16" android:textColor="@color/video_edit_time_color" android:id="@id/search_toast_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/upload_choose_topic_search_none" />
+                </LinearLayout>
+                <View android:id="@id/pop_lst_lin" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <include android:id="@id/page_load_fail_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/page_load_fail_layout" />
+</FrameLayout>

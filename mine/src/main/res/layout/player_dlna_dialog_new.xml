@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layout_picker_dialog" android:background="@color/white" android:layout_width="@dimen/layout_vip_dialog_width" android:layout_height="wrap_content">
+        <TextView android:gravity="center" android:id="@id/player_dlna_dialog_title_textview_new" android:layout_width="fill_parent" android:layout_height="@dimen/picker_dialog_title_height" android:text="@string/dlna_has_find_device" style="@style/edit_title" />
+        <TextView android:gravity="center" android:id="@id/player_dlna_dialog_only_title_new" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/picker_dialog_title_height" android:text="@string/dlna_is_disconnect_dlna_device" android:layout_below="@id/player_dlna_dialog_title_textview_new" android:layout_centerInParent="true" style="@style/dlnadialog_disconnect_title" />
+        <View android:id="@id/player_dlna_dialog_only_title_line_new" android:background="#ffdbdbdb" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="@dimen/picker_dialog_title_line_marginleftright" android:layout_marginRight="@dimen/picker_dialog_title_line_marginleftright" />
+        <ListView android:orientation="vertical" android:id="@id/player_dlna_dialog_listview_new" android:focusable="true" android:focusableInTouchMode="true" android:scrollbars="none" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="@dimen/player_dlna_dialog_listview_height" android:layout_marginLeft="@dimen/play_dlna_dialog_listview_item_layout_marginleft" android:layout_marginTop="@dimen/play_dlna_dialog_listview_item_layout_margintop" android:layout_marginRight="@dimen/play_dlna_dialog_listview_item_layout_marginleft" android:cacheColorHint="#00000000" android:divider="#fff5f5f5" android:dividerHeight="1.0px" android:layout_below="@id/player_dlna_dialog_only_title_line_new" android:headerDividersEnabled="true" android:footerDividersEnabled="false" />
+        <RelativeLayout android:id="@id/layout_normal_dialog_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/layout_vip_dialog_bottom_height" android:layout_marginTop="@dimen/picker_dialog_item_margintopbottom">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="center" android:id="@id/negtive_btn_layout" android:background="@drawable/btn_vip_dialog_cancel" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:id="@id/cancelDLNAConnect_new" android:background="@drawable/btn_vip_dialog_cancel" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="取消" style="@style/vip_dialog_txt_cancel" />
+                </LinearLayout>
+                <View android:background="#2c5e5e5e" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                <View android:background="#ffffffff" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                <LinearLayout android:gravity="center" android:id="@id/positive_btn_layout" android:background="@drawable/btn_vip_dialog_ok" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:id="@id/doneDLNAConnect_new" android:background="@drawable/btn_vip_dialog_ok" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/dlna_conn" style="@style/vip_dialog_txt_rebuy" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="@drawable/soku_layout_bottom_cover" android:layout_width="fill_parent" android:layout_height="5.0px" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

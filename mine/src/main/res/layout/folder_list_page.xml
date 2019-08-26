@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/text_color_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/create_folder_lin">
+        <GridView android:id="@id/video_folder_grid" android:paddingTop="@dimen/padding_left_right_10" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/empty" android:verticalSpacing="@dimen/padding_left_right_10" android:numColumns="2" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/create_folder_lin" android:background="@color/video_button_color" android:layout_width="fill_parent" android:layout_height="@dimen/bottom_btn_height" android:layout_alignParentBottom="true">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/upload_ic_newfolder" />
+        <TextView android:textSize="@dimen/text_size_18" android:textColor="@color/text_color_white" android:id="@id/video_upload" android:paddingLeft="@dimen/padding_left_right_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/folder_create" />
+    </LinearLayout>
+</RelativeLayout>

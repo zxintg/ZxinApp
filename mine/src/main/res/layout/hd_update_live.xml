@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/root_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.youku.hd.subscribe.compents.DateLine android:id="@id/timeline_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" />
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:layout_below="@id/timeline_view">
+            <com.youku.hd.subscribe.ui.widget.RoundPhoto android:id="@id/user_avatar" android:layout_width="42.0dip" android:layout_height="42.0dip" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="16.0sp" android:textColor="#ff15618d" android:ellipsize="end" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:maxEms="12" />
+                    <TextView android:textSize="14.0sp" android:textColor="#ffb5b5b5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="正在直播" />
+                    <ImageView android:id="@id/star_flag" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:src="@mipmap/hd_star" />
+                    <TextView android:textSize="10.0sp" android:textColor="#ff004ca9" android:gravity="center" android:id="@id/recommend_flag" android:background="@drawable/hd_back_recommend" android:visibility="gone" android:layout_width="28.0dip" android:layout_height="17.0dip" android:layout_marginLeft="8.0dip" android:text="推荐" />
+                    <Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <LinearLayout android:gravity="center" android:id="@id/btn_subscribe" android:background="@drawable/hd_sub_back" android:visibility="gone" android:layout_width="66.0dip" android:layout_height="24.0dip">
+                            <ImageView android:id="@id/hd_sub_icon" android:layout_width="10.0dip" android:layout_height="10.0dip" android:src="@mipmap/hd_ic_add_after" />
+                            <TextView android:textSize="12.0sp" android:textColor="#ff2fb3ff" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/hd_sub_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <ImageView android:id="@id/more_flag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/hd_ic_more_selector" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <TextView android:textColor="#ff333333" android:ellipsize="end" android:id="@id/hd_introduction" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:maxLines="2" android:lineSpacingExtra="3.0dip" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/video_container" android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip">
+                    <RelativeLayout android:background="#ffffffff" android:layout_width="125.0dip" android:layout_height="75.0dip">
+                        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                            <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/channel_not_loaded_icon_play" android:scaleType="centerInside" />
+                            <ImageView android:id="@id/left_img" android:layout_width="125.0dip" android:layout_height="75.0dip" android:scaleType="centerCrop" />
+                        </FrameLayout>
+                        <TextView android:textSize="@dimen/hd_timeline_time" android:textColor="@color/white" android:gravity="center" android:id="@id/video_show_type" android:background="@drawable/hd_mz" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginBottom="3.0dip" android:text="直播" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+                    </RelativeLayout>
+                    <RelativeLayout android:orientation="horizontal" android:background="#fff5f5f5" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <TextView android:textSize="13.0sp" android:textColor="#ff333333" android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:lineSpacingExtra="3.0dip" />
+                        <TextView android:textSize="12.0sp" android:textColor="#ffb5b5b5" android:id="@id/number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:drawableLeft="@drawable/update_fans_count" android:layout_alignParentBottom="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <TextView android:textSize="12.0sp" android:textColor="#ffcccccc" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" />
+                <View android:id="@id/divide_line" android:background="@color/hd_gridview_gap_line" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="12.0dip" android:layout_centerVertical="true" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@id/top_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:src="@drawable/hd_timeline_star_blue_icon" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/usercenter_task_inner_three_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/usercenter_cards_mytask_img" android:layout_width="wrap_content" android:layout_height="@dimen/usercenter_task_inner_three_height" android:scaleType="centerInside" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/usercenter_cards_mytask_img" android:layout_centerVertical="true">
+        <TextView android:textSize="@dimen/usercenter_list_item_second_textsize" android:id="@id/usercenter_cards_mytask_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ucenter_list_item_first" />
+        <TextView android:textSize="@dimen/usercenter_list_item_third_textsize" android:id="@id/usercenter_cards_mytask_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ucenter_list_item_second" />
+    </LinearLayout>
+    <ImageView android:id="@id/usercenter_cards_mytask_right_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/usercenter_task_inner_three_height" android:scaleType="centerInside" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

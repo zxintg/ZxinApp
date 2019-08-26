@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/ll_zpdlive_netclose" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/zpdlive_nonet_pic" android:layout_centerInParent="true" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="17.0dip">
+        <TextView android:textSize="13.0dip" android:textColor="@color/text_color_gray_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="世界上最遥远的距离就是断网" />
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="11.0dip">
+            <ImageView android:layout_width="70.0dip" android:layout_height="35.0dip" android:src="@drawable/btn_net_retry" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/rl_zpdlive_retry" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <ImageView android:layout_width="17.0dip" android:layout_height="17.0dip" android:src="@mipmap/zpdlive_update" />
+                <TextView android:textSize="14.0dip" android:textColor="#ff2fb3ff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="重试" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:id="@id/layout_othersite_filter_item" android:background="@drawable/layout_othersite_filter_item_bg" android:paddingLeft="@dimen/layout_othersite_filter_item_height_paddingleft" android:layout_width="fill_parent" android:layout_height="@dimen/layout_othersite_filter_item_height">
+        <ImageView android:id="@id/othersite_filter_item_img" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:id="@id/othersite_filter_item_txt" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/othersite_filter_item_txt" />
+    </LinearLayout>
+</LinearLayout>

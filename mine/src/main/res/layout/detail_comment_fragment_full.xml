@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/detail_card_comment_small_title" />
+    <RelativeLayout android:background="@color/detail_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/fl_comment" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.handmark.pulltorefresh.library.PullToRefreshListView android:id="@id/plv_video_comment" android:background="@color/detail_background_color" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@color/detail_background_color" android:divider="#ffe5e5e5" android:dividerHeight="1.0px" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/loadingview" android:background="@color/detail_background_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/series_loading_progressbar" />
+        </LinearLayout>
+        <ProgressBar android:id="@id/next_loading" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/series_loading_progressbar" android:layout_centerInParent="true" />
+        <include android:id="@id/detail_comment_no_result" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/detail_comment_no_result_land" />
+    </RelativeLayout>
+</LinearLayout>

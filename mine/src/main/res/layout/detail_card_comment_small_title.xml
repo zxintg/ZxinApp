@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/rrr" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_title_height">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/layout_common_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_video_detail_title_marginleft" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/detail_card_title_size" android:textColor="#ff444444" android:gravity="center_vertical" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="讨论区" />
+            <TextView android:textSize="@dimen/detail_card_subtitle_size" android:textColor="#ffb9b9b9" android:gravity="center_vertical" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_subtitle_marginTop" android:maxWidth="1000.0dip" android:text="13726条评论" />
+        </LinearLayout>
+        <ImageView android:id="@id/more" android:background="@null" android:layout_width="@dimen/detail_card_more_image_width" android:layout_height="fill_parent" android:src="@drawable/detail_card_more" />
+    </LinearLayout>
+    <View android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</LinearLayout>

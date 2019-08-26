@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RadioGroup android:gravity="fill_horizontal" android:orientation="horizontal" android:id="@id/liveplay_radiogroup" android:background="@drawable/actionbar_scrollview_bg" android:layout_width="fill_parent" android:layout_height="@dimen/calendar_tab_height" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <RadioButton android:id="@id/LiveImageText" android:checked="true" android:text="@string/live_graphiclive" style="@style/liveplay_tab_bar" />
+            <RadioButton android:id="@id/UserComment" android:text="@string/live_usercomment" style="@style/liveplay_tab_bar" />
+            <RadioButton android:id="@id/PreLiveVideos" android:text="@string/live_wonderfullvideo" style="@style/liveplay_tab_bar" />
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>

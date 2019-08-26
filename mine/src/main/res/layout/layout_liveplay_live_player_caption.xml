@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="top" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/loading_view" android:background="@color/colorTransparent" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@id/live_btn_back" android:paddingLeft="0.0dip" android:paddingTop="10.0dip" android:paddingRight="0.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="start" android:background="@color/colorTransparent" android:layout_width="25.0dip" android:layout_height="25.0dip" android:src="@drawable/icon_back_2x" android:scaleType="centerInside" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/livePlaying_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip">
+            <LinearLayout android:background="@drawable/shape_corner_radius_3dp_live" android:paddingLeft="6.0dip" android:paddingTop="2.0dip" android:paddingRight="6.0dip" android:paddingBottom="2.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="10.0sp" android:textColor="@color/colorWhite" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/infoPlayLive" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@id/liveReservationt_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip">
+            <LinearLayout android:background="@drawable/shape_corner_radius_3dp_preview" android:paddingLeft="6.0dip" android:paddingTop="2.0dip" android:paddingRight="6.0dip" android:paddingBottom="2.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="10.0sp" android:textColor="@color/colorWhite" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/infoPlayPreview" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@id/liveCanreplayback_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip">
+            <LinearLayout android:background="@drawable/shape_corner_radius_3dp_replay" android:paddingLeft="6.0dip" android:paddingTop="2.0dip" android:paddingRight="6.0dip" android:paddingBottom="2.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="10.0sp" android:textColor="@color/colorWhite" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/infoPlayRecord" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="14.0sp" android:textColor="#ffffffff" android:id="@id/textView_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="0.0dip" android:singleLine="true" />
+    </LinearLayout>
+</RelativeLayout>

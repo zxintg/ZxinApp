@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/soku_layout_picker_dialog" android:background="@color/white" android:layout_width="@dimen/layout_vip_dialog_width" android:layout_height="wrap_content">
+        <TextView android:gravity="center" android:id="@id/soku_picker_dialog_title" android:layout_width="fill_parent" android:layout_height="@dimen/picker_dialog_title_height" android:text="@string/choice_download_mode" style="@style/edit_title" />
+        <View android:id="@id/soku_picker_dialog_title_line" android:background="#ffdbdbdb" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="@dimen/picker_dialog_title_line_marginleftright" android:layout_marginRight="@dimen/picker_dialog_title_line_marginleftright" />
+        <RelativeLayout android:id="@id/soku_item1" android:descendantFocusability="blocksDescendants" android:layout_width="@dimen/picker_dialog_item_width" android:layout_height="@dimen/picker_dialog_item_height" android:layout_marginTop="@dimen/picker_dialog_item_margintopbottom">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/standard_pic" android:layout_centerVertical="true" style="@style/picker_left" />
+            <RadioButton android:id="@id/soku_normal_quality" android:background="@drawable/dialog_radiontn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/soku_item2" android:descendantFocusability="blocksDescendants" android:layout_width="@dimen/picker_dialog_item_width" android:layout_height="@dimen/picker_dialog_item_height">
+            <View android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentTop="true" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/high_pic" android:layout_centerVertical="true" style="@style/picker_left" />
+            <RadioButton android:id="@id/soku_high_quality" android:background="@drawable/dialog_radiontn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/soku_item3" android:descendantFocusability="blocksDescendants" android:layout_width="@dimen/picker_dialog_item_width" android:layout_height="@dimen/picker_dialog_item_height">
+            <View android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentTop="true" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/super_pic" android:layout_centerVertical="true" style="@style/picker_left" />
+            <RadioButton android:id="@id/soku_super_quality" android:background="@drawable/dialog_radiontn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/soku_item_1080" android:descendantFocusability="blocksDescendants" android:layout_width="@dimen/picker_dialog_item_width" android:layout_height="@dimen/picker_dialog_item_height">
+            <View android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentTop="true" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/super_pic_1080" android:layout_centerVertical="true" style="@style/picker_left" />
+            <RadioButton android:id="@id/soku_super_quality_1080" android:background="@drawable/dialog_radiontn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/soku_item4" android:visibility="gone" android:layout_width="@dimen/picker_dialog_item_width" android:layout_height="@dimen/picker_dialog_item_height">
+            <View android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentTop="true" />
+            <TextView android:gravity="center" android:id="@id/soku_textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="默认音轨" android:layout_centerVertical="true" style="@style/picker_left" />
+            <ImageView android:id="@id/soku_dialog_arrrow1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dialog_arrow_marginLeft" android:src="@drawable/icon_dialog_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <TextView android:id="@id/soku_item4_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="修改" android:layout_toLeftOf="@id/soku_dialog_arrrow1" android:layout_centerVertical="true" style="@style/picker_right" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/soku_item5" android:layout_width="@dimen/picker_dialog_item_width" android:layout_height="@dimen/picker_dialog_item_height">
+            <View android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentTop="true" />
+            <TextView android:gravity="center" android:id="@id/soku_textView5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="下载路径" android:layout_centerVertical="true" style="@style/picker_left" />
+            <ImageView android:id="@id/soku_dialog_arrrow2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dialog_arrow_marginLeft" android:src="@drawable/icon_dialog_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <TextView android:id="@id/soku_item5_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="修改" android:layout_toLeftOf="@id/soku_dialog_arrrow2" android:layout_centerVertical="true" style="@style/picker_right" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/soku_layout_normal_dialog_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/layout_vip_dialog_bottom_height" android:layout_marginTop="@dimen/picker_dialog_item_margintopbottom">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="center" android:id="@id/soku_negtive_btn_layout" android:background="@drawable/btn_vip_dialog_cancel" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:id="@id/soku_negtive_btn" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="取消" style="@style/vip_dialog_txt_cancel" />
+                </LinearLayout>
+                <View android:background="#2c5e5e5e" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                <View android:background="#ffffffff" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                <LinearLayout android:gravity="center" android:id="@id/soku_positive_btn_layout" android:background="@drawable/btn_vip_dialog_ok" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:id="@id/soku_positive_btn" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="确定" style="@style/vip_dialog_txt_rebuy" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="@drawable/soku_layout_bottom_cover" android:layout_width="fill_parent" android:layout_height="5.0px" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

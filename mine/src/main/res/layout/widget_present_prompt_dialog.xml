@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center" android:layout_width="@dimen/present_dialog_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/line" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/present_dialog_title_height">
+        <TextView android:textSize="@dimen/present_dialog_button_textsize" android:textColor="#ff1b9ad6" android:gravity="center" android:id="@id/present_dialog_title" android:layout_width="fill_parent" android:layout_height="@dimen/present_dialog_title_height" android:text="@string/game_present_promopt_dialog_title" android:layout_alignParentTop="true" />
+        <View android:background="#ffdbdbdb" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="@dimen/game_details_margin_left" android:layout_marginRight="@dimen/game_details_margin_left" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/present_dialog_container" android:background="#ffffffff" android:paddingLeft="@dimen/present_dialog_content_padding_top" android:paddingTop="@dimen/present_dialog_content_padding_top" android:paddingRight="@dimen/present_dialog_content_padding_top" android:paddingBottom="@dimen/present_dialog_content_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/line">
+        <TextView android:textSize="@dimen/present_dialog_content_textsize" android:textColor="#ff626262" android:id="@id/present_dialog_content_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/game_present_promopt_dialog_content" />
+    </LinearLayout>
+    <View android:id="@id/widget_exist_game_line1" android:background="#ffbdbdbd" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/present_dialog_container" />
+    <LinearLayout android:id="@id/action_buttons" android:layout_width="fill_parent" android:layout_height="@dimen/game_present_bottom_height" android:layout_below="@id/widget_exist_game_line1">
+        <Button android:textSize="@dimen/present_dialog_button_textsize" android:textColor="#ff737474" android:id="@id/game_exist_dialog_cancel" android:background="@drawable/gamecenter_exist_dialog_cancel_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/game_str_cancel" android:layout_weight="1.0" />
+        <View android:background="#ffcfdce0" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <Button android:textSize="@dimen/present_dialog_button_textsize" android:textColor="#ff0177ae" android:id="@id/game_exist_dialog_ok" android:background="@drawable/gamecenter_exist_dialog_ok_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/str_install" android:singleLine="true" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

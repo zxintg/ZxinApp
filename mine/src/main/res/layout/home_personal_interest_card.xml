@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#fffcfcfc" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/home_personal_interest_title" layout="@layout/home_personal_card_title" />
+    <LinearLayout android:orientation="vertical" android:id="@id/home_interest_card_root" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/home_personal_interest_title">
+        <include android:id="@id/home_personal_interest_row_1" layout="@layout/home_personal_interest_row" />
+        <include android:id="@id/home_personal_interest_row_2" layout="@layout/home_personal_interest_row" />
+    </LinearLayout>
+    <View android:id="@id/home_personal_interest_line" android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/home_interest_card_root" />
+    <TextView android:enabled="false" android:textSize="@dimen/home_interest_card_confirm_text_size" android:textColor="@color/home_personal_interest_card_confirm_text" android:gravity="center" android:id="@id/home_personal_interest_confirm" android:background="@drawable/home_personal_interest_card_confirm_bg" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/home_interest_card_confirm_text_view_height" android:text="@string/confirm" android:layout_below="@id/home_personal_interest_line" />
+</RelativeLayout>

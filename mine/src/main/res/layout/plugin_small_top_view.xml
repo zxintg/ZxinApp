@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center|left" android:background="@drawable/plugin_small_top_view_bg" android:layout_width="fill_parent" android:layout_height="@dimen/plugin_small_top_view_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="@dimen/plugin_fullscreen_top_view_height">
+        <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:id="@id/player_back_btn_layout" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:id="@id/player_back_btn_left" android:duplicateParentState="true" android:layout_width="@dimen/player_back_btn_left_width" android:layout_height="fill_parent" android:src="@drawable/player_back_btn_left" />
+            <View android:id="@id/player_back_btn_line" android:background="#33ffffff" android:layout_width="1.0px" android:layout_height="@dimen/player_back_btn_line_height" />
+        </LinearLayout>
+        <ImageView android:id="@id/plugin_small_top_dlna_btn" android:visibility="gone" android:layout_width="@dimen/plugin_top_u_img_width" android:layout_height="@dimen/plugin_top_u_img_height" android:src="@drawable/plugin_small_top_dlna_btn" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <com.youku.player.ui.widget.AlwaysMarqueeTextView android:id="@id/plugin_small_top_view_title" android:paddingLeft="@dimen/plugin_small_top_view_title_paddingleft" android:paddingRight="@dimen/plugin_small_top_view_title_paddingright" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/plugin_small_top_dlna_btn" android:layout_toRightOf="@id/player_back_btn_layout" style="@style/plugin_small_top_view_title" />
+    </RelativeLayout>
+</LinearLayout>

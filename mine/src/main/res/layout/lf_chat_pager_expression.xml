@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youku.laifeng.sdk.widget.editbox.PagerExpression android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.laifeng.sdk.widget.editbox.NoScrollGridView android:id="@id/expression_gridview" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:horizontalSpacing="10.0dip" android:verticalSpacing="16.0dip" android:choiceMode="singleChoice" />
+</com.youku.laifeng.sdk.widget.editbox.PagerExpression>

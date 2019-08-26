@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/gesture1" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:paddingRight="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+        <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="音量调节手势" android:layout_centerVertical="true" />
+        <CheckBox android:id="@id/play_gesture_volumn_checked" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/settings_CheckBox" />
+    </RelativeLayout>
+    <View android:background="@color/mycenter_setting_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <RelativeLayout android:orientation="horizontal" android:id="@id/gesture2" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:paddingRight="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+        <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="亮度调节手势" android:layout_centerVertical="true" />
+        <CheckBox android:id="@id/play_gesture_light_checked" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/settings_CheckBox" />
+    </RelativeLayout>
+    <View android:background="@color/mycenter_setting_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <RelativeLayout android:orientation="horizontal" android:id="@id/gesture3" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:paddingRight="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+        <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="快进快退手势" android:layout_centerVertical="true" />
+        <CheckBox android:id="@id/play_gesture_speed_checked" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/settings_CheckBox" />
+    </RelativeLayout>
+    <View android:background="#ffc9c9c9" android:layout_width="fill_parent" android:layout_height="2.0px" />
+</LinearLayout>

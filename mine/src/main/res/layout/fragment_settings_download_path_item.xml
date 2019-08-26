@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip">
+        <RelativeLayout android:paddingLeft="@dimen/settings_card_padding" android:paddingRight="@dimen/settings_card_padding" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+            <TextView android:textAppearance="@style/settings_text2" android:id="@id/sd_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="手机存储" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/settings_download_title2_text_size" android:textColor="#ffa9a9a9" android:id="@id/total_mem_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="总容量" android:layout_toRightOf="@id/sd_title" android:layout_alignBottom="@id/sd_title" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/settings_download_title2_text_size" android:textColor="#ffa9a9a9" android:id="@id/total_mem" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_toRightOf="@id/total_mem_text" android:layout_alignBottom="@id/total_mem_text" />
+            <ImageView android:id="@id/radio_button" android:background="@drawable/mycenter_setting_radiobtn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <ProgressBar android:id="@id/mem_used" android:layout_width="fill_parent" android:layout_height="@dimen/settings_download_progressbar_height" android:progressDrawable="@drawable/download_process" style="?android:attr/progressBarStyleHorizontal" />
+        <LinearLayout android:gravity="center_vertical" android:paddingLeft="@dimen/settings_card_padding" android:layout_width="wrap_content" android:layout_height="@dimen/settings_download_point_layout_height">
+            <ImageView android:background="#ff40aae4" android:layout_width="@dimen/settings_download_point_width" android:layout_height="@dimen/settings_download_point_height" />
+            <TextView android:textSize="@dimen/settings_download_title2_text_size" android:textColor="#ff757575" android:id="@id/other_used_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_download_point_text_marginLeft" android:text="其他程序" />
+            <TextView android:textSize="@dimen/settings_download_title2_text_size" android:textColor="#ff757575" android:id="@id/other_used" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" />
+            <ImageView android:background="#ff29cf78" android:layout_width="@dimen/settings_download_point_width" android:layout_height="@dimen/settings_download_point_height" android:layout_marginLeft="@dimen/settings_download_point_marginLeft" />
+            <TextView android:textSize="@dimen/settings_download_title2_text_size" android:textColor="#ff757575" android:id="@id/download_used_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_download_point_text_marginLeft" android:text="本地下载" />
+            <TextView android:textSize="@dimen/settings_download_title2_text_size" android:textColor="#ff757575" android:id="@id/download_used" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" />
+            <ImageView android:background="#ffededed" android:layout_width="@dimen/settings_download_point_width" android:layout_height="@dimen/settings_download_point_height" android:layout_marginLeft="@dimen/settings_download_point_marginLeft" />
+            <TextView android:textSize="@dimen/settings_download_title2_text_size" android:textColor="#ff757575" android:id="@id/free_mem_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_download_point_text_marginLeft" android:text="剩余" android:singleLine="true" />
+            <TextView android:textSize="@dimen/settings_download_title2_text_size" android:textColor="#ff757575" android:id="@id/free_mem" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:singleLine="true" />
+        </LinearLayout>
+        <View android:background="#ffc9c9c9" android:layout_width="fill_parent" android:layout_height="2.0px" />
+    </LinearLayout>
+</LinearLayout>

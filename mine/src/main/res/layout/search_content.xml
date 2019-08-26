@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/search_grid_spacing">
+        <FrameLayout android:background="@color/app_background" android:layout_width="fill_parent" android:layout_height="@dimen/search_header_height" android:layout_marginBottom="@dimen/search_grid_spacing">
+            <ImageView android:id="@id/iv_activity_search_last_float_background" android:layout_width="fill_parent" android:layout_height="@dimen/search_header_height" android:scaleType="centerCrop" />
+            <TextView android:textSize="@dimen/text_size_3" android:textColor="@color/white" android:background="@color/bg_red" android:paddingLeft="@dimen/search_bg_ad_padding_left_right" android:paddingTop="@dimen/search_bg_ad_padding_top_bottom" android:paddingRight="@dimen/search_bg_ad_padding_left_right" android:paddingBottom="@dimen/search_bg_ad_padding_top_bottom" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/search_bg_ad_txt" />
+        </FrameLayout>
+        <FrameLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include android:id="@id/vg_card_serarch_last_empty_soku" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="@dimen/search_header_height" layout="@layout/card_search_last_empty_soku" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <include android:id="@id/gv_hot_title_layout" android:layout_width="fill_parent" android:layout_height="@dimen/soku_home_card_item_box_title_layout_height" layout="@layout/programbigworddirect_title_soku" />
+                <com.soku.searchsdk.widget.SteadyGridView android:gravity="center" android:id="@id/gv_hot_words_content" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="#00000000" android:cacheColorHint="#00000000" android:horizontalSpacing="0.0dip" android:verticalSpacing="0.0dip" android:numColumns="2" />
+            </LinearLayout>
+            <ProgressBar android:layout_gravity="center" android:id="@id/pb_hot_words" android:layout_width="wrap_content" android:layout_height="@dimen/search_header_height" />
+        </FrameLayout>
+        <View android:background="#fff0f0f0" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <LinearLayout android:gravity="center_vertical" android:id="@id/ll_hot_words_ad" android:background="@drawable/selector_bg_search_click" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/search_widget_container_height">
+            <ImageView android:id="@id/iv_hot_words_icon" android:layout_width="@dimen/search_card_hot_words_ad_icon_width" android:layout_height="@dimen/search_card_hot_words_ad_icon_width" android:layout_marginLeft="@dimen/search_widget_edit_padding_left" />
+            <TextView android:textSize="@dimen/search_card_hot_words_textsize" android:textColor="#ff00a1f4" android:gravity="center_vertical" android:id="@id/tv_hot_words_text" android:paddingLeft="@dimen/search_card_hot_words_ad_text_padding_l" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="@dimen/search_widget_edit_padding_left" android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

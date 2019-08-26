@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youku.commentsdk.widget.CustomRootLayout android:orientation="vertical" android:id="@id/rl_input_item" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/view_trans" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/reply_user_layout" android:background="#ffffffff" android:paddingTop="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/iv_user_layout" android:layout_width="17.0dip" android:layout_height="17.0dip" android:layout_marginLeft="@dimen/detail_comment_image_marginleft" layout="@layout/detail_user_face_layout" />
+        <TextView android:textSize="@dimen/detail_comment_text_size" android:textColor="#ffb5b5b5" android:ellipsize="end" android:id="@id/tv_item_comment_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_comment_item_user_marginl" android:layout_marginRight="@dimen/detail_comment_image_marginleft" android:text="hoohohwohwohwohwow" android:singleLine="true" android:lineSpacingMultiplier="1.1" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="#ffffffff" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/group_edit_container" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <com.youku.commentsdk.widget.FaceEditText android:textSize="@dimen/detail_card_comment_text_size_v5" android:textColor="#ff333333" android:gravity="center|left" android:id="@id/et_comment_input" android:background="@drawable/shurukuang1" android:paddingLeft="@dimen/detail_card_comment_header_image_margin_left_v5" android:paddingRight="@dimen/detail_card_comment_header_image_margin_left_v5" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:maxLines="4" android:singleLine="false" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:imeOptions="actionSend|flagNoFullscreen" android:textCursorDrawable="@null" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/group_comment_sum_left_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/et_comment_input">
+                <TextView android:textColor="#ffcacaca" android:gravity="center|right" android:id="@id/tv_comment_sum_left" android:background="@null" android:paddingRight="6.5dip" android:layout_width="wrap_content" android:layout_height="@dimen/detail_comment_send_height" android:layout_margin="0.0dip" android:text="20" android:singleLine="true" style="@style/detail_item_content" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="10.0dip">
+            <TextView android:textSize="@dimen/detail_card_comment_header_text_size_v5" android:textColor="#ffb5b5b5" android:id="@id/text_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="0" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/detail_card_comment_header_text_size_v5" android:textColor="#ffb5b5b5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="/300字" android:layout_toRightOf="@id/text_count" android:layout_centerVertical="true" />
+            <ImageButton android:id="@id/btn_well_number" android:background="@drawable/well_number_default" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" android:layout_marginBottom="10.0dip" android:layout_toLeftOf="@id/btn_switch_emoji" android:layout_centerInParent="true" android:layout_centerVertical="true" />
+            <ImageButton android:id="@id/btn_switch_emoji" android:background="@drawable/face_switch_select" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:layout_toLeftOf="@id/btn_push_comment" android:layout_centerInParent="true" android:layout_centerVertical="true" />
+            <TextView android:textColor="@android:color/white" android:gravity="center" android:id="@id/btn_push_comment" android:background="@drawable/send_comment_disable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="@string/send" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <com.youku.commentsdk.widget.PanelLayout android:gravity="center" android:orientation="vertical" android:id="@id/emoji_layout" android:background="@color/comment_emoji_layout_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/emoji_layout_height">
+        <android.support.v4.view.ViewPager android:id="@id/faceViewPager" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <RelativeLayout android:id="@id/tab_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="37.0dip">
+            <LinearLayout android:gravity="center" android:id="@id/face_default" android:background="@drawable/face_tab_textview_selector" android:layout_width="@dimen/smiley_column_width" android:layout_height="fill_parent">
+                <ImageView android:layout_width="@dimen/emoji_tab_default_size" android:layout_height="@dimen/emoji_tab_default_size" android:src="@drawable/emoji_tab_default" android:scaleType="fitXY" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@id/face_permission" android:background="@drawable/face_tab_textview_selector" android:layout_width="@dimen/smiley_column_width" android:layout_height="fill_parent" android:layout_toRightOf="@id/face_default">
+                <ImageView android:layout_width="@dimen/emoji_tab_default_size" android:layout_height="@dimen/emoji_tab_default_size" android:src="@drawable/f_static_014" android:scaleType="fitXY" />
+            </LinearLayout>
+        </RelativeLayout>
+    </com.youku.commentsdk.widget.PanelLayout>
+</com.youku.commentsdk.widget.CustomRootLayout>

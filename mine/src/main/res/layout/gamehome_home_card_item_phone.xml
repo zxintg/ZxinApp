@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.gamecenter.widgets.gamecard.GameHomeCardTitleView android:id="@id/home_card_title_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/home_video_land_item_wide" android:layout="@layout/gamehome_home_card_item_cross" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/home_video_land_item_column1" android:layout="@layout/gamehome_home_card_item_column" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/home_video_land_item_column2" android:layout="@layout/gamehome_home_card_item_column" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/home_video_land_item_column3" android:layout="@layout/gamehome_home_card_item_column" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/home_video_land_item_column4" android:layout="@layout/gamehome_home_card_item_column" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/home_video_land_item_extend" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/home_video_land_item_tailer" android:layout="@layout/gamehome_home_card_item_tail_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

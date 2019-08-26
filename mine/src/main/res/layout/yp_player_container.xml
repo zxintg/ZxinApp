@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/full_holder_inner" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:qwerjk="http://schemas.android.com/apk/res-auto">
+    <com.youku.player.NewSurfaceView android:id="@id/surface_view" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+    <com.youku.player.subtitle.StrokeTextView android:textSize="@dimen/subtitle_font_size" android:textColor="#ffffffff" android:gravity="center" android:id="@id/single_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/subtitle_font_margin_bottom" android:layout_alignParentBottom="true" />
+    <com.youku.player.subtitle.StrokeTextView android:textSize="@dimen/subtitle_font_size_for_english" android:textColor="#ffffffff" android:gravity="center" android:id="@id/subtitle_first" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/subtitle_font_margin_bottom" android:layout_alignParentBottom="true" />
+    <com.youku.player.subtitle.StrokeTextView android:textSize="@dimen/subtitle_font_size" android:textColor="#ffffffff" android:gravity="center" android:id="@id/subtitle_second" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/subtitle_first" />
+    <ImageView android:id="@id/tudou_water_mark" android:visibility="invisible" android:layout_width="@dimen/tudou_water_mark_width" android:layout_height="@dimen/tudou_water_mark_height" android:layout_marginTop="@dimen/tudou_water_mark_margin_top" android:layout_marginRight="@dimen/tudou_water_mark_margin_right" android:src="@drawable/play_mark_01" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <TextView android:textSize="8.0sp" android:textColor="#ff00ff1e" android:gravity="bottom" android:id="@id/surface_view_debug" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:id="@id/surface_black" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

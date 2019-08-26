@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youku.phone.detail.widget.DetailSeriesGridItem android:background="#fff2f2f2" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/fl_item" android:background="@null" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_series_item_height_land">
+        <TextView android:textSize="@dimen/detail_card_series_text_size_land" android:textColor="#ff777777" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/num" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/detail_card_video_detail_title_marginleft_land" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" />
+        <ImageView android:id="@id/isnew" android:background="@null" android:visibility="gone" android:layout_width="@dimen/detail_card_series_image_height_land" android:layout_height="@dimen/detail_card_series_image_height_land" android:src="@drawable/series_item_new_img" android:scaleType="fitStart" />
+        <com.youku.phone.detail.widget.DetailSeriesGridItem android:id="@id/his_grid_item" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" youku:percent="0.0" xmlns:youku="http://schemas.android.com/apk/res-auto" />
+    </RelativeLayout>
+</com.youku.phone.detail.widget.DetailSeriesGridItem>

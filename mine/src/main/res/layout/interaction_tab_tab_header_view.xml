@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/tab_tab_header_relative_layout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/tab_tab_header_background_img" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.youku.interactiontab.widget.InteractionTabPlayerView android:id="@id/player_view" android:background="@drawable/tab_tab_header_player_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+        <com.youku.interactiontab.widget.InteractionTabPlayerViewAboveView android:id="@id/player_view_above_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.youku.interactiontab.widget.InteractionTabPlayerView>
+</RelativeLayout>

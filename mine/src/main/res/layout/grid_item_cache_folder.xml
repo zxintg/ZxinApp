@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/eee" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.youku.widget.YoukuImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="1.0dip" />
+            <View android:layout_width="fill_parent" android:layout_height="@dimen/gridview_item_tv_height" />
+            <ImageView android:layout_width="fill_parent" android:layout_height="2.0dip" />
+        </LinearLayout>
+        <ImageView android:background="@drawable/downloading_folder_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBottom="@id/eee" android:layout_alignParentTop="true" />
+        <ImageView android:id="@id/format" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/con" android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.youku.widget.YoukuImageView android:id="@id/fffff" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ImageView android:id="@id/thumbnail" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="@dimen/download_grid_item_image_padding_right" android:scaleType="centerCrop" android:layout_alignBottom="@id/fffff" android:layout_alignParentTop="true" />
+        <ImageView android:id="@id/mask" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="@dimen/download_grid_item_image_padding_right" android:src="#66000000" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_alignBottom="@id/fffff" />
+        <ImageView android:id="@id/btn_delete" android:background="@drawable/editor_btn_delete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <TextView android:textColor="#cdffffff" android:id="@id/state" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/history_item_txt_first" />
+        <TextView android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/history_item_txt_second" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="@dimen/gridview_item_tv_height" android:layout_below="@id/con">
+        <com.youku.widget.TextViewEllipseEndFixed android:ellipsize="end" android:id="@id/title" android:paddingLeft="@dimen/myyouku_item_line_margin_left" android:paddingRight="@dimen/myyouku_item_line_margin_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:minLines="2" style="@style/homepage_item_title_first" />
+    </LinearLayout>
+</RelativeLayout>

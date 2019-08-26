@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_coll_info" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/collection_card_head_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/collecton_card_subscribe_progress" android:layout_width="@dimen/detail_subscribe_subbtn_width_v5" android:layout_height="@dimen/detail_subscribe_subbtn_height_v5" android:layout_marginRight="@dimen/subscribe_btn_margin_right" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <ImageView android:id="@id/subscribe_btn" android:layout_width="@dimen/detail_subscribe_subbtn_width_v5" android:layout_height="@dimen/detail_subscribe_subbtn_height_v5" android:src="@drawable/detail_subscribe_bg" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ProgressBar android:layout_gravity="center_vertical" android:id="@id/collection_detail_subscribe_progress" android:visibility="gone" android:layout_width="@dimen/detail_subscribe_submark_width_v5" android:layout_height="@dimen/detail_subscribe_submark_width_v5" android:indeterminateOnly="true" android:indeterminateDrawable="@anim/subscribe_progress_bar" android:indeterminateBehavior="repeat" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/state" android:layout_width="@dimen/detail_subscribe_submark_width_v5" android:layout_height="@dimen/detail_subscribe_submark_width_v5" android:src="@drawable/details_subscribe_mark" />
+            <TextView android:textSize="@dimen/detail_subscribe_subtext_size_v5" android:textColor="#ffffffff" android:id="@id/state_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_subscribe_subtext_left_margin_v5" android:text="订阅" />
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/avatar_container" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minHeight="@dimen/collection_card_head_height" android:layout_alignParentLeft="true">
+        <FrameLayout android:layout_width="@dimen/collection_card_user_info_avatar" android:layout_height="@dimen/collection_card_user_info_avatar" android:layout_marginLeft="@dimen/collection_card_avatar_margin" android:layout_marginRight="@dimen/collection_card_avatar_margin" android:layout_alignParentLeft="true">
+            <com.youku.phone.collection.widget.DonutCircleImageView android:layout_width="@dimen/collection_card_user_info_avatar" android:layout_height="@dimen/collection_card_user_info_avatar" android:src="@drawable/collection_card_avatar_default" />
+            <com.youku.phone.collection.widget.DonutCircleImageView android:id="@id/collection_card_user_avatar" android:layout_width="@dimen/collection_card_user_info_avatar" android:layout_height="@dimen/collection_card_user_info_avatar" />
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/collection_card_user_avatar" android:layout_centerVertical="true">
+            <LinearLayout android:orientation="horizontal" android:id="@id/ll_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/collection_card_username_text_size" android:textColor="@color/collection_card_video_name_color" android:id="@id/collection_card_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/collection_card_user_name_margin_right" android:text="大自然的搬运工fdadfssf" android:maxEms="7" android:singleLine="true" android:layout_toLeftOf="@id/subscribe_btn" />
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/collection_user_level" android:layout_width="@dimen/collection_card_member_icon_size" android:layout_height="@dimen/collection_card_member_icon_size" android:layout_toLeftOf="@id/subscribe_btn" android:layout_toRightOf="@id/collection_card_user_name" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/collection_card_common_text_size" android:textColor="@color/collection_card_created_time" android:id="@id/collection_card_created_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/collection_card_margin_between_username_and_created_time" android:text="创建于15天前" android:layout_below="@id/ll_user_name" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

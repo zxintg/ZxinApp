@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/blackcover_split_line" android:background="#ffededed" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentTop="true" />
+    <RelativeLayout android:id="@id/blackcover" android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/blackcover_split_line">
+        <ImageView android:id="@id/default_img" android:layout_width="@dimen/gamecenter_icon_default_width" android:layout_height="@dimen/gamecenter_icon_default_width" android:src="@drawable/gamecenter_channel_not_loaded_icon_play" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <com.youku.gamecenter.widgets.YoukuImageView android:id="@id/video_img" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/game_search_direct_area_size" android:textColor="#ff666666" android:ellipsize="end" android:id="@id/recom_text_2" android:padding="@dimen/game_search_direct_area_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/game_search_direct_area_video_desc_height" android:maxLines="2" android:layout_below="@id/blackcover" />
+</RelativeLayout>

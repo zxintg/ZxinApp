@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/topic_des_lin" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/text_color_white" android:layout_width="fill_parent" android:layout_height="@dimen/padding_left_right_10" />
+    <View android:background="@color/upload_padding_top_bg" android:layout_width="fill_parent" android:layout_height="@dimen/padding_left_right_8" />
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/upload_choose_topic_item_bg" android:padding="@dimen/padding_left_right_10" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/text_size_16" android:textColor="@color/dialog_grid_text_color" android:gravity="center_vertical" android:id="@id/upload_topic_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/upload_choose_topic_use_lately" android:singleLine="true" android:drawableLeft="@drawable/upload_ic_hashtag_recent" android:drawablePadding="@dimen/padding_left_right_5" android:layout_weight="1.0" />
+    </LinearLayout>
+    <View android:background="@color/community_choose_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <FrameLayout android:id="@id/topic_name_lin" android:background="@color/text_color_white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v4.view.ViewPager android:id="@id/topic_viewPager" android:layout_width="fill_parent" android:layout_height="@dimen/upload_recent_viewpager_height" />
+        <com.youku.upload.widget.PreviewPager android:layout_gravity="bottom|center" android:id="@id/topic_previewPager" android:layout_width="wrap_content" android:layout_height="@dimen/padding_left_right_10" android:layout_marginBottom="@dimen/padding_left_right_5" />
+    </FrameLayout>
+</LinearLayout>

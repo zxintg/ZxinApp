@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center" android:id="@id/search_filter_bottom" android:background="@drawable/black_bg" android:paddingTop="@dimen/search_filter_bottom_paddingtop" android:paddingBottom="@dimen/search_filter_bottom_paddingbottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:gravity="center" android:id="@id/search_filter_btn_cancel" android:background="#80ffffff" android:layout_width="@dimen/search_filter_bottom_btn_width" android:layout_height="@dimen/search_filter_bottom_btn_height" android:text="@string/cancel" style="@style/filter_bottom_btn" />
+        <Button android:gravity="center" android:id="@id/search_filter_btn_confirm" android:background="#80ffffff" android:layout_width="@dimen/search_filter_bottom_btn_width" android:layout_height="@dimen/search_filter_bottom_btn_height" android:layout_marginLeft="@dimen/search_filter_bottom_btn_marginleft" android:text="@string/confirm" android:layout_toRightOf="@id/search_filter_btn_cancel" style="@style/filter_bottom_btn" />
+    </RelativeLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/search_filter_bottom">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/black_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/search_filter_area" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:orientation="vertical" android:id="@id/search_order_area" android:paddingTop="@dimen/search_order_area_paddingtop" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

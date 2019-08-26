@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:youku="http://youku.com/youku">
+    <com.youku.widget.AdaptiveLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" youku:type="4">
+        <RelativeLayout android:id="@id/channel_stack_item_stack_layout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <com.youku.widget.YoukuScrollerGallery android:id="@id/homepage_poster_gallery_layout" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:spacing="0.0dip" android:unselectedAlpha="1.0" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/homepage_gallery_point_container" android:background="@drawable/waist_seal" android:layout_width="fill_parent" android:layout_height="@dimen/channel_stack_item_switch_height" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="bottom" android:id="@id/homepage_gallery_content_relativelayout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/channel_stack_item_title_layout_height">
+            <LinearLayout android:gravity="center" android:id="@id/homepage_gallery_previes_linearlayout" android:paddingTop="@dimen/channel_stack_item_title_layout_paddingtopbottom" android:paddingBottom="@dimen/channel_stack_item_title_layout_paddingtopbottom" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="left" android:id="@id/homepage_gallery_previes_imageview" android:layout_width="@dimen/channel_stack_item_img_width" android:layout_height="fill_parent" android:src="@drawable/stack_item_img_left" android:scaleType="centerInside" />
+                <View android:layout_gravity="left" android:background="#ffefefef" android:layout_width="1.0px" android:layout_height="fill_parent" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/homepage_gallery_content_layout" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:ellipsize="end" android:id="@id/homepage_gallery_title_textview" android:paddingLeft="@dimen/gridview_item_tv_marginleft" android:paddingRight="@dimen/gridview_item_tv_marginleft" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="@style/homepage_stack_item_title_first" />
+                <TextView android:ellipsize="end" android:id="@id/homepage_gallery_playcount_textview" android:paddingLeft="@dimen/gridview_item_tv_marginleft" android:paddingRight="@dimen/gridview_item_tv_marginleft" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="@style/homepage_stack_item_title_second" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@id/homepage_gallery_next_linearlayout" android:paddingTop="@dimen/channel_stack_item_title_layout_paddingtopbottom" android:paddingBottom="@dimen/channel_stack_item_title_layout_paddingtopbottom" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <View android:layout_gravity="right" android:background="#ffefefef" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                <ImageView android:layout_gravity="right" android:id="@id/homepage_gallery_next_imageview" android:layout_width="@dimen/channel_stack_item_img_width" android:layout_height="fill_parent" android:src="@drawable/stack_item_img_right" android:scaleType="centerInside" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:layout_gravity="bottom" android:id="@id/homepage_bottom_stack_item_line" android:background="@color/channel_bottom_line_color" android:layout_width="fill_parent" android:layout_height="2.0px" />
+    </com.youku.widget.AdaptiveLinearLayout>
+</LinearLayout>

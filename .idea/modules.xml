@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/basemodel/basemodel.iml" filepath="$PROJECT_DIR$/basemodel/basemodel.iml" />
       <module fileurl="file://$PROJECT_DIR$/jianshennannv/jianshennannv.iml" filepath="$PROJECT_DIR$/jianshennannv/jianshennannv.iml" />
       <module fileurl="file://$PROJECT_DIR$/meziyowu/meziyowu.iml" filepath="$PROJECT_DIR$/meziyowu/meziyowu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mine/mine.iml" filepath="$PROJECT_DIR$/mine/mine.iml" />
       <module fileurl="file://$PROJECT_DIR$/sources/sources.iml" filepath="$PROJECT_DIR$/sources/sources.iml" />
     </modules>
   </component>

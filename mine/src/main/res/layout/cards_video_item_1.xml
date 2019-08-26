@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="#fff5f5f5" android:layout_width="@dimen/myouku_video_layout_width" android:layout_height="wrap_content">
+        <ImageView android:id="@id/default_img" android:layout_width="@dimen/icon_default_width" android:layout_height="@dimen/icon_default_width" android:src="@drawable/channel_not_loaded_icon_play" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <com.youku.widget.YoukuImageView android:id="@id/video_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+        <TextView android:textSize="@dimen/myouku_video_yf_text_size" android:ellipsize="end" android:gravity="center|right" android:id="@id/duration" android:background="@drawable/waist_seal" android:paddingLeft="@dimen/waist_seal_line_marginLeft" android:paddingRight="@dimen/waist_seal_line_marginLeft" android:layout_width="fill_parent" android:layout_height="@dimen/myouku_video_yf_text_height" android:singleLine="true" android:layout_alignBottom="@id/video_img" style="@style/waist_seal_title_style" />
+        <include android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_above="@id/duration" layout="@layout/waist_seal_line" />
+    </RelativeLayout>
+    <RelativeLayout android:orientation="vertical" android:id="@id/video_info_layout" android:background="@drawable/other_person_gridview_item_selector" android:padding="@dimen/myouku_video_name_view_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/myyouku_card_video_name_size" android:textColor="#ff666666" android:id="@id/video_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:singleLine="false" android:lineSpacingExtra="2.0dip" style="@style/homepage_item_title_first" />
+        <TextView android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/video_name" style="@style/myyouku_list_item_second" />
+        <TextView android:textSize="@dimen/myouku_video_name2_size" android:textColor="#ff999999" android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@null" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" style="@style/myyouku_list_item_third" />
+    </RelativeLayout>
+</LinearLayout>

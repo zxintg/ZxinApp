@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/cinema_detail_top_header_marginTop">
+        <FrameLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/cinema_detail_header_bg_height">
+            <ImageView android:id="@id/top_header_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <ImageView android:background="#26000000" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/movie_cinema_detail_header_mid" />
+        <LinearLayout android:orientation="vertical" android:background="@color/app_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/item_spacing" android:layout_marginTop="@dimen/item_spacing" android:layout_marginRight="@dimen/item_spacing" layout="@layout/movie_cinema_detail_plan_tab" />
+            <View android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

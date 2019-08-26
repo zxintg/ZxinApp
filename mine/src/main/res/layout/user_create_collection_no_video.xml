@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:paddingTop="@dimen/collection_card_add_video_tip_margin_top" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center_horizontal" android:id="@id/tip_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip">
+        <ImageView android:id="@id/add_icon" android:layout_width="@dimen/my_collection_create_itme_icon_size" android:layout_height="@dimen/my_collection_create_itme_icon_size" android:src="@drawable/no_collection_icon" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/my_collection_create_item_text_size" android:textColor="@color/collection_card_add_video_tip_text_color" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/collection_card_add_video_tip_description" android:lines="2" />
+</LinearLayout>

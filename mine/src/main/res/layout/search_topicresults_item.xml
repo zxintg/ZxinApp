@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/topic_height_48dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_width="fill_parent" android:layout_height="@dimen/topic_height_48dp" />
+    <TextView android:textSize="@dimen/search_topic_name_text_size" android:textColor="#ff666666" android:ellipsize="end" android:gravity="left" android:id="@id/search_topic_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/topic_margin_10dp" android:text="" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/topic_margin_10dp" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/video_image" android:background="@drawable/topic_ic_hashtag_videonum" android:layout_width="@dimen/topic_margin_8dp" android:layout_height="@dimen/topic_margin_8dp" />
+        <TextView android:textSize="@dimen/topic_text_size_12" android:textColor="#ff999999" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/video_count_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_padding_half" android:text="16" android:singleLine="true" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/join_image" android:background="@drawable/topic_ic_hashtag_people" android:layout_width="@dimen/topic_margin_8dp" android:layout_height="@dimen/topic_margin_8dp" android:layout_marginLeft="@dimen/topic_margin_8dp" />
+        <TextView android:textSize="@dimen/topic_text_size_12" android:textColor="#ff999999" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/join_count_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_padding_half" android:text="3.6w" android:singleLine="true" />
+    </LinearLayout>
+    <View android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.ui.activity.actionbar.CustomToolbar android:id="@id/custom_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" />
+    <com.youku.widget.CompatSwipeRefreshLayout android:id="@id/channel_list_refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.RecyclerView android:scrollbarStyle="outsideOverlay" android:id="@id/channel_list_recycler_view" android:scrollbars="vertical" android:fadingEdge="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="#00000000" />
+    </com.youku.widget.CompatSwipeRefreshLayout>
+</LinearLayout>

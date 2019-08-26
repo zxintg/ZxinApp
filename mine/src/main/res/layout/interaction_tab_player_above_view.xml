@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.interactiontab.widget.InteractionTabPlayerPauseView android:id="@id/player_view_pause_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.youku.interactiontab.widget.InteractionTabPlayerViewTopView android:ellipsize="end" android:gravity="center|left" android:layout_gravity="top" android:id="@id/player_view_top_title" android:background="@drawable/plugin_small_top_view_bg" android:paddingLeft="@dimen/plugin_small_top_view_title_paddingleft" android:paddingRight="@dimen/plugin_small_top_view_title_paddingright" android:layout_width="fill_parent" android:layout_height="@dimen/plugin_small_top_view_height" style="@style/plugin_small_top_view_title" />
+    <com.youku.interactiontab.widget.InteractionTabPlayerViewBottomView android:layout_gravity="bottom" android:id="@id/player_view_bottom_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.youku.interactiontab.widget.InteractionTabPlayerLoadingView android:id="@id/player_view_loading_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.youku.interactiontab.widget.InteractionTabPlayerViewTopTipsView android:id="@id/interaction_tab_small_3g_tip_top_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/home_history_view_height" android:layout_alignParentTop="true" />
+</merge>

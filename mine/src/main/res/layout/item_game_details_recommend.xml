@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_game_details_recommend" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <include android:id="@id/item_game_details_recommend_1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/include_game_details_recommend_single_game" />
+        <include android:id="@id/item_game_details_recommend_2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/include_game_details_recommend_single_game" />
+        <include android:id="@id/item_game_details_recommend_3" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/include_game_details_recommend_single_game" />
+    </LinearLayout>
+    <View android:id="@id/game_card_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/game_home_item_margin_56dp" />
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:id="@id/list_item" android:background="#ffe2e2e2" android:paddingBottom="@dimen/game_card_margin" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="@dimen/gamelist_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/game_listview_item_selector" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/icon" android:layout_width="@dimen/list_item_icon_size" android:layout_height="@dimen/list_item_icon_size" android:layout_marginLeft="@dimen/card_margin_22dp" android:layout_marginTop="@dimen/list_item_padding_bottom" android:src="@drawable/game_list_item_default" android:scaleType="fitXY" android:layout_centerVertical="true" android:contentDescription="@string/str_icon" />
+        <RelativeLayout android:id="@id/present_details_card_title" android:paddingRight="@dimen/detail_gameinfo_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/icon" android:layout_alignTop="@id/icon" android:layout_centerVertical="true">
+            <RelativeLayout android:orientation="vertical" android:id="@id/list_present_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/listview_item_container_margin_left" android:layout_marginRight="@dimen/present_total_button_margin_left" android:layout_toLeftOf="@id/button" android:layout_alignParentLeft="true">
+                <TextView android:textSize="@dimen/list_item_title_text_size" android:textColor="#ff333333" android:ellipsize="end" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/gift_code_container" android:layout_width="fill_parent" android:layout_height="@dimen/list_item_progress_container_height" android:layout_below="@id/title">
+                    <TextView android:textSize="@dimen/list_item_size_text_size" android:textColor="#ffb2b2b2" android:id="@id/gift_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/game_my_gift_item_code" android:singleLine="true" />
+                    <TextView android:textSize="@dimen/list_item_size_text_size" android:textColor="#ff00a2ff" android:id="@id/gift_code" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                </LinearLayout>
+                <TextView android:textSize="@dimen/list_item_des_text_size" android:textColor="#ff999999" android:ellipsize="end" android:id="@id/using_time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/gift_code_container" />
+            </RelativeLayout>
+            <Button android:textSize="@dimen/list_item_title_text_size" android:textColor="#ffffffff" android:gravity="center" android:id="@id/button" android:background="@drawable/game_action_bg_blue_selector" android:layout_width="@dimen/game_card_action_width" android:layout_height="@dimen/game_card_action_height" android:text="@string/game_my_gift_item_button_copy" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

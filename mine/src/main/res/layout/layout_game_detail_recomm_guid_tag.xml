@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.youku.gamecenter.widgets.GameFlowLayout android:id="@id/id_layout_container" android:paddingLeft="@dimen/game_detail_recom_guide_tag_margin_left_right" android:paddingTop="@dimen/game_detail_recom_guide_tag_margin_top_bottom" android:paddingRight="@dimen/game_detail_recom_guide_tag_margin_left_right" android:paddingBottom="@dimen/game_detail_recom_guide_tag_margin_top_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" app:horizontalSpacing="@dimen/game_detail_recom_guide_tag_horizontal_spacing" app:verticalSpacing="@dimen/game_detail_recom_guide_tag_vertical_spacing" app:columnNum="4" />
+</RelativeLayout>

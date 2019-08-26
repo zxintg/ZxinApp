@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/app_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.widget.HomePageListView android:id="@id/list_homepage" android:background="@color/app_background" android:padding="@dimen/homepage_item_spacing" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:numColumns="1" android:divider="@null" />
+    <FrameLayout android:id="@id/like_homepage" android:background="@color/app_background" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/recommend_layout" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/homepage_change_btn_margin_left" android:layout_marginBottom="24.0dip" android:layout_alignParentBottom="true">
+        <Button android:textSize="@dimen/text_btn_switch_top_textsize" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="bottom|center|right" android:id="@id/btn_switch_top" android:background="@drawable/recommend_btn_switch" android:paddingRight="@dimen/btn_switch_top_paddingright" android:paddingBottom="@dimen/btn_switch_top_paddingbottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_btn_recommend" />
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:background="@drawable/recommend_user_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/avatar" android:background="@drawable/ic_home_circle" android:layout_width="@dimen/home_avatar_size" android:layout_height="@dimen/home_avatar_size" android:src="@drawable/ic_home_recommend" android:scaleType="centerCrop" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </FrameLayout>
+    <include android:id="@id/homepage_history" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/homepage_history" />
+</RelativeLayout>

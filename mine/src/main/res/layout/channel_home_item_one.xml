@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/channel_home_item_title_layout" />
+    <FrameLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="1.0px" android:layout_marginRight="1.0px" layout="@layout/home_card_item_one_gallery_layout" />
+    </FrameLayout>
+    <View android:id="@id/channel_item_bottom_divider" android:layout_width="fill_parent" android:layout_height="@dimen/channel_list_recycler_view_item_space" />
+</LinearLayout>

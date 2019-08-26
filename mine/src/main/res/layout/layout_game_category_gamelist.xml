@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/tags_container" android:background="#ffebebeb" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.gamecenter.widgets.ScrollabledGridView android:id="@id/gridview" android:background="#ffebebeb" android:layout_width="fill_parent" android:layout_height="wrap_content" android:numColumns="4" />
+    <View android:background="#ffdddddd" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/gridview" />
+</RelativeLayout>

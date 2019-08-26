@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/relativelayout" android:background="@color/app_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.soku.searchsdk.widget.SokuSearchView android:id="@id/ysv_activity_search_last_edit" android:layout_width="fill_parent" android:layout_height="?actionBarSize" />
+    <com.soku.searchsdk.widget.HeaderAnimScrollView android:scrollbarStyle="outsideOverlay" android:id="@id/sv_search" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/ysv_activity_search_last_edit">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/vg_widget_header_anim_scroll_view_container" android:paddingTop="@dimen/searchresult_listview_paddingtop" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/search_header" />
+                <include android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/search_content" />
+                <FrameLayout android:id="@id/search_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <include android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/search_operation_view" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/suggestion" android:background="@color/app_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </FrameLayout>
+    </com.soku.searchsdk.widget.HeaderAnimScrollView>
+    <FrameLayout android:id="@id/search_gifview_framelayout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>

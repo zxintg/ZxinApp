@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/item_spacing" android:paddingRight="@dimen/item_spacing" android:paddingBottom="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/movie_cinema_detail_plan_tab" />
+        <View android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <com.youku.widget.SteadyListView android:id="@id/listview" android:scrollbars="none" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="#fff3f3f3" android:dividerHeight="1.0px" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/cinema_detail_empty_txt_size" android:textColor="#ffa2a2a2" android:id="@id/empty_plan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/cinema_detail_empty_txt_marginTop" android:text="无排期或已映完" android:layout_centerHorizontal="true" />
+</RelativeLayout>

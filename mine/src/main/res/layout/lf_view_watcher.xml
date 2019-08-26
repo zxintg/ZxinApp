@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/layoutWatcher" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:background="@drawable/lf_bg_round_20_rect_a_60_000000" android:clickable="true" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_centerVertical="true" android:animateLayoutChanges="true">
+        <ImageView android:id="@id/imageViewAvatar" android:layout_width="34.0dip" android:layout_height="34.0dip" android:layout_marginLeft="3.0dip" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginRight="10.0dip">
+            <TextView android:textSize="12.0dip" android:textColor="@android:color/white" android:id="@id/textViewNickName" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/lf_textsize_dp_micro" android:textColor="@color/lf_color_80ffffff" android:id="@id/textViewWatcherNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/lf_textsize_dp_micro" android:textColor="@android:color/black" android:gravity="center" android:id="@id/textViewFollow" android:background="@drawable/lf_bg_round_rect_ffd855" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="24.0dip" android:layout_marginRight="6.0dip" android:text="关注" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginTop="5.0dip">
+        <LinearLayout android:gravity="center|left" android:orientation="vertical" android:id="@id/popLayout" android:background="@drawable/lf_bg_round_15_rect_a_40_000000" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginLeft="10.0dip">
+            <TextView android:textSize="9.0dip" android:textColor="@android:color/white" android:gravity="left" android:id="@id/textViewHotNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+            <TextView android:textSize="9.0dip" android:textColor="@android:color/white" android:gravity="left" android:id="@id/textViewStarNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView android:id="@id/recyclerViewWatcher" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginLeft="6.0dip" android:overScrollMode="never" />
+    </LinearLayout>
+</LinearLayout>

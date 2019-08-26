@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <SurfaceView android:layout_gravity="center" android:id="@id/preview_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <RelativeLayout android:id="@id/viewfinder_view_linearlayout" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.youku.loginsdk.Zxing.view.ViewfinderView android:id="@id/viewfinder_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+            <View android:id="@id/viewfinder_view_block" android:background="@color/result_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentLeft="true" />
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>

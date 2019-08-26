@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/text_color_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/message_navigation_layout" android:background="@color/text_color_white" android:layout_width="fill_parent" android:layout_height="@dimen/message_center_nav_height">
+        <TextView android:textSize="@dimen/message_center_text_nav_titlesize" android:textColor="@color/upload_nav_text_color_selector" android:gravity="center" android:id="@id/message_center_nav_item1" android:background="@drawable/upload_item_empty_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="最近" android:layout_weight="1.0" android:layout_centerHorizontal="true" style="@style/ucenter_list_item_second" />
+        <View android:layout_gravity="center" android:background="#ffededed" android:layout_width="1.0px" android:layout_height="@dimen/dialog_padding_left_20" />
+        <TextView android:textSize="@dimen/message_center_text_nav_titlesize" android:textColor="@color/upload_nav_text_color_selector" android:gravity="center" android:id="@id/message_center_nav_item2" android:background="@drawable/upload_item_empty_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="视频夹" android:layout_weight="1.0" android:layout_centerHorizontal="true" style="@style/ucenter_list_item_second" />
+    </LinearLayout>
+    <View android:background="#ffdcdcdc" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v4.view.ViewPager android:id="@id/message_center_viewpager" android:background="#ffffffff" android:persistentDrawingCache="animation" android:layout_width="fill_parent" android:layout_height="fill_parent" android:flipInterval="30" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/upload_videos_add_toast" android:background="#ff1e90ff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/upload_video_toast_height">
+            <TextView android:textSize="@dimen/text_size_11" android:textColor="@color/text_color_white" android:gravity="center_vertical" android:id="@id/upload_videos_add_toast_text" android:paddingLeft="@dimen/padding_left_right_5" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/upload_add_video_toast" android:drawableLeft="@drawable/yp_vip_abnormal_adpage_icn" android:drawablePadding="@dimen/padding_left_right_5" android:layout_weight="1.0" />
+            <ImageView android:textSize="@dimen/text_size_16" android:textColor="@color/main_text_color" android:id="@id/upload_videos_add_toast_close" android:padding="@dimen/padding_left_right_10" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/tips_close" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

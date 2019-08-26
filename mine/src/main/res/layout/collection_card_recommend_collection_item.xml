@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/root" android:background="@color/white" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/item_left" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_item_height_v5">
+        <com.youku.phone.collection.widget.ChannelCellImageLayout android:id="@id/detail_card_item_video_layout" android:layout_width="@dimen/detail_card_item_image_width_v5" android:layout_height="@dimen/detail_card_item_image_height_v5" android:layout_marginLeft="@dimen/detail_card_series_more_right_v5" android:layout_centerVertical="true">
+            <FrameLayout android:background="@color/my_collection_default_background" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center" android:layout_width="@dimen/video_delete_icon_width" android:layout_height="@dimen/video_delete_icon_width" android:src="@drawable/channel_not_loaded_icon_play" />
+                <ImageView android:id="@id/cover_img" android:layout_width="@dimen/detail_card_item_image_width_v5" android:layout_height="@dimen/detail_card_item_image_height_v5" android:scaleType="centerCrop" />
+            </FrameLayout>
+            <ImageView android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_item_image_mengceng_height_v5" android:src="@drawable/detail_mengceng_xiao_collection" android:layout_alignParentBottom="true" />
+            <RelativeLayout android:id="@id/my_collections_deleted_collection" android:background="@color/my_collection_default_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:layout_width="@dimen/video_delete_icon_width" android:layout_height="@dimen/video_delete_icon_width" android:src="@drawable/channel_not_loaded_icon_play" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <RelativeLayout android:background="@color/collection_item_icon_container_color" android:layout_width="@dimen/collection_item_icon_container_width" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                    <TextView android:textSize="@dimen/collection_item_icon_text_size" android:textColor="@color/white" android:layout_gravity="center_horizontal" android:id="@id/video_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/video_count_margin_bottom" android:text="13" />
+                    <ImageView android:layout_gravity="center_horizontal" android:id="@id/collection_item_icon" android:layout_width="@dimen/collection_item_icon_size" android:layout_height="@dimen/collection_item_icon_size" android:src="@drawable/collection_tiny_icon" />
+                </LinearLayout>
+            </RelativeLayout>
+        </com.youku.phone.collection.widget.ChannelCellImageLayout>
+        <com.youku.phone.collection.widget.RedPointView android:id="@id/collection_item_red_point" android:visibility="gone" android:layout_width="@dimen/my_collections_red_point_size" android:layout_height="@dimen/my_collections_red_point_size" android:layout_marginLeft="@dimen/my_collections_red_point_margin_left" android:layout_marginBottom="@dimen/my_collections_red_point_margin_bottom" android:layout_alignLeft="@id/detail_card_item_video_layout" android:layout_alignBottom="@id/detail_card_item_video_layout" custom:numberText="@dimen/red_point_text_size" custom:numberColor="@color/white" custom:bgColor="@color/collection_red_point_red" custom:twoNumberWidth="@dimen/my_collections_red_point_size_two" />
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_series_more_right_v5" android:layout_marginTop="@dimen/detail_card_item_title_margin_top_v5_collection" android:layout_marginRight="@dimen/detail_card_item_title_margin_right_v5" android:layout_marginBottom="@dimen/detail_card_item_title_margin_top_v5" android:layout_toRightOf="@id/detail_card_item_video_layout" android:layout_alignParentTop="true">
+            <TextView android:textSize="@dimen/my_collections_collection_title" android:textColor="@color/collection_card_video_name_color" android:ellipsize="end" android:gravity="top" android:id="@id/collection_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="奔跑吧兄弟2：黄晓明联手情敌郑凯si名牌明联手情敌郑" android:maxLines="2" android:layout_alignParentTop="true" android:lineSpacingMultiplier="1.1" />
+            <RelativeLayout android:id="@id/detail_card_item_part_bofangliang_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_video_item_bofangliang_margintop_v5_collection" android:layout_below="@id/collection_title">
+                <TextView android:textSize="@dimen/detail_card_item_num_size_v5_collection" android:textColor="@color/collection_card_video_play_count_color" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/collection_creator" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="yyyyooookkkk" android:singleLine="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

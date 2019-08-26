@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/pc_listview_footerview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:ellipsize="end" android:id="@id/listview_footerview_loding_title" android:paddingLeft="@dimen/plugin_loading_title_txt_paddingleftright" android:paddingRight="@dimen/plugin_loading_title_txt_paddingleftright" android:layout_width="wrap_content" android:layout_height="@dimen/plugin_small_loading_vip_logo_txt_height" android:text="@string/plugin_loading_title_txt_tips" android:singleLine="true" style="@style/plugin_small_loading_title_txt" />
+    <ImageView android:id="@id/listview_footerview_loding_image" android:layout_width="@dimen/small_buffering_progressbar_width" android:layout_height="@dimen/small_buffering_progressbar_width" android:src="@drawable/buffering_circle" />
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/buttons" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_button_bar_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/praise" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center" android:id="@id/praise_img" android:background="@drawable/detail_card_title_bar_pasise" android:layout_width="@dimen/detail_card_video_detail_button_bar_icon_width_v5" android:layout_height="@dimen/detail_card_video_detail_button_bar_icon_width_v5" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/comments" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center" android:id="@id/comments_img" android:layout_width="@dimen/detail_card_video_detail_button_bar_icon_width_v5" android:layout_height="@dimen/detail_card_video_detail_button_bar_icon_width_v5" android:src="@drawable/detail_card_title_bar_no_comment" />
+        <TextView android:textSize="@dimen/detail_card_button_bar_comment_text_size" android:textColor="#ff8b8b8b" android:layout_gravity="center" android:id="@id/comments_counts" android:layout_width="@dimen/detail_card_comments_counts_text_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_comments_counts_text_margin_left" android:layout_marginTop="@dimen/detail_card_comments_counts_text_margin_top" android:singleLine="true" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/share_card" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center" android:layout_width="@dimen/detail_card_video_detail_button_bar_icon_width_v5" android:layout_height="@dimen/detail_card_video_detail_button_bar_icon_width_v5" android:src="@drawable/detail_interaction_bar_share_selector_vf" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/download" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center" android:id="@id/download_img" android:layout_width="@dimen/detail_card_video_detail_button_bar_icon_width_v5" android:layout_height="@dimen/detail_card_video_detail_button_bar_icon_width_v5" android:src="@drawable/detail_card_download" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/favorite" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center" android:id="@id/favorite_img" android:background="@drawable/add_normal" android:layout_width="@dimen/detail_card_video_detail_button_bar_icon_width_v5" android:layout_height="@dimen/detail_card_video_detail_button_bar_icon_width_v5" />
+    </FrameLayout>
+</LinearLayout>

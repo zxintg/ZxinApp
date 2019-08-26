@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/base_holder" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.youku.player.base.YoukuPlayerView android:id="@id/full_holder" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/interaction_bar_holder" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/fl_detail_show" android:background="@color/detail_backround" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_detail_show" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include android:id="@id/detail_loading_view" android:visibility="gone" layout="@layout/detail_loading" />
+            <include android:id="@id/detail_layout_no_results_view" android:visibility="gone" layout="@layout/detail_layout_no_results" />
+        </LinearLayout>
+        <com.youku.phone.collection.card.CollectionCard android:id="@id/mcollection" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_zpdlive_nowf" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="13.0dip" android:textColor="@color/text_color_gray_3" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:layout_width="300.0dip" android:layout_height="wrap_content" android:text="@string/zpdlive_gnet_text" android:layout_centerInParent="true" />
+    <RelativeLayout android:layout_gravity="center_horizontal" android:id="@id/rl_zpdlive_golook" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+        <ImageView android:layout_width="140.0dip" android:layout_height="35.0dip" android:src="@drawable/btn_net_retry" />
+        <TextView android:textSize="14.0dip" android:textColor="@color/button_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/zpdlive_netbt_text" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

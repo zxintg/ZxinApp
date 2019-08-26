@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+        <FrameLayout android:id="@id/pgc_item_logo_img_layout" android:background="#ffc3c3c3" android:layout_width="@dimen/pgc_item_logo_width" android:layout_height="@dimen/pgc_item_logo_width" android:layout_marginLeft="@dimen/pgc_item_logo_padding" android:layout_marginTop="@dimen/pgc_item_logo_padding" android:layout_marginRight="@dimen/pgc_item_logo_padding">
+            <ImageView android:id="@id/pgc_item_logo_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/avatar_default" android:scaleType="centerCrop" />
+            <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/detail_rukoumengceng" />
+        </FrameLayout>
+        <RelativeLayout android:paddingLeft="@dimen/pgcdirect_item_right_layout_paddingleft" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/pgc_item_enter_layout" android:layout_toRightOf="@id/pgc_item_logo_img_layout" android:layout_centerInParent="true" android:layout_centerVertical="true">
+            <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:id="@id/pgc_item_title_layout" android:layout_width="wrap_content" android:layout_height="@dimen/pgcdirect_item_title_first_height" android:layout_weight="4.0">
+                <TextView android:ellipsize="end" android:id="@id/pgc_item_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:layout_weight="3.0" style="@style/pgcdirect_item_title_first" />
+                <ImageView android:layout_gravity="center" android:id="@id/pgc_item_level_img" android:layout_width="@dimen/detail_subscribe_certified_height" android:layout_height="@dimen/detail_subscribe_certified_height" android:layout_marginLeft="@dimen/detail_subscribe_certified_left_margin_v5" android:src="@drawable/user_certified_offline_icon" android:layout_centerVertical="true" />
+            </LinearLayout>
+            <TextView android:ellipsize="end" android:id="@id/pgc_item_fans" android:layout_width="wrap_content" android:layout_height="@dimen/pgcdirect_item_title_second_height" android:text="@string/pgc_item_title_second" android:singleLine="true" android:layout_below="@id/pgc_item_title_layout" style="@style/txt_searchdirect_second" />
+            <TextView android:ellipsize="end" android:id="@id/pgc_item_des" android:layout_width="wrap_content" android:layout_height="@dimen/pgcdirect_item_title_second_height" android:layout_marginLeft="@dimen/home_notice_img_right_margin" android:singleLine="true" android:layout_toRightOf="@id/pgc_item_fans" android:layout_below="@id/pgc_item_title_layout" style="@style/txt_searchdirect_second" />
+        </RelativeLayout>
+        <FrameLayout android:id="@id/pgc_item_enter_layout" android:background="@drawable/soku_searchdirect_pgc_btn" android:layout_width="@dimen/soku_person_pgc_btn_width" android:layout_height="@dimen/soku_person_pgc_btn_height" android:layout_marginLeft="@dimen/pgc_item_logo_padding" android:layout_marginRight="@dimen/pgc_item_logo_padding" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <TextView android:textSize="@dimen/txt_soku_searchdirect_play_btn_textsize" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/pgc_item_enter_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/soku_persondirect_pgc_text" />
+        </FrameLayout>
+    </RelativeLayout>
+    <View android:background="@color/persondirect_item_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="@dimen/pgc_item_logo_padding" />
+    <GridView android:id="@id/pgc_item_gridivew" android:background="#ffffffff" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="#00000000" android:cacheColorHint="#00000000" android:horizontalSpacing="1.0px" android:stretchMode="columnWidth" android:numColumns="@integer/soku_persondirect_land_gridview_numColumns" />
+    <View android:background="@color/persondirect_item_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</LinearLayout>

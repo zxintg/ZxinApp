@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/search_operation_type2_background" android:layout_width="fill_parent" android:layout_height="@dimen/search_header_height" android:scaleType="centerCrop" />
+    <include android:id="@id/search_operation_type2_gridview" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/search_operation_text_link_item" />
+</LinearLayout>

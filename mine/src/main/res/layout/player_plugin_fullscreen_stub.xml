@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.detail.view.PluginFullScreenLiveCenterView android:id="@id/pluginFullScreenLiveCenterView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include android:id="@id/plugin_fullscreen_panorama_control" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/plugin_fullscreen_panorama_control_margin_bottom" android:layout_above="@id/pluginFullScreenBottomView" android:layout_centerHorizontal="true" layout="@layout/plugin_fullscreen_panorama_view" />
+    <com.youku.detail.view.PluginBufferingView android:id="@id/pluginBufferingView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.widget.CompatSwipeRefreshLayout android:id="@id/hd_refresh_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.RecyclerView android:id="@id/follow_list" android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.youku.widget.CompatSwipeRefreshLayout>
+    <include layout="@layout/hd_fragment_follow_empty_show" />
+    <include layout="@layout/hd_fragment_load_data_error_view" />
+</RelativeLayout>

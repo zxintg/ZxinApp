@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/play1_b2" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:paddingRight="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+        <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="默认下载清晰度" android:layout_centerVertical="true" />
+        <TextView android:textAppearance="@style/settings_item_subtitle" android:id="@id/download_definition" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="标清" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="@color/mycenter_setting_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <RelativeLayout android:orientation="horizontal" android:id="@id/play1_b3" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:paddingRight="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+        <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="默认播放语言" android:layout_centerVertical="true" />
+        <TextView android:textAppearance="@style/settings_item_subtitle" android:id="@id/play_language" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="标清" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="@color/mycenter_setting_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <RelativeLayout android:orientation="horizontal" android:id="@id/play1_b4" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:paddingRight="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+        <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="默认下载语言" android:layout_centerVertical="true" />
+        <TextView android:textAppearance="@style/settings_item_subtitle" android:id="@id/download_language" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="标清" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="#ffc9c9c9" android:layout_width="fill_parent" android:layout_height="2.0px" />
+</LinearLayout>

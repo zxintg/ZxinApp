@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#f2222222" />
+    <corners android:radius="@dimen/zpd_subscribe_full_background_radius" />
+</shape>

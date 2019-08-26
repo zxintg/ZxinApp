@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:id="@id/user_msg_top_margin_line" android:background="@color/home_bottom_deliver_line_bg" android:layout_width="fill_parent" android:layout_height="@dimen/home_card_item_bottom_line_height" />
+        <RelativeLayout android:paddingLeft="@dimen/home_notice_left_margin" android:paddingRight="@dimen/home_notice_right_margin" android:layout_width="fill_parent" android:layout_height="@dimen/home_notice_height">
+            <com.youku.widget.CircleImageView android:id="@id/user_msg_view_img" android:layout_width="@dimen/home_notice_img_size" android:layout_height="@dimen/home_notice_img_size" android:layout_marginRight="@dimen/home_notice_img_right_margin" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/home_notice_text_size" android:textColor="@color/text_color_gray_9" android:ellipsize="end" android:id="@id/user_msg_view_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/home_notice_img_right_margin" android:singleLine="true" android:layout_toRightOf="@id/user_msg_view_img" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/user_msg_view_go_icon" android:layout_width="@dimen/home_notice_right_arrow_width" android:layout_height="@dimen/home_notice_right_arrow_height" android:src="@drawable/home_notice_right_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <View android:id="@id/user_msg_bottom_margin_line" android:background="#ffd4d4d4" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/home_notice_below_view_height" />
+    </LinearLayout>
+</merge>

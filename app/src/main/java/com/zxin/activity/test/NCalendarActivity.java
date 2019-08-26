@@ -27,7 +27,7 @@ import butterknife.OnClick;
  */
 
 public class NCalendarActivity extends BaseActivity implements OnCalendarChangedListener {
-
+    private static final LogUtils.Tag TAG = new LogUtils.Tag("NCalendarActivity");
     @BindView(R.id.ncalendarrrr)
     NCalendar ncalendar;
     @BindView(R.id.recyclerView)
@@ -109,7 +109,7 @@ public class NCalendarActivity extends BaseActivity implements OnCalendarChanged
     public void onCalendarChanged(LocalDate date) {
         tv_month.setText(date.getMonthOfYear() + "月");
         tv_date.setText(date.getYear() + "年" + date.getMonthOfYear() + "月" + date.getDayOfMonth() + "日");
-        LogUtils.d("dateTime::" + date);
+        LogUtils.d(TAG,"dateTime::" + date);
     }
 
 

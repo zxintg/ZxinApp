@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/subscribe_main" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/title_layout" android:background="@drawable/hd_actionbar_bg" android:paddingLeft="@dimen/hd_look_unique_margin_top" android:layout_width="fill_parent" android:layout_height="@dimen/hd_subscribe_tab_height">
+        <ImageView android:id="@id/hd_channel_sub_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/hd_left_arrow" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/hd_nologinview_text_size" android:textColor="@color/hd_subscribe_tab_normal_color" android:id="@id/subscirbe_channel_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="订阅的频道" android:layout_centerInParent="true" />
+        <ImageView android:gravity="center_vertical" android:id="@id/hd_header_img" android:padding="@dimen/hd_channel_sub_btn_right_gap_size" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/sub_intro_selector" android:scaleType="center" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/hd_subscribe_channel_root" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="oval"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:height="@dimen/game_menu_red_oval_size" android:width="@dimen/game_menu_red_oval_size" />
+    <solid android:color="@color/game_menu_red_oval_ff4324" />
+</shape>

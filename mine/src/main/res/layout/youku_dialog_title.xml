@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layout_update_dialog" android:background="@color/white" android:layout_width="@dimen/layout_vip_dialog_width" android:layout_height="wrap_content">
+        <TextView android:gravity="center" android:id="@id/dialog_title" android:layout_width="fill_parent" android:layout_height="@dimen/picker_dialog_title_height" style="@style/edit_title" />
+        <View android:id="@id/picker_dialog_title_line" android:background="#ffdbdbdb" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="@dimen/picker_dialog_title_line_marginleftright" android:layout_marginRight="@dimen/picker_dialog_title_line_marginleftright" />
+        <LinearLayout android:id="@id/dialog_message_layout" android:layout_width="@dimen/dialog_message_layout_width" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_message_layout_margintop" android:minHeight="@dimen/dialog_message_layout_height">
+            <TextView android:id="@id/dialog_message" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/dialog_message" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/layout_normal_dialog_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/layout_vip_dialog_bottom_height" android:layout_marginTop="@dimen/dialog_message_layout_margintop">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="center" android:id="@id/negtive_btn_layout" android:background="@drawable/btn_vip_dialog_cancel" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:id="@id/negtive_btn" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="取消" style="@style/vip_dialog_txt_cancel" />
+                </LinearLayout>
+                <View android:background="#2c5e5e5e" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                <View android:background="#ffffffff" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                <LinearLayout android:gravity="center" android:id="@id/positive_btn_layout" android:background="@drawable/btn_vip_dialog_ok" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:id="@id/positive_btn" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="确定" style="@style/vip_dialog_txt_rebuy" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="@drawable/soku_layout_bottom_cover" android:layout_width="fill_parent" android:layout_height="5.0px" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

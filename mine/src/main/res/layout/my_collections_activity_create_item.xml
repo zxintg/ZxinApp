@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/other_person_gridview_item_selector" android:layout_width="fill_parent" android:layout_height="@dimen/my_collection_create_itme_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/create_icon" android:layout_width="@dimen/my_collection_create_itme_icon_size" android:layout_height="@dimen/my_collection_create_itme_icon_size" android:layout_marginLeft="@dimen/my_collection_create_margin_left" android:src="@drawable/collection_create_playlist_selector" />
+    <TextView android:textSize="@dimen/my_collection_create_item_text_size" android:textColor="@color/my_collections_create_text_selector" android:layout_gravity="center_vertical" android:id="@id/create_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/my_collection_create_item_margin" android:text="@string/create_collection_activity" />
+</LinearLayout>

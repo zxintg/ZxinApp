@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:PagerSlidingTabStrip="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/pc_main_normal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.youku.userchannel.view.PCMyViewPager android:id="@id/fragment_tabmain_viewPager" android:background="#fff4f4f4" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <LinearLayout android:orientation="vertical" android:id="@id/sticky_view" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:orientation="vertical" android:id="@id/main_top" android:layout_width="fill_parent" android:layout_height="134.0dip">
+                        <ImageView android:id="@id/user_background_image" android:background="@drawable/pc_user_background_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" android:contentDescription="@string/pc_default_image" />
+                        <ImageView android:background="@drawable/pc_user_mb_image" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="80.0dip" android:scaleType="centerCrop" android:layout_alignParentTop="true" />
+                        <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/pc_main_float_image_relativelayout" android:background="@color/transparent_black" android:paddingLeft="7.0dip" android:paddingRight="7.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="44.0dip" android:layout_alignParentLeft="true">
+                            <TextView android:textColor="@color/white" android:id="@id/pc_main_float_image_total_vv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/pc_default_total_play" />
+                            <TextView android:textColor="@color/white" android:id="@id/pc_main_float_image_today_vv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="@string/pc_default_today_play" android:layout_below="@id/pc_main_float_image_total_vv" />
+                        </RelativeLayout>
+                        <RelativeLayout android:id="@id/pc_main_shortcut_hint_rl" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="35.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+                            <ImageView android:background="@drawable/pc_sharecut_hint" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                            <TextView android:textSize="14.0dip" android:textColor="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/pc_actionbar_shortcut_hint" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <RelativeLayout android:id="@id/personal_info" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="50.0dip">
+                        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/pc_subscribe_linearlayout" android:background="@drawable/pc_setting_btn_shape" android:layout_width="80.0dip" android:layout_height="32.0dip" android:layout_marginRight="12.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                            <ImageView android:id="@id/pc_subscribe_state_image_no" android:visibility="visible" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginRight="6.0dip" android:src="@drawable/details_subscribe_mark" android:contentDescription="@string/pc_default_image_string" />
+                            <ProgressBar android:id="@id/pb_userchannel_subscribe_progress" android:visibility="gone" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginRight="6.0dip" android:indeterminateOnly="true" android:indeterminateDrawable="@anim/subscribe_progress_bar" android:indeterminateBehavior="repeat" />
+                            <ImageView android:id="@id/pc_subscribe_state_image_yes" android:visibility="gone" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginRight="6.0dip" android:src="@drawable/details_subscribe_duigou" android:contentDescription="@string/pc_default_image_string" />
+                            <TextView android:textSize="@dimen/pc_feed_title_word_size" android:textColor="@color/white" android:id="@id/pc_main_top_subscribe_button_word" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pc_subscribe_word" />
+                        </LinearLayout>
+                        <ImageView android:id="@id/userchannle_subscribe_pressed" android:visibility="gone" android:layout_width="80.0dip" android:layout_height="32.0dip" android:layout_marginRight="12.0dip" android:src="@drawable/subscribe_button_pressed" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                        <com.youku.userchannel.widget.CircleImageView android:id="@id/user_avatar_image" android:background="@drawable/detail_card_comment_touxiang" android:visibility="gone" android:layout_width="45.0dip" android:layout_height="45.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="-78.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" app:civ_border_width="2.0dip" app:civ_border_color="@color/pc_default_photo_border_color" />
+                        <RelativeLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="50.0dip" android:layout_marginLeft="78.0dip" android:layout_toRightOf="@id/user_avatar_image">
+                            <TextView android:textColor="@color/pc_global_title" android:ellipsize="end" android:id="@id/user_nick_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/pc_my_channel" android:lines="1" android:maxEms="8" />
+                            <TextView android:textSize="11.0sp" android:textColor="@color/pc_feed_fans_color" android:id="@id/user_followers" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/pc_default_fans" android:layout_below="@id/pc_user_level_image" android:layout_alignLeft="@id/user_nick_name" />
+                            <ImageView android:id="@id/pc_user_level_image" android:paddingTop="2.0dip" android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@drawable/pc_crm_level_default_image" android:layout_toRightOf="@id/user_nick_name" android:layout_alignTop="@id/user_nick_name" android:contentDescription="@string/pc_default_image_string" />
+                            <ImageView android:id="@id/pc_user_level_image_level" android:paddingBottom="1.0dip" android:layout_width="wrap_content" android:layout_height="8.0dip" android:src="@drawable/pc_level_0" android:layout_alignRight="@id/pc_user_level_image" android:layout_alignBottom="@id/pc_user_level_image" android:contentDescription="@string/pc_default_image_string" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+                <View android:id="@id/filter_line" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/pc_linearlayout_tab" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <com.youku.userchannel.view.PagerSlidingTabStrip android:textSize="16.0sp" android:id="@id/tabs" android:background="#fffcfcfc" android:layout_width="fill_parent" android:layout_height="36.0dip" app:pstsIndicatorColor="#ff2da4f0" app:pstsDividerColor="#00000000" app:pstsIndicatorHeight="2.0dip" app:pstsUnderlineHeight="2.0dip" app:pstsShouldExpand="true" />
+                </LinearLayout>
+                <View android:background="#ffebebeb" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            </LinearLayout>
+        </FrameLayout>
+        <RelativeLayout android:id="@id/menu_title" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/homepage_tab_height" android:layout_alignParentBottom="true">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/pc_layout_instroduce" android:background="@drawable/pc_actionbar_bg" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <ImageView android:id="@id/img_subscribe" android:layout_width="@dimen/pc_homepage_normal_image_size" android:layout_height="@dimen/pc_homepage_normal_image_size" android:src="@drawable/pc_menu_introduce_shape" android:contentDescription="@string/pc_default_image_string" />
+                    <TextView android:text="@string/homepage_tab_describe" style="@style/pc_homepage_tab_text" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/pc_menu_vertical_filter_line_one" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                    <View android:background="#ffebebeb" android:layout_width="1.0dip" android:layout_height="16.0dip" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/custom_menu_one" android:background="@drawable/pc_actionbar_bg" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/pc_menu_vertical_filter_line_two" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                    <View android:background="#ffebebeb" android:layout_width="1.0dip" android:layout_height="16.0dip" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/custom_menu_two" android:background="@drawable/pc_actionbar_bg" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                    <View android:id="@id/pc_menu_vertical_filter_line" android:background="#ffebebeb" android:layout_width="1.0dip" android:layout_height="16.0dip" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/pc_layout_private_chat" android:background="@drawable/pc_actionbar_bg" android:visibility="gone" android:layout_width="@dimen/pc_homepage_layout_chat_width" android:layout_height="fill_parent" android:layout_weight="0.0">
+                    <ImageView android:id="@id/img_user" android:layout_width="@dimen/pc_homepage_special_image_size" android:layout_height="@dimen/pc_homepage_special_image_size" android:src="@drawable/pc_menu_chat_drawable" android:contentDescription="@null" />
+                    <TextView android:textSize="14.0sp" android:layout_marginTop="2.0dip" android:text="@string/homepage_tab_private_chat" style="@style/pc_homepage_tab_text_special" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/pc_layout_private_chat_special" android:background="@drawable/pc_actionbar_bg" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <ImageView android:id="@id/img_user_special" android:layout_width="@dimen/pc_homepage_special_image_size" android:layout_height="@dimen/pc_homepage_special_image_size" android:src="@drawable/pc_menu_chat_drawable" android:contentDescription="@null" />
+                    <TextView android:id="@id/pc_layout_private_chat_special_text" android:layout_marginLeft="@dimen/pc_homepage_menu_title_margin_left" android:text="@string/homepage_tab_private_chat_special" style="@style/pc_homepage_tab_text_special" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="@color/vertical_underline_feed" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        </RelativeLayout>
+        <com.youku.userchannel.widget.CircleImageView android:id="@id/user_avatar_image_big" android:background="@drawable/detail_card_comment_touxiang" android:layout_width="65.0dip" android:layout_height="65.0dip" android:layout_marginLeft="12.0dip" android:layout_marginTop="110.5dip" android:layout_alignParentLeft="true" app:civ_border_width="2.0dip" app:civ_border_color="@color/pc_default_photo_border_color" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/pc_main_error" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/pc_main_error_view_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="140.0dip" android:src="@drawable/plugin_full_screen_loading_error_icon_sorry" android:onClick="onRetryInit" />
+        <TextView android:textSize="@dimen/pc_default_homepage_show_textsize" android:textColor="@color/pc_default_homepage_show_textone_color" android:layout_gravity="center_horizontal" android:id="@id/pc_main_error_view_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/app_name" />
+    </LinearLayout>
+    <com.youku.userchannel.widget.CircleProgressBar android:id="@id/pc_main_progressBar" android:visibility="visible" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_centerHorizontal="true" android:layout_centerVertical="true" app:mlpb_progress_color="#ff566da9" app:mlpb_progress_stoke_width="3.0dip" />
+</RelativeLayout>

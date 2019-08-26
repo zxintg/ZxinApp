@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/layout_download_filter" android:background="@drawable/bg_widget_search_shadow" android:layout_width="@dimen/popup_menu_width" android:layout_height="wrap_content">
+        <ListView android:layout_gravity="center" android:id="@id/searchresult_pop_listview" android:background="@color/white" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@null" android:divider="@color/text_color_gray_12" android:dividerHeight="1.0px" android:headerDividersEnabled="false" android:footerDividersEnabled="false" />
+    </LinearLayout>
+</FrameLayout>

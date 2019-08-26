@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/tab_selected_relative_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/tab_selected_background_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+    <android.support.v7.widget.RecyclerView android:id="@id/tab_selected_recyclerview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+</RelativeLayout>

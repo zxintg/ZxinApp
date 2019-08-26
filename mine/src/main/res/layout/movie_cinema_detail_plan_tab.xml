@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/cinema_detail_tab_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/tab1" android:layout_width="0.0dip" android:layout_height="@dimen/cinema_detail_tab_height" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/cinema_detail_tab_txt_size" android:textColor="@drawable/btn_homepage_title_textcolor" android:id="@id/tab1_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="今天12-04" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="@style/homepage_title_txt" />
+        <View android:background="@drawable/cinema_detail_tab_bottom_color_selsctor" android:layout_width="fill_parent" android:layout_height="3.0px" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <View android:background="#ffe5e5e5" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" />
+    <RelativeLayout android:id="@id/tab2" android:layout_width="0.0dip" android:layout_height="@dimen/cinema_detail_tab_height" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/cinema_detail_tab_txt_size" android:textColor="@drawable/btn_homepage_title_textcolor" android:id="@id/tab2_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="明天12-05" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="@style/homepage_title_txt" />
+        <View android:background="@drawable/cinema_detail_tab_bottom_color_selsctor" android:layout_width="fill_parent" android:layout_height="3.0px" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <View android:background="#ffe5e5e5" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" />
+    <RelativeLayout android:id="@id/tab3" android:layout_width="0.0dip" android:layout_height="@dimen/cinema_detail_tab_height" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/cinema_detail_tab_txt_size" android:textColor="@drawable/btn_homepage_title_textcolor" android:id="@id/tab3_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="后天12-06" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="@style/homepage_title_txt" />
+        <View android:background="@drawable/cinema_detail_tab_bottom_color_selsctor" android:layout_width="fill_parent" android:layout_height="3.0px" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

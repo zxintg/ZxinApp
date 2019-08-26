@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/search_card_footer_height">
+        <Button android:textSize="@dimen/search_card_footer_title_textsize" android:textColor="#ff333333" android:id="@id/btn_search_last_footer_add_card" android:background="@drawable/selector_bg_search_click" android:paddingLeft="@dimen/search_widget_edit_padding_left" android:paddingRight="@dimen/search_widget_edit_padding_left" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="添加卡片" android:layout_weight="1.0" />
+        <ImageButton android:id="@id/btn_search_last_footer_back" android:background="@drawable/selector_bg_search_click" android:visibility="gone" android:layout_width="@dimen/search_card_footer_back_width" android:layout_height="fill_parent" android:src="@drawable/searchdirect_more_item_back" />
+    </LinearLayout>
+    <View android:background="#fff0f0f0" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/btn_search_last_footer_type_area" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/search_card_footer_height">
+        <Button android:textSize="@dimen/search_card_footer_item_textsize" android:textColor="#ff666666" android:id="@id/btn_search_last_footer_type_show" android:background="@drawable/selector_bg_search_click" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="电视剧" android:layout_weight="1.0" />
+        <Button android:textSize="@dimen/search_card_footer_item_textsize" android:textColor="#ff666666" android:id="@id/btn_search_last_footer_type_cartoon" android:background="@drawable/selector_bg_search_click" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="动漫" android:layout_weight="1.0" />
+        <Button android:textSize="@dimen/search_card_footer_item_textsize" android:textColor="#ff666666" android:id="@id/btn_search_last_footer_type_hot_news" android:background="@drawable/selector_bg_search_click" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="热点新闻" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/detail_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <include android:id="@id/layout_favorite_page_title" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/activity_favorite_page_title" />
+        <ImageView android:id="@id/layout_favorite_page_top_shadow_line" android:background="@drawable/tab_shadow" android:layout_width="fill_parent" android:layout_height="4.0dip" android:layout_below="@id/layout_favorite_page_title" />
+        <RelativeLayout android:orientation="horizontal" android:id="@id/layout_favorite_page_layout" android:background="@color/app_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/channel_main_tabindicator_height" android:layout_below="@id/layout_favorite_page_top_shadow_line">
+            <TextView android:gravity="center" android:id="@id/layout_favorite_page_layout_edit_textview" android:paddingLeft="5.0dip" android:paddingRight="@dimen/gridview_pading_horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/edite" android:drawableLeft="@drawable/editor_btn_edit_selector" android:drawablePadding="4.0dip" android:layout_alignParentRight="true" style="@style/toolbar_btn_txt" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <android.support.v4.view.ViewPager android:id="@id/viewpager_favorite_page_layout" android:background="@android:color/transparent" android:persistentDrawingCache="animation" android:layout_width="fill_parent" android:layout_height="fill_parent" android:flipInterval="30" />
+</LinearLayout>

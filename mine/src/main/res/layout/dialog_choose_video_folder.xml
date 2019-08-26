@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/view_lin" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_item_height" android:layout_above="@id/upload_c_line">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/white" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_item_height">
+            <TextView android:textSize="@dimen/text_size_16" android:textColor="@color/dialog_text_color_private" android:id="@id/dialog_title" android:paddingLeft="@dimen/dialog_private_padding_left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/dialog_choose_video_folder" android:singleLine="true" android:layout_weight="1.0" />
+            <ImageView android:id="@id/dialog_privacy_setting_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_left_right_10" android:layout_marginRight="@dimen/padding_left_right_10" android:src="@drawable/topbar_close_icon" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </LinearLayout>
+        <View android:background="@color/dialog_divide_color_private" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <ListView android:id="@id/dialog_choose_video_folder_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@drawable/dialog_square_selector" android:cacheColorHint="#00000000" android:divider="@color/tab_select_color" android:dividerHeight="1.0px" />
+    </LinearLayout>
+    <View android:id="@id/upload_c_line" android:background="@color/dialog_divide_color_private" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_above="@id/video_folder_footer_lin" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/video_folder_footer_lin" android:background="@color/text_color_white" android:paddingLeft="@dimen/padding_left_right_10" android:paddingTop="@dimen/padding_left_right_5" android:paddingRight="@dimen/padding_left_right_10" android:paddingBottom="@dimen/padding_7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/folder_image" android:background="@drawable/upload_folderfrm" android:layout_width="@dimen/dialog_folder_image_w" android:layout_height="@dimen/dialog_folder_image_h" android:scaleType="centerInside" />
+            <ImageView android:layout_gravity="center" android:layout_width="@dimen/padding_25" android:layout_height="@dimen/padding_25" android:layout_marginTop="@dimen/padding_left_right_5" android:src="@drawable/detail_card_rss" />
+            <ImageView android:layout_gravity="bottom|center|right" android:id="@id/folder_private_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/padding_3" android:src="@drawable/upload_ic_private" />
+        </FrameLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/padding_left_right_10" android:paddingTop="@dimen/padding_left_right_5" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/text_size_16" android:textColor="@color/dialog_folder_blue_color" android:id="@id/folder_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dialog_folder_create" android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

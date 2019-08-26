@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/detail_card_series_cache_grid_item_view" android:background="#fff2f2f2" android:padding="1.0px" android:layout_width="fill_parent" android:layout_height="@dimen/soku_result_series_item_height">
+        <TextView android:textSize="@dimen/soku_result_series_text_size" android:textColor="#ff777777" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_num" android:background="@drawable/search_result_gridview_item_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="1" />
+        <ImageView android:id="@id/iv_state" android:background="@null" android:layout_width="@dimen/detail_card_series_image_height" android:layout_height="@dimen/detail_card_series_image_height" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        <ImageView android:id="@id/series_item_trailer_img" android:visibility="gone" android:layout_width="@dimen/soku_result_series_item_trailer_img_width" android:layout_height="@dimen/soku_result_series_item_trailer_img_width" android:src="@drawable/xin" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+</LinearLayout>

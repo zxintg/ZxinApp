@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/game_detail_page_banner_height">
+        <LinearLayout android:id="@id/id_layout_image_container_detail_page" android:paddingBottom="@dimen/game_detail_page_banner_image_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:background="@color/game_background_grey" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/game_detail_page_banner_image_padding" android:layout_weight="1.0">
+                <ImageView android:id="@id/id_igv_game_detail_page_banner_left" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="center" />
+                <ImageView android:id="@id/id_igv_video_icon_detail_page" android:visibility="invisible" android:layout_width="@dimen/game_detail_page_banner_play_icon_width" android:layout_height="@dimen/game_detail_page_banner_play_icon_height" android:src="@drawable/game_play_btn" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <ImageView android:id="@id/id_igv_game_detail_page_banner_center" android:background="@color/game_background_grey" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="@dimen/game_detail_page_banner_image_padding" android:scaleType="center" android:layout_weight="1.0" />
+            <ImageView android:id="@id/id_igv_game_detail_page_banner_right" android:background="@color/game_background_grey" android:layout_width="0.0dip" android:layout_height="fill_parent" android:scaleType="center" android:layout_weight="1.0" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/id_layout_video_container_detail_page" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.youku.gamecenter.widgets.SimpleVideoPlayer android:id="@id/id_video_player_detail_page" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <ProgressBar android:id="@id/id_progress_bar_game_detail_page" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/series_loading_progressbar" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/id_btn_game_detail_page_banner_close_icon" android:visibility="visible" android:layout_width="@dimen/game_detail_page_banner_close_icon_width" android:layout_height="@dimen/game_detail_page_banner_close_icon_height" android:src="@drawable/game_detail_page_topview_close" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/plugin_fullscreen_left_volume_view_bg" android:layout_width="@dimen/plugin_fullscreen_left_volume_view_bg_width" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/plugin_fullscreen_left_volumebar_layout" android:clickable="true" android:layout_width="@dimen/plugin_fullscreen_left_volume_view_width" android:layout_height="wrap_content" android:layout_alignParentLeft="true">
+        <com.youku.detail.view.VerticalSeekBar android:id="@id/plugin_fullscreen_left_volumebar" android:layout_width="wrap_content" android:layout_height="@dimen/plugin_fullscreen_left_volumebar_height" android:progressDrawable="@drawable/player_fullscreen_plugin_left_progressbar" android:thumb="@drawable/play_icon_volume_ball" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/plugin_fullscreen_left_volume_img_layout" android:layout_width="fill_parent" android:layout_height="@dimen/plugin_fullscreen_left_volume_img_layout_height">
+            <ImageView android:id="@id/plugin_fullscreen_left_volume_img" android:layout_width="@dimen/plugin_fullscreen_left_volume_img_width" android:layout_height="wrap_content" android:src="@drawable/fullscreen_left_volume" android:adjustViewBounds="true" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

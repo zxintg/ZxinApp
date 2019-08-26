@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:background="@color/lf_color_f4f4f4" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_gravity="center_vertical" android:id="@id/editBoxContainer" android:background="@drawable/lf_bg_editbox_live" android:layout_width="0.0dip" android:layout_height="32.0dip" android:layout_marginLeft="10.0dip" android:layout_weight="1.0">
+            <EditText android:textSize="@dimen/lf_text_size_dp_medium" android:textColor="@color/lf_color_2d2d2d" android:textColorHint="@color/lf_color_cccccc" android:id="@id/editBox" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="32.0dip" android:hint="@string/lf_chat_input_hint" android:maxLines="2" android:minLines="2" android:scrollHorizontally="false" android:singleLine="false" android:imeOptions="actionDone" />
+            <Button android:id="@id/btnChatExpression" android:background="@drawable/lf_ic_live_chat_expression" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginRight="5.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <Button android:textSize="@dimen/lf_text_size_dp_medium" android:textColor="@color/lf_color_333333" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/btnSendBox" android:background="@drawable/lf_bg_btn_live_send" android:layout_width="70.0dip" android:layout_height="32.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="发送" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/expressionContainer" android:background="@color/lf_color_f4f4f4" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="194.0dip" android:layout_below="@id/live_chat_container">
+        <View android:background="@color/lf_color_d7d8d9" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <android.support.v4.view.ViewPager android:id="@id/expresstionViewpager" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="14.0dip" android:layout_marginTop="2.0dip" android:layout_marginBottom="10.0dip">
+            <LinearLayout android:orientation="horizontal" android:id="@id/dotLayoutContainer" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/expressionSelectDotContainer" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/lf_textsize_dp_micro" android:textColor="@color/lf_color_0ba9b1" android:gravity="center" android:id="@id/expressionLabel" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="升级到男爵才可使用贵族表情" />
+        </RelativeLayout>
+        <View android:id="@id/pagerDivider" android:background="@color/lf_color_d1d3d4" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/bottomLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="18.0dip" android:textColor="@color/lf_color_0ba9b1" android:gravity="center" android:id="@id/normalExpression" android:background="@drawable/lf_gift_tab_select_bg" android:layout_width="0.0dip" android:layout_height="42.0dip" android:text="普通表情" android:layout_weight="1.0" />
+            <View android:background="@color/lf_color_d1d3d4" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_marginTop="9.0dip" android:layout_marginBottom="9.0dip" />
+            <TextView android:textSize="18.0dip" android:textColor="@color/lf_color_676767" android:gravity="center" android:id="@id/guizuExpression" android:layout_width="0.0dip" android:layout_height="42.0dip" android:text="贵族表情" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

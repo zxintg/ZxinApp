@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="@dimen/plugin_small_panorama_control_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/small_panorama_reset" android:background="@drawable/player_panorama_round_background" android:focusableInTouchMode="false" android:clickable="true" android:layout_width="@dimen/plugin_small_panorama_control_item_width" android:layout_height="@dimen/plugin_small_panorama_control_item_height">
+        <ImageView android:layout_width="@dimen/plugin_fullscreen_panorama_control_image_width" android:layout_height="@dimen/plugin_fullscreen_panorama_control_image_height" android:src="@drawable/player_panorama_reset" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

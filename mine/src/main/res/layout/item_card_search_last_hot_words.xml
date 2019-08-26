@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/search_card_hot_words_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/line" android:background="#fff0f0f0" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <TextView android:id="@id/tv_num" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:textSize="@dimen/search_card_hot_words_textsize" android:textColor="#ff666666" android:gravity="center_vertical" android:id="@id/tv_hot_words" android:background="@drawable/selector_bg_search_click" android:paddingLeft="@dimen/search_widget_edit_padding_left" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" android:layout_toRightOf="@id/tv_num" android:layout_below="@id/line" />
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@android:color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_no_result" android:layout_width="@dimen/no_result_icon_width" android:layout_height="45.0dip" android:src="@drawable/network_error" android:scaleType="fitCenter" />
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/no_result_margin_top">
+        <TextView android:textSize="@dimen/no_result_text_size" android:textColor="@color/no_result_text_colot" android:id="@id/tv_no_result" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/my_collections_no_result_p1" />
+        <TextView android:textSize="@dimen/no_result_text_size" android:textColor="@color/series_item_txt_blue_color" android:id="@id/tv_no_result_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/my_collections_no_result_p2" />
+    </LinearLayout>
+</LinearLayout>

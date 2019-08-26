@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/text_color_white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/header_lin" android:background="@color/text_color_white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v4.view.ViewPager android:id="@id/viewPager" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.youku.community.view.PreviewPager android:layout_gravity="bottom|center|left" android:id="@id/previewPager" android:layout_width="wrap_content" android:layout_height="@dimen/community_padding_10" android:layout_marginLeft="@dimen/community_padding_15" android:layout_marginBottom="@dimen/b_paddig_bottom" />
+    </FrameLayout>
+</LinearLayout>

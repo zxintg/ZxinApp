@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="2.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/homepage_scroller_stackview_imageview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" android:layout_weight="1.0" />
+        <RelativeLayout android:layout_gravity="bottom|center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="4.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                <TextView android:ellipsize="end" android:id="@id/homepage_scroller_stackview_title_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/homepage_item_text_margin_left" android:maxLines="1" android:minLines="1" android:scrollHorizontally="true" android:singleLine="true" style="@style/homepage_item_title_first" />
+                <TextView android:ellipsize="end" android:id="@id/homepage_scroller_stackview_playcount_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/homepage_item_text_margin_left" android:maxLines="1" android:minLines="1" android:scrollHorizontally="true" android:singleLine="true" style="@style/homepage_item_title_second" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <include layout="@layout/include_layout_triangle_wrapper" />
+</RelativeLayout>

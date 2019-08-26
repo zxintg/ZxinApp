@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:id="@id/liveplay_comment_LinearLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.youku.livesdk.nest.NestRecyclerView android:id="@id/liveplay_comment_recyclerView" android:background="@color/colorWhite" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+        <include layout="@layout/live_comment_header" />
+    </LinearLayout>
+    <com.youku.livesdk.nest.NestRecyclerView android:id="@id/liveplay_ImageText_recyclerView" android:background="@color/colorWhite" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.youku.livesdk.nest.NestRecyclerView android:id="@id/liveplay_prelive_recyclerView" android:background="@color/colorWhite" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="#ffffffff" android:paddingRight="@dimen/card_margin_32dp" android:layout_width="fill_parent" android:layout_height="@dimen/my_activities_prize_record_title_height" android:layout_marginTop="@dimen/game_card_margin">
+        <include android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/layout_game_title_sign" />
+        <TextView android:textSize="@dimen/game_detail_card_title_text_size" android:textColor="@drawable/game_detail_card_title_left" android:id="@id/my_activities_prize_record_title_txt" android:paddingLeft="@dimen/game_detail_card_title_left_margin" android:paddingRight="@dimen/detail_gameinfo_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/game_my_activities_prize_record" />
+    </LinearLayout>
+    <View android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <com.youku.gamecenter.widgets.ScrollabledListView android:id="@id/prize_record_scrollcontainer" android:background="#ffe2e2e2" android:visibility="visible" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:scrollingCache="false" android:cacheColorHint="#00000000" />
+</LinearLayout>

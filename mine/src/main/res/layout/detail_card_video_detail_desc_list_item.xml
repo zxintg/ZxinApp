@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:paddingLeft="@dimen/detail_card_video_detail_title_marginleft" android:paddingRight="@dimen/detail_card_video_detail_title_marginleft" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/detail_card_content_text_size" android:textColor="#ff009cff" android:id="@id/num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+    <TextView android:textSize="@dimen/detail_card_content_text_size" android:textColor="#ff777777" android:ellipsize="end" android:id="@id/desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_video_detail_desc_margintop" android:layout_marginBottom="@dimen/detail_card_video_detail_desc_marginbottom" android:lineSpacingMultiplier="1.2" />
+    <View android:id="@id/line1" android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</LinearLayout>

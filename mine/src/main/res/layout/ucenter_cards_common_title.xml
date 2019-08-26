@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="@dimen/usercenter_item_spacing" />
+    <RelativeLayout android:orientation="horizontal" android:id="@id/layout_title" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="@color/usercenter_item_mark_color" android:layout_width="@dimen/usercenter_banner_mark_width" android:layout_height="@dimen/usercenter_banner_mark_height" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:gravity="center_vertical" android:id="@id/card_title" android:paddingLeft="@dimen/usercenter_banner_title_left_margin" android:layout_width="fill_parent" android:layout_height="@dimen/usercenter_banner_height" android:text="卡片标题" android:layout_toLeftOf="@id/card_tips_count" style="@style/ucenter_list_item_first" />
+        <ImageView android:id="@id/card_tips_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/badge_number_corner_background" android:scaleType="center" android:minWidth="6.0dip" android:minHeight="6.0dip" android:layout_toLeftOf="@id/card_tips_count" android:layout_centerVertical="true" />
+        <TextView android:textColor="#ffb9b9b9" android:id="@id/card_tips_count" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="99" android:layout_toLeftOf="@id/card_tips_more" android:layout_centerVertical="true" style="@style/ucenter_list_item_third" />
+        <ImageButton android:layout_gravity="center" android:id="@id/card_tips_more" android:background="@null" android:layout_width="@dimen/usercenter_list_item_more_width" android:layout_height="@dimen/usercenter_banner_height" android:src="@drawable/uc_icon_right_arrow" android:scaleType="center" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="#ffebebeb" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <FrameLayout android:id="@id/ucenter_cards_item_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/usercenter_card_min_height" />
+</LinearLayout>

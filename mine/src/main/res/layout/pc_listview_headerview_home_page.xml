@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/pc_fragment_main_height_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/placeHolder" android:layout_width="fill_parent" android:layout_height="40.0dip" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/pc_home_page_jump" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/pc_home_page_jump_image_linearlayout_height">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/pc_home_page_my_upload_image" android:background="@drawable/pc_home_page_my_upload" android:layout_width="@dimen/pc_home_page_jump_image_width" android:layout_height="@dimen/pc_home_page_jump_image_height" />
+            <TextView android:textSize="@dimen/pc_homepage_jump_text_size" android:textColor="@color/pc_homepage_jump_text_color" android:id="@id/pc_home_page_my_upload_word" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/pc_home_page_jump_textview_margin_top" android:text="@string/pc_home_page_my_upload" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="78.0dip" android:layout_marginRight="78.0dip">
+            <ImageView android:id="@id/pc_home_page_my_playlist_image" android:background="@drawable/pc_home_page_my_playlist" android:layout_width="@dimen/pc_home_page_jump_image_width" android:layout_height="@dimen/pc_home_page_jump_image_height" />
+            <TextView android:textSize="@dimen/pc_homepage_jump_text_size" android:textColor="@color/pc_homepage_jump_text_color" android:id="@id/pc_home_page_my_playlist_word" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/pc_home_page_jump_textview_margin_top" android:text="@string/pc_home_page_my_playlist" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/pc_home_page_my_share_image" android:background="@drawable/pc_home_page_my_share" android:layout_width="@dimen/pc_home_page_jump_image_width" android:layout_height="@dimen/pc_home_page_jump_image_height" />
+            <TextView android:textSize="@dimen/pc_homepage_jump_text_size" android:textColor="@color/pc_homepage_jump_text_color" android:id="@id/pc_home_page_my_share_word" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/pc_home_page_jump_textview_margin_top" android:text="@string/pc_home_page_my_share" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@color/pc_fragment_main_height_color" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/tvShow" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="36.0dip" android:layout_marginTop="@dimen/pc_default_homepage_show_margin_top">
+            <View android:id="@id/filter_line" android:background="@color/vertical_underline" android:layout_width="@dimen/pc_recent_update_vertical_line_width" android:layout_height="@dimen/pc_recent_update_vertical_line_height" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/text_color_black" android:id="@id/tvShowTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/pc_recent_update_word_margin_left" android:text="@string/pc_homepage_collection" />
+        </LinearLayout>
+        <com.youku.userchannel.view.HorizontalListView android:id="@id/tvShowList" android:background="@color/white" android:paddingLeft="12.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="150.0dip" android:layout_marginTop="1.0dip" />
+        <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/defaultHomePageShow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/pc_default_homepage_show_margin_top" android:layout_marginBottom="@dimen/pc_default_homepage_show_margin_bottom">
+            <ImageView android:id="@id/defaultHomePageImage" android:background="@drawable/pc_home_page_feed_empty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="@dimen/pc_default_homepage_show_textsize" android:textColor="@color/pc_default_homepage_show_textone_color" android:gravity="center" android:id="@id/defaultHomePageTextOne" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/pc_default_homepage_show_textone_margin_top" android:text="@string/pc_homepage_empty" android:layout_below="@id/defaultHomePageImage" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/feedShow" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/pc_recent_update_height">
+            <View android:id="@id/pc_feed_listview_vertical_line" android:background="@color/vertical_underline" android:layout_width="@dimen/pc_recent_update_vertical_line_width" android:layout_height="@dimen/pc_recent_update_vertical_line_height" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/text_color_black" android:layout_gravity="center_vertical" android:id="@id/pc_feed_listview_recent_update_word" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/pc_recent_update_word_margin_left" android:text="@string/pc_recent_update" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

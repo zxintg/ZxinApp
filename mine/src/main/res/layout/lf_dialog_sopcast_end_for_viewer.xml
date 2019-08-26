@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@android:color/white" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layoutAvatar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:layout_alignParentLeft="true">
+            <com.youku.detail.widget.CircleImageView android:id="@id/imageViewAvatar" android:layout_width="100.0dip" android:layout_height="100.0dip" android:src="@drawable/lf_watcher_default_user_icon" />
+            <TextView android:textSize="16.0sp" android:textColor="#ff424448" android:id="@id/textNickname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="昵称" />
+            <TextView android:textSize="18.0sp" android:textColor="#ff424448" android:id="@id/textSopCastTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:text="@string/lf_textViewerSopCastTime" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/layoutSopcastInfo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="50.0dip">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="16.0sp" android:textColor="#ff9d9e9f" android:id="@id/textUVTip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="观众" />
+                <TextView android:textSize="28.0sp" android:textColor="#ff424448" android:id="@id/textUV" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="9999.9万" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layoutStar" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="16.0sp" android:textColor="#ff9d9e9f" android:id="@id/textStarTip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="星星" />
+                <TextView android:textSize="28.0sp" android:textColor="#ff424448" android:id="@id/textStar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="9999.9万" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" android:layout_marginBottom="10.0dip">
+            <Button android:textSize="16.0sp" android:textColor="#ff424448" android:id="@id/btnOpenLaifengApp" android:background="@drawable/lf_bg_round_30_rect_fcd861" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="40.0dip" android:layout_marginRight="40.0dip" android:layout_marginBottom="10.0dip" android:text="@string/lf_sop_cast_info_open_laifeng_app" />
+            <Button android:textSize="16.0sp" android:textColor="#ff424448" android:id="@id/btnClose" android:background="@drawable/lf_bg_round_30_rect_ffffff_stroke_dfdfdf" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="40.0dip" android:layout_marginRight="40.0dip" android:text="@string/lf_sop_cast_info_close" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

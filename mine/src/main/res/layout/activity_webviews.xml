@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <WebView android:id="@id/webView" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@id/rl_progress_webviewWrapper" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@anim/progressbar_circle_rotate" android:layout_centerInParent="true" style="?android:attr/progressBarStyleSmall" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/net_error_layout" android:background="@android:color/white" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="52.0dip" android:layout_height="37.0dip" android:src="@mipmap/zpd_wbnet_close" />
+        <TextView android:textSize="14.0sp" android:textColor="#ffb5b5b5" android:layout_gravity="center_horizontal" android:id="@id/try_again" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:text="网络连接失败 点击重试" />
+    </LinearLayout>
+</RelativeLayout>

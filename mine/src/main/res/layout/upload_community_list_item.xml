@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:background="@color/text_color_white" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/top_lin" android:layout_width="fill_parent" android:layout_height="@dimen/topic_item_height" android:layout_alignParentTop="true">
+            <TextView android:textSize="@dimen/text_size_14" android:textColor="@color/main_text_color" android:gravity="center_vertical" android:id="@id/community_main_title" android:paddingLeft="@dimen/padding_left_right_15" android:paddingTop="@dimen/padding_left_right_5" android:paddingRight="@dimen/padding_left_right_10" android:paddingBottom="@dimen/padding_left_right_5" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:layout_toLeftOf="@id/detail_mark" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:onClick="onCommunityChoose" />
+            <LinearLayout android:gravity="center|right" android:orientation="horizontal" android:id="@id/detail_mark" android:paddingLeft="@dimen/padding_50" android:paddingTop="@dimen/padding_left_right_5" android:paddingRight="@dimen/padding_left_right_15" android:paddingBottom="@dimen/padding_left_right_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                <TextView android:textSize="@dimen/text_size_12" android:textColor="@color/dialog_grid_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="1.0dip" android:text="@string/community_detail" />
+                <ImageView android:id="@id/arrow_mark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/community_ic_detail" />
+            </LinearLayout>
+            <View android:background="@color/community_choose_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="@dimen/padding_left_right_15" android:layout_marginRight="@dimen/padding_left_right_15" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/community_des_rel" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/top_lin" android:onClick="onCommunityChoose">
+            <include layout="@layout/upload_choose_topic_item" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="12.0sp" android:textColor="@color/text_color_white" android:gravity="center" android:id="@id/community_click_guide_toast" android:background="@drawable/community_pop_intro2" android:paddingTop="@dimen/padding_left_right_5" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_left_right_10" android:layout_marginTop="@dimen/upload_show_padding_top" android:text="@string/community_choose_toast_1" android:layout_alignLeft="@id/community_main_title" android:layout_alignBottom="@id/community_main_title" />
+</FrameLayout>

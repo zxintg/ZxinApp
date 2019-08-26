@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/game_card_layout_item" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/game_card_icon" android:layout_width="@dimen/card_icon_big_size" android:layout_height="@dimen/card_icon_big_size" android:layout_marginTop="@dimen/card_margin_bt" android:src="@drawable/game_list_item_default" />
+    <TextView android:textSize="@dimen/mygame_card_title_size" android:textColor="@color/game_detail_page_game_name_color_333333" android:gravity="center" android:id="@id/game_card_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/card_icon_mt" android:maxEms="6" android:singleLine="true" />
+    <TextView android:textSize="@dimen/card_desc_textsize" android:textColor="#ff999999" android:id="@id/game_card_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/card_desc_mt" />
+    <TextView android:textSize="@dimen/game_card_action_textsize" android:textColor="#ffffffff" android:gravity="center" android:id="@id/game_card_action" android:background="@drawable/game_action_bg_blue_selector" android:layout_width="@dimen/card_icon_big_size" android:layout_height="@dimen/game_card_action_height" android:layout_marginTop="@dimen/card_action_mt" android:text="@string/game_h5_game_start_game" />
+</LinearLayout>

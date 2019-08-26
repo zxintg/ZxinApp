@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/bottom_lin" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:padding="@dimen/padding_left_right_10" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/video_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_left_right_5" android:text="@string/video_title" style="@style/edit_video_titletext_style" />
+                    <EditText android:id="@id/video_folder_title" android:background="@drawable/empty" android:padding="@dimen/padding_left_right_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_left_right_5" android:hint="@string/vdieo_folder_title_hint" android:maxLines="3" android:layout_weight="1.0" android:textCursorDrawable="@null" style="@style/edit_video_titletext_style" />
+                </LinearLayout>
+                <TextView android:textSize="@dimen/text_size_12" android:textColor="@color/upload_text_number_des_color" android:layout_gravity="right" android:id="@id/album_title_number_count" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0/20" />
+            </LinearLayout>
+            <View android:background="@color/title_divide_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <LinearLayout android:orientation="vertical" android:padding="@dimen/padding_left_right_10" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_left_right_5" android:text="@string/video_describle" style="@style/edit_video_titletext_style" />
+                    <EditText android:gravity="top" android:id="@id/video_folder_describle" android:background="@drawable/empty" android:padding="@dimen/padding_left_right_5" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_left_right_5" android:hint="@string/video_folder_describle_hint" android:maxLines="3" android:layout_weight="1.0" android:textCursorDrawable="@null" style="@style/edit_video_titletext_style" />
+                </LinearLayout>
+                <TextView android:textSize="@dimen/text_size_12" android:textColor="@color/upload_text_number_des_color" android:layout_gravity="right" android:id="@id/album_des_number_count" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0/56" />
+            </LinearLayout>
+            <View android:background="@color/video_edit_divide_color" android:layout_width="fill_parent" android:layout_height="@dimen/padding_left_right_8" />
+            <RelativeLayout android:gravity="center_vertical" android:background="@color/white" android:paddingLeft="@dimen/padding_left_right_10" android:paddingRight="@dimen/padding_left_right_10" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_item_height">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_left_right_5" android:text="@string/video_privacy_setting" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/edit_video_titletext_style" />
+            </RelativeLayout>
+            <View android:background="@color/title_divide_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <RelativeLayout android:id="@id/public_image_rel" android:paddingLeft="@dimen/padding_left_right_18" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_item_height" style="@style/edit_video_item_rel">
+                <ImageView android:id="@id/public_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/padding_left_right_5" android:src="@drawable/upload_ic_chosen" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/text_size_14" android:textColor="@color/black" android:id="@id/public_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_left_right_5" android:layout_marginRight="@dimen/padding_left_right_10" android:text="@string/video_value_privacy" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/text_size_14" android:textColor="@color/video_pp_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/video_all_look" android:layout_toRightOf="@id/public_value" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <View android:background="@color/title_divide_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <RelativeLayout android:id="@id/private_image_rel" android:paddingLeft="@dimen/padding_left_right_18" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_item_height" style="@style/edit_video_item_rel">
+                <ImageView android:id="@id/private_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/padding_left_right_5" android:src="@drawable/upload_ic_chosen" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/text_size_14" android:textColor="@color/black" android:id="@id/private_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_left_right_5" android:layout_marginRight="@dimen/padding_left_right_10" android:text="@string/video_folder_private" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/text_size_14" android:textColor="@color/video_pp_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/video_folder_only_visible" android:layout_toRightOf="@id/private_value" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <View android:background="@color/title_divide_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/bottom_lin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:textSize="@dimen/text_size_18" android:textColor="@color/white" android:gravity="center" android:id="@id/video_folder_create" android:background="@drawable/btn_bottom_bg_selector" android:layout_width="fill_parent" android:layout_height="@dimen/bottom_btn_height" android:text="@string/vidoe_folader_create_action" android:onClick="OnBottomBtnClick" />
+    </LinearLayout>
+</RelativeLayout>

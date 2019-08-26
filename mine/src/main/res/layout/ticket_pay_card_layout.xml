@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/container" android:layout_width="@dimen/pay_card_layout_width" android:layout_height="@dimen/ticket_pay_card_layout_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="#fffafafa" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/ticket_pay_card_first_layout" android:layout_width="fill_parent" android:layout_height="@dimen/ticket_pay_card_first_layout_height">
+            <TextView android:id="@id/ticket_pay_card_price" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/ticket_pay_card_price_marginright" android:text="@string/ticket_pay_card_price" android:layout_alignParentRight="true" style="@style/ticket_pay_card_price" />
+            <TextView android:ellipsize="end" android:id="@id/ticket_pay_card_title" android:paddingLeft="@dimen/ticket_pay_card_title_paddingleft" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" android:layout_toLeftOf="@id/ticket_pay_card_price" style="@style/ticket_pay_card_title" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/ticket_pay_card_second_layout" android:layout_width="fill_parent" android:layout_height="@dimen/ticket_pay_card_second_layout_height">
+            <TextView android:id="@id/ticket_pay_card_date" android:paddingLeft="@dimen/ticket_pay_card_title_paddingleft" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/ticket_pay_card_txt" />
+            <TextView android:id="@id/ticket_pay_card_time" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/ticket_pay_card_txt_marginleft" style="@style/ticket_pay_card_txt" />
+            <TextView android:id="@id/ticket_pay_card_type" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/ticket_pay_card_txt_marginleft" style="@style/ticket_pay_card_txt" />
+            <TextView android:id="@id/ticket_pay_card_count" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/ticket_pay_card_txt_marginleft" android:text="@string/ticket_pay_card_count" style="@style/ticket_pay_card_txt" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/ticket_pay_card_third_layout" android:layout_width="wrap_content" android:layout_height="@dimen/ticket_pay_card_second_layout_height">
+            <TextView android:ellipsize="end" android:id="@id/ticket_pay_card_cinema" android:paddingLeft="@dimen/ticket_pay_card_title_paddingleft" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:layout_weight="4.0" style="@style/ticket_pay_card_txt" />
+            <TextView android:id="@id/ticket_pay_card_hall" android:paddingLeft="@dimen/ticket_pay_card_txt_marginleft" android:layout_width="@dimen/ticket_pay_card_hall_width" android:layout_height="fill_parent" android:layout_weight="1.0" style="@style/ticket_pay_card_txt" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/ticket_pay_card_empty_layout" android:layout_width="fill_parent" android:layout_height="@dimen/ticket_pay_card_empty_layout_height" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/pay_card_bottom_payment_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/pay_card_bottom_payment_layout_height">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/pay_card_payment_layout" android:paddingLeft="@dimen/layout_vipbuy_dialog_pay_filter_item_paddingleft" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <ImageView android:id="@id/pay_card_payment_layout_img" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:id="@id/pay_card_payment_layout_txt" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/vipbuy_dialog_pay_layout_txt_marginleft" style="@style/vipbuy_dialog_pay_layout_txt" />
+                <ImageView android:id="@id/pay_card_payment_layout_arrow" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/pay_card_arrow_selector" />
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:gravity="center|top" android:id="@id/pay_card_pay_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:id="@id/pay_card_pay_txt" android:background="@drawable/btn_vip_dialog_cancel" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/pay_card_pay_txt" style="@style/pay_card_pay_txt" />
+            <View android:background="@drawable/layout_bottom_cover" android:layout_width="fill_parent" android:layout_height="5.0px" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

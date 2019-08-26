@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@drawable/interactpoint_popup_txt_bg" android:layout_width="fill_parent" android:layout_height="@dimen/interactpoint_popup_txt_height">
+        <TextView android:id="@id/interactpoint_popup_txt" android:paddingLeft="@dimen/interactpoint_popup_txt_paddingleftright" android:paddingRight="@dimen/interactpoint_popup_txt_paddingleftright" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/interactpoint_popup_txt" />
+        <RelativeLayout android:id="@id/interactpoint_popup_close_layout" android:layout_width="@dimen/interactpoint_popup_txt_height" android:layout_height="fill_parent">
+            <ImageView android:id="@id/interactpoint_popup_img" android:layout_width="@dimen/interactpoint_popup_img_width" android:layout_height="@dimen/interactpoint_popup_img_width" android:src="@drawable/interactpoint_popup_close" android:layout_centerInParent="true" />
+            <View android:id="@id/interactpoint_popup_img_line" android:background="#80333333" android:layout_width="1.0px" android:layout_height="@dimen/interactpoint_popup_img_line_height" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

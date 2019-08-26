@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/game_detail_card_content_left_margin" android:paddingTop="@dimen/game_detail_card_content_top_bottom_margin" android:paddingBottom="@dimen/game_detail_card_content_top_bottom_margin" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="@dimen/present_game_details_icon_end_width" android:layout_height="@dimen/present_game_details_icon_end_width" android:src="@drawable/guide_game_details_icon" />
+    <TextView android:textSize="@dimen/game_category_text_size" android:textColor="#ff666666" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tv_game_details_guide_item_name" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/activities_game_details_text_marginLeft" android:layout_marginRight="@dimen/activities_game_details_text_marginLeft" android:singleLine="true" />
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/layout_searchresult_filter_ob" android:paddingLeft="@dimen/layout_searchresult_filter_ob_marginleft" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/txt_searchresult_filter_ob_textsize" android:textColor="@drawable/search_result_filter_text_color" android:gravity="center" android:id="@id/txt_searchresult_filter_ob" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/txt_searchresult_filter_ob_synthesize" android:includeFontPadding="false" />
+            <TextView android:textSize="@dimen/txt_searchresult_filter_ob_textsize" android:textColor="@drawable/search_result_filter_text_color" android:gravity="center" android:id="@id/txt_searchresult_filter_new" android:paddingLeft="@dimen/layout_searchresult_filter_ob_marginleft" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/layout_searchresult_filter_ob_marginleft" android:text="@string/txt_searchresult_filter_ob_new" android:includeFontPadding="false" />
+            <TextView android:textSize="@dimen/txt_searchresult_filter_ob_textsize" android:textColor="@drawable/search_result_filter_text_color" android:gravity="center" android:id="@id/txt_searchresult_filter_most" android:paddingLeft="@dimen/layout_searchresult_filter_ob_marginleft" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/layout_searchresult_filter_ob_marginleft" android:text="@string/txt_searchresult_filter_ob_most" android:includeFontPadding="false" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/rl_searchresult_filter" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <TextView android:gravity="center" android:id="@id/tv_searchresult_filter" android:paddingLeft="@dimen/searchresult_filter_marginRight" android:paddingRight="@dimen/searchresult_filter_marginRight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/youku_title_filter" android:layout_centerVertical="true" style="@style/toolbar_btn_txt" />
+            <ImageView android:id="@id/iv_filter_icon" android:paddingRight="@dimen/searchresult_filter_marginRight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/moren_xiala" android:layout_toRightOf="@id/tv_searchresult_filter" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <View android:background="@color/text_color_gray_12" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/searchresult_filterbar_view" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.soku.searchsdk.view.SyncHorizontalScrollView android:id="@id/horizontal_type" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_video_type" android:layout_width="fill_parent" android:layout_height="@dimen/soku_result_filter_row_height" />
+        </com.soku.searchsdk.view.SyncHorizontalScrollView>
+        <com.soku.searchsdk.view.SyncHorizontalScrollView android:id="@id/horizontal_duration" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_video_duration" android:layout_width="fill_parent" android:layout_height="@dimen/soku_result_filter_middle_row_height" />
+        </com.soku.searchsdk.view.SyncHorizontalScrollView>
+        <com.soku.searchsdk.view.SyncHorizontalScrollView android:id="@id/horizontal_format" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_video_format" android:layout_width="fill_parent" android:layout_height="@dimen/soku_result_filter_row_height" />
+        </com.soku.searchsdk.view.SyncHorizontalScrollView>
+    </LinearLayout>
+    <com.soku.searchsdk.view.SyncHorizontalScrollView android:id="@id/horizontal_subscibe" android:background="@color/white" android:visibility="gone" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_video_subscibe" android:layout_width="fill_parent" android:layout_height="?actionBarSize" />
+    </com.soku.searchsdk.view.SyncHorizontalScrollView>
+    <RelativeLayout android:id="@id/filter_empty_view_ugc_layout" android:background="#ffe6e6e6" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/filter_empty_view_ugc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/game_home_item_margin_30dp" android:layout_centerInParent="true">
+            <ImageView android:id="@id/icon_empty_ugc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/search_result_filter_none" android:layout_centerHorizontal="true" />
+            <TextView android:id="@id/filter_empty_txt_ugc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/game_home_item_margin_30dp" android:text="无筛选结果点此重置" android:layout_below="@id/icon_empty_ugc" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/filter_shield_view_ugc" android:background="@color/app_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/persondirect_item_more_txt_textsize" android:textColor="#ff444444" android:gravity="center_vertical" android:id="@id/filter_item_shield_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/searchresult_noresult_left_right" android:layout_marginTop="50.0dip" android:layout_marginRight="@dimen/searchresult_noresult_left_right" android:layout_marginBottom="50.0dip" android:maxLines="2" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</LinearLayout>

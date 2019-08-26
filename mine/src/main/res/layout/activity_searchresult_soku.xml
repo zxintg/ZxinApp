@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/app_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.soku.searchsdk.widget.SokuSearchView android:id="@id/searchresult_searchview_soku" android:layout_width="fill_parent" android:layout_height="?actionBarSize" />
+    <ListView android:id="@id/searchresult_listview" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="#00000000" android:cacheColorHint="@null" android:divider="@null" android:dividerHeight="0.0dip" android:layout_below="@id/searchresult_searchview_soku" android:overScrollMode="never" />
+    <ListView android:id="@id/searchresult_listview_pgc" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="#00000000" android:cacheColorHint="@null" android:divider="@android:color/transparent" android:dividerHeight="@dimen/searchdirect_header_gridview_verticalspacing" android:layout_below="@id/searchresult_searchview_soku" android:overScrollMode="never" />
+    <include android:id="@id/searchresult_personal_soku" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/searchresult_searchview_soku" layout="@layout/personal_layout_soku" />
+    <com.soku.searchsdk.view.SearchResultFilterView android:id="@id/searchresult_filterbar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/searchresult_searchview_soku" />
+    <com.soku.searchsdk.view.SearchResultSeriesCacheView android:id="@id/search_result_series_cache_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true" />
+    <com.soku.searchsdk.view.SearchResultErrorEmptyView android:id="@id/searchresult_error_emptyview_soku" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/searchresult_searchview_soku" />
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@id/channel_recommend_refesh_layout" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.RecyclerView android:scrollbarStyle="outsideOverlay" android:id="@id/channel_recommend_recyler_view" android:paddingLeft="@dimen/channel_gridview_padding_horizontal" android:paddingTop="@dimen/channel_gridview_padding_vertical" android:paddingRight="@dimen/channel_gridview_padding_horizontal" android:scrollbars="vertical" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <com.youku.phone.channel.view.ChannelNoResultEmptyView android:id="@id/channel_recommend_noresult_emptyview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

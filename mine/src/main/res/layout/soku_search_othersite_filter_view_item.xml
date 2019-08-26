@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:background="@drawable/layout_othersite_filter_item_bg" android:paddingLeft="@dimen/layout_othersite_filter_item_height_paddingleft" android:layout_width="fill_parent" android:layout_height="@dimen/layout_othersite_filter_item_height">
+        <ImageView android:gravity="center_vertical" android:id="@id/soku_othersite_filter_item_img" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:gravity="center_vertical" android:id="@id/soku_othersite_filter_item_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/soku_item_marginbottom" style="@style/soku_txt_searchdirect_other_site" />
+    </LinearLayout>
+    <View android:id="@id/othersite_line" android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="@dimen/soku_directright_othersite_margin" android:layout_marginRight="@dimen/soku_directright_othersite_margin" />
+</LinearLayout>

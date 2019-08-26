@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/task_container_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:background="#ffebebeb" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <RelativeLayout android:layout_gravity="center_vertical" android:id="@id/task_bottom_point_layout" android:padding="@dimen/activity_padding_normal" android:layout_width="fill_parent" android:layout_height="@dimen/abc_action_bar_default_height">
+        <ImageView android:id="@id/mytask_left_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="1.0dip" android:src="@drawable/ucenter_ic_points" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/usercenter_list_item_second_textsize" android:gravity="center_vertical" android:id="@id/mytask_left_title" android:paddingLeft="@dimen/usercenter_banner_title_left_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="我的积分" android:layout_toRightOf="@id/mytask_left_icon" android:layout_centerVertical="true" style="@style/ucenter_list_item_first" />
+        <TextView android:textSize="@dimen/usercenter_list_item_second_textsize" android:textColor="#ffffb800" android:gravity="center_vertical" android:id="@id/mytask_left_title_score" android:paddingLeft="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/mytask_left_title" android:layout_centerVertical="true" style="@style/ucenter_list_item_first" />
+        <TextView android:textSize="@dimen/usercenter_list_item_second_textsize" android:textColor="#ffb5b5b5" android:gravity="center_vertical" android:id="@id/mytask_left_title_more" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/ucenter_btn_standard_vertical_padding" android:text="立即兑换" android:drawableRight="@drawable/uc_icon_right_arrow" android:drawablePadding="@dimen/activity_padding_normal" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/ucenter_list_item_third" />
+    </RelativeLayout>
+</LinearLayout>

@@ -33,6 +33,7 @@ import com.zxin.root.util.ToastUtil;
  */
 @SuppressLint("Registered")
 public class InitializeService extends IntentService {
+    private static final LogUtils.Tag TAG = new LogUtils.Tag("InitializeService");
 
     private static final String ACTION_INIT = "initApplication";
 
@@ -63,12 +64,12 @@ public class InitializeService extends IntentService {
     @Override
     public void onCreate() {
         super.onCreate();
-        LogUtils.e("InitializeService 初始化======》onCreate");
+        LogUtils.e(TAG,"InitializeService 初始化======》onCreate");
     }
 
     private void initApplication() {
         //处理耗时操作和避免在application做过多初始化工作，比如初始化数据库等等
-        LogUtils.e("InitializeService 初始化");
+        LogUtils.e(TAG,"InitializeService 初始化");
         //全局错误信息
         CrashHandler crashHandler = CrashHandler.getInstance();
         crashHandler.init(this);
@@ -106,7 +107,7 @@ public class InitializeService extends IntentService {
 
     @Override
     public int onStartCommand(@Nullable Intent intent, int flags, int startId) {
-        LogUtils.e("InitializeService 初始化======》onStartCommand");
+        LogUtils.e(TAG,"InitializeService 初始化======》onStartCommand");
         return super.onStartCommand(intent, flags, startId);
     }
 

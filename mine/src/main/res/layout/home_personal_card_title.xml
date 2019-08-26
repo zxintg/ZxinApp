@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:id="@id/home_personal_card_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/home_interest_card_title_margin_right" android:layout_marginTop="@dimen/home_interest_card_title_margin_top" android:layout_marginRight="@dimen/home_interest_card_title_margin_right" android:layout_marginBottom="@dimen/home_interest_card_title_margin_bottom" android:layout_alignParentTop="true" />
+    <ImageView android:id="@id/home_personal_card_colse_img" android:padding="@dimen/home_interest_card_close_img_padding" android:clickable="true" android:layout_width="@dimen/home_interest_card_close_img_size" android:layout_height="@dimen/home_interest_card_close_img_size" android:src="@drawable/home_personal_interest_card_close" android:scaleType="fitXY" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/content_layout" android:background="@drawable/zpd_subscribe_background" android:layout_width="wrap_content" android:layout_height="@dimen/zpd_subscribe_small_layout_height" android:layout_marginRight="@dimen/zpd_subscribe_small_margin_right" android:layout_marginBottom="@dimen/zpd_subscribe_small_margin_bottom" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <com.youku.detail.widget.CircleImageView android:layout_gravity="center_vertical" android:id="@id/imageview" android:layout_width="@dimen/zpd_subscribe_small_image_width" android:layout_height="@dimen/zpd_subscribe_small_image_width" android:layout_marginLeft="@dimen/zpd_subscribe_image_margin" android:layout_marginRight="@dimen/zpd_subscribe_image_margin" />
+        <TextView android:textSize="@dimen/zpd_subscribe_small_text_size" android:textColor="@color/zpd_subscribe_tip_color" android:layout_gravity="center_vertical" android:id="@id/tip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/zpd_subscribe_small_text_margin" android:singleLine="true" />
+    </LinearLayout>
+</RelativeLayout>

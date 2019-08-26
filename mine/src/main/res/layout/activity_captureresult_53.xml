@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/has_result" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/has_result_white" android:background="@color/white" android:paddingLeft="16.0px" android:paddingTop="32.0px" android:paddingRight="16.0px" android:paddingBottom="34.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0px" android:layout_marginTop="20.0px" android:layout_marginRight="16.0px">
+                <TextView android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/homepagetitle" />
+                <FrameLayout android:background="#fff5f5f5" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="center" android:layout_width="@dimen/icon_not_loaded_width" android:layout_height="@dimen/icon_not_loaded_width" android:src="@drawable/channel_not_loaded_icon_play" />
+                    <ImageView android:id="@id/img" android:layout_width="716.0px" android:layout_height="400.0px" android:scaleType="centerCrop" />
+                    <ImageView android:layout_gravity="bottom" android:id="@id/img_play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="28.0px" android:layout_marginBottom="28.0px" android:src="@drawable/saosao_play" />
+                </FrameLayout>
+                <TextView android:ellipsize="end" android:id="@id/seeToo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/homepagetitle" />
+                <Button android:textColor="@color/white" android:gravity="center" android:id="@id/play" android:background="@drawable/saosao_btn_shape" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/play" style="@style/homepagetitle" />
+            </LinearLayout>
+            <ImageView android:background="#ff999999" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="16.0px" android:layout_marginRight="16.0px" />
+            <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/no_right" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0px" android:layout_marginRight="16.0px">
+                <ImageView android:paddingRight="8.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0px" android:src="@drawable/saosao_no_right_icon" />
+                <TextView android:textColor="#ff333333" android:id="@id/no_right_tt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/qrcode_result_no_right_tt" style="@style/homepagetitle" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/no_result" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/default_exclamation" />
+        <TextView android:textColor="#ff999999" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="暂不支持打开此页面" />
+    </LinearLayout>
+</RelativeLayout>

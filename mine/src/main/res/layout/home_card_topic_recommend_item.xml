@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/home_card_topic_recommend_content_item_right_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/home_card_topic_recommend_item_cover" android:background="#ffdbdbdb" android:layout_width="@dimen/home_card_topic_recommend_content_item_width_port" android:layout_height="fill_parent" android:src="@drawable/channel_not_loaded_icon_play" android:scaleType="center" />
+    <ImageView android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="@dimen/home_card_topic_recommend_content_item_mask_height" android:src="@drawable/home_card_toppic_recommend_video_mask" android:scaleType="fitXY" />
+    <TextView android:textSize="@dimen/home_card_topic_recommend_content_item_title_size" android:textColor="@color/white" android:gravity="center_vertical" android:layout_gravity="bottom" android:id="@id/home_card_topic_recommend_item_title" android:paddingLeft="@dimen/home_card_topic_recommend_content_item_title_left_margin" android:layout_width="@dimen/home_card_topic_recommend_content_item_width_port" android:layout_height="@dimen/home_card_topic_recommend_content_item_title_height" android:singleLine="true" />
+</FrameLayout>

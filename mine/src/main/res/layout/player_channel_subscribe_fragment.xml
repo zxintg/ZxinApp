@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/plugin_fullscreen_loading_view_layout" android:background="@color/black" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="@dimen/plugin_fullscreen_top_view_height">
+        <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:id="@id/player_back_btn_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentLeft="true">
+            <ImageView android:id="@id/player_back_btn_left" android:duplicateParentState="true" android:layout_width="@dimen/player_back_btn_left_width" android:layout_height="fill_parent" android:src="@drawable/player_back_btn_left" />
+            <ImageView android:id="@id/player_back_btn_logo" android:layout_width="@dimen/player_back_btn_logo_width" android:layout_height="fill_parent" android:src="@drawable/player_back_btn_logo" />
+            <View android:id="@id/player_back_btn_line" android:background="#33ffffff" android:layout_width="1.0px" android:layout_height="@dimen/player_back_btn_line_height" />
+        </LinearLayout>
+        <com.youku.miniplayer.AlwaysMarqueeTextView android:id="@id/player_top_view_title" android:paddingLeft="@dimen/plugin_small_top_view_title_paddingleft" android:paddingRight="@dimen/plugin_small_top_view_title_paddingright" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/player_back_btn_layout" android:layout_alignWithParentIfMissing="true" style="@style/plugin_small_top_view_title" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <TextView android:ellipsize="end" android:id="@id/player_fullscreen_center_title_txt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/player_subscribe_tips" android:singleLine="true" style="@style/player_fullscreen_center_title_txt" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/player_fullscreen_center_line_layout" android:layout_width="@dimen/player_fullscreen_center_line_layout_width" android:layout_height="@dimen/player_fullscreen_center_line_layout_height">
+            <View android:background="#33ffffff" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/player_fullscreen_center_bottom_layout" android:layout_width="@dimen/player_fullscreen_center_line_layout_width" android:layout_height="@dimen/player_fullscreen_center_avatar_width">
+            <com.youku.widget.CircleImageView android:id="@id/player_fullscreen_center_avatar" android:layout_width="@dimen/player_fullscreen_center_avatar_width" android:layout_height="@dimen/player_fullscreen_center_avatar_width" android:layout_alignParentLeft="true" />
+            <LinearLayout android:gravity="center|left" android:orientation="vertical" android:id="@id/player_fullscreen_center_bottom_title_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/player_fullscreen_center_bottom_title_layout_marginleft" android:layout_toRightOf="@id/player_fullscreen_center_avatar">
+                <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:id="@id/player_fullscreen_center_bottom_title_first_layout" android:layout_width="wrap_content" android:layout_height="@dimen/player_fullscreen_center_bottom_title_first_height">
+                    <TextView android:ellipsize="end" android:id="@id/player_fullscreen_center_bottom_title_first" android:layout_width="wrap_content" android:layout_height="@dimen/player_fullscreen_center_bottom_title_first_height" android:singleLine="true" style="@style/player_fullscreen_center_bottom_title_first" />
+                    <ImageView android:id="@id/player_fullscreen_center_bottom_title_first_img" android:layout_width="@dimen/detail_subscribe_certified_height" android:layout_height="@dimen/detail_subscribe_certified_height" android:layout_marginLeft="@dimen/detail_subscribe_certified_left_margin_v5" android:src="@drawable/user_certified_offline_icon" />
+                </LinearLayout>
+                <TextView android:ellipsize="end" android:id="@id/player_fullscreen_center_bottom_title_second" android:layout_width="wrap_content" android:layout_height="@dimen/player_fullscreen_center_bottom_title_second_height" android:singleLine="true" style="@style/player_fullscreen_center_bottom_title_second" />
+            </LinearLayout>
+            <RelativeLayout android:id="@id/player_fullscreen_center_bottom_btn_layout" android:background="@drawable/player_subscribe_btn_selector" android:layout_width="@dimen/player_fullscreen_center_bottom_subscribe_btn_width" android:layout_height="@dimen/player_fullscreen_center_bottom_subscribe_btn_height" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/player_fullscreen_center_bottom_btn_layout_first" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:id="@id/player_fullscreen_center_bottom_img" android:layout_width="@dimen/detail_subscribe_submark_width_v5" android:layout_height="@dimen/detail_subscribe_submark_width_v5" android:src="@drawable/details_subscribe_mark" />
+                    <TextView android:id="@id/player_fullscreen_center_bottom_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_subscribe_subtext_left_margin_v5" android:text="@string/player_fullscreen_center_bottom_subscribe_btn" style="@style/player_fullscreen_center_bottom_subscribe_btn" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/player_fullscreen_center_bottom_btn_layout_second" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ProgressBar android:layout_width="@dimen/detail_subscribe_submark_width_v5" android:layout_height="@dimen/detail_subscribe_submark_width_v5" android:indeterminateOnly="true" android:indeterminateDrawable="@anim/subscribe_progress_bar" android:indeterminateBehavior="repeat" android:layout_centerInParent="true" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_subscribe_subtext_left_margin_v5" android:text="@string/player_fullscreen_center_bottom_subscribe_btn" style="@style/player_fullscreen_center_bottom_subscribe_btn" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

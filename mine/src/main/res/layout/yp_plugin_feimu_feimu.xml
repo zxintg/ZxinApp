@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/feimu_layout" android:layout_width="wrap_content" android:layout_height="@dimen/feimu_img_width"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/feimu_content_layout" android:background="@drawable/corner_background" android:layout_width="wrap_content" android:layout_height="@dimen/feimu_content_height" android:layout_marginLeft="@dimen/feimu_content_left_margin" android:layout_centerVertical="true">
+        <TextView android:textSize="@dimen/corner_text_size" android:textColor="@color/corner_txt_color" android:gravity="center_vertical" android:id="@id/feimu_content" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/feimu_content_margin_left" android:layout_marginRight="@dimen/feimu_content_margin_right" android:text="" android:singleLine="true" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center" android:id="@id/feimu_line_layout" android:layout_width="1.0dip" android:layout_height="fill_parent">
+            <View android:background="#4cffffff" android:layout_width="1.0px" android:layout_height="@dimen/feimu_line_height" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/subscribe_layout" android:paddingLeft="@dimen/feimu_subscribe_layout_left" android:paddingRight="@dimen/feimu_subscribe_layout_left" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/subscribe_img" android:layout_width="@dimen/feimu_subscribe_img_width" android:layout_height="@dimen/feimu_subscribe_img_width" android:layout_marginRight="@dimen/feimu_subscribe_img_margin" android:src="@drawable/feimu_plus" android:scaleType="fitXY" />
+            <TextView android:textSize="@dimen/corner_text_size" android:textColor="@color/corner_subscribe_default_color" android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/subscribe_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/feimu_subscribe" android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/feimu_img" android:layout_width="@dimen/feimu_img_width" android:layout_height="@dimen/feimu_img_width" android:scaleType="fitXY" />
+</RelativeLayout>

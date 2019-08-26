@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/detail_comment_samll_num_test_size" android:textColor="#ff666666" android:gravity="center" android:id="@id/detail_card_comment_small_tv_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="1000.0dip" android:text="13726条评论" android:drawableRight="@drawable/detail_card_small_more_icon" />
+</LinearLayout>

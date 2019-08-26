@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout_search" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/title_page_line" android:paddingTop="@dimen/game_actionbar_title_padding_topbottom" android:paddingBottom="@dimen/game_actionbar_title_padding_topbottom" android:layout_width="wrap_content" android:layout_height="@dimen/game_actionbar_custom_title_line_height" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+        <View android:background="#ffc7c7c7" android:layout_width="1.0px" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <TextView android:id="@id/title_page_name" android:paddingLeft="@dimen/gamecenter_search_edit_paddingleft" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_toLeftOf="@id/id_title_page_share" android:layout_toRightOf="@id/title_page_line" android:layout_centerVertical="true" style="@style/game_actionbar_title_txt" />
+    <ImageButton android:id="@id/id_title_page_share" android:background="@drawable/detail_card_share" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

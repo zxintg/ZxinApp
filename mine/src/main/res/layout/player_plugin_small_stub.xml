@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.detail.view.PluginSmallLiveCenterView android:id="@id/pluginSmallLiveCenterView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.youku.detail.view.PluginSmallBottomView android:id="@id/pluginSmallBottomView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    <com.youku.detail.view.PluginBufferingView android:id="@id/pluginBufferingView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+</RelativeLayout>

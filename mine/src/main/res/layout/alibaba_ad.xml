@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_icon" android:layout_width="290.0px" android:layout_height="290.0px" android:layout_marginLeft="15.0px" android:layout_marginTop="15.0px" android:scaleType="fitXY" />
+    <TextView android:textSize="10.0dip" android:textColor="@android:color/white" android:gravity="center" android:background="@drawable/details_banner_sign" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="广告" android:layout_alignLeft="@id/iv_icon" android:layout_alignBottom="@id/iv_icon" />
+    <TextView android:textSize="28.0px" android:textColor="@android:color/black" android:ellipsize="end" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="35.0px" android:layout_marginTop="35.0px" android:layout_marginRight="35.0px" android:text="你妹的你妹的你妹的你妹的你妹的你妹的你妹的你妹的你妹的你妹的你妹的你妹的你妹的你妹的你妹的你妹的你妹的" android:maxLines="3" android:layout_toRightOf="@id/iv_icon" android:layout_alignParentTop="true" />
+    <TextView android:textSize="40.0px" android:textColor="#ffff0000" android:id="@id/tv_promotion_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="50.0px" android:text="¥29.90" android:layout_alignLeft="@id/tv_title" android:layout_alignParentBottom="true" />
+    <TextView android:textSize="23.0px" android:textColor="#ffb5b5b5" android:id="@id/tv_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0px" android:text="¥79.99" android:layout_toRightOf="@id/tv_promotion_price" android:layout_alignBaseline="@id/tv_promotion_price" />
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/girditem_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/left_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerVertical="true">
+        <CheckBox android:id="@id/checkbox_delete" android:focusable="false" android:visibility="gone" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/girditem_checkbox_margin_left" android:checked="false" android:button="@drawable/download_checkbox_selector" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <FrameLayout android:id="@id/thumbnail_layout" android:layout_width="@dimen/girditem_thumbnail_width" android:layout_height="@dimen/girditem_thumbnail_height" android:layout_marginLeft="@dimen/girditem_thumbnail_margin_left" android:layout_marginTop="@dimen/girditem_thumbnail_margin_left" android:layout_marginBottom="@dimen/girditem_thumbnail_margin_left" android:layout_toRightOf="@id/checkbox_delete" android:layout_centerVertical="true">
+            <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/downloading_default" />
+            <com.youku.widget.YoukuImageView android:id="@id/thumbnail" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+            <ProgressBar android:id="@id/mem_used" android:layout_width="fill_parent" android:layout_height="fill_parent" android:max="100" style="@style/download_progressbar" />
+        </FrameLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/delete_layout" android:visibility="gone" android:layout_width="@dimen/downloading_delete_width" android:layout_height="@dimen/girditem_height" android:layout_alignParentRight="true">
+        <TextView android:textSize="@dimen/girditem_title_margin_top" android:textColor="@color/downloading_delete_text_color" android:gravity="center" android:layout_width="@dimen/downloading_delete_width" android:layout_height="@dimen/girditem_height" android:text="@string/downloading_delete" />
+        <TextView android:background="@color/download_gridview_splite" android:layout_width="@dimen/downloading_cutoff_width" android:layout_height="fill_parent" android:layout_marginTop="@dimen/girditem_title_margin_top" android:layout_marginBottom="@dimen/girditem_title_margin_top" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/girditem_title_margin_left" android:layout_toLeftOf="@id/delete_layout" android:layout_toRightOf="@id/left_layout">
+        <com.youku.widget.TextViewEllipseEndFixed android:textSize="@dimen/downloading_item_title_text_size" android:textColor="@color/downloading_title_color" android:ellipsize="end" android:gravity="top" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/downloading_item_title_margin" android:maxLines="1" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/girditem_progess_margin_top">
+            <RelativeLayout android:id="@id/state_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/girditem_size_text_size" android:textColor="@color/download_gridview_size_color" android:id="@id/state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" style="@style/history_item_txt_first" />
+                <TextView android:textSize="@dimen/girditem_size_text_size" android:textColor="@color/downloading_exception_text_color" android:id="@id/state_exception" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" style="@style/history_item_txt_first" />
+            </RelativeLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/download_size_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/girditem_title_margin_left">
+                <TextView android:background="@color/download_gridview_splite" android:layout_width="@dimen/downloading_cutoff_width" android:layout_height="fill_parent" android:layout_alignParentBottom="true" />
+                <TextView android:textSize="@dimen/girditem_size_text_size" android:textColor="@color/downloading_speed" android:id="@id/progress1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/girditem_title_margin_left" style="@style/history_item_txt_second" />
+                <TextView android:textSize="@dimen/girditem_size_text_size" android:textColor="@color/download_gridview_size_color" android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:background="@color/download_gridview_splite_bg" android:layout_width="fill_parent" android:layout_height="@dimen/girditem_splite_height" android:layout_alignParentBottom="true" />
+    <TextView android:id="@id/gridview_splite_center" android:background="@color/download_gridview_splite_bg" android:visibility="gone" android:layout_width="@dimen/girditem_splite_height" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.ui.activity.actionbar.CustomToolbar android:id="@id/custom_toolbar" android:layout_width="wrap_content" android:layout_height="?actionBarSize" />
+    <com.youku.widget.CompatSwipeRefreshLayout android:id="@id/fragment_subscribe_refresh_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.youku.interaction.views.WebViewWrapper android:id="@id/fragment_subscribe_web_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.youku.widget.CompatSwipeRefreshLayout>
+</LinearLayout>

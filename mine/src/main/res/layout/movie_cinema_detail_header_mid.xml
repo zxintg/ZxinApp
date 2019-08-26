@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/movie_title_bar" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/cinema_detail_header_mid_height">
+        <ImageView android:id="@id/arrow_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/cinema_detail_header_mid_title_marginleft" android:src="@drawable/movie_arrow_right" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/cinema_detail_header_mid_douban_size" android:textColor="#ffa8a8a8" android:id="@id/dyxq" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="电影详情" android:layout_toLeftOf="@id/arrow_right" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/cinema_detail_header_mid_douban_size" android:textColor="#ffa8a8a8" android:id="@id/doubanScore" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="豆瓣8.1分" android:layout_toLeftOf="@id/dyxq" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/cinema_detail_header_mid_title_size" android:textColor="#ff333333" android:id="@id/promName" android:paddingLeft="@dimen/cinema_detail_header_mid_title_marginleft" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="星级穿越" android:layout_toLeftOf="@id/doubanScore" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

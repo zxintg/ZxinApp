@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.soku.searchsdk.view.ChannelCellNoopenImageLayout android:id="@id/searchdirect_noopen_item_layout" android:layout_width="@dimen/soku_bodan_item_image_width" android:layout_height="@dimen/soku_bodan_item_image_height" android:layout_marginLeft="@dimen/soku_directnoopen_series_more_right_v5" android:layout_marginTop="@dimen/soku_directnoopen_item_title_margin_top_v5" android:layout_marginBottom="@dimen/soku_directnoopen_item_title_margin_top_v5" android:layout_centerVertical="true">
+        <FrameLayout android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center" android:layout_width="@dimen/icon_default_width" android:layout_height="@dimen/icon_default_width" android:src="@drawable/channel_not_loaded_icon_play" />
+            <ImageView android:id="@id/bodan_item_thumb_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+            <LinearLayout android:layout_gravity="right" android:orientation="vertical" android:background="#7f000000" android:layout_width="@dimen/soku_bodan_item_shdow_width" android:layout_height="fill_parent">
+                <TextView android:textSize="@dimen/soku_directnoopen_item_title_size_v5" android:textColor="@color/white" android:layout_gravity="center_horizontal" android:id="@id/bodan_item_videocount_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/soku_directnoopen_item_title_margin_top_v5" />
+                <ImageView android:layout_gravity="center_horizontal" android:background="@drawable/bodan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/soku_directnoopen_item_title_margin_right_v5" />
+            </LinearLayout>
+        </FrameLayout>
+    </com.soku.searchsdk.view.ChannelCellNoopenImageLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/soku_directnoopen_series_more_right_v5" android:layout_marginTop="@dimen/soku_directnoopen_item_title_margin_top_v5" android:layout_marginRight="@dimen/soku_directnoopen_item_title_margin_right_v5" android:layout_marginBottom="@dimen/soku_directnoopen_item_title_margin_top_v5" android:layout_toRightOf="@id/searchdirect_noopen_item_layout" android:layout_alignParentTop="true">
+        <TextView android:textSize="@dimen/soku_directnoopen_item_title_margin_right_v5" android:textColor="#ff333333" android:ellipsize="end" android:gravity="top" android:id="@id/bodan_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:layout_alignParentTop="true" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/soku_directnoopen_item_summary_margintop_v5" android:layout_weight="2.0" android:layout_below="@id/bodan_item_title" android:layout_centerVertical="true">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <FrameLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="@dimen/bodan_owner_img_width" android:layout_height="@dimen/bodan_owner_img_width">
+                    <ImageView android:id="@id/bodan_item_owner_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/ugc_owern_img" android:scaleType="fitXY" />
+                    <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/detail_rukoumengceng" />
+                </FrameLayout>
+                <TextView android:textSize="@dimen/soku_directnoopen_item_num_size_v5" android:textColor="#ffb5b7b9" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/bodan_item_owner_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/soku_result_pv_icon_margin_right" android:singleLine="true" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/soku_directnoopen_item_num_size_v5" android:textColor="#ffb5b7b9" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/bodan_item_play_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/soku_directnoopen_item_title_margin_right_v5" android:singleLine="true" android:drawableLeft="@drawable/home_video_land_item_play_count" android:drawablePadding="@dimen/soku_result_pv_icon_margin_right" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:background="@color/soku_bigworddirect_item_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+</RelativeLayout>

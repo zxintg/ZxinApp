@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@id/myupload_refesh_layout" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.RecyclerView android:scrollbarStyle="outsideOverlay" android:id="@id/myupload_recycleview" android:scrollbars="vertical" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/myupload_layout_empty" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/myupload_layout_empty_inner" android:background="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/upload_pic_xiaoku1" />
+            <TextView android:textSize="@dimen/text_size_12" android:textColor="@color/video_text_value_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_left_right_5" android:text="@string/no_video_empty_toast" />
+            <TextView android:textSize="@dimen/text_size_14" android:textColor="@color/video_agreement_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_left_right_5" android:text="@string/no_video_upload_now" />
+        </LinearLayout>
+    </LinearLayout>
+    <include android:id="@id/page_load_fail_layout" layout="@layout/page_load_fail_layout" />
+</RelativeLayout>

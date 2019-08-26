@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/view_item_detail_fragment_chat_content_padding_top_first" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/item_detail_chat_content_padding_v" />
+    <View android:id="@id/view_item_detail_fragment_chat_content_padding_top" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/item_detail_chat_content_padding_v_more" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/detail_chat_wrapper_title_padding_left" android:paddingRight="@dimen/detail_chat_wrapper_title_padding_left" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:id="@id/view_item_detail_fragment_chat_content_padding_left" android:visibility="gone" android:layout_width="@dimen/item_detail_chat_content_self_padding_left" android:layout_height="1.0px" />
+        <TextView android:textSize="@dimen/item_detail_chat_content_textsize" android:id="@id/tv_item_detail_fragment_chat_content_text" android:background="#00000000" android:paddingTop="@dimen/item_detail_chat_content_padding_v" android:paddingBottom="@dimen/item_detail_chat_content_padding_v" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View android:id="@id/view_item_detail_fragment_chat_content_padding_bottom" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/item_detail_chat_content_padding_v_more" />
+    <View android:id="@id/view_item_detail_fragment_chat_content_padding_bottom_last" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/item_detail_chat_content_padding_v" />
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/video_folder_footer" android:background="@color/text_color_white" android:paddingLeft="@dimen/padding_left_right_10" android:paddingTop="@dimen/padding_left_right_5" android:paddingRight="@dimen/padding_left_right_10" android:paddingBottom="@dimen/padding_7" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/folder_image" android:background="@drawable/upload_folderfrm" android:layout_width="@dimen/dialog_folder_image_w" android:layout_height="@dimen/dialog_folder_image_h" android:scaleType="centerInside" />
+        <ImageView android:layout_gravity="center" android:layout_width="@dimen/padding_25" android:layout_height="@dimen/padding_25" android:layout_marginTop="@dimen/padding_left_right_5" android:src="@drawable/detail_card_rss" />
+        <ImageView android:layout_gravity="bottom|center|right" android:id="@id/folder_private_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/padding_3" android:src="@drawable/upload_ic_private" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/padding_left_right_10" android:paddingTop="@dimen/padding_left_right_5" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/text_size_16" android:textColor="@color/dialog_folder_blue_color" android:id="@id/folder_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dialog_folder_create" android:singleLine="true" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/waist_seal" android:padding="@dimen/activity_padding_normal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/upload_video_item_image_private" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:textColor="#ffffffff" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="bottom" android:id="@id/upload_video_item_stripe_middle" android:paddingLeft="@dimen/activity_padding_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="时常" android:singleLine="true" android:shadowColor="#90000000" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" style="@style/ucenter_list_item_third" />
+</LinearLayout>

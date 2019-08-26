@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/reload_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/topics_title_textsize" android:gravity="center" android:id="@id/reload_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        <ProgressBar android:id="@id/loadbar" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="@android:style/Widget.ProgressBar.Small.Inverse" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/drawer_layout" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/hot_tag_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="2.0">
+            <LinearLayout android:orientation="horizontal" android:id="@id/tag_label_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/topics_drawer_title_margin_left" android:layout_centerVertical="true">
+                <ImageView android:gravity="center" android:layout_gravity="center_vertical" android:background="@drawable/topic_user_icon_talk" android:layout_width="@dimen/topics_drawer_tag_width" android:layout_height="@dimen/topics_drawer_tag_width" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/topics_title_textsize" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/topics_drawer_title_margin_left" android:text="热门话题" android:layout_toRightOf="@id/tag_label_layout" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/arrow_icon" android:background="@drawable/topic_user_icon_right_arrow" android:layout_width="@dimen/topics_drawer_arrow_icon_height" android:layout_height="@dimen/topics_drawer_arrow_icon_height" android:layout_marginRight="15.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/tags_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:id="@id/tags_content_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="horizontal" android:id="@id/top_topics_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/topics_item_margin" android:layout_marginRight="@dimen/topics_item_margin" android:layout_weight="1.0">
+                    <TextView android:textSize="@dimen/topics_item_textsize" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/topic_text1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/topics_item_margin" android:layout_marginRight="@dimen/topics_item_margin" android:text="" android:singleLine="true" android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/topics_item_textsize" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/topic_text2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/topics_item_margin" android:layout_marginRight="@dimen/topics_item_margin" android:text="" android:singleLine="true" android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/topics_item_textsize" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/topic_text3" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/topics_item_margin" android:layout_marginRight="@dimen/topics_item_margin" android:text="" android:singleLine="true" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/bottom_topics_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/topics_item_margin" android:layout_marginRight="@dimen/topics_item_margin" android:layout_weight="1.0" android:layout_below="@id/horizontal_center_line">
+                    <TextView android:textSize="@dimen/topics_item_textsize" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/topic_text4" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/topics_item_margin" android:layout_marginRight="@dimen/topics_item_margin" android:singleLine="true" android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/topics_item_textsize" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/topic_text5" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/topics_item_margin" android:layout_marginRight="@dimen/topics_item_margin" android:singleLine="true" android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/topics_item_textsize" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/topic_text6" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/topics_item_margin" android:layout_marginRight="@dimen/topics_item_margin" android:singleLine="true" android:layout_weight="1.0" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/vertical_line_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <View android:background="#ffe2e2e2" android:layout_width="@dimen/topics_drawer_line_width" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <View android:background="#ffe2e2e2" android:layout_width="@dimen/topics_drawer_line_width" android:layout_height="fill_parent" android:layout_alignParentLeft="true" />
+                </RelativeLayout>
+            </LinearLayout>
+            <View android:id="@id/top_line" android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="@dimen/topics_drawer_line_width" />
+            <View android:id="@id/horizontal_center_line" android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="@dimen/topics_drawer_line_width" android:layout_centerInParent="true" />
+            <View android:id="@id/horizontal_bottom_line" android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="@dimen/topics_drawer_line_width" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

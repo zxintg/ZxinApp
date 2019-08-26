@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/channel_main_tabindicator_height">
+        <TextView android:textSize="@dimen/channel_custom_title_txt_textsize" android:textColor="@drawable/btn_homepage_title_textcolor" android:gravity="center" android:id="@id/text_videolist_textview" android:background="@drawable/other_person_gridview_item_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/favorite_videolist_tab_text" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="center_vertical" android:background="#ffd9d9d9" android:layout_width="1.0px" android:layout_height="15.0dip" />
+        <TextView android:textSize="@dimen/channel_custom_title_txt_textsize" android:textColor="@drawable/btn_homepage_title_textcolor" android:gravity="center" android:id="@id/text_showlist_textview" android:background="@drawable/other_person_gridview_item_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/favorite_showlist_tab_text" android:layout_weight="1.0" />
+    </LinearLayout>
+    <View android:background="#ffd9d9d9" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</LinearLayout>

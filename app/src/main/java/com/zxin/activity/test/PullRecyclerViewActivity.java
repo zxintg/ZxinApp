@@ -23,6 +23,8 @@ import butterknife.OnClick;
  */
 
 public class PullRecyclerViewActivity extends BaseActivity {
+    private static final LogUtils.Tag TAG = new LogUtils.Tag("PullRecyclerViewActivity");
+
     @BindView(R.id.pzv)
     PullZoomView pzv;
     @BindView(R.id.recyclerView)
@@ -41,28 +43,28 @@ public class PullRecyclerViewActivity extends BaseActivity {
         pzv.setOnScrollListener(new PullZoomView.OnScrollListener() {
             @Override
             public void onScroll(int l, int t, int oldl, int oldt) {
-                LogUtils.d("onScroll   t:" + t + "  oldt:" + oldt);
+                LogUtils.d(TAG,"onScroll   t:" + t + "  oldt:" + oldt);
             }
 
             @Override
             public void onHeaderScroll(int currentY, int maxY) {
-                LogUtils.d("onHeaderScroll   currentY:" + currentY + "  maxY:" + maxY);
+                LogUtils.d(TAG,"onHeaderScroll   currentY:" + currentY + "  maxY:" + maxY);
             }
 
             @Override
             public void onContentScroll(int l, int t, int oldl, int oldt) {
-                LogUtils.d("onContentScroll   t:" + t + "  oldt:" + oldt);
+                LogUtils.d(TAG,"onContentScroll   t:" + t + "  oldt:" + oldt);
             }
         });
         pzv.setOnPullZoomListener(new PullZoomView.OnPullZoomListener() {
             @Override
             public void onPullZoom(int originHeight, int currentHeight) {
-                LogUtils.d("onPullZoom  originHeight:" + originHeight + "  currentHeight:" + currentHeight);
+                LogUtils.d(TAG,"onPullZoom  originHeight:" + originHeight + "  currentHeight:" + currentHeight);
             }
 
             @Override
             public void onZoomFinish() {
-                LogUtils.d("onZoomFinish");
+                LogUtils.d(TAG,"onZoomFinish");
             }
         });
         recyclerView.setLayoutManager(UiUtils.getInstance(mContext).getLayoutManager(UiUtils.LayoutManager.VERTICAL));

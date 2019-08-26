@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/hd_nologinview_text_size" android:textColor="@color/hd_nologin_text" android:gravity="center" android:id="@id/view1" android:background="@drawable/hd_more_fun_item_bg" android:layout_width="fill_parent" android:layout_height="57.0dip" android:text="@string/hd_add_star" />
+    <View style="@style/hd_gridview_gap_line" />
+    <TextView android:textSize="@dimen/hd_nologinview_text_size" android:textColor="@color/hd_nologin_text" android:gravity="center" android:id="@id/view2" android:background="@drawable/hd_more_fun_item_bg" android:layout_width="fill_parent" android:layout_height="57.0dip" android:text="@string/hd_cancel_subscribe" />
+</LinearLayout>

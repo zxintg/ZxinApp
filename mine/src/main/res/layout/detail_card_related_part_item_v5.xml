@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/detail_card_item_layout" android:background="@drawable/other_person_gridview_item_selector" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_item_height_v5">
+        <com.youku.phone.channel.view.ChannelCellImageLayout android:id="@id/detail_card_item_video_layout" android:layout_width="@dimen/detail_card_item_image_width_v5" android:layout_height="@dimen/detail_card_item_image_height_v5" android:layout_marginLeft="@dimen/detail_card_series_more_right_v5" android:layout_centerVertical="true">
+            <FrameLayout android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center" android:layout_width="@dimen/icon_default_width" android:layout_height="@dimen/icon_default_width" android:src="@drawable/channel_not_loaded_icon_play" />
+                <ImageView android:id="@id/detail_video_item_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+            </FrameLayout>
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_item_image_mengceng_height_v5" android:src="@drawable/detail_mengceng_xiao" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+        </com.youku.phone.channel.view.ChannelCellImageLayout>
+        <TextView android:textSize="@dimen/detail_card_item_image_time_size_v5" android:textColor="@color/white" android:id="@id/detail_video_item_vv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/detail_card_item_image_time_margin_v5" android:layout_marginBottom="@dimen/detail_card_item_image_time_margin_v5" android:text="00:35" android:layout_alignRight="@id/detail_card_item_video_layout" android:layout_alignBottom="@id/detail_card_item_video_layout" />
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_series_more_right_v5" android:layout_marginTop="@dimen/detail_card_item_title_margin_top_v5" android:layout_marginRight="@dimen/detail_card_item_title_margin_right_v5" android:layout_marginBottom="@dimen/detail_card_item_title_margin_top_v5" android:layout_toRightOf="@id/detail_card_item_video_layout" android:layout_alignParentTop="true">
+            <TextView android:textSize="@dimen/detail_card_item_title_size_v5" android:textColor="#ff333333" android:ellipsize="end" android:gravity="top" android:id="@id/detail_video_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="奔跑吧兄弟2：黄晓明联手情敌郑凯si名牌明联手情敌郑" android:maxLines="2" android:layout_alignParentTop="true" android:lineSpacingMultiplier="1.1" />
+            <RelativeLayout android:id="@id/detail_card_item_part_bofangliang_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_video_item_bofangliang_margintop_v5" android:layout_below="@id/detail_video_item_title">
+                <ImageView android:id="@id/image_right_bofangliang" android:layout_width="@dimen/detail_card_bofangliang_v5" android:layout_height="@dimen/detail_card_bofangliang_v5" android:src="@drawable/bofangliang" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/detail_card_item_num_size_v5" android:textColor="#ffb5b7b9" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/detail_video_item_num" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="234,23424" android:singleLine="true" android:layout_toRightOf="@id/image_right_bofangliang" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <View android:id="@id/detail_card_realted_item_video_shadow" android:background="#ffebebeb" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

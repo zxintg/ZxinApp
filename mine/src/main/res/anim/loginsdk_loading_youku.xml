@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="100" android:drawable="@drawable/loading_frame1_youku" />
+    <item android:duration="100" android:drawable="@drawable/loading_frame2_youku" />
+    <item android:duration="100" android:drawable="@drawable/loading_frame3_youku" />
+    <item android:duration="100" android:drawable="@drawable/loading_frame4_youku" />
+</animation-list>

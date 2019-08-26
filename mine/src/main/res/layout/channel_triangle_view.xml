@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/triangle_wrapper" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.widget.TriangleView android:layout_gravity="center|left|top" android:id="@id/triangle_view" android:layout_width="@dimen/triangle_view_height" android:layout_height="@dimen/triangle_view_height" />
+    <com.youku.widget.RobbinTextView android:gravity="center" android:layout_gravity="center|left|top" android:id="@id/triangle_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/triangle_text" />
+</FrameLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/selector_bg_search_click" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/suggestion_item_logo_layout" android:padding="@dimen/pgc_item_logo_padding" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <FrameLayout android:background="#ffc3c3c3" android:layout_width="@dimen/pgc_item_logo_width" android:layout_height="@dimen/pgc_item_logo_width">
+            <ImageView android:id="@id/suggestion_item_logo_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/avatar_default" android:scaleType="centerCrop" />
+            <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/detail_rukoumengceng_selector" />
+        </FrameLayout>
+    </FrameLayout>
+    <LinearLayout android:gravity="center|left" android:orientation="vertical" android:paddingLeft="@dimen/pgcdirect_item_right_layout_paddingleft" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/suggestion_item_logo_layout" android:layout_centerInParent="true" android:layout_centerVertical="true">
+        <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/pgcdirect_item_title_first_height">
+            <TextView android:textSize="@dimen/search_item_suggestion_keyword_textsize" android:ellipsize="end" android:id="@id/suggestion_item_title_first" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" style="@style/pgcdirect_item_title_first" />
+            <ImageView android:id="@id/suggestion_item_title_img" android:layout_width="@dimen/detail_subscribe_certified_height" android:layout_height="@dimen/detail_subscribe_certified_height" android:layout_marginLeft="@dimen/home_notice_img_right_margin" android:src="@drawable/user_certified_offline_icon" android:layout_centerVertical="true" />
+        </LinearLayout>
+        <TextView android:ellipsize="end" android:id="@id/suggestion_item_title_second" android:layout_width="wrap_content" android:layout_height="@dimen/pgcdirect_item_title_second_height" android:text="@string/pgc_item_title_second" android:singleLine="true" style="@style/txt_searchdirect_second" />
+    </LinearLayout>
+    <View android:background="#fff0f0f0" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/suggestion_item_logo_layout" />
+</RelativeLayout>

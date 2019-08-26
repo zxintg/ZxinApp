@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/img_recommend_emptyview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/img_recommend_emptyview_margintop" android:src="@drawable/search_icon_no_results" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="@dimen/txt_recommend_emptyview_textsize" android:textColor="#ff999999" android:gravity="center" android:id="@id/txt_recommend_emptyview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/txt_recommend_emptyview_margintop" android:text="@string/searchresult_recommend_empty" android:layout_below="@id/img_recommend_emptyview" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="@dimen/txt_recommend_emptyview_textsize" android:textColor="#ff666666" android:id="@id/txt_recommend_emptyview_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/txt_recommend_emptyview_more_marginleft" android:layout_marginTop="@dimen/txt_recommend_emptyview_more_margintop" android:text="@string/searchresult_recommend_empty_more" android:layout_below="@id/txt_recommend_emptyview" />
+</RelativeLayout>

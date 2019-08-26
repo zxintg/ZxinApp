@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/pc_fragment_main_height_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.userchannel.view.StickyListViewForSearch android:id="@id/search_lv_tips" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:layout_above="@id/menu_title" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/pc_search_main_linearlayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/pc_search_loading_linearlayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/listview_footerview_loding_image" android:layout_width="@dimen/small_buffering_progressbar_width" android:layout_height="@dimen/small_buffering_progressbar_width" android:src="@drawable/buffering_circle" />
+            <TextView android:ellipsize="end" android:id="@id/listview_footerview_loding_title" android:paddingLeft="@dimen/plugin_loading_title_txt_paddingleftright" android:paddingRight="@dimen/plugin_loading_title_txt_paddingleftright" android:layout_width="wrap_content" android:layout_height="@dimen/plugin_small_loading_vip_logo_txt_height" android:layout_marginTop="20.0dip" android:text="@string/pc_search_loading_word" android:singleLine="true" style="@style/plugin_small_loading_title_txt" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/pc_search_empty_linearlayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/empty_view_image" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pc_home_page_feed_empty" />
+            <TextView android:id="@id/pc_search_empty_word" android:layout_width="wrap_content" android:layout_height="@dimen/plugin_small_loading_vip_logo_txt_height" android:layout_marginTop="20.0dip" android:text="@string/pc_search_no_result_word" style="@style/plugin_small_loading_title_txt" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

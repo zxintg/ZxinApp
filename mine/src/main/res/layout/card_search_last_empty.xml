@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/vg_card_serarch_last_empty" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="优酷君也不知道怎么了,重试一下?" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22.5dip" android:src="@drawable/ic_search_card_empty_refresh" />
+</LinearLayout>

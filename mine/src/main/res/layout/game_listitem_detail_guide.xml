@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/list_item" android:background="@drawable/game_listview_item_selector" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/game_detail_guide_item_height" android:layout_marginLeft="@dimen/game_detail_card_content_left_margin" android:layout_marginRight="@dimen/game_detail_card_content_left_margin">
+        <TextView android:textSize="@dimen/game_category_text_size" android:textColor="#ff666666" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tv_detail_strategy_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="攻略" android:singleLine="true" android:layout_toLeftOf="@id/tv_detail_strategy_date" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/game_detail_recom_guide_date_text_size" android:textColor="#ffb1b0b0" android:id="@id/tv_detail_strategy_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activities_game_details_text_marginLeft" android:text="2016-05-01" android:singleLine="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

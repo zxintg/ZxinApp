@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/calendartitlelayout" android:background="#fff0f0f0" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/livecalendar_title_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:attrsTriangle="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/imageView2" android:background="@drawable/shape_cycle_5dp_black" android:layout_width="@dimen/livecalendar_cycle_width" android:layout_height="@dimen/livecalendar_cycle_height" android:layout_marginLeft="@dimen/livecalendar_cycle_marginLeft" android:layout_marginTop="@dimen/livecalendar_cycle_marginTop" android:layout_alignTop="@id/textDate" android:layout_alignParentLeft="true" />
+    <com.youku.livesdk.Triangle android:id="@id/TriangleView" android:layout_width="@dimen/livecalendar_Triangle_width" android:layout_height="@dimen/livecalendar_Triangle_height" android:layout_marginLeft="@dimen/livecalendar_Triangle_marginLeft" android:layout_alignParentBottom="true" attrsTriangle:TriangleColor="#ffffffff" />
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="16.0sp" android:textColor="@color/colorBlack" android:id="@id/textDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/livecalendar_DateText_marginLeft" android:text="2月14日" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+</RelativeLayout>

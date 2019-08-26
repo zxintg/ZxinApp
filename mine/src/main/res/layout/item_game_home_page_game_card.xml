@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/game_card_layout" android:paddingLeft="@dimen/card_margin_32dp" android:paddingRight="@dimen/card_margin_32dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/game_item_1" layout="@layout/include_game_home_page_game_item" />
+        <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <include android:id="@id/game_item_2" layout="@layout/include_game_home_page_game_item" />
+        <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <include android:id="@id/game_item_3" layout="@layout/include_game_home_page_game_item" />
+        <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <include android:id="@id/game_item_4" layout="@layout/include_game_home_page_game_item" />
+    </LinearLayout>
+    <View android:id="@id/split_line" android:layout_width="fill_parent" android:layout_height="@dimen/game_home_item_margin_30dp" />
+    <View android:id="@id/game_card_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/game_home_item_margin_56dp" />
+</LinearLayout>

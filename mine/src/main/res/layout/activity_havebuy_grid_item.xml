@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:layout_width="@dimen/icon_not_loaded_width" android:layout_height="@dimen/icon_not_loaded_width" android:src="@drawable/channel_not_loaded_icon_play" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <com.youku.widget.YoukuImageView android:id="@id/havebuy_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+        <TextView android:layout_gravity="bottom" android:id="@id/havebuy_stripe_bottom_txt" android:background="@drawable/waist_seal" android:paddingLeft="@dimen/havebuy_stripe_bottom_txt_paddingleft" android:layout_width="fill_parent" android:layout_height="@dimen/havebuy_stripe_bottom_txt_height" android:layout_alignBottom="@id/havebuy_img" style="@style/havebuy_stripe_bottom_txt" />
+        <include android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_above="@id/havebuy_stripe_bottom_txt" layout="@layout/waist_seal_line" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="@dimen/gridview_item_tv_height">
+        <com.youku.widget.TextViewEllipseEndFixed android:textAppearance="@style/Font4_gray_333333" android:ellipsize="end" android:id="@id/havebuy_txt" android:paddingLeft="@dimen/myyouku_item_line_margin_left" android:paddingRight="@dimen/myyouku_item_line_margin_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:minLines="2" />
+    </LinearLayout>
+    <View android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</LinearLayout>

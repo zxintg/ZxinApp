@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/interaction_tab_small_3g_tip_relative_layout" android:background="@color/home_history_view_bg_color" android:layout_width="fill_parent" android:layout_height="@dimen/home_history_view_height" android:layout_alignParentTop="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.interactiontab.widget.InteractionTabPlayerViewTopView android:textSize="@dimen/home_history_view_text_size" android:textColor="@color/text_color_white" android:gravity="center" android:id="@id/interaction_tab_small_3g_tip_top" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="正在使用2G/3G/4G网络，可能会产生网络流量" />
+    <ImageView android:id="@id/interaction_tab_small_3g_tip_top_close_icon" android:layout_width="@dimen/home_history_view_icon_size" android:layout_height="@dimen/home_history_view_icon_size" android:layout_marginRight="@dimen/home_history_view_close_icon_margin_right" android:src="@drawable/home_history_view_close" android:scaleType="centerCrop" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

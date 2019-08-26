@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ticket_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" style="@style/ticket_one_layout">
+        <TextView android:id="@id/film_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ticket_film_name" />
+        <TextView android:id="@id/ticket_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" style="@style/ticket_status" />
+    </RelativeLayout>
+    <View android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <include layout="@layout/ticket_view_item" />
+    <View android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <ViewFlipper android:id="@id/ticket_view_flipper" android:layout_width="fill_parent" style="@style/ticket_card_footer">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/note_title" style="@style/ticket_card_footer_text" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/click_refresh_text" style="@style/ticket_card_footer_text" />
+        </RelativeLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:gravity="center" android:id="@id/ticket_call_phone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/refund_text" style="@style/ticket_card_footer_dial" />
+        </LinearLayout>
+    </ViewFlipper>
+    <View android:background="#ffc9c9c9" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</LinearLayout>

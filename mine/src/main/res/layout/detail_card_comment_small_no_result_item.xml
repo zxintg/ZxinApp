@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_gravity="center" android:id="@id/tv_no_result" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="讨论区内容未加载,请  " style="@style/detail_comment_submit" />
+    <TextView android:textColor="#ff444444" android:gravity="center" android:id="@id/tv_no_result_refresh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="重试" android:drawableLeft="@drawable/search_icon_no_results_small" style="@style/detail_comment_submit" />
+</LinearLayout>

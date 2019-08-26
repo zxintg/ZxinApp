@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/unicom_dialog_bg" android:layout_width="@dimen/free_flow_dialog_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/free_flow_dialog_top_text_size" android:textColor="#ff999999" android:gravity="left" android:layout_gravity="left" android:id="@id/unicom_notify_message" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/free_flow_dialog_top_margin" android:layout_marginTop="@dimen/free_flow_dialog_top_margin" android:layout_marginRight="@dimen/free_flow_dialog_top_margin" android:layout_marginBottom="@dimen/free_flow_dialog_top_margin" android:text="联通免流量地址获取失败，继续播放将消耗套餐流量。 " />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Button android:textSize="20.0sp" android:textColor="#ff737474" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/unicom_btn_continue" android:background="@drawable/unicom_btn_selector" android:layout_width="wrap_content" android:layout_height="@dimen/free_flow_dialog_button_height" android:text="确定退订" android:layout_weight="1.0" />
+        <View android:background="#ffcfdce0" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+        <Button android:textSize="20.0sp" android:textColor="#ff249bd6" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/unicom_btn_cancel" android:background="@drawable/unicom_btn_blue" android:layout_width="wrap_content" android:layout_height="@dimen/free_flow_dialog_button_height" android:text="返回" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

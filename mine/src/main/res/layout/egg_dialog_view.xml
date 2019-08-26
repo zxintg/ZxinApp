@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/layout_egg_dialog" android:background="@color/white" android:layout_width="@dimen/layout_egg_dialog_width" android:layout_height="@dimen/layout_egg_dialog_height">
+        <ImageView android:id="@id/egg_dialog_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/egg_dialog_img_marginleft" android:layout_marginTop="@dimen/egg_dialog_img_margintop" android:src="@drawable/logo" />
+        <LinearLayout android:orientation="vertical" android:id="@id/egg_dialog_center_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/egg_dialog_layout_maginleftright" android:layout_marginTop="@dimen/egg_dialog_layout_margintop" android:layout_marginRight="@dimen/egg_dialog_layout_maginleftright" android:layout_above="@id/layout_egg_dialog_bottom" android:layout_below="@id/egg_dialog_img">
+            <RadioGroup android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/radiogroup_egg_dialog_api" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RadioButton android:gravity="center" android:id="@id/btn_egg_dialog_api_test" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/mycenter_setting_radiobtn_selector" android:text="@string/btn_egg_dialog_api_test" android:layout_weight="1.0" style="@style/egg_dialog_txt" />
+                <RadioButton android:gravity="center" android:id="@id/btn_egg_dialog_api_test2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/mycenter_setting_radiobtn_selector" android:text="@string/btn_egg_dialog_api_test2" android:layout_weight="1.0" style="@style/egg_dialog_txt" />
+                <RadioButton android:gravity="center" android:id="@id/btn_egg_dialog_api_official" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/mycenter_setting_radiobtn_selector" android:text="@string/btn_egg_dialog_api_official" android:layout_weight="1.0" style="@style/egg_dialog_txt" />
+            </RadioGroup>
+            <LinearLayout android:orientation="horizontal" android:id="@id/egg_dialog_switch_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/egg_dialog_layout_margintop">
+                <CheckBox android:gravity="center" android:id="@id/chk_egg_dialog_switch_log" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/mycenter_setting_checkbox_selector" android:text="@string/chk_egg_dialog_switch_log" style="@style/egg_dialog_txt" />
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:id="@id/layout_egg_dialog_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/layout_egg_dialog_bottom_height" android:layout_alignParentBottom="true">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="center" android:id="@id/layout_egg_dialog_cancel" android:background="@drawable/btn_vip_dialog_cancel" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:id="@id/egg_dialog_txt_cancel" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/egg_dialog_txt_cancel" style="@style/egg_dialog_txt_cancel" />
+                </LinearLayout>
+                <View android:background="#2c5e5e5e" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                <View android:background="#ffffffff" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                <LinearLayout android:gravity="center" android:id="@id/layout_egg_dialog_set" android:background="@drawable/btn_vip_dialog_ok" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:id="@id/egg_dialog_txt_set" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/egg_dialog_txt_set" style="@style/egg_dialog_txt_set" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="@drawable/soku_layout_bottom_cover" android:layout_width="fill_parent" android:layout_height="5.0px" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:ellipsize="end" android:id="@id/more_item_listview_item_txt" android:background="@drawable/bottom_show_txt_bg_selector" android:paddingLeft="@dimen/more_item_listview_item_txt_paddingleft" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" style="@style/more_item_listview_item_txt" />
+    <ImageView android:id="@id/iv_new_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/series_item_new_img" android:scaleType="centerCrop" />
+</FrameLayout>

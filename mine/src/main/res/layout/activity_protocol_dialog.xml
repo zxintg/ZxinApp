@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/main" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_title" android:clickable="false" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <TextView android:textSize="20.0dip" android:textColor="#ff333333" android:id="@id/tv_tophead_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="频道主直播喂养计划协议" android:layout_centerInParent="true" />
+        <RelativeLayout android:clickable="true" android:layout_width="60.0dip" android:layout_height="40.0dip" android:layout_centerVertical="true" android:onClick="goBack">
+            <ImageButton android:id="@id/btn_back" android:visibility="gone" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_about_me" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageView android:id="@id/iv_protocol_close" android:clickable="true" android:layout_width="25.0dip" android:layout_height="25.0dip" />
+            <ImageView android:id="@id/red_point_message" android:visibility="gone" android:layout_width="8.0dip" android:layout_height="8.0dip" android:layout_marginLeft="20.0dip" />
+        </RelativeLayout>
+        <View android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="协议内容" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <View android:background="#ff2d3238" android:layout_width="fill_parent" android:layout_height="0.8000001dip" android:layout_alignTop="@id/header_find" />
+</LinearLayout>

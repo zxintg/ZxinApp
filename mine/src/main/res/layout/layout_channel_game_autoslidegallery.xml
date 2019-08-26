@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youku.gamecenter.widgets.channel.ChannelAutoSlideGallery android:id="@id/auto_slide_gallery" android:layout_width="fill_parent" android:layout_height="@dimen/game_channel_slide_gallery_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.gamecenter.widgets.YoukuGallery android:layout_gravity="center" android:id="@id/poster" android:fadingEdgeLength="0.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/game_channel_slide_gallery_height" android:spacing="0.0dip" />
+    <RelativeLayout android:id="@id/poster_layer" android:layout_width="fill_parent" android:layout_height="@dimen/game_channel_slide_gallery_height">
+        <View android:id="@id/center_gallery" android:visibility="invisible" android:layout_width="@dimen/top_gallery_for_pad_width" android:layout_height="10.0dip" android:layout_centerHorizontal="true" />
+        <View android:id="@id/left_view" android:background="@drawable/gallery_arrow_left_mask" android:layout_width="wrap_content" android:layout_height="@dimen/game_channel_slide_gallery_height" android:layout_toLeftOf="@id/center_gallery" android:layout_alignParentLeft="true" android:contentDescription="@string/str_image" />
+        <ImageView android:id="@id/center_galllery_left" android:layout_width="@dimen/game_channel_gallery_arrow_width" android:layout_height="@dimen/game_channel_gallery_arrow_height" android:layout_marginRight="@dimen/game_channel_gallery_arrow_margin" android:src="@drawable/gallery_arrow_left" android:layout_toLeftOf="@id/center_gallery" android:layout_centerVertical="true" android:contentDescription="@string/str_image" />
+        <View android:id="@id/right_view" android:background="@drawable/gallery_arrow_right_mask" android:layout_width="wrap_content" android:layout_height="@dimen/game_channel_slide_gallery_height" android:layout_toRightOf="@id/center_gallery" android:layout_alignParentRight="true" android:contentDescription="@string/str_image" />
+        <ImageView android:id="@id/center_galllery_right" android:layout_width="@dimen/game_channel_gallery_arrow_width" android:layout_height="@dimen/game_channel_gallery_arrow_height" android:layout_marginLeft="@dimen/game_channel_gallery_arrow_margin" android:src="@drawable/gallery_arrow_right" android:layout_toRightOf="@id/center_gallery" android:layout_centerVertical="true" android:contentDescription="@string/str_image" />
+        <LinearLayout android:orientation="vertical" android:id="@id/indicators" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@id/center_gallery" android:layout_alignParentBottom="true">
+            <LinearLayout android:layout_gravity="left" android:orientation="horizontal" android:id="@id/point_containers" android:layout_width="wrap_content" android:layout_height="@dimen/point_container_height" android:layout_marginLeft="@dimen/game_channel_land_margin_left" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/indicator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="left" android:orientation="horizontal" android:id="@id/point_container" android:layout_width="wrap_content" android:layout_height="@dimen/point_container_height" android:layout_marginLeft="@dimen/game_channel_slide_gallery_point_margin_left" android:layout_marginBottom="@dimen/point_container_margin_bottom" />
+    </LinearLayout>
+</com.youku.gamecenter.widgets.channel.ChannelAutoSlideGallery>

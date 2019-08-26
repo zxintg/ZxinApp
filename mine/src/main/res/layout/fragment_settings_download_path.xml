@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/app_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/myyouku_setting_lists_gap">
+        <LinearLayout android:orientation="vertical" android:id="@id/cache_path_suggestion" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/item_spacing" android:layout_marginTop="@dimen/item_spacing" android:layout_marginRight="@dimen/item_spacing" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/sdcard_tips_44" android:paddingLeft="@dimen/item_spacing" android:paddingRight="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_card_prompt_icon_marginLeft" android:src="@drawable/settings_icon_tixing" />
+            <TextView android:textSize="@dimen/settings_card_prompt_text_size" android:textColor="#ff888888" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_card_prompt_text_marginLeft" android:layout_marginTop="@dimen/settings_card_prompt_text_marginTop" android:text="@string/sdcard_tips_44" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

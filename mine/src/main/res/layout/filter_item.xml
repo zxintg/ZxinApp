@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="@dimen/search_filter_item_paddingtop" android:paddingBottom="@dimen/search_filter_item_paddingbottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/search_filter_item_subtitle_textsize" android:textColor="@color/white" android:id="@id/filter_subtitle" android:paddingTop="@dimen/search_filter_item_subtitle_paddingtop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/search_filter_item_subtitle_marginleft" android:layout_marginRight="@dimen/search_filter_item_subtitle_marginright" android:text="@string/filter_title" />
+    <LinearLayout android:orientation="vertical" android:id="@id/filter_items_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/search_filter_item_wrapper_marginleft" android:layout_marginTop="@dimen/search_filter_item_wrapper_margintop" android:layout_marginRight="@dimen/search_filter_item_wrapper_marginright" />
+</LinearLayout>

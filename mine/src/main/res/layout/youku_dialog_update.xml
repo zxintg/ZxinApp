@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layout_update_dialog" android:background="@color/white" android:layout_width="@dimen/layout_vip_dialog_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center|left" android:id="@id/dialog_title" android:layout_width="@dimen/dialog_message_layout_width" android:layout_height="@dimen/dialog_update_title_height" android:text="正在下载更新" style="@style/update_title" />
+    <View android:id="@id/picker_dialog_title_line" android:background="#ffdbdbdb" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <ProgressBar android:id="@id/dialog_progress_bar" android:layout_width="fill_parent" android:layout_height="6.0px" android:max="100" android:progress="0" android:progressDrawable="@drawable/update_progress_bar" style="?android:attr/progressBarStyleHorizontal" />
+    <TextView android:id="@id/dialog_message" android:layout_width="@dimen/dialog_message_layout_width" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_message_layout_margintop" android:layout_marginBottom="@dimen/dialog_message_layout_margintop" android:minHeight="@dimen/dialog_message_layout_height" style="@style/dialog_message" />
+    <RelativeLayout android:id="@id/layout_normal_dialog_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/layout_vip_dialog_bottom_height" android:layout_marginTop="@dimen/dialog_message_layout_margintop">
+        <TextView android:gravity="center" android:id="@id/update_background_btn" android:background="@drawable/btn_vip_dialog_cancel" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="后台下载" style="@style/update_txt_progress" />
+        <View android:background="@drawable/soku_layout_bottom_cover" android:layout_width="fill_parent" android:layout_height="5.0px" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+</LinearLayout>

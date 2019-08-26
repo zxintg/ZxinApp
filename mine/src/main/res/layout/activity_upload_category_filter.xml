@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <RelativeLayout android:id="@id/filter_title_wrapper" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_upload_video_dialog_top_height">
+                        <TextView android:textAppearance="@style/Font4_white" android:id="@id/filter_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/myyouku_upload_video_dialog_title_left_margin" android:layout_marginTop="@dimen/myyouku_upload_video_dialog_title_top_margin" android:text="@string/mycenter_upload_video_dialog_title" />
+                        <View android:id="@id/bottom_separator" android:background="@color/mycenter_upload_video_dialog_line_bottom" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+                        <View android:background="@color/mycenter_upload_video_dialog_line_top" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_above="@id/bottom_separator" />
+                    </RelativeLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@id/filter_area" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/myyouku_upload_video_dialog_lines_left_margin" android:layout_marginTop="@dimen/myyouku_upload_video_dialog_other_line_top_margin" />
+                    <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/myyouku_upload_video_dialog_btns_top_margin">
+                        <RelativeLayout android:orientation="vertical" android:id="@id/cancel_view" android:clickable="true" android:layout_width="@dimen/filter_cancel_width" android:layout_height="@dimen/filter_cancel_height">
+                            <View android:id="@id/cancel_top_line" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentTop="true" />
+                            <View android:id="@id/cancel_bottom_line" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+                            <TextView android:textAppearance="@style/filterSubTitleFont" android:gravity="center" android:id="@id/cancel_tv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/cancel" android:layout_above="@id/cancel_bottom_line" android:layout_below="@id/cancel_top_line" />
+                        </RelativeLayout>
+                        <RelativeLayout android:id="@id/confirm_view" android:clickable="true" android:layout_width="@dimen/filter_cancel_width" android:layout_height="@dimen/filter_cancel_height" android:layout_marginLeft="@dimen/filter_btn_margin" android:layout_toRightOf="@id/cancel_view">
+                            <View android:id="@id/top_line" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentTop="true" />
+                            <View android:id="@id/bottom_line" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+                            <TextView android:textAppearance="@style/filterSubTitleFont" android:gravity="center" android:id="@id/confirm_tv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/confirm" android:layout_above="@id/bottom_line" android:layout_below="@id/top_line" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+                <ProgressBar android:id="@id/progressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="@android:style/Widget.ProgressBar.Inverse" />
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

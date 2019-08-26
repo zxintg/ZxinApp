@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/topic_des_lin" android:background="@color/text_color_white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:padding="@dimen/padding_left_right_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerVertical="true">
+        <ImageView android:id="@id/up_community_image" android:layout_width="@dimen/community_cover_h" android:layout_height="@dimen/community_cover_h" android:src="@drawable/img_nocover" android:scaleType="centerCrop" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/indicator_right_padding" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/text_size_12" android:textColor="@color/filter_item_text" android:ellipsize="end" android:id="@id/up_community_des" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="3" android:lineSpacingExtra="@dimen/padding_left_right_2" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_left_right_5">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/text_size_12" android:textColor="@color/dialog_grid_text_color" android:ellipsize="end" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/community_video" android:singleLine="true" />
+                    <TextView android:textSize="@dimen/text_size_12" android:textColor="@color/main_text_color" android:id="@id/up_community_video_number" android:paddingLeft="@dimen/padding_left_right_5" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_25">
+                    <TextView android:textSize="@dimen/text_size_12" android:textColor="@color/dialog_grid_text_color" android:ellipsize="end" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/community_join_person" android:singleLine="true" />
+                    <TextView android:textSize="@dimen/text_size_12" android:textColor="@color/main_text_color" android:id="@id/up_community_join_number" android:paddingLeft="@dimen/padding_left_right_5" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/community_choose_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</LinearLayout>

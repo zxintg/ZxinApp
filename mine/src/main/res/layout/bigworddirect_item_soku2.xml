@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/searchdirect_header_gridview_verticalspacing"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textSize="@dimen/search_card_header_title_size" android:textColor="#ff333333" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/bigword_direct_item_top_title_txt" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginLeft="@dimen/search_widget_edit_padding_left" android:layout_marginRight="@dimen/search_widget_edit_padding_left" />
+        <View android:background="@color/persondirect_item_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <com.soku.searchsdk.view.BigWordDirectItemGridviewLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.soku.searchsdk.view.ExtendedViewPager android:id="@id/bigworddirect_item_viewpager" android:persistentDrawingCache="animation" android:layout_width="fill_parent" android:layout_height="fill_parent" android:flipInterval="30" />
+        </com.soku.searchsdk.view.BigWordDirectItemGridviewLayout>
+        <View android:background="@color/persondirect_item_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <FrameLayout android:id="@id/bigworddirect_item_more_txt_layout" android:background="#fffafafa" android:layout_width="fill_parent" android:layout_height="@dimen/persondirect_item_more_txt_height">
+            <TextView android:layout_gravity="center" android:id="@id/bigworddirect_item_more_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/more" android:drawableRight="@drawable/home_card_tail_arrow" android:drawablePadding="@dimen/persondirect_item_top_titlesecond_txt_margintop" style="@style/soku_persondirect_item_more_txt" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

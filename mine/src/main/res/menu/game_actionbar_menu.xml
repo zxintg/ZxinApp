@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:TabsWithSwipeGesture="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@id/menu_search"
+        android:icon="@drawable/btn_search"
+        android:iconifiedByDefault="true"
+        android:orderInCategory="0"
+        android:title="@string/game_action_bar_icon_desc_search"
+        TabsWithSwipeGesture:showAsAction="always" />
+    <item
+        android:id="@id/my_center"
+        android:icon="@drawable/btn_game_mycenter"
+        android:iconifiedByDefault="true"
+        android:orderInCategory="1"
+        android:title="@string/game_action_bar_icon_desc_personal"
+        TabsWithSwipeGesture:showAsAction="always" />
+    <item
+        android:id="@id/menu_present"
+        android:icon="@drawable/present_icon"
+        android:orderInCategory="2"
+        android:title="@string/game_action_bar_icon_desc_present"
+        TabsWithSwipeGesture:showAsAction="always" />
+    <item
+        android:id="@id/menu_manager"
+        android:icon="@drawable/download_manager"
+        android:orderInCategory="3"
+        android:title="@string/game_action_bar_icon_desc_download"
+        TabsWithSwipeGesture:showAsAction="always" />
+</menu>

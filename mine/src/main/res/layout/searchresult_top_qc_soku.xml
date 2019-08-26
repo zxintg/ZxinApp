@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/searchdirect_header_top_qc_soku" android:layout_width="fill_parent" android:layout_height="@dimen/searchresult_top_qc_height">
+        <TextView android:id="@id/txt_searchresult_top_qc_tag" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/txt_searchresult_top_qc_tag_marginleft" android:text="@string/txt_searchresult_top_qc_tag" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/txt_searchresult_top_qc_tag" />
+        <TextView android:ellipsize="end" android:id="@id/txt_searchresult_top_qc" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxEms="8" android:singleLine="true" android:layout_toRightOf="@id/txt_searchresult_top_qc_tag" android:layout_centerVertical="true" style="@style/txt_searchresult_top_qc" />
+        <TextView android:id="@id/txt_searchresult_top_qc_tag1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/txt_searchresult_top_qc_tag1" android:layout_toRightOf="@id/txt_searchresult_top_qc" android:layout_centerVertical="true" style="@style/txt_searchresult_top_qc_tag" />
+        <TextView android:ellipsize="end" android:id="@id/txt_searchresult_top_qc_word" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/youku_title_filter" android:maxEms="8" android:singleLine="true" android:drawableRight="@drawable/qc_word_arrow" android:drawablePadding="@dimen/txt_searchresult_top_qc_word_drawablepadding" android:layout_toRightOf="@id/txt_searchresult_top_qc_tag1" android:layout_centerVertical="true" style="@style/txt_searchresult_top_qc_word" />
+    </RelativeLayout>
+</FrameLayout>

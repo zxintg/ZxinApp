@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/searchdirect_item_viewswitcher_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="@dimen/search_card_header_height_showlist" android:layout_marginTop="@dimen/search_card_header_margin_showlist" android:layout_marginBottom="@dimen/search_card_header_margin_showlist" layout="@layout/include_search_last_card_header" />
+    <android.support.v7.widget.RecyclerView android:id="@id/rv_search_last_show_list_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

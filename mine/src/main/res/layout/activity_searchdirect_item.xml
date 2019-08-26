@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/searchdirect_item_layout_top" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="@dimen/searchdirect_item_layout_top_height">
+            <RelativeLayout android:id="@id/searchdirect_item_layout_top_left" android:clipChildren="false" android:layout_width="@dimen/searchdirect_item_layout_top_left_width" android:layout_height="fill_parent">
+                <FrameLayout android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:layout_gravity="center" android:layout_width="@dimen/icon_default_width" android:layout_height="@dimen/icon_default_width" android:src="@drawable/channel_not_loaded_icon_play" />
+                    <ImageView android:id="@id/searchdirect_item_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+                    <RelativeLayout android:id="@id/triangle_wrapper" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <com.youku.widget.TriangleView android:id="@id/triangle_view" android:layout_width="@dimen/triangle_view_height" android:layout_height="@dimen/triangle_view_height" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+                        <com.youku.widget.RobbinTextView android:id="@id/triangle_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/triangle_text" />
+                    </RelativeLayout>
+                </FrameLayout>
+                <TextView android:id="@id/searchdirect_txt_definition" android:layout_width="@dimen/searchdirect_txt_definition_width" android:layout_height="@dimen/searchdirect_txt_definition_height" android:layout_marginTop="@dimen/searchdirect_txt_definition_margintop" android:layout_marginRight="@dimen/searchdirect_txt_definition_marginright" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/searchdirect_txt_definition" />
+                <RelativeLayout android:orientation="vertical" android:id="@id/searchdirect_item_layout_top_left_bottom" android:background="@drawable/waist_seal" android:layout_width="fill_parent" android:layout_height="@dimen/searchdirect_item_layout_top_left_bottom_height" android:layout_alignParentBottom="true">
+                    <TextView android:id="@id/txt_searchdirect_stripe_bottom" android:paddingLeft="@dimen/txt_searchdirect_stripe_bottom_paddingleft" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/txt_searchdirect_stripe_bottom" />
+                    <TextView android:id="@id/txt_searchdirect_updating" android:paddingLeft="@dimen/txt_searchdirect_updating_paddingleft" android:layout_width="@dimen/txt_searchdirect_updating_width" android:layout_height="@dimen/txt_searchdirect_updating_height" android:layout_marginRight="@dimen/txt_searchdirect_updating_marginright" android:text="@string/txt_searchdirect_updating" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/txt_searchdirect_updating" />
+                    <include android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentTop="true" layout="@layout/waist_seal_line" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/searchdirect_item_layout_top_middle" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/searchdirect_item_layout_top_middle_marginleft" android:layout_toLeftOf="@id/searchdirect_item_layout_top_right" android:layout_toRightOf="@id/searchdirect_item_layout_top_left">
+                <TextView android:id="@id/txt_searchdirect_first_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/txt_searchdirect_first_title_margintop" style="@style/txt_searchdirect_first_title" />
+                <TextView android:id="@id/txt_searchdirect_second" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/txt_searchdirect_second_margintop" android:layout_below="@id/txt_searchdirect_first_title" style="@style/txt_searchdirect_second" />
+                <TextView android:id="@id/txt_searchdirect_third" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/txt_searchdirect_third_margintop" android:layout_below="@id/txt_searchdirect_second" style="@style/txt_searchdirect_second" />
+                <TextView android:id="@id/txt_searchdirect_reputation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/txt_searchdirect_third_margintop" android:layout_below="@id/txt_searchdirect_third" style="@style/txt_searchdirect_reputation" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/searchdirect_item_layout_top_right" android:layout_width="@dimen/searchdirect_item_layout_top_right_width" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+                <ImageView android:id="@id/img_searchdirect_top_right_more" android:visibility="gone" android:layout_width="@dimen/img_searchdirect_top_right_more_width" android:layout_height="@dimen/img_searchdirect_top_right_more_height" android:src="@drawable/btn_more2" android:scaleType="centerInside" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/layout_searchdirect_top_right_play" android:visibility="gone" android:layout_width="@dimen/layout_searchdirect_top_right_play_width" android:layout_height="@dimen/layout_searchdirect_top_right_play_height" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                    <ImageView android:id="@id/img_searchdirect_top_right_play" android:layout_width="@dimen/img_searchdirect_top_right_play_width" android:layout_height="@dimen/img_searchdirect_top_right_play_width" android:src="@drawable/searchdirect_top_right_play" />
+                    <TextView android:id="@id/txt_searchdirect_top_right_play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/txt_searchdirect_top_right_play_marginleft" android:text="@string/txt_searchdirect_top_right_play" style="@style/txt_searchdirect_top_right_play" />
+                </LinearLayout>
+                <View android:background="#ffeeeeee" android:layout_width="1.0px" android:layout_height="@dimen/layout_searchdirect_top_right_line_height" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/layout_searchdirect_other_site" android:layout_width="wrap_content" android:layout_height="@dimen/layout_searchdirect_top_right_play_height" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                    <ImageView android:id="@id/img_searchdirect_other_site" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/img_searchdirect_other_site_marginleft" />
+                    <TextView android:id="@id/txt_searchdirect_other_site" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/searchdirect_other_site_source" style="@style/txt_searchdirect_other_site" />
+                    <ImageView android:id="@id/img_searchdirect_other_site_arrow" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/other_site_arrow_selector" />
+                </LinearLayout>
+                <View android:background="#ffeeeeee" android:layout_width="1.0px" android:layout_height="@dimen/layout_searchdirect_top_right_line_height" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <View android:background="#ffd6d6d6" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    </LinearLayout>
+    <RelativeLayout android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="@dimen/searchdirect_item_layout_bottom_height">
+        <LinearLayout android:orientation="horizontal" android:id="@id/searchdirect_item_layout_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="7.0" android:layout_above="@id/searchdirect_item_layout_bottom_line" />
+        <View android:id="@id/searchdirect_item_layout_bottom_line" android:background="#ffd6d6d6" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+        <View android:id="@id/searchdirect_item_layout_bottom_cover" android:background="@drawable/layout_bottom_cover" android:layout_width="fill_parent" android:layout_height="5.0px" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+</LinearLayout>

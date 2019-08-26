@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@android:id/candidatesArea" android:background="#fff0f0f0" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/btn_item_crad_search_last_news_click" android:background="@drawable/selector_bg_search_click" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@android:id/candidatesArea">
+        <TextView android:textSize="@dimen/search_card_news_index_textsize" android:textColor="#ffffffff" android:gravity="center" android:id="@id/tv_item_crad_search_last_news_index" android:layout_width="@dimen/search_card_news_index_width" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/iv_item_crad_search_last_news_image" android:background="#ffe6e6e6" android:layout_width="@dimen/search_card_news_image_width" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        <TextView android:textSize="@dimen/search_card_news_title_textsize" android:textColor="#ff666666" android:ellipsize="end" android:gravity="center|left|top" android:id="@id/tv_item_crad_search_last_news_title" android:paddingLeft="@dimen/search_layout_padding" android:paddingTop="@dimen/search_card_news_title_paddingtop" android:paddingRight="@dimen/search_layout_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:lines="2" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="#fff2f2f2" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_series_item_height_land">
+        <TextView android:textSize="@dimen/detail_card_series_text_size_land" android:textColor="#ff777777" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_num" android:background="@drawable/other_person_gridview_item_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="1.0px" android:layout_marginBottom="1.0px" />
+        <ImageView android:id="@id/iv_state" android:background="@null" android:layout_width="@dimen/detail_card_series_image_height_land" android:layout_height="@dimen/detail_card_series_image_height_land" android:layout_marginRight="@dimen/detail_card_series_cache_grid_item_state_marginRight_land" android:layout_marginBottom="@dimen/detail_card_series_cache_grid_item_state_marginBottom_land" android:src="@drawable/series_item_select_img" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        <ImageView android:id="@id/series_item_trailer_img" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+</LinearLayout>

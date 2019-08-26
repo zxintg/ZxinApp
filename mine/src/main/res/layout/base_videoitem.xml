@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="fill_horizontal" android:orientation="horizontal" android:background="@color/colorWhite" android:paddingLeft="@dimen/live_livevideo_item_Linearlayout0_paddingLeft" android:paddingTop="@dimen/live_livevideo_item_Linearlayout0_paddingTop" android:paddingRight="@dimen/live_livevideo_item_Linearlayout0_paddingRight" android:paddingBottom="@dimen/live_livevideo_item_Linearlayout0_paddingBottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <FrameLayout android:layout_width="@dimen/live_livevideo_item_Imageview0_width" android:layout_height="@dimen/live_livevideo_item_Imageview0_height">
+                <ImageView android:id="@id/live_livevideo_item_image_video" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <LinearLayout android:gravity="center" android:id="@id/livePlaying_Relatedlayout" android:background="@drawable/shape_corner_radius_3dp_a153r247g55b22" android:paddingLeft="6.0dip" android:paddingTop="2.0dip" android:paddingRight="6.0dip" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip">
+                    <TextView android:textSize="10.0sp" android:textColor="@color/colorWhite" android:id="@id/live_livevideo_VideoTypeText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/infoPlayLive" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/live_livevideo_item_Linearlayout1" android:paddingLeft="@dimen/live_livevideo_item_Linearlayout1_paddingLeft" android:paddingRight="@dimen/live_livevideo_item_Linearlayout1_paddingRight" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="2.0dip" android:layout_marginBottom="0.0dip" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/live_livevideo_item_Textview0_textsize" android:ellipsize="end" android:id="@id/live_livevideo_item_Title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="优酷直播新片发布会优酷直播新片发布会" android:lineSpacingExtra="3.0dip" />
+            <TextView android:textSize="@dimen/live_livevideo_item_Textview1_textsize" android:textColor="#ff8c8c8c" android:id="@id/live_livevideo_item_Time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="4月12日 11:00" android:lines="1" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/live_livevideo_Linearlayout_button" android:clickable="true" android:layout_width="@dimen/live_livevideo_item_Linearlayout2_width" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/live_livevideo_item_image_button" android:background="@color/colorNone" android:layout_width="@dimen/live_livevideo_item_Imageview1_width" android:layout_height="@dimen/live_livevideo_item_Imageview1_height" android:src="@drawable/icon_date2x" />
+            <TextView android:textSize="@dimen/live_livevideo_item_Textview3_textsize" android:textColor="#ff8c8c8c" android:layout_gravity="center" android:id="@id/live_livevideo_item_num" android:paddingTop="@dimen/live_livevideo_item_Textview3_paddingTop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10000人围观" android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:textAppearance="?android:textAppearanceSmall" android:background="@color/colorR235G235B235" android:layout_width="fill_parent" android:layout_height="@dimen/live_livevideo_item_Textview4_textsize" />
+</LinearLayout>

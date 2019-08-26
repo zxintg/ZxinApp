@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:background="@color/hd_search_item_bg_color" android:paddingLeft="@dimen/hd_indicator_right_padding" android:layout_width="fill_parent" android:layout_height="@dimen/hd_search_item_souku_height" android:layout_marginTop="@dimen/hd_search_item_souku_margin_top">
+        <RelativeLayout android:gravity="center_horizontal" android:id="@id/hd_search_item_souku_img_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageView android:paddingRight="@dimen/hd_channel_item_menubtn_padding_r" android:layout_width="@dimen/hd_channel_item_menubtn_width" android:layout_height="@dimen/hd_channel_item_menubtn_height" android:src="@drawable/hd_channel_search_souku_right_arraw" android:scaleType="center" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/img_search_souku_item" android:layout_width="@dimen/hd_subscribe_item_photo_size" android:layout_height="@dimen/hd_subscribe_item_photo_size" android:layout_marginRight="@dimen/hd_indicator_right_padding" android:src="@drawable/hd_channel_search_in_souku" />
+            <TextView android:textSize="@dimen/hd_subscribe_tab_bar_size" android:textColor="@color/hd_nologin_text" android:id="@id/txt_search_item_souku" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="40.0dip" android:text="去全部频道搜索 “XXXX” 吧" android:singleLine="true" android:includeFontPadding="false" android:layout_toLeftOf="@id/hd_search_item_souku_img_layout" android:layout_toRightOf="@id/img_search_souku_item" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

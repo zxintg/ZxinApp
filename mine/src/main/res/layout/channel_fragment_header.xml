@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/channel_home_header_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="1.0px" android:layout_marginRight="1.0px"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/channel_item_top_divider" android:layout_width="fill_parent" android:layout_height="@dimen/channel_list_recycler_view_item_space" />
+    <FrameLayout android:id="@id/channel_home_header_top_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/channel_brand_card_title_height" android:layout_below="@id/channel_item_top_divider">
+        <View android:layout_gravity="center_vertical" android:background="#ff2fb3ff" android:layout_width="@dimen/home_card_item_box_title_shape_weight" android:layout_height="@dimen/home_card_item_box_title_shape_height" />
+        <TextView android:textSize="@dimen/channel_brand_card_title_text_size" android:textColor="#ff333333" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/channel_header_txt_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/sub_channel_home_item_top_title_left_margin" android:drawablePadding="@dimen/channel_brand_card_title_draw_padding_left" />
+        <TextView android:textSize="@dimen/channel_brand_card_sub_title_text_size" android:textColor="#ffb5b7b9" android:gravity="center_vertical" android:layout_gravity="center|right" android:id="@id/channel_header_txt_number" android:layout_width="wrap_content" android:layout_height="@dimen/channel_header_number_height" android:layout_marginRight="@dimen/channel_brand_card_sub_title_margin_right" />
+        <View android:layout_gravity="bottom" android:background="#ffeaeaea" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    </FrameLayout>
+    <RelativeLayout android:id="@id/channel_home_header_scroll_layout" android:background="#fffafafa" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/channel_home_header_top_layout">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignTop="@id/channel_home_horizontalscrollview" android:layout_alignBottom="@id/channel_home_horizontalscrollview" />
+        <HorizontalScrollView android:id="@id/channel_home_horizontalscrollview" android:background="@color/transparent" android:scrollbars="none" android:fadingEdge="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true">
+            <com.youku.widget.ChannelHeaderLayout android:orientation="horizontal" android:id="@id/channel_home_horizontalscrollview_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+    </RelativeLayout>
+</RelativeLayout>

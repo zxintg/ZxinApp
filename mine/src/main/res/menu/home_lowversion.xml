@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:TabsWithSwipeGesture="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/actionbar_search_selector"
+        android:id="@id/menu_search"
+        android:orderInCategory="0"
+        android:title="@string/search"
+        android:iconifiedByDefault="true"
+        TabsWithSwipeGesture:showAsAction="ifRoom" />
+    <item
+        android:icon="@drawable/actionbar_editor_selector"
+        android:id="@id/menu_edit"
+        android:visible="false"
+        android:orderInCategory="1"
+        android:title="删除"
+        TabsWithSwipeGesture:showAsAction="ifRoom" />
+    <item
+        android:icon="@drawable/actionbar_game_red_selector"
+        android:id="@id/menu_gamecenter"
+        android:orderInCategory="2"
+        android:title="@string/menu_gamecenter"
+        TabsWithSwipeGesture:showAsAction="ifRoom" />
+    <item
+        android:icon="@drawable/actionbar_recommend_selector"
+        android:id="@id/menu_recommend"
+        android:orderInCategory="3"
+        android:title="@string/menu_recommend"
+        TabsWithSwipeGesture:showAsAction="ifRoom" />
+    <item
+        android:icon="@drawable/actionbar_download_selector"
+        android:id="@id/menu_download"
+        android:orderInCategory="4"
+        android:title="@string/menu_cache"
+        TabsWithSwipeGesture:showAsAction="ifRoom" />
+    <item
+        android:icon="@drawable/actionbar_history_selector"
+        android:id="@id/menu_history"
+        android:orderInCategory="5"
+        android:title="@string/play_history"
+        TabsWithSwipeGesture:showAsAction="ifRoom" />
+    <item
+        android:icon="@drawable/actionbar_saosao_selector"
+        android:id="@id/menu_saosao"
+        android:orderInCategory="6"
+        android:title="@string/saosao"
+        TabsWithSwipeGesture:showAsAction="never" />
+    <item
+        android:id="@id/menu_refresh"
+        android:visible="false"
+        android:orderInCategory="7"
+        android:title="@string/refresh"
+        TabsWithSwipeGesture:showAsAction="never" />
+    <item
+        android:icon="@drawable/actionbar_login_selector"
+        android:id="@id/menu_login"
+        android:visible="false"
+        android:orderInCategory="8"
+        android:title="@string/login"
+        TabsWithSwipeGesture:showAsAction="never" />
+    <item
+        android:icon="@drawable/actionbar_setting_selector"
+        android:id="@id/menu_setting"
+        android:orderInCategory="9"
+        android:title="常用设置"
+        TabsWithSwipeGesture:showAsAction="never" />
+    <item
+        android:icon="@drawable/actionbar_feedback_selector"
+        android:id="@id/menu_feedback"
+        android:visible="false"
+        android:orderInCategory="10"
+        android:title="@string/menu_feedback"
+        TabsWithSwipeGesture:showAsAction="never" />
+    <item
+        android:icon="@drawable/actionbar_rating_selector"
+        android:id="@id/menu_rating"
+        android:visible="false"
+        android:orderInCategory="11"
+        android:title="@string/menu_rating"
+        TabsWithSwipeGesture:showAsAction="never" />
+    <item
+        android:icon="@drawable/actionbar_logout_selector"
+        android:id="@id/menu_logout"
+        android:visible="false"
+        android:orderInCategory="12"
+        android:title="@string/logout"
+        TabsWithSwipeGesture:showAsAction="never" />
+    <item
+        android:icon="@drawable/webview_refresh_normal"
+        android:id="@id/menu_refreshweb"
+        android:visible="false"
+        android:orderInCategory="13"
+        android:title="@string/webview_refresh"
+        TabsWithSwipeGesture:showAsAction="never" />
+    <item
+        android:icon="@drawable/webview_jump_normal"
+        android:id="@id/menu_gotoweb"
+        android:visible="false"
+        android:orderInCategory="14"
+        android:title="@string/webview_gotoweb"
+        TabsWithSwipeGesture:showAsAction="never" />
+</menu>

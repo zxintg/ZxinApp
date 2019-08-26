@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/layout_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <View android:background="#ff2fb3ff" android:layout_width="@dimen/gamehome_home_card_item_box_title_shape_weight" android:layout_height="@dimen/gamehome_home_card_item_box_title_shape_height" />
+            <TextView android:textSize="@dimen/game_search_page_title_text_size" android:textColor="@color/game_search_page_title_color" android:gravity="center_vertical" android:id="@id/card_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/game_search_page_title_left_margin" android:layout_marginTop="@dimen/game_search_page_title_top_bottom_margin" android:layout_marginBottom="@dimen/game_search_page_title_top_bottom_margin" android:text="@string/game_search_page_title" android:singleLine="true" />
+            <ImageView android:layout_gravity="center" android:id="@id/card_game_title_more" android:background="@drawable/gamecenter_box_title_right_normal" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" />
+            <TextView android:textSize="@dimen/game_search_page_subtitle_text_size" android:textColor="@color/game_search_page_subtitle_color" android:id="@id/total" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/game_search_page_subtitle_left_margin" android:maxWidth="1000.0dip" android:text="@string/game_detailpage_recom2_subtitle" android:singleLine="true" style="@style/gamecenter_myyouku_list_item_third" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:id="@id/more" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/game_search_page_more_text_size" android:textColor="#ff666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/game_search_page_more_top_bottom_margin" android:layout_marginRight="@dimen/game_search_page_more_right_margin" android:layout_marginBottom="@dimen/game_search_page_more_top_bottom_margin" android:text="@string/game_search_page_more" />
+        <ImageView android:id="@id/present_more" android:layout_width="wrap_content" android:layout_height="@dimen/game_details_present_more_height" android:layout_marginRight="@dimen/game_search_page_more_image_right_margin" android:src="@drawable/present_more" android:contentDescription="@string/str_percent_0" />
+    </LinearLayout>
+</LinearLayout>

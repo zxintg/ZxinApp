@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:background="@drawable/lf_mastr_bg" android:layout_width="58.0dip" android:layout_height="21.0dip">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/user_active_medal" android:layout_width="28.0dip" android:layout_height="21.0dip" android:src="@drawable/lf_medal_default_chat" android:scaleType="fitXY" />
+        <TextView android:textSize="12.0dip" android:textColor="@android:color/white" android:id="@id/user_active_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="普通" android:layout_toRightOf="@id/user_active_medal" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

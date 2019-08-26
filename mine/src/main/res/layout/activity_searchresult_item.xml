@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.phone.channel.view.ChannelCellImageLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center" android:layout_width="@dimen/icon_default_width" android:layout_height="@dimen/icon_default_width" android:src="@drawable/channel_not_loaded_icon_play" />
+            <ImageView android:id="@id/searchresult_item_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+            <RelativeLayout android:id="@id/triangle_wrapper" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.youku.widget.TriangleView android:id="@id/triangle_view" android:layout_width="@dimen/triangle_view_height" android:layout_height="@dimen/triangle_view_height" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+                <com.youku.widget.RobbinTextView android:id="@id/triangle_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/triangle_text" />
+            </RelativeLayout>
+        </FrameLayout>
+    </com.youku.phone.channel.view.ChannelCellImageLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/searchresult_item_txt_height">
+        <TextView android:ellipsize="end" android:id="@id/searchresult_item_txt" android:paddingLeft="@dimen/searchresult_item_txt_padding" android:paddingTop="@dimen/searchresult_item_txt_padding_top" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLines="2" style="@style/searchresult_item_txt" />
+    </LinearLayout>
+</LinearLayout>

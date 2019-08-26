@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="@dimen/item_paid_vip_video_image_height">
+        <ImageView android:id="@id/default_img" android:layout_width="@dimen/icon_default_width" android:layout_height="@dimen/icon_default_width" android:src="@drawable/channel_not_loaded_icon_play" />
+    </LinearLayout>
+    <ImageView android:id="@id/iv_item_paid_vip_video_image" android:layout_width="fill_parent" android:layout_height="@dimen/item_paid_vip_video_image_height" android:scaleType="centerCrop" />
+    <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@id/channel_port_item_stripe_middle" android:background="@drawable/waist_seal" android:paddingLeft="@dimen/gridview_item_tv_marginleft" android:layout_width="fill_parent" android:layout_height="@dimen/grid_item_stripe_middle_height" android:singleLine="true" android:shadowColor="#90000000" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_alignBottom="@id/iv_item_paid_vip_video_image" style="@style/homepage_item_middle_stripe" />
+    <include android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignTop="@id/channel_port_item_stripe_middle" layout="@layout/waist_seal_line" />
+    <LinearLayout android:orientation="vertical" android:id="@id/iv_item_paid_vip_video_text_area" android:padding="@dimen/item_paid_vip_video_padding" android:layout_width="fill_parent" android:layout_height="@dimen/item_paid_vip_video_textarea_height" android:layout_below="@id/iv_item_paid_vip_video_image">
+        <TextView android:textSize="@dimen/homepage_item_title_first" android:textColor="#ff444444" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tv_item_paid_vip_video_title" android:layout_width="fill_parent" android:layout_height="@dimen/item_paid_vip_video_title_height" />
+        <TextView android:textSize="@dimen/homepage_item_title_second" android:textColor="#ff999999" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tv_item_paid_vip_video_subtitle" android:layout_width="fill_parent" android:layout_height="@dimen/item_paid_vip_video_subtitle_height" />
+    </LinearLayout>
+    <View android:id="@id/view_item_paid_vip_video_diver" android:background="#ffffffff" android:layout_width="2.0px" android:layout_height="fill_parent" android:layout_alignTop="@id/iv_item_paid_vip_video_image" android:layout_alignBottom="@id/iv_item_paid_vip_video_image" android:layout_alignParentRight="true" />
+    <View android:id="@id/view_item_paid_vip_video_text_diver" android:background="#fff5f5f5" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_alignTop="@id/iv_item_paid_vip_video_text_area" android:layout_alignBottom="@id/iv_item_paid_vip_video_text_area" android:layout_alignParentRight="true" />
+    <View android:id="@id/triangle_wrapper" android:visibility="gone" android:layout_width="@dimen/triangle_view_height" android:layout_height="@dimen/triangle_view_height" />
+</RelativeLayout>

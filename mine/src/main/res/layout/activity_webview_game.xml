@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <WebView android:id="@id/webView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ProgressBar android:id="@id/progress" android:layout_width="fill_parent" android:layout_height="3.0dip" android:max="100" android:progressDrawable="@drawable/game_webview_progressbar_style" android:layout_alignParentTop="true" style="?android:attr/progressBarStyleHorizontal" />
+    <TextView android:textSize="@dimen/no_result_textsize" android:textColor="#ffb6b6b6" android:layout_gravity="center" android:id="@id/tv_no_board" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/on_no_board" android:layout_centerInParent="true" />
+</RelativeLayout>

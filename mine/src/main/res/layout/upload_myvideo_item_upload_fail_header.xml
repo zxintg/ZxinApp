@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/upload_fail_layout" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/usercenter_banner_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/usercenter_item_mark_color" android:layout_width="@dimen/usercenter_banner_mark_width" android:layout_height="@dimen/usercenter_banner_mark_height" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <TextView android:gravity="center_vertical" android:id="@id/card_name" android:paddingLeft="@dimen/usercenter_banner_title_left_margin" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/upload_toast_upload_fail" android:layout_toLeftOf="@id/card_tips_count" style="@style/ucenter_list_item_first" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/padding_left_right_10" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <View android:id="@id/red_circle_view" android:background="@drawable/red_circle" android:visibility="visible" android:layout_width="@dimen/padding_left_right_8" android:layout_height="@dimen/padding_left_right_8" android:layout_margin="@dimen/padding_left_right_5" />
+        <TextView android:textSize="@dimen/text_size_14" android:textColor="@color/main_text_color" android:id="@id/video_fail_number_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/padding_left_right_5" android:text="0" />
+        <ImageView android:id="@id/upload_right_arrow" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow_right_black" android:layout_centerVertical="true" />
+    </LinearLayout>
+    <View android:background="#ffebebeb" android:layout_width="fill_parent" android:layout_height="2.0px" android:layout_alignParentBottom="true" />
+</RelativeLayout>

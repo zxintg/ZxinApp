@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="#ffd8d8d8" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/image_no_local" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/dlna_place_holder_icon" android:layout_centerInParent="true" />
+        <RelativeLayout android:id="@id/download_layout" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/downloaded_layout_margin">
+            <TextView android:textSize="@dimen/text_size_j" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_local_tips" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <ListView android:id="@id/listview_local" android:background="@color/text_color_white" android:fadingEdge="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="#00000000" android:numColumns="1" android:divider="#ffe5e5e5" android:dividerHeight="1.0px" android:overScrollMode="never" />
+            <GridView android:id="@id/gridview_local" android:background="@color/text_color_white" android:visibility="gone" android:fadingEdge="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="#00000000" android:numColumns="1" android:divider="#ffe5e5e5" android:dividerHeight="1.0px" android:overScrollMode="never" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

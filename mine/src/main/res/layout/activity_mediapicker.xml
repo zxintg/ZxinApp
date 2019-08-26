@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#fff8f8f8" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/message_navigation_layout" android:layout_width="fill_parent" android:layout_height="@dimen/message_center_nav_height">
+        <TextView android:textSize="@dimen/message_center_text_nav_titlesize" android:textColor="@color/upload_nav_text_color_selector" android:gravity="center" android:id="@id/message_center_nav_item1" android:background="@drawable/upload_item_empty_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="未上传(0)" android:layout_weight="1.0" android:layout_centerHorizontal="true" style="@style/ucenter_list_item_second" />
+        <View android:layout_gravity="center" android:background="#ffededed" android:layout_width="1.0px" android:layout_height="@dimen/padding_left_right_15" />
+        <TextView android:textSize="@dimen/message_center_text_nav_titlesize" android:textColor="@color/upload_nav_text_color_selector" android:gravity="center" android:id="@id/message_center_nav_item2" android:background="@drawable/upload_item_empty_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="全部(0)" android:layout_weight="1.0" android:layout_centerHorizontal="true" style="@style/ucenter_list_item_second" />
+    </LinearLayout>
+    <View android:background="#ffdcdcdc" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <android.support.v4.view.ViewPager android:id="@id/message_center_viewpager" android:background="#ffffffff" android:persistentDrawingCache="animation" android:layout_width="fill_parent" android:layout_height="fill_parent" android:flipInterval="30" />
+</LinearLayout>

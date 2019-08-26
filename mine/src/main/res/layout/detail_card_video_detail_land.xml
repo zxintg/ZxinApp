@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/detail_card_marginLeft_land" android:paddingRight="@dimen/detail_card_marginRight_land" android:paddingBottom="@dimen/detail_card_marginbottom_land" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/detail_card_video_detail_title_bar_land" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/topic_layout" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:id="@id/line1" android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/buttons" android:background="#ffffffff" android:paddingTop="@dimen/detail_card_video_detail_land_title_margintop" android:paddingBottom="@dimen/detail_card_video_detail_land_title_margintop" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_weight="1.0" />
+            <View android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_weight="1.0" />
+            <LinearLayout android:id="@id/favorite" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <View android:background="#ffe5e5e5" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+                <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/favorite_icon" android:background="@drawable/detail_interaction_bar_favorite_vf" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="@dimen/detail_card_video_detail_land_favorite_marginleft" />
+                    <TextView android:textSize="@dimen/detail_card_video_detail_land_favorite_size_land" android:textColor="#ff888888" android:gravity="center_vertical" android:layout_width="@dimen/detail_card_video_detail_land_favorite_width" android:layout_height="fill_parent" android:text="@string/favorite" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@id/praise" android:background="@drawable/detail_interaction_bar_praise_vf" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="@dimen/detail_card_video_detail_title_marginleft_land" />
+        <ImageView android:id="@id/share_card" android:background="@drawable/detail_interaction_bar_share_selector_vf" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="@dimen/detail_card_video_detail_title_marginleft_land" android:layout_toRightOf="@id/praise" />
+        <ImageView android:id="@id/download" android:background="@drawable/detail_card_download" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="@dimen/detail_card_video_detail_title_marginleft_land" android:layout_toRightOf="@id/share_card" />
+    </RelativeLayout>
+    <View android:background="#ffc9c9c9" android:layout_width="fill_parent" android:layout_height="2.0px" />
+</LinearLayout>

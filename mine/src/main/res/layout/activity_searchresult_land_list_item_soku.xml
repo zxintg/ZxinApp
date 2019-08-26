@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/layout_activity_searchresult_item1" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/activity_searchresult_item_soku" />
+    <View android:id="@id/line2" android:background="@color/searchresult_item_spacing_color" android:layout_width="2.0px" android:layout_height="fill_parent" />
+    <include android:id="@id/layout_activity_searchresult_item2" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/activity_searchresult_item_soku" />
+    <View android:id="@id/line3" android:background="@color/searchresult_item_spacing_color" android:layout_width="2.0px" android:layout_height="fill_parent" />
+    <include android:id="@id/layout_activity_searchresult_item3" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/activity_searchresult_item_soku" />
+    <View android:id="@id/line4" android:background="@color/searchresult_item_spacing_color" android:layout_width="2.0px" android:layout_height="fill_parent" />
+    <include android:id="@id/layout_activity_searchresult_item4" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/activity_searchresult_item_soku" />
+</LinearLayout>

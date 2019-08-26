@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="80" android:drawable="@drawable/lock_slide_1" />
+    <item android:duration="80" android:drawable="@drawable/lock_slide_2" />
+    <item android:duration="80" android:drawable="@drawable/lock_slide_3" />
+    <item android:duration="80" android:drawable="@drawable/lock_slide_4" />
+    <item android:duration="80" android:drawable="@drawable/lock_slide_5" />
+    <item android:duration="80" android:drawable="@drawable/lock_slide_6" />
+    <item android:duration="80" android:drawable="@drawable/lock_slide_7" />
+    <item android:duration="80" android:drawable="@drawable/lock_slide_8" />
+    <item android:duration="80" android:drawable="@drawable/lock_slide_9" />
+    <item android:duration="80" android:drawable="@drawable/lock_slide_10" />
+    <item android:duration="80" android:drawable="@drawable/lock_slide_11" />
+    <item android:duration="80" android:drawable="@drawable/lock_slide_12" />
+    <item android:duration="80" android:drawable="@drawable/lock_slide_13" />
+    <item android:duration="80" android:drawable="@drawable/lock_slide_14" />
+    <item android:duration="80" android:drawable="@drawable/lock_slide_15" />
+    <item android:duration="1000" android:drawable="@drawable/lock_slide_16" />
+</animation-list>

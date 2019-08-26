@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_width="30.0dip" android:layout_height="45.0dip">
+        <ImageView android:layout_gravity="top" android:id="@id/imageViewWatcher" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/lf_watcher_default_user_icon" />
+    </LinearLayout>
+</FrameLayout>

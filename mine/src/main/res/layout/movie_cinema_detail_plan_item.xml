@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/cinema_detail_plan_item_height">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/cinema_detail_plan_item_start_time_txt_size" android:textStyle="bold" android:textColor="#ff333333" android:gravity="center_vertical" android:id="@id/start_time" android:paddingLeft="@dimen/cinema_detail_plan_item_start_time_txt_marginleft" android:layout_width="fill_parent" android:layout_height="@dimen/cinema_detail_plan_item_start_time_txt_height" android:text="17:05" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/cinema_detail_plan_item_language_txt_size" android:textColor="#ffa8a8a8" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/language" android:layout_width="fill_parent" android:layout_height="@dimen/cinema_detail_plan_item_start_time_txt_height" android:layout_marginRight="@dimen/cinema_detail_plan_item_ting_marginRight" android:text="英语2D" android:singleLine="true" android:layout_weight="1.0" />
+                <View android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/cinema_detail_plan_item_end_time_txt_size" android:textColor="#ffcccccc" android:gravity="center_vertical" android:id="@id/end_time" android:paddingLeft="@dimen/cinema_detail_plan_item_start_time_txt_marginleft" android:layout_width="fill_parent" android:layout_height="@dimen/cinema_detail_plan_item_start_time_txt_height" android:text="18:45结束" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/cinema_detail_plan_item_end_time_txt_size" android:textColor="#ffcccccc" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/hall_number" android:layout_width="fill_parent" android:layout_height="@dimen/cinema_detail_plan_item_start_time_txt_height" android:layout_marginRight="@dimen/cinema_detail_plan_item_ting_marginRight" android:text="5号厅" android:singleLine="true" android:layout_weight="1.0" />
+                <View android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textSize="@dimen/cinema_detail_plan_item_price_txt_size" android:textColor="#fffe9b0d" android:gravity="center|right" android:id="@id/price" android:paddingRight="@dimen/cinema_detail_plan_item_price_txt_marginRight" android:layout_width="fill_parent" android:layout_height="@dimen/cinema_detail_plan_item_start_time_txt_height" android:text="￥45" android:layout_weight="1.0" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/cinema_detail_plan_item_language_txt_size" android:textColor="#ffffffff" android:gravity="center" android:id="@id/xuanzuo" android:layout_width="@dimen/movie_adapter_item_buy_btn_width" android:layout_height="@dimen/movie_adapter_item_buy_btn_height" android:layout_marginRight="@dimen/cinema_detail_plan_item_start_time_txt_marginleft" android:text="选座" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="40.0dip" android:layout_height="55.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.laifeng.sdk.widget.star.ProgressImageView android:id="@id/starImageView" android:background="@drawable/lf_ic_play_star" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_alignParentBottom="true" />
+    <TextView android:textSize="12.0dip" android:textColor="@android:color/white" android:gravity="center" android:id="@id/startCountTextView" android:background="@drawable/lf_btn_cicle_star_count_bg" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginTop="8.0dip" android:text="5" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+</RelativeLayout>

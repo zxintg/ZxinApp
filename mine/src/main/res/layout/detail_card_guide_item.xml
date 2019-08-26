@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="@dimen/detail_guide_item_paddingTop" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="@dimen/detail_guide_item_ImageView_width" android:layout_height="@dimen/detail_guide_item_ImageView_width" android:layout_marginLeft="@dimen/detail_guide_item_ImageView_marginLeft" android:layout_marginRight="@dimen/detail_guide_item_ImageView_marginLeft">
+        <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/bottom_icon" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+        <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/detail_rukoumengceng" />
+    </FrameLayout>
+    <TextView android:textSize="@dimen/detail_guide_item_title_textSize" android:textColor="#ff828282" android:ellipsize="end" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/textView" android:paddingLeft="0.5dip" android:paddingRight="0.5dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_guide_item_title_marginTop" android:singleLine="true" />
+</LinearLayout>

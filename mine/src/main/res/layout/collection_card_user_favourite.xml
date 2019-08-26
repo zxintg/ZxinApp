@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_coll_info" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/collection_card_head_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/avatar_container" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minHeight="@dimen/collection_card_head_height">
+        <com.youku.phone.collection.widget.DonutCircleImageView android:id="@id/collection_card_user_avatar" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_alignParentLeft="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/collection_card_user_avatar" android:layout_centerVertical="true">
+            <LinearLayout android:orientation="horizontal" android:id="@id/ll_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="15.0dip" android:textColor="@color/coll_card_username_font_color" android:id="@id/collection_card_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="大自然的搬运工" android:maxEms="7" android:singleLine="true" />
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/collection_user_level" android:layout_width="@dimen/collection_card_member_icon_size" android:layout_height="@dimen/collection_card_member_icon_size" android:scaleType="fitXY" android:layout_toRightOf="@id/collection_card_user_name" />
+            </LinearLayout>
+            <TextView android:textSize="12.299988dip" android:textColor="@color/coll_card_info_font_color" android:id="@id/collection_card_collected_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.7999878dip" android:text="23,456个关注" android:layout_below="@id/ll_user_name" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/collection_card_cache_videos" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <ImageView android:id="@id/coll_download" android:background="@color/white" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/cache_fragment_layout_cache_btn_normal_collection" android:scaleType="center" />
+        <TextView android:textSize="15.0dip" android:textColor="@color/coll_card_cache_font_color" android:id="@id/coll_download_cnt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="缓存10个视频" android:singleLine="true" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/color80000000" />
+    <corners android:topLeftRadius="@dimen/fav_heart_front_width" android:topRightRadius="@dimen/fav_heart_front_width" android:bottomLeftRadius="@dimen/fav_heart_front_width" android:bottomRightRadius="@dimen/fav_heart_front_width" />
+</shape>

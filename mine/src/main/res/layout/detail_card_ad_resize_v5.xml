@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:background="#fff7f7f7" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.youku.widget.YoukuBannerResizeView android:id="@id/ad_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitXY" />
+            <FrameLayout android:layout_gravity="bottom|center|left" android:id="@id/ad_sign" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_banner_sign_margin" android:layout_marginBottom="@dimen/detail_banner_sign_margin">
+                <ImageView android:layout_gravity="bottom|center|left" android:layout_width="@dimen/detail_banner_sign_width" android:layout_height="@dimen/detail_banner_sign_height" android:src="@drawable/details_banner_sign" />
+                <TextView android:textSize="@dimen/detail_banner_sign_text" android:textColor="#ffffffff" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="广告" />
+            </FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

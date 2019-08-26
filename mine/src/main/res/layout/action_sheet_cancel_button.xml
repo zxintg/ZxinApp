@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/actionsheet_divide" android:background="@color/action_sheet_divide_line" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <TextView android:textColor="@color/action_sheet_button_grey" android:id="@id/action_sheet_btnCancel" android:background="@drawable/actionsheet_middle" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_below="@id/actionsheet_divide" style="@style/action_sheet_btn_style" />
+</RelativeLayout>

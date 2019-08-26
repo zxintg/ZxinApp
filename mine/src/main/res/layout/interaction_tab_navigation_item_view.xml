@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:id="@id/tab_tab_header_relative_layout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/navigation_icon" android:layout_width="38.0dip" android:layout_height="38.0dip" android:src="@drawable/interaction_tab_navigation_icon" android:layout_centerHorizontal="true" />
+    <ImageView android:id="@id/navigation_icon_hot" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="13.0dip" android:layout_marginTop="1.0dip" android:layout_marginRight="-12.0dip" android:scaleType="fitXY" android:layout_alignTop="@id/navigation_icon" android:layout_alignRight="@id/navigation_icon" />
+    <TextView android:textSize="11.0sp" android:textColor="#ccffffff" android:ellipsize="end" android:id="@id/navigation_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="参与海选" android:singleLine="true" android:maxLength="4" android:layout_below="@id/navigation_icon" android:layout_centerHorizontal="true" />
+</RelativeLayout>

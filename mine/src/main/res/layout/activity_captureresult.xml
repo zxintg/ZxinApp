@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/app_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="#ffffffff" android:paddingLeft="@dimen/subtitle_margin" android:paddingRight="@dimen/subtitle_margin" android:layout_width="fill_parent" android:layout_height="@dimen/homepage_title_height">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/saosao" android:includeFontPadding="false" android:shadowDy="10.0" android:shadowRadius="2.0" style="@style/homepagetitle" />
+    </LinearLayout>
+    <ImageView android:background="@drawable/tab_shadow" android:layout_width="fill_parent" android:layout_height="4.0px" android:layout_alignParentBottom="true" />
+    <ScrollView android:id="@id/has_result" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/has_result_white" android:background="@color/white" android:paddingLeft="16.0px" android:paddingTop="32.0px" android:paddingRight="16.0px" android:paddingBottom="34.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0px" android:layout_marginTop="20.0px" android:layout_marginRight="16.0px">
+                <TextView android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/homepagetitle" />
+                <FrameLayout android:background="#fff5f5f5" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="center" android:layout_width="@dimen/icon_not_loaded_width" android:layout_height="@dimen/icon_not_loaded_width" android:src="@drawable/channel_not_loaded_icon_play" />
+                    <ImageView android:id="@id/img" android:layout_width="716.0px" android:layout_height="400.0px" android:scaleType="centerCrop" />
+                    <ImageView android:layout_gravity="bottom" android:id="@id/img_play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="28.0px" android:layout_marginBottom="28.0px" android:src="@drawable/saosao_play" />
+                </FrameLayout>
+                <TextView android:ellipsize="end" android:id="@id/seeToo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/homepagetitle" />
+                <Button android:textColor="@color/white" android:gravity="center" android:id="@id/play" android:background="@drawable/saosao_btn_shape" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/play" style="@style/homepagetitle" />
+            </LinearLayout>
+            <ImageView android:background="#ff999999" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="16.0px" android:layout_marginRight="16.0px" />
+            <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/no_right" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0px" android:layout_marginRight="16.0px">
+                <ImageView android:paddingRight="8.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0px" android:src="@drawable/saosao_no_right_icon" />
+                <TextView android:textColor="#ff333333" android:id="@id/no_right_tt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/qrcode_result_no_right_tt" style="@style/homepagetitle" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView android:id="@id/no_result" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/no_result_white" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0px" android:layout_marginTop="20.0px" android:layout_marginRight="16.0px">
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/img_saosao_error_icon" android:paddingRight="8.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/saosao_error_icon" />
+                    <TextView android:textColor="#ff333333" android:id="@id/no_result_white_tt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/qrcode_result_no_result_white_tt" android:layout_toRightOf="@id/img_saosao_error_icon" style="@style/homepagetitle" />
+                </RelativeLayout>
+                <Button android:textColor="@color/white" android:gravity="center" android:id="@id/re_saosao" android:background="@drawable/saosao_btn_shape" android:layout_width="560.0px" android:layout_height="88.0px" android:text="@string/qrcode_result_restart_scan" style="@style/homepagetitle" />
+            </LinearLayout>
+            <ImageView android:background="#ff999999" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="16.0px" android:layout_marginRight="16.0px" />
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/no_result_img_tishi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/saosao_tishi" android:scaleType="fitXY" />
+            <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="#ff666666" android:id="@id/no_result_tt_tishi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0px" android:layout_marginTop="10.0px" android:layout_marginRight="16.0px" android:text="@string/qrcode_result_bellow_player" android:drawableLeft="@drawable/home_hot_black_point" android:drawablePadding="10.0dip" style="@style/homepagetitle" />
+                <TextView android:textColor="#ff666666" android:id="@id/no_result_tt_tishi2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0px" android:layout_marginTop="10.0px" android:layout_marginRight="16.0px" android:text="@string/qrcode_result_need_network" android:drawableLeft="@drawable/home_hot_black_point" android:drawablePadding="10.0dip" style="@style/homepagetitle" />
+                <TextView android:textColor="#ff666666" android:id="@id/no_result_tt_tishi3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0px" android:layout_marginTop="10.0px" android:layout_marginRight="16.0px" android:layout_marginBottom="16.0px" android:text="@string/qrcode_result_keep_camera_no_tilt" android:drawableLeft="@drawable/home_hot_black_point" android:drawablePadding="10.0dip" style="@style/homepagetitle" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

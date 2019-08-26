@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/searchdirect_item_viewswitcher_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="@dimen/search_card_header_height" layout="@layout/include_search_last_card_header" />
+    <com.soku.searchsdk.widget.SteadyGridView android:gravity="center" android:id="@id/vg_card_serarch_last_hot_words_content" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="0.0dip" android:listSelector="#00000000" android:cacheColorHint="#00000000" android:horizontalSpacing="0.0dip" android:verticalSpacing="0.0dip" android:numColumns="2" android:layout_weight="1.0" />
+    <View android:background="#fff0f0f0" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:gravity="center_vertical" android:id="@id/vg_card_serarch_last_hot_words_ad" android:background="@drawable/selector_bg_search_click" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/search_card_hot_words_height">
+        <ImageView android:id="@id/ig_card_serarch_last_hot_words_icon" android:layout_width="@dimen/search_card_hot_words_ad_icon_width" android:layout_height="@dimen/search_card_hot_words_ad_icon_width" android:layout_marginLeft="@dimen/search_widget_edit_padding_left" />
+        <TextView android:textSize="@dimen/search_card_hot_words_textsize" android:textColor="#ff00a1f4" android:gravity="center_vertical" android:id="@id/tv_card_serarch_last_hot_words_text" android:paddingLeft="@dimen/search_card_hot_words_ad_text_padding_l" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="这个是广告名称" android:singleLine="true" />
+    </LinearLayout>
+</LinearLayout>

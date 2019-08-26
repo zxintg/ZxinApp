@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextureView android:layout_gravity="center" android:id="@id/xadsdk_player_video_textureView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+    <Button android:id="@id/xadsdk_player_close_btn" android:background="@drawable/xadsdk_player_close" android:duplicateParentState="true" android:layout_width="32.0dip" android:layout_height="32.0dip" />
+    <LinearLayout android:layout_gravity="bottom|center|left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <Button android:id="@id/xadsdk_player_pause_btn" android:background="@drawable/xadsdk_player_pause" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginLeft="0.0dip" />
+            <Button android:id="@id/xadsdk_player_play_btn" android:background="@drawable/xadsdk_player_play" android:visibility="invisible" android:layout_width="32.0dip" android:layout_height="32.0dip" />
+        </FrameLayout>
+        <Button android:id="@id/xadsdk_player_mute_btn" android:background="@drawable/xadsdk_fullscreen_left_volume" android:duplicateParentState="true" android:layout_width="32.0dip" android:layout_height="32.0dip" />
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:layout_gravity="center_horizontal" android:id="@id/xadsdk_player_current_time" android:paddingTop="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <SeekBar android:id="@id/xadsdk_player_progress_bar" android:layout_width="0.0dip" android:layout_height="32.0dip" android:layout_weight="1.0" style="?android:attr/progressBarStyleHorizontal" />
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:layout_gravity="center_horizontal" android:id="@id/xadsdk_player_total_time" android:paddingTop="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

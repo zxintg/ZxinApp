@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#ff9aad41" />
+    <corners android:radius="@dimen/game_details_game_content_card_tags_container_tag_bg_corners" />
+</shape>

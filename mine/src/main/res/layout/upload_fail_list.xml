@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@id/myupload_fail_refesh_layout" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.RecyclerView android:scrollbarStyle="outsideOverlay" android:id="@id/myupload_fail_recycleview" android:scrollbars="vertical" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <include android:id="@id/page_load_fail_layout" layout="@layout/page_load_fail_layout" />
+    <TextView android:textSize="@dimen/text_size_14" android:textColor="@color/edittext_hint_text_color" android:gravity="center" android:id="@id/nothing_videos_toast" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/upload_no_failed_videos_toast" android:layout_centerInParent="true" />
+</RelativeLayout>

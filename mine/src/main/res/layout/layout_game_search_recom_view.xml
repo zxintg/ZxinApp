@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youku.gamecenter.widgets.PlayViewGallery android:id="@id/playcardview_container" android:paddingLeft="1.0px" android:paddingRight="1.0px" android:paddingBottom="@dimen/game_detail_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/playcardview_container_top" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/gamecenter_searchpage_title" />
+            <View android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <HorizontalScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never">
+                <LinearLayout android:orientation="horizontal" android:id="@id/game_recom2_listview" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <View android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:background="#ffc9c9c9" android:layout_width="fill_parent" android:layout_height="2.0px" android:layout_below="@id/playcardview_container_top" />
+</com.youku.gamecenter.widgets.PlayViewGallery>

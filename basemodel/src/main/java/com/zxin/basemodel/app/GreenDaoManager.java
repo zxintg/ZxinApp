@@ -14,6 +14,7 @@ import java.io.InputStream;
  */
 
 public class GreenDaoManager {
+    private static final LogUtils.Tag TAG = new LogUtils.Tag("GreenDaoManager");
     //在手机里存放数据库的位置
     private static String dbPath;
 
@@ -66,13 +67,13 @@ public class GreenDaoManager {
             dbDir.mkdirs();
         }
         //第一次安装，创建数据库存储路径，并拷贝解压数据库到系统目录
-        LogUtils.d("创建数据库存储路径！");
+        LogUtils.d(TAG,"创建数据库存储路径！");
         InputStream is = BaseApplication.contextApp.getResources().openRawResource(R.raw.bxharea);
         File copyFile = FileUtil.getInstance(BaseApplication.contextApp).copyFile(is , dbPath , BaseStringUtils.dbFile);
         if(copyFile != null && copyFile.exists()) {
             ZipUtil.unZip(copyFile.getAbsolutePath(), dbPath);
             copyFile.delete();
-            LogUtils.d("数据库解压成功！");
+            LogUtils.d(TAG,"数据库解压成功！");
         }
     }
 }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/hd_no_data" android:background="@color/hd_nologin_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/follow_nodata_tip_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="90.0dip" android:layout_centerHorizontal="true">
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/follow_nodata_tip" />
+        <TextView android:textSize="@dimen/hd_subscribe_tab_bar_size" android:textColor="@color/hd_noshow_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/hd_no_show" />
+        <TextView android:textSize="@dimen/hd_noshowview_text_size" android:textColor="@color/hd_look_unique_btn_text" android:gravity="center" android:id="@id/return_timeline_textview" android:background="@drawable/empty_view_btn_selector" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hd_return_timeline" />
+        <LinearLayout android:id="@id/nologin_btn_container" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="100.0dip">
+            <TextView android:textSize="@dimen/hd_timeline_title" android:textColor="@color/hd_noshow_text" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="检测到您未登录，请" />
+            <TextView android:textSize="@dimen/hd_timeline_title" android:textColor="@color/hd_look_unique_btn_background" android:id="@id/login_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hd_login" />
+            <TextView android:textSize="@dimen/hd_timeline_title" android:textColor="@color/hd_noshow_text" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/look_unique" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hd_exist_account" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

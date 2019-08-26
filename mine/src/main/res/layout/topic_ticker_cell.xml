@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/ticker_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v4.view.ViewPager android:id="@id/topic_viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <View android:background="@drawable/topic_ticker_bg" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_alignParentBottom="true" />
+        <com.youku.widget.CircleIndicator android:id="@id/circle_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="7.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youku.phone.channel.view.ChannelCellImageLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:layout_width="@dimen/icon_default_width" android:layout_height="@dimen/icon_default_width" android:src="@drawable/channel_not_loaded_icon_play" />
+        <ImageView android:id="@id/detail_video_item_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    </FrameLayout>
+</com.youku.phone.channel.view.ChannelCellImageLayout>

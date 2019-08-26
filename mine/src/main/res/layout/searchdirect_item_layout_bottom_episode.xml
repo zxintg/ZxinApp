@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/layout_bottom_episode" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:id="@id/bottom_episode_btn1" android:background="@drawable/bottom_episode_btn_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/bottom_episode_btn" />
+            <ImageView android:id="@id/bottom_episode_new_img1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/series_item_new_img" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:id="@id/bottom_episode_btn2" android:background="@drawable/bottom_episode_btn_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/bottom_episode_btn" />
+            <ImageView android:id="@id/bottom_episode_new_img2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/series_item_new_img" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:id="@id/bottom_episode_btn3" android:background="@drawable/bottom_episode_btn_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/bottom_episode_btn" />
+            <ImageView android:id="@id/bottom_episode_new_img3" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/series_item_new_img" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:id="@id/bottom_episode_btn4" android:background="@drawable/bottom_episode_btn_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/bottom_episode_btn" />
+            <ImageView android:id="@id/bottom_episode_new_img4" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/series_item_new_img" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:id="@id/bottom_episode_btn5" android:background="@drawable/bottom_episode_btn_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/bottom_episode_btn" />
+            <ImageView android:id="@id/bottom_episode_new_img5" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/series_item_new_img" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:id="@id/bottom_episode_btn6" android:background="@drawable/bottom_episode_btn_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/bottom_episode_btn" />
+            <ImageView android:id="@id/bottom_episode_new_img6" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/series_item_new_img" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:id="@id/bottom_episode_more_btn" android:background="@drawable/episode_right_more_btn_bg_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <ImageView android:id="@id/bottom_episode_new_more" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/series_item_new_img" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</merge>

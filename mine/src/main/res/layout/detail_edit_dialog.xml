@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_input_item" android:background="#ffffffff" android:paddingLeft="@dimen/detail_comment_item_time_marginl" android:paddingRight="@dimen/detail_comment_item_time_marginl" android:paddingBottom="@dimen/detail_comment_item_time_marginl" android:layout_width="fill_parent" android:layout_height="@dimen/detail_comment_input_height_dialog"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/group_edit_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_play_padding_left_right" android:layout_marginRight="@dimen/detail_play_padding_left_right" android:layout_centerInParent="true">
+        <View android:layout_gravity="bottom" android:id="@id/view1" android:background="#ff2bb5fc" android:layout_width="@dimen/detail_comment_input_line_width" android:layout_height="@dimen/detail_comment_input_line_height" />
+        <EditText android:textColor="#ff000000" android:gravity="center|left" android:id="@id/et_comment_input" android:background="@null" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="0.0dip" android:layout_height="@dimen/detail_comment_send_height" android:layout_margin="0.0dip" android:hint="请输入弹幕内容" android:singleLine="true" android:maxLength="20" android:layout_weight="1.0" android:imeOptions="actionSend|flagNoFullscreen" android:textCursorDrawable="@null" style="@style/detail_item_content" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/group_comment_sum_left_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textColor="#ffcacaca" android:gravity="center|right" android:id="@id/tv_comment_sum_left" android:background="@null" android:paddingRight="6.5dip" android:layout_width="wrap_content" android:layout_height="@dimen/detail_comment_send_height" android:layout_margin="0.0dip" android:text="20" android:singleLine="true" style="@style/detail_item_content" />
+        </LinearLayout>
+        <View android:layout_gravity="bottom" android:id="@id/view2" android:background="#ff2bb5fc" android:layout_width="@dimen/detail_comment_input_line_width" android:layout_height="@dimen/detail_comment_input_line_height" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/group_color_selector_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageButton android:id="@id/dialog_edit_btn_color_selector" android:background="@drawable/detail_comment_color_selector" android:layout_width="@dimen/detail_comment_send_width" android:layout_height="@dimen/detail_comment_send_height" android:layout_toLeftOf="@id/view2" android:layout_centerVertical="true" />
+            <View android:layout_gravity="bottom" android:id="@id/view6" android:background="#ff2bb5fc" android:layout_width="@dimen/detail_comment_input_line_width" android:layout_height="@dimen/detail_comment_input_line_height" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/group_push_comment_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageButton android:id="@id/btn_push_comment" android:background="@drawable/detail_comment_send" android:layout_width="@dimen/detail_comment_send_width" android:layout_height="@dimen/detail_comment_send_height" />
+            <View android:layout_gravity="bottom" android:id="@id/view3" android:background="#ff2bb5fc" android:layout_width="@dimen/detail_comment_input_line_width" android:layout_height="@dimen/detail_comment_input_line_height" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="#ff2bb5fc" android:layout_width="fill_parent" android:layout_height="@dimen/detail_comment_input_line_width" android:layout_alignLeft="@id/group_edit_container" android:layout_alignRight="@id/group_edit_container" android:layout_alignBottom="@id/group_edit_container" />
+</RelativeLayout>

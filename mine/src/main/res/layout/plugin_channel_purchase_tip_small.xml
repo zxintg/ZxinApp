@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/channel_purchase_layout" android:background="#cc000000" android:layout_width="@dimen/channel_purchase_small_width" android:layout_height="@dimen/channel_purchase_small_height" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <RelativeLayout android:id="@id/close_layout" android:layout_width="@dimen/channel_purchase_small_close_area_width" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+            <Button android:id="@id/close" android:background="@drawable/channel_p_del" android:layout_width="@dimen/channel_purchase_ico_width" android:layout_height="@dimen/channel_purchase_ico_width" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <View android:id="@id/line" android:background="#33ffffff" android:layout_width="1.0dip" android:layout_height="@dimen/channel_purchase_small_line_height" android:layout_toRightOf="@id/close_layout" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/imageview" android:layout_width="@dimen/channel_purchase_user_image_width" android:layout_height="@dimen/channel_purchase_user_image_width" android:layout_marginLeft="@dimen/channel_purchase_small_user_image_margin_left" android:layout_toRightOf="@id/line" android:layout_centerVertical="true" /> android:layout_marginRight="@dimen/channel_purchase_small_user_image_margin_right"/>
+<TextView android:textSize="@dimen/channel_purchase_small_text_size" android:textColor="@color/channel_purchase_tip1_color" android:gravity="center_vertical" android:id="@id/tip" android:layout_width="@dimen/channel_purchase_small_text_width" android:layout_height="wrap_content" android:text="@string/channel_purchase_tip" android:singleLine="false" android:layout_toRightOf="@id/imageview" android:layout_centerVertical="true" />
+        <Button android:id="@id/arrow" android:background="@drawable/channel_p_rightarrow" android:layout_width="@dimen/channel_purchase_ico_width" android:layout_height="@dimen/channel_purchase_ico_width" android:layout_marginRight="@dimen/channel_purchase_small_arrow_margin_right" android:layout_toRightOf="@id/tip" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

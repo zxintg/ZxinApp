@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tudou="http://youku.com/tudou">
+    <ImageView android:layout_gravity="center" android:id="@id/poster" android:background="#ffaaaaaa" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/game_default_icon" android:scaleType="center" android:contentDescription="@string/str_image" />
+    <View android:background="@drawable/banner_mask" android:layout_width="fill_parent" android:layout_height="@dimen/game_channel_gallery_mask" android:layout_alignParentBottom="true" />
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <TextView android:textSize="@dimen/game_slide_gallery_botton_text_size" android:textColor="#b2ffffff" android:gravity="center" android:id="@id/game_details" android:background="@color/game_channel_gallery_button_bg_grey" android:layout_width="@dimen/game_slide_gallery_bottom_button_width" android:layout_height="@dimen/game_slide_gallery_bottom_button_height" android:layout_marginRight="@dimen/game_slide_gallery_clound_between_margin" android:layout_marginBottom="@dimen/game_slide_gallery_bottom_button_margin_bottom" android:text="@string/game_channel_top_gallery_details" />
+        <LinearLayout android:gravity="center" android:id="@id/game_download_container" android:background="#cc22b8ff" android:layout_width="@dimen/game_slide_gallery_bottom_button_width" android:layout_height="@dimen/game_slide_gallery_bottom_button_height" android:layout_marginRight="@dimen/game_slide_gallery_button_margin_end" android:layout_marginBottom="@dimen/game_slide_gallery_bottom_button_margin_bottom">
+            <ImageView android:id="@id/game_clound" android:layout_width="@dimen/game_slide_gallery_clound_width" android:layout_height="@dimen/game_slide_gallery_clound_height" android:src="@drawable/banner_install" android:scaleType="fitXY" />
+            <TextView android:textSize="@dimen/game_slide_gallery_botton_text_size" android:textColor="#ffffffff" android:id="@id/game_download" android:paddingLeft="@dimen/game_slide_gallery_clound_between_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/playview_str_install" />
+            <TextView android:textSize="@dimen/game_slide_gallery_botton_text_size" android:textColor="@color/game_channel_gallery_text_color_disable" android:gravity="center" android:layout_gravity="center" android:id="@id/game_ing" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/playview_str_ing" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

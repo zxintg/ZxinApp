@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/waist_seal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/home_video_avatar_img_layout" android:background="@drawable/gamehome_home_video_avatar_bg" android:visibility="gone" android:layout_width="@dimen/gamehome_home_video_avatar_bg_width" android:layout_height="@dimen/gamehome_home_video_avatar_bg_width" android:layout_marginLeft="@dimen/gamehome_home_video_avatar_bg_margin_left" android:layout_marginBottom="@dimen/gamehome_home_video_avatar_bg_margin_Bottom">
+        <ImageView android:id="@id/home_video_avatar_default_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/gamehome_home_video_avatar_default_img" android:scaleType="centerInside" />
+        <ImageView android:id="@id/home_video_avatar_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="bottom" android:id="@id/home_video_land_item_stripe_middle_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@id/home_video_land_item_stripe_middle" android:paddingLeft="@dimen/gamehome_gridview_item_tv_marginleft" android:layout_width="fill_parent" android:layout_height="@dimen/gamehome_grid_item_stripe_middle_height" android:singleLine="true" android:shadowColor="#90000000" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" style="@style/gamehome_homepage_item_middle_stripe" />
+    </RelativeLayout>
+</LinearLayout>

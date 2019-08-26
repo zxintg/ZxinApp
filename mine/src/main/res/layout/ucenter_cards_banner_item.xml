@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="#fff9f9f9" android:layout_width="fill_parent" android:layout_height="@dimen/usercenter_banner_height">
+        <LinearLayout android:gravity="center" android:id="@id/empty_img" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+            <ImageView android:layout_width="@dimen/usercenter_banner_empty_img_width" android:layout_height="@dimen/usercenter_banner_empty_img_width" android:src="@drawable/myyouku_tanhao" android:scaleType="fitXY" />
+            <TextView android:textSize="@dimen/usercenter_banner_title_size" android:textColor="#ffb6b6b6" android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/usercenter_banner_empty_img_txt_marginLeft" android:text="图片加载失败" android:singleLine="true" />
+        </LinearLayout>
+        <ImageView android:id="@id/bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="matrix" />
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/usercenter_banner_title_marginLeft" android:layout_marginTop="@dimen/usercenter_banner_title_marginTop">
+            <TextView android:textSize="@dimen/usercenter_banner_title_size" android:textColor="#ff727272" android:ellipsize="end" android:id="@id/banner_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="title" android:singleLine="true" android:layout_weight="2.0" />
+            <ImageView android:layout_gravity="center" android:id="@id/banner_title_jt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/item_spacing" android:layout_marginRight="@dimen/item_spacing" android:src="@drawable/box_title_right_normal_usercenter" android:scaleType="center" android:minWidth="16.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</LinearLayout>

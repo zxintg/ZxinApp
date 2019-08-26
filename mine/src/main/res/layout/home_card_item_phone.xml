@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.phone.home.view.HomeCardTitleView android:id="@id/home_card_title_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/home_video_land_item_wide" android:layout="@layout/home_card_item_cross" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/home_video_land_item_column1" android:layout="@layout/home_card_item_column" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/home_video_land_item_column2" android:layout="@layout/home_card_item_column" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/home_video_land_item_column3" android:layout="@layout/home_card_item_column" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/home_video_land_item_column4" android:layout="@layout/home_card_item_column" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/home_video_land_item_loadmore" android:layout="@layout/home_card_item_loadmore" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/home_video_land_item_column5" android:layout="@layout/home_card_item_column" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/home_video_land_item_column6" android:layout="@layout/home_card_item_column" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/home_video_land_item_column7" android:layout="@layout/home_card_item_column" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/home_video_land_item_column8" android:layout="@layout/home_card_item_column" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/home_video_land_item_extend" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/home_video_land_item_tailer" android:layout="@layout/home_card_item_tail_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

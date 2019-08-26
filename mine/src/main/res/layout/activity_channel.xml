@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/channel_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/subtitle" layout="@layout/activity_subtitle" />
+    <RelativeLayout android:id="@id/channel_body" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.handmark.pulltorefresh.library.PullToRefreshGridView android:id="@id/channel_port_gv" android:background="@color/app_background" android:paddingLeft="@dimen/gridview_pading_horizontal" android:paddingTop="@dimen/gridview_pading_top" android:paddingRight="@dimen/gridview_pading_horizontal" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:horizontalSpacing="@dimen/gridview_spacing" android:verticalSpacing="@dimen/gridview_spacing" android:numColumns="@integer/numColumns" />
+        <include android:id="@id/empty_view" android:visibility="gone" layout="@layout/filter_empty_view" />
+        <LinearLayout android:id="@id/filter_float_wrapper" android:background="#ff000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/filter_float_height">
+            <LinearLayout android:orientation="horizontal" android:id="@id/filter_float_container" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:onClick="clickFilterBtn" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/filter_float_close_btn" android:padding="8.0dip" android:layout_width="@dimen/filter_float_close_width" android:layout_height="@dimen/filter_float_close_height" android:layout_marginRight="@dimen/filter_float_close_margin" android:src="@drawable/detail_comment_box_cancle" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

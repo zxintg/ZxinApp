@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/top" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/subtitle_height">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/filter_wrapper" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/subtitle_margin" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:onClick="clickFilterBtn">
+            <ImageSwitcher android:id="@id/left_button" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageButton android:id="@id/filter_btn" android:background="@color/transparent" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/channel_filter_btn_normal" android:scaleType="centerCrop" android:layout_centerVertical="true" android:onClick="clickFilterBtn" />
+                <ImageButton android:background="@color/transparent" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/channel_filter_btn_selected" android:scaleType="centerCrop" android:layout_centerVertical="true" android:onClick="clickFilterBtn" />
+            </ImageSwitcher>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="-3.0dip" android:layout_marginTop="1.0dip" android:text="@string/youku_title_filter" android:layout_centerVertical="true" style="@style/toolbar_btn_txt" />
+        </LinearLayout>
+        <ImageSwitcher android:id="@id/fav_switcher" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/subtitle_margin" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageButton android:id="@id/fav_btn" android:background="@color/transparent" android:layout_width="@dimen/heart_view_width" android:layout_height="@dimen/heart_view_height" android:scaleType="fitXY" android:layout_centerVertical="true" android:onClick="clickFavBtn" />
+            <ImageButton android:id="@id/cancel_fav_btn" android:background="@color/transparent" android:layout_width="@dimen/heart_view_width" android:layout_height="@dimen/heart_view_height" android:scaleType="fitXY" android:layout_centerVertical="true" android:onClick="clickCancleFavBtn" />
+        </ImageSwitcher>
+        <RelativeLayout android:gravity="center" android:id="@id/more_channel_btn" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerInParent="true" android:onClick="clickMoreChannelBtn">
+            <TextView android:id="@id/sub_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ChannelName" style="@style/channel_title_txt" />
+            <ImageSwitcher android:id="@id/btn_switch" android:layout_width="@dimen/btn_switch_dimen" android:layout_height="@dimen/btn_switch_dimen" android:layout_marginLeft="@dimen/btn_switch_margin" android:layout_marginBottom="4.0dip" android:layout_toRightOf="@id/sub_title" android:layout_alignBottom="@id/sub_title">
+                <ImageView android:layout_width="@dimen/btn_switch_dimen" android:layout_height="@dimen/btn_switch_dimen" android:src="@drawable/channel_btn_switch" />
+                <ImageView android:layout_width="@dimen/btn_switch_dimen" android:layout_height="@dimen/btn_switch_dimen" android:src="@drawable/channel_btn_switch_selected" />
+            </ImageSwitcher>
+        </RelativeLayout>
+    </RelativeLayout>
+    <ImageView android:background="@drawable/tab_shadow" android:layout_width="fill_parent" android:layout_height="4.0px" android:layout_below="@id/top" />
+</RelativeLayout>

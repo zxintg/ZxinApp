@@ -77,7 +77,6 @@ public class HtmlOperatorUtil {
     public List<DoubanMeizi> getDoubanMeiziList(String str) {
         List<DoubanMeizi> datasList = new ArrayList<>();
         try {
-
             Document parse = Jsoup.parse(str);
             Elements elements = parse.select("div[class=thumbnail]>div[class=img_single]>a>img");
             for (Element e : elements) {

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#fffcfcfc" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/home_personal_interest_title" layout="@layout/home_personal_card_title" />
+    <com.youku.interaction.views.WebViewWrapper android:id="@id/home_personal_login_webview" android:layout_width="fill_parent" android:layout_height="103.0dip" />
+</LinearLayout>

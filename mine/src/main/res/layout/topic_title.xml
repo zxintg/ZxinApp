@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/text_color_white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/topic_banner_title" android:layout_width="fill_parent" android:layout_height="@dimen/topics_title_height">
+        <TextView android:textSize="@dimen/text_size_3" android:textColor="@color/topic_title_text" android:id="@id/banner_title" android:paddingLeft="@dimen/community_padding_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/topic_list" android:singleLine="true" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/topic_count_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/community_padding_15" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <TextView android:textSize="@dimen/text_size_3" android:textColor="@color/topic_title_text" android:layout_gravity="center_vertical" android:id="@id/new_topic_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/activity_padding_half" android:singleLine="true" />
+            <View android:layout_gravity="center_vertical" android:id="@id/center_line" android:background="@color/topic_title_text" android:layout_width="1.0px" android:layout_height="@dimen/topic_margin_8dp" android:layout_marginRight="@dimen/activity_padding_half" />
+            <TextView android:textSize="@dimen/text_size_3" android:textColor="@color/topic_title_text" android:layout_gravity="center_vertical" android:id="@id/topic_total_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+        <View android:background="@color/f5f5f5_color" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</FrameLayout>

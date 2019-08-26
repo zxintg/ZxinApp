@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" style="@style/ticket_two_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/my_ticket_info_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="@dimen/ticket_text_info_layout_height">
+                <TextView android:id="@id/film_date" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ticket_text" />
+                <TextView android:id="@id/film_time" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ticket_text" />
+                <TextView android:id="@id/film_type" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ticket_text" />
+                <TextView android:id="@id/tickets" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ticket_text" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="@dimen/ticket_text_info_layout_height">
+                <TextView android:ellipsize="end" android:id="@id/cinema" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="4.0" style="@style/ticket_text" />
+                <TextView android:id="@id/film_room" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/ticket_text" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:id="@id/ticket_price_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/ticket_info_height">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ticket_price" style="@style/ticket_text" />
+        <TextView android:id="@id/ticket_price_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ticket_text_key_code" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:id="@id/ticket_key_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/ticket_info_height">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/key_title" style="@style/ticket_text" />
+        <TextView android:id="@id/film_key" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ticket_text_key_code" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:id="@id/ticket_password_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/ticket_info_height">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/password_text" style="@style/ticket_text" />
+        <TextView android:id="@id/ticket_password_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ticket_text_key_code" />
+    </LinearLayout>
+</LinearLayout>

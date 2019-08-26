@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/widget_game_loadding_container" android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/foot_empty_view" android:background="#ffe2e2e2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/game_card_margin" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/foot_title" android:background="#ffe2e2e2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/widget_game_loadding_text_size" android:textColor="#ff777777" android:gravity="center" android:id="@id/widget_game_loadding_title1" android:background="#ffe2e2e2" android:paddingBottom="@dimen/game_box_layout_margin_bottom" android:layout_width="wrap_content" android:layout_height="@dimen/widget_game_loadding_height" android:text="@string/game_center_tips_loadding" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/widget_game_loadding_text_size" android:textColor="@color/downloading_background" android:gravity="center" android:id="@id/widget_game_loadding_title2" android:background="#ffe2e2e2" android:paddingBottom="@dimen/game_box_layout_margin_bottom" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/widget_game_loadding_height" android:text="@string/game_loading_click_retry" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

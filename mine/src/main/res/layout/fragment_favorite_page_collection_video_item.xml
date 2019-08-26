@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/other_person_gridview_item_selector" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/video_checked_iv" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="20.0dip" android:layout_centerVertical="true" />
+        <RelativeLayout android:id="@id/favorite_page_video_item_image_view_container" android:layout_width="@dimen/detail_card_item_image_width_v5_collection" android:layout_height="@dimen/detail_card_item_image_height_v5_collection" android:layout_marginLeft="10.0dip" android:layout_marginTop="11.0dip" android:layout_marginBottom="11.0dip" android:layout_toRightOf="@id/video_checked_iv">
+            <com.youku.phone.collection.widget.YoukuImageView android:id="@id/favorite_page_video_item_image_view" android:background="#fff5f5f5" android:layout_width="@dimen/detail_card_item_image_width_v5_collection" android:layout_height="@dimen/detail_card_item_image_height_v5_collection" android:scaleType="centerCrop" />
+            <TextView android:textSize="10.0dip" android:textColor="#ffd3c39c" android:id="@id/video_member_icon" android:background="@drawable/collection_video_member_bg" android:padding="1.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="2.0dip" android:text="会员专享" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_series_more_right_v5_collection" android:layout_marginTop="@dimen/detail_card_item_title_margin_top_v5_collection" android:layout_toRightOf="@id/favorite_page_video_item_image_view_container" android:layout_alignParentTop="true">
+            <com.youku.phone.collection.widget.TextViewEllipseEndFixed android:textSize="@dimen/my_collections_collection_title" android:ellipsize="end" android:id="@id/favorite_page_video_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:text="影片名称" android:maxLines="2" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/favorite_page_video_item_title" android:layout_alignParentLeft="true">
+                <ImageView android:id="@id/collection_video_play_icon" android:background="@drawable/bofangliang" android:layout_width="@dimen/detail_card_bofangliang_v_collection" android:layout_height="@dimen/detail_card_bofangliang_v_collection" android:layout_marginRight="6.0dip" />
+                <TextView android:textSize="@dimen/detail_card_item_num_size_v5_collection" android:textColor="#ffc2c2c2" android:id="@id/collection_video_play_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="789" android:layout_toRightOf="@id/collection_video_play_icon" android:layout_below="@id/favorite_page_video_item_title" />
+            </LinearLayout>
+        </RelativeLayout>
+        <View android:background="@color/collection_popupmenu_divider" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/favorite_page_video_item_image_view_container" />
+    </RelativeLayout>
+</LinearLayout>

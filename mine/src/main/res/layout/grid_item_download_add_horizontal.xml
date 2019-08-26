@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/add" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/girditem_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/image_add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/girditem_checkbox_margin_left" android:src="@drawable/download_add_more" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/edit_select_text_size" android:textColor="@color/downloading_title_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/girditem_checkbox_margin_left" android:text="@string/download_add_more_title" android:layout_toRightOf="@id/image_add" android:layout_centerVertical="true" />
+    <TextView android:background="@color/download_gridview_splite_bg" android:layout_width="fill_parent" android:layout_height="@dimen/girditem_splite_height" android:layout_alignParentBottom="true" />
+    <TextView android:id="@id/gridview_splite_center" android:background="@color/download_gridview_splite_bg" android:visibility="gone" android:layout_width="@dimen/girditem_splite_height" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+</RelativeLayout>

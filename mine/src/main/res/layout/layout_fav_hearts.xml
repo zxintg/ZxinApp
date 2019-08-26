@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="@dimen/fav_heart_total_width" android:layout_height="@dimen/fav_heart_total_height" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/fav_heart_back" android:background="@drawable/shape_fav_heart_front" android:layout_width="@dimen/fav_heart_front_width" android:layout_height="@dimen/fav_heart_front_width" android:layout_marginBottom="0.0dip">
+        <ImageView android:layout_width="@dimen/fav_heart_icon_width" android:layout_height="@dimen/fav_heart_icon_width" android:src="@android:color/transparent" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/fav_heart_movies" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.youku.livesdk.view.FavHeartBeat android:id="@id/fav_heart_beat" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/fav_heart_front" android:background="@android:color/transparent" android:layout_width="@dimen/fav_heart_front_width" android:layout_height="@dimen/fav_heart_front_width" android:layout_marginBottom="0.0dip" android:alpha="1.0">
+        <ImageView android:layout_width="@dimen/fav_heart_icon_width" android:layout_height="@dimen/fav_heart_icon_width" android:src="@drawable/fav_heart_red" />
+    </LinearLayout>
+</FrameLayout>

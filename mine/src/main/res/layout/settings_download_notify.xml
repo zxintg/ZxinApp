@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/notify" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:paddingRight="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+        <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="下载完成通知" android:layout_centerVertical="true" />
+        <CheckBox android:id="@id/notify_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/settings_CheckBox" />
+    </RelativeLayout>
+    <View android:background="#ffc9c9c9" android:layout_width="fill_parent" android:layout_height="2.0px" />
+    <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/settings_card_prompt_icon_marginTop" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_card_prompt_icon_marginLeft" android:src="@drawable/settings_icon_tixing" />
+        <TextView android:textSize="@dimen/settings_card_prompt_icon_marginTop" android:textColor="#ff888888" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_card_prompt_text_marginLeft" android:text="开启后，视频下载完成时会以系统提示音的形式通知您。" />
+    </LinearLayout>
+</LinearLayout>

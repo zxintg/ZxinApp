@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/layout_vipresult_dialog" android:background="@color/white" android:layout_width="@dimen/layout_vip_dialog_width" android:layout_height="@dimen/layout_vipresult_dialog_height">
+        <RelativeLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/layout_vipresult_dialog_bottom">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <TextView android:textColor="@color/vip_dialog_buy_fail" android:gravity="center" android:id="@id/vipresult_dialog_title_first_txt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vip_dialog_buy_fail" style="@style/vipresult_dialog_title_first_txt" />
+                <TextView android:gravity="center" android:id="@id/vipresult_dialog_title_second_txt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/vipresult_dialog_title_second_txt_margintop" android:text="@string/vipbuy_dialog_buy_failtip" style="@style/vipresult_dialog_title_second_txt" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/layout_vipresult_dialog_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/layout_vip_dialog_bottom_height" android:layout_alignParentBottom="true">
+            <ViewFlipper android:id="@id/layout_vipresult_dialog_viewflipper" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="horizontal" android:id="@id/layout_vip_dialog_go" android:background="@drawable/btn_vip_dialog_ok" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <TextView android:id="@id/vip_dialog_txt_go" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/vip_dialog_txt_go" style="@style/vip_dialog_txt_go" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <LinearLayout android:gravity="center" android:id="@id/layout_vip_dialog_no" android:background="@drawable/btn_vip_dialog_cancel" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                        <TextView android:id="@id/vip_dialog_txt_no" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/vip_dialog_txt_no" style="@style/vip_dialog_txt_cancel" />
+                    </LinearLayout>
+                    <View android:background="#2c5e5e5e" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                    <View android:background="#ffffffff" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                    <LinearLayout android:gravity="center" android:id="@id/layout_vip_dialog_rebuy" android:background="@drawable/btn_vip_dialog_ok" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                        <TextView android:id="@id/vip_dialog_txt_rebuy" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/vip_dialog_txt_rebuy" style="@style/vip_dialog_txt_rebuy" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/layout_vip_dialog_close" android:background="@drawable/btn_vip_dialog_cancel" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <TextView android:id="@id/vip_dialog_txt_close" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/vip_dialog_txt_close" style="@style/vip_dialog_txt_close" />
+                </LinearLayout>
+            </ViewFlipper>
+            <View android:background="@drawable/soku_layout_bottom_cover" android:layout_width="fill_parent" android:layout_height="5.0px" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/vipresult_dialog_refresh_layout" android:padding="@dimen/vipresult_dialog_refresh_layout_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/rush" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

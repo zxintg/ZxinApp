@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/img_error_emptyview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/img_recommend_emptyview_margintop" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="@dimen/txt_recommend_emptyview_textsize" android:textColor="#ff999999" android:gravity="center" android:id="@id/soku_txt_error_emptyview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/txt_recommend_emptyview_margintop" android:text="@string/soku_txt_error_emptyview" android:layout_below="@id/img_error_emptyview" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="@dimen/txt_recommend_emptyview_textsize" android:textColor="#ff999999" android:gravity="center" android:id="@id/txt_error_emptyview_click" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/txt_recommend_emptyview_more_marginleft" android:layout_marginTop="@dimen/txt_recommend_emptyview_more_margintop" android:text="@string/txt_error_emptyview_click" android:layout_below="@id/txt_error_emptyview" />
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#ff141414" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/video_cut_custom_title" android:background="@color/text_color_white" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_item_height" android:layout_alignParentTop="true">
+        <LinearLayout android:gravity="center" android:id="@id/back_lin" android:layout_width="@dimen/dialog_item_height" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/padding_left_right_5" android:layout_centerVertical="true">
+            <ImageView android:background="@drawable/toolbar_back_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View android:id="@id/cut_line" android:background="#ffcfcfcf" android:layout_width="1.0px" android:layout_height="@dimen/line_item_height" android:layout_marginRight="@dimen/padding_left_right_10" android:layout_toRightOf="@id/back_lin" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/channel_custom_title_txt_textsize" android:textColor="@color/main_text_color" android:gravity="center_vertical" android:id="@id/album_custom_title_text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/video_edit_title" android:layout_toLeftOf="@id/video_cut_next" android:layout_toRightOf="@id/cut_line" />
+        <LinearLayout android:gravity="center" android:id="@id/video_cut_next" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+            <TextView android:textSize="@dimen/text_size_16" android:textColor="@color/videocut_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/padding_left_right_10" android:text="@string/video_edit_next" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="10.0" android:layout_below="@id/video_cut_custom_title">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="4.0" android:layout_below="@id/community_custom_title">
+            <com.youku.upload.widget.CutVideoView android:layout_gravity="center" android:id="@id/videoView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <LinearLayout android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/tipsLayout" android:background="@color/tips_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="30.0dip">
+                <ImageView android:background="@drawable/icon_caution" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/color_f1f1f1" android:gravity="center" android:id="@id/cut_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/upload_clip_tips" />
+            </LinearLayout>
+        </FrameLayout>
+        <RelativeLayout android:background="#00000000" android:layout_width="fill_parent" android:layout_height="@dimen/upload_position_height" android:layout_marginTop="@dimen/upload_video_player_padding_top">
+            <LinearLayout android:orientation="horizontal" android:id="@id/positionIconLin" android:background="#ff555555" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_centerVertical="true" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/positionIconSeLin" android:background="#ff2eb3ff" android:layout_width="wrap_content" android:layout_height="1.0dip" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/positionIcon" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/upload_ic_drag" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/layoutVideoCut" android:paddingTop="@dimen/video_cut_padding_top" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="4.2" android:layout_below="@id/videoView">
+            <TextView android:textSize="@dimen/text_size_14" android:textColor="@color/video_edit_time_color" android:gravity="right" android:id="@id/video_total_time" android:paddingLeft="@dimen/padding_left_right_10" android:paddingRight="@dimen/padding_left_right_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="00:00:00" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/upload_cut_bg_height" android:layout_margin="@dimen/padding_left_right_10">
+                <LinearLayout android:orientation="horizontal" android:id="@id/thumbnailsLayout" android:background="@color/black" android:padding="@dimen/padding_left_right_2" android:layout_width="fill_parent" android:layout_height="@dimen/upload_cover_bg_height" android:layout_marginLeft="@dimen/upload_cut_video_padding" android:layout_marginRight="@dimen/upload_cut_video_padding" android:layout_centerHorizontal="true" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/thumbnails_shadeLayout" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="@dimen/upload_cover_bg_height" android:layout_marginLeft="@dimen/upload_cut_video_padding" android:layout_marginRight="@dimen/upload_cut_video_padding">
+                    <View android:layout_gravity="left" android:id="@id/shade_left_view" android:background="#ff121212" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                    <TextView android:background="#00000000" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                    <View android:layout_gravity="right" android:id="@id/shade_right_view" android:background="#ff121212" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                </LinearLayout>
+                <RelativeLayout android:orientation="horizontal" android:id="@id/seekBarLayout" android:background="#00000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:id="@id/positionIconLeft" android:background="@drawable/upload_cut_handle" android:padding="@dimen/padding_left_right_5" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentLeft="true" />
+                    <ImageView android:id="@id/seekBar" android:background="@drawable/empty" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                    <ImageView android:id="@id/positionIconRight" android:background="@drawable/upload_cut_handle" android:padding="@dimen/padding_left_right_5" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/seekBarLayout1" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </RelativeLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/video_cut_padding_top">
+                <TextView android:textSize="@dimen/text_size_14" android:textColor="@color/text_color_white" android:id="@id/video_clip_time" android:paddingLeft="@dimen/padding_left_right_10" android:paddingRight="@dimen/padding_left_right_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00:00" android:singleLine="true" />
+                <TextView android:textSize="@dimen/text_size_14" android:textColor="@color/video_edit_time_color" android:paddingLeft="@dimen/padding_left_right_10" android:paddingTop="@dimen/padding_left_right_5" android:paddingRight="@dimen/padding_left_right_10" android:paddingBottom="@dimen/padding_left_right_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/video_cut_toast" android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.8">
+            <ImageView android:id="@id/video_play_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/upload_ic_cut_play" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/yp_cornerad_holder" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/yp_cornerad_image_margin_right" android:layout_marginBottom="@dimen/yp_cornerad_image_margin_bottom" android:layout_alignRight="@id/layout_cornerad_close" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/cornerad_img" android:layout_width="@dimen/yp_cornerad_image_width" android:layout_height="@dimen/yp_cornerad_image_height" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/layout_cornerad_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/yp_cornerad_close_margin_right" android:layout_marginBottom="@dimen/yp_cornerad_close_margin_bottom" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <ImageView android:layout_gravity="center" android:id="@id/cornerad_close" android:layout_width="@dimen/yp_cornerad_close_width" android:layout_height="@dimen/yp_cornerad_close_width" android:src="@drawable/corner_ad_close_btn" android:scaleType="fitXY" />
+    </LinearLayout>
+</RelativeLayout>

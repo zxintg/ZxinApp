@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:youku="http://youku.com/youku">
+    <FrameLayout android:id="@id/item_homepage_layout_group" android:layout_width="fill_parent" android:layout_height="@dimen/home_group_title_height">
+        <TextView android:gravity="center_vertical" android:id="@id/item_homePage_group" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="2.0dip" android:maxLines="1" android:drawableLeft="@drawable/box_title_left" android:drawableRight="@drawable/box_title_right" android:drawablePadding="@dimen/channel_item_box_title_drawablepadding" style="@style/drawer_group_title" />
+    </FrameLayout>
+    <com.youku.widget.AdaptiveLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/item_homepage_layout_group" youku:type="4">
+        <com.youku.widget.AdaptiveLinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/homepage_item_half_height" android:layout_weight="1.0" youku:type="3">
+            <com.youku.widget.ActionView android:id="@id/item_homePage_12" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" youku:type="8" />
+        </com.youku.widget.AdaptiveLinearLayout>
+        <com.youku.widget.AdaptiveLinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/homepage_item_half_height" android:layout_marginTop="@dimen/homepage_item_spacing" android:layout_weight="1.0" youku:type="3">
+            <com.youku.widget.ActionView android:id="@id/item_homePage_34" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" youku:type="8" />
+        </com.youku.widget.AdaptiveLinearLayout>
+    </com.youku.widget.AdaptiveLinearLayout>
+</RelativeLayout>

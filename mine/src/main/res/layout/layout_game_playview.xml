@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youku.gamecenter.widgets.PlayViewBar android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/game_detail_card_video_detail_title_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/game_detail_card_video_detail_title_height">
+        <RelativeLayout android:layout_gravity="center_vertical" android:id="@id/playviewbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/game_detail_card_subscribe_text_marginRight" android:layout_toLeftOf="@id/play_view_btn_parent" android:layout_centerVertical="true">
+            <ImageView android:id="@id/layout_game_playview_icon" android:background="@drawable/game_list_item_default" android:layout_width="@dimen/game_detail_card_subscribe_icon_width" android:layout_height="@dimen/game_detail_card_subscribe_icon_width" android:layout_marginLeft="@dimen/game_detail_card_subscribe_icon_marginLeft" android:layout_centerVertical="true" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/game_detail_card_subscribe_textlayout_height" android:layout_marginLeft="@dimen/game_detail_card_subscribe_title__marginLeft" android:layout_toRightOf="@id/layout_game_playview_icon" android:layout_centerVertical="true">
+                <TextView android:textSize="@dimen/game_detail_card_title_size" android:textColor="@color/game_detail_page_game_name_color_333333" android:ellipsize="end" android:id="@id/layout_game_playview_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" />
+                <TextView android:textSize="@dimen/game_detail_card_subtitle_size" android:textColor="@color/game_detail_page_game_desc_color_828282" android:ellipsize="end" android:id="@id/layout_game_playview_recom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="1000.0dip" android:text="" android:singleLine="true" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout android:gravity="center|right" android:orientation="horizontal" android:id="@id/play_view_btn_parent" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/game_detail_page_play_view_btn_margin_right" android:layout_alignParentRight="true">
+            <FrameLayout android:gravity="center" android:orientation="horizontal" android:id="@id/play_view_bar_game_button" android:layout_width="@dimen/game_detail_page_play_view_btn_bg_width" android:layout_height="@dimen/game_detail_page_play_view_btn_bg_height">
+                <ImageView android:id="@id/play_view_btn_bg" android:layout_width="@dimen/game_detail_page_play_view_btn_bg_width" android:layout_height="@dimen/game_detail_page_play_view_btn_bg_height" android:src="@drawable/game_detail_page_one_game_btn_blue" android:scaleType="fitXY" />
+                <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="center_vertical" android:id="@id/play_view_btn_cloud" android:layout_width="@dimen/game_detail_card_subscribe_state_icon_width" android:layout_height="@dimen/game_detail_card_subscribe_state_icon_width" android:layout_marginRight="8.0px" android:src="@drawable/game_detail_page_one_game_btn_cloud" />
+                    <TextView android:textSize="@dimen/game_detail_page_one_game_txt_size" android:textColor="#ffffffff" android:layout_gravity="center" android:id="@id/play_view_btn_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_install" />
+                </LinearLayout>
+            </FrameLayout>
+            <FrameLayout android:gravity="center" android:orientation="horizontal" android:id="@id/play_view_bar_h5_game_button" android:visibility="gone" android:layout_width="@dimen/game_detail_page_play_view_btn_bg_width_h5" android:layout_height="@dimen/game_detail_page_play_view_btn_bg_height">
+                <ImageView android:layout_width="@dimen/game_detail_page_play_view_btn_bg_width_h5" android:layout_height="@dimen/game_detail_page_play_view_btn_bg_height" android:src="@drawable/game_detail_page_one_game_btn_blue_h5" android:scaleType="fitXY" />
+                <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/game_detail_page_one_game_txt_size" android:textColor="#ffffffff" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0px" android:text="@string/game_h5_game_start_game" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:background="#ffc9c9c9" android:layout_width="fill_parent" android:layout_height="2.0px" />
+</com.youku.gamecenter.widgets.PlayViewBar>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.phone.channel.view.ChannelCellImageLayout android:id="@id/favorite_page_show_item_top_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/favorite_page_show_item_top_line_imageview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/showtop_selector" android:scaleType="fitXY" android:layout_alignParentTop="true" />
+        <RelativeLayout android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/favorite_page_show_item_top_line_imageview">
+            <ImageView android:layout_width="@dimen/icon_default_width" android:layout_height="@dimen/icon_default_width" android:src="@drawable/channel_not_loaded_icon_play" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/favorite_page_show_item_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+            <TextView android:textSize="@dimen/homepage_item_middle_stripe" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/favorite_page_show_item_stripe_middle" android:background="@drawable/waist_seal" android:paddingLeft="@dimen/waist_seal_line_marginLeft" android:paddingRight="@dimen/waist_seal_line_marginLeft" android:layout_width="fill_parent" android:layout_height="@dimen/grid_item_stripe_middle_height" android:singleLine="true" android:layout_alignParentBottom="true" style="@style/waist_seal_title_style" />
+            <RelativeLayout android:id="@id/favorite_page_video_item_image_delete_bg" android:background="#66000000" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.youku.widget.YoukuImageView android:id="@id/favorite_page_video_item_image_delete" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/upload_item_img_height" android:src="@drawable/editor_btn_delete" android:scaleType="center" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/favorite_page_show_item_triangle_wrapper" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.youku.widget.TriangleView android:id="@id/favorite_page_show_item_triangle_view" android:layout_width="@dimen/triangle_view_height" android:layout_height="@dimen/triangle_view_height" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+                <com.youku.widget.RobbinTextView android:id="@id/favorite_page_show_item_triangle_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/triangle_right_text" />
+            </RelativeLayout>
+            <include android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_above="@id/favorite_page_show_item_stripe_middle" layout="@layout/waist_seal_line" />
+        </RelativeLayout>
+    </com.youku.phone.channel.view.ChannelCellImageLayout>
+    <com.youku.phone.channel.view.ChannelCellTitleLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/favorite_page_show_item_title_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:ellipsize="end" android:id="@id/favorite_page_show_item_title_first" android:paddingLeft="@dimen/gridview_item_tv_marginleft" android:paddingRight="@dimen/gridview_item_tv_marginleft" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="@style/Font4_gray_333333" />
+        <LinearLayout android:layout_gravity="center|left" android:orientation="horizontal" android:paddingLeft="@dimen/gridview_item_tv_marginleft" android:paddingRight="@dimen/gridview_item_tv_marginleft" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/myouku_video_name2_size" android:textColor="#ff999999" android:id="@id/favorite_page_show_item_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@null" style="@style/myyouku_list_item_third" />
+        </LinearLayout>
+    </com.youku.phone.channel.view.ChannelCellTitleLayout>
+    <ImageView android:layout_gravity="bottom" android:id="@id/favorite_page_show_item_bottom_line" android:background="@color/channel_bottom_line_color" android:layout_width="fill_parent" android:layout_height="2.0px" />
+</LinearLayout>

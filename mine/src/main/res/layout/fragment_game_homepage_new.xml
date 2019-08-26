@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/gamecenter_group_for_pad" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.RecyclerView android:id="@id/game_home_recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include android:id="@id/no_result_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/game_no_result" />
+    <com.youku.gamecenter.widgets.GameHomeFloatView android:id="@id/float_layout" android:paddingRight="@dimen/game_home_float_padding_right" android:paddingBottom="@dimen/game_home_float_padding_bottom" android:visibility="gone" android:layout_width="@dimen/game_home_float_layout_width" android:layout_height="@dimen/game_home_float_layout_height" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>

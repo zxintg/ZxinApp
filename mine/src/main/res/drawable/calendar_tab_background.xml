@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="@dimen/calendar_tab_left_right" android:right="@dimen/calendar_tab_left_right">
+        <shape>
+            <gradient android:startColor="#ff4d9cec" />
+            <solid android:color="#ff4d9cec" />
+        </shape>
+    </item>
+    <item android:left="@dimen/calendar_tab_left_right" android:right="@dimen/calendar_tab_left_right" android:bottom="3.0dip">
+        <shape>
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+</layer-list>

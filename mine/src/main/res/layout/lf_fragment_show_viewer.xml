@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.laifeng.sdk.widget.player.UVideoView android:id="@id/uVideoView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/viewstub_gift2DViewContainer" android:layout="@layout/lf_layout_giftcontainer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.youku.laifeng.sdk.widget.SoftKeyBoardViewGroup android:id="@id/layoutWrapper" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.youku.laifeng.sdk.widget.watcher.WatcherView android:id="@id/watcherView" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ImageView android:id="@id/imageViewExit" android:layout_width="33.0dip" android:layout_height="33.0dip" android:layout_marginTop="13.0dip" android:layout_marginRight="12.0dip" android:src="@drawable/lf_ic_play_exit" android:layout_alignParentRight="true" />
+        <RelativeLayout android:orientation="vertical" android:id="@id/showGiftLayout" android:layout_width="fill_parent" android:layout_height="126.0dip" android:layout_marginBottom="10.0dip" android:layout_above="@id/chatBox">
+            <LinearLayout android:orientation="vertical" android:id="@id/topShowGiftLayout" android:layout_width="fill_parent" android:layout_height="78.0dip" />
+            <LinearLayout android:orientation="vertical" android:id="@id/bottomShowGiftLayout" android:layout_width="fill_parent" android:layout_height="78.0dip" android:layout_marginTop="48.0dip" />
+        </RelativeLayout>
+        <com.youku.laifeng.sdk.widget.bottombar.BottomBarLayout android:id="@id/bottomBarLayout" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginBottom="10.0dip" android:layout_alignParentBottom="true" />
+        <com.youku.laifeng.sdk.widget.chatBox.ChatBox android:id="@id/chatBox" android:visibility="invisible" android:layout_width="238.0dip" android:layout_height="124.0dip" android:layout_marginLeft="10.0dip" android:layout_marginBottom="12.0dip" android:layout_above="@id/editBoxLayout" />
+        <com.youku.laifeng.sdk.widget.star.SendStarView android:id="@id/sendStarView" android:visibility="visible" android:layout_width="40.0dip" android:layout_height="55.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="65.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        <com.youku.laifeng.sdk.widget.editbox.EditBoxView android:id="@id/editBoxLayout" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    </com.youku.laifeng.sdk.widget.SoftKeyBoardViewGroup>
+    <com.youku.laifeng.sdk.widget.sopCastInfoView.SopCastInfoForViewerView android:id="@id/sopCastInfoForViewerView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.youku.laifeng.sdk.widget.LoadingViewLayout android:id="@id/loadingView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

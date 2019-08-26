@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:paddingLeft="@dimen/settings_card_padding" android:paddingRight="@dimen/settings_card_padding" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+        <TextView android:textAppearance="@style/settings_text2" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mycenter_setting_play_prefer_hd2" android:layout_centerVertical="true" />
+        <RadioButton android:id="@id/checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/mycenter_setting_radiobtn_selector" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:id="@id/divider" android:background="@color/mycenter_setting_divider" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_setting_divider" />
+</LinearLayout>

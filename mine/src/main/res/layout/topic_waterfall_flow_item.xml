@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@id/videoinfo_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="1.0px" layout="@layout/topics_list_item" />
+        <LinearLayout android:orientation="vertical" android:id="@id/starvideo_topctextview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/topic_margin_8dp" android:layout_marginRight="@dimen/topic_margin_8dp" android:layout_below="@id/topics_list_item">
+            <TextView android:textSize="@dimen/topic_starvideo_title_size" android:textColor="@color/topic_editor_text_color" android:ellipsize="end" android:gravity="left" android:id="@id/topic_editor_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/lead_text_top_line_layout" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/lead_text_center_line_layout" android:layout_width="fill_parent" android:layout_height="@dimen/usercenter_item_spacing" android:layout_below="@id/topic_comment_text" />
+            <TextView android:textSize="@dimen/topic_starvideo_title_size" android:textColor="@color/topic_editor_text_color" android:ellipsize="end" android:gravity="left" android:id="@id/topic_comment_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/lead_text_center_line_layout" />
+            <View android:id="@id/lead_text_bottom_blank_line" android:layout_width="fill_parent" android:layout_height="@dimen/topic_height_4" android:layout_below="@id/topic_editor_text" />
+        </LinearLayout>
+        <View android:background="@drawable/videoroundcorner" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+</RelativeLayout>

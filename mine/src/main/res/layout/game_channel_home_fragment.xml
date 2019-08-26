@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.widget.CompatSwipeRefreshLayout android:id="@id/ganme_channel_refesh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.RecyclerView android:scrollbarStyle="outsideOverlay" android:id="@id/channel_game_home_recycler_view" android:paddingLeft="@dimen/channel_gridview_padding_horizontal" android:paddingRight="@dimen/channel_gridview_padding_horizontal" android:scrollbars="vertical" android:fadingEdge="none" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="#00000000" android:cacheColorHint="#00000000" />
+    </com.youku.widget.CompatSwipeRefreshLayout>
+    <com.youku.phone.channel.view.ChannelNoResultEmptyView android:id="@id/game_channel_noresult_emptyview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="@dimen/layout_vip_dialog_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0sp" android:textColor="@color/chat_copy_dialog_text" android:gravity="center" android:id="@id/copy_dialog_text" android:background="@drawable/copy_dialog_selector" android:layout_width="fill_parent" android:layout_height="57.0dip" android:text="@string/chat_copy_dialog" />
+</LinearLayout>

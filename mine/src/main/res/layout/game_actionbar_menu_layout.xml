@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youku.gamecenter.widgets.GameActionBarMenuView android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/game_MyActionButtonStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/game_actionbar_action_view_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_search" />
+    <RelativeLayout android:id="@id/game_actionbar_action_view_red_oval" android:layout_width="@dimen/game_menu_red_oval_size" android:layout_height="@dimen/game_menu_red_oval_size" android:layout_marginTop="-2.0dip" android:layout_marginRight="-8.0dip" android:layout_alignTop="@id/game_actionbar_action_view_icon" android:layout_alignRight="@id/game_actionbar_action_view_icon">
+        <ImageView android:background="@drawable/game_menu_red_oval" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/game_menu_red_oval_txt_size" android:textColor="#ffffffff" android:gravity="center" android:id="@id/game_actionbar_action_view_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:layout_alignParentTop="true" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</com.youku.gamecenter.widgets.GameActionBarMenuView>

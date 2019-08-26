@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/channel_sub_title" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/channel_main_tabindicator_height" style="@style/channel_sub_title" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/channel_sub_body" android:background="@color/app_background" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

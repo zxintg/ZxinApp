@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/hotpoint_popup_txt" android:paddingLeft="@dimen/hotpoint_popup_txt_paddingleftright" android:paddingTop="@dimen/hotpoint_popup_txt_paddingtopbottom" android:paddingRight="@dimen/hotpoint_popup_txt_paddingleftright" android:paddingBottom="@dimen/hotpoint_popup_txt_paddingtopbottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" style="@style/hotpoint_popup_txt" />
+        <View android:id="@id/hotpoint_popup_line" android:background="#80ffffff" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/hotpoint_popup_txt" android:layout_alignLeft="@id/hotpoint_popup_txt" android:layout_alignRight="@id/hotpoint_popup_txt" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</LinearLayout>

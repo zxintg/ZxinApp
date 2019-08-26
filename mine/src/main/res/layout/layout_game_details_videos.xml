@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/game_videos_layout" android:background="#ffffffff" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:game="http://schemas.android.com/apk/res-auto">
+    <com.youku.gamecenter.widgets.GameDetailsCardTopTitleView android:id="@id/game_tags_title" android:layout_width="fill_parent" android:layout_height="@dimen/gamehome_home_card_item_box_title_layout_height" game:title_text="@string/game_str_game_video" game:title_bottom_line_visible="false" />
+    <include android:id="@id/images_videos" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/game_card_margin" layout="@layout/widget_game_videos_gallery_new" />
+</LinearLayout>

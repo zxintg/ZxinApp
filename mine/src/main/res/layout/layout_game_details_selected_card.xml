@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <WebView android:id="@id/game_detail_webView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/game_detail_selected_card_height" />
+    <ProgressBar android:id="@id/game_detail_webView_progress" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/series_loading_progressbar" android:layout_centerInParent="true" />
+    <RelativeLayout android:id="@id/rl_no_result" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/game_detail_selected_card_height" android:layout_alignParentTop="true">
+        <View android:id="@id/no_result_split" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/no_result_margin" android:layout_centerInParent="true" />
+        <TextView android:textSize="@dimen/no_result_textsize" android:textColor="#ffb6b6b6" android:layout_gravity="center" android:id="@id/tv_no_result" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/game_web_no_detail_retry" android:layout_below="@id/no_result_split" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@id/iv_no_result" android:visibility="visible" android:src="@drawable/pic_no_results" android:scaleType="fitCenter" android:layout_above="@id/no_result_split" android:layout_centerHorizontal="true" android:contentDescription="@string/str_image" style="@style/game_center_NoResultStyle" />
+    </RelativeLayout>
+</RelativeLayout>

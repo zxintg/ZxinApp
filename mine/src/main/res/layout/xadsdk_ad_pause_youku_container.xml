@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:gravity="center" android:orientation="vertical" android:id="@id/play_middle_setting" android:layout_width="600.0dip" android:layout_height="500.0dip" android:layout_centerInParent="true">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:gravity="center" android:orientation="vertical" android:layout_width="390.0dip" android:layout_height="280.0dip" android:layout_centerInParent="true">
+                <ImageView android:layout_gravity="center" android:id="@id/plugin_pause_ad_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+                <LinearLayout android:gravity="right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="3.0dip">
+                    <ImageView android:id="@id/btn_close_pausead" android:background="@drawable/xadsdk_fullscreen_ad_close_background" android:layout_width="25.0dip" android:layout_height="25.0dip" android:src="@drawable/xadsdk_pause_ad_close" android:scaleType="center" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/search_bar_list_item_txt" android:paddingLeft="@dimen/searchmain_history_marginleftright" android:paddingRight="@dimen/searchmain_history_marginleftright" android:layout_width="fill_parent" android:layout_height="@dimen/search_bar_view_height" style="@style/txt_searchmain_history_one" />
+</LinearLayout>

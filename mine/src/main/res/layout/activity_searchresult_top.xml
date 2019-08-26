@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="#f3ffffff" android:layout_width="fill_parent" android:layout_height="@dimen/searchresult_filterbar_height">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/layout_searchresult_filter_ob" android:paddingLeft="@dimen/searchresult_filter_marginRight" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <TextView android:id="@id/txt_searchresult_filter_ob" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/txt_searchresult_filter_ob_synthesize" style="@style/txt_searchresult_filter_ob" />
+            <ImageView android:id="@id/img_searchresult_filter_ob" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/other_site_arrow_selector" />
+        </LinearLayout>
+        <TextView android:gravity="center" android:id="@id/chk_searchresult_filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/searchresult_filter_marginRight" android:text="@string/youku_title_filter" android:drawableLeft="@drawable/channel_filter_btn_selector" android:drawablePadding="0.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/toolbar_btn_txt" />
+        <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:id="@id/searchresult_filter_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/searchresult_videonumber_tag_marginleft" android:layout_toLeftOf="@id/chk_searchresult_filter" android:layout_toRightOf="@id/layout_searchresult_filter_ob" />
+    </RelativeLayout>
+</LinearLayout>

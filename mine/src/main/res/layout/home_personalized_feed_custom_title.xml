@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center|left" android:id="@id/feed_custom_title" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/feed_custom_title_line" android:paddingTop="@dimen/channel_custom_title_padding_topbottom" android:paddingBottom="@dimen/channel_custom_title_padding_topbottom" android:layout_width="wrap_content" android:layout_height="@dimen/channel_shuxian_height" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+        <View android:background="#ffcfcfcf" android:layout_width="1.0px" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <TextView android:id="@id/feed_custom_title_txt" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/channel_custom_title_txt_marginleft" android:layout_toRightOf="@id/channel_custom_title_line" style="@style/channel_custom_title_txt" />
+</RelativeLayout>

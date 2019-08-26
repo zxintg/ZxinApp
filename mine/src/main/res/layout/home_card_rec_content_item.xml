@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/home_card_item_video_1" android:layout_width="0.0dip" android:layout_height="300.0dip" android:layout_weight="1.0" layout="@layout/home_video_land_item" />
+    <View android:background="#ffebebeb" android:layout_width="@dimen/home_card_item_space" android:layout_height="300.0dip" />
+    <include android:id="@id/home_card_item_video_2" android:layout_width="0.0dip" android:layout_height="300.0dip" android:layout_weight="1.0" layout="@layout/home_video_land_item" />
+</LinearLayout>

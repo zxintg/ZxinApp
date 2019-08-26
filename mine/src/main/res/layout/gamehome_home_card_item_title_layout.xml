@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/home_card_item_box_title_layout" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/gamehome_home_card_item_box_title_layout_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="#ff2fb3ff" android:layout_width="@dimen/gamehome_home_card_item_box_title_shape_weight" android:layout_height="@dimen/gamehome_home_card_item_box_title_shape_height" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/home_card_item_box_title_img_layout" android:paddingLeft="@dimen/gamehome_home_card_item_box_title_layout_paddingleft" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/gamehome_home_card_item_box_title_txt_height">
+        <ImageView android:id="@id/home_card_item_box_title_img" android:layout_width="@dimen/gamehome_home_card_item_box_title_txt_height" android:layout_height="@dimen/gamehome_home_card_item_box_title_txt_height" android:scaleType="centerCrop" android:adjustViewBounds="true" android:maxHeight="@dimen/gamehome_home_card_item_box_title_txt_height" />
+    </LinearLayout>
+    <TextView android:gravity="center_vertical" android:id="@id/home_card_item_box_title_txt" android:paddingLeft="@dimen/gamehome_home_card_item_box_title_layout_paddingleft" android:layout_width="wrap_content" android:layout_height="fill_parent" android:drawablePadding="@dimen/gamehome_channel_item_box_title_drawablepadding" style="@style/drawer_group_title" />
+    <LinearLayout android:gravity="center|right" android:orientation="horizontal" android:id="@id/home_card_item_box_tags_layout" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:layout_weight="1.0" />
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="#66000000" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/tip_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/playlist_add_videos_notice" android:scaleType="fitXY" android:adjustViewBounds="true" />
+    <View android:layout_gravity="bottom" android:id="@id/add_videos_tip_click_area" android:layout_width="fill_parent" android:layout_height="@dimen/add_video_tip_dialog_click_area_height" />
+</FrameLayout>

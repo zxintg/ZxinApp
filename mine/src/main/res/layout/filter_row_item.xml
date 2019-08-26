@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/soku_result_filter_item_text_size" android:textColor="@drawable/search_result_filter_text_color" android:gravity="center" android:layout_gravity="center" android:id="@id/filter_item_title" android:background="@drawable/search_result_filter_item_bg_selector" android:layout_width="wrap_content" android:layout_height="@dimen/soku_result_filter_item_text_height" />
+</FrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.meetme.android.horizontallistview.HorizontalListView android:id="@id/listview_history_page_layout" android:background="#ffffffff" android:visibility="gone" android:fadingEdgeLength="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/activity_padding_half" android:minHeight="120.0dip" android:requiresFadingEdge="horizontal" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ucenter_card_history_empty_layout" android:padding="@dimen/activity_padding_half" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
+        <ImageView android:id="@id/img_myyouku_history_norecord" android:layout_width="@dimen/usercenter_history_norecord_width" android:layout_height="@dimen/usercenter_history_norecord_height" android:src="@drawable/icon_history_norecord" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_padding_half" android:text="您还未观看任何视频哦" style="@style/ucenter_history_norecord" />
+    </LinearLayout>
+</RelativeLayout>

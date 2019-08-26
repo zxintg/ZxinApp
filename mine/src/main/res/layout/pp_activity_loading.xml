@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.pp.sdk.view.PPPluginLoadingView android:layout_gravity="center" android:id="@id/pp_view_loading_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.pp.sdk.view.PPPluginErrorView android:layout_gravity="center" android:id="@id/pp_view_error_view" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

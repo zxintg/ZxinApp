@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="false" android:drawable="@drawable/navbar_icon_user_activated" android:state_activated="true" />
+    <item android:state_selected="true" android:drawable="@drawable/navbar_icon_user_selected" android:state_activated="false" />
+    <item android:state_selected="true" android:drawable="@drawable/navbar_icon_user_selected_activated" android:state_activated="true" />
+    <item android:drawable="@drawable/navbar_icon_user_normal" />
+</selector>

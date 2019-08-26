@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.youku.widget.RatioImageView android:id="@id/pic" android:layout_width="fill_parent" android:layout_height="wrap_content" app:ratioWidthHeight="1.78" />
+    <TextView android:textSize="13.0dip" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/topic_box_text" />
+    <TextView android:textSize="10.0dip" android:id="@id/sub_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" style="@style/topic_box_text" />
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:gravity="center" android:orientation="horizontal" android:id="@id/image_youku_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
+        <ImageView android:id="@id/plugin_full_ad_image" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+        <RelativeLayout android:gravity="center|right|top" android:layout_gravity="top" android:id="@id/btn_close_wrap" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/yp_image_ad_close_margin_right">
+            <LinearLayout android:id="@id/btn_close" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+                <ImageView android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/close" android:scaleType="center" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/image_ad_blank" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_toLeftOf="@id/btn_close" android:layout_alignWithParentIfMissing="true" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/image_ad_timer_wrap" android:background="#99000000" android:padding="@dimen/player_ad_count_text_padding_youku" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_toLeftOf="@id/image_ad_blank" android:layout_alignWithParentIfMissing="true">
+                <TextView android:textSize="@dimen/player_ad_count_text_size" android:textColor="#ffff8888" android:gravity="center|right" android:id="@id/image_ad_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+                <TextView android:textSize="@dimen/player_ad_count_text_size" android:textColor="#ffffffff" android:gravity="center|left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/playersdk_ad_descrip_second" />
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+    <TextView android:textSize="@dimen/player_ad_tip_text_size_youku" android:gravity="center" android:background="@color/yp_ad_background_color_youku" android:layout_width="@dimen/player_ad_tip_width_youku" android:layout_height="@dimen/player_ad_tip_height_youku" android:layout_marginLeft="2.0dip" android:layout_marginBottom="2.0dip" android:text="广告" android:layout_alignParentBottom="true" />
+</RelativeLayout>

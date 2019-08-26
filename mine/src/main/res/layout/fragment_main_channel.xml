@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.ui.activity.actionbar.CustomToolbar android:id="@id/custom_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" />
+    <RelativeLayout android:id="@id/channel_main_tabindicator_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.youku.phone.channel.view.TabPageIndicator android:id="@id/channel_main_tabindicator" android:background="#fffcfcfc" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="@dimen/channel_tab_height" />
+        <View android:id="@id/channel_main_tabindicator_mask" android:background="@drawable/channel_tab_white_mask" android:layout_width="@dimen/channel_tab_white_mask" android:layout_height="@dimen/channel_tab_height" android:layout_alignParentRight="true" />
+        <View android:background="#14000000" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/channel_main_tabindicator" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.youku.phone.channel.view.ExtendedViewPager android:id="@id/channel_main_viewpager" android:persistentDrawingCache="animation" android:layout_width="fill_parent" android:layout_height="fill_parent" android:flipInterval="30" />
+        <com.youku.phone.channel.view.ChannelNoResultEmptyView android:id="@id/channel_main_noresult_emptyview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+</LinearLayout>

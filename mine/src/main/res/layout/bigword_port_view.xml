@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridView android:id="@id/bigword_direct_port_gridview" android:background="#fff4f4f4" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@null" android:cacheColorHint="#00000000" android:horizontalSpacing="1.0px" android:stretchMode="columnWidth" android:numColumns="@integer/bigworddirect_table_gridview_numColumns"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/search_custom_title" android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center" android:id="@id/webview_custom_back_wrap" android:background="@drawable/yp_webview_back_background_youku" android:focusable="true" android:clickable="true" android:layout_width="30.0dip" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+        <ImageView android:gravity="center" android:id="@id/webview_custom_back" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/yp_webview_back" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center" android:id="@id/webview_custom_update_wrap" android:background="@drawable/yp_webview_back_background_youku" android:focusable="true" android:clickable="true" android:layout_width="40.0dip" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <ImageView android:gravity="center" android:id="@id/webview_custom_update" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/yp_webview_refresh_normal" />
+    </RelativeLayout>
+    <com.youku.player.ui.widget.AlwaysMarqueeTextView android:textSize="15.0sp" android:textColor="#ff000000" android:ellipsize="marquee" android:id="@id/custom_title" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:focusable="true" android:focusableInTouchMode="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scrollHorizontally="true" android:singleLine="true" android:layout_toLeftOf="@id/webview_custom_update_wrap" android:layout_toRightOf="@id/webview_custom_back_wrap" android:layout_centerVertical="true" android:marqueeRepeatLimit="marquee_forever" />
+</RelativeLayout>

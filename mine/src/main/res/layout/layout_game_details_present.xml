@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/game_present_parent" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:game="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="@dimen/gamehome_home_card_item_box_title_layout_height">
+        <com.youku.gamecenter.widgets.GameDetailsCardTopTitleView android:layout_width="fill_parent" android:layout_height="fill_parent" game:title_text="@string/game_str_game_present_name" />
+        <TextView android:textSize="@dimen/game_category_text_size" android:textColor="@drawable/game_detail_card_title_more" android:id="@id/game_present_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/detail_gameinfo_padding" android:text="@string/game_str_game_present_more" android:layout_toLeftOf="@id/present_more" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/present_more" android:layout_width="wrap_content" android:layout_height="@dimen/game_details_present_more_height" android:layout_marginTop="2.0dip" android:layout_marginRight="@dimen/detail_game_card_present_more_icon_right_margin" android:src="@drawable/present_more" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/str_percent_0" />
+    </RelativeLayout>
+    <include android:id="@id/present_item_1" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_game_details_present_item" />
+    <View android:id="@id/present_splite" android:background="#ffcccccc" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <include android:id="@id/present_item_2" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_game_details_present_item" />
+</LinearLayout>

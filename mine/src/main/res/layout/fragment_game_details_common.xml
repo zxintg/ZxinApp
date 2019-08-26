@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/content_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/scrollView1" android:background="@color/game_background_grey" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/fl_detail_download" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/content_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="@color/game_background_grey" android:layout_width="fill_parent" android:layout_height="@dimen/game_card_margin" />
+            <include layout="@layout/layout_game_details_top" />
+            <View android:background="@color/game_background_grey" android:layout_width="fill_parent" android:layout_height="@dimen/game_card_margin" />
+        </LinearLayout>
+    </ScrollView>
+    <com.youku.gamecenter.widgets.GameBottomDownloadBtnView android:id="@id/fl_detail_download" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/fl_detail_download_height" android:layout_alignParentBottom="true" />
+</RelativeLayout>

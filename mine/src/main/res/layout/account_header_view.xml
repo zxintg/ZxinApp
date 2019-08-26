@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/top_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/user_center_main_card_header_top_layout_height">
+        <LinearLayout android:orientation="vertical" android:id="@id/portrait" android:background="#4dc9c7c7" android:padding="@dimen/user_center_main_card_header_portrait_padding" android:layout_width="@dimen/user_center_main_card_header_portrait_width" android:layout_height="@dimen/user_center_main_card_header_portrait_width" android:layout_marginLeft="@dimen/user_center_main_card_header_portrait_marginLeft" android:layout_centerVertical="true">
+            <ImageView android:id="@id/portrait_img" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/avatar_default" android:scaleType="centerCrop" />
+        </LinearLayout>
+        <ImageView android:id="@id/img_myyouku_vip" android:layout_width="@dimen/img_myyouku_avatar_width" android:layout_height="@dimen/img_myyouku_avatar_width" android:layout_marginRight="@dimen/user_center_main_card_header_vip_marginRight" android:layout_marginBottom="@dimen/user_center_main_card_header_vip_marginRight" android:src="@drawable/vip_no" android:layout_alignRight="@id/portrait" android:layout_alignBottom="@id/portrait" />
+        <LinearLayout android:gravity="center_vertical" android:id="@id/layout_fill" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+            <RelativeLayout android:gravity="center_vertical" android:paddingRight="@dimen/account_fill_txt_margin" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:id="@id/account_fill_txt" android:paddingLeft="@dimen/account_fill_txt_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="完善信息" android:drawableRight="@drawable/fill_arrow" android:drawablePadding="@dimen/account_fill_txt_drawablepadding" style="@style/account_fill_txt" />
+                <View android:id="@id/account_fill_txt_line" android:background="#ffe5e5e5" android:layout_width="1.0px" android:layout_height="@dimen/account_fill_txt_line_height" android:layout_alignTop="@id/account_fill_txt" android:layout_alignBottom="@id/account_fill_txt" android:layout_alignParentLeft="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/layout_user_info" android:paddingLeft="@dimen/myouku_reglog_layout_paddingleft" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/layout_fill" android:layout_toRightOf="@id/portrait" android:layout_centerVertical="true" android:layout_alignWithParentIfMissing="true">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:ellipsize="end" android:id="@id/nickname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="优酷用户" android:singleLine="true" style="@style/account_txt_nickname" />
+                <ImageView android:id="@id/verified" android:layout_width="@dimen/myyouku_verified_width" android:layout_height="@dimen/myyouku_verified_width" android:layout_marginLeft="@dimen/myyouku_verified_marginLeft" android:src="@drawable/verified_icon" android:scaleType="fitXY" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:id="@id/account_header_card_bottom_line" android:background="#80c9c9c9" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <TextView android:id="@id/account_fill_txt_tips" android:layout_width="fill_parent" android:layout_height="@dimen/account_fill_txt_tips_height" android:text="完善信息后可以管理账户绑定。" android:drawableLeft="@drawable/settings_icon_tixing" android:drawablePadding="@dimen/account_fill_txt_drawablepadding" style="@style/account_fill_txt_tips" />
+</LinearLayout>

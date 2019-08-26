@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/gamecenter_group_for_pad" android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:game="http://schemas.android.com/apk/res-auto">
+    <com.youku.gamecenter.widgets.GameListTopLabelView android:id="@id/layout_rank_top_label_view" android:background="@drawable/game_listview_item_normal" android:layout_width="fill_parent" android:layout_height="@dimen/game_rank_top_height" game:label_title1="@string/game_single_rank" game:label_title2="@string/game_net_rank" />
+    <ListView android:id="@id/scrollcontainer" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@color/transparent" android:layout_below="@id/layout_rank_top_label_view" />
+    <include android:id="@id/no_result_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/layout_rank_top_label_view" layout="@layout/game_no_result" />
+</RelativeLayout>

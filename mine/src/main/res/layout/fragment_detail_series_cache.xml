@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/detail_background_color" android:paddingLeft="@dimen/detail_play_padding_left_right" android:paddingTop="@dimen/detail_play_padding_top_bottom" android:paddingRight="@dimen/detail_play_padding_left_right" android:paddingBottom="@dimen/detail_play_padding_top_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/cache_setting" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:id="@id/setting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_series_cache_setting_margin_left" android:layout_marginTop="@dimen/detail_card_series_cache_setting_margin_left" android:layout_alignParentLeft="true">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/gaoqing" />
+            <TextView android:textSize="@dimen/detail_card_series_cache_setting_text_size" android:textColor="#ff666666" android:gravity="center_vertical" android:id="@id/setting_text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/detail_card_series_cache_line_margin_left" android:text="高清" />
+        </LinearLayout>
+        <View android:id="@id/shadow_view" android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="@dimen/detail_card_series_cache_setting_margin_left" android:layout_below="@id/setting" />
+        <GridView android:layout_gravity="center" android:id="@id/gv_series_cache" android:background="@android:color/transparent" android:scrollbars="none" android:fadingEdgeLength="@dimen/detail_boder" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="#fff2f2f2" android:dividerHeight="1.0px" android:layout_above="@id/select_videos" android:layout_below="@id/shadow_view" />
+        <RelativeLayout android:id="@id/select_videos" android:background="#ff0db3ff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_series_cache_select_videos_height" android:layout_alignParentBottom="true">
+            <TextView android:textSize="@dimen/detail_card_series_cache_cache_text_size" android:textColor="@color/white" android:id="@id/cache_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_series_cache_cache_text_margin_left" android:text="@string/select_video_desc" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/detail_card_series_cache_cache_text_size" android:textColor="@color/white" android:id="@id/select_videos_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_toRightOf="@id/cache_text" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/detail_card_series_cache_down_list_text_size" android:textColor="@color/white" android:gravity="center" android:id="@id/cache_bt" android:background="@color/transparent" android:layout_width="@dimen/detail_card_series_cache_download_button_width" android:layout_height="wrap_content" android:text="@string/download" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <TextView android:background="@color/white" android:layout_width="1.0dip" android:layout_height="@dimen/detail_card_series_cache_line_height" android:layout_toLeftOf="@id/cache_bt" android:layout_centerVertical="true" android:alpha="0.4" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout android:id="@id/ll_btn_confirm_download" android:background="#fff5f5f5" android:padding="@dimen/detail_boder" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/detail_cache_type_height" android:minWidth="@dimen/detail_cache_golist_width">
+        <Button android:id="@id/btn_confirm_download" android:background="@drawable/comment_btn_click" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/detail_cache_confirm" android:shadowColor="#ffffffff" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" style="@style/detail_item_content" />
+    </LinearLayout>
+    <include android:id="@id/layout_no_result" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/detail_layout_no_results" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/loadingview" android:background="@color/detail_background_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.youku.widget.Loading android:id="@id/newLoading" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/transparent_loading" android:background="@null" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.youku.widget.Loading android:id="@id/trans_loading" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.youku.widget.Loading android:id="@id/next_loading" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+</RelativeLayout>

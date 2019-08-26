@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Button android:id="@id/bt1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="分享图片到微信朋友" />
+        <Button android:id="@id/bt2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="分享图片到QQ" />
+        <Button android:id="@id/bt3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="分享图片到支付宝好友" />
+        <Button android:id="@id/bt4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="分享图片到微信朋友圈" />
+        <Button android:id="@id/bt5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="分享图片到微博" />
+        <Button android:id="@id/bt6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="分享图片到QQ Zone" />
+        <Button android:id="@id/bt7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="分享gif - QQ空间" />
+        <Button android:id="@id/bt8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="分享gif - 微信好友" />
+        <Button android:id="@id/bt9" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="分享gif - QQ好友" />
+        <Button android:id="@id/bt10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="分享视频 - 微博" />
+        <Button android:id="@id/bt11" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="分享视频 - QQ好友" />
+        <Button android:id="@id/bt12" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="分享视频 - 微信朋友圈" />
+        <Button android:id="@id/bt13" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="分享视频 - 微信朋友" />
+        <Button android:id="@id/bt14" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="分享视频 - QQ空间" />
+        <Button android:id="@id/bt15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="分享视频 - 支付宝好友" />
+        <Button android:id="@id/bt16" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="分享图片到更多" />
+        <Button android:id="@id/bt17" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="分享视频到更多" />
+    </LinearLayout>
+</ScrollView>

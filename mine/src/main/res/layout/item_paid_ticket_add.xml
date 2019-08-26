@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/view_item_paid_ticket_add" android:background="@drawable/shape_bg_item_paid_ticket_add" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/item_paid_ticket_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="@dimen/item_paid_ticket_add_logo_width" android:layout_height="@dimen/item_paid_ticket_add_logo_width" android:src="@drawable/bg_item_ticket_add_logo" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    <LinearLayout android:gravity="center" android:id="@id/view_item_paid_ticket_add_frame" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_width="@dimen/item_paid_ticket_add_icon_width" android:layout_height="@dimen/item_paid_ticket_add_icon_width" android:src="@drawable/ic_item_ticket_add" android:scaleType="centerCrop" />
+        <TextView android:textSize="@dimen/item_paid_ticket_add_textsize" android:textColor="#ff737373" android:paddingLeft="@dimen/item_paid_ticket_add_text_padding_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="添加观影券" />
+    </LinearLayout>
+</RelativeLayout>

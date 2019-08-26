@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/lock_notify_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/lock_notify_icon" android:layout_width="@dimen/lockplay_notify_logo_width" android:layout_height="@dimen/lockplay_notify_logo_width" android:layout_marginLeft="@dimen/lockplay_notify_logo_margin_left" android:layout_marginRight="@dimen/lockplay_notify_logo_margin_left" android:src="@mipmap/ic_launcher" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/lock_notify_btn" android:background="@drawable/transparent_bg" android:layout_width="@dimen/lockplay_screen_play_control_width" android:layout_height="@dimen/lockplay_screen_play_control_width" android:layout_marginRight="@dimen/lockplay_notify_img_margin_right" android:src="@drawable/lock_pause_btn" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/lock_notify_btn" android:layout_toRightOf="@id/lock_notify_icon" android:layout_centerVertical="true">
+        <TextView android:textSize="@dimen/lockplay_notify_title_size" android:textColor="@color/lock_notify_title_color" android:id="@id/lock_notify_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="aa" android:singleLine="true" />
+        <TextView android:textSize="@dimen/lockplay_notify_seq_size" android:textColor="@color/lock_notify_seq_color" android:id="@id/lock_notify_seq" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="a" android:singleLine="true" />
+    </LinearLayout>
+</RelativeLayout>

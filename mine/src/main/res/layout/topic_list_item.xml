@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="1.0px" android:layout_marginRight="1.0px">
+            <LinearLayout android:orientation="horizontal" android:id="@id/left_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="1.0px" layout="@layout/topics_list_item" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/right_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="1.0px" layout="@layout/topics_list_item" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:layout_gravity="bottom|center" android:background="#ffebebeb" android:layout_width="1.0px" android:layout_height="@dimen/channel_item_title_erea_height" />
+        <View android:layout_gravity="bottom|center|right" android:background="#ffebebeb" android:layout_width="1.0px" android:layout_height="@dimen/channel_item_title_erea_height" />
+    </FrameLayout>
+</LinearLayout>

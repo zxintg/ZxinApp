@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/layout_normal_dialog" android:background="@color/white" android:layout_width="@dimen/yp_youku_dialog_width" android:layout_height="@dimen/yp_youku_dialog_height">
+        <TextView android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/layout_normal_dialog_bottom" style="@style/yp_normal_content" />
+        <RelativeLayout android:id="@id/layout_normal_dialog_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/yp_youku_dialog_bottom_height" android:layout_alignParentBottom="true">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="center" android:id="@id/positive_btn_layout" android:background="@drawable/yp_youku_dialog_cancel" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:id="@id/positive_btn" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="取消" style="@style/yp_youku_dialog_txt_cancel" />
+                </LinearLayout>
+                <View android:background="#2c5e5e5e" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                <View android:background="#ffffffff" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                <LinearLayout android:gravity="center" android:id="@id/negtive_btn_layout" android:background="@drawable/yp_youku_dialog_ok" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:id="@id/negtive_btn" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="确定" style="@style/yp_youku_dialog_txt_ok" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="@drawable/soku_layout_bottom_cover" android:layout_width="fill_parent" android:layout_height="5.0px" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

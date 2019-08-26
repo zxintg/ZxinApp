@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/bg_tips" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ivGuide" android:layout_width="295.0dip" android:layout_height="135.0dip" android:layout_marginLeft="50.0dip" android:src="@mipmap/tips" android:scaleType="centerInside" />
+</LinearLayout>

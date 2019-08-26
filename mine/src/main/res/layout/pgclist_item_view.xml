@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/search_card_hot_words_textsize" android:textColor="#ff666666" android:id="@id/pgclist_tv_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/search_widget_edit_padding_left" android:text="1" android:singleLine="true" android:layout_centerVertical="true" />
+    <FrameLayout android:id="@id/pgclist_item_logo_layout" android:padding="@dimen/pgc_item_logo_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/pgclist_tv_num">
+        <FrameLayout android:background="#ffc3c3c3" android:layout_width="@dimen/pgc_item_logo_width" android:layout_height="@dimen/pgc_item_logo_width">
+            <ImageView android:id="@id/pgclist_item_logo_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/avatar_default" android:scaleType="centerCrop" />
+            <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/detail_rukoumengceng" />
+        </FrameLayout>
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/pgcdirect_item_right_layout_paddingleft" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/pgclist_item_logo_layout" android:layout_centerVertical="true">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/pgclist_item_logo_layout">
+            <TextView android:ellipsize="end" android:id="@id/pgclist_item_title_first" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" style="@style/pgcdirect_item_title_first" />
+            <ImageView android:id="@id/pgclist_item_title_img" android:visibility="gone" android:layout_width="@dimen/detail_subscribe_certified_height" android:layout_height="@dimen/detail_subscribe_certified_height" android:layout_marginLeft="@dimen/home_notice_img_right_margin" android:src="@drawable/user_certified_offline_icon" android:layout_centerVertical="true" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/soku_directright_notice_margintop" android:layout_toRightOf="@id/pgclist_item_logo_layout">
+            <TextView android:ellipsize="end" android:id="@id/pgclist_item_title_second" android:layout_width="wrap_content" android:layout_height="@dimen/pgcdirect_item_title_second_height" android:text="@string/pgc_item_title_second" android:singleLine="true" style="@style/txt_searchdirect_second" />
+            <TextView android:ellipsize="end" android:id="@id/pgclist_item_title_three" android:layout_width="wrap_content" android:layout_height="@dimen/pgcdirect_item_title_second_height" android:layout_marginLeft="@dimen/search_widget_edit_padding_left" android:layout_marginRight="@dimen/soku_directright_notice_margintop" android:singleLine="true" style="@style/txt_searchdirect_second" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

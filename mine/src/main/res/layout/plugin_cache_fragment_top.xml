@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/plugin_cache_fragment_top_layout" android:layout_width="fill_parent" android:layout_height="@dimen/plugin_cache_fragment_top_layout_height">
+        <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:id="@id/cache_fragment_layout_cache" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentLeft="true">
+            <ImageView android:id="@id/cache_fragment_layout_cache_img" android:duplicateParentState="true" android:layout_width="@dimen/cache_fragment_layout_img_width" android:layout_height="@dimen/cache_fragment_layout_img_height" android:layout_marginLeft="@dimen/series_top_title_first_marginleft" android:src="@drawable/cache_fragment_layout_cache_btn" />
+            <TextView android:id="@id/cache_fragment_layout_cache_txt" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/cache_fragment_layout_txt_marginleft" android:text="@string/cache_fragment_layout_cache_txt" style="@style/cache_fragment_layout_txt" />
+        </LinearLayout>
+        <RelativeLayout android:gravity="center" android:orientation="horizontal" android:id="@id/cache_fragment_layout_hd" android:layout_width="@dimen/cache_fragment_layout_hd_width" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:id="@id/cache_fragment_layout_hd_img" android:duplicateParentState="true" android:layout_width="@dimen/cache_fragment_layout_img_width" android:layout_height="@dimen/cache_fragment_layout_img_height" android:src="@drawable/cache_fragment_layout_hd_btn" />
+                <TextView android:id="@id/cache_fragment_layout_hd_txt" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/cache_fragment_layout_txt_marginleft" style="@style/cache_fragment_layout_txt" />
+            </LinearLayout>
+            <View android:id="@id/cache_fragment_layout_hd_line" android:background="#ff444444" android:layout_width="1.0px" android:layout_height="@dimen/cache_fragment_layout_hd_line_height" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <View android:background="#ff444444" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle" android:useLevel="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:startColor="#70121413" android:endColor="#70121413" android:angle="90.0" />
+    <corners android:topLeftRadius="@dimen/topic_info_msg_icon_height" android:topRightRadius="@dimen/topic_info_msg_icon_height" android:bottomLeftRadius="@dimen/topic_info_msg_icon_height" android:bottomRightRadius="@dimen/topic_info_msg_icon_height" />
+</shape>

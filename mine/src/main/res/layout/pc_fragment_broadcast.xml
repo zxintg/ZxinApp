@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.widget.CompatSwipeRefreshLayout android:id="@id/refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/menu_title">
+        <com.youku.userchannel.view.StickyListView android:id="@id/listview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" />
+    </com.youku.widget.CompatSwipeRefreshLayout>
+    <ViewStub android:id="@id/error_view" android:layout="@layout/pc_fragment_load_data_error_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include android:id="@id/menu_title" android:layout_width="fill_parent" android:layout_height="@dimen/homepage_tab_height" android:layout_alignParentBottom="true" layout="@layout/pc_activity_homepage_title" />
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/ugc_bigword_series_listview" android:background="@android:color/transparent" android:scrollbars="none" android:fadingEdgeLength="@dimen/detail_boder" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="#fff2f2f2" android:dividerHeight="1.0px" android:layout_above="@id/select_videos" />
+</FrameLayout>

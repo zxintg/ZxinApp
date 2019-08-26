@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="@dimen/game_card_margin" />
+    <ImageView android:id="@id/game_card_poster" android:background="#ffaaaaaa" android:layout_width="fill_parent" android:layout_height="@dimen/card_poster_height" android:src="@drawable/game_default_icon" android:scaleType="center" />
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.phone.collection.widget.CompatSwipeRefreshLayout android:id="@id/refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.RecyclerView android:id="@id/explore_recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.youku.phone.collection.widget.CompatSwipeRefreshLayout>
+    <include android:id="@id/explore_collection_no_result" layout="@layout/my_collections_no_results" />
+</FrameLayout>

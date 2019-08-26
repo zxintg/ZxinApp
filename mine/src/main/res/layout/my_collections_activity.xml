@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/my_collection_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/collection_tab_height">
+        <TextView android:textSize="@dimen/collection_tab_text_size" android:textColor="@color/collection_title_text_color_black" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/user_created_collections" android:background="@drawable/my_collections_tab_bg_selector" android:layout_width="0.0dip" android:layout_height="@dimen/collection_tab_height" android:text="@string/user_created_collections_text" android:layout_weight="1.0" />
+        <View android:layout_gravity="center_vertical" android:background="@color/collection_center_line_color" android:layout_width="1.0px" android:layout_height="@dimen/collection_center_line_height" />
+        <TextView android:textSize="@dimen/collection_tab_text_size" android:textColor="@color/collection_title_text_color_blue" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/user_liked_collections" android:background="@drawable/my_collections_tab_bg_selector" android:layout_width="0.0dip" android:layout_height="@dimen/collection_tab_height" android:text="@string/user_liked_collections_text" android:layout_weight="1.0" />
+    </LinearLayout>
+    <View android:background="@color/collection_center_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <android.support.v4.view.ViewPager android:id="@id/collections_view_pager" android:background="@color/my_collection_background" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

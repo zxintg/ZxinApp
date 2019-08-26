@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_title_height">
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/layout_title" android:paddingLeft="@dimen/detail_card_video_detail_title_marginleft" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                <TextView android:textSize="@dimen/detail_card_title_size" android:textColor="#ff444444" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="精彩花絮" />
+                <TextView android:textSize="@dimen/detail_card_subtitle_size" android:textColor="#ffb9b9b9" android:gravity="center_vertical" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_subtitle_marginTop" android:maxWidth="1000.0dip" android:text="更新到第21集" />
+            </LinearLayout>
+            <ImageView android:id="@id/more" android:background="@null" android:layout_width="@dimen/detail_card_more_image_width" android:layout_height="fill_parent" android:src="@drawable/detail_card_more" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <View android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <RelativeLayout android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ListView android:id="@id/listview" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="#00000000" android:cacheColorHint="#00000000" android:horizontalSpacing="@dimen/activity_myyouku_gridview_verticalspacing" android:verticalSpacing="@dimen/activity_myyouku_gridview_verticalspacing" android:numColumns="@integer/myyouku_gridview_numColumns" android:divider="#fff2f2f2" android:dividerHeight="1.0px" />
+            <include android:id="@id/layout_no_result" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_loading_height" layout="@layout/detail_card_no_result" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/loadingview" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_loading_height">
+                <ProgressBar android:layout_width="@dimen/detail_card_loading_width" android:layout_height="@dimen/detail_card_loading_width" android:indeterminateDrawable="@drawable/series_loading_progressbar" />
+            </LinearLayout>
+            <ProgressBar android:layout_gravity="center" android:id="@id/next_loading" android:visibility="gone" android:layout_width="@dimen/detail_card_loading_width" android:layout_height="@dimen/detail_card_loading_width" android:indeterminateDrawable="@drawable/series_loading_progressbar" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:background="#ffc9c9c9" android:layout_width="fill_parent" android:layout_height="2.0px" />
+</LinearLayout>

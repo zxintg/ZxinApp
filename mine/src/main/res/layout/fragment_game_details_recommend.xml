@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_details_recommend_parent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.gamecenter.widgets.GameCustomScrollView android:id="@id/sclv_details_recommend" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/fl_detail_download_recommend" android:overScrollMode="never">
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_details_recommend_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/ll_details_top" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:orientation="vertical" android:id="@id/ll_details_indicator_in" android:layout_width="fill_parent" android:layout_height="@dimen/layout_tab_height">
+                <com.youku.gamecenter.widgets.tab.GameTabPageIndicator android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/indicator_details_recommend" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="@dimen/layout_tab_height" />
+            </LinearLayout>
+            <android.support.v4.view.ViewPager android:id="@id/viewpager_details_recommend" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+    </com.youku.gamecenter.widgets.GameCustomScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_details_indicator_out" android:layout_width="fill_parent" android:layout_height="@dimen/layout_tab_height" />
+    <com.youku.gamecenter.widgets.GameBottomDownloadBtnView android:id="@id/fl_detail_download_recommend" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/fl_detail_download_height" android:layout_alignParentBottom="true" />
+</RelativeLayout>

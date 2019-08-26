@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/layout_title" android:layout_width="fill_parent" android:layout_height="@dimen/detail_small_card_title_height_v5">
+            <TextView android:background="#ff2fb3ff" android:layout_width="@dimen/detail_card_title_tag_width_v5" android:layout_height="@dimen/detail_card_title_tag_height_v5" android:layout_centerVertical="true" />
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/layout_related_part_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                <TextView android:textSize="@dimen/detail_card_title_v5" android:textColor="#ff444444" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_series_more_right_v5" android:text="推荐" />
+            </LinearLayout>
+            <ImageView android:id="@id/more" android:background="@null" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/detail_card_series_more_right_v5" android:src="@drawable/zhankaijiantou" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <View android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <RelativeLayout android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/listview_layout" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.youku.widget.SteadyListView android:id="@id/listview" android:visibility="gone" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="#00000000" android:cacheColorHint="#00000000" android:horizontalSpacing="@dimen/activity_myyouku_gridview_verticalspacing" android:verticalSpacing="@dimen/activity_myyouku_gridview_verticalspacing" android:numColumns="@integer/myyouku_gridview_numColumns" android:divider="#fff2f2f2" android:dividerHeight="1.0px" />
+            <include android:id="@id/layout_no_result" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_loading_height" layout="@layout/detail_card_no_result" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/loadingview" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_loading_height">
+                <ProgressBar android:layout_width="@dimen/detail_card_loading_width" android:layout_height="@dimen/detail_card_loading_width" android:indeterminateDrawable="@drawable/series_loading_progressbar" />
+            </LinearLayout>
+            <ProgressBar android:layout_gravity="center" android:id="@id/next_loading" android:visibility="gone" android:layout_width="@dimen/detail_card_loading_width" android:layout_height="@dimen/detail_card_loading_width" android:indeterminateDrawable="@drawable/series_loading_progressbar" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

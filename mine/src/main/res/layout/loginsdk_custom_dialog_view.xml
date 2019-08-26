@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/layout_soku_dialog" android:background="@color/white" android:layout_width="@dimen/layout_soku_dialog_width" android:layout_height="@dimen/layout_soku_dialog_height">
+        <TextView android:gravity="center" android:id="@id/soku_dialog_txt" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/soku_dialog_txt_maginleftright" android:layout_marginRight="@dimen/soku_dialog_txt_maginleftright" android:layout_weight="1.0" android:lineSpacingExtra="@dimen/soku_dialog_txt_linespacingextra" style="@style/loginsdk_soku_dialog_txt_cancel_youku" />
+        <RelativeLayout android:id="@id/layout_soku_dialog_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/layout_soku_dialog_bottom_height">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="center" android:id="@id/layout_soku_dialog_cancel" android:background="#fffafafa" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:id="@id/login_sdk_soku_dialog_txt_cancel" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/soku_dialog_txt_cancel" style="@style/loginsdk_soku_dialog_txt_cancel_youku" />
+                </LinearLayout>
+                <View android:background="#2c5e5e5e" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                <View android:background="#ffffffff" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                <LinearLayout android:gravity="center" android:id="@id/layout_soku_dialog_goplay" android:background="#1500baff" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:id="@id/soku_dialog_txt_goplay" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/confirm" style="@style/loginsdk_soku_dialog_txt_goplay_youku" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="@drawable/loginsdk_soku_layout_bottom_cover" android:layout_width="fill_parent" android:layout_height="5.0px" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

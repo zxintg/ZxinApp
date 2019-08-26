@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/fullscreen_setting_view_background_color" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="@dimen/player_dlna_dialog_listview_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/player_dlna_listview_item_imageview" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:src="@drawable/player_dlna_listview_item_selector" />
+    <TextView android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/player_dlna_listview_item_textview" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="小米盒子" android:maxLines="1" android:minLines="1" android:singleLine="true" style="@style/setting_radio_btn" />
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="1.0px" android:layout_marginRight="1.0px"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/channel_item_top_divider" android:layout_width="fill_parent" android:layout_height="@dimen/channel_list_recycler_view_item_space" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/home_card_topic_recommend_bg" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/home_card_topic_recommend_height_land" android:scaleType="fitXY" />
+        <View android:id="@id/home_card_topic_recommend_bg_mask" android:background="#33000000" android:layout_width="fill_parent" android:layout_height="@dimen/home_card_topic_recommend_height_land" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/home_card_topic_recommend_title_height">
+                <View android:id="@id/home_card_topic_recommend_title_indicator" android:background="@color/white" android:layout_width="@dimen/home_card_topic_recommend_title_indicator_width" android:layout_height="@dimen/home_card_topic_recommend_title_indicator_height" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/home_card_topic_recommend_title_text_size" android:textColor="@color/white" android:gravity="center" android:id="@id/home_card_topic_recommend_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/home_card_topic_recommend_title_margin_left" android:layout_toRightOf="@id/home_card_topic_recommend_title_indicator" android:layout_centerVertical="true" />
+                <View android:background="@drawable/home_card_toppic_recommend_arrow" android:layout_width="@dimen/home_card_topic_recommend_title_arrow_width_height" android:layout_height="@dimen/home_card_topic_recommend_title_arrow_width_height" android:layout_toRightOf="@id/home_card_topic_recommend_title" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <com.youku.phone.channel.view.HorizontalScrollForeverRecyclerView android:id="@id/home_card_topic_recommend_list" android:layout_width="fill_parent" android:layout_height="@dimen/home_card_topic_recommend_content_height_land" android:layout_marginBottom="@dimen/home_card_topic_recommend_content_bottom_margin" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

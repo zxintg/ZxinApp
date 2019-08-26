@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@id/my_movie_fragment_swipe" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.RecyclerView android:id="@id/my_ticket_list" android:paddingTop="@dimen/searchresult_listview_marginleft" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ticket_list_empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:src="@drawable/empty_ticket" style="@style/ticket_empty_img" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ticket_empty_text" style="@style/ticket_empty_text" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ticket_login_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_width="@dimen/ticket_sign_img" android:layout_height="@dimen/ticket_sign_img" android:src="@drawable/movie_login" />
+        <LinearLayout android:paddingTop="@dimen/ticket_loggin_text_padding_top" android:paddingBottom="@dimen/ticket_loggin_text_padding_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/ticket_sign_text_size" android:textColor="@color/ticket_sign_color_select" android:id="@id/ticket_login" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ticket_sign_in_text1" />
+            <TextView android:textSize="@dimen/ticket_sign_text_size" android:textColor="@color/ticket_sign_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ticket_sign_in_text2" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/describebar_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/liveplay_description_summary_layout" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentRight="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="20.0dip" android:layout_column="0" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/liveplay_description_titleTextsize" android:textColor="@color/colorR237G45B12" android:ellipsize="end" android:id="@id/liveplay_description_title" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="1" />
+            <TextView android:textSize="@dimen/liveplay_description_contentTextsize" android:textColor="@color/colorA153R163G163B163" android:ellipsize="end" android:id="@id/liveplay_description_content" android:paddingLeft="10.0dip" android:paddingTop="6.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/liveplay_description_contentHeight" android:lines="2" android:autoText="false" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center|right" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageButton android:id="@id/liveplay_description_share" android:background="@drawable/button_back_selector" android:padding="2.0dip" android:layout_width="@dimen/liveplay_description_shareWidth" android:layout_height="@dimen/liveplay_description_shareHeight" android:layout_marginLeft="@dimen/liveplay_description_sharemarginLeft" android:layout_marginRight="@dimen/liveplay_description_sharemarginRight" android:src="@drawable/icon_zhuanf_2x" android:scaleType="centerInside" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/Liveplay_description_Subscribe_layout" android:background="#fff5f5f5" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="100.0dip" android:layout_below="@id/liveplay_description_summary_layout">
+        <ImageButton android:layout_gravity="center" android:id="@id/imageButton_appoint" android:background="@drawable/btn_book" android:clickable="false" android:layout_width="@dimen/liveplay_appointment_buttonWidth" android:layout_height="@dimen/liveplay_appointment_buttonHeight" android:layout_marginTop="12.0dip" android:scaleType="fitXY" android:adjustViewBounds="true" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="@dimen/layout_liveplay_description_infobar_textView_ReservationNumber_textsize" android:layout_gravity="center_horizontal" android:id="@id/textView_ReservationNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="" />
+    </LinearLayout>
+</RelativeLayout>

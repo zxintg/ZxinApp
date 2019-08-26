@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:background="@drawable/hd_timeline_cancel_btn" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/progressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/hd_gridview_pading_horizontal" style="?android:attr/progressBarStyleSmall" />
+    <TextView android:textSize="@dimen/hd_txt_size15" android:textColor="@color/hd_subscribe_tab_check_color" android:id="@id/txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hd_cancel_subscribe" />
+</LinearLayout>

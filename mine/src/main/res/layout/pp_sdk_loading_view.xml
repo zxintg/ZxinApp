@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/pp_ll_process" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+        <View android:id="@id/pp_view_process_blue" android:layout_width="4.0dip" android:layout_height="18.0dip" android:layout_marginRight="2.0dip" />
+        <View android:id="@id/pp_view_process_red" android:layout_width="4.0dip" android:layout_height="18.0dip" android:layout_marginRight="2.0dip" />
+        <View android:id="@id/pp_view_process_yellow" android:layout_width="4.0dip" android:layout_height="18.0dip" android:layout_marginRight="2.0dip" />
+        <View android:id="@id/pp_view_process_green" android:layout_width="4.0dip" android:layout_height="18.0dip" />
+    </LinearLayout>
+    <TextView android:textSize="12.0sp" android:textColor="#ffc3c3c3" android:id="@id/pp_tv_process_hint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/pp_text_loading_apk_data" android:layout_below="@id/pp_ll_process" android:layout_centerHorizontal="true" />
+</RelativeLayout>

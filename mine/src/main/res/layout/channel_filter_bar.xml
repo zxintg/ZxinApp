@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="#f3e2e2e2" android:paddingLeft="@dimen/channel_gridview_padding_horizontal" android:paddingRight="@dimen/channel_gridview_padding_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/channel_filter_bar_height">
+            <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:id="@id/channel_filter_wrapper" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <TextView android:textColor="@color/filterbar_txt_color" android:gravity="center" android:layout_gravity="right" android:id="@id/channel_filter_btn" android:paddingRight="@dimen/channel_filter_btn_paddingright" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/youku_title_filter" android:drawableLeft="@drawable/channel_filter_btn_selector" android:drawablePadding="0.0dip" style="@style/toolbar_btn_txt" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

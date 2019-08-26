@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/blackcover" android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.youku.widget.YoukuImageView android:id="@id/video_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="@dimen/gridview_item_tv_height">
+            <com.youku.widget.TextViewEllipseEndFixed android:ellipsize="end" android:id="@id/video_title" android:paddingLeft="@dimen/myyouku_item_line_margin_left" android:paddingRight="@dimen/myyouku_item_line_margin_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:minLines="2" style="@style/homepage_item_title_first" />
+        </LinearLayout>
+        <ImageView android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="@dimen/shadow_height" />
+    </LinearLayout>
+    <RelativeLayout android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.youku.widget.YoukuImageView android:id="@id/eee" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="#66000000" android:scaleType="centerCrop" />
+        <LinearLayout android:gravity="center" android:id="@id/play_list_layout" android:background="@drawable/history_item_text_bg_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBottom="@id/eee" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+            <ImageView android:layout_width="@dimen/history_item_album_icon_width" android:layout_height="@dimen/history_item_album_icon_width" android:src="@drawable/palylist_tiny_icon" />
+            <TextView android:textColor="@color/history_text_selector" android:gravity="center" android:layout_gravity="center" android:id="@id/albumcount" android:paddingLeft="@dimen/history_item_album_num_paddingLeft" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10" style="@style/history_item_txt_first" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/play_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBottom="@id/eee" android:layout_alignParentTop="true">
+            <TextView android:textColor="@color/history_text_selector" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/text_play" android:background="@drawable/history_item_text_bg_selector" android:layout_width="wrap_content" android:layout_height="600.0dip" android:text="@string/replay" android:layout_weight="1.0" style="@style/history_item_txt_first" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/line" android:background="#ffffffff" android:layout_width="1.0dip" android:layout_height="@dimen/history_line_height" />
+            <TextView android:textColor="@color/history_text_selector" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/text_play_next" android:background="@drawable/history_item_text_bg_selector" android:layout_width="wrap_content" android:layout_height="600.0dip" android:text="@string/play_next" android:layout_weight="1.0" style="@style/history_item_txt_first" />
+        </LinearLayout>
+        <TextView android:textAppearance="@style/historycached" android:gravity="center" android:id="@id/cached" android:background="@drawable/already_downloaded" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="@string/cached" android:layout_alignParentRight="true" />
+        <TextView android:id="@id/text_point" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/history_text_point_margin_bottom" android:layout_alignBottom="@id/play_layout" android:layout_centerHorizontal="true" style="@style/history_item_txt_second" />
+        <ImageView android:id="@id/delete_history" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/meixuanzhong" android:layout_alignParentRight="true" />
+        <ImageView android:id="@id/delete_history_selected" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/xuanzhong" android:layout_alignParentRight="true" />
+        <RelativeLayout android:id="@id/triangle_wrapper" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+            <com.youku.widget.TriangleView android:id="@id/triangle_view" android:layout_width="@dimen/triangle_view_height" android:layout_height="@dimen/triangle_view_height" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+            <com.youku.widget.RobbinTextView android:id="@id/triangle_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/triangle_text" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

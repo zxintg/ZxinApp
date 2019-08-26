@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/Home_card_item_extend_pgc_root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <com.youku.phone.channel.view.HorizontalScrollForeverRecyclerView android:id="@id/home_card_item_extend_pgc_recyclerview" android:background="@color/home_extend_bg_color" android:layout_width="fill_parent" android:layout_height="@dimen/home_card_item_extend_pgc_item_layout_height" />
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@id/bg_1" android:background="@drawable/upload_landingbg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/upload_source_back_lin" android:paddingLeft="@dimen/padding_left_right_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+            <ImageView android:id="@id/back_image" android:padding="@dimen/padding_left_right_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/topbar_close_icon" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/upload_recent_frame_height" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/upload_source_new_lin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/upload_source_back_lin">
+                <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/image_1" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/upload_ic_new_01bg" />
+                    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ImageView android:id="@id/image_2" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/upload_ic_new_02camera" />
+                        <ImageView android:id="@id/image_4" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/upload_ic_new_04border" />
+                        <ImageView android:layout_gravity="center" android:id="@id/image_3" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_left_right_15" android:src="@drawable/upload_ic_new_03lens" />
+                    </FrameLayout>
+                </FrameLayout>
+                <TextView android:textSize="@dimen/upload_home_text_size" android:textColor="#ff2eb3ff" android:id="@id/upload_source_camera_text" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/upload_home_margin_left" android:text="@string/upload_source_camera" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/upload_source_local_lin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/upload_home_margin_top" android:layout_below="@id/upload_source_new_lin">
+                <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/local_image_1" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/upload_ic_local_01bg" />
+                    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ImageView android:id="@id/local_image_2" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/upload_ic_local_02folder" />
+                        <ImageView android:id="@id/local_image_4" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/upload_ic_local_04border" />
+                        <ImageView android:layout_gravity="center" android:id="@id/local_image_3" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_left_right_15" android:src="@drawable/upload_ic_local_03arrow" />
+                    </FrameLayout>
+                </FrameLayout>
+                <TextView android:textSize="@dimen/upload_home_text_size" android:textColor="#ffff5436" android:id="@id/upload_source_local_video_text" android:paddingLeft="@dimen/upload_home_margin_left_1" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/upload_source_local_video" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/upload_use_more_app_lin" android:background="@drawable/upload_use_more_app_bg" android:paddingLeft="@dimen/padding_left_right_10" android:paddingTop="@dimen/padding_left_right_15" android:paddingRight="@dimen/padding_left_right_10" android:paddingBottom="@dimen/padding_left_right_15" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_left_right_10" android:layout_marginRight="@dimen/padding_left_right_10" android:layout_alignParentBottom="true">
+            <TextView android:textSize="@dimen/text_size_14" android:textColor="#ffc1c0c1" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/upload_source_use_other_app" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/upload_app_content_lin" android:paddingTop="@dimen/dialog_padding_left_20" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

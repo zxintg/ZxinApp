@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/left_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <RelativeLayout android:id="@id/detail_card_item_left_show_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <FrameLayout android:id="@id/left_image_layout" android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+                    <ImageView android:layout_gravity="center" android:layout_width="@dimen/icon_default_width" android:layout_height="@dimen/icon_default_width" android:src="@drawable/channel_not_loaded_icon_play" />
+                    <com.youku.widget.YoukuPortImageView android:id="@id/detail_show_left_item_img" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+                </FrameLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBottom="@id/left_image_layout">
+                    <ImageView android:background="@drawable/detail_mengceng_video" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_item_viedo_image_mengceng_height_v5" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <TextView android:textSize="@dimen/detail_card_item_image_time_size_v5" android:textColor="@color/white" android:id="@id/detail_left_show_item_vv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_comment_header_image_margin_left_v5" android:layout_marginBottom="@dimen/detail_card_video_item_image_margin_botoom_v5" android:text="全10集" android:layout_alignLeft="@id/detail_card_item_left_show_layout" android:layout_alignBottom="@id/detail_card_item_left_show_layout" />
+            <RelativeLayout android:id="@id/detail_card_item_left_content_layout" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_item_viedo_content_v5" android:layout_below="@id/detail_card_item_left_show_layout">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/detail_card_comment_header_image_margin_left_v5" android:layout_marginTop="@dimen/detail_card_video_item_image_margin_botoom_v5" android:layout_marginRight="@dimen/detail_card_comment_header_image_margin_left_v5">
+                    <TextView android:textSize="@dimen/detail_card_item_title_size_v5" android:textColor="#ff333333" android:ellipsize="end" android:id="@id/detail_show_item_left_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="奔跑吧兄弟" android:maxLines="1" />
+                    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_video_item_bofangliang_margintop_v5">
+                        <ImageView android:id="@id/image_left_bofangliang" android:layout_width="@dimen/detail_card_bofangliang_v5" android:layout_height="@dimen/detail_card_bofangliang_v5" android:src="@drawable/bofangliang" android:layout_centerVertical="true" />
+                        <TextView android:textSize="@dimen/detail_card_item_image_time_size_v5" android:textColor="#ffb5b7b9" android:ellipsize="end" android:id="@id/detail_video_item_left_num" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="234,23424" android:singleLine="true" android:layout_toRightOf="@id/image_left_bofangliang" android:layout_centerVertical="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/middle_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <RelativeLayout android:id="@id/detail_card_item_middle_show_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <FrameLayout android:id="@id/middle_image_layout" android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+                    <ImageView android:layout_gravity="center" android:layout_width="@dimen/icon_default_width" android:layout_height="@dimen/icon_default_width" android:src="@drawable/channel_not_loaded_icon_play" />
+                    <com.youku.widget.YoukuPortImageView android:id="@id/detail_show_middle_item_img" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+                </FrameLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBottom="@id/middle_image_layout">
+                    <ImageView android:background="@drawable/detail_mengceng_video" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_item_viedo_image_mengceng_height_v5" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <TextView android:textSize="@dimen/detail_card_item_image_time_size_v5" android:textColor="@color/white" android:id="@id/detail_middle_show_item_vv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_comment_header_image_margin_left_v5" android:layout_marginBottom="@dimen/detail_card_video_item_image_margin_botoom_v5" android:text="全10集" android:layout_alignLeft="@id/detail_card_item_middle_show_layout" android:layout_alignBottom="@id/detail_card_item_middle_show_layout" />
+            <RelativeLayout android:id="@id/detail_card_item_middle_content_layout" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_item_viedo_content_v5" android:layout_marginLeft="-0.5dip" android:layout_below="@id/detail_card_item_middle_show_layout">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_comment_header_image_margin_left_v5" android:layout_marginTop="@dimen/detail_card_video_item_image_margin_botoom_v5" android:layout_marginRight="@dimen/detail_card_comment_header_image_margin_left_v5">
+                    <TextView android:textSize="@dimen/detail_card_item_title_size_v5" android:textColor="#ff333333" android:ellipsize="end" android:id="@id/detail_show_item_middle_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="奔跑吧兄弟" android:maxLines="1" />
+                    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_video_item_bofangliang_margintop_v5">
+                        <ImageView android:id="@id/image_middle_bofangliang" android:layout_width="@dimen/detail_card_bofangliang_v5" android:layout_height="@dimen/detail_card_bofangliang_v5" android:src="@drawable/bofangliang" android:layout_centerVertical="true" />
+                        <TextView android:textSize="@dimen/detail_card_item_image_time_size_v5" android:textColor="#ffb5b7b9" android:ellipsize="end" android:id="@id/detail_video_item_middle_num" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="234,23424" android:singleLine="true" android:layout_toRightOf="@id/image_middle_bofangliang" android:layout_centerVertical="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <View android:layout_width="0.5dip" android:layout_height="fill_parent" android:layout_alignTop="@id/detail_card_item_middle_show_layout" android:layout_alignBottom="@id/detail_card_item_middle_content_layout" android:layout_alignParentLeft="true" />
+            <View android:background="#ffebebeb" android:layout_width="0.5dip" android:layout_height="fill_parent" android:layout_alignTop="@id/detail_card_item_middle_show_layout" android:layout_alignBottom="@id/detail_card_item_middle_content_layout" android:layout_alignParentLeft="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/right_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <RelativeLayout android:id="@id/detail_card_item_right_show_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <FrameLayout android:id="@id/right_image_layout" android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+                    <ImageView android:layout_gravity="center" android:layout_width="@dimen/icon_default_width" android:layout_height="@dimen/icon_default_width" android:src="@drawable/channel_not_loaded_icon_play" />
+                    <com.youku.widget.YoukuPortImageView android:id="@id/detail_show_right_item_img" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+                </FrameLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBottom="@id/right_image_layout">
+                    <ImageView android:background="@drawable/detail_mengceng_video" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_item_viedo_image_mengceng_height_v5" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <TextView android:textSize="@dimen/detail_card_item_image_time_size_v5" android:textColor="@color/white" android:id="@id/detail_right_show_item_vv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_comment_header_image_margin_left_v5" android:layout_marginBottom="@dimen/detail_card_video_item_image_margin_botoom_v5" android:text="全10集" android:layout_alignLeft="@id/detail_card_item_right_show_layout" android:layout_alignBottom="@id/detail_card_item_right_show_layout" />
+            <RelativeLayout android:id="@id/detail_card_item_right_content_layout" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_item_viedo_content_v5" android:layout_below="@id/detail_card_item_right_show_layout">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_comment_header_image_margin_left_v5" android:layout_marginTop="@dimen/detail_card_video_item_image_margin_botoom_v5" android:layout_marginRight="@dimen/detail_card_comment_header_image_margin_left_v5">
+                    <TextView android:textSize="@dimen/detail_card_item_title_size_v5" android:textColor="#ff333333" android:ellipsize="end" android:id="@id/detail_show_item_right_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="奔跑吧兄弟" android:maxLines="1" />
+                    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_video_item_bofangliang_margintop_v5">
+                        <ImageView android:id="@id/image_right_bofangliang" android:layout_width="@dimen/detail_card_bofangliang_v5" android:layout_height="@dimen/detail_card_bofangliang_v5" android:src="@drawable/bofangliang" android:layout_centerVertical="true" />
+                        <TextView android:textSize="@dimen/detail_card_item_image_time_size_v5" android:textColor="#ffb5b7b9" android:ellipsize="end" android:id="@id/detail_video_item_right_num" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="234,23424" android:singleLine="true" android:layout_toRightOf="@id/image_right_bofangliang" android:layout_centerVertical="true" style="@style/homepage_item_title_first" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <View android:layout_width="0.5dip" android:layout_height="fill_parent" android:layout_alignTop="@id/detail_card_item_right_show_layout" android:layout_alignBottom="@id/detail_card_item_right_content_layout" android:layout_alignParentLeft="true" />
+            <View android:background="#ffebebeb" android:layout_width="0.5dip" android:layout_height="fill_parent" android:layout_alignTop="@id/detail_card_item_right_show_layout" android:layout_alignBottom="@id/detail_card_item_right_content_layout" android:layout_alignParentLeft="true" />
+        </RelativeLayout>
+        <View android:id="@id/detail_card_realted_item_video_shadow" android:background="#fff1f1f1" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="2.0px" android:layout_alignParentBottom="true" />
+    </LinearLayout>
+</LinearLayout>

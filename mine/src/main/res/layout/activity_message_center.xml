@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#fff8f8f8" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/message_navigation_layout" android:layout_width="fill_parent" android:layout_height="@dimen/message_center_nav_height">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <RelativeLayout android:gravity="center" android:orientation="vertical" android:id="@id/message_center_nav_item_layout_1" android:background="@drawable/message_nave_title_line" android:paddingLeft="@dimen/activity_padding_bigger" android:paddingRight="@dimen/activity_padding_bigger" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <TextView android:textSize="@dimen/message_center_text_nav_titlesize" android:textColor="@color/message_nav_text_color_selector" android:gravity="center" android:id="@id/message_center_nav_item1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/message_navgation_mine" android:layout_weight="1.0" android:layout_centerInParent="true" style="@style/ucenter_list_item_second" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <RelativeLayout android:id="@id/message_center_nav_item_layout_2" android:paddingLeft="@dimen/activity_padding_bigger" android:paddingRight="@dimen/activity_padding_bigger" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <TextView android:textSize="@dimen/message_center_text_nav_titlesize" android:textColor="@color/message_nav_text_color_selector" android:gravity="center" android:id="@id/message_center_nav_item2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/message_navgation_push" android:layout_centerInParent="true" style="@style/ucenter_list_item_second" />
+                <View android:id="@id/message_local_red_point" android:background="@drawable/badge_number_corner_background" android:visibility="gone" android:layout_width="@dimen/message_center_red_point_height" android:layout_height="@dimen/message_center_red_point_height" android:layout_toRightOf="@id/message_center_nav_item2" android:layout_above="@id/message_center_nav_item2" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.v4.view.ViewPager android:id="@id/message_center_viewpager" android:background="#ffffffff" android:persistentDrawingCache="animation" android:layout_width="fill_parent" android:layout_height="fill_parent" android:flipInterval="30" />
+</LinearLayout>

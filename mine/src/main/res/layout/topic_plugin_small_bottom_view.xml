@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/plugin_small_bottom_view_bg" android:layout_width="fill_parent" android:layout_height="@dimen/plugin_small_bottom_view_bg_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/plugin_small_img_freeflow" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/unicom_free_flow_flag" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <RelativeLayout android:id="@id/plugin_small_bottom_layout" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/plugin_small_bottom_layout_height" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/plugin_small_play_control_btn" android:layout_width="@dimen/plugin_small_play_control_btn_width" android:layout_height="fill_parent" android:src="@drawable/plugin_small_play_control_play" android:layout_alignParentLeft="true" />
+        <ImageView android:id="@id/plugin_small_fullscreen_btn" android:visibility="invisible" android:layout_width="@dimen/plugin_small_play_control_btn_width" android:layout_height="fill_parent" android:src="@drawable/plugin_small_fullscreen_btn" android:layout_alignParentRight="true" />
+        <LinearLayout android:gravity="center" android:id="@id/plugin_small_right_line_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/plugin_small_fullscreen_btn" android:layout_alignWithParentIfMissing="true">
+            <View android:background="#80a4a4a4" android:layout_width="1.0px" android:layout_height="@dimen/plugin_small_right_line_layout_height" />
+        </LinearLayout>
+        <ImageView android:id="@id/plugin_small_share_btn" android:visibility="gone" android:layout_width="@dimen/plugin_small_play_control_btn_width" android:layout_height="fill_parent" android:src="@drawable/plugin_small_share_btn" android:layout_toLeftOf="@id/plugin_small_right_line_layout" android:layout_alignWithParentIfMissing="true" />
+        <RelativeLayout android:id="@id/plugin_small_seekbar_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/plugin_small_fullscreen_btn" android:layout_toRightOf="@id/plugin_small_play_control_btn">
+            <View android:id="@id/plugin_small_time_line" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_centerInParent="true" />
+            <TextView android:id="@id/plugin_small_time_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/plugin_small_time_marginleftright" android:layout_marginTop="@dimen/plugin_small_time_left_margintop" android:text="00:00" android:layout_below="@id/plugin_small_time_line" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/plugin_small_time_left" />
+            <TextView android:id="@id/plugin_small_time_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/plugin_small_time_left_margintop" android:layout_marginRight="@dimen/plugin_small_time_marginleftright" android:text="00:00" android:layout_below="@id/plugin_small_time_line" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/plugin_small_time_right" />
+            <SeekBar android:id="@id/plugin_small_seekbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:progressDrawable="@drawable/player_small_plugin_progressbar" android:thumb="@drawable/plugin_small_seekbar_thumb" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

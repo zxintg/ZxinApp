@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="bottom" android:id="@id/channel_item_title_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/channel_item_title_erea_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@id/channel_item_title_first" android:paddingLeft="@dimen/gridview_item_tv_marginleft" android:paddingRight="@dimen/gridview_item_tv_marginleft" android:layout_width="fill_parent" android:layout_height="@dimen/channel_item_title_first_height" android:singleLine="true" style="@style/homepage_item_title_first" />
+    <RelativeLayout android:paddingLeft="@dimen/gridview_item_tv_marginleft" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:layout_below="@id/channel_item_title_first">
+        <ImageView android:id="@id/channel_item_play_count_icon" android:layout_width="@dimen/channel_item_title_second_height" android:layout_height="@dimen/channel_item_title_second_height" android:layout_marginRight="@dimen/home_video_land_item_title_second_padding" android:src="@drawable/home_video_land_item_play_count" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:ellipsize="end" android:id="@id/channel_item_title_second" android:paddingLeft="@dimen/home_video_land_item_title_second_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/sub_channel_item_sub_title_left_margin" android:singleLine="true" android:layout_toRightOf="@id/channel_item_play_count_icon" android:layout_centerVertical="true" style="@style/homepage_item_title_second" />
+    </RelativeLayout>
+</RelativeLayout>

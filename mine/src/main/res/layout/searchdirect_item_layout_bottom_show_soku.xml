@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/soku_bottom_layout1" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@integer/soku_searchdirect_episode_gridview_numcolumns1">
+            <TextView android:ellipsize="end" android:gravity="center|left" android:id="@id/bottom_show_txt1" android:background="@color/white" android:paddingLeft="@dimen/bottom_show_txt_paddingleft" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" style="@style/soku_bottom_episode_btn" />
+            <ImageView android:id="@id/bottom_episode_new_img1" android:visibility="gone" android:layout_width="@dimen/soku_result_series_item_trailer_img_width" android:layout_height="@dimen/soku_result_series_item_trailer_img_width" android:src="@drawable/xin" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+            <View android:id="@id/bottom_line1" android:background="#ffdedede" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/soku_bottom_layout2" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@integer/soku_searchdirect_episode_gridview_numcolumns1">
+            <TextView android:ellipsize="end" android:gravity="center|left" android:id="@id/bottom_show_txt2" android:background="@color/white" android:paddingLeft="@dimen/bottom_show_txt_paddingleft" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" style="@style/soku_bottom_episode_btn" />
+            <ImageView android:id="@id/bottom_episode_new_img2" android:visibility="gone" android:layout_width="@dimen/soku_result_series_item_trailer_img_width" android:layout_height="@dimen/soku_result_series_item_trailer_img_width" android:src="@drawable/xin" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+            <View android:id="@id/bottom_line2" android:background="#ffdedede" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:id="@id/bottom_show_more_btn" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/soku_bottom_episode_btn" />
+        </RelativeLayout>
+    </LinearLayout>
+</merge>

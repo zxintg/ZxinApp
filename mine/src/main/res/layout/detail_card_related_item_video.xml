@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/detail_card_item_video_left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/detail_card_related_item_cell_video" />
+        <View android:layout_width="@dimen/home_card_item_space" android:layout_height="fill_parent" />
+        <include android:id="@id/detail_card_item_video_right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/detail_card_related_item_cell_video" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/detail_card_related_title_layout_left" android:paddingLeft="@dimen/gridview_item_tv_marginleft" android:paddingTop="@dimen/home_video_land_item_title_layout_paddingtop" android:layout_width="fill_parent" android:layout_height="@dimen/home_video_land_item_title_layout_height" android:layout_weight="1.0">
+            <TextView android:ellipsize="end" android:id="@id/detail_video_item_title_first_left" android:layout_width="fill_parent" android:layout_height="@dimen/home_video_land_item_title_first_height" android:singleLine="true" style="@style/homepage_item_title_first" />
+            <TextView android:ellipsize="end" android:id="@id/detail_video_item_title_second_left" android:layout_width="fill_parent" android:layout_height="@dimen/home_video_land_item_title_second_height" android:singleLine="true" style="@style/homepage_item_title_second" />
+        </LinearLayout>
+        <View android:background="#fff2f2f2" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="vertical" android:id="@id/detail_card_related_title_layout_right" android:paddingLeft="@dimen/gridview_item_tv_marginleft" android:paddingTop="@dimen/home_video_land_item_title_layout_paddingtop" android:layout_width="fill_parent" android:layout_height="@dimen/home_video_land_item_title_layout_height" android:layout_weight="1.0">
+            <TextView android:ellipsize="end" android:id="@id/detail_video_item_title_first_right" android:layout_width="fill_parent" android:layout_height="@dimen/home_video_land_item_title_first_height" android:singleLine="true" style="@style/homepage_item_title_first" />
+            <TextView android:ellipsize="end" android:id="@id/detail_video_item_title_second_right" android:layout_width="fill_parent" android:layout_height="@dimen/home_video_land_item_title_second_height" android:singleLine="true" style="@style/homepage_item_title_second" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/detail_card_related_item_video_more" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_vertical_bottom_height">
+        <View android:background="#fff2f2f2" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/detail_card_related_card_more_text_size" android:textColor="#ff666666" android:gravity="center" android:id="@id/detail_card_related_item_more_text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="查看全部" android:layout_centerInParent="true" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/item_spacing" android:src="@drawable/detail_card_small_more_icon" android:layout_toRightOf="@id/detail_card_related_item_more_text" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:id="@id/detail_card_realted_item_video_shadow" android:background="#ffc9c9c9" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="2.0px" />
+</LinearLayout>

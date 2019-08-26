@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/mem_info" android:background="#fff5f5f5" android:paddingLeft="8.0dip" android:paddingTop="5.0dip" android:paddingRight="8.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/Font1_gray_333333" android:id="@id/total_mem_text" android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="总容量" />
+    <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/total_mem_text" android:layout_alignBottom="@id/total_mem_text">
+        <ProgressBar android:id="@id/mem_used" android:layout_width="fill_parent" android:layout_height="8.0px" android:max="1000" android:progressDrawable="@drawable/download_process" style="?android:attr/progressBarStyleHorizontal" />
+    </LinearLayout>
+    <TextView android:textAppearance="@style/Font1_gray_333333" android:id="@id/total_mem" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/total_mem_text" android:layout_alignRight="@id/total_mem_text" />
+    <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/total_mem" android:layout_below="@id/total_mem_text">
+        <ImageView android:background="#ff40aae4" android:layout_width="4.0dip" android:layout_height="@dimen/text_size_1" />
+        <TextView android:textAppearance="@style/Font1_gray_333333" android:id="@id/other_used_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0px" android:text="其他程序" />
+        <TextView android:textAppearance="@style/Font1_gray_333333" android:id="@id/other_used" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" />
+        <ImageView android:background="#ff29cf78" android:layout_width="4.0dip" android:layout_height="@dimen/text_size_1" android:layout_marginLeft="8.0px" />
+        <TextView android:textAppearance="@style/Font1_gray_333333" android:id="@id/download_used_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0px" android:text="本地下载" />
+        <TextView android:textAppearance="@style/Font1_gray_333333" android:id="@id/download_used" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" />
+        <ImageView android:background="#ffededed" android:layout_width="4.0dip" android:layout_height="@dimen/text_size_1" android:layout_marginLeft="8.0px" />
+        <TextView android:textAppearance="@style/Font1_gray_333333" android:id="@id/free_mem_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0px" android:text="剩余" android:singleLine="true" />
+        <TextView android:textAppearance="@style/Font1_gray_333333" android:id="@id/free_mem" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:singleLine="true" />
+    </LinearLayout>
+</RelativeLayout>

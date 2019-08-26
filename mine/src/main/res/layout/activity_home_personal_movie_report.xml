@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.RecyclerView android:id="@id/home_personal_movie_report_recyclerview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <RelativeLayout android:layout_gravity="bottom" android:id="@id/home_personal_movie_report_commit_layout" android:background="#ffe6e6e6" android:layout_width="fill_parent" android:layout_height="@dimen/home_personal_movie_100px">
+        <TextView android:textSize="@dimen/home_personal_movie_font_32px" android:textColor="@color/home_personnal_commit_text_inactive" android:gravity="center" android:id="@id/home_personal_movie_report_commit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/commit" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

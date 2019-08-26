@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/search_header" android:paddingBottom="@dimen/search_grid_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/search_card_hot_words_height">
+        <View android:gravity="center_vertical" android:id="@id/bule_line" android:background="#ff2fb3ff" android:layout_width="@dimen/soku_home_card_item_box_title_shape_weight" android:layout_height="@dimen/soku_home_card_item_box_title_shape_height" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/drawer_group_title" android:textColor="#ff333333" android:ellipsize="end" android:gravity="center_vertical" android:paddingLeft="@dimen/soku_home_card_item_box_title_layout_paddingleft" android:paddingRight="@dimen/soku_home_card_item_box_title_layout_paddingleft" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="搜索历史" android:singleLine="true" android:layout_toRightOf="@id/bule_line" android:layout_centerVertical="true" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/header_clear_history" android:background="@drawable/selector_bg_search_click" android:clickable="true" android:layout_width="wrap_content" android:layout_height="@dimen/search_widget_container_height" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageView android:layout_width="@dimen/search_item_suggestion_icon_width" android:layout_height="@dimen/search_item_suggestion_icon_width" android:src="@drawable/ic_search_header_delete" />
+            <TextView android:textSize="@dimen/search_item_suggestion_go_textsize" android:textColor="#ff666666" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="13.0dip" android:text="清空" />
+        </LinearLayout>
+        <View android:background="#fff0f0f0" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/header_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:gravity="center" android:id="@id/header_more_history" android:background="@drawable/selector_bg_search_history_more_click" android:layout_width="fill_parent" android:layout_height="@dimen/search_widget_container_height">
+        <TextView android:textSize="@dimen/search_item_suggestion_go_textsize" android:textColor="#ff666666" android:gravity="center" android:id="@id/tv_more_history" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="更多搜索历史" />
+        <ImageView android:id="@id/iv_more_history_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:src="@drawable/moren_xiala" android:layout_toRightOf="@id/tv_more_history" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

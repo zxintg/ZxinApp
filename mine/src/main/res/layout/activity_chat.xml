@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/chat_main_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/chat_bottom_linear" android:background="@color/white" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <EditText android:textSize="@dimen/detail_card_comment_header_text_size_v5" android:textColor="#ff333333" android:textColorHint="#ffbbbbbb" android:gravity="center|left" android:id="@id/chat_bottom_edittext" android:background="@drawable/bg_edittext" android:paddingLeft="@dimen/detail_card_comment_header_image_margin_left_v5" android:paddingTop="8.5dip" android:paddingRight="@dimen/detail_card_comment_header_image_margin_left_v5" android:paddingBottom="8.5dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:hint="@string/chat_edittext_init" android:maxLength="500" android:layout_weight="1.0" android:textCursorDrawable="@null" />
+        <RelativeLayout android:layout_gravity="end|bottom|center" android:id="@id/group_push_comment_container" android:layout_width="@dimen/btn_push_comment_height_v5" android:layout_height="@dimen/detail_comment_send_height_v5" android:layout_marginLeft="@dimen/group_edit_container_margin_right_v5" android:layout_marginRight="@dimen/group_edit_container_margin_right_v5">
+            <Button android:id="@id/chat_bottom_sendbutton" android:background="@drawable/detail_comment_send_content" android:layout_width="@dimen/btn_push_comment_height_v5" android:layout_height="@dimen/btn_push_comment_height_v5" android:layout_centerInParent="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <com.youku.widget.CompatSwipeRefreshLayout android:id="@id/chat_refresh_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/chat_bottom_linear" android:layout_alignParentTop="true">
+        <android.support.v7.widget.RecyclerView android:id="@id/chat_list" android:background="@color/chat_background" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@color/chat_background" android:dividerHeight="0.0px" />
+    </com.youku.widget.CompatSwipeRefreshLayout>
+    <com.youku.subscribechat.ChatWarningView android:id="@id/chatWarningView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_detail_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/fl_interact" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include android:layout_gravity="top" android:id="@id/layout_title" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/detail_play_title_height" android:layout_margin="0.0dip" layout="@layout/yp_detail_play_title" />
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <include android:layout_gravity="bottom" android:id="@id/layout_play_control" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/yp_detail_bottom_play_control" />
+            </FrameLayout>
+        </LinearLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/ib_user_play" android:background="@null" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/play_btn_play_big_detail" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <include android:id="@id/load_seekbar_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/yp_detail_play_loading" />
+        <include android:id="@id/view_restart" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/yp_detail_retry" />
+        <com.youku.player.ui.widget.Loading android:layout_gravity="center" android:id="@id/newLoading_play" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>

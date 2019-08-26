@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/collection_card_dock_bar" android:background="#fffafafa" android:layout_width="fill_parent" android:layout_height="@dimen/collection_card_head_height" android:layout_alignParentTop="true">
+        <ImageView android:layout_gravity="center" android:id="@id/more" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_video_detail_title_marginleft" android:src="@drawable/toolbar_back_selector" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:id="@id/collection_card_dock_bar_line1" android:background="#ffeaeaea" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/collection_card_dock_bar" />
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:id="@id/add_icon" android:layout_width="@dimen/my_collection_create_itme_icon_size" android:layout_height="@dimen/my_collection_create_itme_icon_size" android:src="@drawable/no_collection_icon" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/my_collection_create_item_text_size" android:textColor="@color/collection_card_add_video_tip_text_color" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/collection_card_add_video_tip_description" android:layout_below="@id/add_icon" />
+    </RelativeLayout>
+</RelativeLayout>

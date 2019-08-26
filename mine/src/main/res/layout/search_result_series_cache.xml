@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/result_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/ll_outer" android:layout_width="fill_parent" android:layout_height="300.0dip">
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/cache_base_view" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/soku_result_cache_title_height">
+            <TextView android:textSize="@dimen/bottom_episode_btn_textsize" android:textColor="@color/episode_btn_text_selector" android:gravity="center" android:id="@id/tv_title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/soku_result_cache_page_margin_left_parent" android:includeFontPadding="false" />
+            <LinearLayout android:gravity="center_vertical" android:id="@id/ll_down_list" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <ImageView android:background="@drawable/xiazailiebiao" android:layout_width="@dimen/soku_result_cache_icon_width" android:layout_height="@dimen/soku_result_cache_icon_width" android:layout_marginLeft="@dimen/soku_result_cache_page_margin_left_parent" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:id="@id/ll_format" android:paddingLeft="@dimen/soku_result_cache_page_margin_left" android:paddingRight="@dimen/soku_result_cache_page_margin_left" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toRightOf="@id/ll_down_list">
+                <TextView android:textSize="@dimen/soku_result_filter_item_text_size" android:textColor="#ff666666" android:gravity="center_vertical" android:id="@id/tv_format" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/soku_result_cache_format_margin_right" android:text="高清" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/xiala" />
+            </LinearLayout>
+            <FrameLayout android:id="@id/fl_close" android:paddingLeft="@dimen/soku_result_cache_format_margin_right_parent" android:paddingRight="@dimen/soku_result_cache_format_margin_right_parent" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+                <ImageView android:layout_gravity="center" android:id="@id/iv_download_close" android:layout_width="wrap_content" android:layout_height="@dimen/search_item_suggestion_icon_width" android:src="@drawable/search_btn_cancel" />
+            </FrameLayout>
+        </RelativeLayout>
+        <View android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <LinearLayout android:orientation="vertical" android:id="@id/layout_page" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.soku.searchsdk.widget.PageHorizontalScrollView android:id="@id/pageHorizontalScrollView" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="@dimen/layout_searchdirect_more_item_middle_height" android:fillViewport="true">
+                <LinearLayout android:orientation="horizontal" android:id="@id/page_scrollview_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </com.soku.searchsdk.widget.PageHorizontalScrollView>
+            <View android:background="#ffd6d6d6" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        </LinearLayout>
+        <RelativeLayout android:orientation="vertical" android:id="@id/series_cache_bottom_layout" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <GridView android:gravity="center" android:id="@id/gv_series" android:background="@android:color/transparent" android:scrollbars="none" android:fadingEdgeLength="@dimen/detail_boder" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/select_videos" />
+            <ListView android:id="@id/lv_series" android:background="@android:color/transparent" android:scrollbars="none" android:fadingEdgeLength="@dimen/detail_boder" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="#fff2f2f2" android:dividerHeight="1.0px" android:layout_above="@id/select_videos" />
+            <RelativeLayout android:id="@id/select_videos" android:background="#ff2fb3ff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/soku_result_cache_select_videos_height" android:layout_alignParentBottom="true">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerInParent="true">
+                    <TextView android:textSize="@dimen/soku_result_cache_cache_text_size" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/cache_text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="开始下载" />
+                    <TextView android:textSize="@dimen/soku_result_cache_cache_count_text_size" android:textColor="@color/white" android:gravity="center" android:id="@id/select_videos_count" android:background="@drawable/select_videos_count_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/soku_result_cache_cache_text_right" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/series_cache_linearlayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.soku.searchsdk.view.SokuTabPageIndicator android:id="@id/series_cache_tabindicator" android:background="@color/channel_tab_item_bg" android:paddingLeft="@dimen/channel_tab_item_margin_width" android:paddingRight="@dimen/channel_tab_item_margin_width" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="@dimen/channel_main_tabindicator_height" />
+            <View android:background="#ffd6d6d6" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <com.soku.searchsdk.view.ChannelExtendedViewPager android:id="@id/series_cache_viewpager" android:background="@color/app_background" android:persistentDrawingCache="animation" android:layout_width="fill_parent" android:layout_height="fill_parent" android:flipInterval="30" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

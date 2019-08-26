@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/search_bar" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/search_button" android:background="@drawable/btn_search" android:layout_width="@dimen/topic_height_20dp" android:layout_height="@dimen/topic_height_20dp" android:layout_marginLeft="@dimen/activity_padding_half" android:scaleType="centerInside" />
+    <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/search_button">
+        <EditText android:textSize="@dimen/search_topic_name_text_size" android:textColor="#ff666666" android:textColorHint="#ffb9b9b9" android:ellipsize="end" android:id="@id/seach_input" android:background="@null" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="@dimen/topic_height_28dp" android:hint="@string/search_topic_hint" android:singleLine="true" android:layout_centerVertical="true" android:imeOptions="actionSearch" />
+        <ImageView android:id="@id/search_close_btn" android:background="@drawable/search_ic_input_clear" android:visibility="gone" android:layout_width="@dimen/topic_height_20dp" android:layout_height="@dimen/topic_height_20dp" android:layout_marginRight="@dimen/activity_padding_half" android:scaleType="centerInside" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

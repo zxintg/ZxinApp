@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:paddingLeft="@dimen/activity_padding_normal" android:paddingTop="@dimen/activity_padding_normal" android:paddingRight="@dimen/activity_padding_normal" android:paddingBottom="@dimen/activity_padding_normal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="100.0">
+        <com.youku.usercenter.widget.ChannelCellImageLayout android:orientation="vertical" android:id="@id/upload_myvideo_item_cell" android:background="@color/app_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="73.0">
+            <ImageView android:id="@id/ucenter_community_item_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        </com.youku.usercenter.widget.ChannelCellImageLayout>
+        <RelativeLayout android:paddingLeft="@dimen/activity_padding_normal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="27.0" android:layout_toRightOf="@id/upload_myvideo_item_cell">
+            <TextView android:id="@id/ucenter_community_item_btn_join" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="参与" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/ucenter_btn_normal" />
+            <TextView android:id="@id/ucenter_community_item_text_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/activity_padding_normal" android:layout_toLeftOf="@id/ucenter_community_item_btn_join" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/ucenter_list_item_first" />
+            <TextView android:id="@id/ucenter_community_item_text_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginRight="@dimen/activity_padding_normal" android:maxLines="2" android:singleLine="false" android:layout_toLeftOf="@id/ucenter_community_item_btn_join" android:layout_below="@id/ucenter_community_item_text_title" android:layout_alignParentLeft="true" style="@style/ucenter_list_item_second" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:background="#ffebebeb" android:layout_width="fill_parent" android:layout_height="2.0px" android:layout_alignParentBottom="true" />
+</RelativeLayout>

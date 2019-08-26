@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#d8282828" android:layout_width="fill_parent" android:layout_height="@dimen/game_no_net_tip_layout_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/icon_no_net" android:layout_width="@dimen/game_no_net_tip_icon_width" android:layout_height="@dimen/game_no_net_tip_icon_width" android:layout_marginLeft="@dimen/game_card_margin" android:src="@drawable/no_net_icon" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/game_no_net_tip_txt_size" android:textColor="#ffffffff" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/game_no_net_tip_txt_margin_left" android:text="@string/game_no_net_tip_txt" android:layout_toRightOf="@id/icon_no_net" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/game_no_net_tip_btn_txt_size" android:textColor="#ffffffff" android:gravity="center" android:id="@id/btn_net_setting" android:background="@drawable/game_rectangle" android:layout_width="@dimen/game_no_net_tip_btn_weight" android:layout_height="@dimen/game_no_net_tip_btn_height" android:layout_marginRight="@dimen/game_card_margin" android:text="@string/game_no_net_tip_btn_txt" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

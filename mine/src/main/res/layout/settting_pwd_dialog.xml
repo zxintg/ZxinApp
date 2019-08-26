@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/dialogLayout" android:background="@drawable/dialog_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:padding="@dimen/padding_left_right_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/text_size_16" android:textColor="@color/main_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dialog_setting_pwd" />
+        <TextView android:textSize="@dimen/text_size_14" android:textColor="@color/dialog_text_toast_color" android:paddingTop="@dimen/padding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dialog_pwd_rex" />
+    </LinearLayout>
+    <EditText android:textSize="@dimen/text_size_14" android:textColor="@color/dialog_edit_bule_color" android:id="@id/setting_pwd_edit" android:background="@drawable/dialog_edit_bg" android:padding="@dimen/padding_left_right_10" android:paddingLeft="@dimen/padding_left_right_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_left_right_15" android:layout_marginTop="@dimen/padding_left_right_10" android:layout_marginRight="@dimen/padding_left_right_15" android:layout_marginBottom="@dimen/padding_left_right_15" android:password="true" android:textCursorDrawable="@null" />
+    <View android:background="@color/dialog_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="1.0px" android:layout_marginRight="1.0px" />
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="1.0px" android:paddingRight="1.0px" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:textSize="@dimen/text_size_18" android:textColor="@color/diaog_btn_text_color" android:id="@id/canceldialog" android:background="@drawable/dialog_bottom_left_selector" android:padding="@dimen/padding_left_right_12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="1.0" />
+        <View android:background="@color/dialog_line_color" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <Button android:textSize="@dimen/text_size_18" android:textColor="@color/diaog_btn_text_color" android:id="@id/suredialog" android:background="@drawable/dialog_bottom_right_selector" android:padding="@dimen/padding_left_right_12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sure" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

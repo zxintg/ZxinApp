@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.phone.channel.view.ChannelFilterBar android:id="@id/channel_video_filterbar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:id="@id/channel_video_body" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.handmark.pulltorefresh.library.PullToRefreshGridView android:scrollbarStyle="outsideOverlay" android:id="@id/channel_video_gridview" android:paddingLeft="@dimen/channel_gridview_padding_horizontal" android:paddingTop="@dimen/channel_gridview_padding_vertical" android:paddingRight="@dimen/channel_gridview_padding_horizontal" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="#00000000" android:cacheColorHint="#00000000" android:horizontalSpacing="@dimen/channel_land_gridview_spacing" android:verticalSpacing="@dimen/channel_land_gridview_spacing" android:numColumns="@integer/channel_land_gridview_numColumns" />
+        <com.youku.phone.channel.view.ChannelNoResultEmptyView android:id="@id/channel_video_noresult_emptyview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+</LinearLayout>

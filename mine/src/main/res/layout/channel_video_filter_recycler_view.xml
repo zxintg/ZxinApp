@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youku.phone.channel.view.HorizontalScrollForeverRecyclerView android:layout_width="fill_parent" android:layout_height="@dimen/channel_video_filter_row_height" android:layout_marginLeft="@dimen/channel_video_filter_row_left_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

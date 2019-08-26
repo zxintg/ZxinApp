@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/detail_card_item_left_show_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/left_image_layout" android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+            <ImageView android:layout_gravity="center" android:layout_width="@dimen/icon_default_width" android:layout_height="@dimen/icon_default_width" android:src="@drawable/vip_channel_not_loaded_icon_play" />
+            <com.youku.vipcenter.widget.YoukuPortImageView android:id="@id/detail_show_left_item_img" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+        </FrameLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBottom="@id/left_image_layout">
+            <ImageView android:background="@drawable/vip_detail_mengceng_video" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_item_viedo_image_mengceng_height_v5" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/triangle_wrapper" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+            <com.youku.vipcenter.widget.TriangleView android:id="@id/triangle_view" android:layout_width="@dimen/triangle_view_height" android:layout_height="@dimen/triangle_view_height" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+            <com.youku.vipcenter.widget.RobbinTextView android:gravity="center" android:id="@id/triangle_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/triangle_text" />
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/home_video_land_item_membership_corner_mark_text_size" android:textColor="#ffd3c39c" android:gravity="center" android:layout_gravity="center|right|top" android:id="@id/channel_item_membership_corner_mark" android:background="#e6515151" android:visibility="gone" android:layout_width="@dimen/home_video_land_item_membership_corner_mark_width" android:layout_height="@dimen/home_video_land_item_membership_corner_mark_height" android:layout_marginRight="@dimen/home_video_land_item_membership_corner_mark_margin_right" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/home_video_land_item_operation_corner_mark_text_size" android:textColor="#ffffffff" android:ellipsize="end" android:gravity="left" android:layout_gravity="bottom|center|left" android:id="@id/channel_item_operation_corner_mark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_comment_header_image_margin_left_v5" android:layout_marginBottom="@dimen/detail_card_video_item_image_margin_botoom_v5" android:singleLine="true" android:shadowColor="#90000000" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_alignLeft="@id/detail_card_item_left_show_layout" android:layout_alignBottom="@id/detail_card_item_left_show_layout" />
+    <RelativeLayout android:id="@id/detail_card_item_left_content_layout" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_item_viedo_content_v5" android:layout_below="@id/detail_card_item_left_show_layout">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/detail_card_comment_header_image_margin_left_v5" android:layout_marginTop="@dimen/detail_card_video_item_image_margin_botoom_v5" android:layout_marginRight="@dimen/detail_card_comment_header_image_margin_left_v5">
+            <TextView android:textSize="@dimen/detail_card_item_title_size_v5" android:textColor="#ff333333" android:ellipsize="end" android:id="@id/detail_show_item_left_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="奔跑吧兄弟" android:maxLines="1" />
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_video_item_bofangliang_margintop_v5">
+                <ImageView android:id="@id/image_left_bofangliang" android:layout_width="@dimen/detail_card_bofangliang_v5" android:layout_height="@dimen/detail_card_bofangliang_v5" android:src="@drawable/vip_bofangliang" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/detail_card_item_image_time_size_v5" android:textColor="#ffb5b7b9" android:ellipsize="end" android:id="@id/detail_video_item_left_num" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="234,23424" android:singleLine="true" android:layout_toRightOf="@id/image_left_bofangliang" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:TabsWithSwipeGesture="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/btn_search"
+        android:id="@id/menu_search_pop"
+        android:orderInCategory="0"
+        android:title="@string/search"
+        TabsWithSwipeGesture:showAsAction="always"
+        TabsWithSwipeGesture:actionViewClass="com.v7.widget.SearchView" />
+</menu>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/message_center_mine_item_top" android:background="#ffe2e2e2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/message_center_padding" />
+    <LinearLayout android:orientation="vertical" android:id="@id/message_center_mine_item_time" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/message_center_date_textsize" android:textColor="#ff515151" android:gravity="center_vertical" android:id="@id/message_center_mine_item_time_text" android:paddingLeft="@dimen/message_center_date_padding_left" android:layout_width="fill_parent" android:layout_height="@dimen/message_center_date_height" />
+        <View android:background="#ffededed" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/message_center_mine_item_content" android:background="@drawable/message_item_selector" android:layout_width="fill_parent" android:layout_height="@dimen/message_center_content_height">
+        <RelativeLayout android:layout_width="@dimen/message_center_sign_layout_width" android:layout_height="fill_parent">
+            <ImageView android:id="@id/message_center_mine_item_sign" android:layout_width="@dimen/message_center_sign_width" android:layout_height="@dimen/message_center_sign_width" android:src="@drawable/ic_push_msg_default" android:scaleType="centerCrop" android:layout_centerInParent="true" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="@dimen/message_center_sign_width" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/message_center_redpoint_vertical_margin" android:layout_toLeftOf="@id/message_center_mine_item_sign" android:layout_above="@id/message_center_mine_item_sign" android:layout_alignParentRight="true">
+                <View android:id="@id/message_center_mine_item_redpoint" android:background="@drawable/badge_number_corner_background" android:layout_width="6.0dip" android:layout_height="6.0dip" />
+                <TextView android:textSize="10.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/message_center_mine_item_badgenum" android:background="@drawable/badge_number_corner_background" android:paddingLeft="2.0dip" android:paddingRight="2.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="14.0dip" android:minWidth="14.0dip" android:text="6" android:lineSpacingExtra="0.0dip" android:lineSpacingMultiplier="1.0" />
+            </LinearLayout>
+        </RelativeLayout>
+        <View android:background="#ffededed" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_marginTop="@dimen/message_center_border_padding" android:layout_marginBottom="@dimen/message_center_border_padding" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/message_center_text_padding_left" android:layout_marginRight="@dimen/message_center_text_padding_right" android:layout_weight="1.0">
+            <TextView android:textColor="#ff666666" android:ellipsize="end" android:id="@id/message_center_mine_item_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="这个是标题这个是标题这个是标题这个是标题这个是标题这个是标题这个是标题这个是标题这个是标题这个是标题这个是标题这个是标题这个是标题这个是标题这个是标题这个是标题这个是标题这个是标题这个是标题这个是标题" style="@style/ucenter_list_item_second" />
+            <TextView android:textColor="#ff666666" android:ellipsize="end" android:id="@id/message_center_mine_item_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="这个是描述这个是描述这个是描述这个是描述这个是描述这个是描述这个是描述这个是描述这个是描述这个是描述这个是描述这个是描述这个是描述这个是描述这个是描述这个是描述这个是描述这个是描述这个是描述这个是描述这个是描述" style="@style/ucenter_list_item_second" />
+        </LinearLayout>
+        <ImageView android:id="@id/message_center_mine_item_image" android:background="@drawable/message_item_image_default" android:layout_width="@dimen/message_center_image_width" android:layout_height="fill_parent" android:layout_marginRight="@dimen/activity_padding_normal" android:scaleType="centerCrop" />
+    </LinearLayout>
+    <View android:background="#ffededed" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <View android:id="@id/message_center_mine_item_bottom" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/message_center_padding" />
+</LinearLayout>

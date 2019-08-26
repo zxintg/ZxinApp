@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="1.0px"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="#33ffffff" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="@dimen/waist_seal_line_marginLeft" android:layout_marginRight="@dimen/waist_seal_line_marginLeft" android:layout_above="@id/duration" />
+</LinearLayout>

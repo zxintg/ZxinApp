@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="@dimen/home_card_topic_recommend_content_descript_text_size" android:textColor="#ffffffff" android:ellipsize="end" android:layout_width="@dimen/home_card_topic_recommend_content_descript_width" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/home_card_topic_recommend_content_descript_left_margin" android:layout_marginTop="-3.0dip" android:layout_marginRight="@dimen/home_card_topic_recommend_content_descript_right_margin" android:maxLines="8" android:singleLine="false" android:lineSpacingExtra="3.0sp"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

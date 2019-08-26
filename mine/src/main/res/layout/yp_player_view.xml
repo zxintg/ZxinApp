@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/player_view_all" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/yp_player_container" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <master.flame.danmaku.ui.widget.DanmakuView android:id="@id/danmaku" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <RelativeLayout android:id="@id/rl_water_mark" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/water_mark" android:visibility="invisible" android:layout_width="@dimen/water_mark_width" android:layout_height="@dimen/water_mark_height" android:layout_marginTop="@dimen/water_mark_margin_top" android:layout_marginRight="@dimen/water_mark_margin_right" android:src="@drawable/play_water_mark" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <ImageView android:id="@id/exclusive_water_mark" android:visibility="invisible" android:layout_width="@dimen/exclusive_water_mark_width" android:layout_height="@dimen/exclusive_water_mark_height" android:layout_marginTop="@dimen/water_mark_margin_top" android:layout_marginRight="@dimen/water_mark_margin_right" android:src="@drawable/exclusive_water_mark" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <com.youku.player.subtitle.StrokeTextView android:textSize="@dimen/register_num_textsize" android:textColor="#ffffffff" android:id="@id/youku_register_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/water_mark_margin_top" android:layout_marginRight="@dimen/register_num_margin_right" android:layout_toLeftOf="@id/exclusive_water_mark" />
+        <com.youku.player.subtitle.StrokeTextView android:textSize="@dimen/register_num_textsize" android:textColor="#ffffffff" android:id="@id/license_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/water_mark_margin_top" android:layout_marginRight="@dimen/water_mark_margin_right" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/player_holder_all" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

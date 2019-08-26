@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="38.0dip">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/layoutGift" android:background="@drawable/lf_bg_round_38_rect_a_40_000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip">
+            <ImageView android:id="@id/imageViewUserAvatar" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginLeft="2.0dip" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="38.0dip" android:layout_marginLeft="7.0dip" android:layout_marginRight="25.0dip">
+                <TextView android:textSize="@dimen/lf_text_size_dp_micro" android:textColor="@color/lf_color_ffd862" android:id="@id/textViewUserName" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/lf_text_size_dp_micro" android:textColor="@android:color/white" android:id="@id/textViewGiftName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" />
+                    <TextView android:textSize="@dimen/lf_text_size_dp_micro" android:textStyle="bold" android:textColor="@color/lf_color_f2707c" android:id="@id/textViewGiftNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:layout_gravity="right" android:id="@id/imageViewGiftIcon" android:layout_width="38.0dip" android:layout_height="38.0dip" android:layout_marginLeft="-25.0dip" />
+    </LinearLayout>
+</LinearLayout>

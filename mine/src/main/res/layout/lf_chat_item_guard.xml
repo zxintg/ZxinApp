@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/chat_item_guard_anchor_user_lv" android:layout_width="21.0dip" android:layout_height="21.0dip" android:layout_marginRight="3.0dip" android:scaleType="fitCenter" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/chat_item_guard_user_lv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:scaleType="fitCenter" android:layout_toRightOf="@id/chat_item_guard_anchor_user_lv" android:layout_alignTop="@id/chat_item_guard_anchor_user_lv" android:layout_alignBottom="@id/chat_item_guard_anchor_user_lv" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/user_item_guard_iv" android:layout_width="15.0dip" android:layout_height="15.0dip" android:src="@drawable/lf_tiefen_corner" android:scaleType="fitCenter" android:layout_toRightOf="@id/chat_item_guard_user_lv" android:layout_alignTop="@id/chat_item_guard_user_lv" android:layout_alignBottom="@id/chat_item_guard_user_lv" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/lf_text_size_dp_medium" android:textColor="@color/lf_color_828282" android:gravity="center|left" android:id="@id/chat_item_guard_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:layout_toRightOf="@id/user_item_guard_iv" android:layout_centerVertical="true" />
+</RelativeLayout>

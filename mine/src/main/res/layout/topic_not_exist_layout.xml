@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/topic_not_exist_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/topic_not_exist_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/community_pic_xiaoku" />
+        <TextView android:textSize="@dimen/text_size_j" android:textColor="#ff999999" android:ellipsize="end" android:layout_gravity="center_horizontal" android:id="@id/topic_not_exist_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/topic_notexist_or_del_str" android:singleLine="true" />
+    </LinearLayout>
+</LinearLayout>

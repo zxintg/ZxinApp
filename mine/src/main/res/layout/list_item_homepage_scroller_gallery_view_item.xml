@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffd7d8d8" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:layout_width="@dimen/icon_default_width" android:layout_height="@dimen/icon_default_width" android:src="@drawable/channel_not_loaded_icon_play" />
+        <ImageView android:id="@id/homepage_gallery_item_imageview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        <ImageView android:layout_gravity="bottom|center|left" android:id="@id/homepage_gallery_item_play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/channel_stack_item_play_marginbottom" android:src="@drawable/play_icon_big" />
+    </FrameLayout>
+    <include layout="@layout/include_layout_triangle_wrapper" />
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:orientation="vertical" android:id="@id/favorite_page_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <com.youku.phone.collection.widget.pullToRefresh.PullToRefreshListView android:id="@id/myfavorite_gridview" android:background="@color/app_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="#00000000" android:divider="@null" custom:rightViewWidth="@dimen/my_collections_swipe_list_right_width" />
+</RelativeLayout>

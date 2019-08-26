@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/searchdirect_header_top_qc" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/searchresult_top_qc" />
+    <com.youku.widget.SteadyListView android:id="@id/searchdirect_header_listview" android:paddingTop="@dimen/searchresult_listview_paddingtop" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@null" android:cacheColorHint="#00000000" android:divider="@android:color/transparent" android:dividerHeight="@dimen/searchdirect_header_gridview_verticalspacing" />
+    <com.youku.widget.SteadyGridView android:gravity="center" android:id="@id/searchdirect_header_gridview" android:paddingTop="@dimen/searchresult_listview_paddingtop" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="#00000000" android:cacheColorHint="#00000000" android:horizontalSpacing="@dimen/searchdirect_header_gridview_horizontalspacing" android:verticalSpacing="@dimen/searchdirect_header_gridview_verticalspacing" android:numColumns="@integer/searchdirect_gridview_numColumns" />
+    <include android:id="@id/searchdirect_header_filterbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/searchdirect_header_gridview_verticalspacing" layout="@layout/activity_searchresult_top" />
+</LinearLayout>

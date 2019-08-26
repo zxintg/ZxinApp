@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center|left" android:background="@drawable/actionbar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/abc_action_bar_default_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ticket_top_back_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ticket_top_back_img_marginleft" android:src="@drawable/actionbar_homeup_withlogo_selector" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <LinearLayout android:id="@id/ticket_top_title_line" android:paddingTop="@dimen/channel_custom_title_padding_topbottom" android:paddingRight="@dimen/channel_custom_title_txt_marginleft" android:paddingBottom="@dimen/channel_custom_title_padding_topbottom" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toRightOf="@id/ticket_top_back_img">
+        <View android:background="#ffc7c7c7" android:layout_width="1.0px" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <TextView android:id="@id/ticket_top_title_txt" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toRightOf="@id/ticket_top_title_line" style="@style/ticket_top_title_txt" />
+    <RelativeLayout android:orientation="horizontal" android:id="@id/ticket_city_filter_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/ticket_city_filter_layout_marginright" android:layout_alignParentRight="true">
+        <TextView android:id="@id/ticket_city_filter_txt" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/channel_custom_title_txt" />
+        <ImageView android:id="@id/ticket_city_filter_img" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/channel_custom_title_img_marginleft" android:layout_marginBottom="@dimen/channel_custom_title_img_marginbottom" android:src="@drawable/channel_btn_switch_selector" android:layout_toRightOf="@id/ticket_city_filter_txt" android:layout_alignBaseline="@id/channel_custom_title_txt" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <ImageView android:id="@id/ticket_district_filter_img" android:visibility="gone" android:layout_width="@dimen/ticket_district_filter_img_width" android:layout_height="@dimen/ticket_district_filter_img_width" android:layout_marginRight="@dimen/ticket_district_filter_img_marginright" android:src="@drawable/ticket_district_filter_selector" android:layout_toLeftOf="@id/ticket_city_filter_layout" android:layout_centerVertical="true" android:layout_alignWithParentIfMissing="true" />
+</RelativeLayout>

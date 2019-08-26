@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.widget.ViewPager android:layout_gravity="center" android:id="@id/home_pager" android:background="#ffe6e6e6" android:persistentDrawingCache="animation" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/homepage_tab_height" android:flipInterval="30" />
+    <include android:id="@id/home_tab" layout="@layout/activity_homepage_tabs" />
+    <com.youku.phone.home.view.HomeHistoryView android:id="@id/homeHistoryView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?actionBarSize" />
+    <include android:id="@id/bubbleTip" android:visibility="gone" layout="@layout/bubble_tips_view" />
+</RelativeLayout>

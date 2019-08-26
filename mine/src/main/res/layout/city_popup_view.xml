@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/black_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/city_popup_view_txt" android:paddingLeft="@dimen/city_popup_view_txt_paddingleftright" android:layout_width="fill_parent" android:layout_height="@dimen/city_popup_view_txt_height" android:text="选择城市" style="@style/city_popup_view_txt" />
+    <GridView android:id="@id/city_popup_gridview" android:paddingLeft="@dimen/city_popup_gridview_paddingleftright" android:paddingRight="@dimen/city_popup_gridview_paddingleftright" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="#00000000" android:cacheColorHint="#00000000" android:horizontalSpacing="0.0dip" android:verticalSpacing="@dimen/city_popup_gridview_verticalspacing" android:stretchMode="columnWidth" android:numColumns="@integer/city_popup_gridview_numColumns" />
+</LinearLayout>

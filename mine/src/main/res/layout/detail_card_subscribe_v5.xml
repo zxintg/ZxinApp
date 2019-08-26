@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/blackcover" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/detail_subscribe_card_height_v5">
+        <LinearLayout android:layout_gravity="center_vertical" android:id="@id/user" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_centerVertical="true">
+            <FrameLayout android:layout_gravity="center_vertical" android:layout_width="@dimen/detail_subscribe_icon_height_v5" android:layout_height="@dimen/detail_subscribe_icon_height_v5" android:layout_marginLeft="@dimen/detail_subscribe_icon_left_margin_v5" android:layout_marginRight="@dimen/detail_subscribe_icon_right_margin_v5">
+                <ImageView android:id="@id/icon" android:background="@drawable/avatar_default" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+                <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/detail_rukoumengceng" />
+            </FrameLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toRightOf="@id/icon">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/detail_subscribe_card_name_text_size_v5" android:textColor="#ff333333" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/card_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="优酷院线" android:singleLine="true" android:layout_weight="1.0" />
+                    <ImageView android:layout_gravity="center" android:id="@id/youku_certified" android:layout_width="@dimen/detail_subscribe_certified_height" android:layout_height="@dimen/detail_subscribe_certified_height" android:layout_marginLeft="@dimen/detail_subscribe_certified_left_margin_v5" android:src="@drawable/user_certified_offline_icon" android:layout_centerVertical="true" />
+                </LinearLayout>
+                <TextView android:textSize="@dimen/detail_subscribe_card_playtimes_text_size_v5" android:textColor="#ffb5b7b9" android:ellipsize="end" android:id="@id/total" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_subtitle_marginTop" android:maxWidth="1000.0dip" android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout android:layout_gravity="center|right" android:id="@id/subscribe" android:layout_width="@dimen/detail_subscribe_subbtn_width_v5" android:layout_height="@dimen/detail_subscribe_subbtn_height_v5" android:layout_marginRight="@dimen/detail_subscribe_subbtn_right_margin_v5">
+            <ImageView android:id="@id/subscribe_background" android:layout_width="@dimen/detail_subscribe_subbtn_width_v5" android:layout_height="@dimen/detail_subscribe_subbtn_height_v5" android:src="@drawable/detail_subscribe_bg" />
+            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ProgressBar android:layout_gravity="center_vertical" android:id="@id/detail_subscribe_progress" android:visibility="gone" android:layout_width="@dimen/detail_subscribe_submark_width_v5" android:layout_height="@dimen/detail_subscribe_submark_width_v5" android:indeterminateOnly="true" android:indeterminateDrawable="@anim/subscribe_progress_bar" android:indeterminateBehavior="repeat" />
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/state" android:layout_width="@dimen/detail_subscribe_submark_width_v5" android:layout_height="@dimen/detail_subscribe_submark_width_v5" android:src="@drawable/details_subscribe_mark" />
+                <TextView android:textSize="@dimen/detail_subscribe_subtext_size_v5" android:textColor="#ffffffff" android:id="@id/state_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_subscribe_subtext_left_margin_v5" android:text="订阅" />
+            </LinearLayout>
+            <ImageView android:id="@id/subscribe_pressed" android:visibility="gone" android:layout_width="@dimen/detail_subscribe_subbtn_width_v5" android:layout_height="@dimen/detail_subscribe_subbtn_height_v5" android:src="@drawable/subscribe_button_pressed" />
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/layout_title" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/usercenter_banner_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/usercenter_item_mark_color" android:layout_width="@dimen/usercenter_banner_mark_width" android:layout_height="@dimen/usercenter_banner_mark_height" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <TextView android:gravity="center_vertical" android:id="@id/card_name" android:paddingLeft="@dimen/usercenter_banner_title_left_margin" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/upload_toast_uploading" android:layout_toLeftOf="@id/card_tips_count" style="@style/ucenter_list_item_first" />
+    <View android:background="#ffebebeb" android:layout_width="fill_parent" android:layout_height="2.0px" android:layout_alignParentBottom="true" />
+</RelativeLayout>

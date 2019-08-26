@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/layout_score_dialog" android:background="@color/white" android:layout_width="@dimen/score_dialog_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/score_dialog_img_rl" android:layout_width="fill_parent" android:layout_height="@dimen/score_dialog_top_img_height">
+        <ImageView android:id="@id/score_dialog_top_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/score_dialog_top_img" android:scaleType="fitXY" />
+        <ImageView android:id="@id/score_dialog_close_icon" android:padding="@dimen/score_dialog_close_icon_padding" android:layout_width="@dimen/score_dialog_close_icon_size" android:layout_height="@dimen/score_dialog_close_icon_size" android:src="@drawable/score_dialog_close_icon" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/socre_dialog_text_ll" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/score_dialog_middle_text_margin_top" android:layout_marginBottom="@dimen/score_dialog_middle_text_margin_bottom">
+        <TextView android:textSize="@dimen/score_dialog_middle_text_size" android:textColor="@color/text_color_gray_9" android:id="@id/score_dialog_txt_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/score_dialog_middle_text_interval" android:text="@string/score_dialog_middle_txt_1" />
+        <TextView android:textSize="@dimen/score_dialog_middle_text_size" android:textColor="@color/text_color_gray_9" android:id="@id/score_dialog_txt_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/score_dialog_middle_txt_2" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/layout_score_dialog_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/score_dialog_bottom_btn_height" android:layout_marginLeft="@dimen/score_dialog_bottom_btn_margin_left" android:layout_marginRight="@dimen/score_dialog_bottom_btn_margin_left" android:layout_marginBottom="@dimen/score_dialog_bottom_btn_margin_bottom">
+        <LinearLayout android:gravity="center" android:id="@id/score_dialog_comment_btn_ll" android:background="@drawable/btn_score_dialog_cancel" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="@dimen/score_dialog_bottom_btn_margin_right" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/score_dialog_bottom_btn_text_size" android:textColor="@color/text_color_gray_3" android:gravity="center" android:id="@id/score_dialog_txt_no" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/score_dialog_btn_left" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/score_dialog_score_btn_ll" android:background="@drawable/btn_score_dialog_ok" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/score_dialog_bottom_btn_margin_right" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/score_dialog_bottom_btn_text_size" android:textColor="@color/white" android:gravity="center" android:id="@id/score_dialog_txt_yes" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/score_dialog_btn_right" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

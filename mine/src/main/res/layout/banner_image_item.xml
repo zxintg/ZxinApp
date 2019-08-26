@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/text_color_white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.usercenter.widget.YoukuImageView android:id="@id/item_image" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/community_banner_h" android:src="@drawable/topic_banner_blank" android:scaleType="fitXY" android:onClick="onBannerTopicClick" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:background="@drawable/waist_seal" android:paddingLeft="@dimen/community_padding_15" android:paddingTop="@dimen/community_padding_10" android:paddingRight="@dimen/community_padding_15" android:paddingBottom="@dimen/community_padding_10" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/community_tab_white_mask" />
+        <TextView android:textSize="@dimen/text_size_j" android:textColor="@color/text_color_white" android:id="@id/banner_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+    </LinearLayout>
+</FrameLayout>

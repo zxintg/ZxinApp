@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/game_card_layout_item" android:paddingTop="@dimen/card_margin_top_for_search_result" android:paddingBottom="@dimen/game_card_action_mb_for_searchcard" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/game_card_item_1" layout="@layout/layout_game_search_result_game_item" />
+    <View android:background="#ffe8e8e8" android:layout_width="1.0px" android:layout_height="fill_parent" />
+    <include android:id="@id/game_card_item_2" layout="@layout/layout_game_search_result_game_item" />
+    <View android:background="#ffe8e8e8" android:layout_width="1.0px" android:layout_height="fill_parent" />
+    <include android:id="@id/game_card_item_3" layout="@layout/layout_game_search_result_game_item" />
+    <View android:background="#ffe8e8e8" android:layout_width="1.0px" android:layout_height="fill_parent" />
+    <include android:id="@id/game_card_item_4" layout="@layout/layout_game_search_result_game_item" />
+</LinearLayout>

@@ -29,7 +29,7 @@ android {
             abiFilters "armeabi", "armeabi-v7a", "x86","x86_64", 'mips'
         }
         //突破65536
-        multiDexEnabled true
+        multiDexEnabled true  //尽量不使用 是指安卓虚拟机（Android 可执行文件.dex中的java方法引用超过65536)
         // 默认是_360的渠道
         manifestPlaceholders = [UMENG_CHANNEL_VALUE: "yingyongbao"]
         flavorDimensions "versionCode"

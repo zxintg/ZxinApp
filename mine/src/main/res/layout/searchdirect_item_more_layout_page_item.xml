@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout_more_page_item" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/more_page_item_txt" android:paddingLeft="@dimen/more_page_item_txt_paddingleftright" android:paddingRight="@dimen/more_page_item_txt_paddingleftright" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/more_page_item_txt" />
+    <View android:id="@id/more_page_item_line" android:background="@drawable/more_page_item_line_bgcolor" android:layout_width="fill_parent" android:layout_height="4.0px" android:layout_alignLeft="@id/more_page_item_txt" android:layout_alignRight="@id/more_page_item_txt" android:layout_alignParentBottom="true" />
+</RelativeLayout>

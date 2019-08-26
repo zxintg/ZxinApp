@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/dialog_activity_login_text_size" android:textColor="@color/black" android:gravity="center|left" android:id="@id/tv_widget_card_verify_captcha_title" android:paddingLeft="@dimen/dialog_activity_regist_item_top_margin_right_spacing" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_activity_login_page_top_height" />
+    <View android:background="@drawable/tab_indicator_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <View android:orientation="vertical" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_activity_login_input_editview_margin_top" />
+    <LinearLayout android:id="@id/vg_widget_card_verify_captcha_first_area" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_activity_login_input_layout_height" android:layout_marginLeft="@dimen/dialog_activity_login_input_editview_margin_left_right" android:layout_marginRight="@dimen/dialog_activity_login_input_editview_margin_left_right" android:layout_marginBottom="@dimen/login_edit_magin_bottom">
+        <EditText android:textSize="@dimen/dialog_activity_login_input_editview_text_size" android:textColor="@color/text_color_gray_7" android:textColorHint="@color/dialog_login_activity_input_text_color" android:gravity="bottom" android:id="@id/et_widget_card_verify_captcha_first" android:background="@null" android:paddingLeft="@dimen/dialog_activity_login_input_editview_paddingleft" android:paddingBottom="@dimen/login_edit_magin_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" android:imeOptions="actionNext" />
+    </LinearLayout>
+    <View android:orientation="vertical" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_activity_login_input_editview_margin_top" />
+    <LinearLayout android:id="@id/vg_widget_card_verify_captcha_second_line" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_activity_login_input_layout_height" android:layout_marginLeft="@dimen/dialog_activity_login_input_editview_margin_left_right" android:layout_marginRight="@dimen/dialog_activity_login_input_editview_margin_left_right" android:layout_marginBottom="@dimen/login_edit_magin_bottom">
+        <RelativeLayout android:id="@id/vg_widget_card_verify_captcha_second_area" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <EditText android:textSize="@dimen/dialog_activity_login_input_editview_text_size" android:textColor="@color/text_color_gray_7" android:textColorHint="@color/dialog_login_activity_input_text_color" android:gravity="bottom" android:id="@id/et_widget_card_verify_captcha_second" android:background="@null" android:paddingLeft="@dimen/dialog_activity_login_input_editview_paddingleft" android:paddingRight="@dimen/widget_card_verify_captha_width" android:paddingBottom="@dimen/login_edit_magin_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" android:maxLength="4" android:imeOptions="actionNext" />
+            <ImageView android:id="@id/iv_widget_card_verify_captcha_image" android:layout_width="@dimen/widget_card_verify_captha_width" android:layout_height="fill_parent" android:scaleType="fitEnd" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <LinearLayout android:id="@id/vg_widget_card_verify_captcha_change_area" android:layout_width="@dimen/widget_card_verify_changge_width" android:layout_height="fill_parent">
+            <Button android:textSize="@dimen/dialog_activity_login_input_editview_text_size" android:textColor="#ff22b8ff" android:gravity="bottom|center" android:id="@id/btn_widget_card_verify_captcha_change" android:background="@null" android:paddingBottom="@dimen/login_edit_magin_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="换一个" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:orientation="vertical" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_activity_login_input_editview_margin_top" />
+    <View android:background="@drawable/soku_layout_bottom_cover" android:layout_width="fill_parent" android:layout_height="5.0px" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="@dimen/layout_vip_dialog_bottom_height">
+        <Button android:gravity="center" android:id="@id/btn_widget_card_verify_cancel" android:background="@drawable/btn_vip_dialog_cancel" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="取消" android:layout_weight="1.0" style="@style/vip_dialog_txt_cancel" />
+        <View android:background="#2c5e5e5e" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <View android:background="#ffffffff" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <Button android:gravity="center" android:id="@id/btn_widget_card_verify_sure" android:background="@drawable/btn_vip_dialog_ok" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="确定" android:layout_weight="1.0" style="@style/vip_dialog_txt_rebuy" />
+    </LinearLayout>
+</LinearLayout>

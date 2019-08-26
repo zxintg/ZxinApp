@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:gravity="center_vertical" android:id="@id/item_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <android.support.v7.widget.RecyclerView android:id="@id/item_sub_guide_video_list" android:layout_width="fill_parent" android:layout_height="132.0dip" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:background="#e1ffffff" android:layout_width="86.0dip" android:layout_height="132.0dip">
+            <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip">
+                <ImageView android:layout_gravity="center" android:background="@drawable/detail_card_comment_touxiang" android:layout_width="40.0dip" android:layout_height="40.0dip" />
+                <com.youku.hd.subscribe.ui.widget.RoundImageView android:layout_gravity="center" android:id="@id/item_sub_guide_user_avatar" android:layout_width="40.0dip" android:layout_height="40.0dip" />
+                <ImageView android:background="@drawable/sub_guide_head_mask" android:layout_width="42.0dip" android:layout_height="42.0dip" />
+            </FrameLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/item_sub_guide_user_btn_subscribe" android:background="@drawable/empty_view_btn_selector" android:layout_width="66.0dip" android:layout_height="25.0dip" android:layout_marginTop="16.0dip">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/item_sub_guide_user_sub_icon" android:background="@mipmap/button_detail_icon_rss" android:layout_width="12.0dip" android:layout_height="12.0dip" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/hd_look_unique_btn_text" android:layout_gravity="center_vertical" android:id="@id/item_sub_guide_user_sub_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="订阅" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <View android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="10.0dip" android:layout_marginTop="8.0dip" android:layout_below="@id/item_content" />
+</RelativeLayout>

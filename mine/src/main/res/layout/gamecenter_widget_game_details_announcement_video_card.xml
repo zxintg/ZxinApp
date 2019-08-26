@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youku.gamecenter.widgets.GameVideoCardView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="@dimen/detail_screenshot_images_gallery_width" android:layout_height="@dimen/detail_screenshot_images_gallery_height" android:layout_marginTop="@dimen/game_detail_game_margin_top_bottom" android:layout_marginBottom="@dimen/game_detail_game_margin_top_bottom">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/img_video_image" android:layout_width="@dimen/detail_screenshot_images_gallery_width" android:layout_height="@dimen/detail_screenshot_images_gallery_height" android:scaleType="centerCrop" />
+            <ImageView android:id="@id/img_video_play" android:layout_width="@dimen/gamecenter_details_play_icon_width" android:layout_height="@dimen/gamecenter_details_play_icon_height" android:src="@drawable/game_details_video_icon_play" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</com.youku.gamecenter.widgets.GameVideoCardView>

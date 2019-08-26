@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom" android:orientation="vertical" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/padding_left_right_5" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/dialog_option_item_delete" android:background="@drawable/dialog_single_selector" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_item_height" style="@style/dialog_option_item_lin_style">
+            <TextView android:textColor="@color/dialog_delete_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dialog_option_delete" android:drawableLeft="@drawable/upload_ic_delete" style="@style/dialog_option_item_text_style" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/dialog_option_item_cancel" android:background="@drawable/dialog_single_selector" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_cancel_btn_heiht" android:layout_marginTop="@dimen/dialog_padding_bw_9" style="@style/dialog_option_item_lin_style">
+            <TextView android:textSize="@dimen/text_size_16" android:textColor="@color/dialog_text_color" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/dialog_option_cancel" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

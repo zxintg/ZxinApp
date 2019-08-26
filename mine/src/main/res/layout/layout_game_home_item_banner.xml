@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingTop="@dimen/game_card_margin" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:background="#ffaaaaaa" android:layout_width="fill_parent" android:layout_height="@dimen/game_channel_banner_height" android:src="@drawable/game_default_icon" android:scaleType="center" />
+    <ImageView android:id="@id/game_card_banner_image" android:layout_width="fill_parent" android:layout_height="@dimen/game_channel_banner_height" android:scaleType="fitXY" />
+    <TextView android:textSize="@dimen/game_home_page_banner_mark_txt_size" android:textColor="#ffffffff" android:gravity="center" android:id="@id/game_index_banner_marker" android:visibility="gone" android:layout_width="@dimen/game_home_page_banner_mark_width" android:layout_height="@dimen/game_home_page_banner_mark_height" android:text="@string/game_str_game_present_name" />
+</FrameLayout>

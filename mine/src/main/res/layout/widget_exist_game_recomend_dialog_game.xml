@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center" android:layout_width="@dimen/widget_exist_dialog_width" android:layout_height="@dimen/widget_exist_dialog_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/title" android:background="#fffafafa" android:paddingLeft="@dimen/widget_exist_dialog_title_pl" android:layout_width="fill_parent" android:layout_height="@dimen/widget_exist_dialog_title_height">
+        <ImageView android:gravity="center|left" android:layout_width="@dimen/widget_exist_dialog_title_image_width" android:layout_height="@dimen/widget_exist_dialog_title_image_height" android:src="@drawable/game_exist_titlebar" />
+    </LinearLayout>
+    <ImageView android:id="@id/game_image" android:layout_width="fill_parent" android:layout_height="@dimen/widget_exist_dialog_layout_height" android:scaleType="fitXY" android:layout_below="@id/title" />
+    <View android:background="#19757575" android:layout_width="fill_parent" android:layout_height="2.0px" android:layout_alignTop="@id/game_image" />
+    <View android:id="@id/widget_exist_game_bottom_line_top" android:background="#3b757575" android:layout_width="fill_parent" android:layout_height="2.0px" android:layout_below="@id/game_image" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/widget_exist_game_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/widget_exist_game_bottom_height" android:layout_below="@id/widget_exist_game_bottom_line_top" android:layout_alignParentBottom="true">
+        <Button android:textSize="@dimen/widget_exist_game_button_textsize" android:textColor="#ff737474" android:id="@id/game_exist_dialog_cancel" android:background="@drawable/gamecenter_exist_dialog_cancel_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/game_str_cancel" android:layout_weight="1.0" />
+        <View android:background="#ffe6f5fa" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <View android:background="#ffffffff" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <Button android:textSize="@dimen/widget_exist_game_button_textsize" android:textColor="#ff0177ae" android:id="@id/game_exist_dialog_ok" android:background="@drawable/gamecenter_exist_dialog_ok_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/game_str_ok" android:singleLine="true" android:layout_weight="1.0" />
+    </LinearLayout>
+    <View android:background="#14787878" android:layout_width="fill_parent" android:layout_height="@dimen/game_existdialog_bottom_over_line_height" android:layout_alignTop="@id/widget_exist_game_bottom" />
+</RelativeLayout>

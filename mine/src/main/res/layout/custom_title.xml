@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center|left" android:orientation="vertical" android:id="@id/search_custom_title" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.miniplayer.AlwaysMarqueeTextView android:textSize="@dimen/search_result_textsize" android:textColor="#ff000000" android:ellipsize="marquee" android:layout_gravity="center_vertical" android:id="@id/custom_title" android:paddingLeft="@dimen/soku_item_marginbottom" android:focusable="true" android:focusableInTouchMode="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scrollHorizontally="true" android:singleLine="true" android:marqueeRepeatLimit="1" />
+</LinearLayout>

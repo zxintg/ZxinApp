@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/app_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.handmark.pulltorefresh.library.PullToRefreshGridView android:id="@id/channelrank_gridview" android:background="@color/app_background" android:paddingLeft="@dimen/gridview_pading_horizontal" android:paddingTop="@dimen/gridview_pading_top" android:paddingRight="@dimen/gridview_pading_horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:horizontalSpacing="@dimen/gridview_spacing" android:verticalSpacing="@dimen/gridview_spacing" android:numColumns="2" />
+</LinearLayout>

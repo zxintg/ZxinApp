@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.youku.widget.YoukuImageView android:id="@id/thumbnail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+        <com.youku.widget.YoukuImageView android:id="@id/mask" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="#66000000" />
+        <ImageView android:id="@id/btn_delete" android:background="@drawable/editor_btn_delete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <TextView android:textColor="#cdffffff" android:id="@id/state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="@style/history_item_txt_first" />
+        <TextView android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:layout_alignBottom="@id/mask" android:layout_centerHorizontal="true" style="@style/history_item_txt_second" />
+        <ImageView android:id="@id/format" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+        <LinearLayout android:orientation="vertical" android:id="@id/durationLayout" android:paddingTop="1.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <include android:layout_width="fill_parent" android:layout_height="1.0px" layout="@layout/waist_seal_line" />
+            <TextView android:textSize="@dimen/history_item_txt_second_textsize" android:gravity="center|left" android:id="@id/duration" android:background="@drawable/waist_seal" android:paddingLeft="@dimen/waist_seal_line_marginLeft" android:paddingRight="@dimen/waist_seal_line_marginLeft" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/myouku_video_yf_text_height" android:text="100:02" style="@style/waist_seal_title_style" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="@dimen/gridview_item_tv_height">
+        <com.youku.widget.TextViewEllipseEndFixed android:ellipsize="end" android:id="@id/title" android:paddingLeft="@dimen/myyouku_item_line_margin_left" android:paddingRight="@dimen/myyouku_item_line_margin_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:minLines="2" style="@style/homepage_item_title_first" />
+    </LinearLayout>
+    <ImageView android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="@dimen/shadow_height" />
+</LinearLayout>

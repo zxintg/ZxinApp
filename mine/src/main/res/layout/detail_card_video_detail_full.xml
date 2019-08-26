@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/detail_card_video_detail_title_bar_v5" />
+    <View android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <ListView android:gravity="center" android:id="@id/listview_002" android:background="#ffffffff" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="#00000000" android:cacheColorHint="#00000000" android:horizontalSpacing="@dimen/activity_myyouku_gridview_verticalspacing" android:verticalSpacing="@dimen/activity_myyouku_gridview_verticalspacing" android:divider="#00000000" android:dividerHeight="8.0dip" android:splitMotionEvents="false" android:windowEnableSplitTouch="false" />
+    <View android:background="#ffc9c9c9" android:layout_width="fill_parent" android:layout_height="2.0px" />
+</LinearLayout>

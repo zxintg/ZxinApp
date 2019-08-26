@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="#e62fb3ff" android:layout_width="fill_parent" android:layout_height="@dimen/pull_down_hint_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:paddingLeft="@dimen/home_personal_movie_20px" android:paddingRight="@dimen/home_personal_movie_10px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/loading_tishi" />
+    <TextView android:textSize="@dimen/home_card_item_text_size" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/pull_down_hint" />
+</LinearLayout>

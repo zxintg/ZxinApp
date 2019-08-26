@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/home_video_land_item_operation_corner_mark_text_size" android:gravity="center" android:layout_gravity="bottom|center|left" android:id="@id/channel_item_operation_corner_mark" android:visibility="gone" android:layout_width="@dimen/home_video_land_item_operation_corner_mark_width" android:layout_height="@dimen/home_video_land_item_operation_corner_mark_height" android:layout_marginLeft="@dimen/home_video_land_item_operation_corner_mark_margin_left" android:layout_marginBottom="@dimen/home_video_land_item_operation_corner_mark_margin_bottom_has_below" />
+    <TextView android:textSize="@dimen/home_video_land_item_membership_corner_mark_text_size" android:gravity="center" android:layout_gravity="center|right|top" android:id="@id/channel_item_membership_corner_mark" android:visibility="gone" android:layout_width="@dimen/home_video_land_item_membership_corner_mark_width" android:layout_height="@dimen/home_video_land_item_membership_corner_mark_height" android:layout_marginRight="@dimen/home_video_land_item_membership_corner_mark_margin_right" />
+</FrameLayout>

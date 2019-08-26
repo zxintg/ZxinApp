@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/game_listview_item_selector" android:layout_width="fill_parent" android:layout_height="@dimen/gamelist_item_height" android:layout_marginBottom="@dimen/game_card_margin">
+        <RelativeLayout android:id="@id/present_details_card_title" android:paddingLeft="@dimen/game_detail_card_content_left_margin" android:paddingTop="@dimen/detail_gameinfo_padding" android:paddingRight="@dimen/detail_gameinfo_padding" android:paddingBottom="@dimen/detail_gameinfo_padding" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <RelativeLayout android:gravity="center" android:id="@id/list_present_container" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/list_present_button" android:layout_alignParentLeft="true">
+                <ImageView android:id="@id/list_item_privilege" android:visibility="gone" android:layout_width="@dimen/present_privilege_size" android:layout_height="@dimen/present_privilege_size" android:layout_marginRight="@dimen/present_privilege_margin_right" android:scaleType="fitXY" android:layout_alignParentLeft="true" />
+                <TextView android:textSize="@dimen/list_item_title_text_size" android:textColor="#ff333333" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/list_presetn_title" android:layout_width="fill_parent" android:layout_height="@dimen/present_privilege_size" android:layout_marginRight="@dimen/game_name_margin_left" android:singleLine="true" android:layout_toRightOf="@id/list_item_privilege" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/present_progress_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/present_total_progress_margin" android:layout_below="@id/list_presetn_title" android:layout_alignParentLeft="true">
+                    <com.youku.gamecenter.widgets.ProgressView android:id="@id/rootview" android:background="#ffd6d6d6" android:layout_width="0.0dip" android:layout_height="@dimen/progress_layout_rootview_height" android:layout_marginRight="@dimen/game_name_margin_left" android:layout_weight="1.0">
+                        <View android:id="@id/progress" android:layout_width="0.0dip" android:layout_height="@dimen/listview_gamelist_item_progress_height" />
+                    </com.youku.gamecenter.widgets.ProgressView>
+                    <TextView android:textSize="@dimen/present_remainder_text_size" android:textColor="#ff00a2ff" android:id="@id/list_present_remainder" android:layout_width="@dimen/present_remainder_text_width" android:layout_height="wrap_content" android:layout_marginRight="@dimen/present_total_button_margin_left" android:text="@string/game_present_remainder" />
+                </LinearLayout>
+                <TextView android:textSize="@dimen/list_item_des_text_size" android:textColor="#ff999999" android:ellipsize="end" android:id="@id/list_present_content" android:layout_width="fill_parent" android:layout_height="@dimen/list_item_desc_height" android:layout_marginRight="@dimen/present_line_margin_top" android:singleLine="true" android:layout_below="@id/present_progress_container" android:layout_alignParentLeft="true" />
+            </RelativeLayout>
+            <Button android:textSize="@dimen/list_item_title_text_size" android:textColor="#ffffffff" android:gravity="center" android:id="@id/list_present_button" android:background="@drawable/game_action_bg_blue_selector" android:layout_width="@dimen/game_card_action_width" android:layout_height="@dimen/game_card_action_height" android:text="@string/game_present_button_get" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

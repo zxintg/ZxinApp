@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/function_top_layout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <RelativeLayout android:id="@id/top_left_layout" android:layout_width="0.0dip" android:layout_height="@dimen/detail_function_height" android:layout_weight="1.0">
+            <RelativeLayout android:id="@id/image_top_left_layout" android:layout_width="@dimen/detail_function_imagelayout_width" android:layout_height="fill_parent" android:layout_alignParentLeft="true">
+                <FrameLayout android:layout_width="@dimen/detail_function_image_width" android:layout_height="@dimen/detail_function_image_width" android:layout_centerInParent="true">
+                    <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/image_top_left" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+                </FrameLayout>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="@dimen/detail_function_title_width" android:layout_height="wrap_content" android:layout_toRightOf="@id/image_top_left_layout" android:layout_centerVertical="true">
+                <TextView android:textSize="@dimen/detail_function_big_title_size" android:textColor="#ff666666" android:ellipsize="end" android:gravity="bottom|center|left" android:id="@id/tv_top_left_big_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textSize="@dimen/detail_function_small_title_size" android:textColor="#ff999999" android:ellipsize="end" android:gravity="center|left|top" android:id="@id/tv_top_left_small_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:singleLine="true" android:layout_below="@id/tv_top_left_big_title" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/top_right_layout" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="@dimen/detail_function_height" android:layout_weight="1.0">
+            <RelativeLayout android:id="@id/image_top_right_layout" android:layout_width="@dimen/detail_function_imagelayout_width" android:layout_height="fill_parent" android:layout_alignParentLeft="true">
+                <FrameLayout android:layout_width="@dimen/detail_function_image_width" android:layout_height="@dimen/detail_function_image_width" android:layout_centerInParent="true">
+                    <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/image_top_right" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+                </FrameLayout>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="@dimen/detail_function_title_width" android:layout_height="wrap_content" android:layout_toRightOf="@id/image_top_right_layout" android:layout_centerVertical="true">
+                <TextView android:textSize="@dimen/detail_function_big_title_size" android:textColor="#ff666666" android:ellipsize="end" android:gravity="bottom|center|left" android:id="@id/tv_top_right_big_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textSize="@dimen/detail_function_small_title_size" android:textColor="#ff999999" android:ellipsize="end" android:gravity="center|left|top" android:id="@id/tv_top_right_small_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:singleLine="true" android:layout_below="@id/tv_top_right_big_title" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/function_bottom_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <RelativeLayout android:id="@id/bottom_left_layout" android:layout_width="0.0dip" android:layout_height="@dimen/detail_function_height" android:layout_weight="1.0">
+            <RelativeLayout android:id="@id/image_bottom_left_layout" android:layout_width="@dimen/detail_function_imagelayout_width" android:layout_height="fill_parent">
+                <FrameLayout android:layout_width="@dimen/detail_function_image_width" android:layout_height="@dimen/detail_function_image_width" android:layout_centerInParent="true">
+                    <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/image_bottom_left" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+                </FrameLayout>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="@dimen/detail_function_title_width" android:layout_height="wrap_content" android:layout_toRightOf="@id/image_bottom_left_layout" android:layout_centerVertical="true">
+                <TextView android:textSize="@dimen/detail_function_big_title_size" android:textColor="#ff666666" android:ellipsize="end" android:gravity="bottom|center|left" android:id="@id/tv_bottom_left_big_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textSize="@dimen/detail_function_small_title_size" android:textColor="#ff999999" android:ellipsize="end" android:gravity="center|left|top" android:id="@id/tv_bottom_left_small_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:singleLine="true" android:layout_below="@id/tv_bottom_left_big_title" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/bottom_right_layout" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="@dimen/detail_function_height" android:layout_weight="1.0">
+            <RelativeLayout android:id="@id/image_bottom_right_layout" android:layout_width="@dimen/detail_function_imagelayout_width" android:layout_height="fill_parent">
+                <FrameLayout android:layout_width="@dimen/detail_function_image_width" android:layout_height="@dimen/detail_function_image_width" android:layout_centerInParent="true">
+                    <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/image_bottom_right" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+                </FrameLayout>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="@dimen/detail_function_title_width" android:layout_height="wrap_content" android:layout_toRightOf="@id/image_bottom_right_layout" android:layout_centerVertical="true">
+                <TextView android:textSize="@dimen/detail_function_big_title_size" android:textColor="#ff666666" android:ellipsize="end" android:gravity="bottom|center|left" android:id="@id/tv_bottom_right_big_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textSize="@dimen/detail_function_small_title_size" android:textColor="#ff999999" android:ellipsize="end" android:gravity="center|left|top" android:id="@id/tv_bottom_right_small_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:singleLine="true" android:layout_below="@id/tv_bottom_right_big_title" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

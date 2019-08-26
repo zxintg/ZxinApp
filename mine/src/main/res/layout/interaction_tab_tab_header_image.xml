@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/tab_tab_header_relative_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/tab_tab_header_img" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <View android:background="@drawable/home_card_title_bg" android:layout_width="fill_parent" android:layout_height="@dimen/home_gallry_item_title_bg_height" android:layout_alignParentBottom="true" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:layout_alignParentBottom="true">
+        <include android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/interaction_tab_slide_title_layout" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/tab_tab_triangle_wrapper" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.youku.interactiontab.widget.TriangleView android:id="@id/tab_tab_triangle_view" android:layout_width="@dimen/triangle_view_height" android:layout_height="@dimen/triangle_view_height" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        <com.youku.interactiontab.widget.RobbinTextView android:id="@id/tab_tab_triangle_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/triangle_text" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/home_video_land_item_membership_corner_mark_text_size" android:gravity="center" android:id="@id/tab_tab_membership_corner" android:layout_width="@dimen/home_video_land_item_membership_corner_mark_width" android:layout_height="@dimen/home_video_land_item_membership_corner_mark_height" android:layout_marginRight="@dimen/home_video_land_item_membership_corner_mark_margin_right" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+</RelativeLayout>

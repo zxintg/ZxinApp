@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_horizontal" android:id="@id/my_activities_group" android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/search_hotgame_scrollView" android:background="@android:color/transparent" android:paddingBottom="@dimen/game_card_margin" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" android:scrollbarFadeDuration="500">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/ll_my_activities" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include android:id="@id/layout_prize_record" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_game_my_activities_prize_record" />
+                <include android:id="@id/layout_contact" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_game_my_activities_contact" />
+            </LinearLayout>
+            <include android:id="@id/layout_no_prize" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/ll_my_activities" layout="@layout/layout_game_my_activities_no_prize_record" />
+            <include android:id="@id/layout_to_login" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/ll_my_activities" layout="@layout/layout_game_my_activities_to_login" />
+        </RelativeLayout>
+    </ScrollView>
+    <com.youku.gamecenter.widgets.NoResultView android:id="@id/id_no_result_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

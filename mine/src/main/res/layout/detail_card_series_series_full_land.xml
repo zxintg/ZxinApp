@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_series_series_full_title_height_v5">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/back_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/detail_card_series_cache_setting_margin_left_v5" android:layout_toLeftOf="@id/view1_cache" android:layout_alignParentLeft="true">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/more" android:background="@null" android:layout_width="@dimen/detail_card_series_full_more_width_v5" android:layout_height="@dimen/detail_card_series_full_more_height_v5" android:src="@drawable/fanhui" />
+            <TextView android:textSize="@dimen/detail_card_title_size_v5" android:textColor="#ff444444" android:gravity="center_vertical" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_series_cache_setting_margin_left_v5" android:text="选集" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/layout_title" android:paddingLeft="@dimen/detail_card_video_detail_title_marginleft" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/detail_card_subtitle_size" android:textColor="#ffb9b9b9" android:gravity="center_vertical" android:id="@id/subtitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_subtitle_marginTop" android:maxWidth="1000.0dip" android:text="更新到第21集" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:id="@id/view1_cache" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+            <ImageView android:background="@drawable/detail_card_download" android:layout_width="@dimen/detail_card_series_cache_icon_width_v5" android:layout_height="@dimen/detail_card_series_cache_icon_width_v5" android:layout_marginRight="@dimen/detail_card_series_cache_icon_marginRight_v5" />
+            <TextView android:textSize="@dimen/detail_card_title_size_v5" android:textColor="#ff666666" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/detail_card_series_cache_text_marginRight_v5" android:text="@string/cache" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <RelativeLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/detail_card_content_text_size" android:textColor="#ff009cff" android:gravity="center_vertical" android:id="@id/zhengpian" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/detail_card_series_title_bar_height" android:layout_marginLeft="@dimen/detail_card_video_detail_title_marginleft" android:layout_marginRight="@dimen/detail_card_series_cache_text_marginRight" android:text="正片" />
+        <GridView android:id="@id/detail_gv_series" android:background="@android:color/transparent" android:scrollbars="none" android:fadingEdgeLength="@dimen/detail_boder" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ListView android:id="@id/detail_gv_series_list" android:background="@android:color/transparent" android:scrollbars="none" android:fadingEdgeLength="@dimen/detail_boder" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="#fff2f2f2" android:dividerHeight="1.0px" />
+        <include android:id="@id/layout_no_result" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" layout="@layout/detail_card_no_result" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/loadingview" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_loading_height" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+            <ProgressBar android:layout_width="@dimen/detail_card_loading_width" android:layout_height="@dimen/detail_card_loading_width" android:indeterminateDrawable="@drawable/series_loading_progressbar" />
+        </LinearLayout>
+        <ProgressBar android:layout_gravity="center" android:id="@id/next_loading" android:visibility="gone" android:layout_width="@dimen/detail_card_loading_width" android:layout_height="@dimen/detail_card_loading_width" android:indeterminateDrawable="@drawable/series_loading_progressbar" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="#ffc9c9c9" android:layout_width="fill_parent" android:layout_height="2.0px" />
+</LinearLayout>

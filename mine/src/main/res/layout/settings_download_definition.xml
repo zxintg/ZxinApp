@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/play0" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:paddingRight="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+        <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/p1080_definition" android:layout_centerVertical="true" />
+        <RadioButton android:id="@id/cache_1080p" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/mycenter_setting_radiobtn_selector" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:id="@id/play0_line" android:background="@color/mycenter_setting_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <RelativeLayout android:orientation="horizontal" android:id="@id/play1" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:paddingRight="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+        <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/super_definition" android:layout_centerVertical="true" />
+        <RadioButton android:id="@id/cache_superquality" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/mycenter_setting_radiobtn_selector" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="@color/mycenter_setting_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <RelativeLayout android:orientation="horizontal" android:id="@id/play2" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:paddingRight="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+        <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/high_definition" android:layout_centerVertical="true" />
+        <RadioButton android:id="@id/cache_highquality" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/mycenter_setting_radiobtn_selector" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="@color/mycenter_setting_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <RelativeLayout android:orientation="horizontal" android:id="@id/play3" android:background="@drawable/other_person_gridview_item_selector" android:paddingLeft="@dimen/settings_card_padding" android:paddingRight="@dimen/settings_card_padding" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_banner_height">
+        <TextView android:textAppearance="@style/settings_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/standard_definition" android:layout_centerVertical="true" />
+        <RadioButton android:id="@id/cache_normalquality" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/mycenter_setting_radiobtn_selector" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="#ffc9c9c9" android:layout_width="fill_parent" android:layout_height="2.0px" />
+</LinearLayout>

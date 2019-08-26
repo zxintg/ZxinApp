@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/vg_search_last_header" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/vg_search_last_header_container" android:paddingTop="@dimen/search_header_padding_bottom" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:background="#fff9f9f9" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/vg_search_last_header_clear_history" android:background="@drawable/selector_bg_search_click" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/search_widget_container_height">
+            <ImageView android:layout_width="@dimen/search_item_suggestion_icon_width" android:layout_height="@dimen/search_item_suggestion_icon_width" android:src="@drawable/ic_search_header_delete" />
+            <TextView android:textSize="@dimen/search_item_suggestion_go_textsize" android:textColor="#ff666666" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="清空历史" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

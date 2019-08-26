@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/video_detail" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_video_detail_title_marginleft_land" android:layout_marginRight="@dimen/detail_card_video_detail_title_marginleft_land">
+        <LinearLayout android:id="@id/m" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_video_detail_content_text_marginTop_land">
+            <LinearLayout android:id="@id/view1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/detail_card_content_text_size_land" android:textColor="#ff555555" android:ellipsize="end" android:id="@id/view1_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="类型: " />
+                <TextView android:textSize="@dimen/detail_card_content_text_size_land" android:textColor="#ff777777" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/view1_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxWidth="@dimen/detail_card_video_detail_leixing_title_maxWidth" android:text="剧情" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/view2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/detail_card_content_text_size_land" android:textColor="#ff555555" android:ellipsize="end" android:id="@id/view2_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="地区: " />
+                <TextView android:textSize="@dimen/detail_card_content_text_size_land" android:textColor="#ff777777" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/view2_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxWidth="@dimen/detail_card_video_detail_leixing_title_maxWidth" android:text="中国" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@id/view3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_video_detail_content_text_marginTop_land">
+            <TextView android:textSize="@dimen/detail_card_content_text_size_land" android:textColor="#ff555555" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/view3_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="主演: " android:singleLine="true" />
+            <TextView android:textSize="@dimen/detail_card_content_text_size_land" android:textColor="#ff777777" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/view3_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="演员名称" android:maxLines="2" android:lineSpacingMultiplier="1.2" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/detail_card_content_text_size_land" android:textColor="#ff777777" android:gravity="center_vertical" android:id="@id/desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_video_detail_content_text_marginTop_land" android:text="简介" android:lineSpacingMultiplier="1.2" />
+        <View android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="@dimen/detail_card_video_detail_content_text_marginTop_land" />
+    </LinearLayout>
+    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/buttons" android:paddingTop="@dimen/detail_card_video_detail_land_title_margintop" android:paddingBottom="@dimen/detail_card_video_detail_land_title_margintop" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_weight="1.0" />
+            <View android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_weight="1.0" />
+            <LinearLayout android:id="@id/favorite" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <View android:background="#ffe5e5e5" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+                <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/favorite_icon" android:background="@drawable/detail_interaction_bar_favorite_vf" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="@dimen/detail_card_video_detail_land_favorite_marginleft" />
+                    <TextView android:textSize="@dimen/detail_card_video_detail_land_favorite_size_land" android:textColor="#ff888888" android:gravity="center_vertical" android:layout_width="@dimen/detail_card_video_detail_land_favorite_width" android:layout_height="fill_parent" android:text="@string/favorite" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@id/praise" android:background="@drawable/detail_interaction_bar_praise_vf" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="@dimen/detail_card_video_detail_title_marginleft_land" />
+        <ImageView android:id="@id/share_card" android:background="@drawable/detail_interaction_bar_share_selector_vf" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="@dimen/detail_card_video_detail_title_marginleft_land" android:layout_toRightOf="@id/praise" />
+        <ImageView android:id="@id/download" android:background="@drawable/detail_card_download" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="@dimen/detail_card_video_detail_title_marginleft_land" android:layout_toRightOf="@id/share_card" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/series_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_card_video_detail_title_marginleft_land" android:layout_marginRight="@dimen/detail_card_video_detail_title_marginleft_land">
+        <View android:id="@id/line2" android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <TextView android:textSize="@dimen/detail_card_video_detail_plot_title_size_land" android:textColor="#ff444444" android:gravity="center_vertical" android:id="@id/title2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_card_video_detail_content_text_marginTop_land" android:text="剧情" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/detail_card_content_text_size_land" android:textColor="#ff777777" android:ellipsize="end" android:id="@id/zanwu" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/detail_card_video_detail_desc_margintop_land" android:layout_marginBottom="@dimen/detail_card_video_detail_desc_marginbottom_land" android:text="暂无" android:lineSpacingMultiplier="1.2" />
+            <com.youku.widget.SteadyListView android:gravity="center" android:id="@id/listview_002" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/detail_card_video_detail_content_text_marginTop_land" android:listSelector="#00000000" android:cacheColorHint="#00000000" android:horizontalSpacing="@dimen/activity_myyouku_gridview_verticalspacing" android:verticalSpacing="@dimen/activity_myyouku_gridview_verticalspacing" android:divider="#00000000" android:dividerHeight="8.0dip" android:splitMotionEvents="false" android:windowEnableSplitTouch="false" />
+            <include android:id="@id/layout_no_result" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" layout="@layout/detail_card_no_result" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/loadingview3" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/detail_card_loading_height">
+                <ProgressBar android:layout_width="@dimen/detail_card_loading_width" android:layout_height="@dimen/detail_card_loading_width" android:indeterminateDrawable="@drawable/series_loading_progressbar" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/colorWhite" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/nest_subviews" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.youku.livesdk.nest.NestBookView android:id="@id/nest_bookview" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.youku.livesdk.nest.NestContentView android:id="@id/nest_contentview" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.youku.livesdk.nest.NestMenuView android:id="@id/nest_menuview" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

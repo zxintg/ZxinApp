@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/app_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <RelativeLayout android:orientation="horizontal" android:paddingLeft="@dimen/dialog_activity_regist_item_top_margin_right_spacing" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_activity_login_page_top_height">
+            <TextView android:textSize="@dimen/dialog_activity_login_text_size" android:textColor="@color/black" android:gravity="center|left" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/login" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/login_top_right_linearlayout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+                <LinearLayout android:orientation="horizontal" android:id="@id/sns_login_linearlayout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/dialog_activity_login_top_imageview_margin_right" android:layout_alignParentRight="true">
+                    <ImageView android:layout_gravity="center|left" android:id="@id/sns_qq_login_view" android:layout_width="@dimen/dialog_activity_login_top_imageview_width_height" android:layout_height="@dimen/dialog_activity_login_top_imageview_width_height" android:src="@drawable/login_by_sign_qq" android:scaleType="fitCenter" />
+                    <ImageView android:layout_gravity="center|left" android:id="@id/sns_weixin_login_view" android:layout_width="@dimen/dialog_activity_login_top_imageview_width_height" android:layout_height="@dimen/dialog_activity_login_top_imageview_width_height" android:src="@drawable/login_by_sign_wechat" android:scaleType="fitCenter" />
+                    <ImageView android:layout_gravity="center|left" android:id="@id/sns_sina_login_view" android:visibility="gone" android:layout_width="@dimen/dialog_activity_login_top_imageview_width_height" android:layout_height="@dimen/dialog_activity_login_top_imageview_width_height" android:src="@drawable/login_by_sign_sina" android:scaleType="fitCenter" />
+                    <ImageView android:layout_gravity="center|left" android:id="@id/sns_alipay_login_view" android:layout_width="@dimen/dialog_activity_login_top_imageview_width_height" android:layout_height="@dimen/dialog_activity_login_top_imageview_width_height" android:src="@drawable/login_by_sign_alipay" android:scaleType="fitCenter" />
+                    <ImageView android:layout_gravity="center|left" android:id="@id/sns_taobao_login_view" android:layout_width="@dimen/dialog_activity_login_top_imageview_width_height" android:layout_height="@dimen/dialog_activity_login_top_imageview_width_height" android:src="@drawable/login_by_sign_taobao" android:scaleType="fitCenter" />
+                </LinearLayout>
+                <ImageView android:layout_gravity="center" android:background="#ffcfcfcf" android:layout_width="1.0px" android:layout_height="@dimen/myyouku_card_title_img_height" />
+                <ImageButton android:layout_gravity="center|right" android:id="@id/login_more" android:background="@android:color/transparent" android:layout_width="@dimen/myyouku_card_title_img_width" android:layout_height="fill_parent" android:src="@drawable/btn_more2" />
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView android:background="@drawable/tab_indicator_divider" android:layout_width="fill_parent" android:layout_height="@dimen/myyouku_setting_divider" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_activity_login_input_editview_margin_top">
+            <TextView android:textAppearance="@style/Font3_red_ff5a5a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" " android:layout_alignParentLeft="true" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:paddingLeft="@dimen/dialog_activity_login_input_editview_margin_left_right" android:paddingRight="@dimen/dialog_activity_login_input_editview_margin_left_right" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_activity_login_input_layout_height">
+                <ImageView android:id="@id/login_name_img" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/register_icon_fork" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <EditText android:textSize="@dimen/dialog_activity_login_input_editview_text_size" android:textColor="@color/text_color_gray_7" android:textColorHint="@color/dialog_login_activity_input_text_color" android:gravity="bottom" android:id="@id/login_name" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/dialog_activity_login_input_editview_paddingleft" android:layout_marginBottom="@dimen/login_edit_magin_bottom" android:hint="@string/login_user_name_hint" android:singleLine="true" android:layout_alignParentBottom="true" android:imeOptions="actionNext" />
+                    <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="7.0px" android:layout_alignParentBottom="true">
+                        <ImageView android:id="@id/email_left_line" android:background="#ff1b96d6" android:layout_width="1.0px" android:layout_height="6.0px" android:layout_alignParentLeft="true" />
+                        <ImageView android:id="@id/email_right_line" android:background="#ff1b96d6" android:layout_width="1.0px" android:layout_height="6.0px" android:layout_alignParentRight="true" />
+                        <ImageView android:id="@id/email_mid_line" android:background="#ff1b96d6" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_activity_login_input_editview_margin_top">
+                <TextView android:textAppearance="@style/Font3_red_ff5a5a" android:id="@id/login_tip_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/login_edit_magin_left" android:layout_marginTop="@dimen/login_tips_margin_top_register" android:text=" " android:layout_alignParentLeft="true" />
+            </LinearLayout>
+            <RelativeLayout android:paddingLeft="@dimen/dialog_activity_login_input_editview_margin_left_right" android:paddingRight="@dimen/dialog_activity_login_input_editview_margin_left_right" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_activity_login_input_layout_height">
+                <ImageView android:id="@id/login_pwd_img" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/register_icon_fork" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <EditText android:textSize="@dimen/dialog_activity_login_input_editview_text_size" android:textColor="@color/text_color_gray_7" android:textColorHint="@color/dialog_login_activity_input_text_color" android:gravity="bottom" android:id="@id/login_pwd" android:background="@null" android:paddingRight="@dimen/login_password_padding_right" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/dialog_activity_login_input_editview_paddingleft" android:layout_marginBottom="@dimen/login_edit_magin_bottom" android:hint="@string/login_password_hint" android:singleLine="true" android:layout_alignParentBottom="true" android:inputType="textPassword" android:imeOptions="actionDone" />
+                    <RelativeLayout android:orientation="vertical" android:id="@id/layout_password_edittext_view" android:layout_width="fill_parent" android:layout_height="7.0px" android:layout_alignParentBottom="true">
+                        <ImageView android:id="@id/pass_left_line" android:background="#ff1b96d6" android:layout_width="1.0px" android:layout_height="6.0px" android:layout_alignParentLeft="true" />
+                        <ImageView android:id="@id/pass_right_line" android:background="#ff1b96d6" android:layout_width="1.0px" android:layout_height="6.0px" android:layout_alignParentRight="true" />
+                        <ImageView android:id="@id/pass_mid_line" android:background="#ff1b96d6" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+                    </RelativeLayout>
+                    <ImageView android:id="@id/user_forget_password_line" android:background="#ff1b96d6" android:layout_width="1.0px" android:layout_height="6.0px" android:layout_marginRight="@dimen/user_forget_password_view_margin_right" android:layout_toLeftOf="@id/user_forget_password_textview" android:layout_alignBottom="@id/layout_password_edittext_view" />
+                    <TextView android:textSize="@dimen/dialog_activity_login_input_forget_pswd_text_size" android:textColor="#ff22b8ff" android:id="@id/user_forget_password_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/user_forget_password_view_margin_right" android:layout_marginBottom="@dimen/login_edit_magin_bottom" android:text="@string/tips_forget_password" android:layout_alignBottom="@id/login_pwd" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/Font3_red_ff5a5a" android:id="@id/login_tip_psw" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/login_edit_magin_left" android:layout_marginTop="@dimen/login_tips_margin_top_register" android:text=" " android:layout_alignParentLeft="true" />
+            </LinearLayout>
+            <RelativeLayout android:gravity="bottom" android:layout_gravity="bottom" android:paddingLeft="@dimen/dialog_activity_login_layout_regist_item_spacing" android:paddingRight="@dimen/dialog_activity_login_layout_regist_item_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/login_filler_img" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/register_icon_fork" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+                <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/dialog_activity_login_layout_regist_item_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                    <Button android:gravity="center" android:id="@id/user_login" android:background="@drawable/dialog_activity_login_button_click" android:layout_width="fill_parent" android:layout_height="@dimen/login_login_btn_height" android:text="@string/login" style="@style/Font6_white" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

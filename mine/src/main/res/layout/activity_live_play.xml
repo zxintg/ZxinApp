@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/liveplay_RootFrameLayout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="1.0">
+        <include layout="@layout/content_live_videoview" />
+        <com.youku.livesdk.view.MenuView android:id="@id/streamsMenuView" android:background="@color/colorLiveMenuViewBackground" android:visibility="gone" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="@dimen/dimenLiveMenuViewHeight" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.youku.livesdk.nest.NestView android:id="@id/nest_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <LinearLayout android:orientation="vertical" android:id="@id/Linearlayout_nointernet" android:background="@color/colorNoInternetBackground" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center_horizontal" android:id="@id/imageView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="100.0dip" android:src="@drawable/search_icon_no_results" />
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_gravity="center_horizontal" android:id="@id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/livesdk_connect_failed" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/Linearlayout_noloaded" android:background="@color/colorNoInternetBackground" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

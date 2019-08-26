@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/community_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@id/top_banner_info_layout" android:layout_width="fill_parent" android:layout_height="@dimen/top_banner_info_layout_height">
+        <ImageView android:id="@id/banner_bg_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        <View android:id="@id/banner_bg_image_mask" android:background="#b0444444" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="vertical" android:id="@id/banner_info_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="horizontal" android:id="@id/banner_up_layout" android:layout_width="fill_parent" android:layout_height="@dimen/top_banner_info_layout_height" android:layout_marginTop="@dimen/activity_padding_normal" android:layout_alignParentLeft="true">
+                <ImageView android:layout_gravity="top" android:id="@id/banner_small_imge" android:layout_width="@dimen/topics_banncer_small_image_height" android:layout_height="@dimen/topics_banncer_small_image_height" android:layout_marginLeft="@dimen/topic_height_42dp" android:scaleType="centerCrop" />
+                <RelativeLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="@dimen/topics_banncer_small_image_height" android:layout_marginLeft="@dimen/activity_padding_normal">
+                    <TextView android:textSize="@dimen/usercenter_list_item_firs_title_size" android:textStyle="bold" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/topic_banner_custom_title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:maxLength="10" android:layout_alignParentTop="true" />
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/activity_padding_normal" android:layout_alignParentBottom="true">
+                        <LinearLayout android:gravity="left" android:orientation="horizontal" android:id="@id/vedio_count_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <TextView android:textSize="@dimen/usercenter_list_item_mask_textsize" android:textColor="@color/banner_info_text_color" android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/vedio_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                            <TextView android:textSize="@dimen/usercenter_list_item_mask_textsize" android:textColor="@color/banner_info_text_color" android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/vedio_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="视频" android:singleLine="true" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="left" android:orientation="horizontal" android:id="@id/join_count_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_padding_bigger">
+                            <TextView android:textSize="@dimen/usercenter_list_item_mask_textsize" android:textColor="@color/banner_info_text_color" android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/join_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                            <TextView android:textSize="@dimen/usercenter_list_item_mask_textsize" android:textColor="@color/banner_info_text_color" android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/join_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="参与的人" android:singleLine="true" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="center_horizontal" android:id="@id/msg_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/topic_compere_avatar_height" android:layout_marginRight="@dimen/topic_compere_avatar_height" android:layout_below="@id/banner_up_layout">
+                <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/msg_content_layout" android:background="@drawable/topic_msg_layout_bg" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="center_vertical" android:id="@id/msg_icon" android:layout_width="@dimen/topic_info_msg_icon_height" android:layout_height="@dimen/topic_info_msg_icon_height" android:layout_marginLeft="@dimen/top_banner_msg_layout_margin" android:src="@drawable/ic_notice" />
+                    <TextView android:textSize="@dimen/topics_title_textsize" android:textColor="@color/white" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/community_msg_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_padding_normal" android:layout_marginTop="@dimen/activity_padding_half" android:layout_marginRight="@dimen/top_banner_msg_layout_margin" android:layout_marginBottom="@dimen/activity_padding_half" android:text="" android:singleLine="true" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <com.youku.community.view.SwipeRefreshLayoutAllowHorizonalMove android:id="@id/community_refesh_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.youku.community.view.TopicsScrollView android:id="@id/topics_scrollview" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <android.support.v4.view.ViewPager android:layout_gravity="center" android:id="@id/tags_main_viewpager" android:persistentDrawingCache="animation" android:layout_width="fill_parent" android:layout_height="fill_parent" android:flipInterval="30" />
+                <com.youku.community.view.DetailScrollView android:id="@id/container_scrollview" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <include android:id="@id/community_header" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/comunity_header_layout" />
+                </com.youku.community.view.DetailScrollView>
+            </RelativeLayout>
+        </com.youku.community.view.TopicsScrollView>
+    </com.youku.community.view.SwipeRefreshLayoutAllowHorizonalMove>
+    <include android:id="@id/page_load_fail_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/community_custom_title" layout="@layout/page_load_fail_layout" />
+    <include android:id="@id/topic_not_exist_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/community_custom_title" layout="@layout/topic_not_exist_layout" />
+    <RelativeLayout android:id="@id/community_custom_title" android:layout_width="fill_parent" android:layout_height="@dimen/abc_action_bar_default_height">
+        <View android:id="@id/community_actionbar_bg" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:id="@id/back_layout" android:layout_width="@dimen/abc_action_bar_default_height" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/topic_msg_text_margin_left" android:layout_centerVertical="true">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/community__back_img" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/usercenter_list_item_firs_title_size" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@id/community_custom_title_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/topic_name_text_margin_left" android:layout_marginRight="@dimen/topic_name_text_margin_left" android:text="" android:singleLine="true" android:maxLength="10" android:layout_centerInParent="true" />
+        <View android:id="@id/community_actionbar_divider" android:background="#ffebebeb" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+        <RelativeLayout android:id="@id/share_topic_layout" android:layout_width="@dimen/abc_action_bar_default_height" android:layout_height="wrap_content" android:layout_marginRight="@dimen/topic_share_layout_margin_right" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <TextView android:textSize="@dimen/topic_share_text_size" android:textColor="@drawable/topic_share_btn_selector" android:id="@id/topic_share_btn_text_blue" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/topic_share_text" android:singleLine="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/float_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/topic_upload_btn_margin_right" android:layout_marginBottom="@dimen/topic_upload_btn_margin_bottom" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <RelativeLayout android:layout_gravity="center_vertical" android:id="@id/upload_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/upload_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/community_ic_upload_selector" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_gravity="center_vertical" android:id="@id/chat_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/topic_upload_btn_margin_left">
+            <ImageView android:id="@id/chat_image" android:background="@drawable/community_chat_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

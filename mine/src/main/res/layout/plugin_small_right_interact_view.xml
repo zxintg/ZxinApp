@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/plugin_small_right_interact_layout" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/interact_title_image_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+        <TextView android:ellipsize="end" android:id="@id/interact_title_image_txt" android:background="@drawable/right_interact_small_title_image_layout_bg" android:paddingLeft="@dimen/small_interact_title_image_txt_paddingleft" android:paddingRight="@dimen/small_interact_title_image_txt_paddingleft" android:layout_width="wrap_content" android:layout_height="@dimen/plugin_small_right_interact_layout_height" android:layout_marginRight="@dimen/small_interact_title_image_layout_margin" android:singleLine="true" android:maxLength="18" android:layout_alignParentLeft="true" style="@style/small_interact_title_image_txt" />
+        <RelativeLayout android:layout_gravity="center|right" android:id="@id/interact_image_layout" android:layout_width="@dimen/small_interact_title_image_img_width" android:layout_height="@dimen/small_interact_title_image_img_width" android:layout_marginRight="@dimen/small_interact_image_layout_marginright">
+            <com.youku.widget.YoukuRoundImageView android:id="@id/interact_image_img" android:layout_width="@dimen/small_interact_title_image_img_width" android:layout_height="@dimen/small_interact_title_image_img_width" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/interact_image_img_default" android:layout_width="@dimen/interact_title_image_img_width" android:layout_height="@dimen/interact_title_image_img_width" android:src="@drawable/app_plugin_small_icon_default" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

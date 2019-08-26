@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/actionbar_menu_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/view_item" android:background="@drawable/actionbar_item_bg" android:padding="@dimen/homepage_item_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/view_item_img" android:paddingTop="1.0dip" android:paddingBottom="1.0dip" android:layout_width="@dimen/actionbar_ico_height" android:layout_height="@dimen/actionbar_ico_height" android:layout_marginRight="@dimen/homepage_item_spacing" android:scaleType="center" />
+        <TextView android:textSize="@dimen/text_size_d" android:textColor="#ff4e4e4e" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/view_item_title" android:paddingTop="1.0dip" android:paddingBottom="1.0dip" android:layout_width="wrap_content" android:layout_height="@dimen/actionbar_ico_height" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/view_not_login" android:background="@color/actionbar_menu_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_gravity="left" android:orientation="horizontal" android:id="@id/view_usercenter_text" android:padding="@dimen/homepage_item_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0px">
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="@dimen/actionbar_img_height" android:layout_height="@dimen/actionbar_img_height" android:layout_marginRight="8.0px" android:layout_marginBottom="8.0px" android:src="@drawable/avatar_default" />
+                <ImageView android:layout_gravity="bottom|center|right" android:layout_width="@dimen/actionbar_vip_img_height" android:layout_height="@dimen/actionbar_vip_img_height" android:src="@drawable/vip_no" />
+            </FrameLayout>
+            <TextView android:textSize="@dimen/text_size_d" android:textColor="#ff4e4e4e" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="优酷用户" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center|right" android:id="@id/view_login_btn" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:layout_width="1.0px" android:layout_height="@dimen/actionbar_img_height_half" android:layout_marginRight="@dimen/homepage_item_spacing" android:src="#ffcfcfcf" />
+            <TextView android:textSize="@dimen/text_size_d" android:textColor="#ff4e4e4e" android:paddingLeft="@dimen/homepage_item_spacing" android:paddingRight="@dimen/homepage_item_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="登录" android:layout_alignParentRight="true" />
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/view_is_login" android:background="@color/actionbar_menu_bg" android:padding="@dimen/homepage_item_spacing" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0px">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/user_avast" android:layout_width="@dimen/actionbar_img_height" android:layout_height="@dimen/actionbar_img_height" android:layout_marginRight="8.0px" android:layout_marginBottom="8.0px" android:src="@drawable/avatar_default" />
+            <ImageView android:layout_gravity="bottom|center|right" android:id="@id/is_vip" android:layout_width="@dimen/actionbar_vip_img_height" android:layout_height="@dimen/actionbar_vip_img_height" android:src="@drawable/more_averageuser_icon" />
+        </FrameLayout>
+        <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/text_size_d" android:textColor="#ff4e4e4e" android:id="@id/username" android:paddingLeft="@dimen/homepage_item_text_margin_left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="优酷用户" android:singleLine="true" />
+            <TextView android:textSize="@dimen/text_size_b" android:textColor="#ff0bb103" android:id="@id/rank" android:paddingLeft="@dimen/homepage_item_text_margin_left" android:paddingRight="@dimen/homepage_item_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_below="@id/username" />
+            <ProgressBar android:id="@id/percent" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_marginTop="5.0dip" android:max="100" android:progress="0" android:progressDrawable="@drawable/actionbar_process" android:layout_toRightOf="@id/rank" android:layout_below="@id/username" style="?android:attr/progressBarStyleHorizontal" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

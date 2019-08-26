@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/llLeft" android:layout_width="fill_parent" android:layout_height="@dimen/row_table_table_height">
+        <RelativeLayout android:orientation="vertical" android:id="@id/layoutHot" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/row_table_text_size" android:textColor="@color/row_table_tab_textview_selector" android:id="@id/tvHot" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hot_play_name" android:singleLine="true" android:layout_centerInParent="true" />
+            <View android:id="@id/left_indicator_img" android:background="@color/row_table_tab_name_selected" android:layout_width="wrap_content" android:layout_height="2.0dip" android:layout_alignLeft="@id/tvHot" android:layout_alignRight="@id/tvHot" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:id="@id/layoutNew" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/row_table_text_size" android:textColor="@color/row_table_tab_textview_selector" android:id="@id/tvNew" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/new_play_name" android:singleLine="true" android:layout_centerInParent="true" />
+            <View android:id="@id/right_indicator_img" android:background="@color/row_table_tab_name_selected" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="2.0dip" android:layout_alignLeft="@id/tvNew" android:layout_alignRight="@id/tvNew" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:background="@color/row_table_color_line" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <android.support.v4.view.ViewPager android:id="@id/viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/no_net_layout" />
+</LinearLayout>

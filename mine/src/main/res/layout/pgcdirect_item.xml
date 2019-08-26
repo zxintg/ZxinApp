@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/pgcdirect_item_layout_top" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/pgcdirect_item_layout_top" />
+    <View android:background="@color/persondirect_item_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <com.youku.phone.search.view.PgcDirectItemGridviewLayout android:id="@id/pgcdirect_item_fragment_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:background="@color/persondirect_item_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <TextView android:id="@id/pgcdirect_item_enter_txt" android:background="@drawable/persondirect_more_btn_selector" android:layout_width="fill_parent" android:layout_height="@dimen/persondirect_item_more_txt_height" android:text="@string/pgcdirect_item_enter_txt" style="@style/persondirect_item_more_txt" />
+    <View android:layout_gravity="bottom" android:id="@id/item_bottom_line" android:background="@color/channel_bottom_line_color" android:layout_width="fill_parent" android:layout_height="2.0px" />
+</LinearLayout>

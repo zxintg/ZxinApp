@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/game_cache_dialog_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/game_cache_dialog_title_text" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/game_cache_dialog_game_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_launcher" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        <TextView android:id="@id/game_cache_dialog_game_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/game_cache_dialog_game_icon" android:layout_alignParentTop="true" />
+        <TextView android:id="@id/game_cache_dialog_game_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/game_cache_dialog_game_icon" android:layout_below="@id/game_cache_dialog_game_title" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/game_cache_dialog_cancel" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="@string/str_cancel" />
+        <Button android:id="@id/game_cache_dialog_ok" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="@string/game_youku_home_dialog_button_default_title" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="@dimen/replay_item_videos_width_midsize" android:layout_height="@dimen/replay_item_videos_height_midsize"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="@dimen/replay_item_videos_width_midsize" android:layout_height="@dimen/replay_item_videos_height_midsize">
+        <com.youku.widget.YoukuImageView android:id="@id/iv_item_replay_videos_image" android:background="@drawable/bg_detail_replay_vedio_default" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/replay_small_divide_width" android:scaleType="centerCrop" />
+        <TextView android:textSize="@dimen/replay_replay_item_text_size_midsize" android:id="@id/tv_item_replay_videos_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/replay_replay_item_text_padd_h_midsize" android:layout_marginTop="@dimen/replay_replay_item_text_padd_v_midsize" android:layout_marginRight="@dimen/replay_replay_item_text_padd_h_midsize" android:maxLines="2" style="@style/ReplayText.Item.Title" />
+        <TextView android:id="@id/tv_item_replay_videos_playcount" android:layout_width="fill_parent" android:layout_height="@dimen/replay_item_videos_playcount_height_midsize" android:layout_marginLeft="@dimen/replay_replay_item_text_padd_h_midsize" android:layout_marginRight="@dimen/replay_replay_item_text_padd_h_midsize" android:layout_marginBottom="@dimen/replay_replay_item_text_padd_v_midsize" style="@style/ReplayText.Item.PlayCount" />
+    </LinearLayout>
+</LinearLayout>

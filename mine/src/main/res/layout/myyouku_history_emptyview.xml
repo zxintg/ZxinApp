@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/img_myyouku_history_norecord" android:layout_width="@dimen/img_myyouku_history_norecord_width" android:layout_height="@dimen/img_myyouku_history_norecord_height" android:src="@drawable/icon_history_norecord" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/txt_myyouku_history_norecord_tip_marginleft" android:text="您还未观看、下载、收藏、上传任何视频哦" style="@style/myyouku_history_norecord" />
+</LinearLayout>

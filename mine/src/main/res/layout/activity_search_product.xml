@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutBg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:id="@+id/layoutProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/bg_progress_bar"
+        android:orientation="horizontal"
+        android:padding="5.0dip">
+
+        <ProgressBar
+            android:id="@+id/pbWaiting"
+            style="@style/progressbar_style"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_gravity="center"
+            android:indeterminateDuration="500" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutSearch"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="16.0dip"
+        android:background="@drawable/rounded_background"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="80.0dip"
+                android:layout_height="22.0dip"
+                android:layout_gravity="center|left|top"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="20.0dip"
+                android:background="@mipmap/btn_back"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:id="@+id/layoutTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="16.0dip"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/DialogTitle"
+                    android:text="@string/dialog_title" />
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    style="@style/DialogDescription"
+                    android:text="@string/dialog_description_has_lock_clothe" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:id="@+id/layoutCategory"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="16.0dip"
+                android:layout_marginBottom="12.0dip"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ScrollView
+                    android:layout_width="190.0dip"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <RadioGroup
+                        android:id="@+id/groupCategory"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical" />
+                </ScrollView>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvDetail"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="4.0dip"
+                    android:layout_marginRight="4.0dip"
+                    android:layout_marginBottom="4.0dip"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutRecognition"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginBottom="5.0dip"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <com.youku.dressplus.view.SearchView
+                    android:id="@+id/searchView"
+                    android:layout_width="140.0dip"
+                    android:layout_height="140.0dip"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5.0dip" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="10.0dip" />
+
+                <ImageView
+                    android:id="@+id/btnRecongnize"
+                    android:layout_width="220.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10.0dip"
+                    android:background="@mipmap/btn_begin" />
+
+                <TextView
+                    android:id="@+id/tvSearchFailure"
+                    style="@style/SearchFailureDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/search_failure_description" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutProductSimilar"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="16.0dip"
+                android:layout_marginTop="16.0dip"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvProduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16.0dip" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/layoutCropImage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <com.youku.dressplus.view.CropImageView
+            android:id="@+id/cropimage"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/btnClose"
+        android:layout_width="35.0dip"
+        android:layout_height="35.0dip"
+        android:layout_gravity="right"
+        android:layout_margin="24.0dip"
+        android:background="@mipmap/ic_close" />
+</FrameLayout>

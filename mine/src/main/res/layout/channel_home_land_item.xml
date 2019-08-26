@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.youku.phone.channel.view.ChannelCellImageLayout android:id="@id/channel_land_item_img_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/channel_land_item_icon_layout" android:background="#ffdbdbdb" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/channel_land_item_img" android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+            <include android:layout_gravity="bottom" android:background="@drawable/waist_seal" android:layout_width="fill_parent" android:layout_height="@dimen/channel_video_item_stripe_text_mask_height" layout="@layout/channel_item_stripe_layout" />
+        </FrameLayout>
+        <ViewStub android:id="@id/channel_triangle_view_stub" android:visibility="gone" android:layout="@layout/channel_triangle_view" android:inflatedId="@id/triangle_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/channel_corner_mark_stub" android:layout="@layout/channel_corner_mark" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.youku.phone.channel.view.ChannelCellImageLayout>
+    <include android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="@dimen/channel_item_title_erea_height" layout="@layout/channel_item_bottom_title_layout" />
+</LinearLayout>

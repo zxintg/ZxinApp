@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/topic_des_lin" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/upload_choose_topic_item_bg" android:paddingLeft="@dimen/padding_left_right_10" android:paddingTop="@dimen/padding_left_right_15" android:paddingRight="@dimen/padding_left_right_10" android:paddingBottom="@dimen/padding_left_right_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/text_size_14" android:textColor="@color/dialog_grid_text_color" android:id="@id/upload_topic_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/text_size_14" android:textColor="@color/video_edit_time_color" android:id="@id/upload_video_sum" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_left_right_10" android:drawableLeft="@drawable/upload_ic_hashtag_videonum" android:drawablePadding="@dimen/padding_left_right_5" />
+        <TextView android:textSize="@dimen/text_size_14" android:textColor="@color/video_edit_time_color" android:id="@id/upload_people_sum" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_left_right_10" android:drawableLeft="@drawable/upload_ic_hashtag_people" android:drawablePadding="@dimen/padding_left_right_5" />
+    </LinearLayout>
+    <View android:background="@color/community_choose_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</LinearLayout>

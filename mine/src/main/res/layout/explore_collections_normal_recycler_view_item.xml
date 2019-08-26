@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="@dimen/explore_normal_view_item_image_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="@dimen/explore_normal_view_item_image_width" android:layout_height="@dimen/explore_normal_view_item_image_height">
+        <FrameLayout android:background="@color/my_collection_default_background" android:layout_width="@dimen/explore_normal_view_item_image_width" android:layout_height="@dimen/explore_normal_view_item_image_height">
+            <ImageView android:layout_gravity="center" android:layout_width="@dimen/video_delete_icon_width" android:layout_height="@dimen/video_delete_icon_width" android:src="@drawable/channel_not_loaded_icon_play" />
+            <ImageView android:id="@id/normal_recycler_view_image" android:layout_width="@dimen/explore_normal_view_item_image_width" android:layout_height="@dimen/explore_normal_view_item_image_height" android:scaleType="centerCrop" />
+        </FrameLayout>
+        <ImageView android:layout_width="@dimen/explore_normal_view_item_image_width" android:layout_height="@dimen/explore_normal_view_item_mengceng_height" android:src="@drawable/explore_mengceng" android:scaleType="center" android:layout_alignParentBottom="true" />
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/explore_normal_view_item_icon_margin_right" android:layout_marginBottom="@dimen/explore_normal_view_item_icon_margin_bottom" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+            <ImageView android:id="@id/collection_item_icon" android:layout_width="@dimen/collection_item_icon_size" android:layout_height="@dimen/collection_item_icon_size" android:src="@drawable/collection_ori_icon_white" android:layout_toLeftOf="@id/video_count" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/collection_item_icon_text_size" android:textColor="@color/collection_item_icon_text_color" android:id="@id/video_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="13" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/explore_normal_view_item_collection_title_text_size" android:textColor="@color/collection_create_text_color" android:ellipsize="end" android:id="@id/collection_title" android:layout_width="@dimen/explore_normal_view_item_image_width" android:layout_height="wrap_content" android:layout_marginTop="@dimen/explore_normal_view_item_collection_title_margin_top" android:text="复仇者联盟全解读" android:maxLines="1" />
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/explore_page_margin_between_icon_and_text">
+        <ImageView android:id="@id/explore_page_view_count_icon" android:layout_width="@dimen/explore_page_view_count_icon" android:layout_height="@dimen/explore_page_view_count_icon" android:src="@drawable/collection_view_count" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/explore_collection_view_count" android:textColor="@color/explore_page_view_count_color" android:gravity="center_vertical" android:id="@id/explore_page_view_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/explore_page_margin_between_icon_and_text" android:text="3245.3万" android:layout_toRightOf="@id/explore_page_view_count_icon" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

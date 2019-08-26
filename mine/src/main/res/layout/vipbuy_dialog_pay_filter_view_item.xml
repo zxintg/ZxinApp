@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center|left" android:orientation="horizontal" android:id="@id/layout_vipbuy_dialog_pay_filter_item" android:background="@drawable/layout_pay_filter_item_bg" android:paddingLeft="@dimen/layout_vipbuy_dialog_pay_filter_item_paddingleft" android:layout_width="fill_parent" android:layout_height="@dimen/layout_vipbuy_dialog_pay_filter_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/vipbuy_dialog_pay_filter_item_img" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@id/vipbuy_dialog_pay_filter_item_txt" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/vipbuy_dialog_pay_filter_item_txt_marginleft" style="@style/vipbuy_dialog_pay_filter_item_txt" />
+</LinearLayout>

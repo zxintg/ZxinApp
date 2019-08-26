@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/app_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:background="@drawable/tab_shadow" android:layout_width="fill_parent" android:layout_height="4.0px" android:layout_alignParentBottom="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/layout_soku_dialog" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/layout_soku_dialog_height" android:layout_marginLeft="16.0px" android:layout_marginTop="18.0px" android:layout_marginRight="16.0px">
+        <TextView android:gravity="center" android:id="@id/soku_dialog_txt" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/soku_dialog_txt_maginleftright" android:layout_marginRight="@dimen/soku_dialog_txt_maginleftright" android:text="是否同步账号到被扫描的设备上" android:layout_weight="1.0" android:lineSpacingExtra="@dimen/soku_dialog_txt_linespacingextra" style="@style/soku_dialog_txt_cancel" />
+        <RelativeLayout android:id="@id/layout_soku_dialog_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/layout_soku_dialog_bottom_height">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="center" android:id="@id/layout_soku_dialog_cancel" android:background="#fffafafa" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:id="@id/soku_dialog_txt_cancel" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/soku_dialog_txt_cancel" style="@style/soku_dialog_txt_cancel" />
+                </LinearLayout>
+                <View android:background="#2c5e5e5e" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                <View android:background="#ffffffff" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                <LinearLayout android:gravity="center" android:id="@id/layout_soku_dialog_goplay" android:background="#1500baff" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:id="@id/soku_dialog_txt_goplay" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/confirm" style="@style/soku_dialog_txt_goplay" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="@drawable/soku_layout_bottom_cover" android:layout_width="fill_parent" android:layout_height="5.0px" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

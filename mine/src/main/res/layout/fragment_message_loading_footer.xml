@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:padding="@dimen/message_center_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/message_center_text_textsize" android:textColor="#ff999999" android:layout_gravity="center_horizontal" android:id="@id/message_loading_footer_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="上拉获取更多" android:drawableLeft="@drawable/msg_icon_up" android:drawablePadding="2.0dip" />
+</LinearLayout>

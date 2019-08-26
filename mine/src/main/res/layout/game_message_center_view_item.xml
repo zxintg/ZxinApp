@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/view_item__msg_center_top" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/message_center_padding" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/message_center_parent_height">
+        <RelativeLayout android:layout_width="@dimen/message_center_sign_layout_width" android:layout_height="fill_parent">
+            <ImageView android:id="@id/iv_game_mark" android:layout_width="@dimen/message_center_image_mark" android:layout_height="@dimen/message_center_image_mark" android:src="@drawable/btn_game_icon" android:scaleType="centerCrop" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <View android:background="#ffededed" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_marginTop="@dimen/message_center_margin" android:layout_marginBottom="@dimen/message_center_margin" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/message_center_text_padding_left" android:layout_marginRight="@dimen/message_center_text_padding_right" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/message_center_text_size" android:textColor="#ff666666" android:ellipsize="end" android:id="@id/prompt_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rec_install" android:maxLines="2" android:lineSpacingMultiplier="1.1" />
+        </LinearLayout>
+        <FrameLayout android:layout_width="@dimen/message_center_image_present_width" android:layout_height="fill_parent" android:layout_marginRight="@dimen/message_center_image_present_padding">
+            <ImageView android:id="@id/iv_present_icon" android:visibility="invisible" android:layout_width="@dimen/message_center_image_present_width" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+            <ImageView android:layout_gravity="center|right" android:id="@id/iv_game_icon" android:visibility="invisible" android:layout_width="@dimen/message_center_image_icon" android:layout_height="@dimen/message_center_image_icon" android:layout_marginLeft="@dimen/message_center_margin" android:layout_marginRight="@dimen/message_center_image_icon_margin_right" />
+        </FrameLayout>
+    </LinearLayout>
+    <View android:background="#ffededed" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <View android:id="@id/view_item_msg_center_bottom" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/message_center_padding" />
+</LinearLayout>

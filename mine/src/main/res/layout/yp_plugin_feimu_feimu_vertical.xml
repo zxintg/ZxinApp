@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/feimu_layout" android:layout_width="@dimen/feimu_img_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/corner_background" android:layout_width="@dimen/feimu_content_height" android:layout_height="wrap_content" android:layout_marginTop="@dimen/feimu_vertical_content_margin_top" android:layout_centerHorizontal="true">
+        <TextView android:textSize="@dimen/corner_text_size" android:textColor="@color/corner_txt_color" android:gravity="center|top" android:id="@id/feimu_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/feimu_vertical_content_text_margin_top" android:layout_marginBottom="@dimen/feimu_vertical_content_text_margin_bottom" android:text="" />
+    </LinearLayout>
+    <ImageView android:id="@id/feimu_img" android:layout_width="@dimen/feimu_img_width" android:layout_height="@dimen/feimu_img_width" android:scaleType="fitXY" android:layout_centerHorizontal="true" />
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/load_more_lin" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/topic_item_height" android:layout_centerInParent="true">
+        <ProgressBar android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@android:style/Widget.ProgressBar.Small" />
+        <TextView android:textSize="@dimen/text_size_12" android:textColor="@color/video_edit_time_color" android:id="@id/toast" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/load_more" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/load_finish_lin" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/topic_item_height" android:layout_centerInParent="true">
+        <TextView android:textSize="@dimen/text_size_12" android:textColor="@color/video_edit_time_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/upload_choose_topic_search_topic" />
+    </LinearLayout>
+</RelativeLayout>
