@@ -4,6 +4,9 @@ import android.view.View
 import com.zxin.basemodel.fragment.BaseFragment
 import com.zxin.mine.R
 
+/*****
+ * 游戏中心git
+ */
 class GameBaseFragment :BaseFragment() {
     override fun onClick(v: View?) {
         

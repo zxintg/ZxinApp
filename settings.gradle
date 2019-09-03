@@ -1,4 +1,4 @@
-include ':app', ':basemodel', ':sources', ':jianshennannv', ':meziyowu', ':mine'
+include ':app', ':basemodel', ':sources', ':mine'
 
 /*
 project(':app').projectDir = new File("ZxinProject/app")
