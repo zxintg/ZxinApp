@@ -44,8 +44,6 @@ public class SourcesMainActivity extends BaseActivity {
             onBackPressed();
         } else if (id == R.id.ccb_test_sources) {//项目资源
             startActivity(new Intent(mContext, CodeKKActivity.class));
-        } else if (id == R.id.ccb_test_ynshangji) {//云商网
-            startActivity(new Intent(mContext, YunShangActivity.class));
         } else if (id == R.id.ccb_test_bus) {//安卓BUS
             startActivity(new Intent(mContext, AndroidBusActivity.class));
         }

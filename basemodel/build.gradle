@@ -41,7 +41,6 @@ android {
 
         buildConfigField 'String','DB_VER',DB_VER
         buildConfigField 'String','DB_Name',DB_Name
-        buildConfigField 'String','ROOM_VER',ROOM_VER
 
         buildConfigField 'String','BTS_AppKey',BTS_AppKey
         buildConfigField 'String','BTS_AppSecret',BTS_AppSecret
@@ -97,8 +96,8 @@ dependencies {
     api 'org.greenrobot:eventbus:3.0.0'
 
     /*******Room是Google提供的一个ORM库。（ORM就是object relational mapping,对象关系映射。将关系型数据库转化为对象来进行处理） 开始*******/
-    api "android.arch.persistence.room:runtime:$ROOM_VER"
-    annotationProcessor "android.arch.persistence.room:compiler:$ROOM_VER" // use kapt for Kotlin
+    api 'android.arch.persistence.room:runtime:1.1.1'
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1" // use kapt for Kotlin
 
     api 'com.google.code.gson:gson:2.7'
     api 'com.android.support.constraint:constraint-layout:1.0.2'
@@ -127,6 +126,7 @@ dependencies {
     //内存泄漏检测
     api 'com.squareup.leakcanary:leakcanary-android:1.5.1'
     api 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    api 'com.squareup.leakcanary:leakcanary-android:2.0-beta-3'
     //解决64k问题
     api 'com.android.support:multidex:1.0.1'
     //implementation 'net.danlew:android.joda:2.9.5'
@@ -143,8 +143,8 @@ dependencies {
     api 'com.facebook.stetho:stetho-okhttp3:1.3.1'
 
     /********结束********/
-    api 'com.github.zxintg:zxinroot:v1.3.2'
-    api 'com.github.zxintg:network:v2.0.8'
+    api 'com.github.zxintg:zxinroot:v2.0.2'
+    api 'com.github.zxintg:network:v2.0.9'
     api 'com.github.zxintg:viewsort:v1.0.4'
     api 'com.github.zxintg:zxincamera:v1.2.2'
     api 'com.github.zxintg:floataction:v2.0.1'

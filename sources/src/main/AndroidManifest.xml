@@ -12,9 +12,6 @@
         <activity
             android:name=".activity.CodeKKActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity.YunShangActivity"
-            android:screenOrientation="portrait" />
 
         <activity android:name=".activity.AndroidBusActivity"
             android:screenOrientation="portrait"
