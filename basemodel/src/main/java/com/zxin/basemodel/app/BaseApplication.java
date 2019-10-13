@@ -3,6 +3,8 @@ package com.zxin.basemodel.app;
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.HandlerThread;
+import android.os.Looper;
 import android.os.Process;
 import android.preference.PreferenceManager;
 import android.support.multidex.MultiDex;
@@ -154,4 +156,18 @@ public abstract class BaseApplication extends MultiDexApplication { //解决64K�
         return retrofitHelper;
     }
 
+    private Looper mLooper = null;
+    private static final Object mLook = new Object();
+    public Looper getSubLooper() {
+        if (mLooper == null){
+            synchronized (mLook){
+                if (mLooper == null){
+                    HandlerThread thread = new HandlerThread("ZxinHandler");
+                    thread.start();
+                    mLooper = thread.getLooper();
+                }
+            }
+        }
+        return mLooper;
+    }
 }

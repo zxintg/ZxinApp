@@ -1,8 +1,5 @@
 package com.zxin.basemodel.util;
 
-import android.content.Context;
-import android.content.res.Resources;
-import android.graphics.RectF;
 import com.zxin.root.util.logger.LogUtils;
 import java.util.concurrent.TimeUnit;
 import io.reactivex.Observable;
