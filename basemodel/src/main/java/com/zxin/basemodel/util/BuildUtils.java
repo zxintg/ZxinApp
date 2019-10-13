@@ -23,7 +23,7 @@ public class BuildUtils {
         if (buildUtils == null) {
             synchronized (BuildUtils.class) {
                 if (buildUtils == null) {
-                    buildUtils = new BuildUtils(mContext);
+                    buildUtils = new BuildUtils(mContext.getApplicationContext());
                 }
             }
         }
@@ -44,6 +44,46 @@ public class BuildUtils {
      */
     public String getDbName() {
         return BuildConfig.DB_Name;
+    }
+
+    /****
+     * 获取日志信息配置
+     * @return
+     */
+    public boolean isRecodLog(){
+        return BuildConfig.RECODING_LOG;
+    }
+
+    /****
+     * 获取日志保留时间
+     * @return
+     */
+    public int getRecodLogDay(){
+        return BuildConfig.DELETEDAY_LOG;
+    }
+
+    /****
+     * 获取日志路径
+     * @return
+     */
+    public String getLogPath(){
+        return BuildConfig.DIR_LOG;
+    }
+
+    /****
+     * 获取缓存路径
+     * @return
+     */
+    public String getCachePath(){
+        return BuildConfig.DIR_CACHE;
+    }
+
+    /****
+     * 获取SD卡路径
+     * @return
+     */
+    public String getAppSDPath(){
+        return BuildConfig.SDDIR_APP;
     }
 
     /*****

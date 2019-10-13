@@ -102,6 +102,11 @@ public class TestActivity extends BaseActivity {
                 //排序
                 startActivity(new Intent(this, StudySourceActivity.class));
                 break;
+
+            case R.id.ccb_test_exam:
+                //排序
+                HtmlJumpUtil.toWebForUrlActivity("Android 面试题集 & 答案，助你拿到心仪 Offer","https://p.codekk.com/detail/Android/Ellen2018/AndroidFaceInterview");
+                break;
         }
 
     }

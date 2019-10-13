@@ -55,6 +55,12 @@ android {
         buildConfigField 'Integer','RDS_RAG_API',RDS_RAG_API
         buildConfigField 'boolean','RDS_MOD_ENABLE',RDS_MOD_ENABLE
 
+        buildConfigField 'boolean','RECODING_LOG',RECODING_LOG
+        buildConfigField 'Integer','DELETEDAY_LOG',DELETEDAY_LOG
+        buildConfigField 'String','DIR_LOG',DIR_LOG
+        buildConfigField 'String','DIR_CACHE',DIR_CACHE
+        buildConfigField 'String','SDDIR_APP',SDDIR_APP
+
     }
 
     buildTypes {
@@ -143,7 +149,7 @@ dependencies {
     api 'com.facebook.stetho:stetho-okhttp3:1.3.1'
 
     /********结束********/
-    api 'com.github.zxintg:zxinroot:v2.0.2'
+    api 'com.github.zxintg:zxinroot:v1.1.1'
     api 'com.github.zxintg:network:v2.0.9'
     api 'com.github.zxintg:viewsort:v1.0.4'
     api 'com.github.zxintg:zxincamera:v1.2.2'

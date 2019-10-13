@@ -1,6 +1,5 @@
 package com.zxin.basemodel.app;
 
-import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.HandlerThread;
@@ -9,7 +8,6 @@ import android.os.Process;
 import android.preference.PreferenceManager;
 import android.support.multidex.MultiDex;
 import android.support.multidex.MultiDexApplication;
-
 import com.squareup.leakcanary.LeakCanary;
 import com.squareup.leakcanary.RefWatcher;
 import com.zxin.basemodel.gen.DataBaseUtil;
@@ -18,9 +16,8 @@ import com.zxin.basemodel.interceptor.CustomParamsInterceptor;
 import com.zxin.basemodel.interceptor.HttpCacheInterceptor;
 import com.zxin.basemodel.interceptor.HttpHeaderInterceptor;
 import com.zxin.basemodel.factory.ResponseConverterFactory;
-import com.zxin.network.api.ZXinBaseApi;
+import com.zxin.basemodel.util.GlobalUtil;
 import com.zxin.network.http.RetrofitHelper;
-
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
@@ -58,6 +55,7 @@ public abstract class BaseApplication extends MultiDexApplication { //解决64K�
         super.onCreate();
         mApplication = this;
         contextApp = getApplicationContext();
+        GlobalUtil.init(contextApp);
         //内存泄漏检测
         refWatcher = setupLeakCanary();
         // 初始化mSettings

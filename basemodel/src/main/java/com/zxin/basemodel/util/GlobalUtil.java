@@ -21,15 +21,22 @@ import java.util.Date;
 
 public class GlobalUtil extends com.zxin.root.util.GlobalUtil{
     private static final LogUtils.Tag TAG = new LogUtils.Tag("GlobalUtil");
-    
-    private static final String TYPE_DRAWABLE = "drawable";
-    private static final String TYPE_LAYOUT = "layout";
-    private static final String TYPE_STRING = "string";
-    private static final String TYPE_DIMEN = "dimen";
-    private static final String TYPE_ANIM = "anim";
-    private static final String TYPE_ID = "id";
-    
+
     private static final int DEF_DIV_SCALE = 110;
+
+    /****
+     * 初始化数据
+     * @param context
+     */
+    public static void init(Context context) {
+        BuildUtils utils = BuildUtils.getInstance(context);
+        setContext(context);
+        setLogPath(utils.getLogPath());
+        setRecordLog(utils.isRecodLog());
+        setDayToDeleteLog(utils.getRecodLogDay());
+        setAppCache(utils.getCachePath());
+        setSdPath(utils.getAppSDPath());
+    }
 
     public static void dialogTitleLineColor(Dialog dialog, int color) {
         int divierId = UiUtils.getInstance(dialog.getContext()).getResources().getIdentifier("android:id/titleDivider", null, null);
@@ -100,87 +107,6 @@ public class GlobalUtil extends com.zxin.root.util.GlobalUtil{
         return b.divide(one, scale, BigDecimal.ROUND_HALF_DOWN).doubleValue();
     }
 
-
-    /**
-     * 递归删除目录下的所有文件及子目录下所有文件
-     *
-     * @param dir 将要删除的文件目录
-     * @return boolean Returns "true" if all deletions were successful.
-     * If a deletion fails, the method stops attempting to
-     * delete and returns "false".
-     */
-    public static boolean deleteDir(File dir) {
-        if (dir.isDirectory()) {
-            String[] children = dir.list();
-            for (int i = 0; i < children.length; i++) {
-                boolean success = deleteDir(new File(dir, children[i]));
-                if (!success) {
-                    return false;
-                }
-            }
-        }
-        // 目录此时为空，可以删除
-        return dir.delete();
-    }
-
-    /**
-     * 设置textView显示局部字体颜色改变
-     *
-     * @param builder 源数据
-     * @param color   字体颜色
-     * @param start   文字开始下标
-     * @param len     修改文字长度
-     * @return 修改后的数据源
-     */
-    public static SpannableStringBuilder setTextPartColor(SpannableStringBuilder builder
-            , int color
-            , int start
-            , int len) {
-        ForegroundColorSpan csp = new ForegroundColorSpan(color);
-        builder.setSpan(csp, start, start + len, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
-        return builder;
-    }
-
-    /*****
-     * 设置textView显示局部字体点击事件
-     * @param builder 源数据
-     * @param listener 回调函数
-     * @param start 文字开始下标
-     * @param len 修改文字长度
-     * @return 修改后的数据源
-     */
-    public static SpannableStringBuilder setTextPartClick(final SpannableStringBuilder builder
-            , final View.OnClickListener listener
-            , int start
-            , int len) {
-
-        //设置局部可点击事件
-        builder.setSpan(new ClickableSpan() {
-            @Override
-            public void onClick(View view) {
-                //局部点击的响应事件
-                if (listener == null) {
-                    return;
-                }
-                listener.onClick(view);
-            }
-        }, start, start + len, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
-        return builder;
-    }
-
-    /****
-     * 获取当前地图整数等级
-     * @param mapLevel
-     * @return
-     */
-    public static int getMapIntLevel(float mapLevel) {
-        int level = Math.round(mapLevel);//四舍五入获取整数缩放等级  与ScaleView 中对应
-        if (level <= mapLevel) {//排除掉相同的。舍去的
-            return -1;
-        }
-        return level;
-    }
-
     /****
      * 判断是否在当前时间是之前
      * @param time
@@ -241,77 +167,5 @@ public class GlobalUtil extends com.zxin.root.util.GlobalUtil{
         }
         LogUtils.d(TAG, "jsonToBean jsonStr is : " + jsonStr);
         return new Gson().fromJson(jsonStr, clazz);
-    }
-    
-    /****
-     * 根据ID获取Dimen
-     * @param resId 资源id
-     * @return
-     */
-    public static int getDimensionById(int resId) {
-        return getResources().getDimensionPixelSize(resId);
-    }
-
-    /****
-     * 根据name获取Dimen
-     * @param resName
-     * @return
-     */
-    public static int getDimensionByName(String resName) {
-        int resId = getDimenId(resName);
-        return getDimensionById(resId);
-    }
-
-    /****
-     * 获取布局
-     * @param id
-     * @param <V>
-     * @return
-     */
-    public static <V extends View> V getViewById(int id) {
-        return (V) LayoutInflater.from(BaseApplication.getInstance().getApplicationContext()).inflate(id, null);
-    }
-
-    /*****
-     * 厘米转换px
-     * 72dpi 1厘米
-     * @param cm 单位 厘米
-     * @return
-     */
-    public static float cm2px(float cm){
-        float scale = GlobalUtil.getResources().getDisplayMetrics().density;
-        return cm * 72 * scale + 0.5f;
-    }
-    
-    public static int getIdentifierId(String name) {
-        return getResourceId(name, TYPE_ID);
-    }
-
-    public static int getDrawableId(String name) {
-        return getResourceId(name, TYPE_DRAWABLE);
-    }
-
-    public static int getStringId(Context context, String name) {
-        return getResourceId(name, TYPE_STRING);
-    }
-
-    public static int getLayoutId(String name) {
-        return getResourceId(name, TYPE_LAYOUT);
-    }
-
-    public static int getDimenId(String name) {
-        return getResourceId(name, TYPE_DIMEN);
-    }
-
-    public static int getAnimId(String name) {
-        return getResourceId(name, TYPE_ANIM);
-    }
-
-    public static int getResourceId(String name, String defType) {
-        return getResources().getIdentifier(name,defType,BaseApplication.getInstance().getApplicationContext().getPackageName());
-    }
-
-    public static Resources getResources() {
-        return BaseApplication.getInstance().getApplicationContext().getResources();
     }
 }
