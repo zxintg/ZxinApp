@@ -3,14 +3,12 @@ package com.zxin.sources.util;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.zxin.root.bean.AndroidBusBean;
-import com.zxin.root.bean.YunShangBean;
 import com.zxin.sources.bean.AndroidBusResultBean;
 import com.zxin.sources.bean.CodeKKResultBean;
 import com.zxin.sources.bean.DoubanMeizi;
 import com.zxin.sources.bean.HuaBanMeizi;
 import com.zxin.sources.bean.HuaBanMeiziInfo;
 import com.zxin.sources.bean.MeiziTu;
-import com.zxin.sources.bean.YunShangResultBean;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.jsoup.Jsoup;
@@ -137,52 +135,6 @@ public class HtmlOperatorUtil {
             e.printStackTrace();
         }
         return null;
-    }
-
-    /******
-     * 云商
-     * @param str
-     * @return
-     */
-    public YunShangResultBean getYuShangjiList(String str) {
-        YunShangResultBean resultBean = new YunShangResultBean();
-        List<YunShangBean> datasList = new ArrayList<>();
-        try {
-            //Document parse = Jsoup.parse(new String(str.getBytes("GB2312"), "UTF-8"));
-            Document parse = Jsoup.parse(str);
-            Elements elements = parse.select("div[class=s-list s-pro-list]>ul>li[class=item]");
-            for (Element e : elements) {
-                YunShangBean bean = new YunShangBean();
-
-                bean.imageUrl = e.getElementsByClass("pic").select("div[class=small-pic]>a>img").attr("src");
-
-                Elements content = e.getElementsByClass("description");
-                bean.name = content.select("div[class=til]").select("a").text();
-                bean.time = content.select("div[class=til]").select("em").text();
-
-                bean.content = content.select("div[class=info]").text();
-
-                Elements companys = content.select("div[class=company]").select("a");
-                for (Element company : companys){
-                    bean.product += company.text();
-                }
-
-
-                Elements price = e.getElementsByClass("price").select("div[class=mt15]");
-                Elements priceChild = price.first().select("a");
-                bean.address = priceChild.first().text()+" "+priceChild.last().text();
-
-                bean.linkUrl = price.last().select("a").first().attr("href");
-
-                bean.call = "18550424957";
-
-                datasList.add(bean);
-            }
-            resultBean.yunShangList = datasList;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return resultBean;
     }
 
     /*****

@@ -41,6 +41,7 @@ android {
 
         buildConfigField 'String','DB_VER',DB_VER
         buildConfigField 'String','DB_Name',DB_Name
+        buildConfigField 'String','DB_File',DB_File
 
         buildConfigField 'String','BTS_AppKey',BTS_AppKey
         buildConfigField 'String','BTS_AppSecret',BTS_AppSecret
@@ -149,15 +150,12 @@ dependencies {
     api 'com.facebook.stetho:stetho-okhttp3:1.3.1'
 
     /********结束********/
-    api 'com.github.zxintg:zxinroot:v1.1.1'
     api 'com.github.zxintg:network:v2.0.9'
     api 'com.github.zxintg:viewsort:v1.0.4'
     api 'com.github.zxintg:zxincamera:v1.2.2'
     api 'com.github.zxintg:floataction:v2.0.1'
     api 'com.github.zxintg:pullzoom:v1.0.2'
-    api 'com.github.zxintg:ncalendar_module:v1.0.1'
-    api 'com.github.zxintg:refreshlib:v1.0.1'
-    api 'com.github.zxintg:javautil:1.0.1'
     api 'com.github.zxintg:router:v1.0.1'
     api 'com.github.zxintg:routerhelper:v1.0.2'
+    api project(path: ':library')
 }

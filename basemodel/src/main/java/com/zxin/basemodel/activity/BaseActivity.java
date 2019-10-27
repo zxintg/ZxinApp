@@ -39,7 +39,7 @@ public abstract class BaseActivity extends RxAppCompatActivity implements View.O
         super.onCreate(savedInstanceState);
         super.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//强制竖屏
         mContext = this;
-        AppManager.getAppManager().addActivity(this);
+        AppManager.getInstance().addActivity(this);
         initWindow();
         if (setLayout() != 0) {
             if (setLayout() == 0) {
@@ -67,7 +67,7 @@ public abstract class BaseActivity extends RxAppCompatActivity implements View.O
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        AppManager.getAppManager().finishActivity(this);
+        AppManager.getInstance().finishActivity(this);
         Glide.get(this).clearMemory();
         //解绑Presenter
         for (BasePresenter presenter : mPresenterList) {
@@ -110,7 +110,7 @@ public abstract class BaseActivity extends RxAppCompatActivity implements View.O
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (KeyEvent.KEYCODE_BACK == keyCode) {
-            if (AppManager.getAppManager().getFragmentManager().getBackStackEntryCount() == 1) {
+            if (AppManager.getInstance().getFragmentManager().getBackStackEntryCount() == 1) {
                 finish();
                 return true;
             }

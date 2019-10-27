@@ -21,6 +21,10 @@ public class MyApplication extends BaseApplication {
     private PoolThread executor;
 
     //私有化，防止外部调取再次初始化
+    private MyApplication(){
+
+    }
+
     public static synchronized MyApplication getInstance() {
         if (application==null)
             application = new MyApplication();
@@ -33,7 +37,6 @@ public class MyApplication extends BaseApplication {
         application = this;
         //初始化线程池管理器
         initThreadPool();
-        //InitializeService.start(this);
         mContext = this;
         new Thread(new Runnable() {
             @Override

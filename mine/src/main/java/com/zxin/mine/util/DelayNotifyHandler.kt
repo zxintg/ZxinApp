@@ -19,17 +19,17 @@ open class DelayNotifyHandler(callback: Callback?) : Handler(callback) {
     }
 
     //取消了static 静态成员变量 使用了companion 伴随
-    companion object fun getInstance(): DelayNotifyHandler {
+    companion object fun getInstance(callback: Callback): DelayNotifyHandler {
         if (sInstance == null) {
-            sInstance = DelayNotifyHandler(this);
+            sInstance = DelayNotifyHandler(callback);
         }
         return sInstance;
     }
 
-    fun sendSimpleMessage(handler: DelayNotifyHandler, paramInt: Int) {
+    fun sendSimpleMessage(handler: DelayNotifyHandler, paramInt: Int, list : List<String>) {
         var localMessage: Message = Message.obtain();
         localMessage.what = paramInt;
-        handler.sendRefreshMessage(localMessage);
+        handler.sendRefreshMessage(localMessage,list);
     }
 
     fun sendSimpleMessageWithPackageName(handler: DelayNotifyHandler, paramInt: Int, paramString: String) {
@@ -57,12 +57,12 @@ open class DelayNotifyHandler(callback: Callback?) : Handler(callback) {
         this.listeners.remove(paramInt);
     }
 
-    fun sendRefreshMessage(paramMessage: Message) {
+    fun sendRefreshMessage(paramMessage: Message , list : List<String>) {
         var i: Int = paramMessage.what;
         if (containsMessage(i)) {
             return;
         }
-        this.messages.put(i, null);
+        this.messages.put(i, list);
         sendMessageDelayed(paramMessage, 800L);
     }
 

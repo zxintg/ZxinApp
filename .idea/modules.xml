@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/ZxinApp.iml" filepath="$PROJECT_DIR$/ZxinApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/basemodel/basemodel.iml" filepath="$PROJECT_DIR$/basemodel/basemodel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
       <module fileurl="file://$PROJECT_DIR$/mine/mine.iml" filepath="$PROJECT_DIR$/mine/mine.iml" />
       <module fileurl="file://$PROJECT_DIR$/sources/sources.iml" filepath="$PROJECT_DIR$/sources/sources.iml" />
     </modules>

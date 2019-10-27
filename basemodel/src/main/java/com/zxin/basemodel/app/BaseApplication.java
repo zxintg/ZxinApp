@@ -18,6 +18,8 @@ import com.zxin.basemodel.interceptor.HttpHeaderInterceptor;
 import com.zxin.basemodel.factory.ResponseConverterFactory;
 import com.zxin.basemodel.util.GlobalUtil;
 import com.zxin.network.http.RetrofitHelper;
+import com.zxin.root.util.AppManager;
+
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
@@ -71,7 +73,7 @@ public abstract class BaseApplication extends MultiDexApplication { //解决64K�
                 Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
                 initDaos();
                 //初始化DB(拷贝数据到数据库)
-                GreenDaoManager.getInstance();
+                GreenDaoManager.getInstance().init(contextApp);
             }
         }).start();
     }

@@ -7,7 +7,4 @@ package com.zxin.basemodel.util;
 
 public class BaseStringUtils extends com.zxin.root.util.BaseStringUtils {
 
-    public static final String dbName = "BXHArea.db";
-    public static final String dbFile = "bxharea.zip";
-
 }

@@ -25,7 +25,7 @@ public class CommWebActivity extends BaseActivity {
         switch (getIntent().getStringExtra(BaseStringUtils.WEB_TYPE)){
 
             case BaseStringUtils.WEB_TYPE_fileHtml5:
-                x5WebView.loadDataWithBaseURL("file:///android_asset/", HfFileUtil.readAssetsByName(this, url, "utf-8"),"text/html","utf-8","");
+                x5WebView.loadDataWithBaseURL(url);
                 break;
 
             case BaseStringUtils.WEB_TYPE_url:
@@ -33,7 +33,7 @@ public class CommWebActivity extends BaseActivity {
                 break;
 
             case BaseStringUtils.WEB_TYPE_html5:
-                x5WebView.loadData(url,"text/html","utf-8");
+                x5WebView.loadData(url);
                 break;
         }
     }

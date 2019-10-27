@@ -1,7 +1,10 @@
 package com.zxin.basemodel.app;
 
+import android.content.Context;
 import android.os.Environment;
 import com.zxin.basemodel.R;
+import com.zxin.basemodel.util.BuildUtils;
+import com.zxin.basemodel.util.GlobalUtil;
 import com.zxin.root.util.FileUtil;
 import com.zxin.root.util.ZipUtil;
 import com.zxin.basemodel.util.BaseStringUtils;
@@ -21,10 +24,18 @@ public class GreenDaoManager {
     //dbManager单例
     private static GreenDaoManager greenDaoManager;
 
+    private Context mContext;
+
     private GreenDaoManager() {
         //copy db
         importDB();
         initAplus();
+    }
+
+    public void init(Context context){
+        this.mContext = context;
+        String pageName = BaseStringUtils.pageNameParent;
+        dbPath = "/data" + Environment.getDataDirectory().getAbsolutePath() + "/" + pageName + "/databases/";
     }
 
     /**
@@ -35,8 +46,6 @@ public class GreenDaoManager {
         if (greenDaoManager == null) {
             synchronized (GreenDaoManager.class) {
                 if (greenDaoManager == null) {
-                    String pageName = BaseStringUtils.pageNameParent;
-                    dbPath = "/data" + Environment.getDataDirectory().getAbsolutePath() + "/" + pageName + "/databases/";
                     greenDaoManager = new GreenDaoManager();
                 }
             }
@@ -56,7 +65,8 @@ public class GreenDaoManager {
      * 第一次安装的时候才会执行
      */
     public void importDB () {
-        File dbFile = new File(dbPath + BaseStringUtils.dbName);
+        File dbFile = new File(dbPath + BuildUtils.getInstance(mContext).getDbName());
+
         if(dbFile.exists()){
             return;
         }
@@ -68,8 +78,8 @@ public class GreenDaoManager {
         }
         //第一次安装，创建数据库存储路径，并拷贝解压数据库到系统目录
         LogUtils.d(TAG,"创建数据库存储路径！");
-        InputStream is = BaseApplication.contextApp.getResources().openRawResource(R.raw.bxharea);
-        File copyFile = FileUtil.getInstance(BaseApplication.contextApp).copyFile(is , dbPath , BaseStringUtils.dbFile);
+        InputStream is = FileUtil.getInstance(mContext).openRawResource(R.raw.ZxinTable);
+        File copyFile = FileUtil.getInstance(mContext).copyFile(is , dbPath , BuildUtils.getInstance(mContext).getDbFile());
         if(copyFile != null && copyFile.exists()) {
             ZipUtil.unZip(copyFile.getAbsolutePath(), dbPath);
             copyFile.delete();

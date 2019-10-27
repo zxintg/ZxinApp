@@ -180,6 +180,7 @@ bugtags {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(':sources')
+    implementation project(':mine')
     //ButterKnife依赖（模块独立依赖）
     implementation 'com.jakewharton:butterknife:8.6.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'

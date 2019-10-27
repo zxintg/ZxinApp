@@ -4,9 +4,7 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Build;
-import android.os.Environment;
 import com.zxin.root.util.logger.LogUtils;
 import com.zxin.basemodel.util.GlobalUtil;
 import com.zxin.util.StringUtils;
@@ -131,9 +129,9 @@ public class AlarmUtil {
             return;
         }
         LogUtils.d(TAG, "setAlarmClock AlarmBean is ： " + alarmBean.toString());
-        Intent intent = new Intent(StatusConst.INTENT_ALARM_CLOCK);
-        intent.putExtra(StatusConst.EXTRA_TYPE, alarmBean.getMesgTye());
-        intent.putExtra(StatusConst.EXTRA_MESSAGE, alarmBean);
+        Intent intent = new Intent(StringUtils.INTENT_ALARM_CLOCK);
+        intent.putExtra(StringUtils.EXTRA_TYPE, alarmBean.getMesgTye());
+        intent.putExtra(StringUtils.EXTRA_MESSAGE, alarmBean);
         PendingIntent pi = PendingIntent.getBroadcast(mContext, Alarm_Request_One, intent, PendingIntent.FLAG_CANCEL_CURRENT);
         AlarmManager manager = GlobalUtil.getAlarmManager(mContext);
         if (GlobalUtil.isValidTime(alarmBean.getCarLogo().getStartTime()) && !GlobalUtil.isValidTime(alarmBean.getCarLogo().getEndTime())) {

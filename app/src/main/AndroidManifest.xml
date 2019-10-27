@@ -130,8 +130,6 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths" />
         </provider>
-        <service android:name="com.zxin.service.InitializeService"/>
-
         <receiver android:name="com.zxin.service.AlarmClockReceiver">
             <intent-filter>
                 <action android:name="com.zxin.service.intent_alarm_clock" />

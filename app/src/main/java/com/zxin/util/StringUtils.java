@@ -23,4 +23,6 @@ public class StringUtils extends BaseStringUtils {
     public static final String EventBusFragmentNames = "";
 
     public static final String INTENT_ALARM_CLOCK = "com.zxin.service.intent_alarm_clock"; //闹钟服务
+    public static final String EXTRA_TYPE = "type";
+    public static final String EXTRA_MESSAGE = "mesg";
 }

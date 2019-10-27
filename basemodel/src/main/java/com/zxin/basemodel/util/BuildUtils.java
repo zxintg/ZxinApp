@@ -46,6 +46,14 @@ public class BuildUtils {
         return BuildConfig.DB_Name;
     }
 
+    /*****
+     * 获取数据库名称
+     * @return
+     */
+    public String getDbFile() {
+        return BuildConfig.DB_File;
+    }
+
     /****
      * 获取日志信息配置
      * @return

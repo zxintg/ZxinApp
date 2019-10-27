@@ -19,7 +19,7 @@ public class SourcesMainActivity extends BaseActivity {
     private void initView() {
         mTitle = (CommonCrosswiseBar) getViewById(R.id.ccb_sources_head);
         mTitle.setOnClickListener(R.id.common_bar_leftBtn,this);
-        setViewOnclick(R.id.ccb_test_sources,R.id.ccb_test_ynshangji,R.id.ccb_test_bus);
+        setViewOnclick(R.id.ccb_test_sources,R.id.ccb_test_bus);
     }
 
     @Override

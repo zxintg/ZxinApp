@@ -15,7 +15,7 @@ public class HtmlJumpUtil {
      * 服务协议
      */
     public static void fwxyActivity(){
-        Activity activity = AppManager.getAppManager().currentActivity();
+        Activity activity = AppManager.getInstance().currentActivity();
         Intent intent = new Intent(activity, CommWebActivity.class);
         intent.putExtra(BaseStringUtils.ACTIVITY_title,"服务协议");
         intent.putExtra(BaseStringUtils.WEB_TYPE,BaseStringUtils.WEB_TYPE_fileHtml5);
@@ -27,7 +27,7 @@ public class HtmlJumpUtil {
      * 关于我们
      */
     public static void gywmActivity(){
-        Activity activity = AppManager.getAppManager().currentActivity();
+        Activity activity = AppManager.getInstance().currentActivity();
         Intent intent = new Intent(activity, CommWebActivity.class);
         intent.putExtra(BaseStringUtils.ACTIVITY_title,"关于我们");
         intent.putExtra(BaseStringUtils.WEB_TYPE,BaseStringUtils.WEB_TYPE_url);
@@ -39,7 +39,7 @@ public class HtmlJumpUtil {
      * 首页banner点击
      */
     public static void bannerActivity(BannerBean banner){
-        Activity activity = AppManager.getAppManager().currentActivity();
+        Activity activity = AppManager.getInstance().currentActivity();
         Intent intent = new Intent(activity, CommWebActivity.class);
         intent.putExtra(BaseStringUtils.ACTIVITY_title,banner.getAdName());
         intent.putExtra(BaseStringUtils.WEB_TYPE,BaseStringUtils.WEB_TYPE_url);
@@ -51,7 +51,7 @@ public class HtmlJumpUtil {
      * 用户协议
      */
     public static void yhxyActivity(){
-        Activity activity = AppManager.getAppManager().currentActivity();
+        Activity activity = AppManager.getInstance().currentActivity();
         Intent intent = new Intent(activity, CommWebActivity.class);
         intent.putExtra(BaseStringUtils.ACTIVITY_title,"霸气侧漏服务协议");
         intent.putExtra(BaseStringUtils.WEB_TYPE,BaseStringUtils.WEB_TYPE_fileHtml5);
@@ -60,7 +60,7 @@ public class HtmlJumpUtil {
     }
 
     public static void toWebForUrlActivity(String title ,String url){
-        Activity activity = AppManager.getAppManager().currentActivity();
+        Activity activity = AppManager.getInstance().currentActivity();
         Intent intent = new Intent(activity, CommWebActivity.class);
         intent.putExtra(BaseStringUtils.ACTIVITY_title,title);
         intent.putExtra(BaseStringUtils.WEB_TYPE,BaseStringUtils.WEB_TYPE_url);
