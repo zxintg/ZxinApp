@@ -1,9 +1,9 @@
 package com.zxin.basemodel.dao;
 
-import com.zxin.basemodel.app.BaseApplication;
 import com.zxin.basemodel.entity.HttpUrl;
 import com.zxin.basemodel.gen.DataBaseUtil;
 import com.zxin.basemodel.gen.HttpUrlDao;
+import com.zxin.basemodel.util.GlobalUtil;
 import com.zxin.root.bean.BasePageBean;
 import com.zxin.root.bean.HttpUrlBean;
 import com.zxin.root.bean.TitleBean;
@@ -24,7 +24,7 @@ public class HttpUrlDaoUtil {
     private static HttpUrlDao httpUrlDao = null;
 
     private HttpUrlDaoUtil() {
-        DataBaseUtil dataBaseUtil = BaseApplication.getInstance().getDataBaseUtil();
+        DataBaseUtil dataBaseUtil = GlobalUtil.getDataBaseUtil();
         httpUrlDao = dataBaseUtil.getDao(DataBaseUtil.Mode.HttpUrlMode);
     }
 

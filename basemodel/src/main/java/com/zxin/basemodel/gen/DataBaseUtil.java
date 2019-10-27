@@ -7,6 +7,7 @@ import android.arch.persistence.room.RoomDatabase;
 import android.arch.persistence.room.migration.Migration;
 import android.content.Context;
 import android.support.annotation.NonNull;
+
 import com.zxin.basemodel.entity.City;
 import com.zxin.basemodel.entity.HttpUrl;
 import com.zxin.basemodel.entity.MeiZiCollect;
@@ -33,7 +34,7 @@ public abstract class DataBaseUtil extends RoomDatabase {
     private MeiZiVideoDao videoDao;
     private Context mContext;
 
-    private void init (Context mContext) {
+    private void init(Context mContext) {
         this.mContext = mContext;
     }
 
@@ -48,7 +49,7 @@ public abstract class DataBaseUtil extends RoomDatabase {
         videoDao = initMeiZiVideoDao();
     }
 
-    public ZxinDBDao getZxinDBDao(){
+    public ZxinDBDao getZxinDBDao() {
         return zxinDBDao;
     }
 
@@ -101,15 +102,17 @@ public abstract class DataBaseUtil extends RoomDatabase {
         }
     };
 
-    public static class Build{
+    public static class Build {
         private Context mContext;
 
-        public Build(Context mContext){
+        public Build(Context mContext) {
             this.mContext = mContext;
         }
 
-        public DataBaseUtil build(){
-            DataBaseUtil util = Room.databaseBuilder(mContext, DataBaseUtil.class, BuildUtils.getInstance(mContext).getDbName()).addCallback(new RoomDatabase.Callback() {
+        public DataBaseUtil build() {
+            DataBaseUtil util = Room.databaseBuilder(mContext, DataBaseUtil.class
+                    , BuildUtils.getInstance(mContext).getDbName()).addCallback(
+                            new RoomDatabase.Callback() {
                 @Override
                 public void onCreate(@NonNull SupportSQLiteDatabase db) {
                     super.onCreate(db);

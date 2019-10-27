@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.zxin.R;
 import com.zxin.app.MyApplication;
 import com.zxin.base.BaseActivity;
+import com.zxin.basemodel.util.GlobalUtil;
 import com.zxin.network.PoolThread;
 import com.zxin.network.callback.AsyncCallback;
 import com.zxin.network.deliver.AndroidDeliver;
@@ -76,7 +77,7 @@ public class TestExecutorActivity extends BaseActivity implements View.OnClickLi
     }
 
     private void startThread1() {
-        PoolThread executor = MyApplication.getInstance().getExecutor();
+        PoolThread executor = GlobalUtil.getExecutor();
         executor.setName("最简单的线程调用方式");
         executor.setDeliver(new AndroidDeliver());
         executor.execute(new Runnable() {
@@ -89,7 +90,7 @@ public class TestExecutorActivity extends BaseActivity implements View.OnClickLi
 
 
     private void startThread2() {
-        PoolThread executor = MyApplication.getInstance().getExecutor();
+        PoolThread executor = GlobalUtil.getExecutor();
         executor.setName("异步回调");
         executor.setDelay(2, TimeUnit.MILLISECONDS);
         // 启动异步任务
@@ -119,7 +120,7 @@ public class TestExecutorActivity extends BaseActivity implements View.OnClickLi
 
 
     private void startThread3() {
-        PoolThread executor = MyApplication.getInstance().getExecutor();
+        PoolThread executor = GlobalUtil.getExecutor();
         executor.setName("延迟时间执行任务");
         executor.setDelay(2, TimeUnit.SECONDS);
         executor.setDeliver(new AndroidDeliver());

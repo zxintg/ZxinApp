@@ -1,13 +1,8 @@
 package com.zxin.root.util;
 
 import android.content.Context;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 import android.text.InputFilter;
 import android.widget.EditText;
-
-import com.zxin.root.util.logger.LogUtils;
-
 import java.io.File;
 
 public class GlobalUtil {
@@ -90,7 +85,8 @@ public class GlobalUtil {
         return mDeleteLogDay;
     }
 
-    protected static void setDayToDeleteLog(int deleteLogDay) {
+    public static void setDayToDeleteLog(int deleteLogDay) {
         mDeleteLogDay = deleteLogDay;
     }
+
 }

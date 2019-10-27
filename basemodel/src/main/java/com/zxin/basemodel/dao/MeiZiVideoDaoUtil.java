@@ -4,12 +4,12 @@ import android.content.Context;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.zxin.basemodel.app.BaseApplication;
 import com.zxin.basemodel.entity.MeiZiCollect;
 import com.zxin.basemodel.entity.MeiZiVideo;
 import com.zxin.basemodel.gen.DataBaseUtil;
 import com.zxin.basemodel.gen.MeiZiCollectDao;
 import com.zxin.basemodel.gen.MeiZiVideoDao;
+import com.zxin.basemodel.util.GlobalUtil;
 import com.zxin.root.util.ToastUtil;
 
 import java.util.Calendar;
@@ -28,7 +28,7 @@ public class MeiZiVideoDaoUtil {
 
     private MeiZiVideoDaoUtil(Context mContext) {
         this.mContext = mContext;
-        DataBaseUtil dataBaseUtil = BaseApplication.getInstance().getDataBaseUtil();
+        DataBaseUtil dataBaseUtil = GlobalUtil.getDataBaseUtil();
         meiZiVideoDao = dataBaseUtil.getDao(DataBaseUtil.Mode.VideoMode);
         meiZiCollectDao = dataBaseUtil.getDao(DataBaseUtil.Mode.CollectMode);
     }

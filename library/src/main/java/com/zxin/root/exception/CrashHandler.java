@@ -33,12 +33,13 @@ public class CrashHandler implements UncaughtExceptionHandler {
         return INSTANCE;
     }
 
-    public void init(Context ctx) {
+    public CrashHandler init(Context ctx) {
         mContext = ctx.getApplicationContext();
         //获取系统默认的异常处理器
         mDefaultHandler = Thread.getDefaultUncaughtExceptionHandler();
         //将当前实例设为系统默认的异常处理器
         Thread.setDefaultUncaughtExceptionHandler(this);
+        return INSTANCE;
     }
 
     /**

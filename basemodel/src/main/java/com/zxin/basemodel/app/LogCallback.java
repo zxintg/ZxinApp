@@ -1,4 +1,4 @@
-package com.zxin.app;
+package com.zxin.basemodel.app;
 
 import android.util.Log;
 

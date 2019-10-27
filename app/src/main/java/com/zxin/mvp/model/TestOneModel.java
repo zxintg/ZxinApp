@@ -3,6 +3,7 @@ package com.zxin.mvp.model;
 import com.zxin.app.MyApplication;
 import com.zxin.basemodel.annot.ApiUrlMode;
 import com.zxin.basemodel.network.AbsAPICallback;
+import com.zxin.basemodel.util.GlobalUtil;
 import com.zxin.network.exception.ResultException;
 import com.zxin.network.http.RetrofitHelper;
 import com.zxin.network.mvp.model.BaseModel;
@@ -58,6 +59,6 @@ public class TestOneModel extends BaseModel {
 
     @Override
     public RetrofitHelper initHelper() {
-        return MyApplication.getInstance().getRetrofitHelper();
+        return GlobalUtil.getRetrofitHelper();
     }
 }

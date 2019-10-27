@@ -1,9 +1,9 @@
 package com.zxin.basemodel.dao;
 
-import com.zxin.basemodel.app.BaseApplication;
 import com.zxin.basemodel.entity.City;
 import com.zxin.basemodel.gen.CityDao;
 import com.zxin.basemodel.gen.DataBaseUtil;
+import com.zxin.basemodel.util.GlobalUtil;
 import com.zxin.root.util.logger.LogUtils;
 
 import java.util.List;
@@ -21,7 +21,7 @@ public class CityDaoUtil {
         if (cityDao != null) {
             return;
         }
-        DataBaseUtil dataBaseUtil = BaseApplication.getInstance().getDataBaseUtil();
+        DataBaseUtil dataBaseUtil = GlobalUtil.getDataBaseUtil();
         cityDao = dataBaseUtil.getDao(DataBaseUtil.Mode.CityMode);
     }
 

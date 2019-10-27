@@ -1,41 +1,61 @@
 package com.zxin.basemodel.util;
 
 import android.app.AlarmManager;
+import android.app.Application;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.res.Resources;
-import android.text.SpannableStringBuilder;
-import android.text.Spanned;
-import android.text.style.ClickableSpan;
-import android.text.style.ForegroundColorSpan;
-import android.view.LayoutInflater;
+import android.content.SharedPreferences;
+import android.os.HandlerThread;
+import android.os.Looper;
+import android.preference.PreferenceManager;
 import android.view.View;
-
-import com.zxin.basemodel.app.BaseApplication;
+import com.squareup.leakcanary.LeakCanary;
+import com.squareup.leakcanary.RefWatcher;
+import com.zxin.basemodel.app.GreenDaoManager;
+import com.zxin.basemodel.app.LogCallback;
+import com.zxin.basemodel.factory.ResponseConverterFactory;
+import com.zxin.basemodel.gen.DataBaseUtil;
+import com.zxin.basemodel.interceptor.CacheInterceptor;
+import com.zxin.basemodel.interceptor.CustomParamsInterceptor;
+import com.zxin.basemodel.interceptor.HttpCacheInterceptor;
+import com.zxin.basemodel.interceptor.HttpHeaderInterceptor;
+import com.zxin.network.PoolThread;
+import com.zxin.network.http.RetrofitHelper;
 import com.zxin.root.util.UiUtils;
 import com.zxin.root.util.logger.LogUtils;
 import com.google.gson.Gson;
-import java.io.File;
 import java.math.BigDecimal;
 import java.util.Date;
+
+import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class GlobalUtil extends com.zxin.root.util.GlobalUtil{
     private static final LogUtils.Tag TAG = new LogUtils.Tag("GlobalUtil");
 
     private static final int DEF_DIV_SCALE = 110;
+    private static DataBaseUtil dataBaseUtil = null;
+    //保存一些状态数据的SharedPreferences
+    private static SharedPreferences mSettings;
+    //Application为整个应用保存全局的RefWatcher
+    private static RefWatcher refWatcher;
+    private static RetrofitHelper retrofitHelper = null;
+    private static final int timeOut = 20;
+    private static PoolThread executor;
 
     /****
      * 初始化数据
      * @param context
      */
     public static void init(Context context) {
-        BuildUtils utils = BuildUtils.getInstance(context);
         setContext(context);
+        BuildUtils utils = BuildUtils.getInstance(getContext());
         setLogPath(utils.getLogPath());
         setRecordLog(utils.isRecodLog());
         setDayToDeleteLog(utils.getRecodLogDay());
         setAppCache(utils.getCachePath());
         setSdPath(utils.getAppSDPath());
+        initSharedPreference();
     }
 
     public static void dialogTitleLineColor(Dialog dialog, int color) {
@@ -168,4 +188,103 @@ public class GlobalUtil extends com.zxin.root.util.GlobalUtil{
         LogUtils.d(TAG, "jsonToBean jsonStr is : " + jsonStr);
         return new Gson().fromJson(jsonStr, clazz);
     }
+
+    public static void createDaos() {
+            dataBaseUtil = new DataBaseUtil.Build(getContext()).build();
+            dataBaseUtil.create();
+    }
+
+    public static void copyDatasToDb(){
+        //初始化DB(拷贝数据到数据库)
+        GreenDaoManager.getInstance().copyDbForFile(getContext());
+    }
+
+    public static DataBaseUtil getDataBaseUtil(){
+        return dataBaseUtil;
+    }
+
+    /**
+     * 获取DefaultSharedPreference实例
+     *
+     * @return
+     */
+    private static SharedPreferences initSharedPreference() {
+        if (mSettings == null) {
+            mSettings = PreferenceManager.getDefaultSharedPreferences(getContext());
+        }
+        return mSettings;
+    }
+
+    //内存泄漏检测
+    public static void createLeakCanary(Application application) {
+        if (LeakCanary.isInAnalyzerProcess(getContext())) {
+            refWatcher = RefWatcher.DISABLED;
+        }
+        refWatcher = LeakCanary.install(application);
+    }
+
+    public static RefWatcher getRefWatcher() {
+        return refWatcher;
+    }
+
+    /****
+     * 初始化网络信息
+     */
+    public static synchronized void createRetrofitHelper() {
+        retrofitHelper = new RetrofitHelper.Builder(getContext())
+                .addTimeOut(timeOut)
+                .addInterceptors(new CacheInterceptor(getContext())
+                        ,new CustomParamsInterceptor(getContext())
+                        ,new HttpCacheInterceptor(getContext())
+                        ,new HttpHeaderInterceptor(getContext()))
+                .addFactorys(ScalarsConverterFactory.create()
+                        , ResponseConverterFactory.create()
+                        , GsonConverterFactory.create())
+                .build();
+        retrofitHelper.create();
+    }
+
+    public static RetrofitHelper getRetrofitHelper(){
+        return retrofitHelper;
+    }
+
+
+    private static Looper mLooper = null;
+    private static final Object mLook = new Object();
+    public static void createSubLooper() {
+        if (mLooper == null){
+            synchronized (mLook){
+                if (mLooper == null){
+                    HandlerThread thread = new HandlerThread("ZxinHandler");
+                    thread.start();
+                    mLooper = thread.getLooper();
+                }
+            }
+        }
+    }
+
+    public static Looper getSubLooper(){
+        return mLooper;
+    }
+
+    /**
+     * 初始化线程池管理器
+     */
+    public static void initThreadPool() {
+        // 创建一个独立的实例进行使用
+        executor = PoolThread.ThreadBuilder
+                .createFixed(5)
+                .setPriority(Thread.MAX_PRIORITY)
+                .setCallback(new LogCallback())
+                .build();
+    }
+
+    /**
+     * 获取线程池管理器对象，统一的管理器维护所有的线程池
+     * @return executor对象
+     */
+    public static PoolThread getExecutor(){
+        return executor;
+    }
+
 }

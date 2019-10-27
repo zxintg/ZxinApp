@@ -1,11 +1,15 @@
 package com.zxin.app;
 
 import android.content.Context;
+import android.os.Process;
+import android.support.multidex.MultiDex;
+import android.support.multidex.MultiDexApplication;
 import com.bugtags.library.Bugtags;
 import com.bugtags.library.BugtagsOptions;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.tencent.smtt.sdk.QbSdk;
-import com.zxin.basemodel.app.BaseApplication;
+import com.zxin.basemodel.app.LogCallback;
+import com.zxin.basemodel.util.GlobalUtil;
 import com.zxin.router.Configuration;
 import com.zxin.router.Router;
 import com.zxin.root.BuildConfig;
@@ -15,10 +19,9 @@ import com.zxin.network.PoolThread;
 /**
  * Created by hy on 2017/9/22.
  */
-public class MyApplication extends BaseApplication {
+public class MyApplication extends MultiDexApplication {
     private static Context mContext;
     private static volatile MyApplication application = null;
-    private PoolThread executor;
 
     //私有化，防止外部调取再次初始化
     private MyApplication(){
@@ -35,23 +38,28 @@ public class MyApplication extends BaseApplication {
     public void onCreate() {
         super.onCreate();
         application = this;
-        //初始化线程池管理器
-        initThreadPool();
         mContext = this;
+        GlobalUtil.init(mContext);
+        //初始化线程池管理器
+        GlobalUtil.initThreadPool();
+        GlobalUtil.createDaos();
+        GlobalUtil.createLeakCanary(application);
+        GlobalUtil.createRetrofitHelper();
+        GlobalUtil.createSubLooper();
         new Thread(new Runnable() {
             @Override
             public void run() {
+                //设置线程优先级，不与主线程抢资源
+                Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
                 //全局错误信息
-                CrashHandler crashHandler = CrashHandler.getInstance();
-                crashHandler.init(application);
-                Thread.setDefaultUncaughtExceptionHandler(crashHandler);
+                Thread.setDefaultUncaughtExceptionHandler(CrashHandler.getInstance().init(application));
                 //腾讯X5
-                QbSdk.initX5Environment(contextApp, null);
+                QbSdk.initX5Environment(mContext, null);
                 //在这里初始化
                 Fresco.initialize(mContext);
+                GlobalUtil.copyDatasToDb();
             }
         }).start();
-        //customizable init option
         BugtagsOptions options = new BugtagsOptions.Builder().
                 trackingLocation(true).//是否获取位置
                 trackingCrashLog(true).//是否收集crash
@@ -71,30 +79,18 @@ public class MyApplication extends BaseApplication {
                 .build());
     }
 
-    /**
-     * 初始化线程池管理器
-     */
-    private void initThreadPool() {
-        // 创建一个独立的实例进行使用
-        executor = PoolThread.ThreadBuilder
-                .createFixed(5)
-                .setPriority(Thread.MAX_PRIORITY)
-                .setCallback(new LogCallback())
-                .build();
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
     }
 
-    /**
-     * 获取线程池管理器对象，统一的管理器维护所有的线程池
-     * @return                      executor对象
-     */
-    public PoolThread getExecutor(){
-        if(executor ==null){
-            executor = PoolThread.ThreadBuilder
-                    .createFixed(5)
-                    .setPriority(Thread.MAX_PRIORITY)
-                    .setCallback(new LogCallback())
-                    .build();
-        }
-        return executor;
+    @Override
+    public void onLowMemory() {
+        //ToastUtil.showDefaultGravityToast("低内存警告");
+//		//如果内存不够用，就清空Activities，释放掉Activity的引用
+        //AppManager.getAppManager().finishOtherButCurrentActivity();
+        super.onLowMemory();
+
     }
 }

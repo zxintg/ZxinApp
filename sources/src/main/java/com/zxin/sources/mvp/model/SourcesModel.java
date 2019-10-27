@@ -1,8 +1,8 @@
 package com.zxin.sources.mvp.model;
 
 import com.zxin.basemodel.annot.ApiUrlMode;
-import com.zxin.basemodel.app.BaseApplication;
 import com.zxin.basemodel.network.AbsAPICallback;
+import com.zxin.basemodel.util.GlobalUtil;
 import com.zxin.network.exception.ResultException;
 import com.zxin.network.http.RetrofitHelper;
 import com.zxin.network.mvp.model.BaseModel;
@@ -85,6 +85,6 @@ public class SourcesModel extends BaseModel {
 
     @Override
     public RetrofitHelper initHelper() {
-        return BaseApplication.getInstance().getRetrofitHelper();
+        return GlobalUtil.getRetrofitHelper();
     }
 }

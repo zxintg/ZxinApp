@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.squareup.leakcanary.RefWatcher;
 import com.trello.rxlifecycle.components.support.RxFragment;
-import com.zxin.basemodel.app.BaseApplication;
+import com.zxin.basemodel.util.GlobalUtil;
 import com.zxin.network.mvp.inject.InjectPresenter;
 import com.zxin.network.mvp.presenter.BasePresenter;
 import com.zxin.root.util.logger.LogUtils;
@@ -115,7 +115,7 @@ public abstract class BaseFragment extends RxFragment implements View.OnClickLis
     public void onDestroy() {
         super.onDestroy();
         //检测内存泄漏使用
-        RefWatcher refWatcher = BaseApplication.getRefWatcher(getActivity());
+        RefWatcher refWatcher = GlobalUtil.getRefWatcher();
         refWatcher.watch(this);
         //解绑Presenter
         for (BasePresenter presenter : mPresenterList) {

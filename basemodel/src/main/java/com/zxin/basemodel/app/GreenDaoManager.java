@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.Environment;
 import com.zxin.basemodel.R;
 import com.zxin.basemodel.util.BuildUtils;
-import com.zxin.basemodel.util.GlobalUtil;
 import com.zxin.root.util.FileUtil;
 import com.zxin.root.util.ZipUtil;
 import com.zxin.basemodel.util.BaseStringUtils;
@@ -27,15 +26,16 @@ public class GreenDaoManager {
     private Context mContext;
 
     private GreenDaoManager() {
-        //copy db
-        importDB();
-        initAplus();
+
     }
 
-    public void init(Context context){
+    public void copyDbForFile(Context context){
         this.mContext = context;
+        //copy db
         String pageName = BaseStringUtils.pageNameParent;
         dbPath = "/data" + Environment.getDataDirectory().getAbsolutePath() + "/" + pageName + "/databases/";
+        importDB();
+        initAplus();
     }
 
     /**
@@ -54,7 +54,7 @@ public class GreenDaoManager {
     }
 
     /**
-     * 初始化数据
+     * 数据库升级处理
      */
     private void initAplus() {
 
@@ -64,7 +64,7 @@ public class GreenDaoManager {
      * 导入db到系统目录上最牛的搜索引擎是哪个？
      * 第一次安装的时候才会执行
      */
-    public void importDB () {
+    private void importDB () {
         File dbFile = new File(dbPath + BuildUtils.getInstance(mContext).getDbName());
 
         if(dbFile.exists()){
