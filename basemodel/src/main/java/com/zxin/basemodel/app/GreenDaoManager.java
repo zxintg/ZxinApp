@@ -78,7 +78,7 @@ public class GreenDaoManager {
         }
         //第一次安装，创建数据库存储路径，并拷贝解压数据库到系统目录
         LogUtils.d(TAG,"创建数据库存储路径！");
-        InputStream is = FileUtil.getInstance(mContext).openRawResource(R.raw.ZxinTable);
+        InputStream is = FileUtil.getInstance(mContext).openRawResource(R.raw.zxindb);
         File copyFile = FileUtil.getInstance(mContext).copyFile(is , dbPath , BuildUtils.getInstance(mContext).getDbFile());
         if(copyFile != null && copyFile.exists()) {
             ZipUtil.unZip(copyFile.getAbsolutePath(), dbPath);
