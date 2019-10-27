@@ -9,11 +9,11 @@ import com.bugtags.library.BugtagsOptions;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.tencent.smtt.sdk.QbSdk;
 import com.zxin.basemodel.util.GlobalUtil;
+import com.zxin.root.util.AppManager;
 import com.zxin.router.Configuration;
 import com.zxin.router.Router;
 import com.zxin.root.BuildConfig;
 import com.zxin.root.exception.CrashHandler;
-import com.zxin.network.PoolThread;
 
 /**
  * Created by hy on 2017/9/22.
@@ -88,8 +88,7 @@ public class MyApplication extends MultiDexApplication {
     public void onLowMemory() {
         //ToastUtil.showDefaultGravityToast("低内存警告");
 //		//如果内存不够用，就清空Activities，释放掉Activity的引用
-        //AppManager.getAppManager().finishOtherButCurrentActivity();
+        AppManager.getInstance().backToTopActivity();
         super.onLowMemory();
-
     }
 }

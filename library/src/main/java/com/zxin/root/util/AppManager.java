@@ -131,6 +131,20 @@ public class AppManager {
         }
     }
 
+    public void backToTopActivity() {
+        if (activityStack == null || activityStack.isEmpty())
+            return;
+        if(activityStack.size() == 1){
+            return;
+        }
+        for (int i = 0, size = activityStack.size(); i < size; i++) {
+            if (null != activityStack.get(i)
+                    && activityStack.size() > 1) {
+                finishActivity(activityStack.get(i));
+            }
+        }
+    }
+
     /**
      * 栈里面只保留当前Activity
      */
