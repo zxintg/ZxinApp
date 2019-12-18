@@ -90,6 +90,8 @@ public class RegUtil {
      * ,187,188,147,178,1705
      * **/
     private static final String CHINA_MOBILE_PATTERN = "(^1(3[4-9]|4[7]|5[0-27-9]|7[0]|7[8]|8[2-478])\\d{8}$)";
+    
+    private static final String REGEX_ADDRESS = "([^省]+自治区|.*?省|.*?市)?([^市]+自治州|.*?行政区|.*?地区|.*?行政单位|.+盟|市辖区|.*?市)?([^县]+县|.+区|.+市|.+旗|.+海域|.+岛)+(.*)";
 
     /**
      * 校验用户名
